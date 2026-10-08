@@ -1,0 +1,46 @@
+@import 'utils/_module';
+@import 'layouts/_header';
+
+:root {
+  --purple: #7b52c7;
+  --purple-light: #b79bff;
+  --ink: #15131c;
+
+  --color-red: #cd1a3c;
+  --color-red-hover: #a81231;
+  --color-red-bright: #df0639;
+  --color-pink: #ff6b85;
+  --color-ink: #0f172a;
+  --color-ink-60: #0f172a99;
+  --color-ink-70: #0f172ab3;
+  --color-slate: #64748b;
+  --color-white: #ffffff;
+  --color-canvas: #f4f6fa;
+  --color-surface: #fafafa;
+  --color-surface-alt: #f5f5f5;
+  --color-image-bg: #eef2f8;
+  --color-border: #e7eaf0;
+  --color-dark: #0b111c;
+
+  --font-body: 'Montserrat', Verdana, sans-serif;
+  --font-accent: 'Space Grotesk', serif;
+
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-card: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  --container: 1310px;
+  --container-wide: 1520px;
+  --gutter: 30px;
+
+  /* synced to the rendered header height by initStickyHeader() */
+  --header-h: 75px;
+  --hex-tile: 621px;
+
+  --shadow-soft: 0 6px 18px rgba(15, 23, 42, 0.14);
+  --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.05), 0 14px 34px rgba(15, 23, 42, 0.06);
+  --shadow-card-hover: 0 1px 2px rgba(15, 23, 42, 0.05), 0 26px 52px rgba(15, 23, 42, 0.12);
+  --shadow-lift: 0 18px 40px -24px rgba(11, 11, 13, 0.35);
+  --shadow-menu: 0 1px 2px rgba(15, 23, 42, 0.06), 0 22px 50px rgba(15, 23, 42, 0.16);
+}
+
+@import 'core/_core';

@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Logo Sphere | Hybrid Interaction Design System</title>
+    <meta name="description" content="Partner marks orbiting the extruded Hybrid B, with pointer parallax, drag and inertia.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap">
+
+    <style>
+        /* =========================================================
+           DESIGN TOKENS
+           Fonts, weights and the fluid type scale (hi-fonts.css + hi-typography.css),
+           then colour, surface, radius, elevation, motion, space and layout
+           (hi-tokens.css). Every page of the design system ships the same set.
+        ========================================================= */
+        :root {
+            /* --- font families --- */
+            --font-heading: 'Hanken Grotesk', system-ui, sans-serif;
+            --font-caption: 'Hanken Grotesk', system-ui, sans-serif;
+            --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+            --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+            /* --- weights --- */
+            --fw-extralight: 200;
+            --fw-light: 300;
+            --fw-regular: 400;
+            --fw-medium: 500;
+            --fw-semibold: 600;
+            --fw-bold: 700;
+            --fw-extrabold: 800;
+
+            /* --- type scale (fluid) --- */
+            --text-hero-size: clamp(40px, 6vw, 96px);
+            --text-figure-size: clamp(48px, 8.6vw, 120px);
+            --text-display-size: clamp(36px, 5.2vw, 78px);
+            --text-h1-size: clamp(32px, 4.4vw, 64px);
+            --text-h2-size: clamp(28px, 3.6vw, 52px);
+            --text-h-feature-size: clamp(23px, 2.9vw, 42px);
+            --text-h3-size: clamp(20px, 2vw, 27px);
+            --text-body-lg-size: clamp(18px, 1.6vw, 22px);
+            --text-body-md-size: 16.5px;
+            --text-body-sm-size: 14.5px;
+            --text-caption-size: 12px;
+            --text-label-size: 15px;
+
+            /* --- line heights --- */
+            --lh-tight: 1;
+            --lh-snug: 1.15;
+            --lh-heading: 1.05;
+            --lh-body: 1.6;
+
+            /* --- letter spacing --- */
+            --ls-hero: -.045em;
+            --ls-heading: -.03em;
+            --ls-h3: -.02em;
+            --ls-caption: .2em;
+            --ls-label: .02em;
+
+            /* --- brand palette --- */
+            --c-bg: #eaeaf2;
+            --c-ink: #15131c;
+            --c-dark: #180a2b;
+            --c-dark-2: #170928;
+            --c-accent: #7b52c7;
+            --c-accent-bright: #9d73ff;
+            --c-violet: #9b6fe0;
+            --c-lav: #b79bff;
+            --c-cyan: #00b7fa;
+            --c-offwhite: #f1f8ff;
+            --c-white: #ffffff;
+            --c-grey: #6b6b76;
+            --c-ds-panel: #12101a;
+
+            /* --- text alpha steps --- */
+            --c-ink-60: rgba(21, 19, 28, .6);
+            --c-ink-55: rgba(21, 19, 28, .55);
+            --c-ink-45: rgba(21, 19, 28, .45);
+            --c-ink-16: rgba(21, 19, 28, .16);
+            --c-offwhite-80: rgba(241, 248, 255, .8);
+            --c-offwhite-62: rgba(241, 248, 255, .62);
+            --c-offwhite-50: rgba(241, 248, 255, .5);
+            --c-white-78: rgba(255, 255, 255, .78);
+            --c-white-50: rgba(255, 255, 255, .5);
+            --c-white-20: rgba(255, 255, 255, .2);
+            --c-white-08: rgba(255, 255, 255, .08);
+
+            /* --- partner brands --- */
+            --brand-optimove: #302c69;
+            --brand-optimove-pastel: #f4f4f7;
+            --brand-smartico: #f15851;
+            --brand-smartico-pastel: #fef2f1;
+            --brand-fast-track: #e96092;
+            --brand-fast-track-pastel: #fdf2f6;
+            --brand-xtremepush: #003df5;
+            --brand-xtremepush-pastel: #f1f4fe;
+            --brand-customer-io: #0b363b;
+            --brand-customer-io-pastel: #f2f4f5;
+            --brand-solitics: #ffd400;
+            --brand-solitics-pastel: #fff5c3;
+
+            /* --- status --- */
+            --c-success: #1f8a5b;
+            --c-success-bright: #1fb26b;
+            --c-success-soft: #1fd28a;
+            --c-warning: #ffb038;
+            --c-magenta: #c32e93;
+
+            /* --- surfaces --- */
+            --surface-light: #ffffff;
+            --surface-tint: #faf8fd;
+            --surface-tint-strong: #f7f4fd;
+            --surface-neutral: #f1f1f4;
+            --surface-hover: #f2f2f4;
+            --grad-surface-grey: linear-gradient(145deg, #eeeef2 0%, #f6f6f8 52%, #ffffff 100%);
+            --grad-surface-grey-dark: linear-gradient(145deg, rgba(255, 255, 255, .09) 0%, rgba(255, 255, 255, .05) 52%, rgba(255, 255, 255, .02) 100%);
+            --grad-primary: linear-gradient(225deg, #8a62d8, #6a43b2);
+            --grad-hero: linear-gradient(160deg, #1c0c3a 0%, #2c1356 44%, #46228a 100%);
+            --grad-hero-deep: linear-gradient(160deg, #120724 0%, #1c0d38 46%, #2e155c 100%);
+            --grad-card-dark: linear-gradient(135deg, #1a0a3a, #3d1a6e);
+            --grad-card-dark-hover: linear-gradient(135deg, #26124f, #4d2589);
+            --grad-panel: linear-gradient(180deg, #17161d, #111017);
+            --grad-metric: linear-gradient(160deg, var(--c-accent), #4a248f);
+            --grad-rule-light: linear-gradient(to right, rgba(21, 19, 28, .16), rgba(21, 19, 28, 0));
+            --grad-rule-dark: linear-gradient(to right, rgba(255, 255, 255, .18), rgba(255, 255, 255, 0));
+
+            /* --- borders --- */
+            --border-light: 1px solid #eee9f6;
+            --border-glass: 1px solid rgba(255, 255, 255, .16);
+            --border-panel: 1px solid rgba(255, 255, 255, .07);
+            --border-accent-soft: 1px solid rgba(123, 82, 199, .35);
+
+            /* --- radii --- */
+            --r-xs: 4px;
+            --r-sm: 7px;
+            --r-md: 12px;
+            --r-lg: 16px;
+            --r-xl: 20px;
+            --r-2xl: 24px;
+            --r-3xl: 26px;
+            --r-pill: 100px;
+            --r-circle: 50%;
+
+            /* --- elevation --- */
+            --shadow-tile: 0 4px 10px -4px rgba(24, 10, 43, .14), 0 1px 3px -1px rgba(24, 10, 43, .1);
+            --shadow-pill: 0 8px 30px rgba(0, 0, 0, .28);
+            --shadow-card: 0 24px 50px rgba(26, 10, 58, .12);
+            --shadow-float: 0 20px 50px rgba(0, 0, 0, .35);
+            --shadow-card-raised: 0 40px 90px rgba(26, 10, 58, .28);
+            --shadow-card-hover: 0 54px 110px rgba(26, 10, 58, .42);
+            --shadow-panel: 0 30px 70px rgba(0, 0, 0, .5), inset 0 1px 0 rgba(255, 255, 255, .05);
+            --glow-accent: 0 4px 14px rgba(123, 82, 199, .6);
+
+            /* --- blur --- */
+            --blur-glass: 14px;
+            --blur-card: 12px;
+
+            /* --- motion --- */
+            --dur-fast: .2s;
+            --dur-base: .3s;
+            --dur-mid: .4s;
+            --dur-slow: .5s;
+            --dur-shutter: .9s;
+            --ease-out-quint: cubic-bezier(.16, 1, .3, 1);
+            --ease-swift: cubic-bezier(.2, .8, .2, 1);
+            --ease-standard: cubic-bezier(.4, 0, .2, 1);
+            --ease-shutter: cubic-bezier(.76, 0, .24, 1);
+
+            /* --- space --- */
+            --space-xxs: 4px;
+            --space-xs: 8px;
+            --space-sm: 12px;
+            --space-md: 14px;
+            --space-lg: 16px;
+            --space-xl: 20px;
+            --space-2xl: 24px;
+            --space-3xl: 34px;
+            --space-4xl: 40px;
+            --space-5xl: 56px;
+
+            /* --- layout --- */
+            --gutter: 5vw;
+            --gut: max(5vw, calc((100vw - 1440px) / 2 + 5vw));
+            --max-content: 1440px;
+            --max-text: 1100px;
+            --max-footer: 1280px;
+            --nav-height: 78px;
+            --ds-nav-width: 240px;
+            --ds-sheet-max: 1120px;
+            --ds-sheet-pad: 6vw;
+        }
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--c-bg);
+            color: var(--c-ink);
+            font-family: var(--font-body);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* NO percentage max-width here: logo marks sit in shrink-to-fit parents sized BY their
+           image, and a percentage that resolves against such a parent collapses the image to 0.
+           Containment is declared per component instead. */
+        img,
+        svg {
+            display: block;
+        }
+
+        /* a component class with its own display value out-ranks the UA's [hidden] rule */
+        [hidden] {
+            display: none !important;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            font-family: var(--font-heading);
+        }
+
+        p {
+            margin: 0;
+        }
+
+        button {
+            font: inherit;
+            color: inherit;
+            cursor: pointer;
+        }
+
+        /* zero specificity: every component colour (buttons, tiles, menu rows, nav) wins in every state,
+           the way the DC's inline styles beat its helmet link rule */
+        :where(a) {
+            color: var(--c-accent);
+        }
+
+        :where(a:hover) {
+            color: #5a37a0;
+        }
+
+        code {
+            font-family: var(--font-mono);
+            font-size: .85em;
+        }
+
+        :focus-visible {
+            outline: 2px solid rgba(157, 115, 255, .7);
+            outline-offset: 2px;
+        }
+
+        .visually_hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            white-space: nowrap;
+        }
+
+        /* =========================================================
+           TYPOGRAPHY
+           The named type roles. Design-tool name in brackets:
+           text_hero (.hi-hero) · text_figure (.hi-figure) · text_display (.hi-display)
+           text_h1 / text_h2 / text_h_feature / text_h3 · eyebrow (.hi-eyebrow)
+           figcaption (.hi-figcaption) · text_body_lg / _md / _sm · text_label
+           prose--l/m/s + bullets (.hi-prose-*, .hi-bullets, .hi-bullet)
+        ========================================================= */
+        .text_hero {
+            font-family: var(--font-heading);
+            font-weight: var(--fw-light);
+            font-size: var(--text-hero-size);
+            line-height: .98;
+            letter-spacing: var(--ls-hero);
+        }
+
+        .text_figure {
+            font-family: var(--font-heading);
+            font-weight: var(--fw-extralight);
+            font-size: var(--text-figure-size);
+            line-height: .82;
+            letter-spacing: -.03em;
+        }
+
+        .text_display {
+            font-family: var(--font-heading);
+            font-weight: var(--fw-light);
+            font-size: var(--text-display-size);
+            line-height: var(--lh-tight);
+            letter-spacing: -.04em;
+        }
+
+        .text_h1 {
+            font-family: var(--font-heading);
+            font-weight: var(--fw-light);
+            font-size: var(--text-h1-size);
+            line-height: 1.04;
+            letter-spacing: -.035em;
+        }
+
+        .text_h2 {
+            font-family: var(--font-heading);
+            font-weight: var(--fw-light);
+            font-size: var(--text-h2-size);
+            line-height: var(--lh-heading);
+            letter-spacing: var(--ls-heading);
+        }
+
+        .text_h_feature {
+            font-family: var(--font-heading);
+            font-weight: var(--fw-light);
+            font-size: var(--text-h-feature-size);
+            line-height: 1.1;
+            letter-spacing: -.032em;
+        }
+
+        .text_h3 {
+            font-family: var(--font-heading);
+            font-weight: var(--fw-semibold);
+            font-size: var(--text-h3-size);
+            line-height: 1.2;
+            letter-spacing: var(--ls-h3);
+        }
+
+        .eyebrow {
+            font-family: var(--font-caption);
+            font-weight: var(--fw-bold);
+            font-size: var(--text-caption-size);
+            line-height: 1;
+            letter-spacing: var(--ls-caption);
+            text-transform: uppercase;
+        }
+
+        .figcaption {
+            font-family: var(--font-body);
+            font-weight: var(--fw-regular);
+            font-size: 13px;
+            line-height: 1.5;
+            letter-spacing: 0;
+            text-transform: none;
+            color: var(--c-ink-45);
+        }
+
+        .figcaption--on-dark {
+            color: rgba(255, 255, 255, .5);
+        }
+
+        .text_body_lg {
+            font-family: var(--font-body);
+            font-weight: var(--fw-regular);
+            font-size: var(--text-body-lg-size);
+            line-height: var(--lh-body);
+        }
+
+        .text_body_md {
+            font-family: var(--font-body);
+            font-weight: var(--fw-regular);
+            font-size: var(--text-body-md-size);
+            line-height: var(--lh-body);
+        }
+
+        .text_body_sm {
+            font-family: var(--font-body);
+            font-weight: var(--fw-regular);
+            font-size: var(--text-body-sm-size);
+            line-height: 1.55;
+        }
+
+        .text_label {
+            font-family: var(--font-body);
+            font-weight: var(--fw-semibold);
+            font-size: var(--text-label-size);
+            letter-spacing: var(--ls-label);
+        }
+
+        /* --- body prose & bullets · sizes L / M / S --- */
+        .prose--l,
+        .bullets--l {
+            --pf: clamp(17px, 1.5vw, 21px);
+            --pl: 1.78;
+            --bf: clamp(17px, 1.5vw, 21px);
+            --bl: 1.6;
+            --gap: clamp(11px, 1.2vw, 15px);
+            --pad: 26px;
+            --dot: 8px;
+            --dtop: .62em;
+            --bmar: clamp(20px, 2vw, 28px);
+        }
+
+        .prose--m,
+        .bullets--m {
+            --pf: clamp(15px, 1.25vw, 18px);
+            --pl: 1.75;
+            --bf: clamp(15px, 1.25vw, 18px);
+            --bl: 1.6;
+            --gap: clamp(10px, 1.05vw, 13px);
+            --pad: 24px;
+            --dot: 7px;
+            --dtop: .6em;
+            --bmar: clamp(18px, 1.7vw, 23px);
+        }
+
+        .prose--s,
+        .bullets--s {
+            --pf: clamp(14px, 1.05vw, 16px);
+            --pl: 1.72;
+            --bf: clamp(14px, 1.05vw, 16px);
+            --bl: 1.58;
+            --gap: 9px;
+            --pad: 22px;
+            --dot: 6px;
+            --dtop: .6em;
+            --bmar: 16px;
+        }
+
+        .prose {
+            max-width: 64ch;
+        }
+
+        .prose > p {
+            margin: 0;
+            font-size: var(--pf);
+            line-height: var(--pl);
+            color: #33303e;
+            text-wrap: pretty;
+        }
+
+        .prose > :not(:first-child) {
+            margin-top: var(--bmar);
+        }
+
+        .bullets {
+            display: flex;
+            flex-direction: column;
+            gap: var(--gap);
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .bullet {
+            position: relative;
+            padding-left: var(--pad);
+            font-size: var(--bf);
+            line-height: var(--bl);
+            color: #33303e;
+            text-wrap: pretty;
+        }
+
+        .bullet::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: var(--dtop);
+            width: var(--dot);
+            height: var(--dot);
+            border-radius: 2px;
+            background: linear-gradient(135deg, #7b52c7, #9d73ff);
+        }
+
+        .bullet strong {
+            font-weight: var(--fw-semibold);
+            color: var(--c-ink);
+        }
+
+        /* =========================================================
+           COMPONENTS — logo sphere (Logo Sphere.dc.html)
+           Partner marks orbiting the extruded Hybrid "B" inside a wireframe globe.
+           Pure CSS 3D (preserve-3d), driven by the "Logo sphere" script: auto-fit
+           to the box, constant autorotation, a window-wide pointer lean, drag to
+           spin and pitch with an inertial throw, depth dimming and explicit depth
+           ordering, a slow levitation per mark, gradient streaks running the rails,
+           and a double-click easter egg that tumbles the B three turns.
+        ========================================================= */
+        /* opened on its own, the component sits in an auto-height page, so it takes its
+           320px minimum — exactly as the design tool previews the file */
+        .logo_sphere {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            min-height: 320px;
+            background: var(--grad-hero-deep);
+            cursor: grab;
+            touch-action: pan-y;
+        }
+
+        .logo_sphere_stage {
+            position: absolute;
+            inset: 0;
+            perspective: 1200px;
+            perspective-origin: 50% 50%;
+            transform-style: preserve-3d;
+        }
+
+        .logo_sphere_glow {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 62%;
+            height: 62%;
+            border-radius: 50%;
+            background: radial-gradient(50% 50% at 50% 50%, rgba(157, 115, 255, .42), transparent 70%);
+            filter: blur(6px);
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+        }
+
+        .logo_sphere_sphere {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 0;
+            height: 0;
+            transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+            transform-style: preserve-3d;
+        }
+
+        /* --- wireframe: latitude rings in the orbit plane, vertical meridians --- */
+        .logo_sphere_wire {
+            position: absolute;
+            left: 0;
+            top: 0;
+            border: 1px solid rgba(196, 168, 255, .15);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .logo_sphere_wire--equator { border-color: rgba(196, 168, 255, .38); }
+        .logo_sphere_wire--mid { border-color: rgba(196, 168, 255, .2); }
+        .logo_sphere_wire--high { border-color: rgba(196, 168, 255, .13); }
+
+        /* a gradient streak runs each rail: bright head, fading tail, a long gap between passes */
+        .logo_sphere_trail {
+            position: absolute;
+            inset: -1px;
+            border-radius: 50%;
+            background: conic-gradient(from 0deg, rgba(157, 115, 255, 0) 0deg, rgba(157, 115, 255, 0) 286deg, rgba(157, 115, 255, .3) 318deg, rgba(199, 168, 255, .85) 347deg, #ffffff 358deg, rgba(157, 115, 255, 0) 360deg);
+            opacity: 0;
+            pointer-events: none;
+            -webkit-mask: radial-gradient(circle closest-side, transparent calc(100% - 2px), #000 calc(100% - 2px));
+            mask: radial-gradient(circle closest-side, transparent calc(100% - 2px), #000 calc(100% - 2px));
+            animation: logo_sphere_trail var(--trail-duration, 16s) linear var(--trail-delay, 0s) infinite both;
+        }
+
+        /* --- the extruded B: front face plus depth planes, back to front in DOM order --- */
+        .logo_sphere_core {
+            position: absolute;
+            left: 0;
+            top: 0;
+            pointer-events: none;
+            transform: rotateY(calc(var(--ry, 0deg) * -1)) rotateX(calc(var(--rx, 0deg) * -1)) rotateX(calc(var(--my, 0deg) * 3.3)) rotateY(calc(var(--mx, 0deg) * 2.6));
+            transform-style: preserve-3d;
+        }
+
+        .logo_sphere_spin {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform-style: preserve-3d;
+        }
+
+        .logo_sphere_spin.is_flipping {
+            animation: logo_sphere_flip 1.5s cubic-bezier(.32, 0, .22, 1);
+        }
+
+        .logo_sphere_layer svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+        }
+
+        /* --- partner marks --- */
+        .logo_sphere_node {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .logo_sphere_node,
+        .logo_sphere_float,
+        .logo_sphere_mark,
+        .logo_sphere_plate {
+            pointer-events: none;
+            -webkit-user-select: none;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+        .logo_sphere_plate {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform .34s var(--ease-out-quint);
+        }
+
+        .logo_sphere_node[data-hot] .logo_sphere_plate {
+            transform: scale(1.13);
+        }
+
+        .logo_sphere_mark {
+            position: relative;
+            display: inline-flex;
+        }
+
+        .logo_sphere_mark img {
+            display: block;
+            width: auto;
+            object-fit: contain;
+            pointer-events: none;
+            -webkit-user-drag: none;
+        }
+
+        /* =========================================================
+           ANIMATIONS
+        ========================================================= */
+        @keyframes logo_sphere_flip {
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(1080deg); }
+        }
+
+        @keyframes logo_sphere_trail {
+            0% { transform: rotate(var(--a0, 0deg)); opacity: 0; }
+            3% { opacity: 1; }
+            20% { opacity: 1; }
+            26% { transform: rotate(calc(var(--a0, 0deg) + 360deg)); opacity: 0; }
+            100% { transform: rotate(calc(var(--a0, 0deg) + 360deg)); opacity: 0; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .logo_sphere_trail {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="logo_sphere_body">
+    <!-- ========================= LOGO SPHERE ========================= -->
+    <main class="logo_sphere_page" id="main" aria-label="Logo Sphere — technology partners">
+        <div class="logo_sphere">
+            <div class="logo_sphere_stage">
+                <span class="logo_sphere_glow" aria-hidden="true"></span>
+                <div class="logo_sphere_sphere">
+                    <span class="logo_sphere_wire logo_sphere_wire--equator" data-lat="0" aria-hidden="true"></span>
+                    <span class="logo_sphere_wire logo_sphere_wire--mid" data-lat="34" aria-hidden="true"></span>
+                    <span class="logo_sphere_wire logo_sphere_wire--mid" data-lat="-34" aria-hidden="true"></span>
+                    <span class="logo_sphere_wire logo_sphere_wire--high" data-lat="62" aria-hidden="true"></span>
+                    <span class="logo_sphere_wire logo_sphere_wire--high" data-lat="-62" aria-hidden="true"></span>
+                    <span class="logo_sphere_wire" data-az="0" aria-hidden="true"></span>
+                    <span class="logo_sphere_wire" data-az="36" aria-hidden="true"></span>
+                    <span class="logo_sphere_wire" data-az="72" aria-hidden="true"></span>
+                    <span class="logo_sphere_wire" data-az="108" aria-hidden="true"></span>
+                    <span class="logo_sphere_wire" data-az="144" aria-hidden="true"></span>
+
+                    <div class="logo_sphere_core" aria-hidden="true">
+                        <div class="logo_sphere_spin">
+                            <span class="logo_sphere_layer"></span>
+                            <span class="logo_sphere_layer"></span>
+                            <span class="logo_sphere_layer"></span>
+                            <span class="logo_sphere_layer"></span>
+                            <span class="logo_sphere_layer"></span>
+                            <span class="logo_sphere_layer"></span>
+                            <span class="logo_sphere_layer"></span>
+                            <span class="logo_sphere_layer"></span>
+                            <span class="logo_sphere_layer"></span>
+                            <span class="logo_sphere_layer"></span>
+                            <span class="logo_sphere_layer"></span>
+                            <span class="logo_sphere_layer"></span>
+                            <span class="logo_sphere_layer"></span>
+                            <span class="logo_sphere_layer"></span>
+                            <span class="logo_sphere_layer"></span>
+                            <span class="logo_sphere_layer"></span>
+                            <span class="logo_sphere_layer"></span>
+                            <span class="logo_sphere_layer"></span>
+                        </div>
+                    </div>
+
+                    <div class="logo_sphere_node" data-i="0">
+                        <div class="logo_sphere_float">
+                            <a class="logo_sphere_plate" href="partner-page.html?p=optimove">
+                                <span class="logo_sphere_mark"><img src="images/logos/partners/optimove-w.svg" alt="Optimove"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="logo_sphere_node" data-i="1">
+                        <div class="logo_sphere_float">
+                            <a class="logo_sphere_plate" href="partner-page.html?p=smartico">
+                                <span class="logo_sphere_mark"><img src="images/logos/partners/smartico-w.svg" alt="Smartico"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="logo_sphere_node" data-i="2">
+                        <div class="logo_sphere_float">
+                            <a class="logo_sphere_plate" href="partner-page.html?p=fasttrack">
+                                <span class="logo_sphere_mark"><img src="images/logos/partners/fast-track-w-tinted.svg" alt="Fast Track"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="logo_sphere_node" data-i="3">
+                        <div class="logo_sphere_float">
+                            <a class="logo_sphere_plate" href="partner-page.html?p=solitics">
+                                <span class="logo_sphere_mark"><img src="images/logos/partners/solitics-w.svg" alt="Solitics"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="logo_sphere_node" data-i="4">
+                        <div class="logo_sphere_float">
+                            <a class="logo_sphere_plate" href="partner-page.html?p=customerio">
+                                <span class="logo_sphere_mark"><img src="images/logos/partners/customer-io-w.svg" alt="Customer.io"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="logo_sphere_node" data-i="5">
+                        <div class="logo_sphere_float">
+                            <a class="logo_sphere_plate" href="partner-page.html?p=xtremepush">
+                                <span class="logo_sphere_mark"><img src="images/logos/partners/xtremepush-w-tinted.svg" alt="Xtremepush"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        /* =========================================================
+           Logo sphere
+           Port of the Logo Sphere component's controller, unchanged in behaviour.
+           Options (data attributes on .logo_sphere): data-tilt (23), data-radius
+           (1.3, capped at 1), data-mark-size (.38), data-extrude (5), data-float
+           (3), data-parallax (1), data-autorotate (8 deg/s), data-depth-dim (.8),
+           data-glow (1.35). Plate style is "bare" (no plate, as on the site).
+           · build(): auto-fits the orbit radius so the nearest, perspective-magnified
+             mark still lands in the box; seats the marks; draws the B as 1 face +
+             up to 17 depth planes; sizes the wireframe rails; times one streak per
+             rail on its own random 11–22s cycle (negative delay, random start angle).
+           · tick(): eases rotation toward autorotation + pointer lean + drag pitch,
+             decays a throw back into the base rate, folds the levitation into the
+             same transform write and re-sorts marks around the B by world z.
+           · drag: horizontal spins, vertical pitches (±34° about the 23° tilt);
+             a drag that ends on a mark never counts as a click.
+           · double-click on the B (not on a mark): three turns about its own axis.
+           Reduced motion: no autorotation, levitation, streaks, drag or flip.
+        ========================================================= */
+        (function () {
+            const B_PATH = 'M171.086 39.697C171.086 41.4141 169.669 42.7273 168.05 42.7273H134.359V21.4142H125.254V9.19192H152.773C154.392 9.19192 155.808 10.6061 155.808 12.2222V18.3838C155.808 20 154.392 21.4142 152.773 21.4142H145.792L140.531 30.5051H168.05C169.669 30.5051 171.086 31.9192 171.086 33.6363V39.697ZM171.086 21.4142H164.914V9.19192C164.914 4.14142 160.867 0 155.808 0H116.047V30.5051H125.254V51.9192H171.086C176.144 51.9192 180.191 47.7778 180.191 42.7273V30.5051C180.191 25.4546 176.144 21.4142 171.086 21.4142Z';
+            const PLATE = { border: '0', bg: 'transparent', blur: false, pad: '0', h: 40 };
+
+            const num = (v, d) => {
+                const n = parseFloat(v);
+                return isFinite(n) ? n : d;
+            };
+
+            class LogoSphere {
+                constructor(root) {
+                    this.root = root;
+                    const d = root.dataset;
+                    this.opts = {
+                        tilt: num(d.tilt, 23),
+                        radius: num(d.radius, 1.3),
+                        markSize: num(d.markSize, .38),
+                        extrude: num(d.extrude, 5),
+                        float: num(d.float, 3),
+                        parallax: num(d.parallax, 1),
+                        autorotate: num(d.autorotate, 8),
+                        depthDim: num(d.depthDim, .8),
+                        glow: num(d.glow, 1.35)
+                    };
+                    this.reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                    /* no constant yaw offset: the resting turn comes from seeding the pointer target */
+                    this.rx = 0;
+                    this.ry = 0;
+                    this.tx = -.32;
+                    this.ty = -.18;
+                    this.spin = 0;
+                    this.last = 0;
+                    this.vel = 0;
+                    this.pv = 0;
+                    this.pitch = 0;
+                    this.drag = false;
+                    this.mx = 0;
+                    this.my = 0;
+                    this.stage = root.querySelector('.logo_sphere_stage');
+                    this.sphere = root.querySelector('.logo_sphere_sphere');
+                    this.core = root.querySelector('.logo_sphere_core');
+                    this.build();
+                    this.bind();
+                    this.raf = requestAnimationFrame(t => this.tick(t));
+                }
+
+                bind() {
+                    const root = this.root;
+                    root.addEventListener('pointerdown', e => this.grab(e));
+                    /* the lean listens on the window: the sphere leans toward the pointer anywhere */
+                    window.addEventListener('mousemove', e => {
+                        this.aim(e);
+                        this.hot(e);
+                    }, { passive: true });
+                    window.addEventListener('pointermove', e => this.pull(e), { passive: true });
+                    window.addEventListener('pointerup', () => this.release());
+                    window.addEventListener('pointercancel', () => this.release());
+                    window.addEventListener('resize', () => this.build());
+
+                    /* a tumble that ends on a plate is a drag, not a click */
+                    root.addEventListener('click', e => {
+                        if ((this.moved || 0) > 6) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            return;
+                        }
+                        const hit = this.hotNode && this.hotNode.el.querySelector('.logo_sphere_plate');
+                        const href = hit && hit.getAttribute('href');
+                        if (href) {
+                            e.preventDefault();
+                            window.location.href = href;
+                        }
+                    }, true);
+
+                    /* easter egg: double-click on the B's front face tumbles it three turns */
+                    const spin = root.querySelector('.logo_sphere_spin');
+                    spin.addEventListener('animationend', ev => {
+                        if (ev.target !== spin) return;
+                        spin.classList.remove('is_flipping');
+                    });
+                    root.addEventListener('dblclick', e => {
+                        if (this.reduce || this.hotNode) return;
+                        const face = root.querySelector('.logo_sphere_layer');
+                        if (!face || spin.classList.contains('is_flipping')) return;
+                        const r = face.getBoundingClientRect();
+                        const pad = 14;
+                        if (e.clientX < r.left - pad || e.clientX > r.right + pad || e.clientY < r.top - pad || e.clientY > r.bottom + pad) return;
+                        void spin.offsetWidth;
+                        spin.classList.add('is_flipping');
+                    });
+
+                    /* seat widths depend on the decoded SVGs: refit once they land */
+                    root.querySelectorAll('.logo_sphere_node img').forEach(img => {
+                        if (img.decode) img.decode().then(() => this.build()).catch(() => {});
+                        else img.addEventListener('load', () => this.build(), { once: true });
+                    });
+                }
+
+                pitchRange() {
+                    return [-34, 34];
+                }
+
+                grab(e) {
+                    if (this.reduce) return;
+                    this.drag = true;
+                    this.vel = 0;
+                    this.pv = 0;
+                    this.moved = 0;
+                    this.dragX = e.clientX;
+                    this.dragY = e.clientY;
+                    this.dragT = performance.now();
+                    this.root.style.cursor = 'grabbing';
+                }
+
+                pull(e) {
+                    if (!this.drag) return;
+                    const dx = e.clientX - this.dragX;
+                    const dy = e.clientY - this.dragY;
+                    if (!dx && !dy) return;
+                    this.dragX = e.clientX;
+                    this.dragY = e.clientY;
+                    this.moved = (this.moved || 0) + Math.abs(dx) + Math.abs(dy);
+                    const now = performance.now();
+                    const dt = (now - this.dragT) / 1000;
+
+                    const step = dx * .42;
+                    this.spin += step;
+                    this.ry += step;
+
+                    /* vertical drag is the camera's pitch, an offset from the designed tilt */
+                    const before = this.pitch || 0;
+                    const range = this.pitchRange();
+                    this.pitch = Math.max(range[0], Math.min(range[1], before + -dy * .3));
+                    const applied = this.pitch - before;
+                    this.rx += applied;
+
+                    if (dt > .004) {
+                        this.vel = Math.max(-320, Math.min(320, step / dt));
+                        this.pv = Math.max(-180, Math.min(180, applied / dt));
+                        this.dragT = now;
+                    }
+                    this.frame(false);
+                }
+
+                release() {
+                    if (!this.drag) return;
+                    this.drag = false;
+                    this.root.style.cursor = 'grab';
+                }
+
+                /* styles every seat for an orbit radius and reports its half-extent as a fraction of R */
+                seat(seats, R) {
+                    const logoH = Math.max(12, Math.round(R * .125));
+                    const padX = Math.round(logoH * .66);
+                    let mw = 0;
+                    let mh = 0;
+                    seats.forEach(s => {
+                        const img = s.el.querySelector('img');
+                        if (img) {
+                            img.style.height = logoH + 'px';
+                            img.style.maxWidth = Math.round(R * .52) + 'px';
+                        }
+                        const plate = s.el.querySelector('.logo_sphere_plate');
+                        if (plate) {
+                            plate.style.border = PLATE.border;
+                            plate.style.background = PLATE.bg;
+                            plate.style.padding = '0 ' + Math.round(padX * .34) + 'px';
+                            plate.style.height = Math.round(logoH * (PLATE.h / 24)) + 'px';
+                            plate.style.borderRadius = Math.round(logoH * .66) + 'px';
+                        }
+                    });
+                    seats.forEach(s => {
+                        mw = Math.max(mw, s.el.offsetWidth);
+                        mh = Math.max(mh, s.el.offsetHeight);
+                    });
+                    return { w: mw / 2 / R, h: mh / 2 / R, logoH };
+                }
+
+                /* geometry is written once per layout, not per frame */
+                build() {
+                    const root = this.root;
+                    const stage = this.stage;
+                    const o = this.opts;
+                    const w = stage.clientWidth || 520;
+                    const h = stage.clientHeight || 520;
+                    const persp = Math.min(w, h) * 3.2;
+                    stage.style.perspective = Math.round(persp) + 'px';
+                    this.tilt = o.tilt;
+
+                    const seats = [...root.querySelectorAll('.logo_sphere_node')].map(el => ({ el, i: parseInt(el.getAttribute('data-i'), 10) }));
+                    const n = seats.length;
+
+                    /* auto-fit: seat size is not linear in R, so iterate seat → solve until it settles */
+                    const sinT = Math.sin(this.tilt * Math.PI / 180);
+                    const fit = (Rr, k) => {
+                        const magn = persp / Math.max(1, persp - Rr);
+                        const eW = Math.max(1 + k.w, 1) * magn;
+                        const eH = Math.max(1, sinT + k.h) * magn;
+                        return Math.min((w / 2) / eW, (h / 2) / eH);
+                    };
+                    const fill = Math.min(1, o.radius);
+                    let R = Math.min(w, h) * .3;
+                    let k = this.seat(seats, R);
+                    for (let pass = 0; pass < 6; pass++) {
+                        const next = fit(R, k) * fill;
+                        const settled = Math.abs(next - R) < 1;
+                        R = next;
+                        k = this.seat(seats, R);
+                        if (settled) break;
+                    }
+                    const over = ((1 + k.w) * R * (persp / Math.max(1, persp - R))) / (w / 2);
+                    if (over > 1) {
+                        R = R / over;
+                        k = this.seat(seats, R);
+                    }
+                    this.R = R;
+                    this.par = o.parallax;
+                    this.spinRate = this.reduce ? 0 : o.autorotate;
+                    this.dim = o.depthDim;
+                    if (!this.inited) {
+                        this.inited = true;
+                        this.rx = -this.tilt;
+                    }
+                    this.float = this.reduce ? 0 : o.float;
+
+                    this.nodes = seats.map(s => {
+                        const az = (s.i * 360 / n) * Math.PI / 180;
+                        return { el: s.el, x: Math.sin(az) * R, z: Math.cos(az) * R, o: -1 };
+                    });
+                    /* centre each seat with margins, so transform-origin sits on the sphere centre */
+                    this.nodes.forEach(nd => {
+                        nd.el.style.marginLeft = (-nd.el.offsetWidth / 2) + 'px';
+                        nd.el.style.marginTop = (-nd.el.offsetHeight / 2) + 'px';
+                    });
+
+                    /* the extruded B: thickness → plane count, painted back to front */
+                    const bh = Math.min(R * o.markSize, h * .84, (w * .84) / (64.144 / 51.92));
+                    const bw = bh * (64.144 / 51.92);
+                    const units = Math.max(0, Math.min(18, Math.round(o.extrude)));
+                    const depth = bh * .048 * units;
+                    const ext = depth > 0 ? Math.min(17, Math.max(3, Math.round(depth / 1.9))) : 0;
+                    const step = ext ? depth / ext : 1;
+                    root.querySelectorAll('.logo_sphere_layer').forEach((el, j) => {
+                        if (j > ext) {
+                            el.style.display = 'none';
+                            return;
+                        }
+                        const i = ext - j;
+                        el.style.display = 'block';
+                        el.style.position = 'absolute';
+                        el.style.left = '0';
+                        el.style.top = '0';
+                        el.style.width = bw + 'px';
+                        el.style.height = bh + 'px';
+                        el.style.transform = 'translate(-50%,-50%) translateZ(' + (-i * step) + 'px)';
+                        const t = ext ? i / ext : 0;
+                        const paint = i === 0 ? 'url(#logo-sphere-face)'
+                            : 'rgb(' + Math.round(150 - 96 * t) + ',' + Math.round(112 - 78 * t) + ',' + Math.round(214 - 132 * t) + ')';
+                        if (el.getAttribute('data-fill') !== paint) {
+                            el.setAttribute('data-fill', paint);
+                            const defs = i === 0
+                                ? '<defs><linearGradient id="logo-sphere-face" x1="0.05" y1="0" x2="0.95" y2="1">'
+                                    + '<stop offset="0" stop-color="#ffffff"></stop>'
+                                    + '<stop offset="0.38" stop-color="#e4d8ff"></stop>'
+                                    + '<stop offset="1" stop-color="#9a6fe8"></stop></linearGradient></defs>'
+                                : '';
+                            el.innerHTML = '<svg viewBox="116.047 0 64.144 51.92" aria-hidden="true">' + defs
+                                + '<path d="' + B_PATH + '" fill="' + paint + '" stroke="none"></path></svg>';
+                        }
+                    });
+
+                    /* wireframe rails + one streak each, timed once and never re-synced */
+                    root.querySelectorAll('.logo_sphere_wire').forEach(el => {
+                        let r;
+                        let tf;
+                        if (el.hasAttribute('data-lat')) {
+                            const lat = parseFloat(el.getAttribute('data-lat')) * Math.PI / 180;
+                            r = R * Math.cos(lat);
+                            tf = 'translate3d(0,' + (-R * Math.sin(lat)).toFixed(1) + 'px,0) rotateX(90deg)';
+                        } else {
+                            r = R;
+                            tf = 'rotateY(' + el.getAttribute('data-az') + 'deg)';
+                        }
+                        el.style.width = (r * 2) + 'px';
+                        el.style.height = (r * 2) + 'px';
+                        el.style.marginLeft = (-r) + 'px';
+                        el.style.marginTop = (-r) + 'px';
+                        el.style.transform = tf;
+
+                        let trail = el.firstElementChild;
+                        if (!trail && !this.reduce) {
+                            trail = document.createElement('span');
+                            trail.className = 'logo_sphere_trail';
+                            const dur = 11 + Math.random() * 11;
+                            trail.style.setProperty('--trail-duration', dur.toFixed(1) + 's');
+                            trail.style.setProperty('--trail-delay', (-Math.random() * dur).toFixed(1) + 's');
+                            trail.style.setProperty('--a0', Math.round(Math.random() * 360) + 'deg');
+                            el.appendChild(trail);
+                        }
+                    });
+
+                    const glow = root.querySelector('.logo_sphere_glow');
+                    if (glow) {
+                        const g = R * 2.1;
+                        glow.style.width = g + 'px';
+                        glow.style.height = g + 'px';
+                        glow.style.opacity = String(o.glow);
+                    }
+                    this.frame(true);
+
+                    /* cache the page-space centre so pointer moves never read layout */
+                    const box = root.getBoundingClientRect();
+                    this.cx = box.left + window.scrollX + box.width / 2;
+                    this.cy = box.top + window.scrollY + box.height / 2;
+                    this.reach = Math.max(box.width, box.height) * 1.35;
+                }
+
+                hot(e) {
+                    const nodes = this.nodes || [];
+                    if (!nodes.length || !this.reach) return;
+                    const near = Math.abs(e.clientX + window.scrollX - this.cx) < this.reach
+                        && Math.abs(e.clientY + window.scrollY - this.cy) < this.reach;
+                    let best = null;
+                    if (near && !this.drag) {
+                        nodes.forEach(nd => {
+                            const r = nd.el.getBoundingClientRect();
+                            if (e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom) {
+                                if (!best || (nd.zw || 0) > (best.zw || 0)) best = nd;
+                            }
+                        });
+                    }
+                    if (best === this.hotNode) return;
+                    if (this.hotNode) this.hotNode.el.removeAttribute('data-hot');
+                    this.hotNode = best;
+                    if (best) best.el.setAttribute('data-hot', '');
+                    if (!this.drag) this.root.style.cursor = best ? 'pointer' : 'grab';
+                }
+
+                aim(e) {
+                    if (this.reduce || this.drag || !this.reach) return;
+                    const nx = (e.clientX + window.scrollX - this.cx) / (this.reach * .85);
+                    const ny = (e.clientY + window.scrollY - this.cy) / (this.reach * .85);
+                    const soft = v => Math.max(-1, Math.min(1, v)) * (1 - Math.min(.35, Math.abs(v) * .2));
+                    this.tx = soft(nx);
+                    this.ty = soft(ny);
+                }
+
+                tick(t) {
+                    const dt = this.last ? Math.min(.05, (t - this.last) / 1000) : 0;
+                    this.last = t;
+                    if (!this.drag) {
+                        this.spin += (this.spinRate + this.vel) * dt;
+                        if (this.vel) {
+                            this.vel *= Math.exp(-dt / .42);
+                            if (Math.abs(this.vel) < .6) this.vel = 0;
+                        }
+                        if (this.pv) {
+                            const range = this.pitchRange();
+                            this.pitch = Math.max(range[0], Math.min(range[1], (this.pitch || 0) + this.pv * dt));
+                            this.pv *= Math.exp(-dt / .34);
+                            if (Math.abs(this.pv) < .6) this.pv = 0;
+                        }
+                    }
+                    const k = 1 - Math.pow(.001, dt || .016);
+                    const nmx = this.drag ? this.mx : this.mx + (this.tx * 20 * this.par - this.mx) * k;
+                    const nmy = this.drag ? this.my : this.my + (this.ty * 12 * this.par - this.my) * k;
+                    const range = this.pitchRange();
+                    const base = -this.tilt;
+                    const wantRx = Math.max(base + range[0], Math.min(base + range[1], base + (this.pitch || 0) + nmy));
+                    const nrx = this.rx + (wantRx - this.rx) * k;
+                    const nry = this.ry + ((nmx + this.spin) - this.ry) * k;
+                    const moved = Math.abs(nrx - this.rx) > .004 || Math.abs(nry - this.ry) > .004 || Math.abs(nmx - this.mx) > .004
+                        || (this.float > 0 && !this.reduce) || !!this.vel || !!this.pv;
+                    this.rx = nrx;
+                    this.ry = nry;
+                    this.mx = nmx;
+                    this.my = nmy;
+                    if (moved && this.visible !== false) this.frame(false);
+                    this.raf = requestAnimationFrame(tt => this.tick(tt));
+                }
+
+                /* depth is resolved in DOM order; the levitation rides the same transform write */
+                frame(force) {
+                    const sph = this.sphere;
+                    const rx = this.rx;
+                    const ry = this.ry;
+                    sph.style.setProperty('--rx', rx.toFixed(2) + 'deg');
+                    sph.style.setProperty('--ry', ry.toFixed(2) + 'deg');
+                    sph.style.setProperty('--mx', this.mx.toFixed(2) + 'deg');
+                    sph.style.setProperty('--my', this.my.toFixed(2) + 'deg');
+                    const sy = Math.sin(ry * Math.PI / 180);
+                    const cy = Math.cos(ry * Math.PI / 180);
+                    const cx = Math.cos(rx * Math.PI / 180);
+                    const t = Date.now() / 1000;
+                    const amp = this.float || 0;
+
+                    (this.nodes || []).forEach((nd, i) => {
+                        const zw = (-nd.x * sy + nd.z * cy) * cx;
+                        nd.zw = zw;
+                        const lift = amp ? Math.sin(t * (.62 + i * .07) + i * 1.7) * amp * .5 : 0;
+                        if (force || amp || Math.abs(lift - (nd.lift || 0)) > .05) {
+                            nd.lift = lift;
+                            nd.el.style.transform = 'translate3d(' + nd.x.toFixed(1) + 'px,0px,' + nd.z.toFixed(1) + 'px)'
+                                + ' rotateY(calc(var(--ry,0deg) * -1)) rotateX(calc(var(--rx,0deg) * -1))'
+                                + (lift ? ' translateY(' + lift.toFixed(1) + 'px)' : '');
+                        }
+                        const depth = (zw / (this.R || 1) + 1) / 2;
+                        const opacity = 1 - this.dim * (1 - depth);
+                        if (Math.abs(opacity - nd.o) > .02) {
+                            nd.o = opacity;
+                            nd.el.style.opacity = opacity.toFixed(2);
+                        }
+                    });
+                    this.restack();
+                }
+
+                /* back to front; the B sits at z = 0 among the seats */
+                restack() {
+                    const core = this.core;
+                    if (!core || !this.nodes || !this.nodes.length) return;
+                    const order = this.nodes.map(nd => ({ el: nd.el, z: nd.zw || 0 })).concat([{ el: core, z: 0 }]);
+                    order.sort((a, b) => a.z - b.z);
+                    const key = order.map(o => (o.el === core ? 'B' : o.el.getAttribute('data-i'))).join('');
+                    if (key === this.stack) return;
+                    this.stack = key;
+                    order.forEach(o => this.sphere.appendChild(o.el));
+                }
+            }
+
+            document.querySelectorAll('.logo_sphere').forEach(root => {
+                const sphere = new LogoSphere(root);
+                /* pause the frame writes while the sphere is off-screen */
+                if (window.IntersectionObserver) {
+                    new IntersectionObserver(entries => {
+                        sphere.visible = entries[0].isIntersecting;
+                    }).observe(root);
+                }
+            });
+        })();
+    </script>
+</body>
+</html>

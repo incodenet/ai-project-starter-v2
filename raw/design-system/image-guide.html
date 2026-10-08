@@ -1,0 +1,3039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Image Guide | Hybrid Interaction Design System</title>
+    <meta name="description" content="Every picture slot on the site: ratio, the largest size it is drawn at, and the minimum file to upload.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap">
+
+    <style>
+        /* =========================================================
+           DESIGN TOKENS
+           Fonts, weights and the fluid type scale (hi-fonts.css + hi-typography.css),
+           then colour, surface, radius, elevation, motion, space and layout
+           (hi-tokens.css). Every page of the design system ships the same set.
+        ========================================================= */
+        :root {
+            /* --- font families --- */
+            --font-heading: 'Hanken Grotesk', system-ui, sans-serif;
+            --font-caption: 'Hanken Grotesk', system-ui, sans-serif;
+            --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+            --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+            /* --- weights --- */
+            --fw-extralight: 200;
+            --fw-light: 300;
+            --fw-regular: 400;
+            --fw-medium: 500;
+            --fw-semibold: 600;
+            --fw-bold: 700;
+            --fw-extrabold: 800;
+
+            /* --- type scale (fluid) --- */
+            --text-hero-size: clamp(40px, 6vw, 96px);
+            --text-figure-size: clamp(48px, 8.6vw, 120px);
+            --text-display-size: clamp(36px, 5.2vw, 78px);
+            --text-h1-size: clamp(32px, 4.4vw, 64px);
+            --text-h2-size: clamp(28px, 3.6vw, 52px);
+            --text-h-feature-size: clamp(23px, 2.9vw, 42px);
+            --text-h3-size: clamp(20px, 2vw, 27px);
+            --text-body-lg-size: clamp(18px, 1.6vw, 22px);
+            --text-body-md-size: 16.5px;
+            --text-body-sm-size: 14.5px;
+            --text-caption-size: 12px;
+            --text-label-size: 15px;
+
+            /* --- line heights --- */
+            --lh-tight: 1;
+            --lh-snug: 1.15;
+            --lh-heading: 1.05;
+            --lh-body: 1.6;
+
+            /* --- letter spacing --- */
+            --ls-hero: -.045em;
+            --ls-heading: -.03em;
+            --ls-h3: -.02em;
+            --ls-caption: .2em;
+            --ls-label: .02em;
+
+            /* --- brand palette --- */
+            --c-bg: #eaeaf2;
+            --c-ink: #15131c;
+            --c-dark: #180a2b;
+            --c-dark-2: #170928;
+            --c-accent: #7b52c7;
+            --c-accent-bright: #9d73ff;
+            --c-violet: #9b6fe0;
+            --c-lav: #b79bff;
+            --c-cyan: #00b7fa;
+            --c-offwhite: #f1f8ff;
+            --c-white: #ffffff;
+            --c-grey: #6b6b76;
+            --c-ds-panel: #12101a;
+
+            /* --- text alpha steps --- */
+            --c-ink-60: rgba(21, 19, 28, .6);
+            --c-ink-55: rgba(21, 19, 28, .55);
+            --c-ink-45: rgba(21, 19, 28, .45);
+            --c-ink-16: rgba(21, 19, 28, .16);
+            --c-offwhite-80: rgba(241, 248, 255, .8);
+            --c-offwhite-62: rgba(241, 248, 255, .62);
+            --c-offwhite-50: rgba(241, 248, 255, .5);
+            --c-white-78: rgba(255, 255, 255, .78);
+            --c-white-50: rgba(255, 255, 255, .5);
+            --c-white-20: rgba(255, 255, 255, .2);
+            --c-white-08: rgba(255, 255, 255, .08);
+
+            /* --- partner brands --- */
+            --brand-optimove: #302c69;
+            --brand-optimove-pastel: #f4f4f7;
+            --brand-smartico: #f15851;
+            --brand-smartico-pastel: #fef2f1;
+            --brand-fast-track: #e96092;
+            --brand-fast-track-pastel: #fdf2f6;
+            --brand-xtremepush: #003df5;
+            --brand-xtremepush-pastel: #f1f4fe;
+            --brand-customer-io: #0b363b;
+            --brand-customer-io-pastel: #f2f4f5;
+            --brand-solitics: #ffd400;
+            --brand-solitics-pastel: #fff5c3;
+
+            /* --- status --- */
+            --c-success: #1f8a5b;
+            --c-success-bright: #1fb26b;
+            --c-success-soft: #1fd28a;
+            --c-warning: #ffb038;
+            --c-magenta: #c32e93;
+
+            /* --- surfaces --- */
+            --surface-light: #ffffff;
+            --surface-tint: #faf8fd;
+            --surface-tint-strong: #f7f4fd;
+            --surface-neutral: #f1f1f4;
+            --surface-hover: #f2f2f4;
+            --grad-surface-grey: linear-gradient(145deg, #eeeef2 0%, #f6f6f8 52%, #ffffff 100%);
+            --grad-surface-grey-dark: linear-gradient(145deg, rgba(255, 255, 255, .09) 0%, rgba(255, 255, 255, .05) 52%, rgba(255, 255, 255, .02) 100%);
+            --grad-primary: linear-gradient(225deg, #8a62d8, #6a43b2);
+            --grad-hero: linear-gradient(160deg, #1c0c3a 0%, #2c1356 44%, #46228a 100%);
+            --grad-hero-deep: linear-gradient(160deg, #120724 0%, #1c0d38 46%, #2e155c 100%);
+            --grad-card-dark: linear-gradient(135deg, #1a0a3a, #3d1a6e);
+            --grad-card-dark-hover: linear-gradient(135deg, #26124f, #4d2589);
+            --grad-panel: linear-gradient(180deg, #17161d, #111017);
+            --grad-metric: linear-gradient(160deg, var(--c-accent), #4a248f);
+            --grad-rule-light: linear-gradient(to right, rgba(21, 19, 28, .16), rgba(21, 19, 28, 0));
+            --grad-rule-dark: linear-gradient(to right, rgba(255, 255, 255, .18), rgba(255, 255, 255, 0));
+
+            /* --- borders --- */
+            --border-light: 1px solid #eee9f6;
+            --border-glass: 1px solid rgba(255, 255, 255, .16);
+            --border-panel: 1px solid rgba(255, 255, 255, .07);
+            --border-accent-soft: 1px solid rgba(123, 82, 199, .35);
+
+            /* --- radii --- */
+            --r-xs: 4px;
+            --r-sm: 7px;
+            --r-md: 12px;
+            --r-lg: 16px;
+            --r-xl: 20px;
+            --r-2xl: 24px;
+            --r-3xl: 26px;
+            --r-pill: 100px;
+            --r-circle: 50%;
+
+            /* --- elevation --- */
+            --shadow-tile: 0 4px 10px -4px rgba(24, 10, 43, .14), 0 1px 3px -1px rgba(24, 10, 43, .1);
+            --shadow-pill: 0 8px 30px rgba(0, 0, 0, .28);
+            --shadow-card: 0 24px 50px rgba(26, 10, 58, .12);
+            --shadow-float: 0 20px 50px rgba(0, 0, 0, .35);
+            --shadow-card-raised: 0 40px 90px rgba(26, 10, 58, .28);
+            --shadow-card-hover: 0 54px 110px rgba(26, 10, 58, .42);
+            --shadow-panel: 0 30px 70px rgba(0, 0, 0, .5), inset 0 1px 0 rgba(255, 255, 255, .05);
+            --glow-accent: 0 4px 14px rgba(123, 82, 199, .6);
+
+            /* --- blur --- */
+            --blur-glass: 14px;
+            --blur-card: 12px;
+
+            /* --- motion --- */
+            --dur-fast: .2s;
+            --dur-base: .3s;
+            --dur-mid: .4s;
+            --dur-slow: .5s;
+            --dur-shutter: .9s;
+            --ease-out-quint: cubic-bezier(.16, 1, .3, 1);
+            --ease-swift: cubic-bezier(.2, .8, .2, 1);
+            --ease-standard: cubic-bezier(.4, 0, .2, 1);
+            --ease-shutter: cubic-bezier(.76, 0, .24, 1);
+
+            /* --- space --- */
+            --space-xxs: 4px;
+            --space-xs: 8px;
+            --space-sm: 12px;
+            --space-md: 14px;
+            --space-lg: 16px;
+            --space-xl: 20px;
+            --space-2xl: 24px;
+            --space-3xl: 34px;
+            --space-4xl: 40px;
+            --space-5xl: 56px;
+
+            /* --- layout --- */
+            --gutter: 5vw;
+            --gut: max(5vw, calc((100vw - 1440px) / 2 + 5vw));
+            --max-content: 1440px;
+            --max-text: 1100px;
+            --max-footer: 1280px;
+            --nav-height: 78px;
+            --ds-nav-width: 240px;
+            --ds-sheet-max: 1120px;
+            --ds-sheet-pad: 6vw;
+        }
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--c-bg);
+            color: var(--c-ink);
+            font-family: var(--font-body);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* NO percentage max-width here: logo marks sit in shrink-to-fit parents sized BY their
+           image, and a percentage that resolves against such a parent collapses the image to 0.
+           Containment is declared per component instead. */
+        img,
+        svg {
+            display: block;
+        }
+
+        /* a component class with its own display value out-ranks the UA's [hidden] rule */
+        [hidden] {
+            display: none !important;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            font-family: var(--font-heading);
+        }
+
+        p {
+            margin: 0;
+        }
+
+        button {
+            font: inherit;
+            color: inherit;
+            cursor: pointer;
+        }
+
+        /* zero specificity: every component colour (buttons, tiles, menu rows, nav) wins in every state,
+           the way the DC's inline styles beat its helmet link rule */
+        :where(a) {
+            color: var(--c-accent);
+        }
+
+        :where(a:hover) {
+            color: #5a37a0;
+        }
+
+        code {
+            font-family: var(--font-mono);
+            font-size: .85em;
+        }
+
+        :focus-visible {
+            outline: 2px solid rgba(157, 115, 255, .7);
+            outline-offset: 2px;
+        }
+
+        .visually_hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            white-space: nowrap;
+        }
+
+        /* =========================================================
+           TYPOGRAPHY
+           The named type roles. Design-tool name in brackets:
+           text_hero (.hi-hero) · text_figure (.hi-figure) · text_display (.hi-display)
+           text_h1 / text_h2 / text_h_feature / text_h3 · eyebrow (.hi-eyebrow)
+           figcaption (.hi-figcaption) · text_body_lg / _md / _sm · text_label
+           prose--l/m/s + bullets (.hi-prose-*, .hi-bullets, .hi-bullet)
+        ========================================================= */
+        .text_hero {
+            font-family: var(--font-heading);
+            font-weight: var(--fw-light);
+            font-size: var(--text-hero-size);
+            line-height: .98;
+            letter-spacing: var(--ls-hero);
+        }
+
+        .text_figure {
+            font-family: var(--font-heading);
+            font-weight: var(--fw-extralight);
+            font-size: var(--text-figure-size);
+            line-height: .82;
+            letter-spacing: -.03em;
+        }
+
+        .text_display {
+            font-family: var(--font-heading);
+            font-weight: var(--fw-light);
+            font-size: var(--text-display-size);
+            line-height: var(--lh-tight);
+            letter-spacing: -.04em;
+        }
+
+        .text_h1 {
+            font-family: var(--font-heading);
+            font-weight: var(--fw-light);
+            font-size: var(--text-h1-size);
+            line-height: 1.04;
+            letter-spacing: -.035em;
+        }
+
+        .text_h2 {
+            font-family: var(--font-heading);
+            font-weight: var(--fw-light);
+            font-size: var(--text-h2-size);
+            line-height: var(--lh-heading);
+            letter-spacing: var(--ls-heading);
+        }
+
+        .text_h_feature {
+            font-family: var(--font-heading);
+            font-weight: var(--fw-light);
+            font-size: var(--text-h-feature-size);
+            line-height: 1.1;
+            letter-spacing: -.032em;
+        }
+
+        .text_h3 {
+            font-family: var(--font-heading);
+            font-weight: var(--fw-semibold);
+            font-size: var(--text-h3-size);
+            line-height: 1.2;
+            letter-spacing: var(--ls-h3);
+        }
+
+        .eyebrow {
+            font-family: var(--font-caption);
+            font-weight: var(--fw-bold);
+            font-size: var(--text-caption-size);
+            line-height: 1;
+            letter-spacing: var(--ls-caption);
+            text-transform: uppercase;
+        }
+
+        .figcaption {
+            font-family: var(--font-body);
+            font-weight: var(--fw-regular);
+            font-size: 13px;
+            line-height: 1.5;
+            letter-spacing: 0;
+            text-transform: none;
+            color: var(--c-ink-45);
+        }
+
+        .figcaption--on-dark {
+            color: rgba(255, 255, 255, .5);
+        }
+
+        .text_body_lg {
+            font-family: var(--font-body);
+            font-weight: var(--fw-regular);
+            font-size: var(--text-body-lg-size);
+            line-height: var(--lh-body);
+        }
+
+        .text_body_md {
+            font-family: var(--font-body);
+            font-weight: var(--fw-regular);
+            font-size: var(--text-body-md-size);
+            line-height: var(--lh-body);
+        }
+
+        .text_body_sm {
+            font-family: var(--font-body);
+            font-weight: var(--fw-regular);
+            font-size: var(--text-body-sm-size);
+            line-height: 1.55;
+        }
+
+        .text_label {
+            font-family: var(--font-body);
+            font-weight: var(--fw-semibold);
+            font-size: var(--text-label-size);
+            letter-spacing: var(--ls-label);
+        }
+
+        /* --- body prose & bullets · sizes L / M / S --- */
+        .prose--l,
+        .bullets--l {
+            --pf: clamp(17px, 1.5vw, 21px);
+            --pl: 1.78;
+            --bf: clamp(17px, 1.5vw, 21px);
+            --bl: 1.6;
+            --gap: clamp(11px, 1.2vw, 15px);
+            --pad: 26px;
+            --dot: 8px;
+            --dtop: .62em;
+            --bmar: clamp(20px, 2vw, 28px);
+        }
+
+        .prose--m,
+        .bullets--m {
+            --pf: clamp(15px, 1.25vw, 18px);
+            --pl: 1.75;
+            --bf: clamp(15px, 1.25vw, 18px);
+            --bl: 1.6;
+            --gap: clamp(10px, 1.05vw, 13px);
+            --pad: 24px;
+            --dot: 7px;
+            --dtop: .6em;
+            --bmar: clamp(18px, 1.7vw, 23px);
+        }
+
+        .prose--s,
+        .bullets--s {
+            --pf: clamp(14px, 1.05vw, 16px);
+            --pl: 1.72;
+            --bf: clamp(14px, 1.05vw, 16px);
+            --bl: 1.58;
+            --gap: 9px;
+            --pad: 22px;
+            --dot: 6px;
+            --dtop: .6em;
+            --bmar: 16px;
+        }
+
+        .prose {
+            max-width: 64ch;
+        }
+
+        .prose > p {
+            margin: 0;
+            font-size: var(--pf);
+            line-height: var(--pl);
+            color: #33303e;
+            text-wrap: pretty;
+        }
+
+        .prose > :not(:first-child) {
+            margin-top: var(--bmar);
+        }
+
+        .bullets {
+            display: flex;
+            flex-direction: column;
+            gap: var(--gap);
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .bullet {
+            position: relative;
+            padding-left: var(--pad);
+            font-size: var(--bf);
+            line-height: var(--bl);
+            color: #33303e;
+            text-wrap: pretty;
+        }
+
+        .bullet::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: var(--dtop);
+            width: var(--dot);
+            height: var(--dot);
+            border-radius: 2px;
+            background: linear-gradient(135deg, #7b52c7, #9d73ff);
+        }
+
+        .bullet strong {
+            font-weight: var(--fw-semibold);
+            color: var(--c-ink);
+        }
+
+        /* =========================================================
+           LAYOUT — design-system shell
+           A fixed 240px sidebar (ds_nav) and the sheet beside it (ds_page).
+           Below 900px the sidebar is removed and the sheet takes the full width.
+        ========================================================= */
+        /* decorative bleeds (pulsing rings, glow canvases) are contained by the sheet itself, never by
+           html — clipping html would hide fixed descendants */
+        .ds_page {
+            min-height: 100vh;
+            margin-left: var(--ds-nav-width);
+            overflow-x: clip;
+        }
+
+        .ds_nav {
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 99000;
+            display: flex;
+            flex-direction: column;
+            width: var(--ds-nav-width);
+            padding: 26px 14px 14px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            background: var(--c-ds-panel);
+            border-right: 1px solid rgba(255, 255, 255, .09);
+            font-family: var(--font-body);
+            scrollbar-width: none;
+        }
+
+        .ds_nav::-webkit-scrollbar {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        /* --- title: doubles as the Overview link --- */
+        .ds_nav_home {
+            position: relative;
+            flex: 0 0 auto;
+            display: block;
+            margin-bottom: 6px;
+            padding: 0 12px;
+            font-size: 14px;
+            line-height: 1.3;
+            text-decoration: none;
+        }
+
+        .ds_nav_kicker {
+            display: block;
+            font-family: var(--font-caption);
+            font-size: 10.5px;
+            font-weight: var(--fw-bold);
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: var(--c-accent-bright);
+        }
+
+        .ds_nav_title {
+            display: block;
+            margin-top: 5px;
+            font-family: var(--font-heading);
+            font-size: 21px;
+            font-weight: var(--fw-light);
+            letter-spacing: -.02em;
+            color: var(--c-white);
+        }
+
+        /* a vertical accent tick on the panel edge marks the Overview as current */
+        .ds_nav_home_mark {
+            position: absolute;
+            top: 50%;
+            left: -14px;
+            width: 3px;
+            height: 40px;
+            background: var(--c-accent-bright);
+            opacity: 0;
+            transform: translateY(-50%);
+            transition: opacity .25s ease;
+        }
+
+        .ds_nav_home[aria-current="page"] .ds_nav_home_mark {
+            opacity: 1;
+        }
+
+        /* --- filter field --- */
+        .ds_nav_search {
+            position: relative;
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            margin: 18px 12px 10px;
+        }
+
+        .ds_nav_search_icon {
+            position: absolute;
+            left: 11px;
+            width: 13px;
+            height: 13px;
+            color: rgba(255, 255, 255, .4);
+            pointer-events: none;
+        }
+
+        .ds_nav_search_input {
+            width: 100%;
+            padding: 8px 10px 8px 32px;
+            border: 1px solid rgba(255, 255, 255, .12);
+            border-radius: 9px;
+            outline: none;
+            background: rgba(255, 255, 255, .05);
+            color: var(--c-white);
+            font-family: inherit;
+            font-size: 13px;
+        }
+
+        /* --- group header: hit area centred on the label, divider on its top edge --- */
+        .ds_nav_group {
+            position: relative;
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            width: 100%;
+            margin: 33px 0 11px;
+            padding: 0 12px;
+            border: 0;
+            background: none;
+            font-family: inherit;
+            font-size: 10.5px;
+            font-weight: var(--fw-bold);
+            letter-spacing: .16em;
+            text-align: left;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .3);
+            cursor: pointer;
+            transition: color .18s ease;
+        }
+
+        .ds_nav_group:hover {
+            color: rgba(255, 255, 255, .5);
+        }
+
+        .ds_nav_group::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -11px;
+            bottom: -11px;
+            border-radius: 9px;
+        }
+
+        .ds_nav_group:hover::before {
+            background: rgba(255, 255, 255, .05);
+        }
+
+        .ds_nav_group::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -22px;
+            height: 1px;
+            background: linear-gradient(to right, rgba(255, 255, 255, .16), rgba(255, 255, 255, 0));
+        }
+
+        .ds_nav_group--first::after {
+            display: none;
+        }
+
+        .ds_nav_group > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .ds_nav_caret {
+            width: 13px;
+            height: 13px;
+            margin-left: auto;
+            transform: rotate(0deg);
+            transition: transform .25s var(--ease-out-quint);
+        }
+
+        .ds_nav_group[aria-expanded="true"] .ds_nav_caret {
+            transform: rotate(180deg);
+        }
+
+        /* --- links --- */
+        .ds_nav_list {
+            flex: 0 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ds_nav_link {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            padding: 8px 12px;
+            border-radius: 9px;
+            color: rgba(255, 255, 255, .58);
+            font-size: 14px;
+            line-height: 1.3;
+            text-decoration: none;
+            transition: background .18s ease, color .18s ease;
+        }
+
+        .ds_nav_link:hover {
+            background: rgba(255, 255, 255, .07);
+            color: var(--c-white);
+        }
+
+        .ds_nav_link[aria-current="page"] {
+            background: rgba(157, 115, 255, .16);
+            color: var(--c-white);
+            font-weight: var(--fw-semibold);
+        }
+
+        .ds_nav_dot {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 17px;
+            height: 17px;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, .26);
+            font-family: var(--font-caption);
+            font-size: 12px;
+            font-weight: var(--fw-extrabold);
+            letter-spacing: 0;
+            line-height: 1;
+            color: var(--c-dark);
+            transition: background .2s ease;
+        }
+
+        .ds_nav_link:hover .ds_nav_dot {
+            background: rgba(255, 255, 255, .45);
+        }
+
+        .ds_nav_link[aria-current="page"] .ds_nav_dot {
+            background: var(--c-accent-bright);
+            color: var(--c-dark);
+        }
+
+        .ds_nav_out {
+            flex: 0 0 auto;
+            width: 11px;
+            height: 11px;
+            margin-left: auto;
+            opacity: .4;
+            transition: opacity .18s ease;
+        }
+
+        .ds_nav_link:hover .ds_nav_out {
+            opacity: .9;
+        }
+
+        /* --- pinned footer link: rows pass under it through a fade --- */
+        .ds_nav_tail {
+            flex: 0 0 auto;
+            height: 34px;
+        }
+
+        .ds_nav_fade {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            z-index: 1;
+            width: var(--ds-nav-width);
+            height: 104px;
+            pointer-events: none;
+        }
+
+        .ds_nav_fade::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(18, 16, 26, 0), #12101a 46%);
+        }
+
+        .ds_nav_all {
+            position: sticky;
+            bottom: 0;
+            z-index: 2;
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: auto;
+            padding: 8px 12px;
+            border-radius: 9px;
+            background: rgba(255, 255, 255, .05);
+            color: rgba(255, 255, 255, .72);
+            font-size: 14px;
+            font-weight: var(--fw-semibold);
+            line-height: 1.3;
+            text-decoration: none;
+            transition: background .18s ease, color .18s ease;
+        }
+
+        .ds_nav_all:hover {
+            background: rgba(255, 255, 255, .1);
+            color: var(--c-white);
+        }
+
+        /* =========================================================
+           LAYOUT — design-system sheet
+           Every sheet opens on the same dark hero (deep violet ramp with a lavender
+           glow top-right), then runs numbered sections on a 1120px measure.
+        ========================================================= */
+        .ds_hero {
+            position: relative;
+            overflow: hidden;
+            padding: 100px var(--ds-sheet-pad) 80px;
+            background: var(--grad-hero-deep);
+            color: var(--c-white);
+        }
+
+        .ds_hero_glow {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(55% 55% at 82% 20%, rgba(157, 115, 255, .3), transparent 70%);
+            pointer-events: none;
+        }
+
+        .ds_hero_inner {
+            position: relative;
+            z-index: 2;
+            max-width: var(--ds-sheet-max);
+            margin: 0 auto;
+        }
+
+        .ds_hero_eyebrow {
+            margin-bottom: 22px;
+            color: var(--c-accent-bright);
+        }
+
+        .ds_hero_title {
+            max-width: 18ch;
+            margin: 0;
+        }
+
+        .ds_hero_lede {
+            max-width: 60ch;
+            margin: 26px 0 0;
+            color: rgba(255, 255, 255, .64);
+        }
+
+        .ds_hero code {
+            color: #c9b3ff;
+        }
+
+        .ds_section {
+            padding: 70px var(--ds-sheet-pad) 40px;
+            background: var(--c-white);
+        }
+
+        /* light sections fade in from the page tone, the last one fades back out */
+        .ds_section--fade-in {
+            background: linear-gradient(180deg, #eaeaf2, #fff 40%);
+        }
+
+        .ds_section--fade-out {
+            background: linear-gradient(180deg, #fff, #eaeaf2);
+        }
+
+        .ds_section_inner {
+            max-width: var(--ds-sheet-max);
+            margin: 0 auto;
+        }
+
+        .ds_section_eyebrow {
+            margin-bottom: 14px;
+            color: var(--c-accent);
+        }
+
+        .ds_section_title {
+            margin: 0 0 40px;
+        }
+
+        .ds_section_lede {
+            max-width: 60ch;
+            margin: 0 0 30px;
+            color: #5a5766;
+        }
+
+        /* the white rule card used for "how to apply it" blocks */
+        .ds_rule_grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .ds_rule_card {
+            padding: 30px;
+            border: 1px solid #ece7f4;
+            border-radius: 18px;
+            background: var(--c-white);
+        }
+
+        .ds_rule_card_title {
+            margin: 0 0 12px;
+        }
+
+        .ds_rule_card_text {
+            margin: 0;
+            color: #5a5766;
+        }
+
+        /* =========================================================
+           BUTTONS
+           One component behind every call to action (Button.dc.html).
+           Variants: primary · white · secondary · outline · ghost · soft · plain · link
+           Mode:     light (default) · button--on-dark
+           Sizes:    xs 36 · sm 44 · md 52 (default) · lg 60 · xl 68 — one height
+                     scale shared by text pills and icon-only discs (button--icon)
+           The label is doubled: on hover the visible copy slides up and the copy
+           underneath rides in, so the text never re-flows mid-hover.
+        ========================================================= */
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            height: 52px;
+            padding: 0 26px;
+            border: 2px solid transparent;
+            border-radius: var(--r-pill);
+            font-family: var(--font-body);
+            font-size: 15px;
+            font-weight: var(--fw-semibold);
+            letter-spacing: .02em;
+            line-height: 1;
+            white-space: nowrap;
+            text-decoration: none;
+            cursor: pointer;
+            transition:
+                background .25s ease,
+                color .25s ease,
+                border-color .25s ease,
+                filter .2s ease;
+        }
+
+        /* --- sizes --- */
+        .button--xs {
+            height: 36px;
+            padding: 0 14px;
+            gap: 7px;
+            font-size: 12px;
+        }
+
+        .button--sm {
+            height: 44px;
+            padding: 0 18px;
+            gap: 8px;
+            font-size: 13px;
+        }
+
+        .button--lg {
+            height: 60px;
+            padding: 0 32px;
+            gap: 10px;
+            font-size: 16px;
+        }
+
+        .button--xl {
+            height: 68px;
+            padding: 0 40px;
+            gap: 11px;
+            font-size: 18px;
+        }
+
+        /* icon-only: the same height scale, drawn as a disc */
+        .button--icon {
+            flex: 0 0 auto;
+            width: 52px;
+            padding: 0;
+            gap: 0;
+            border-radius: var(--r-circle);
+        }
+
+        .button--icon.button--xs { width: 36px; }
+        .button--icon.button--sm { width: 44px; }
+        .button--icon.button--lg { width: 60px; }
+        .button--icon.button--xl { width: 68px; }
+
+        /* --- icon + label --- */
+        .button_icon {
+            flex: 0 0 auto;
+            align-self: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 0;
+        }
+
+        /* optical gap for icons whose ink fills their 24-unit box (circle-plus, star, mail…) */
+        .button_icon--balance-start {
+            margin-right: .096em;
+        }
+
+        .button_icon--balance-end {
+            margin-left: .096em;
+        }
+
+        .button svg {
+            display: block;
+            width: 1.15em;
+            height: 1.15em;
+            overflow: visible;
+        }
+
+        /* the swap mask clips to its line box, so the line-height must clear the font's ink */
+        .button_label {
+            display: block;
+            overflow: hidden;
+            line-height: 1.35;
+        }
+
+        .button_label_inner {
+            position: relative;
+            display: block;
+            transition: transform .4s var(--ease-out-quint);
+        }
+
+        .button_label_inner > span {
+            display: block;
+        }
+
+        .button_label_inner > span[aria-hidden] {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            white-space: nowrap;
+        }
+
+        .button:hover .button_label_inner {
+            transform: translateY(-100%);
+        }
+
+        /* --- primary: gradient pill, a highlight travelling round the rim, a bloom on hover --- */
+        .button--primary {
+            position: relative;
+            background: var(--grad-primary);
+            background-origin: border-box;
+            border-color: transparent;
+            color: var(--c-white);
+        }
+
+        .button--primary::before {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            padding: 2px;
+            border-radius: inherit;
+            background: conic-gradient(from var(--button-angle), transparent 0%, #ffffff 8%, transparent 18%, transparent 100%);
+            -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+            animation: button_shine 4.8s linear infinite;
+        }
+
+        .button--primary::after {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            border-radius: inherit;
+            background: radial-gradient(75% 90% at 50% 118%, rgba(255, 255, 255, .5) 0%, rgba(255, 255, 255, .18) 40%, rgba(255, 255, 255, 0) 72%);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .3s ease;
+        }
+
+        .button--primary:hover::after {
+            opacity: 1;
+        }
+
+        /* --- white (on dark cards) --- */
+        .button--white {
+            background: var(--c-white);
+            border-color: var(--c-white);
+            color: var(--c-accent);
+        }
+
+        .button--white:hover {
+            background: #efe8fb;
+        }
+
+        /* --- secondary --- */
+        .button--secondary {
+            background: transparent;
+            border-color: rgba(123, 82, 199, .55);
+            color: var(--c-accent);
+        }
+
+        .button--secondary:hover {
+            background: var(--c-accent);
+            border-color: var(--c-accent);
+            color: var(--c-white);
+        }
+
+        .button--secondary.button--on-dark {
+            border-color: rgba(183, 155, 255, .5);
+            color: var(--c-lav);
+        }
+
+        .button--secondary.button--on-dark:hover {
+            background: var(--c-lav);
+            border-color: var(--c-lav);
+            color: var(--c-ink);
+        }
+
+        /* --- outline --- */
+        .button--outline {
+            background: transparent;
+            border-color: rgba(21, 19, 28, .15);
+            color: var(--c-ink);
+        }
+
+        .button--outline:hover {
+            background: var(--c-ink);
+            border-color: var(--c-ink);
+            color: var(--c-white);
+        }
+
+        .button--outline.button--on-dark {
+            border-color: rgba(255, 255, 255, .3);
+            color: var(--c-white);
+        }
+
+        .button--outline.button--on-dark:hover {
+            background: var(--c-white);
+            border-color: var(--c-white);
+            color: var(--c-ink);
+        }
+
+        /* --- ghost --- */
+        .button--ghost {
+            background: transparent;
+            border-color: transparent;
+            color: var(--c-accent);
+        }
+
+        .button--ghost:hover {
+            background: rgba(123, 82, 199, .1);
+        }
+
+        .button--ghost.button--on-dark {
+            color: var(--c-lav);
+        }
+
+        .button--ghost.button--on-dark:hover {
+            background: rgba(183, 155, 255, .14);
+        }
+
+        /* --- soft --- */
+        .button--soft {
+            background: rgba(123, 82, 199, .12);
+            border-color: transparent;
+            color: var(--c-accent);
+        }
+
+        .button--soft:hover {
+            background: rgba(123, 82, 199, .2);
+        }
+
+        .button--soft.button--on-dark {
+            background: rgba(183, 155, 255, .16);
+            color: #cdb6ff;
+        }
+
+        .button--soft.button--on-dark:hover {
+            background: rgba(183, 155, 255, .26);
+        }
+
+        /* --- plain --- */
+        .button--plain {
+            background: transparent;
+            border-color: transparent;
+            color: var(--c-ink);
+        }
+
+        .button--plain:hover {
+            background: rgba(21, 19, 28, .06);
+        }
+
+        .button--plain.button--on-dark {
+            color: var(--c-white);
+        }
+
+        .button--plain.button--on-dark:hover {
+            background: rgba(255, 255, 255, .1);
+        }
+
+        /* --- link: no box at all, so it can sit in a row of copy --- */
+        .button--link {
+            justify-content: flex-start;
+            height: auto;
+            padding: 0;
+            border: 0;
+            background: transparent;
+            color: var(--c-accent);
+        }
+
+        .button--link:hover {
+            opacity: .72;
+        }
+
+        .button--link.button--on-dark {
+            color: var(--c-lav);
+        }
+
+        /* --- adaptive ink: the script samples the ground behind the button --- */
+        .button[data-adaptive]:hover {
+            background: rgba(150, 150, 150, .14);
+        }
+
+        /* =========================================================
+           COMPONENTS — filter tabs (Filter Tabs.dc.html, .hi-tabbar / .hi-tab)
+           Uppercase labels on a baseline; the active one carries an underline that
+           draws in from the left. Two calibrations from the live hubs:
+           light listing — 16px to the rule, 2px #7b52c7 underline, optional rule
+           dark hero     — 20px to the baseline, 3px #9d73ff underline
+           The bar never wraps: it scrolls, and a measured mask fades the clipped
+           side (see the "Filter tabs" script). tabs--segmented is the control
+           variant: a recessed track, the active tab lifted onto its own plate.
+        ========================================================= */
+        .tabs {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: baseline;
+            gap: 14px clamp(22px, 2.6vw, 40px);
+            width: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            overscroll-behavior-x: contain;
+            scroll-snap-type: x proximity;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .tabs::-webkit-scrollbar {
+            display: none;
+        }
+
+        .tabs--rule {
+            background-image: linear-gradient(to right, #d7d7dd, rgba(215, 215, 221, 0));
+            background-position: left bottom;
+            background-repeat: no-repeat;
+            background-size: 100% 2px;
+        }
+
+        .tabs--dark.tabs--rule {
+            background-image: linear-gradient(to right, rgba(255, 255, 255, .28), rgba(255, 255, 255, 0));
+        }
+
+        /* the fade is a MASK so the labels themselves fade; its lengths come from the script */
+        .tabs--scrollfade {
+            --tab-fade-l: 0px;
+            --tab-fade-r: 0px;
+            -webkit-mask-image: linear-gradient(to right, transparent 0, #000 var(--tab-fade-l), #000 calc(100% - var(--tab-fade-r)), transparent 100%);
+            mask-image: linear-gradient(to right, transparent 0, #000 var(--tab-fade-l), #000 calc(100% - var(--tab-fade-r)), transparent 100%);
+        }
+
+        .tabs_item {
+            position: relative;
+            flex: 0 0 auto;
+            margin: 0;
+            padding: 0 0 var(--tab-pad, 16px);
+            border: 0;
+            background: none;
+            font-family: var(--font-caption);
+            font-size: 13px;
+            font-weight: var(--fw-semibold);
+            line-height: 1;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            white-space: nowrap;
+            scroll-snap-align: start;
+            cursor: pointer;
+            appearance: none;
+            transition: color .25s ease;
+        }
+
+        .tabs_item::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: var(--tab-line, 2px);
+            background: var(--tab-line-colour, #7b52c7);
+            transform: scaleX(0);
+            transform-origin: left center;
+            transition: transform .4s var(--ease-out-quint);
+        }
+
+        .tabs_item[aria-selected="true"]::after {
+            transform: scaleX(1);
+        }
+
+        /* label swap on hover, the same mechanism as the Button */
+        .tabs_mask {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        .tabs_track {
+            position: relative;
+            display: block;
+            transition: transform .42s var(--ease-out-quint);
+        }
+
+        .tabs_track > span[aria-hidden] {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            white-space: nowrap;
+        }
+
+        .tabs_item:hover .tabs_track {
+            transform: translateY(-100%);
+        }
+
+        /* --- ink --- */
+        .tabs--light .tabs_item {
+            color: var(--c-grey);
+        }
+
+        .tabs--light .tabs_item:hover,
+        .tabs--light .tabs_item[aria-selected="true"] {
+            color: var(--c-ink);
+        }
+
+        .tabs--dark .tabs_item {
+            --tab-pad: 20px;
+            --tab-line: 3px;
+            --tab-line-colour: #9d73ff;
+            color: rgba(255, 255, 255, .5);
+        }
+
+        .tabs--dark .tabs_item:hover,
+        .tabs--dark .tabs_item[aria-selected="true"] {
+            color: var(--c-white);
+        }
+
+        /* --- segmented: the bar IS the control --- */
+        .tabs--segmented {
+            display: flex;
+            gap: 4px;
+            padding: 4px;
+            overflow: visible;
+            border: 0;
+            border-radius: var(--r-pill);
+            background: #f1f1f4;
+            -webkit-mask-image: none;
+            mask-image: none;
+        }
+
+        .tabs--segmented .tabs_item {
+            flex: 1 1 0;
+            justify-content: center;
+            min-width: 0;
+            padding: 11px 14px;
+            border-radius: var(--r-pill);
+            background: transparent;
+            text-align: center;
+            transition:
+                background .28s var(--ease-out-quint),
+                box-shadow .28s var(--ease-out-quint),
+                color .2s ease;
+        }
+
+        .tabs--segmented .tabs_item::after {
+            display: none;
+        }
+
+        .tabs--segmented .tabs_item[aria-selected="true"] {
+            position: relative;
+            z-index: 1;
+            background: var(--c-white);
+            color: var(--c-accent);
+            box-shadow: 0 2px 4px rgba(26, 10, 58, .14), 0 10px 24px -8px rgba(26, 10, 58, .34);
+        }
+
+        .tabs--segmented.tabs--dark {
+            border: 0;
+            background: rgba(255, 255, 255, .08);
+        }
+
+        .tabs--segmented.tabs--dark .tabs_item[aria-selected="true"] {
+            background: rgba(255, 255, 255, .2);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .34), 0 12px 26px -10px rgba(0, 0, 0, .6);
+        }
+
+        /* switching a tab re-introduces the panel's items instead of swapping them dead */
+        .tabs_panel_item--in {
+            animation: tabs_item_in .5s var(--ease-out-quint) both;
+        }
+
+        /* =========================================================
+           COMPONENTS — image guide
+           One upload card per picture slot (size first, words after), the
+           "Need to know" crop diagrams under it, and a section bar that is pinned
+           to the top of the window once the hero's own bar has scrolled away.
+        ========================================================= */
+        .guide_page code {
+            font-size: .86em;
+        }
+
+        .guide_hero {
+            padding-bottom: 0;
+        }
+
+        .guide_hero_title {
+            max-width: 17ch;
+        }
+
+        .guide_hero_lede {
+            max-width: 62ch;
+        }
+
+        .guide_hero_bar {
+            margin: calc(clamp(48px, 6vw, 92px) + 3px) 0 0;
+        }
+
+        /* the pinned copy of the section bar */
+        .guide_fixed_bar {
+            position: fixed;
+            top: 0;
+            left: var(--ds-nav-width);
+            right: 0;
+            z-index: 60;
+            padding: 16px var(--ds-sheet-pad) 0;
+            background: #22103f;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-8px);
+            transition: opacity .22s ease, transform .22s ease, visibility .22s;
+        }
+
+        .guide_fixed_bar[data-on="true"] {
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+        }
+
+        .guide_fixed_bar_inner {
+            max-width: var(--ds-sheet-max);
+            margin: 0 auto;
+        }
+
+        .guide_tabs .tabs_item {
+            --tab-pad: 20px;
+        }
+
+        /* --- body --- */
+        .guide_body {
+            padding: 56px var(--ds-sheet-pad) 86px;
+            background: linear-gradient(180deg, #eaeaf2, #f4f2fa 40%);
+        }
+
+        .guide_area + .guide_area {
+            margin-top: 96px;
+        }
+
+        .guide_area_head {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 18px;
+            margin: 0 0 26px;
+        }
+
+        .guide_area_title {
+            margin: 0;
+            font-size: clamp(38px, 4.3vw, 56px);
+            font-weight: var(--fw-light);
+            letter-spacing: -.03em;
+            text-wrap: balance;
+        }
+
+        /* --- copy controls: the copy glyph swaps to a tick for 1.6s after a copy --- */
+        .guide_copy_all {
+            display: inline-flex;
+            margin: 0 0 4px;
+            padding: 0;
+            border: 0;
+            background: none;
+            cursor: pointer;
+        }
+
+        .guide_copy_slot {
+            display: inline-flex;
+            align-items: center;
+            padding: 0;
+            border: 0;
+            background: none;
+            color: #b9a6dd;
+            opacity: 0;
+            cursor: pointer;
+            transition: opacity .18s ease, color .16s ease;
+        }
+
+        .guide_copy_slot svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .guide_card:hover .guide_copy_slot,
+        .guide_copy_slot:focus-visible {
+            opacity: 1;
+        }
+
+        .guide_copy_slot:hover,
+        .guide_copy_slot[data-done="true"] {
+            color: var(--c-accent);
+        }
+
+        .guide_page .guide_copy_tick,
+        .guide_page [data-done="true"] .guide_copy_glyph {
+            display: none;
+        }
+
+        .guide_page [data-done="true"] .guide_copy_tick {
+            display: block;
+        }
+
+        /* --- upload card --- */
+        .guide_card {
+            padding: 40px;
+            border-radius: var(--r-xl);
+            background: var(--c-white);
+        }
+
+        .guide_card + .guide_card {
+            margin-top: 40px;
+        }
+
+        .guide_example {
+            display: grid;
+            grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+            gap: 40px;
+            align-items: center;
+        }
+
+        .guide_card_name {
+            margin: 0 0 12px;
+            font-family: var(--font-body);
+            font-size: 19px;
+            font-weight: var(--fw-semibold);
+            letter-spacing: -.015em;
+            text-wrap: balance;
+        }
+
+        .guide_size_row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .guide_size {
+            margin: 0;
+            font-family: var(--font-mono);
+            font-size: clamp(28px, 3vw, 38px);
+            font-weight: var(--fw-semibold);
+            line-height: 1;
+            letter-spacing: -.02em;
+            color: var(--c-accent);
+        }
+
+        .guide_meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 14px 0 0;
+        }
+
+        .guide_meta span {
+            padding: 5px 12px;
+            border-radius: var(--r-pill);
+            background: #f4f1fb;
+            color: var(--c-ink);
+            font-family: var(--font-mono);
+            font-size: 12px;
+        }
+
+        .guide_divider {
+            height: 1px;
+            margin: 22px 0;
+            background: linear-gradient(90deg, #d9cfee, rgba(217, 207, 238, 0) 100%);
+        }
+
+        .guide_lead {
+            font-size: 13.5px;
+            line-height: 1.55;
+            color: var(--c-grey);
+            text-wrap: pretty;
+        }
+
+        .guide_card .guide_lead {
+            margin: 16px 0 0;
+        }
+
+        .guide_divider + .guide_lead {
+            margin-top: 0;
+        }
+
+        .guide_tip {
+            display: flex;
+            align-items: flex-start;
+            gap: 9px;
+            margin: 14px 0 0;
+            padding: 12px 14px;
+            border-radius: 12px;
+            background: #f5f1fd;
+        }
+
+        .guide_tip_icon {
+            flex: 0 0 auto;
+            display: block;
+            width: 17px;
+            height: 17px;
+            margin-top: 1px;
+            color: var(--c-accent);
+        }
+
+        .guide_tip_icon svg,
+        .guide_overlap_icon svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .guide_tip p {
+            margin: 0;
+            font-size: 13px;
+            font-weight: var(--fw-semibold);
+            line-height: 1.5;
+            color: #3d2a63;
+            text-wrap: pretty;
+        }
+
+        /* --- picture frames --- */
+        .guide_shot {
+            position: relative;
+            aspect-ratio: 3 / 2;
+            overflow: hidden;
+            border-radius: 12px;
+            background: linear-gradient(160deg, #2a1550, #120724);
+        }
+
+        .guide_shot img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .guide_shot--hero { border-radius: 16px; }
+        .guide_shot--wide { aspect-ratio: 16 / 9; }
+        .guide_shot--light { background: #f2eefa; }
+        .guide_shot--dark { background: #120724; }
+        .guide_shot--portrait { aspect-ratio: 3 / 4; }
+
+        .guide_shot--story {
+            width: min(232px, 60%);
+            aspect-ratio: 3 / 4;
+            border-radius: 14px;
+        }
+
+        .guide_plate {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            aspect-ratio: 3 / 2;
+            padding: 18px;
+            border-radius: 16px;
+            background: #f4f2fa;
+        }
+
+        .guide_plate--free {
+            aspect-ratio: auto;
+            padding: 22px;
+        }
+
+        .guide_plate_caption {
+            margin: 9px 0 0;
+            font-family: var(--font-mono);
+            font-size: 10px;
+            color: var(--c-grey);
+        }
+
+        /* upload → result row (author and team portraits) */
+        .guide_upload_row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: clamp(16px, 3.4vw, 34px);
+        }
+
+        .guide_upload_arrow {
+            font-size: 20px;
+            color: #c3bad6;
+        }
+
+        .guide_upload_tile {
+            position: relative;
+            width: 104px;
+            height: 104px;
+            overflow: hidden;
+            border-radius: 14px;
+            background-color: var(--c-white);
+            background-image:
+                linear-gradient(45deg, #e8e3f2 25%, transparent 25%, transparent 75%, #e8e3f2 75%),
+                linear-gradient(45deg, #e8e3f2 25%, transparent 25%, transparent 75%, #e8e3f2 75%);
+            background-position: 0 0, 7px 7px;
+            background-size: 14px 14px;
+        }
+
+        .guide_upload_tile--team {
+            background-image:
+                linear-gradient(45deg, #ece7f4 25%, transparent 25%, transparent 75%, #ece7f4 75%),
+                linear-gradient(45deg, #ece7f4 25%, transparent 25%, transparent 75%, #ece7f4 75%);
+        }
+
+        .guide_upload_tile img,
+        .guide_avatar img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .guide_avatars {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            height: 104px;
+        }
+
+        .guide_avatars--tiles {
+            align-items: flex-start;
+            height: auto;
+        }
+
+        .guide_avatar {
+            width: 40px;
+            height: 40px;
+            overflow: hidden;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #e2b8ff, #8a4fe0);
+        }
+
+        .guide_portrait {
+            position: relative;
+            display: block;
+            width: 104px;
+            height: 104px;
+            overflow: hidden;
+            border-radius: 14px;
+            background: linear-gradient(180deg, #eff7fe 0%, #d8e9f8 100%);
+        }
+
+        .guide_portrait--violet {
+            background: linear-gradient(180deg, #f6f1fd 0%, #e4d9f7 100%);
+        }
+
+        .guide_portrait_glow {
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 78%;
+            height: 34%;
+            border-radius: 50% 50% 0 0;
+            background: radial-gradient(ellipse at bottom, rgba(0, 183, 250, .2), transparent 70%);
+            transform: translateX(-50%);
+        }
+
+        .guide_portrait--violet .guide_portrait_glow {
+            background: radial-gradient(ellipse at bottom, rgba(123, 82, 199, .2), transparent 70%);
+        }
+
+        .guide_portrait img {
+            position: absolute;
+            inset: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* --- "Need to know": what the site puts on top --- */
+        .guide_overlap {
+            position: relative;
+            margin: 40px 0 0;
+            padding: 32px;
+            border: 2px dotted #ffc24d;
+            border-radius: 16px;
+            background: var(--c-white);
+        }
+
+        .guide_overlap_head {
+            position: absolute;
+            top: 0;
+            left: 32px;
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            margin: 0;
+            padding: 7px 18px 7px 14px;
+            border-radius: var(--r-pill);
+            background: #ffc24d;
+            color: var(--c-ink);
+            font-family: var(--font-caption);
+            font-size: 11.5px;
+            font-weight: var(--fw-bold);
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            white-space: nowrap;
+            transform: translateY(-50%);
+        }
+
+        .guide_overlap_icon {
+            flex: 0 0 auto;
+            display: block;
+            width: 19px;
+            height: 19px;
+            color: var(--c-ink);
+        }
+
+        .guide_zones {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(236px, 1fr));
+            gap: 22px;
+        }
+
+        .guide_zone_title {
+            display: block;
+            margin: 11px 0 4px;
+            font-family: var(--font-body);
+            font-size: 13px;
+            font-weight: var(--fw-semibold);
+            text-wrap: balance;
+        }
+
+        .guide_zone .guide_lead {
+            margin: 0;
+            font-size: 12.5px;
+        }
+
+        .guide_zone .guide_shot {
+            border-radius: 10px;
+        }
+
+        /* upright crops sit beside their caption instead of towering over a landscape one */
+        .guide_zones--side {
+            grid-template-columns: repeat(auto-fit, minmax(min(324px, 100%), 1fr));
+            gap: 26px;
+        }
+
+        .guide_zones--side .guide_zone {
+            display: grid;
+            grid-template-columns: 206px minmax(0, 1fr);
+            gap: 20px;
+            align-items: center;
+        }
+
+        .guide_zones--side .guide_zone_title {
+            margin: 0 0 4px;
+        }
+
+        .guide_zones--side .guide_lead {
+            max-width: 24ch;
+        }
+
+        .guide_zones--side .guide_zone > div:last-child {
+            grid-column: 2;
+        }
+
+        .guide_thumb_plate {
+            display: flex;
+            justify-content: center;
+        }
+
+        .guide_thumb_plate .guide_shot {
+            width: 100%;
+        }
+
+        /* crop overlays */
+        .guide_keepout {
+            position: absolute;
+            border: 1px dashed rgba(255, 107, 107, .8);
+            border-radius: 0;
+            background: rgba(255, 107, 107, .26);
+        }
+
+        .guide_keepout--top { left: 0; top: 0; width: 100%; }
+        .guide_keepout--bottom { left: 0; bottom: 0; width: 100%; }
+        .guide_keepout--left { left: 0; top: 0; height: 100%; }
+        .guide_keepout--right { right: 0; top: 0; height: 100%; }
+        .guide_keepout--band-4 { height: 4%; }
+        .guide_keepout--band-7 { height: 7.81%; }
+        .guide_keepout--band-12 { height: 12.5%; }
+        .guide_keepout--band-22 { height: 22%; }
+        .guide_keepout--side-4 { width: 4%; }
+        .guide_keepout--side-35 { width: 35%; }
+        .guide_keepout--side-46 { width: 46%; }
+
+        .guide_keepout--corner-left {
+            top: 8px;
+            left: 8px;
+            padding: 6px;
+            border-radius: var(--r-pill);
+        }
+
+        .guide_keepout--corner-right {
+            top: 8px;
+            right: 8px;
+            padding: 6px;
+            border-radius: 6px;
+        }
+
+        .guide_keeplabel {
+            position: absolute;
+            left: 50%;
+            top: 46%;
+            padding: 2px 5px;
+            border-radius: 4px;
+            background: rgba(21, 19, 28, .62);
+            color: var(--c-white);
+            font-family: var(--font-mono);
+            font-size: 9.5px;
+            white-space: nowrap;
+            transform: translateX(-50%);
+        }
+
+        .guide_keeplabel--high {
+            top: 44%;
+        }
+
+        .guide_hover_frame {
+            position: absolute;
+            inset: 4%;
+            border: 1px dashed rgba(255, 255, 255, .9);
+            border-radius: 4px;
+        }
+
+        .guide_badge_pill {
+            display: block;
+            padding: 6px 11px;
+            border: 1px solid rgba(255, 255, 255, .26);
+            border-radius: var(--r-pill);
+            background: rgba(18, 7, 36, .55);
+            color: var(--c-white);
+            font-family: var(--font-caption);
+            font-size: 9px;
+            font-weight: var(--fw-bold);
+            letter-spacing: .14em;
+            text-transform: uppercase;
+        }
+
+        .guide_badge_date {
+            display: block;
+            padding: 7px 10px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, .92);
+            color: var(--c-ink);
+            font-family: var(--font-mono);
+            font-size: 9.5px;
+            font-weight: var(--fw-bold);
+            line-height: 1.25;
+            text-align: center;
+        }
+
+        .guide_poster_veil {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(105deg, #120724 4%, rgba(18, 7, 36, .86) 38%, rgba(28, 13, 56, .42) 72%, rgba(46, 21, 92, .28) 100%);
+        }
+
+        .guide_poster_title {
+            position: absolute;
+            left: 8%;
+            bottom: 20%;
+            width: 30%;
+            height: 7px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, .9);
+        }
+
+        .guide_poster_meta {
+            position: absolute;
+            left: 8%;
+            bottom: 10%;
+            width: 19%;
+            height: 5px;
+            border-radius: 3px;
+            background: rgba(255, 255, 255, .45);
+        }
+
+        .guide_phone_strip {
+            position: absolute;
+            left: 35%;
+            top: 0;
+            width: 30%;
+            height: 100%;
+            border-left: 1px dashed rgba(255, 255, 255, .9);
+            border-right: 1px dashed rgba(255, 255, 255, .9);
+        }
+
+        /* =========================================================
+           ANIMATIONS
+        ========================================================= */
+        @property --button-angle {
+            syntax: '<angle>';
+            inherits: false;
+            initial-value: 0deg;
+        }
+
+        @keyframes button_shine {
+            to {
+                --button-angle: 360deg;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .button--primary::before {
+                animation: none;
+            }
+        }
+
+        @keyframes tabs_item_in {
+            from { opacity: 0; transform: translateY(14px); }
+            to { opacity: 1; transform: none; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .tabs_panel_item--in {
+                animation: none !important;
+            }
+        }
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+        @media (max-width: 900px) {
+            .ds_nav {
+                display: none;
+            }
+
+            .ds_page {
+                margin-left: 0;
+            }
+        }
+
+        @media print {
+            .ds_nav {
+                display: none;
+            }
+        }
+
+        @media (max-width: 1080px) {
+            .guide_example {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .guide_fixed_bar {
+                left: 0;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .guide_zones--side .guide_zone {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 12px;
+            }
+
+            .guide_zones--side .guide_zone > div:last-child {
+                grid-column: 1;
+            }
+
+            .guide_zones--side .guide_thumb_plate .guide_shot {
+                width: 150px;
+            }
+
+            .guide_zones--side .guide_lead {
+                max-width: none;
+            }
+
+            .guide_overlap {
+                padding: 32px 20px 20px;
+            }
+
+            .guide_card {
+                padding: 24px;
+            }
+
+            .guide_plate {
+                aspect-ratio: auto;
+                padding: 20px 14px;
+            }
+
+            .guide_upload_row {
+                gap: 14px;
+            }
+
+            .guide_upload_arrow {
+                transform: rotate(90deg);
+            }
+
+            .guide_avatars {
+                height: auto;
+            }
+        }
+
+        @media (hover: none) {
+            .guide_copy_slot {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a class="visually_hidden" href="#main">Skip to content</a>
+
+    <nav class="ds_nav" aria-label="Design system" data-ds-nav>
+        <a class="ds_nav_home" href="index.html">
+            <span class="ds_nav_kicker">Hybrid Interaction</span>
+            <span class="ds_nav_title">Design System</span>
+            <span class="ds_nav_home_mark" aria-hidden="true"></span>
+        </a>
+
+        <div class="ds_nav_search">
+            <svg class="ds_nav_search_icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="m16.5 16.5 4 4"></path></svg>
+            <label class="visually_hidden" for="ds-nav-filter">Filter pages</label>
+            <input class="ds_nav_search_input" id="ds-nav-filter" type="search" autocomplete="off" placeholder="Filter…" data-ds-nav-filter>
+        </div>
+
+        <button class="ds_nav_group ds_nav_group--first" type="button" aria-expanded="true" aria-controls="ds-nav-foundations" data-ds-nav-group>
+            <span>Foundations</span>
+            <svg class="ds_nav_caret" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9 12 15 18 9"></path></svg>
+        </button>
+        <div class="ds_nav_list" id="ds-nav-foundations">
+            <a class="ds_nav_link" href="typography.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">F</span>
+                <span>Typography</span>
+            </a>
+            <a class="ds_nav_link" href="colour.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">F</span>
+                <span>Colour</span>
+            </a>
+            <a class="ds_nav_link" href="motion.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">F</span>
+                <span>Motion</span>
+            </a>
+            <a class="ds_nav_link" href="icon-library.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">F</span>
+                <span>Icon Library</span>
+            </a>
+            <a class="ds_nav_link" href="3d-icons.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">F</span>
+                <span>3D Icons</span>
+            </a>
+            <a class="ds_nav_link" href="3d-icon-lab.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">F</span>
+                <span>3D Icon Lab</span>
+            </a>
+            <a class="ds_nav_link" href="ui-illustrations-lab.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">F</span>
+                <span>UI Illustrations Lab</span>
+            </a>
+            <a class="ds_nav_link" href="image-guide.html" aria-current="page" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">F</span>
+                <span>Image Guide</span>
+            </a>
+        </div>
+
+        <button class="ds_nav_group" type="button" aria-expanded="true" aria-controls="ds-nav-atoms" data-ds-nav-group>
+            <span>Atoms</span>
+            <svg class="ds_nav_caret" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9 12 15 18 9"></path></svg>
+        </button>
+        <div class="ds_nav_list" id="ds-nav-atoms">
+            <a class="ds_nav_link" href="button-library.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">A</span>
+                <span>Button Library</span>
+            </a>
+            <a class="ds_nav_link" href="tabs.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">A</span>
+                <span>Tabs</span>
+            </a>
+            <a class="ds_nav_link" href="icon-tile.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">A</span>
+                <span>Icon Tile</span>
+            </a>
+            <a class="ds_nav_link" href="pointer-tilt.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">A</span>
+                <span>Pointer Tilt</span>
+            </a>
+            <a class="ds_nav_link" href="figure.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">M</span>
+                <span>Figure</span>
+            </a>
+        </div>
+
+        <button class="ds_nav_group" type="button" aria-expanded="true" aria-controls="ds-nav-molecules" data-ds-nav-group>
+            <span>Molecules</span>
+            <svg class="ds_nav_caret" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9 12 15 18 9"></path></svg>
+        </button>
+        <div class="ds_nav_list" id="ds-nav-molecules">
+            <a class="ds_nav_link" href="article-blocks.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">M</span>
+                <span>Article blocks</span>
+            </a>
+            <a class="ds_nav_link" href="cards.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">M</span>
+                <span>Cards</span>
+            </a>
+            <a class="ds_nav_link" href="case-card.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">M</span>
+                <span>Case Card</span>
+            </a>
+            <a class="ds_nav_link" href="stat-row.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">M</span>
+                <span>Stat Row</span>
+            </a>
+            <a class="ds_nav_link" href="logo-sphere.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">M</span>
+                <span>Logo Sphere</span>
+            </a>
+            <a class="ds_nav_link" href="menu-panel-lab.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">M</span>
+                <span>Menu Panel</span>
+            </a>
+        </div>
+
+        <button class="ds_nav_group" type="button" aria-expanded="false" aria-controls="ds-nav-sections" data-ds-nav-group>
+            <span>Sections</span>
+            <svg class="ds_nav_caret" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9 12 15 18 9"></path></svg>
+        </button>
+        <div class="ds_nav_list" id="ds-nav-sections" hidden>
+            <a class="ds_nav_link" href="site-header.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">S</span>
+                <span>Site Header</span>
+                <svg class="ds_nav_out" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7 H17 V16"></path></svg>
+            </a>
+            <a class="ds_nav_link" href="site-footer.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">S</span>
+                <span>Site Footer</span>
+                <svg class="ds_nav_out" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7 H17 V16"></path></svg>
+            </a>
+        </div>
+
+        <button class="ds_nav_group" type="button" aria-expanded="false" aria-controls="ds-nav-files" data-ds-nav-group>
+            <span>Component files</span>
+            <svg class="ds_nav_caret" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9 12 15 18 9"></path></svg>
+        </button>
+        <div class="ds_nav_list" id="ds-nav-files" hidden>
+            <a class="ds_nav_link" href="component-caption.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">C</span>
+                <span>Caption / Eyebrow</span>
+                <svg class="ds_nav_out" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7 H17 V16"></path></svg>
+            </a>
+            <a class="ds_nav_link" href="component-button.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">C</span>
+                <span>Button</span>
+                <svg class="ds_nav_out" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7 H17 V16"></path></svg>
+            </a>
+            <a class="ds_nav_link" href="component-accent-line.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">C</span>
+                <span>Accent Line</span>
+                <svg class="ds_nav_out" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7 H17 V16"></path></svg>
+            </a>
+            <a class="ds_nav_link" href="component-menu-row.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">C</span>
+                <span>Menu Row</span>
+                <svg class="ds_nav_out" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7 H17 V16"></path></svg>
+            </a>
+            <a class="ds_nav_link" href="component-menu-panel.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">C</span>
+                <span>Menu Panel</span>
+                <svg class="ds_nav_out" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7 H17 V16"></path></svg>
+            </a>
+            <a class="ds_nav_link" href="component-numbered-row.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">C</span>
+                <span>Numbered Row</span>
+                <svg class="ds_nav_out" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7 H17 V16"></path></svg>
+            </a>
+            <a class="ds_nav_link" href="component-news-card.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">C</span>
+                <span>News Card</span>
+                <svg class="ds_nav_out" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7 H17 V16"></path></svg>
+            </a>
+            <a class="ds_nav_link" href="component-filter-tabs.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">C</span>
+                <span>Filter Tabs</span>
+                <svg class="ds_nav_out" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7 H17 V16"></path></svg>
+            </a>
+        </div>
+
+        <div class="ds_nav_tail" aria-hidden="true"></div>
+        <div class="ds_nav_fade" aria-hidden="true"></div>
+        <a class="ds_nav_all" href="site-navigation.html">← All Site Pages</a>
+    </nav>
+
+    <main class="ds_page guide_page" id="main">
+
+        <!-- ========================= SECTION BAR (fixed copy) ========================= -->
+        <nav class="guide_fixed_bar" aria-label="Image guide sections" data-guide-fixed-bar>
+            <div class="guide_fixed_bar_inner">
+                <div class="tabs tabs--dark tabs--scrollfade guide_tabs" role="tablist" aria-label="Image guide sections" data-tabs data-tabs-panel="#sec-news .guide_example">
+                    <button class="tabs_item" type="button" role="tab" data-tab="news" aria-selected="true"><span class="tabs_mask"><span class="tabs_track"><span>News</span><span aria-hidden="true">News</span></span></span></button>
+                    <button class="tabs_item" type="button" role="tab" data-tab="blog" aria-selected="false"><span class="tabs_mask"><span class="tabs_track"><span>Blog</span><span aria-hidden="true">Blog</span></span></span></button>
+                    <button class="tabs_item" type="button" role="tab" data-tab="events" aria-selected="false"><span class="tabs_mask"><span class="tabs_track"><span>Events</span><span aria-hidden="true">Events</span></span></span></button>
+                    <button class="tabs_item" type="button" role="tab" data-tab="company" aria-selected="false"><span class="tabs_mask"><span class="tabs_track"><span>Company</span><span aria-hidden="true">Company</span></span></span></button>
+                    <button class="tabs_item" type="button" role="tab" data-tab="team" aria-selected="false"><span class="tabs_mask"><span class="tabs_track"><span>Meet the Team</span><span aria-hidden="true">Meet the Team</span></span></span></button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- ========================= HERO ========================= -->
+        <section class="ds_hero guide_hero" aria-labelledby="page-title">
+            <div class="ds_hero_glow" aria-hidden="true"></div>
+            <div class="ds_hero_inner">
+                <p class="ds_hero_eyebrow eyebrow">Hybrid Interaction · Design System</p>
+                <h1 class="ds_hero_title guide_hero_title text_display" id="page-title">Image Guide</h1>
+                <p class="ds_hero_lede guide_hero_lede text_body_lg">One file per item, with the size to upload and the weight to stay under. Every number here was measured on the live pages at screen widths from 375 to 1920 pixels.</p>
+                <div class="guide_hero_bar" data-guide-hero-bar>
+                    <div class="tabs tabs--dark tabs--scrollfade guide_tabs" role="tablist" aria-label="Image guide sections" data-tabs>
+                        <button class="tabs_item" type="button" role="tab" data-tab="news" aria-selected="true"><span class="tabs_mask"><span class="tabs_track"><span>News</span><span aria-hidden="true">News</span></span></span></button>
+                        <button class="tabs_item" type="button" role="tab" data-tab="blog" aria-selected="false"><span class="tabs_mask"><span class="tabs_track"><span>Blog</span><span aria-hidden="true">Blog</span></span></span></button>
+                        <button class="tabs_item" type="button" role="tab" data-tab="events" aria-selected="false"><span class="tabs_mask"><span class="tabs_track"><span>Events</span><span aria-hidden="true">Events</span></span></span></button>
+                        <button class="tabs_item" type="button" role="tab" data-tab="company" aria-selected="false"><span class="tabs_mask"><span class="tabs_track"><span>Company</span><span aria-hidden="true">Company</span></span></span></button>
+                        <button class="tabs_item" type="button" role="tab" data-tab="team" aria-selected="false"><span class="tabs_mask"><span class="tabs_track"><span>Meet the Team</span><span aria-hidden="true">Meet the Team</span></span></span></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================= IMAGE SLOTS ========================= -->
+        <div class="guide_body">
+            <div class="ds_section_inner">
+
+                <!-- ===================== NEWS ===================== -->
+                <div class="guide_area" id="sec-news">
+                    <div class="guide_area_head">
+                        <h2 class="guide_area_title">News</h2>
+                        <button class="guide_copy_all" type="button" aria-label="Copy every image spec in News" data-copy="News image:&#10;1800 x 1200 px, 3:2, WebP, under 250 KB">
+                            <span class="button button--secondary button--xs">
+                                <span class="button_icon" aria-hidden="true"><svg class="guide_copy_glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M5 15V5a2 2 0 0 1 2-2h10"></path></svg><svg class="guide_copy_tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span>
+                                <span class="button_label"><span class="button_label_inner"><span>Copy all specs</span><span aria-hidden="true">Copy all specs</span></span></span>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="guide_card">
+                        <div class="guide_example">
+                            <div class="guide_shot guide_shot--hero">
+                                <img src="images/guide/news-example.jpg" alt="Example news photograph" loading="lazy">
+                            </div>
+                            <div>
+                                <h3 class="guide_card_name">News image</h3>
+                                <div class="guide_size_row">
+                                    <p class="guide_size">1800 &times; 1200</p>
+                                    <button class="guide_copy_slot" type="button" aria-label="Copy News image size" data-copy="News image:&#10;1800 x 1200 px"><svg class="guide_copy_glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="13" height="13" x="9" y="9" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><svg class="guide_copy_tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button>
+                                </div>
+                                <div class="guide_meta">
+                                    <span>3:2</span>
+                                    <span>WebP</span>
+                                    <span>under 250 KB</span>
+                                </div>
+                                <div class="guide_divider" aria-hidden="true"></div>
+                                <p class="guide_lead">One image per news item, used on the news page, on the cards and at the top of the article.</p>
+                                <div class="guide_tip"><span class="guide_tip_icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg></span><p>Keep the subject in the middle. The edges of the frame are trimmed.</p></div>
+                            </div>
+                        </div>
+                        <div class="guide_overlap">
+                            <p class="guide_overlap_head"><span class="guide_overlap_icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg></span>Need to know</p>
+                            <div class="guide_zones">
+                                <div class="guide_zone">
+                                    <div class="guide_shot">
+                                        <img src="images/guide/news-example.jpg" alt="The crop used at the top of a news article" loading="lazy">
+                                        <div class="guide_keepout guide_keepout--top guide_keepout--band-7"></div>
+                                        <div class="guide_keepout guide_keepout--bottom guide_keepout--band-7"></div>
+                                        <span class="guide_keeplabel">16:9 on the article page</span>
+                                    </div>
+                                    <h4 class="guide_zone_title">Article page</h4>
+                                    <p class="guide_lead">The article page crops wider, trimming the top and the bottom.</p>
+                                </div>
+                                <div class="guide_zone">
+                                    <div class="guide_shot guide_shot--light">
+                                        <img src="images/guide/news-example.jpg" alt="The picture zoomed on hover" loading="lazy">
+                                        <div class="guide_keepout guide_keepout--top guide_keepout--band-4"></div>
+                                        <div class="guide_keepout guide_keepout--bottom guide_keepout--band-4"></div>
+                                        <div class="guide_keepout guide_keepout--left guide_keepout--side-4"></div>
+                                        <div class="guide_keepout guide_keepout--right guide_keepout--side-4"></div>
+                                        <div class="guide_hover_frame" aria-hidden="true"></div>
+                                        <span class="guide_keeplabel">4% is lost on hover</span>
+                                    </div>
+                                    <h4 class="guide_zone_title">Cards on hover</h4>
+                                    <p class="guide_lead">Pointing at a card zooms the picture, so the outer edge leaves the view.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===================== BLOG ===================== -->
+                <div class="guide_area" id="sec-blog">
+                    <div class="guide_area_head">
+                        <h2 class="guide_area_title">Blog</h2>
+                        <button class="guide_copy_all" type="button" aria-label="Copy every image spec in Blog" data-copy="Blog image:&#10;1800 x 1200 px, 3:2, WebP, under 250 KB&#10;&#10;Author image:&#10;320 x 320 px, 1:1, WebP, transparent background, under 40 KB&#10;&#10;Image inside the article:&#10;1600 x 900 px, 16:9, WebP, under 400 KB">
+                            <span class="button button--secondary button--xs">
+                                <span class="button_icon" aria-hidden="true"><svg class="guide_copy_glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M5 15V5a2 2 0 0 1 2-2h10"></path></svg><svg class="guide_copy_tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span>
+                                <span class="button_label"><span class="button_label_inner"><span>Copy all specs</span><span aria-hidden="true">Copy all specs</span></span></span>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="guide_card">
+                        <div class="guide_example">
+                            <div class="guide_shot guide_shot--hero">
+                                <img src="images/guide/blog-example.png" alt="Example blog cover" loading="lazy">
+                            </div>
+                            <div>
+                                <h3 class="guide_card_name">Blog image</h3>
+                                <div class="guide_size_row">
+                                    <p class="guide_size">1800 &times; 1200</p>
+                                    <button class="guide_copy_slot" type="button" aria-label="Copy Blog image size" data-copy="Blog image:&#10;1800 x 1200 px"><svg class="guide_copy_glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="13" height="13" x="9" y="9" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><svg class="guide_copy_tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button>
+                                </div>
+                                <div class="guide_meta">
+                                    <span>3:2</span>
+                                    <span>WebP</span>
+                                    <span>under 250 KB</span>
+                                </div>
+                                <div class="guide_divider" aria-hidden="true"></div>
+                                <p class="guide_lead">One image per blog post, used on the blog page, on the cards and at the top of the article.</p>
+                                <div class="guide_tip"><span class="guide_tip_icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg></span><p>The whole frame is always shown, nothing is trimmed.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guide_card">
+                        <div class="guide_example">
+                            <div class="guide_plate">
+                                <div class="guide_upload_row">
+                                    <div>
+                                        <div class="guide_upload_tile">
+                                            <img src="images/guide/author-example-1.webp" alt="An author photo as it should be uploaded: a square file with the background removed">
+                                        </div>
+                                        <p class="guide_plate_caption">What you upload</p>
+                                    </div>
+                                    <div class="guide_upload_arrow" aria-hidden="true">&rarr;</div>
+                                    <div>
+                                        <div class="guide_avatars">
+                                            <div class="guide_avatar"><img src="images/guide/author-example-1.webp" alt="The same file inside the round mask the site applies"></div>
+                                            <div class="guide_avatar"><img src="images/guide/author-example-2.webp" alt="Another author avatar on the site"></div>
+                                            <div class="guide_avatar"><img src="images/guide/author-example-3.webp" alt="Another author avatar on the site"></div>
+                                        </div>
+                                        <p class="guide_plate_caption">What appears on the site</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="guide_card_name">Author image</h3>
+                                <div class="guide_size_row">
+                                    <p class="guide_size">320 &times; 320</p>
+                                    <button class="guide_copy_slot" type="button" aria-label="Copy Author image size" data-copy="Author image:&#10;320 x 320 px"><svg class="guide_copy_glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="13" height="13" x="9" y="9" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><svg class="guide_copy_tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button>
+                                </div>
+                                <div class="guide_meta">
+                                    <span>1:1</span>
+                                    <span>WebP</span>
+                                    <span>transparent background</span>
+                                    <span>under 40 KB</span>
+                                </div>
+                                <div class="guide_divider" aria-hidden="true"></div>
+                                <p class="guide_lead">The site only adds the round mask and the colour behind it.</p>
+                                <div class="guide_tip"><span class="guide_tip_icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg></span><p>Cut the background out before uploading. Square file, head and shoulders filling the frame.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guide_card">
+                        <div class="guide_example">
+                            <div class="guide_shot guide_shot--hero guide_shot--wide">
+                                <img src="images/guide/article-figure-example.png" alt="An example diagram placed between paragraphs of an article" loading="lazy">
+                            </div>
+                            <div>
+                                <h3 class="guide_card_name">Image inside the article</h3>
+                                <div class="guide_size_row">
+                                    <p class="guide_size">1600 &times; 900</p>
+                                    <button class="guide_copy_slot" type="button" aria-label="Copy Image inside the article size" data-copy="Image inside the article:&#10;1600 x 900 px"><svg class="guide_copy_glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="13" height="13" x="9" y="9" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><svg class="guide_copy_tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button>
+                                </div>
+                                <div class="guide_meta">
+                                    <span>16:9</span>
+                                    <span>WebP</span>
+                                    <span>under 400 KB</span>
+                                </div>
+                                <div class="guide_divider" aria-hidden="true"></div>
+                                <p class="guide_lead">Optional. Screenshots, charts and diagrams between paragraphs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===================== EVENTS ===================== -->
+                <div class="guide_area" id="sec-events">
+                    <div class="guide_area_head">
+                        <h2 class="guide_area_title">Events</h2>
+                        <button class="guide_copy_all" type="button" aria-label="Copy every image spec in Events" data-copy="Event image:&#10;2400 x 1600 px, 3:2, WebP, under 350 KB">
+                            <span class="button button--secondary button--xs">
+                                <span class="button_icon" aria-hidden="true"><svg class="guide_copy_glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M5 15V5a2 2 0 0 1 2-2h10"></path></svg><svg class="guide_copy_tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span>
+                                <span class="button_label"><span class="button_label_inner"><span>Copy all specs</span><span aria-hidden="true">Copy all specs</span></span></span>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="guide_card">
+                        <div class="guide_example">
+                            <div class="guide_shot guide_shot--hero">
+                                <img src="images/guide/event-example.png" alt="Example event photograph" loading="lazy">
+                            </div>
+                            <div>
+                                <h3 class="guide_card_name">Event image</h3>
+                                <div class="guide_size_row">
+                                    <p class="guide_size">2400 &times; 1600</p>
+                                    <button class="guide_copy_slot" type="button" aria-label="Copy Event image size" data-copy="Event image:&#10;2400 x 1600 px"><svg class="guide_copy_glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="13" height="13" x="9" y="9" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><svg class="guide_copy_tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button>
+                                </div>
+                                <div class="guide_meta">
+                                    <span>3:2</span>
+                                    <span>WebP</span>
+                                    <span>under 350 KB</span>
+                                </div>
+                                <div class="guide_divider" aria-hidden="true"></div>
+                                <p class="guide_lead">One image per event, used on the card and as the full screen background on the event page.</p>
+                                <div class="guide_tip"><span class="guide_tip_icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg></span><p>Keep the subject at middle height and a little right of centre.</p></div>
+                            </div>
+                        </div>
+                        <div class="guide_overlap">
+                            <p class="guide_overlap_head"><span class="guide_overlap_icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg></span>Need to know</p>
+                            <div class="guide_zones">
+                                <div class="guide_zone">
+                                    <div class="guide_shot">
+                                        <img src="images/guide/event-example.png" alt="The photo as a listing card" loading="lazy">
+                                        <div class="guide_keepout guide_keepout--corner-left">
+                                            <span class="guide_badge_pill" aria-hidden="true">Upcoming</span>
+                                        </div>
+                                        <div class="guide_keepout guide_keepout--corner-right">
+                                            <span class="guide_badge_date" aria-hidden="true">18&ndash;20<br>JAN</span>
+                                        </div>
+                                    </div>
+                                    <h4 class="guide_zone_title">Listing card</h4>
+                                    <p class="guide_lead">A category label and the date sit in the top corners. Keep faces away from them.</p>
+                                </div>
+                                <div class="guide_zone">
+                                    <div class="guide_shot guide_shot--dark">
+                                        <img src="images/guide/event-example.png" alt="The photo as a full screen poster on a desktop" loading="lazy">
+                                        <span class="guide_poster_veil" aria-hidden="true"></span>
+                                        <div class="guide_keepout guide_keepout--left guide_keepout--side-46"></div>
+                                        <span class="guide_poster_title" aria-hidden="true"></span>
+                                        <span class="guide_poster_meta" aria-hidden="true"></span>
+                                    </div>
+                                    <h4 class="guide_zone_title">Event page, desktop</h4>
+                                    <p class="guide_lead">The title runs over the left half on a dark gradient. Keep the subject to the right of it.</p>
+                                </div>
+                                <div class="guide_zone">
+                                    <div class="guide_shot guide_shot--dark">
+                                        <img src="images/guide/event-example.png" alt="The part of the photo a phone screen shows" loading="lazy">
+                                        <div class="guide_keepout guide_keepout--left guide_keepout--side-35"></div>
+                                        <div class="guide_keepout guide_keepout--right guide_keepout--side-35"></div>
+                                        <div class="guide_phone_strip" aria-hidden="true"></div>
+                                        <span class="guide_keeplabel guide_keeplabel--high">a phone shows 30%</span>
+                                    </div>
+                                    <h4 class="guide_zone_title">Event page, phone</h4>
+                                    <p class="guide_lead">A phone cuts the sides away and shows only the middle strip of the photo.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===================== COMPANY ===================== -->
+                <div class="guide_area" id="sec-company">
+                    <div class="guide_area_head">
+                        <h2 class="guide_area_title">Company</h2>
+                        <button class="guide_copy_all" type="button" aria-label="Copy every image spec in Company" data-copy="Company story image:&#10;1200 x 1600 px, 3:4, WebP, under 300 KB">
+                            <span class="button button--secondary button--xs">
+                                <span class="button_icon" aria-hidden="true"><svg class="guide_copy_glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M5 15V5a2 2 0 0 1 2-2h10"></path></svg><svg class="guide_copy_tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span>
+                                <span class="button_label"><span class="button_label_inner"><span>Copy all specs</span><span aria-hidden="true">Copy all specs</span></span></span>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="guide_card">
+                        <div class="guide_example">
+                            <div class="guide_plate guide_plate--free">
+                                <div class="guide_shot guide_shot--story">
+                                    <img src="images/guide/story-02-team.webp" alt="Example photograph from the company story" loading="lazy">
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="guide_card_name">Company story image</h3>
+                                <div class="guide_size_row">
+                                    <p class="guide_size">1200 &times; 1600</p>
+                                    <button class="guide_copy_slot" type="button" aria-label="Copy Company story image size" data-copy="Company story image:&#10;1200 x 1600 px"><svg class="guide_copy_glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="13" height="13" x="9" y="9" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><svg class="guide_copy_tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button>
+                                </div>
+                                <div class="guide_meta">
+                                    <span>3:4</span>
+                                    <span>WebP</span>
+                                    <span>under 300 KB</span>
+                                </div>
+                                <div class="guide_divider" aria-hidden="true"></div>
+                                <p class="guide_lead">One photograph per chapter of the story timeline on the Company page.</p>
+                                <div class="guide_tip"><span class="guide_tip_icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg></span><p>Upload it upright, and leave free space above and below the subject. On a narrow screen the photo turns landscape and those strips are cut away.</p></div>
+                            </div>
+                        </div>
+                        <div class="guide_overlap">
+                            <p class="guide_overlap_head"><span class="guide_overlap_icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg></span>Need to know</p>
+                            <div class="guide_zones guide_zones--side">
+                                <div class="guide_zone">
+                                    <div class="guide_thumb_plate">
+                                        <div class="guide_shot guide_shot--portrait">
+                                            <img src="images/guide/story-02-team.webp" alt="The photograph as it appears on a desktop" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4 class="guide_zone_title">Desktop, 3:4</h4>
+                                        <p class="guide_lead">Upright beside the text. The whole photo is shown.</p>
+                                    </div>
+                                </div>
+                                <div class="guide_zone">
+                                    <div class="guide_thumb_plate">
+                                        <div class="guide_shot guide_shot--portrait">
+                                            <img src="images/guide/story-02-team.webp" alt="The part of the photograph a narrow screen keeps" loading="lazy">
+                                            <div class="guide_keepout guide_keepout--top guide_keepout--band-22"></div>
+                                            <div class="guide_keepout guide_keepout--bottom guide_keepout--band-22"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4 class="guide_zone_title">Tablet and phone, 4:3</h4>
+                                        <p class="guide_lead">The slot turns landscape, so the top and bottom 22% are cut away.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===================== MEET THE TEAM ===================== -->
+                <div class="guide_area" id="sec-team">
+                    <div class="guide_area_head">
+                        <h2 class="guide_area_title">Meet the Team</h2>
+                        <button class="guide_copy_all" type="button" aria-label="Copy every image spec in Meet the Team" data-copy="Team hero image:&#10;1200 x 1600 px, 3:4, WebP, under 300 KB&#10;&#10;Team member portrait:&#10;900 x 900 px, 1:1, WebP, transparent background, under 150 KB">
+                            <span class="button button--secondary button--xs">
+                                <span class="button_icon" aria-hidden="true"><svg class="guide_copy_glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M5 15V5a2 2 0 0 1 2-2h10"></path></svg><svg class="guide_copy_tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span>
+                                <span class="button_label"><span class="button_label_inner"><span>Copy all specs</span><span aria-hidden="true">Copy all specs</span></span></span>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="guide_card">
+                        <div class="guide_example">
+                            <div class="guide_plate guide_plate--free">
+                                <div class="guide_shot guide_shot--story">
+                                    <img src="images/guide/company-team-hero.webp" alt="The team photograph used at the top of Meet the Team" loading="lazy">
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="guide_card_name">Team hero image</h3>
+                                <div class="guide_size_row">
+                                    <p class="guide_size">1200 &times; 1600</p>
+                                    <button class="guide_copy_slot" type="button" aria-label="Copy Team hero image size" data-copy="Team hero image:&#10;1200 x 1600 px"><svg class="guide_copy_glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="13" height="13" x="9" y="9" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><svg class="guide_copy_tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button>
+                                </div>
+                                <div class="guide_meta">
+                                    <span>3:4</span>
+                                    <span>WebP</span>
+                                    <span>under 300 KB</span>
+                                </div>
+                                <div class="guide_divider" aria-hidden="true"></div>
+                                <p class="guide_lead">One photograph of the whole team, beside the heading at the top of the page.</p>
+                                <div class="guide_tip"><span class="guide_tip_icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg></span><p>Upload it upright, with free space above and below the group. On a phone the slot becomes a square and both strips are cut away.</p></div>
+                            </div>
+                        </div>
+                        <div class="guide_overlap">
+                            <p class="guide_overlap_head"><span class="guide_overlap_icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg></span>Need to know</p>
+                            <div class="guide_zones guide_zones--side">
+                                <div class="guide_zone">
+                                    <div class="guide_thumb_plate">
+                                        <div class="guide_shot guide_shot--portrait">
+                                            <img src="images/guide/company-team-hero.webp" alt="The team photograph as it appears on a desktop" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4 class="guide_zone_title">Desktop and tablet, 3:4</h4>
+                                        <p class="guide_lead">Upright beside the heading. The whole photo is shown.</p>
+                                    </div>
+                                </div>
+                                <div class="guide_zone">
+                                    <div class="guide_thumb_plate">
+                                        <div class="guide_shot guide_shot--portrait">
+                                            <img src="images/guide/company-team-hero.webp" alt="The part of the team photograph a phone keeps" loading="lazy">
+                                            <div class="guide_keepout guide_keepout--top guide_keepout--band-12"></div>
+                                            <div class="guide_keepout guide_keepout--bottom guide_keepout--band-12"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4 class="guide_zone_title">Phone, 1:1</h4>
+                                        <p class="guide_lead">Below 640px the slot is square, so the top and bottom 12% are trimmed.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guide_card">
+                        <div class="guide_example">
+                            <div class="guide_plate">
+                                <div class="guide_upload_row">
+                                    <div>
+                                        <div class="guide_upload_tile guide_upload_tile--team">
+                                            <img src="images/guide/team-example-m.webp" alt="A portrait as it should be uploaded: square, background removed">
+                                        </div>
+                                        <p class="guide_plate_caption">What you upload</p>
+                                    </div>
+                                    <div class="guide_upload_arrow" aria-hidden="true">&rarr;</div>
+                                    <div>
+                                        <div class="guide_avatars guide_avatars--tiles">
+                                            <span class="guide_portrait">
+                                                <span class="guide_portrait_glow" aria-hidden="true"></span>
+                                                <img src="images/guide/team-example-m.webp" alt="The same portrait on its tile">
+                                            </span>
+                                            <span class="guide_portrait guide_portrait--violet">
+                                                <span class="guide_portrait_glow" aria-hidden="true"></span>
+                                                <img src="images/guide/team-example-f.webp" alt="Another portrait on its tile">
+                                            </span>
+                                        </div>
+                                        <p class="guide_plate_caption">What appears on the site</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="guide_card_name">Team member portrait</h3>
+                                <div class="guide_size_row">
+                                    <p class="guide_size">900 &times; 900</p>
+                                    <button class="guide_copy_slot" type="button" aria-label="Copy Team member portrait size" data-copy="Team member portrait:&#10;900 x 900 px"><svg class="guide_copy_glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="13" height="13" x="9" y="9" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><svg class="guide_copy_tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button>
+                                </div>
+                                <div class="guide_meta">
+                                    <span>1:1</span>
+                                    <span>WebP</span>
+                                    <span>transparent background</span>
+                                    <span>under 150 KB</span>
+                                </div>
+                                <div class="guide_divider" aria-hidden="true"></div>
+                                <p class="guide_lead">One per person, on the team tiles here and on the speaker tiles of an event page.</p>
+                                <div class="guide_tip"><span class="guide_tip_icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg></span><p>Cut the background out before uploading. The square sits in the tile edge to edge, so nothing is cropped.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        /* =========================================================
+           Design-system navigation
+           Group headers open and close their own list; the filter field narrows
+           the links live, opens every group holding a hit, hides a group with
+           none, and restores the manual open/closed state once it is cleared.
+        ========================================================= */
+        (function () {
+            const nav = document.querySelector('[data-ds-nav]');
+            if (!nav) return;
+
+            const groups = [...nav.querySelectorAll('[data-ds-nav-group]')].map(head => ({
+                head,
+                list: document.getElementById(head.getAttribute('aria-controls'))
+            }));
+
+            const syncList = ({ head, list }) => {
+                list.hidden = head.getAttribute('aria-expanded') !== 'true';
+            };
+
+            groups.forEach(group => {
+                group.head.addEventListener('click', () => {
+                    const open = group.head.getAttribute('aria-expanded') === 'true';
+                    group.head.setAttribute('aria-expanded', String(!open));
+                    syncList(group);
+                });
+            });
+
+            const filter = nav.querySelector('[data-ds-nav-filter]');
+            if (!filter) return;
+
+            filter.addEventListener('input', () => {
+                const query = filter.value.trim().toLowerCase();
+                nav.querySelectorAll('[data-ds-nav-link]').forEach(link => {
+                    link.hidden = Boolean(query) && !link.textContent.toLowerCase().includes(query);
+                });
+                groups.forEach(group => {
+                    const hasHit = [...group.list.querySelectorAll('[data-ds-nav-link]')].some(link => !link.hidden);
+                    group.head.hidden = Boolean(query) && !hasHit;
+                    if (query) group.list.hidden = !hasHit;
+                    else syncList(group);
+                });
+            });
+        })();
+
+        /* =========================================================
+           Filter tabs
+           [data-tabs] bars keep their own selection (aria-selected) and fire a
+           bubbling "tabs:change" event ({ detail: { key } }) so a page can filter
+           its own cards. The panel — [data-tabpanel] in the same section, or the
+           bar's data-tabs-panel selector — replays its visible items with a 26ms
+           stagger (capped at 420ms) two frames after the pick.
+           Every .tabs--scrollfade bar measures its overflow and fades only the side
+           that is actually cut; a picked or focused tab that is clipped is pulled
+           fully into view by tweening the bar's own scrollLeft (380ms, 46px
+           clearance, snapping suspended) — never scrollIntoView.
+        ========================================================= */
+        (function () {
+            const FADE = 46;
+            const STAGGER = 26;
+            const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            /* ---- edge fades ---- */
+            const syncFade = bar => {
+                const max = bar.scrollWidth - bar.clientWidth;
+                if (max <= 1) {
+                    bar.style.setProperty('--tab-fade-l', '0px');
+                    bar.style.setProperty('--tab-fade-r', '0px');
+                    return;
+                }
+                const x = bar.scrollLeft;
+                bar.style.setProperty('--tab-fade-l', Math.max(0, Math.min(FADE, x)).toFixed(1) + 'px');
+                bar.style.setProperty('--tab-fade-r', Math.max(0, Math.min(FADE, max - x)).toFixed(1) + 'px');
+            };
+
+            /* ---- pull a clipped tab into view ---- */
+            const reveal = (bar, tab) => {
+                if (bar.classList.contains('tabs--segmented')) return;
+                const max = bar.scrollWidth - bar.clientWidth;
+                if (max <= 1) return;
+                const pad = bar.classList.contains('tabs--scrollfade') ? FADE : 8;
+                const left = tab.offsetLeft - bar.offsetLeft;
+                const right = left + tab.offsetWidth;
+                const from = bar.scrollLeft;
+                let target = from;
+                if (left - pad < from) target = left - pad;
+                else if (right + pad > from + bar.clientWidth) target = right + pad - bar.clientWidth;
+                target = Math.max(0, Math.min(max, target));
+                if (Math.abs(target - from) < 1) return;
+
+                const snap = bar.style.scrollSnapType;
+                bar.style.scrollSnapType = 'none';
+                if (bar.tabsTween) cancelAnimationFrame(bar.tabsTween);
+                const done = () => {
+                    bar.tabsTween = null;
+                    clearTimeout(bar.tabsSafety);
+                    bar.style.scrollSnapType = snap || '';
+                    if (bar.classList.contains('tabs--scrollfade')) syncFade(bar);
+                };
+                if (reduce) {
+                    bar.scrollLeft = target;
+                    done();
+                    return;
+                }
+                const distance = target - from;
+                const start = performance.now();
+                const DURATION = 380;
+                const step = now => {
+                    const p = Math.min(1, (now - start) / DURATION);
+                    bar.scrollLeft = from + distance * (1 - Math.pow(1 - p, 4));
+                    if (p < 1) bar.tabsTween = requestAnimationFrame(step);
+                    else done();
+                };
+                bar.tabsTween = requestAnimationFrame(step);
+                /* rAF pauses in a background frame: land on the target regardless */
+                clearTimeout(bar.tabsSafety);
+                bar.tabsSafety = setTimeout(() => {
+                    if (!bar.tabsTween) return;
+                    cancelAnimationFrame(bar.tabsTween);
+                    bar.scrollLeft = target;
+                    done();
+                }, DURATION + 260);
+            };
+
+            const onPick = event => {
+                const tab = event.target.closest && event.target.closest('.tabs_item');
+                if (!tab) return;
+                const bar = tab.closest('.tabs');
+                if (bar) setTimeout(() => reveal(bar, tab), 0);
+            };
+            document.addEventListener('click', onPick, true);
+            document.addEventListener('focusin', onPick, true);
+
+            const bars = document.querySelectorAll('.tabs--scrollfade');
+            bars.forEach(bar => {
+                bar.addEventListener('scroll', () => syncFade(bar), { passive: true });
+                if (window.ResizeObserver) new ResizeObserver(() => syncFade(bar)).observe(bar);
+                syncFade(bar);
+            });
+            const syncAll = () => bars.forEach(syncFade);
+            window.addEventListener('resize', syncAll);
+            window.addEventListener('load', syncAll);
+            if (document.fonts && document.fonts.ready) document.fonts.ready.then(syncAll);
+
+            /* ---- selection + panel replay ---- */
+            const findPanel = bar => {
+                const selector = bar.getAttribute('data-tabs-panel');
+                const scope = bar.closest('section') || document;
+                if (selector) return scope.querySelector(selector) || document.querySelector(selector);
+                return scope.querySelector('[data-tabpanel]');
+            };
+
+            const replay = bar => {
+                requestAnimationFrame(() => requestAnimationFrame(() => {
+                    const panel = findPanel(bar);
+                    if (!panel) return;
+                    const shown = [...panel.children].filter(el => !el.hidden && getComputedStyle(el).display !== 'none');
+                    shown.forEach((el, i) => {
+                        el.classList.remove('tabs_panel_item--in');
+                        void el.offsetWidth;
+                        el.style.animationDelay = Math.min(i * STAGGER, 420) + 'ms';
+                        el.classList.add('tabs_panel_item--in');
+                    });
+                }));
+            };
+
+            document.querySelectorAll('[data-tabs]').forEach(bar => {
+                bar.addEventListener('click', event => {
+                    const tab = event.target.closest('.tabs_item');
+                    if (!tab || !bar.contains(tab)) return;
+                    bar.querySelectorAll('.tabs_item').forEach(item => {
+                        item.setAttribute('aria-selected', String(item === tab));
+                    });
+                    bar.dispatchEvent(new CustomEvent('tabs:change', {
+                        bubbles: true,
+                        detail: { key: tab.getAttribute('data-tab') }
+                    }));
+                    replay(bar);
+                });
+            });
+        })();
+
+        /* =========================================================
+           Image guide — section bar
+           The pinned copy of the bar fades in once the hero's own bar has left
+           the window (its bottom above 8px). The active tab on both bars is the
+           section that owns the line 120px under the top. Picking a tab scrolls
+           smoothly to that section, clearing the pinned bar plus 28px.
+        ========================================================= */
+        (function () {
+            const heroBar = document.querySelector('[data-guide-hero-bar]');
+            const fixedBar = document.querySelector('[data-guide-fixed-bar]');
+            const keys = ['news', 'blog', 'events', 'company', 'team'];
+            const sections = keys.map(key => document.getElementById('sec-' + key));
+            if (!heroBar || !fixedBar || sections.some(section => !section)) return;
+
+            let current = 'news';
+
+            const select = key => {
+                current = key;
+                document.querySelectorAll('.guide_tabs .tabs_item').forEach(tab => {
+                    tab.setAttribute('aria-selected', String(tab.getAttribute('data-tab') === key));
+                });
+            };
+
+            const sync = () => {
+                const pinned = heroBar.getBoundingClientRect().bottom < 8;
+                if (pinned) fixedBar.setAttribute('data-on', 'true');
+                else fixedBar.removeAttribute('data-on');
+
+                let owner = keys[0];
+                sections.forEach((section, i) => {
+                    if (section.getBoundingClientRect().top <= 120) owner = keys[i];
+                });
+                if (owner !== current) select(owner);
+            };
+
+            let frame = 0;
+            window.addEventListener('scroll', () => {
+                if (frame) return;
+                frame = requestAnimationFrame(() => {
+                    frame = 0;
+                    sync();
+                });
+            }, { passive: true });
+
+            document.addEventListener('tabs:change', event => {
+                if (!event.target.closest('.guide_tabs')) return;
+                const key = event.detail.key;
+                const target = document.getElementById('sec-' + key);
+                if (!target) return;
+                const offset = fixedBar.getBoundingClientRect().height;
+                const top = window.scrollY + target.getBoundingClientRect().top - offset - 28;
+                window.scrollTo({ top, behavior: 'smooth' });
+                select(key);
+            });
+
+            sync();
+        })();
+
+        /* =========================================================
+           Image guide — copy specs
+           Every [data-copy] control copies its text (clipboard API, falling back
+           to a hidden textarea) and shows a tick for 1.6s.
+        ========================================================= */
+        (function () {
+            const controls = document.querySelectorAll('[data-copy]');
+            if (!controls.length) return;
+            let timer = 0;
+
+            const fallback = (text, done) => {
+                const field = document.createElement('textarea');
+                field.value = text;
+                field.className = 'visually_hidden';
+                document.body.appendChild(field);
+                field.select();
+                try {
+                    document.execCommand('copy');
+                    done();
+                } catch (error) {
+                    /* clipboard unavailable */
+                }
+                field.remove();
+            };
+
+            controls.forEach(control => {
+                control.addEventListener('click', () => {
+                    const text = control.getAttribute('data-copy') || '';
+                    const done = () => {
+                        controls.forEach(other => other.removeAttribute('data-done'));
+                        control.setAttribute('data-done', 'true');
+                        clearTimeout(timer);
+                        timer = setTimeout(() => control.removeAttribute('data-done'), 1600);
+                    };
+                    if (navigator.clipboard && navigator.clipboard.writeText) {
+                        navigator.clipboard.writeText(text).then(done, () => fallback(text, done));
+                    } else {
+                        fallback(text, done);
+                    }
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

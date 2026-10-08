@@ -1,0 +1,63 @@
+$mr-grid-width: 1200px !default;
+$mr-em-base: 16px !default;
+$mr-convert-to: '%' !default;
+
+@function -mr-grid-col-width(
+  $cols,
+  $grid-width: $mr-grid-width,
+  $grid-total-cols: $mr-grid-total-column,
+  $gutter-width: $mr-gutter-width
+) {
+  @return ($grid-width / $grid-total-cols) * $cols - $gutter-width;
+}
+@function mr-remove-unit($target) {
+  $one: 1;
+  @if not unitless($target) {
+    @if (unit($target) == 'px') {
+      $one: 1px;
+    }
+    @elseif (unit($target) == "em") {
+      $one: 1em;
+    }
+    @elseif (unit($target) == "%") {
+      $one: 1%;
+    }
+
+    @return $target / $one;
+  } @else {
+    @return $target;
+  }
+}
+@function -mr-calc-elem(
+  $target-size,
+  $new-unit: $mr-convert-to,
+  $em-base: $mr-em-base,
+  $context: $mr-grid-width
+) {
+  @if unitless($target-size) {
+    @warn "Assuming #{$target-size} to be in pixels, change to #{$target-size}px or another unit of measurement";
+    $target-size: $target-size * 1px;
+  }
+
+  $context: mr-remove-unit($context);
+  $em-base: mr-remove-unit($em-base);
+  $nounit-target-size: mr-remove-unit($target-size);
+  @if (unit($target-size) == $new-unit) {
+    @return $target-size;
+  }
+
+  @elseif (unit($target-size) == "px" and $new-unit =="%") {
+    @return percentage($nounit-target-size / $context);
+  }
+
+  @elseif (unit($target-size) == "px" and $new-unit =="em") {
+    @return ($nounit-target-size / $em-base) * 1em;
+  }
+
+  @elseif (unit($target-size) == "em" and $new-unit =="px") {
+    @return ($nounit-target-size * $em-base) * 1px;
+  } @else {
+    @warn "The unit being used is #{unit($target-size)}, #{$target-size} should be in px, %, or em";
+    @return $target-size;
+  }
+}

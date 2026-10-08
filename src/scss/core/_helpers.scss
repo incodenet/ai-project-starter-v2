@@ -1,0 +1,96 @@
+.mb_75 {
+  margin-bottom: 75px;
+}
+
+.mb_50 {
+  margin-bottom: 50px;
+}
+
+.mb_35 {
+  margin-bottom: 35px;
+}
+
+.mb_25 {
+  margin-bottom: 25px;
+}
+
+.mb_15 {
+  margin-bottom: 15px;
+}
+
+.mt_10 {
+  margin-top: 10px;
+}
+
+.mt_30 {
+  margin-top: 30px;
+}
+
+.m_0 {
+  margin: 0;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.pt-0 {
+  padding-top: 0;
+}
+
+.pt_20 {
+  padding-top: 20px;
+}
+
+.fluid-x {
+  max-width: 100%;
+  width: 100%;
+}
+
+.fluid-y {
+  max-height: 100%;
+  height: 100%;
+}
+
+.row-wrap {
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+.relative {
+  position: relative;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.not-visible {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.hidden-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* inline SVG icon, sized by its width/height attributes */
+.icon {
+  display: block;
+  flex: 0 0 auto;
+}

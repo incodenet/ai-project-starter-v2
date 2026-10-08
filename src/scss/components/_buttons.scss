@@ -1,0 +1,394 @@
+@property --shine-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes button-shine {
+  to {
+    --shine-angle: 360deg;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  height: 52px;
+  padding: 0 26px;
+  border: 2px solid transparent;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.btn-mask {
+  display: block;
+  overflow: hidden;
+  line-height: 1.35;
+}
+
+.btn-track {
+  position: relative;
+  display: block;
+  transition: transform 0.4s var(--ease-out);
+}
+
+.btn-track > span {
+  display: block;
+}
+
+.btn-track > span[aria-hidden] {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.btn:hover .btn-track {
+  transform: translateY(-100%);
+}
+
+.btn svg {
+  width: 1.15em;
+  height: 1.15em;
+  flex: 0 0 auto;
+}
+
+.btn-sm {
+  gap: 8px;
+  height: 42px;
+  padding: 0 18px;
+  font-size: 13px;
+}
+
+.btn-lg {
+  gap: 10px;
+  height: 60px;
+  padding: 0 32px;
+  font-size: 16px;
+}
+
+.btn-xl {
+  gap: 11px;
+  height: 68px;
+  padding: 0 40px;
+  font-size: 18px;
+}
+
+/* The services page ships its own button scale under .svc-btn-*, but the
+   travelling shine and the underglow are the same two layers, so both
+   families share them here rather than each registering its own @property,
+   keyframes and pseudo-elements. */
+.btn-primary,
+.svc-btn-primary {
+  position: relative;
+}
+
+.btn-primary {
+  background: linear-gradient(225deg, #8a62d8, #6a43b2);
+  background-origin: border-box;
+  color: var(--white);
+}
+
+.btn-primary::before,
+.svc-btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  padding: 2px;
+  border-radius: inherit;
+  background: conic-gradient(from var(--shine-angle), transparent 0%, #ffffff 8%, transparent 18%);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: button-shine 4.8s linear infinite;
+  pointer-events: none;
+}
+
+.btn-primary::after,
+.svc-btn-primary::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: radial-gradient(
+    75% 90% at 50% 118%,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.18) 40%,
+    rgba(255, 255, 255, 0) 72%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+/* the services pill has no border, so its underglow sits on the box itself */
+.svc-btn-primary::after {
+  inset: 0;
+}
+
+.btn-primary:hover {
+  color: var(--white);
+}
+
+.btn-primary:hover::after,
+.svc-btn-primary:hover::after {
+  opacity: 1;
+}
+
+.btn-secondary {
+  background: transparent;
+  border-color: rgba(123, 82, 199, 0.55);
+  color: var(--purple);
+}
+
+.btn-secondary:hover {
+  background: var(--purple);
+  border-color: var(--purple);
+  color: var(--white);
+}
+
+/* The outline button on a dark band: the light tint replaces the purple. */
+.btn-secondary-light {
+  background: transparent;
+  border-color: rgba(183, 155, 255, 0.5);
+  color: var(--purple-light);
+}
+
+.btn-secondary-light:hover {
+  background: var(--purple-light);
+  border-color: var(--purple-light);
+  color: var(--ink);
+}
+
+.btn-invert {
+  background: var(--white);
+  border-color: var(--white);
+  color: var(--purple);
+}
+
+.btn-invert:hover {
+  background: #efe8fb;
+  color: var(--purple);
+}
+
+/* The quiet outline on a dark band: white rule, white label, no tint. */
+.btn-outline-light {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.28);
+  color: var(--white);
+}
+
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: var(--white);
+}
+
+/* The quiet outline on a light surface: ink rule, ink label, inverting on
+   hover. The mirror of .btn-outline-light above. */
+.btn-outline-dark {
+  background: transparent;
+  border-color: rgba(21, 19, 28, 0.15);
+  color: var(--ink);
+}
+
+.btn-outline-dark:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--white);
+}
+
+/* The white outline that inverts to a solid white pill on hover: the mirror of
+   .btn-outline-dark above, for a dark band that asks for more than a wash. */
+.btn-outline-invert {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.3);
+  color: var(--white);
+}
+
+.btn-outline-invert:hover {
+  background: var(--white);
+  border-color: var(--white);
+  color: var(--ink);
+}
+
+.btn-link {
+  height: auto;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--purple);
+}
+
+.btn-link:hover {
+  color: var(--purple);
+  opacity: 0.72;
+}
+
+.btn-soft {
+  background: rgba(123, 82, 199, 0.12);
+  border-color: transparent;
+  color: var(--purple);
+}
+
+.btn-soft:hover {
+  background: rgba(123, 82, 199, 0.2);
+  color: var(--purple);
+}
+
+.btn-icon {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border-radius: 50%;
+  flex: 0 0 auto;
+}
+
+.btn-icon-xs {
+  width: 36px;
+  height: 36px;
+}
+
+.btn-icon-xs svg {
+  width: 15px;
+  height: 15px;
+}
+
+.btn-icon-md {
+  width: 44px;
+  height: 44px;
+}
+
+.btn-icon-lg {
+  width: 52px;
+  height: 52px;
+}
+
+.btn-icon-lg svg {
+  width: 18px;
+  height: 18px;
+}
+
+.btn-arrow {
+  transition: transform 0.3s var(--ease-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-primary::before,
+  .svc-btn-primary::before {
+    animation: none;
+  }
+
+  .btn-track {
+    transition: none;
+  }
+}
+
+/* =========================================================
+   BUTTON (ARIDES)
+   Padding-sized pills. Kept apart from the height-sized .btn family above,
+   whose fixed height, 2px border and icon sizing would otherwise leak in.
+   ========================================================= */
+
+.button {
+  align-items: center;
+  border-radius: 999px;
+  padding: 16px 30px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 15.5px;
+}
+
+.button--primary {
+  display: flex;
+  gap: 9px;
+  padding: 17px 30px;
+  color: var(--color-white);
+  background-color: var(--color-red);
+  box-shadow: 0 11px 30px 0 #cd1a3c9c;
+  transition:
+    transform 0.25s var(--ease-out),
+    background 0.25s;
+
+  &:hover {
+    color: var(--color-white);
+    background: var(--color-red-hover);
+    transform: translateY(-2px);
+  }
+}
+
+.button--secondary {
+  display: inline-flex;
+  gap: 8px;
+  color: var(--color-ink);
+  background: var(--color-white);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  transition:
+    transform 0.25s var(--ease-out),
+    box-shadow 0.25s;
+
+  &:hover {
+    color: #0e2a47;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 26px rgba(15, 23, 42, 0.12);
+  }
+}
+
+.button--link {
+  display: inline-flex;
+  gap: 5px;
+  padding: 15px 26px;
+  font-size: 14.5px;
+  white-space: nowrap;
+  color: var(--color-red);
+  transition: transform 0.25s var(--ease-out);
+
+  &:hover {
+    color: var(--color-red);
+    transform: translateX(2px);
+  }
+
+  .icon {
+    position: relative;
+    top: 0.5px;
+  }
+}
+
+/* round icon-only control: slider arrows, carousel paging */
+.icon-button {
+  width: 54px;
+  height: 54px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-ink);
+  background: var(--color-white);
+  box-shadow: var(--shadow-soft);
+  transition:
+    background 0.25s,
+    color 0.25s;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--color-white);
+    background: var(--color-red);
+  }
+}

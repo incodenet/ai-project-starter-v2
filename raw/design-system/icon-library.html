@@ -1,0 +1,2144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Icon Library | Hybrid Interaction Design System</title>
+    <meta name="description" content="Every icon on the site, grouped by family, with usage rules and click-to-copy SVG.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap">
+
+    <style>
+        /* =========================================================
+           DESIGN TOKENS
+           Fonts, weights and the fluid type scale (hi-fonts.css + hi-typography.css),
+           then colour, surface, radius, elevation, motion, space and layout
+           (hi-tokens.css). Every page of the design system ships the same set.
+        ========================================================= */
+        :root {
+            /* --- font families --- */
+            --font-heading: 'Hanken Grotesk', system-ui, sans-serif;
+            --font-caption: 'Hanken Grotesk', system-ui, sans-serif;
+            --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+            --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+            /* --- weights --- */
+            --fw-extralight: 200;
+            --fw-light: 300;
+            --fw-regular: 400;
+            --fw-medium: 500;
+            --fw-semibold: 600;
+            --fw-bold: 700;
+            --fw-extrabold: 800;
+
+            /* --- type scale (fluid) --- */
+            --text-hero-size: clamp(40px, 6vw, 96px);
+            --text-figure-size: clamp(48px, 8.6vw, 120px);
+            --text-display-size: clamp(36px, 5.2vw, 78px);
+            --text-h1-size: clamp(32px, 4.4vw, 64px);
+            --text-h2-size: clamp(28px, 3.6vw, 52px);
+            --text-h-feature-size: clamp(23px, 2.9vw, 42px);
+            --text-h3-size: clamp(20px, 2vw, 27px);
+            --text-body-lg-size: clamp(18px, 1.6vw, 22px);
+            --text-body-md-size: 16.5px;
+            --text-body-sm-size: 14.5px;
+            --text-caption-size: 12px;
+            --text-label-size: 15px;
+
+            /* --- line heights --- */
+            --lh-tight: 1;
+            --lh-snug: 1.15;
+            --lh-heading: 1.05;
+            --lh-body: 1.6;
+
+            /* --- letter spacing --- */
+            --ls-hero: -.045em;
+            --ls-heading: -.03em;
+            --ls-h3: -.02em;
+            --ls-caption: .2em;
+            --ls-label: .02em;
+
+            /* --- brand palette --- */
+            --c-bg: #eaeaf2;
+            --c-ink: #15131c;
+            --c-dark: #180a2b;
+            --c-dark-2: #170928;
+            --c-accent: #7b52c7;
+            --c-accent-bright: #9d73ff;
+            --c-violet: #9b6fe0;
+            --c-lav: #b79bff;
+            --c-cyan: #00b7fa;
+            --c-offwhite: #f1f8ff;
+            --c-white: #ffffff;
+            --c-grey: #6b6b76;
+            --c-ds-panel: #12101a;
+
+            /* --- text alpha steps --- */
+            --c-ink-60: rgba(21, 19, 28, .6);
+            --c-ink-55: rgba(21, 19, 28, .55);
+            --c-ink-45: rgba(21, 19, 28, .45);
+            --c-ink-16: rgba(21, 19, 28, .16);
+            --c-offwhite-80: rgba(241, 248, 255, .8);
+            --c-offwhite-62: rgba(241, 248, 255, .62);
+            --c-offwhite-50: rgba(241, 248, 255, .5);
+            --c-white-78: rgba(255, 255, 255, .78);
+            --c-white-50: rgba(255, 255, 255, .5);
+            --c-white-20: rgba(255, 255, 255, .2);
+            --c-white-08: rgba(255, 255, 255, .08);
+
+            /* --- partner brands --- */
+            --brand-optimove: #302c69;
+            --brand-optimove-pastel: #f4f4f7;
+            --brand-smartico: #f15851;
+            --brand-smartico-pastel: #fef2f1;
+            --brand-fast-track: #e96092;
+            --brand-fast-track-pastel: #fdf2f6;
+            --brand-xtremepush: #003df5;
+            --brand-xtremepush-pastel: #f1f4fe;
+            --brand-customer-io: #0b363b;
+            --brand-customer-io-pastel: #f2f4f5;
+            --brand-solitics: #ffd400;
+            --brand-solitics-pastel: #fff5c3;
+
+            /* --- status --- */
+            --c-success: #1f8a5b;
+            --c-success-bright: #1fb26b;
+            --c-success-soft: #1fd28a;
+            --c-warning: #ffb038;
+            --c-magenta: #c32e93;
+
+            /* --- surfaces --- */
+            --surface-light: #ffffff;
+            --surface-tint: #faf8fd;
+            --surface-tint-strong: #f7f4fd;
+            --surface-neutral: #f1f1f4;
+            --surface-hover: #f2f2f4;
+            --grad-surface-grey: linear-gradient(145deg, #eeeef2 0%, #f6f6f8 52%, #ffffff 100%);
+            --grad-surface-grey-dark: linear-gradient(145deg, rgba(255, 255, 255, .09) 0%, rgba(255, 255, 255, .05) 52%, rgba(255, 255, 255, .02) 100%);
+            --grad-primary: linear-gradient(225deg, #8a62d8, #6a43b2);
+            --grad-hero: linear-gradient(160deg, #1c0c3a 0%, #2c1356 44%, #46228a 100%);
+            --grad-hero-deep: linear-gradient(160deg, #120724 0%, #1c0d38 46%, #2e155c 100%);
+            --grad-card-dark: linear-gradient(135deg, #1a0a3a, #3d1a6e);
+            --grad-card-dark-hover: linear-gradient(135deg, #26124f, #4d2589);
+            --grad-panel: linear-gradient(180deg, #17161d, #111017);
+            --grad-metric: linear-gradient(160deg, var(--c-accent), #4a248f);
+            --grad-rule-light: linear-gradient(to right, rgba(21, 19, 28, .16), rgba(21, 19, 28, 0));
+            --grad-rule-dark: linear-gradient(to right, rgba(255, 255, 255, .18), rgba(255, 255, 255, 0));
+
+            /* --- borders --- */
+            --border-light: 1px solid #eee9f6;
+            --border-glass: 1px solid rgba(255, 255, 255, .16);
+            --border-panel: 1px solid rgba(255, 255, 255, .07);
+            --border-accent-soft: 1px solid rgba(123, 82, 199, .35);
+
+            /* --- radii --- */
+            --r-xs: 4px;
+            --r-sm: 7px;
+            --r-md: 12px;
+            --r-lg: 16px;
+            --r-xl: 20px;
+            --r-2xl: 24px;
+            --r-3xl: 26px;
+            --r-pill: 100px;
+            --r-circle: 50%;
+
+            /* --- elevation --- */
+            --shadow-tile: 0 4px 10px -4px rgba(24, 10, 43, .14), 0 1px 3px -1px rgba(24, 10, 43, .1);
+            --shadow-pill: 0 8px 30px rgba(0, 0, 0, .28);
+            --shadow-card: 0 24px 50px rgba(26, 10, 58, .12);
+            --shadow-float: 0 20px 50px rgba(0, 0, 0, .35);
+            --shadow-card-raised: 0 40px 90px rgba(26, 10, 58, .28);
+            --shadow-card-hover: 0 54px 110px rgba(26, 10, 58, .42);
+            --shadow-panel: 0 30px 70px rgba(0, 0, 0, .5), inset 0 1px 0 rgba(255, 255, 255, .05);
+            --glow-accent: 0 4px 14px rgba(123, 82, 199, .6);
+
+            /* --- blur --- */
+            --blur-glass: 14px;
+            --blur-card: 12px;
+
+            /* --- motion --- */
+            --dur-fast: .2s;
+            --dur-base: .3s;
+            --dur-mid: .4s;
+            --dur-slow: .5s;
+            --dur-shutter: .9s;
+            --ease-out-quint: cubic-bezier(.16, 1, .3, 1);
+            --ease-swift: cubic-bezier(.2, .8, .2, 1);
+            --ease-standard: cubic-bezier(.4, 0, .2, 1);
+            --ease-shutter: cubic-bezier(.76, 0, .24, 1);
+
+            /* --- space --- */
+            --space-xxs: 4px;
+            --space-xs: 8px;
+            --space-sm: 12px;
+            --space-md: 14px;
+            --space-lg: 16px;
+            --space-xl: 20px;
+            --space-2xl: 24px;
+            --space-3xl: 34px;
+            --space-4xl: 40px;
+            --space-5xl: 56px;
+
+            /* --- layout --- */
+            --gutter: 5vw;
+            --gut: max(5vw, calc((100vw - 1440px) / 2 + 5vw));
+            --max-content: 1440px;
+            --max-text: 1100px;
+            --max-footer: 1280px;
+            --nav-height: 78px;
+            --ds-nav-width: 240px;
+            --ds-sheet-max: 1120px;
+            --ds-sheet-pad: 6vw;
+        }
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--c-bg);
+            color: var(--c-ink);
+            font-family: var(--font-body);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* NO percentage max-width here: logo marks sit in shrink-to-fit parents sized BY their
+           image, and a percentage that resolves against such a parent collapses the image to 0.
+           Containment is declared per component instead. */
+        img,
+        svg {
+            display: block;
+        }
+
+        /* a component class with its own display value out-ranks the UA's [hidden] rule */
+        [hidden] {
+            display: none !important;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            font-family: var(--font-heading);
+        }
+
+        p {
+            margin: 0;
+        }
+
+        button {
+            font: inherit;
+            color: inherit;
+            cursor: pointer;
+        }
+
+        /* zero specificity: every component colour (buttons, tiles, menu rows, nav) wins in every state,
+           the way the DC's inline styles beat its helmet link rule */
+        :where(a) {
+            color: var(--c-accent);
+        }
+
+        :where(a:hover) {
+            color: #5a37a0;
+        }
+
+        code {
+            font-family: var(--font-mono);
+            font-size: .85em;
+        }
+
+        :focus-visible {
+            outline: 2px solid rgba(157, 115, 255, .7);
+            outline-offset: 2px;
+        }
+
+        .visually_hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            white-space: nowrap;
+        }
+
+        /* =========================================================
+           TYPOGRAPHY
+           The named type roles. Design-tool name in brackets:
+           text_hero (.hi-hero) · text_figure (.hi-figure) · text_display (.hi-display)
+           text_h1 / text_h2 / text_h_feature / text_h3 · eyebrow (.hi-eyebrow)
+           figcaption (.hi-figcaption) · text_body_lg / _md / _sm · text_label
+           prose--l/m/s + bullets (.hi-prose-*, .hi-bullets, .hi-bullet)
+        ========================================================= */
+        .text_hero {
+            font-family: var(--font-heading);
+            font-weight: var(--fw-light);
+            font-size: var(--text-hero-size);
+            line-height: .98;
+            letter-spacing: var(--ls-hero);
+        }
+
+        .text_figure {
+            font-family: var(--font-heading);
+            font-weight: var(--fw-extralight);
+            font-size: var(--text-figure-size);
+            line-height: .82;
+            letter-spacing: -.03em;
+        }
+
+        .text_display {
+            font-family: var(--font-heading);
+            font-weight: var(--fw-light);
+            font-size: var(--text-display-size);
+            line-height: var(--lh-tight);
+            letter-spacing: -.04em;
+        }
+
+        .text_h1 {
+            font-family: var(--font-heading);
+            font-weight: var(--fw-light);
+            font-size: var(--text-h1-size);
+            line-height: 1.04;
+            letter-spacing: -.035em;
+        }
+
+        .text_h2 {
+            font-family: var(--font-heading);
+            font-weight: var(--fw-light);
+            font-size: var(--text-h2-size);
+            line-height: var(--lh-heading);
+            letter-spacing: var(--ls-heading);
+        }
+
+        .text_h_feature {
+            font-family: var(--font-heading);
+            font-weight: var(--fw-light);
+            font-size: var(--text-h-feature-size);
+            line-height: 1.1;
+            letter-spacing: -.032em;
+        }
+
+        .text_h3 {
+            font-family: var(--font-heading);
+            font-weight: var(--fw-semibold);
+            font-size: var(--text-h3-size);
+            line-height: 1.2;
+            letter-spacing: var(--ls-h3);
+        }
+
+        .eyebrow {
+            font-family: var(--font-caption);
+            font-weight: var(--fw-bold);
+            font-size: var(--text-caption-size);
+            line-height: 1;
+            letter-spacing: var(--ls-caption);
+            text-transform: uppercase;
+        }
+
+        .figcaption {
+            font-family: var(--font-body);
+            font-weight: var(--fw-regular);
+            font-size: 13px;
+            line-height: 1.5;
+            letter-spacing: 0;
+            text-transform: none;
+            color: var(--c-ink-45);
+        }
+
+        .figcaption--on-dark {
+            color: rgba(255, 255, 255, .5);
+        }
+
+        .text_body_lg {
+            font-family: var(--font-body);
+            font-weight: var(--fw-regular);
+            font-size: var(--text-body-lg-size);
+            line-height: var(--lh-body);
+        }
+
+        .text_body_md {
+            font-family: var(--font-body);
+            font-weight: var(--fw-regular);
+            font-size: var(--text-body-md-size);
+            line-height: var(--lh-body);
+        }
+
+        .text_body_sm {
+            font-family: var(--font-body);
+            font-weight: var(--fw-regular);
+            font-size: var(--text-body-sm-size);
+            line-height: 1.55;
+        }
+
+        .text_label {
+            font-family: var(--font-body);
+            font-weight: var(--fw-semibold);
+            font-size: var(--text-label-size);
+            letter-spacing: var(--ls-label);
+        }
+
+        /* --- body prose & bullets · sizes L / M / S --- */
+        .prose--l,
+        .bullets--l {
+            --pf: clamp(17px, 1.5vw, 21px);
+            --pl: 1.78;
+            --bf: clamp(17px, 1.5vw, 21px);
+            --bl: 1.6;
+            --gap: clamp(11px, 1.2vw, 15px);
+            --pad: 26px;
+            --dot: 8px;
+            --dtop: .62em;
+            --bmar: clamp(20px, 2vw, 28px);
+        }
+
+        .prose--m,
+        .bullets--m {
+            --pf: clamp(15px, 1.25vw, 18px);
+            --pl: 1.75;
+            --bf: clamp(15px, 1.25vw, 18px);
+            --bl: 1.6;
+            --gap: clamp(10px, 1.05vw, 13px);
+            --pad: 24px;
+            --dot: 7px;
+            --dtop: .6em;
+            --bmar: clamp(18px, 1.7vw, 23px);
+        }
+
+        .prose--s,
+        .bullets--s {
+            --pf: clamp(14px, 1.05vw, 16px);
+            --pl: 1.72;
+            --bf: clamp(14px, 1.05vw, 16px);
+            --bl: 1.58;
+            --gap: 9px;
+            --pad: 22px;
+            --dot: 6px;
+            --dtop: .6em;
+            --bmar: 16px;
+        }
+
+        .prose {
+            max-width: 64ch;
+        }
+
+        .prose > p {
+            margin: 0;
+            font-size: var(--pf);
+            line-height: var(--pl);
+            color: #33303e;
+            text-wrap: pretty;
+        }
+
+        .prose > :not(:first-child) {
+            margin-top: var(--bmar);
+        }
+
+        .bullets {
+            display: flex;
+            flex-direction: column;
+            gap: var(--gap);
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .bullet {
+            position: relative;
+            padding-left: var(--pad);
+            font-size: var(--bf);
+            line-height: var(--bl);
+            color: #33303e;
+            text-wrap: pretty;
+        }
+
+        .bullet::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: var(--dtop);
+            width: var(--dot);
+            height: var(--dot);
+            border-radius: 2px;
+            background: linear-gradient(135deg, #7b52c7, #9d73ff);
+        }
+
+        .bullet strong {
+            font-weight: var(--fw-semibold);
+            color: var(--c-ink);
+        }
+
+        /* =========================================================
+           LAYOUT — design-system shell
+           A fixed 240px sidebar (ds_nav) and the sheet beside it (ds_page).
+           Below 900px the sidebar is removed and the sheet takes the full width.
+        ========================================================= */
+        /* decorative bleeds (pulsing rings, glow canvases) are contained by the sheet itself, never by
+           html — clipping html would hide fixed descendants */
+        .ds_page {
+            min-height: 100vh;
+            margin-left: var(--ds-nav-width);
+            overflow-x: clip;
+        }
+
+        .ds_nav {
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 99000;
+            display: flex;
+            flex-direction: column;
+            width: var(--ds-nav-width);
+            padding: 26px 14px 14px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            background: var(--c-ds-panel);
+            border-right: 1px solid rgba(255, 255, 255, .09);
+            font-family: var(--font-body);
+            scrollbar-width: none;
+        }
+
+        .ds_nav::-webkit-scrollbar {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        /* --- title: doubles as the Overview link --- */
+        .ds_nav_home {
+            position: relative;
+            flex: 0 0 auto;
+            display: block;
+            margin-bottom: 6px;
+            padding: 0 12px;
+            font-size: 14px;
+            line-height: 1.3;
+            text-decoration: none;
+        }
+
+        .ds_nav_kicker {
+            display: block;
+            font-family: var(--font-caption);
+            font-size: 10.5px;
+            font-weight: var(--fw-bold);
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: var(--c-accent-bright);
+        }
+
+        .ds_nav_title {
+            display: block;
+            margin-top: 5px;
+            font-family: var(--font-heading);
+            font-size: 21px;
+            font-weight: var(--fw-light);
+            letter-spacing: -.02em;
+            color: var(--c-white);
+        }
+
+        /* a vertical accent tick on the panel edge marks the Overview as current */
+        .ds_nav_home_mark {
+            position: absolute;
+            top: 50%;
+            left: -14px;
+            width: 3px;
+            height: 40px;
+            background: var(--c-accent-bright);
+            opacity: 0;
+            transform: translateY(-50%);
+            transition: opacity .25s ease;
+        }
+
+        .ds_nav_home[aria-current="page"] .ds_nav_home_mark {
+            opacity: 1;
+        }
+
+        /* --- filter field --- */
+        .ds_nav_search {
+            position: relative;
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            margin: 18px 12px 10px;
+        }
+
+        .ds_nav_search_icon {
+            position: absolute;
+            left: 11px;
+            width: 13px;
+            height: 13px;
+            color: rgba(255, 255, 255, .4);
+            pointer-events: none;
+        }
+
+        .ds_nav_search_input {
+            width: 100%;
+            padding: 8px 10px 8px 32px;
+            border: 1px solid rgba(255, 255, 255, .12);
+            border-radius: 9px;
+            outline: none;
+            background: rgba(255, 255, 255, .05);
+            color: var(--c-white);
+            font-family: inherit;
+            font-size: 13px;
+        }
+
+        /* --- group header: hit area centred on the label, divider on its top edge --- */
+        .ds_nav_group {
+            position: relative;
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            width: 100%;
+            margin: 33px 0 11px;
+            padding: 0 12px;
+            border: 0;
+            background: none;
+            font-family: inherit;
+            font-size: 10.5px;
+            font-weight: var(--fw-bold);
+            letter-spacing: .16em;
+            text-align: left;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .3);
+            cursor: pointer;
+            transition: color .18s ease;
+        }
+
+        .ds_nav_group:hover {
+            color: rgba(255, 255, 255, .5);
+        }
+
+        .ds_nav_group::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -11px;
+            bottom: -11px;
+            border-radius: 9px;
+        }
+
+        .ds_nav_group:hover::before {
+            background: rgba(255, 255, 255, .05);
+        }
+
+        .ds_nav_group::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -22px;
+            height: 1px;
+            background: linear-gradient(to right, rgba(255, 255, 255, .16), rgba(255, 255, 255, 0));
+        }
+
+        .ds_nav_group--first::after {
+            display: none;
+        }
+
+        .ds_nav_group > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .ds_nav_caret {
+            width: 13px;
+            height: 13px;
+            margin-left: auto;
+            transform: rotate(0deg);
+            transition: transform .25s var(--ease-out-quint);
+        }
+
+        .ds_nav_group[aria-expanded="true"] .ds_nav_caret {
+            transform: rotate(180deg);
+        }
+
+        /* --- links --- */
+        .ds_nav_list {
+            flex: 0 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ds_nav_link {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            padding: 8px 12px;
+            border-radius: 9px;
+            color: rgba(255, 255, 255, .58);
+            font-size: 14px;
+            line-height: 1.3;
+            text-decoration: none;
+            transition: background .18s ease, color .18s ease;
+        }
+
+        .ds_nav_link:hover {
+            background: rgba(255, 255, 255, .07);
+            color: var(--c-white);
+        }
+
+        .ds_nav_link[aria-current="page"] {
+            background: rgba(157, 115, 255, .16);
+            color: var(--c-white);
+            font-weight: var(--fw-semibold);
+        }
+
+        .ds_nav_dot {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 17px;
+            height: 17px;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, .26);
+            font-family: var(--font-caption);
+            font-size: 12px;
+            font-weight: var(--fw-extrabold);
+            letter-spacing: 0;
+            line-height: 1;
+            color: var(--c-dark);
+            transition: background .2s ease;
+        }
+
+        .ds_nav_link:hover .ds_nav_dot {
+            background: rgba(255, 255, 255, .45);
+        }
+
+        .ds_nav_link[aria-current="page"] .ds_nav_dot {
+            background: var(--c-accent-bright);
+            color: var(--c-dark);
+        }
+
+        .ds_nav_out {
+            flex: 0 0 auto;
+            width: 11px;
+            height: 11px;
+            margin-left: auto;
+            opacity: .4;
+            transition: opacity .18s ease;
+        }
+
+        .ds_nav_link:hover .ds_nav_out {
+            opacity: .9;
+        }
+
+        /* --- pinned footer link: rows pass under it through a fade --- */
+        .ds_nav_tail {
+            flex: 0 0 auto;
+            height: 34px;
+        }
+
+        .ds_nav_fade {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            z-index: 1;
+            width: var(--ds-nav-width);
+            height: 104px;
+            pointer-events: none;
+        }
+
+        .ds_nav_fade::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(18, 16, 26, 0), #12101a 46%);
+        }
+
+        .ds_nav_all {
+            position: sticky;
+            bottom: 0;
+            z-index: 2;
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: auto;
+            padding: 8px 12px;
+            border-radius: 9px;
+            background: rgba(255, 255, 255, .05);
+            color: rgba(255, 255, 255, .72);
+            font-size: 14px;
+            font-weight: var(--fw-semibold);
+            line-height: 1.3;
+            text-decoration: none;
+            transition: background .18s ease, color .18s ease;
+        }
+
+        .ds_nav_all:hover {
+            background: rgba(255, 255, 255, .1);
+            color: var(--c-white);
+        }
+
+        /* =========================================================
+           LAYOUT — design-system sheet
+           Every sheet opens on the same dark hero (deep violet ramp with a lavender
+           glow top-right), then runs numbered sections on a 1120px measure.
+        ========================================================= */
+        .ds_hero {
+            position: relative;
+            overflow: hidden;
+            padding: 100px var(--ds-sheet-pad) 80px;
+            background: var(--grad-hero-deep);
+            color: var(--c-white);
+        }
+
+        .ds_hero_glow {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(55% 55% at 82% 20%, rgba(157, 115, 255, .3), transparent 70%);
+            pointer-events: none;
+        }
+
+        .ds_hero_inner {
+            position: relative;
+            z-index: 2;
+            max-width: var(--ds-sheet-max);
+            margin: 0 auto;
+        }
+
+        .ds_hero_eyebrow {
+            margin-bottom: 22px;
+            color: var(--c-accent-bright);
+        }
+
+        .ds_hero_title {
+            max-width: 18ch;
+            margin: 0;
+        }
+
+        .ds_hero_lede {
+            max-width: 60ch;
+            margin: 26px 0 0;
+            color: rgba(255, 255, 255, .64);
+        }
+
+        .ds_hero code {
+            color: #c9b3ff;
+        }
+
+        .ds_section {
+            padding: 70px var(--ds-sheet-pad) 40px;
+            background: var(--c-white);
+        }
+
+        /* light sections fade in from the page tone, the last one fades back out */
+        .ds_section--fade-in {
+            background: linear-gradient(180deg, #eaeaf2, #fff 40%);
+        }
+
+        .ds_section--fade-out {
+            background: linear-gradient(180deg, #fff, #eaeaf2);
+        }
+
+        .ds_section_inner {
+            max-width: var(--ds-sheet-max);
+            margin: 0 auto;
+        }
+
+        .ds_section_eyebrow {
+            margin-bottom: 14px;
+            color: var(--c-accent);
+        }
+
+        .ds_section_title {
+            margin: 0 0 40px;
+        }
+
+        .ds_section_lede {
+            max-width: 60ch;
+            margin: 0 0 30px;
+            color: #5a5766;
+        }
+
+        /* the white rule card used for "how to apply it" blocks */
+        .ds_rule_grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .ds_rule_card {
+            padding: 30px;
+            border: 1px solid #ece7f4;
+            border-radius: 18px;
+            background: var(--c-white);
+        }
+
+        .ds_rule_card_title {
+            margin: 0 0 12px;
+        }
+
+        .ds_rule_card_text {
+            margin: 0;
+            color: #5a5766;
+        }
+
+        /* =========================================================
+           BUTTONS
+           One component behind every call to action (Button.dc.html).
+           Variants: primary · white · secondary · outline · ghost · soft · plain · link
+           Mode:     light (default) · button--on-dark
+           Sizes:    xs 36 · sm 44 · md 52 (default) · lg 60 · xl 68 — one height
+                     scale shared by text pills and icon-only discs (button--icon)
+           The label is doubled: on hover the visible copy slides up and the copy
+           underneath rides in, so the text never re-flows mid-hover.
+        ========================================================= */
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            height: 52px;
+            padding: 0 26px;
+            border: 2px solid transparent;
+            border-radius: var(--r-pill);
+            font-family: var(--font-body);
+            font-size: 15px;
+            font-weight: var(--fw-semibold);
+            letter-spacing: .02em;
+            line-height: 1;
+            white-space: nowrap;
+            text-decoration: none;
+            cursor: pointer;
+            transition:
+                background .25s ease,
+                color .25s ease,
+                border-color .25s ease,
+                filter .2s ease;
+        }
+
+        /* --- sizes --- */
+        .button--xs {
+            height: 36px;
+            padding: 0 14px;
+            gap: 7px;
+            font-size: 12px;
+        }
+
+        .button--sm {
+            height: 44px;
+            padding: 0 18px;
+            gap: 8px;
+            font-size: 13px;
+        }
+
+        .button--lg {
+            height: 60px;
+            padding: 0 32px;
+            gap: 10px;
+            font-size: 16px;
+        }
+
+        .button--xl {
+            height: 68px;
+            padding: 0 40px;
+            gap: 11px;
+            font-size: 18px;
+        }
+
+        /* icon-only: the same height scale, drawn as a disc */
+        .button--icon {
+            flex: 0 0 auto;
+            width: 52px;
+            padding: 0;
+            gap: 0;
+            border-radius: var(--r-circle);
+        }
+
+        .button--icon.button--xs { width: 36px; }
+        .button--icon.button--sm { width: 44px; }
+        .button--icon.button--lg { width: 60px; }
+        .button--icon.button--xl { width: 68px; }
+
+        /* --- icon + label --- */
+        .button_icon {
+            flex: 0 0 auto;
+            align-self: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 0;
+        }
+
+        /* optical gap for icons whose ink fills their 24-unit box (circle-plus, star, mail…) */
+        .button_icon--balance-start {
+            margin-right: .096em;
+        }
+
+        .button_icon--balance-end {
+            margin-left: .096em;
+        }
+
+        .button svg {
+            display: block;
+            width: 1.15em;
+            height: 1.15em;
+            overflow: visible;
+        }
+
+        /* the swap mask clips to its line box, so the line-height must clear the font's ink */
+        .button_label {
+            display: block;
+            overflow: hidden;
+            line-height: 1.35;
+        }
+
+        .button_label_inner {
+            position: relative;
+            display: block;
+            transition: transform .4s var(--ease-out-quint);
+        }
+
+        .button_label_inner > span {
+            display: block;
+        }
+
+        .button_label_inner > span[aria-hidden] {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            white-space: nowrap;
+        }
+
+        .button:hover .button_label_inner {
+            transform: translateY(-100%);
+        }
+
+        /* --- primary: gradient pill, a highlight travelling round the rim, a bloom on hover --- */
+        .button--primary {
+            position: relative;
+            background: var(--grad-primary);
+            background-origin: border-box;
+            border-color: transparent;
+            color: var(--c-white);
+        }
+
+        .button--primary::before {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            padding: 2px;
+            border-radius: inherit;
+            background: conic-gradient(from var(--button-angle), transparent 0%, #ffffff 8%, transparent 18%, transparent 100%);
+            -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+            animation: button_shine 4.8s linear infinite;
+        }
+
+        .button--primary::after {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            border-radius: inherit;
+            background: radial-gradient(75% 90% at 50% 118%, rgba(255, 255, 255, .5) 0%, rgba(255, 255, 255, .18) 40%, rgba(255, 255, 255, 0) 72%);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .3s ease;
+        }
+
+        .button--primary:hover::after {
+            opacity: 1;
+        }
+
+        /* --- white (on dark cards) --- */
+        .button--white {
+            background: var(--c-white);
+            border-color: var(--c-white);
+            color: var(--c-accent);
+        }
+
+        .button--white:hover {
+            background: #efe8fb;
+        }
+
+        /* --- secondary --- */
+        .button--secondary {
+            background: transparent;
+            border-color: rgba(123, 82, 199, .55);
+            color: var(--c-accent);
+        }
+
+        .button--secondary:hover {
+            background: var(--c-accent);
+            border-color: var(--c-accent);
+            color: var(--c-white);
+        }
+
+        .button--secondary.button--on-dark {
+            border-color: rgba(183, 155, 255, .5);
+            color: var(--c-lav);
+        }
+
+        .button--secondary.button--on-dark:hover {
+            background: var(--c-lav);
+            border-color: var(--c-lav);
+            color: var(--c-ink);
+        }
+
+        /* --- outline --- */
+        .button--outline {
+            background: transparent;
+            border-color: rgba(21, 19, 28, .15);
+            color: var(--c-ink);
+        }
+
+        .button--outline:hover {
+            background: var(--c-ink);
+            border-color: var(--c-ink);
+            color: var(--c-white);
+        }
+
+        .button--outline.button--on-dark {
+            border-color: rgba(255, 255, 255, .3);
+            color: var(--c-white);
+        }
+
+        .button--outline.button--on-dark:hover {
+            background: var(--c-white);
+            border-color: var(--c-white);
+            color: var(--c-ink);
+        }
+
+        /* --- ghost --- */
+        .button--ghost {
+            background: transparent;
+            border-color: transparent;
+            color: var(--c-accent);
+        }
+
+        .button--ghost:hover {
+            background: rgba(123, 82, 199, .1);
+        }
+
+        .button--ghost.button--on-dark {
+            color: var(--c-lav);
+        }
+
+        .button--ghost.button--on-dark:hover {
+            background: rgba(183, 155, 255, .14);
+        }
+
+        /* --- soft --- */
+        .button--soft {
+            background: rgba(123, 82, 199, .12);
+            border-color: transparent;
+            color: var(--c-accent);
+        }
+
+        .button--soft:hover {
+            background: rgba(123, 82, 199, .2);
+        }
+
+        .button--soft.button--on-dark {
+            background: rgba(183, 155, 255, .16);
+            color: #cdb6ff;
+        }
+
+        .button--soft.button--on-dark:hover {
+            background: rgba(183, 155, 255, .26);
+        }
+
+        /* --- plain --- */
+        .button--plain {
+            background: transparent;
+            border-color: transparent;
+            color: var(--c-ink);
+        }
+
+        .button--plain:hover {
+            background: rgba(21, 19, 28, .06);
+        }
+
+        .button--plain.button--on-dark {
+            color: var(--c-white);
+        }
+
+        .button--plain.button--on-dark:hover {
+            background: rgba(255, 255, 255, .1);
+        }
+
+        /* --- link: no box at all, so it can sit in a row of copy --- */
+        .button--link {
+            justify-content: flex-start;
+            height: auto;
+            padding: 0;
+            border: 0;
+            background: transparent;
+            color: var(--c-accent);
+        }
+
+        .button--link:hover {
+            opacity: .72;
+        }
+
+        .button--link.button--on-dark {
+            color: var(--c-lav);
+        }
+
+        /* --- adaptive ink: the script samples the ground behind the button --- */
+        .button[data-adaptive]:hover {
+            background: rgba(150, 150, 150, .14);
+        }
+
+        /* =========================================================
+           COMPONENTS — icon library sheet
+        ========================================================= */
+        .icon_hero {
+            padding: 80px var(--ds-sheet-pad) 66px;
+        }
+
+        .icon_hero_eyebrow {
+            margin-bottom: 20px;
+        }
+
+        .icon_hero_title {
+            margin: 0;
+        }
+
+        .icon_hero_lede {
+            max-width: 62ch;
+            margin-top: 22px;
+        }
+
+        .icon_hero_lede strong {
+            font-weight: var(--fw-semibold);
+            color: var(--c-white);
+        }
+
+        /* inline code on this sheet is the violet chip; on the hero it turns translucent */
+        .icon_page code {
+            padding: 2px 6px;
+            border-radius: 5px;
+            background: #f2eefb;
+            color: var(--c-accent);
+            font-size: 12.5px;
+        }
+
+        .icon_page .ds_hero code {
+            background: rgba(157, 115, 255, .18);
+            color: #c9b3ff;
+        }
+
+        .icon_page .icon_lede--marks code {
+            font-size: .85em;
+        }
+
+        /* --- the four rules --- */
+        .icon_rules_section {
+            padding: 60px var(--ds-sheet-pad) 20px;
+            background: linear-gradient(180deg, #eaeaf2, #fff 60%);
+        }
+
+        .icon_rules {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            max-width: var(--ds-sheet-max);
+            margin: 0 auto;
+        }
+
+        .icon_rule {
+            padding: 22px;
+            border: 1px solid #ece7f4;
+            border-radius: 16px;
+            background: var(--c-white);
+        }
+
+        .icon_rule_title {
+            margin-bottom: 10px;
+            color: var(--c-accent);
+        }
+
+        .icon_rule_text {
+            margin: 0;
+            color: #5a5766;
+        }
+
+        /* --- sections --- */
+        .icon_section {
+            padding: 60px var(--ds-sheet-pad) 20px;
+        }
+
+        .icon_section--set {
+            padding-bottom: 40px;
+        }
+
+        .icon_section--marks {
+            padding: 0 var(--ds-sheet-pad) 130px;
+        }
+
+        .icon_title {
+            margin: 0 0 18px;
+        }
+
+        .icon_title--set {
+            margin-bottom: 10px;
+        }
+
+        .icon_lede {
+            max-width: 64ch;
+            margin: 0 0 34px;
+            color: #5a5766;
+        }
+
+        .icon_lede--wide {
+            max-width: 70ch;
+            margin-bottom: 26px;
+        }
+
+        .icon_lede--marks {
+            margin-bottom: 24px;
+        }
+
+        /* --- icons in buttons --- */
+        .icon_usage {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .icon_usage_code {
+            margin: 0;
+            padding: 20px 22px;
+            overflow-x: auto;
+            border-radius: 14px;
+            background: var(--c-ds-panel);
+            color: #e8e3f5;
+            font-family: var(--font-mono);
+            font-size: 13px;
+            line-height: 1.65;
+        }
+
+        .icon_usage_code .code_keyword { color: #9d73ff; }
+        .icon_usage_code .code_string { color: #8fd6a0; }
+        .icon_usage_code .code_comment { color: #6b6580; }
+
+        .icon_usage_demo {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            padding: 26px;
+            border: 1px solid #ece7f4;
+            border-radius: 16px;
+            background: #f7f5fb;
+        }
+
+        .icon_usage_row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .icon_usage_note {
+            margin: 6px 0 0;
+            color: #8a8697;
+        }
+
+        /* --- the set --- */
+        .icon_group {
+            margin-bottom: 40px;
+        }
+
+        .icon_group_title {
+            margin-bottom: 16px;
+            color: #9a95a6;
+        }
+
+        .icon_grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
+            gap: 12px;
+        }
+
+        .icon_cell {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            padding: 20px 12px 14px;
+            border: 1px solid #ece7f4;
+            border-radius: 14px;
+            background: var(--c-white);
+            font-family: inherit;
+            cursor: pointer;
+            transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+        }
+
+        .icon_cell:hover {
+            border-color: #d7c9f2;
+            box-shadow: 0 14px 30px rgba(24, 10, 43, .1);
+            transform: translateY(-2px);
+        }
+
+        .icon_cell_glyph {
+            width: 26px;
+            height: 26px;
+            color: var(--c-ink);
+        }
+
+        .icon_cell_name {
+            font-size: 11.5px;
+            line-height: 1.3;
+            text-align: center;
+            word-break: break-word;
+            color: #8a8697;
+        }
+
+        .icon_cell[data-copied="true"] .icon_cell_name {
+            font-weight: var(--fw-bold);
+            color: var(--c-accent);
+        }
+
+        .icon_cell--dark {
+            border-color: rgba(255, 255, 255, .1);
+            background: #14101c;
+        }
+
+        /* the dark marks keep their hairline on hover (only the lift and shadow apply) */
+        .icon_cell--dark:hover {
+            border-color: rgba(255, 255, 255, .1);
+        }
+
+        .icon_cell--dark .icon_cell_name {
+            color: rgba(255, 255, 255, .6);
+        }
+
+        .icon_cell_mark {
+            width: 34px;
+            height: 34px;
+        }
+
+        /* =========================================================
+           ANIMATIONS
+        ========================================================= */
+        @property --button-angle {
+            syntax: '<angle>';
+            inherits: false;
+            initial-value: 0deg;
+        }
+
+        @keyframes button_shine {
+            to {
+                --button-angle: 360deg;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .button--primary::before {
+                animation: none;
+            }
+        }
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+        @media (max-width: 900px) {
+            .ds_nav {
+                display: none;
+            }
+
+            .ds_page {
+                margin-left: 0;
+            }
+        }
+
+        @media print {
+            .ds_nav {
+                display: none;
+            }
+        }
+
+        @media (max-width: 1100px) {
+            .icon_rules {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .icon_usage {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 620px) {
+            .icon_rules {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a class="visually_hidden" href="#main">Skip to content</a>
+
+    <nav class="ds_nav" aria-label="Design system" data-ds-nav>
+        <a class="ds_nav_home" href="index.html">
+            <span class="ds_nav_kicker">Hybrid Interaction</span>
+            <span class="ds_nav_title">Design System</span>
+            <span class="ds_nav_home_mark" aria-hidden="true"></span>
+        </a>
+
+        <div class="ds_nav_search">
+            <svg class="ds_nav_search_icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="m16.5 16.5 4 4"></path></svg>
+            <label class="visually_hidden" for="ds-nav-filter">Filter pages</label>
+            <input class="ds_nav_search_input" id="ds-nav-filter" type="search" autocomplete="off" placeholder="Filter…" data-ds-nav-filter>
+        </div>
+
+        <button class="ds_nav_group ds_nav_group--first" type="button" aria-expanded="true" aria-controls="ds-nav-foundations" data-ds-nav-group>
+            <span>Foundations</span>
+            <svg class="ds_nav_caret" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9 12 15 18 9"></path></svg>
+        </button>
+        <div class="ds_nav_list" id="ds-nav-foundations">
+            <a class="ds_nav_link" href="typography.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">F</span>
+                <span>Typography</span>
+            </a>
+            <a class="ds_nav_link" href="colour.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">F</span>
+                <span>Colour</span>
+            </a>
+            <a class="ds_nav_link" href="motion.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">F</span>
+                <span>Motion</span>
+            </a>
+            <a class="ds_nav_link" href="icon-library.html" aria-current="page" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">F</span>
+                <span>Icon Library</span>
+            </a>
+            <a class="ds_nav_link" href="3d-icons.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">F</span>
+                <span>3D Icons</span>
+            </a>
+            <a class="ds_nav_link" href="3d-icon-lab.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">F</span>
+                <span>3D Icon Lab</span>
+            </a>
+            <a class="ds_nav_link" href="ui-illustrations-lab.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">F</span>
+                <span>UI Illustrations Lab</span>
+            </a>
+            <a class="ds_nav_link" href="image-guide.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">F</span>
+                <span>Image Guide</span>
+            </a>
+        </div>
+
+        <button class="ds_nav_group" type="button" aria-expanded="true" aria-controls="ds-nav-atoms" data-ds-nav-group>
+            <span>Atoms</span>
+            <svg class="ds_nav_caret" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9 12 15 18 9"></path></svg>
+        </button>
+        <div class="ds_nav_list" id="ds-nav-atoms">
+            <a class="ds_nav_link" href="button-library.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">A</span>
+                <span>Button Library</span>
+            </a>
+            <a class="ds_nav_link" href="tabs.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">A</span>
+                <span>Tabs</span>
+            </a>
+            <a class="ds_nav_link" href="icon-tile.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">A</span>
+                <span>Icon Tile</span>
+            </a>
+            <a class="ds_nav_link" href="pointer-tilt.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">A</span>
+                <span>Pointer Tilt</span>
+            </a>
+            <a class="ds_nav_link" href="figure.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">M</span>
+                <span>Figure</span>
+            </a>
+        </div>
+
+        <button class="ds_nav_group" type="button" aria-expanded="true" aria-controls="ds-nav-molecules" data-ds-nav-group>
+            <span>Molecules</span>
+            <svg class="ds_nav_caret" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9 12 15 18 9"></path></svg>
+        </button>
+        <div class="ds_nav_list" id="ds-nav-molecules">
+            <a class="ds_nav_link" href="article-blocks.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">M</span>
+                <span>Article blocks</span>
+            </a>
+            <a class="ds_nav_link" href="cards.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">M</span>
+                <span>Cards</span>
+            </a>
+            <a class="ds_nav_link" href="case-card.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">M</span>
+                <span>Case Card</span>
+            </a>
+            <a class="ds_nav_link" href="stat-row.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">M</span>
+                <span>Stat Row</span>
+            </a>
+            <a class="ds_nav_link" href="logo-sphere.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">M</span>
+                <span>Logo Sphere</span>
+            </a>
+            <a class="ds_nav_link" href="menu-panel-lab.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">M</span>
+                <span>Menu Panel</span>
+            </a>
+        </div>
+
+        <button class="ds_nav_group" type="button" aria-expanded="false" aria-controls="ds-nav-sections" data-ds-nav-group>
+            <span>Sections</span>
+            <svg class="ds_nav_caret" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9 12 15 18 9"></path></svg>
+        </button>
+        <div class="ds_nav_list" id="ds-nav-sections" hidden>
+            <a class="ds_nav_link" href="site-header.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">S</span>
+                <span>Site Header</span>
+                <svg class="ds_nav_out" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7 H17 V16"></path></svg>
+            </a>
+            <a class="ds_nav_link" href="site-footer.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">S</span>
+                <span>Site Footer</span>
+                <svg class="ds_nav_out" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7 H17 V16"></path></svg>
+            </a>
+        </div>
+
+        <button class="ds_nav_group" type="button" aria-expanded="false" aria-controls="ds-nav-files" data-ds-nav-group>
+            <span>Component files</span>
+            <svg class="ds_nav_caret" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9 12 15 18 9"></path></svg>
+        </button>
+        <div class="ds_nav_list" id="ds-nav-files" hidden>
+            <a class="ds_nav_link" href="component-caption.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">C</span>
+                <span>Caption / Eyebrow</span>
+                <svg class="ds_nav_out" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7 H17 V16"></path></svg>
+            </a>
+            <a class="ds_nav_link" href="component-button.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">C</span>
+                <span>Button</span>
+                <svg class="ds_nav_out" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7 H17 V16"></path></svg>
+            </a>
+            <a class="ds_nav_link" href="component-accent-line.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">C</span>
+                <span>Accent Line</span>
+                <svg class="ds_nav_out" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7 H17 V16"></path></svg>
+            </a>
+            <a class="ds_nav_link" href="component-menu-row.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">C</span>
+                <span>Menu Row</span>
+                <svg class="ds_nav_out" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7 H17 V16"></path></svg>
+            </a>
+            <a class="ds_nav_link" href="component-menu-panel.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">C</span>
+                <span>Menu Panel</span>
+                <svg class="ds_nav_out" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7 H17 V16"></path></svg>
+            </a>
+            <a class="ds_nav_link" href="component-numbered-row.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">C</span>
+                <span>Numbered Row</span>
+                <svg class="ds_nav_out" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7 H17 V16"></path></svg>
+            </a>
+            <a class="ds_nav_link" href="component-news-card.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">C</span>
+                <span>News Card</span>
+                <svg class="ds_nav_out" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7 H17 V16"></path></svg>
+            </a>
+            <a class="ds_nav_link" href="component-filter-tabs.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">C</span>
+                <span>Filter Tabs</span>
+                <svg class="ds_nav_out" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7 H17 V16"></path></svg>
+            </a>
+        </div>
+
+        <div class="ds_nav_tail" aria-hidden="true"></div>
+        <div class="ds_nav_fade" aria-hidden="true"></div>
+        <a class="ds_nav_all" href="site-navigation.html">← All Site Pages</a>
+    </nav>
+
+    <main class="ds_page icon_page" id="main">
+
+        <!-- ========================= HERO ========================= -->
+        <section class="ds_hero icon_hero" aria-labelledby="page-title">
+            <div class="ds_hero_glow" aria-hidden="true"></div>
+            <div class="ds_hero_inner">
+                <p class="ds_hero_eyebrow icon_hero_eyebrow eyebrow">Design System · Icons</p>
+                <h1 class="icon_hero_title text_display" id="page-title">Icon Library</h1>
+                <p class="ds_hero_lede icon_hero_lede text_body_lg">One set across the whole site: <strong>Lucide</strong>, 24px grid, 2px round strokes, <code>currentColor</code>. Click any icon to copy its SVG.</p>
+            </div>
+        </section>
+
+        <!-- ========================= RULES ========================= -->
+        <section class="icon_rules_section" aria-label="Icon rules">
+            <div class="icon_rules">
+                    <article class="icon_rule">
+                        <h2 class="icon_rule_title eyebrow">Grid</h2>
+                        <p class="icon_rule_text text_body_sm">All icons live on a <code>0 0 24 24</code> viewBox. Never redraw at another size.</p>
+                    </article>
+                    <article class="icon_rule">
+                        <h2 class="icon_rule_title eyebrow">Stroke</h2>
+                        <p class="icon_rule_text text_body_sm"><code>stroke-width: 2</code>, round caps &amp; joins, <code>fill: none</code>.</p>
+                    </article>
+                    <article class="icon_rule">
+                        <h2 class="icon_rule_title eyebrow">Colour</h2>
+                        <p class="icon_rule_text text_body_sm">Always <code>currentColor</code>, the icon inherits its parent's text colour.</p>
+                    </article>
+                    <article class="icon_rule">
+                        <h2 class="icon_rule_title eyebrow">Exception</h2>
+                        <p class="icon_rule_text text_body_sm">Social brand marks are <strong>filled</strong> glyphs, not strokes, brand recognition wins.</p>
+                    </article>
+            </div>
+        </section>
+
+        <!-- ========================= ICONS IN BUTTONS ========================= -->
+        <section class="ds_section icon_section" aria-labelledby="buttons-title">
+            <div class="ds_section_inner">
+                <p class="ds_section_eyebrow eyebrow">How icons go into buttons</p>
+                <h2 class="icon_title icon_title--buttons text_h2" id="buttons-title">Three slots on the Button</h2>
+                <p class="icon_lede icon_lede--wide text_body_md">Pass the raw SVG string into <code>iconLeft</code> or <code>iconRight</code>. The Button normalizes it to Lucide defaults automatically (strips hard-coded sizes, forces 2px round strokes) and centers it against the label, so you can paste an icon straight from lucide.dev.</p>
+
+                <div class="icon_usage">
+                    <pre class="icon_usage_code"><span class="code_comment">&lt;!-- icon on the left --&gt;</span>
+&lt;<span class="code_keyword">dc-import</span> name&#61;<span class="code_string">"Button"</span> label&#61;<span class="code_string">"Icon left"</span>
+  iconLeft&#61;<span class="code_string">"&lt;svg viewBox&#61;'0 0 24 24' …&gt;…&lt;/svg&gt;"</span>&gt;&lt;/dc-import&gt;
+
+<span class="code_comment">&lt;!-- icon on the right --&gt;</span>
+&lt;<span class="code_keyword">dc-import</span> name&#61;<span class="code_string">"Button"</span> label&#61;<span class="code_string">"Icon right"</span>
+  iconRight&#61;<span class="code_string">"&lt;svg …&gt;…&lt;/svg&gt;"</span>&gt;&lt;/dc-import&gt;
+
+<span class="code_comment">&lt;!-- built-in arrow shortcut --&gt;</span>
+&lt;<span class="code_keyword">dc-import</span> name&#61;<span class="code_string">"Button"</span> label&#61;<span class="code_string">"Read more"</span>
+  arrow&#61;<span class="code_string">"{{ true }}"</span>&gt;&lt;/dc-import&gt;
+
+<span class="code_comment">&lt;!-- round icon-only button --&gt;</span>
+&lt;<span class="code_keyword">dc-import</span> name&#61;<span class="code_string">"Button"</span> iconOnly&#61;<span class="code_string">"{{ true }}"</span>
+  iconLeft&#61;<span class="code_string">"&lt;svg …&gt;…&lt;/svg&gt;"</span>&gt;&lt;/dc-import&gt;</pre>
+                    <div class="icon_usage_demo">
+                        <div class="icon_usage_row">
+                            <a class="button button--primary" href="#">
+                                <span class="button_icon button_icon--balance-start" aria-hidden="true"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path><path d="M12 8v8"></path></svg></span>
+                                <span class="button_label"><span class="button_label_inner"><span>Icon left</span><span aria-hidden="true">Icon left</span></span></span>
+                            </a>
+                            <a class="button button--secondary" href="#">
+                                <span class="button_label"><span class="button_label_inner"><span>Icon right</span><span aria-hidden="true">Icon right</span></span></span>
+                                <span class="button_icon" aria-hidden="true"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+                            </a>
+                        </div>
+                        <div class="icon_usage_row">
+                            <a class="button button--soft" href="#">
+                                <span class="button_icon button_icon--balance-start" aria-hidden="true"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.638-2.438a2.123 2.123 0 0 0-1.973 0L6.365 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.13 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.596-1.16z"></path></svg></span>
+                                <span class="button_label"><span class="button_label_inner"><span>Both</span><span aria-hidden="true">Both</span></span></span>
+                                <span class="button_icon" aria-hidden="true"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+                            </a>
+                            <a class="button button--primary button--icon" href="#" aria-label="Next">
+                                <span class="button_icon" aria-hidden="true"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+                            </a>
+                            <a class="button button--secondary button--icon" href="#" aria-label="Email">
+                                <span class="button_icon" aria-hidden="true"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.018 0L2 7"></path><rect x="2" y="4" rx="2"></rect></svg></span>
+                            </a>
+                        </div>
+                        <p class="icon_usage_note text_body_sm">Icons scale with the button's font-size (1.15em), so every size stays proportional.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================= THE SET ========================= -->
+        <section class="ds_section icon_section icon_section--set" aria-labelledby="set-title">
+            <div class="ds_section_inner">
+                <p class="ds_section_eyebrow eyebrow">The set in use</p>
+                <h2 class="icon_title icon_title--set text_h2" id="set-title">Icons Used Across the Site</h2>
+                <p class="icon_lede text_body_md">Every icon currently shipping on the site. Need one that isn't here? Take it from <a href="https://lucide.dev/icons" target="_blank" rel="noopener">lucide.dev</a> and add it below.</p>
+                <div class="icon_group">
+                    <h3 class="icon_group_title eyebrow">Navigation &amp; Direction</h3>
+                    <div class="icon_grid">
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                            <span class="icon_cell_name">arrow-right</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"></path><path d="m12 19-7-7 7-7"></path></svg>
+                            <span class="icon_cell_name">arrow-left</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
+                            <span class="icon_cell_name">chevron-left</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+                            <span class="icon_cell_name">chevron-down</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                            <span class="icon_cell_name">chevron-right</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+                            <span class="icon_cell_name">external-link</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                            <span class="icon_cell_name">link</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16"></path><path d="M4 6h16"></path><path d="M4 18h16"></path></svg>
+                            <span class="icon_cell_name">menu</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+                            <span class="icon_cell_name">x</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="icon_group">
+                    <h3 class="icon_group_title eyebrow">Status &amp; Actions</h3>
+                    <div class="icon_grid">
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+                            <span class="icon_cell_name">check</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>
+                            <span class="icon_cell_name">circle-plus</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+                            <span class="icon_cell_name">plus</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path></svg>
+                            <span class="icon_cell_name">minus</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.638-2.438a2.123 2.123 0 0 0-1.973 0L6.365 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.13 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.596-1.16z"></path></svg>
+                            <span class="icon_cell_name">star</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h1a1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h1a1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg>
+                            <span class="icon_cell_name">quote</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="icon_group">
+                    <h3 class="icon_group_title eyebrow">Value &amp; Segments</h3>
+                    <div class="icon_grid">
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                            <span class="icon_cell_name">user</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path><path d="M8 16H3v5"></path></svg>
+                            <span class="icon_cell_name">refresh-cw</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                            <span class="icon_cell_name">shield-check</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" rx="1"></rect><path d="M12 8v13"></path><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"></path></svg>
+                            <span class="icon_cell_name">gift</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path><path d="M7 6h1v4"></path><path d="m16.71 13.88.7.71-2.82 2.82"></path></svg>
+                            <span class="icon_cell_name">coins</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"></path><path d="M5 21h14"></path></svg>
+                            <span class="icon_cell_name">crown</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="icon_group">
+                    <h3 class="icon_group_title eyebrow">Migration &amp; Records</h3>
+                    <div class="icon_grid">
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" rx="1"></rect><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"></path><path d="M10 12h4"></path></svg>
+                            <span class="icon_cell_name">archive</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="icon_group">
+                    <h3 class="icon_group_title eyebrow">Communication Channels</h3>
+                    <div class="icon_grid">
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path></svg>
+                            <span class="icon_cell_name">at-sign</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.268 21a2 2 0 0 0 3.464 0"></path><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"></path></svg>
+                            <span class="icon_cell_name">bell</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                            <span class="icon_cell_name">globe</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+                            <span class="icon_cell_name">message-circle</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg>
+                            <span class="icon_cell_name">smartphone</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+                            <span class="icon_cell_name">info</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Z M12 6.4a1.45 1.45 0 1 0 0 2.9 1.45 1.45 0 0 0 0-2.9Z M10.85 10.9h2.3v6.7h-2.3Z"></path></svg>
+                            <span class="icon_cell_name">info-solid</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="icon_group">
+                    <h3 class="icon_group_title eyebrow">Contact &amp; Events</h3>
+                    <div class="icon_grid">
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.018 0L2 7"></path><rect x="2" y="4" rx="2"></rect></svg>
+                            <span class="icon_cell_name">mail</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16a2 2 0 0 1 1.94 1.5l-8.83 5.62a2 2 0 0 1-2.22 0L2.06 5.5A2 2 0 0 1 4 4Z"></path><path d="M22 7.9V18a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7.9l8.06 5.13a3.5 3.5 0 0 0 3.88 0z"></path></svg>
+                            <span class="icon_cell_name">mail-solid</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+                            <span class="icon_cell_name">calendar</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <span class="icon_cell_name">map-pin</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path><path d="M10 6h4"></path><path d="M10 10h4"></path><path d="M10 14h4"></path></svg>
+                            <span class="icon_cell_name">building-2</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg>
+                            <span class="icon_cell_name">send</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="icon_group">
+                    <h3 class="icon_group_title eyebrow">Social, filled (exception to the stroke rule) — files: ch-linkedin.svg, ch-telegram.svg</h3>
+                    <div class="icon_grid">
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M17.53 3h3.02l-6.6 7.54L21.8 21h-5.68l-4.45-5.82L6.56 21H3.53l6.86-7.84L2.9 3h5.82l4.16 5.5L17.53 3zm-1.06 16.2h1.67L7.6 4.72H5.81L16.47 19.2z"></path></svg>
+                            <span class="icon_cell_name">x-twitter</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><g transform="translate(2.25 2.25) scale(.2095)"><path d="m11.185.08c-6.181 0-11.184 5.012-11.185 11.179 0 6.173 5.003 11.184 11.186 11.184 6.166 0 11.176-5.011 11.176-11.184 0-6.168-5.011-11.179-11.177-11.179z"></path><path d="m1.538 30.926h19.287v62.054h-19.287z"></path><path d="m69.925 29.383c-9.382 0-15.673 5.144-18.248 10.022h-.258v-8.479h-18.498-.001v62.053h19.27v-30.698c0-8.093 1.541-15.932 11.575-15.932 9.89 0 10.022 9.256 10.022 16.451v30.178h19.273v-34.036c0-16.707-3.605-29.559-23.135-29.559z"></path></g></svg>
+                            <span class="icon_cell_name">linkedin</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"></path></svg>
+                            <span class="icon_cell_name">telegram</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M15 8h3V4h-3c-2.76 0-5 2.24-5 5v2H7v4h3v9h4v-9h3l1-4h-4V9c0-.55.45-1 1-1z"></path></svg>
+                            <span class="icon_cell_name">facebook</span>
+                        </button>
+                        <button class="icon_cell" type="button" title="Click to copy SVG" data-copy-icon>
+                            <svg class="icon_cell_glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c2.72 0 3.06.01 4.12.06 1.07.05 1.8.22 2.43.47.66.25 1.22.6 1.77 1.15.55.55.9 1.11 1.15 1.77.25.64.42 1.36.47 2.43C21.99 8.94 22 9.28 22 12s-.01 3.06-.06 4.12c-.05 1.07-.22 1.8-.47 2.43-.25.66-.6 1.22-1.15 1.77-.55.55-1.11.9-1.77 1.15-.64.25-1.36.42-2.43.47-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.07-.05-1.8-.22-2.43-.47a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.25-.64-.42-1.36-.47-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.07.22-1.8.47-2.43.25-.66.6-1.22 1.15-1.77.55-.55 1.11-.9 1.77-1.15.64-.25 1.36-.42 2.43-.47C8.94 2.01 9.28 2 12 2zm0 1.8c-2.67 0-2.99.01-4.04.06-.98.04-1.5.2-1.86.34-.47.18-.8.4-1.15.75-.35.35-.57.68-.75 1.15-.14.36-.3.88-.34 1.86-.05 1.05-.06 1.37-.06 4.04s.01 2.99.06 4.04c.4.98.2 1.5.34 1.86.18.47.4.8.75 1.15.35.35.68.57 1.15.75.36.14.88.3 1.86.34 1.05.05 1.37.06 4.04.06s2.99-.01 4.04-.06c.98-.04 1.5-.2 1.86-.34.47-.18.8-.4 1.15-.75.35-.35.57-.68.75-1.15.14-.36.3-.88.34-1.86.05-1.05.06-1.37.06-4.04s-.01-2.99-.06-4.04c-.04-.98-.2-1.5-.34-1.86a3.1 3.1 0 0 0-.75-1.15 3.1 3.1 0 0 0-1.15-.75c-.36-.14-.88-.3-1.86-.34-1.05-.05-1.37-.06-4.04-.06zm0 3.06a5.14 5.14 0 1 1 0 10.28 5.14 5.14 0 0 1 0-10.28zm0 8.48a3.34 3.34 0 1 0 0-6.68 3.34 3.34 0 0 0 0 6.68zm6.54-8.68a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"></path></svg>
+                            <span class="icon_cell_name">instagram</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================= GRADIENT MARKS ========================= -->
+        <section class="ds_section icon_section icon_section--marks" aria-labelledby="marks-title">
+            <div class="ds_section_inner">
+                <h2 class="icon_group_title eyebrow" id="marks-title">Gradient marks — menu, service and card tiles</h2>
+                <p class="icon_lede icon_lede--marks text_body_md">Chrome-and-violet marks on a 64 grid, used in the menu panel, Value Cards and the corner mark of a Handle Card. Files live in <code>assets/icons/nav-*.svg</code>.</p>
+                <div class="icon_grid">
+                    <div class="icon_cell icon_cell--dark">
+                        <img class="icon_cell_mark" src="images/icons/nav-strategy.svg" alt="" width="34" height="34">
+                        <span class="icon_cell_name">nav-strategy</span>
+                    </div>
+                    <div class="icon_cell icon_cell--dark">
+                        <img class="icon_cell_mark" src="images/icons/nav-setup.svg" alt="" width="34" height="34">
+                        <span class="icon_cell_name">nav-setup</span>
+                    </div>
+                    <div class="icon_cell icon_cell--dark">
+                        <img class="icon_cell_mark" src="images/icons/nav-operation.svg" alt="" width="34" height="34">
+                        <span class="icon_cell_name">nav-operation</span>
+                    </div>
+                    <div class="icon_cell icon_cell--dark">
+                        <img class="icon_cell_mark" src="images/icons/nav-consultation.svg" alt="" width="34" height="34">
+                        <span class="icon_cell_name">nav-consultation</span>
+                    </div>
+                    <div class="icon_cell icon_cell--dark">
+                        <img class="icon_cell_mark" src="images/icons/nav-migration.svg" alt="" width="34" height="34">
+                        <span class="icon_cell_name">nav-migration</span>
+                    </div>
+                    <div class="icon_cell icon_cell--dark">
+                        <img class="icon_cell_mark" src="images/icons/nav-testing.svg" alt="" width="34" height="34">
+                        <span class="icon_cell_name">nav-testing</span>
+                    </div>
+                    <div class="icon_cell icon_cell--dark">
+                        <img class="icon_cell_mark" src="images/icons/nav-gamification.svg" alt="" width="34" height="34">
+                        <span class="icon_cell_name">nav-gamification</span>
+                    </div>
+                    <div class="icon_cell icon_cell--dark">
+                        <img class="icon_cell_mark" src="images/icons/nav-vip.svg" alt="" width="34" height="34">
+                        <span class="icon_cell_name">nav-vip</span>
+                    </div>
+                    <div class="icon_cell icon_cell--dark">
+                        <img class="icon_cell_mark" src="images/icons/nav-vision.svg" alt="" width="34" height="34">
+                        <span class="icon_cell_name">nav-vision</span>
+                    </div>
+                    <div class="icon_cell icon_cell--dark">
+                        <img class="icon_cell_mark" src="images/icons/nav-mission.svg" alt="" width="34" height="34">
+                        <span class="icon_cell_name">nav-mission</span>
+                    </div>
+                    <div class="icon_cell icon_cell--dark">
+                        <img class="icon_cell_mark" src="images/icons/nav-news.svg" alt="" width="34" height="34">
+                        <span class="icon_cell_name">nav-news</span>
+                    </div>
+                    <div class="icon_cell icon_cell--dark">
+                        <img class="icon_cell_mark" src="images/icons/nav-blog.svg" alt="" width="34" height="34">
+                        <span class="icon_cell_name">nav-blog</span>
+                    </div>
+                    <div class="icon_cell icon_cell--dark">
+                        <img class="icon_cell_mark" src="images/icons/nav-events.svg" alt="" width="34" height="34">
+                        <span class="icon_cell_name">nav-events</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        /* =========================================================
+           Design-system navigation
+           Group headers open and close their own list; the filter field narrows
+           the links live, opens every group holding a hit, hides a group with
+           none, and restores the manual open/closed state once it is cleared.
+        ========================================================= */
+        (function () {
+            const nav = document.querySelector('[data-ds-nav]');
+            if (!nav) return;
+
+            const groups = [...nav.querySelectorAll('[data-ds-nav-group]')].map(head => ({
+                head,
+                list: document.getElementById(head.getAttribute('aria-controls'))
+            }));
+
+            const syncList = ({ head, list }) => {
+                list.hidden = head.getAttribute('aria-expanded') !== 'true';
+            };
+
+            groups.forEach(group => {
+                group.head.addEventListener('click', () => {
+                    const open = group.head.getAttribute('aria-expanded') === 'true';
+                    group.head.setAttribute('aria-expanded', String(!open));
+                    syncList(group);
+                });
+            });
+
+            const filter = nav.querySelector('[data-ds-nav-filter]');
+            if (!filter) return;
+
+            filter.addEventListener('input', () => {
+                const query = filter.value.trim().toLowerCase();
+                nav.querySelectorAll('[data-ds-nav-link]').forEach(link => {
+                    link.hidden = Boolean(query) && !link.textContent.toLowerCase().includes(query);
+                });
+                groups.forEach(group => {
+                    const hasHit = [...group.list.querySelectorAll('[data-ds-nav-link]')].some(link => !link.hidden);
+                    group.head.hidden = Boolean(query) && !hasHit;
+                    if (query) group.list.hidden = !hasHit;
+                    else syncList(group);
+                });
+            });
+        })();
+
+        /* =========================================================
+           Icon library — click to copy
+           Copies the cell's SVG markup (without the page's own class and aria
+           attributes). The name flips to "copied!" for 1.1s; if the clipboard API
+           rejects, a hidden textarea + execCommand is tried before "copy failed".
+        ========================================================= */
+        (function () {
+            const cells = document.querySelectorAll('[data-copy-icon]');
+            if (!cells.length) return;
+
+            const cleanSvg = svg => {
+                const copy = svg.cloneNode(true);
+                ['class', 'aria-hidden', 'focusable'].forEach(name => copy.removeAttribute(name));
+                return copy.outerHTML;
+            };
+
+            const legacyCopy = text => {
+                const field = document.createElement('textarea');
+                field.value = text;
+                field.setAttribute('readonly', '');
+                field.className = 'visually_hidden';
+                document.body.appendChild(field);
+                field.select();
+                let done = false;
+                try {
+                    done = document.execCommand('copy');
+                } catch (error) {
+                    done = false;
+                }
+                field.remove();
+                return done;
+            };
+
+            cells.forEach(cell => {
+                const name = cell.querySelector('.icon_cell_name');
+                const svg = cell.querySelector('svg');
+                if (!name || !svg) return;
+                const label = name.textContent;
+
+                const restore = () => {
+                    name.textContent = label;
+                    cell.removeAttribute('data-copied');
+                };
+                const succeed = () => {
+                    cell.setAttribute('data-copied', 'true');
+                    name.textContent = 'copied!';
+                    setTimeout(restore, 1100);
+                };
+                const fail = () => {
+                    name.textContent = 'copy failed';
+                    setTimeout(restore, 1400);
+                };
+                const fallback = text => (legacyCopy(text) ? succeed() : fail());
+
+                cell.addEventListener('click', () => {
+                    const text = cleanSvg(svg);
+                    if (navigator.clipboard && navigator.clipboard.writeText) {
+                        navigator.clipboard.writeText(text).then(succeed, () => fallback(text));
+                    } else {
+                        fallback(text);
+                    }
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

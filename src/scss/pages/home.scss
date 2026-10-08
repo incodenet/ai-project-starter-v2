@@ -1,0 +1,569 @@
+@import '../utils/_module';
+@import '../components/_tabs';
+@import '../components/_slider';
+@import '../components/_product-card';
+@import '../components/_metric-card';
+@import '../components/_site-card';
+@import '../components/_process-card';
+
+/* =========================================================
+   HERO BAND (hero + metrics)
+   Pulled up under the sticky header by its measured height.
+   ========================================================= */
+
+.hero-band {
+  position: relative;
+  isolation: isolate;
+  margin-top: calc(var(--header-h) * -1);
+  padding-top: var(--header-h);
+  border-radius: 0 0 34px 34px;
+}
+
+.hero-band_bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  height: 1046px;
+  border-radius: 0 0 34px 34px;
+  background-color: var(--color-surface);
+}
+
+.hero-band_pattern {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  height: 1040px;
+  border-radius: 0 0 34px 34px;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0.14;
+  @include hex-pattern('../../img/hex-pattern.svg');
+  @include mask-image(
+    (
+      radial-gradient(
+        936px 846px at 25% 400px,
+        rgba(0, 0, 0, 0.08) 0%,
+        rgba(0, 0, 0, 0.36) 55%,
+        #000 100%
+      ),
+      radial-gradient(
+        900px 792px at 78% 410px,
+        rgba(0, 0, 0, 0.12) 0%,
+        rgba(0, 0, 0, 0.4) 55%,
+        #000 100%
+      ),
+      radial-gradient(
+        504px 420px at 50% 735px,
+        rgba(0, 0, 0, 0.08) 0%,
+        rgba(0, 0, 0, 0.38) 55%,
+        #000 100%
+      ),
+      linear-gradient(to right, #000 0%, #000 55%, rgba(0, 0, 0, 0.3) 100%)
+    )
+  );
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  position: relative;
+  max-width: var(--container);
+  height: 583px;
+  margin: 0 auto;
+  padding: 83px var(--gutter) 40px;
+  display: grid;
+  grid-template-columns: 1.02fr 0.98fr;
+  gap: 52px;
+  align-items: center;
+}
+
+.hero_content {
+  position: relative;
+  z-index: 1;
+}
+
+/* the pulsing dot that stands in for the eyebrow rule */
+.hero_live {
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  margin-right: 10px;
+  width: 9px;
+  height: 9px;
+  transform: translateY(-50%);
+}
+
+.hero_live-dot,
+.hero_live-dot::before,
+.hero_live-dot::after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero_live-dot {
+  background-color: var(--color-red);
+
+  &::before,
+  &::after {
+    content: '';
+    border: 1.5px solid var(--color-red);
+    animation: ping 2s ease-out infinite;
+  }
+
+  &::after {
+    animation-delay: 1s;
+  }
+}
+
+.hero_title {
+  width: 584px;
+  margin-bottom: 24px;
+  font-size: 66px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  text-wrap: pretty;
+}
+
+.hero_text {
+  max-width: 520px;
+  margin-bottom: 34px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--color-ink-60);
+}
+
+.hero_buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero_media {
+  position: relative;
+}
+
+/* bleeds right past the container, up to the wide (1520px) frame */
+.hero_frame {
+  position: relative;
+  z-index: 1;
+  width: 691px;
+  height: 503px;
+  margin: 0 calc((min(100vw, 1520px) - min(100vw, 1310px)) / -2 - 30px) 0 0;
+  padding: 8px;
+  border-radius: 24px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  overflow: hidden;
+  background: var(--color-white);
+  box-shadow: 0 30px 60px 0 rgba(15, 23, 42, 0.12);
+}
+
+.hero_image {
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  object-fit: cover;
+  background: var(--color-image-bg);
+}
+
+/* ---------- Floating cards ---------- */
+
+.float-card {
+  position: absolute;
+  z-index: 3;
+  border-radius: 20px;
+  will-change: transform;
+}
+
+.float-card--load {
+  left: -26px;
+  top: 38px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 22px 13px 14px;
+  background: var(--color-white);
+  border: 1px solid rgba(15, 23, 42, 0.05);
+  box-shadow: 0 18px 44px rgba(15, 23, 42, 0.14);
+  animation: float-up 5s ease-in-out infinite;
+}
+
+.float-card_ring {
+  opacity: 0.99;
+  animation: ring-93 1.6s var(--ease-out) both;
+}
+
+.float-card_value {
+  height: 21px;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-ink);
+}
+
+.float-card_label {
+  font-size: 11.5px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  color: #888888;
+}
+
+.float-card--lines {
+  right: -128px;
+  bottom: 32px;
+  padding: 16px 20px;
+  background-color: #0b111b;
+  box-shadow: 0 18px 44px rgba(15, 23, 42, 0.22);
+  animation: float-down 5.6s ease-in-out 0.4s infinite;
+}
+
+.float-card_caption {
+  margin-bottom: 6px;
+  font-size: 11.5px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.3px;
+  color: #ffffff88;
+}
+
+.float-card_status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.float-card_dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-red);
+  animation: pulse 2.4s infinite;
+}
+
+/* =========================================================
+   METRICS
+   ========================================================= */
+
+.metrics {
+  width: var(--container-wide);
+  max-width: var(--container-wide);
+  margin: 0 auto;
+  padding: 0 var(--gutter) 40px;
+}
+
+.metrics_panel {
+  position: relative;
+  padding-top: 124px;
+}
+
+.metrics_frame {
+  position: relative;
+}
+
+.metrics_bg {
+  @include center-absolute('horizontal');
+  top: -12px;
+  width: 1568px;
+  height: 504px;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #0a0e16;
+  background-image:
+    radial-gradient(760px 420px at 50% -14%, rgba(223, 6, 57, 0.22), transparent 60%),
+    radial-gradient(520px 360px at 90% -6%, rgba(255, 107, 133, 0.12), transparent 62%),
+    radial-gradient(680px 520px at 4% 116%, rgba(205, 26, 60, 0.12), transparent 60%),
+    linear-gradient(158deg, #0b111c 0%, #090c13 100%);
+}
+
+.metrics_inner {
+  position: relative;
+  max-width: var(--container);
+  height: 470px;
+  margin: 0 auto;
+  padding: 44px var(--gutter);
+}
+
+.metrics_head {
+  margin-bottom: 35px;
+}
+
+.metrics_title {
+  font-size: 42px;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--color-white);
+}
+
+.metrics_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  align-items: stretch;
+}
+
+/* per-site load: bar width and staggered start */
+$site-loads: (
+  1: 93%,
+  2: 91%,
+  3: 89%,
+);
+
+@each $row, $load in $site-loads {
+  .bars_row:nth-child(#{$row}) {
+    --value: #{$load};
+    --delay: #{0.3s + ($row - 1) * 0.12s};
+  }
+}
+
+/* =========================================================
+   CATALOG
+   ========================================================= */
+
+.catalog {
+  position: relative;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 94px var(--gutter) 0;
+}
+
+.catalog_bg {
+  @include center-absolute('horizontal');
+  top: 204px;
+  z-index: 0;
+  width: 1890px;
+  height: 670px;
+  border-radius: 28px;
+  overflow: hidden;
+  pointer-events: none;
+  background: var(--color-surface);
+}
+
+.catalog_pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+  @include hex-pattern('../../img/hex-pattern.svg', 0 65px);
+  @include mask-image(
+    radial-gradient(ellipse 60% 62% at 50% 50%, transparent 0%, rgba(0, 0, 0, 0.55) 58%, #000 100%)
+  );
+}
+
+.catalog_blur {
+  position: absolute;
+  inset: 0;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  background: rgba(250, 250, 250, 0.48);
+  @include mask-image(
+    radial-gradient(
+      ellipse 100% 89% at 50% 6%,
+      #000 0%,
+      #000 55%,
+      rgba(0, 0, 0, 0.5) 77.5%,
+      transparent 100%
+    )
+  );
+}
+
+.catalog_head {
+  margin-bottom: 65px;
+
+  .section-head_text {
+    max-width: 660px;
+    padding-bottom: 2px;
+  }
+}
+
+/* =========================================================
+   PRODUCTION SITES
+   ========================================================= */
+
+.sites {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 150px var(--gutter) 0;
+}
+
+.sites_head {
+  margin-bottom: 31px;
+}
+
+.sites_grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, 400px);
+  gap: 20px;
+}
+
+/* =========================================================
+   PROCESSES
+   ========================================================= */
+
+.processes {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 130px var(--gutter) 50px;
+}
+
+.processes_head {
+  flex-wrap: nowrap;
+  gap: 24px;
+  margin-bottom: 31px;
+
+  .section-title {
+    margin-bottom: 16px;
+  }
+}
+
+.processes_lead {
+  font-size: 16.5px;
+  line-height: 1.6;
+  color: #0f172ad1;
+}
+
+.processes_nav {
+  display: flex;
+  gap: 18px;
+  flex-shrink: 0;
+  padding-bottom: 6px;
+}
+
+.processes_track {
+  display: flex;
+  gap: 14px;
+  height: 432px;
+  padding: 7px 0 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+/* illustrations rise in one after another */
+@for $i from 1 through 8 {
+  .process-card:nth-child(#{$i}) {
+    --delay: #{($i - 1) * 0.12s};
+  }
+}
+
+/* =========================================================
+   DEFERRED GRAPHICS
+   Paused until the block is in view, replayed on every re-entry
+   (initDeferredGraphics in shared/home.js).
+   ========================================================= */
+
+$deferred-graphics: '.chart_area, .chart_line, .chart_dot, .bars_fill, .process-card_image';
+
+.js .anim-defer {
+  #{$deferred-graphics} {
+    animation-play-state: paused;
+  }
+
+  &.is-playing {
+    #{$deferred-graphics} {
+      animation-play-state: running;
+    }
+  }
+}
+
+.anim-defer {
+  &.is-replayed .gauge_progress {
+    animation: gauge 1.8s var(--ease-out) both;
+  }
+
+  &.is-resetting {
+    #{$deferred-graphics},
+    .gauge_progress {
+      animation: none;
+    }
+  }
+}
+
+/* =========================================================
+   KEYFRAMES
+   ========================================================= */
+
+@keyframes ping {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.55;
+  }
+
+  70% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(3.6);
+    opacity: 0;
+  }
+}
+
+@keyframes ring-93 {
+  from {
+    stroke-dashoffset: 131.9;
+  }
+
+  to {
+    stroke-dashoffset: 9.2;
+  }
+}
+
+@keyframes float-up {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+@keyframes float-down {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(7px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(43, 107, 228, 0.45);
+  }
+
+  70% {
+    box-shadow: 0 0 0 7px rgba(43, 107, 228, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(43, 107, 228, 0);
+  }
+}
+
+/* the looping decorations stand still for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero_live-dot::before,
+  .hero_live-dot::after,
+  .float-card--load,
+  .float-card--lines,
+  .float-card_dot {
+    animation: none;
+  }
+}

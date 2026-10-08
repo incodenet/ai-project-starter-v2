@@ -1,0 +1,2665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cards | Hybrid Interaction Design System</title>
+    <meta name="description" content="Every card component in one place — partner tiles, value cards and speaker cards, live and hoverable.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap">
+
+    <style>
+        /* =========================================================
+           DESIGN TOKENS
+           Fonts, weights and the fluid type scale (hi-fonts.css + hi-typography.css),
+           then colour, surface, radius, elevation, motion, space and layout
+           (hi-tokens.css). Every page of the design system ships the same set.
+        ========================================================= */
+        :root {
+            /* --- font families --- */
+            --font-heading: 'Hanken Grotesk', system-ui, sans-serif;
+            --font-caption: 'Hanken Grotesk', system-ui, sans-serif;
+            --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+            --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+            /* --- weights --- */
+            --fw-extralight: 200;
+            --fw-light: 300;
+            --fw-regular: 400;
+            --fw-medium: 500;
+            --fw-semibold: 600;
+            --fw-bold: 700;
+            --fw-extrabold: 800;
+
+            /* --- type scale (fluid) --- */
+            --text-hero-size: clamp(40px, 6vw, 96px);
+            --text-figure-size: clamp(48px, 8.6vw, 120px);
+            --text-display-size: clamp(36px, 5.2vw, 78px);
+            --text-h1-size: clamp(32px, 4.4vw, 64px);
+            --text-h2-size: clamp(28px, 3.6vw, 52px);
+            --text-h-feature-size: clamp(23px, 2.9vw, 42px);
+            --text-h3-size: clamp(20px, 2vw, 27px);
+            --text-body-lg-size: clamp(18px, 1.6vw, 22px);
+            --text-body-md-size: 16.5px;
+            --text-body-sm-size: 14.5px;
+            --text-caption-size: 12px;
+            --text-label-size: 15px;
+
+            /* --- line heights --- */
+            --lh-tight: 1;
+            --lh-snug: 1.15;
+            --lh-heading: 1.05;
+            --lh-body: 1.6;
+
+            /* --- letter spacing --- */
+            --ls-hero: -.045em;
+            --ls-heading: -.03em;
+            --ls-h3: -.02em;
+            --ls-caption: .2em;
+            --ls-label: .02em;
+
+            /* --- brand palette --- */
+            --c-bg: #eaeaf2;
+            --c-ink: #15131c;
+            --c-dark: #180a2b;
+            --c-dark-2: #170928;
+            --c-accent: #7b52c7;
+            --c-accent-bright: #9d73ff;
+            --c-violet: #9b6fe0;
+            --c-lav: #b79bff;
+            --c-cyan: #00b7fa;
+            --c-offwhite: #f1f8ff;
+            --c-white: #ffffff;
+            --c-grey: #6b6b76;
+            --c-ds-panel: #12101a;
+
+            /* --- text alpha steps --- */
+            --c-ink-60: rgba(21, 19, 28, .6);
+            --c-ink-55: rgba(21, 19, 28, .55);
+            --c-ink-45: rgba(21, 19, 28, .45);
+            --c-ink-16: rgba(21, 19, 28, .16);
+            --c-offwhite-80: rgba(241, 248, 255, .8);
+            --c-offwhite-62: rgba(241, 248, 255, .62);
+            --c-offwhite-50: rgba(241, 248, 255, .5);
+            --c-white-78: rgba(255, 255, 255, .78);
+            --c-white-50: rgba(255, 255, 255, .5);
+            --c-white-20: rgba(255, 255, 255, .2);
+            --c-white-08: rgba(255, 255, 255, .08);
+
+            /* --- partner brands --- */
+            --brand-optimove: #302c69;
+            --brand-optimove-pastel: #f4f4f7;
+            --brand-smartico: #f15851;
+            --brand-smartico-pastel: #fef2f1;
+            --brand-fast-track: #e96092;
+            --brand-fast-track-pastel: #fdf2f6;
+            --brand-xtremepush: #003df5;
+            --brand-xtremepush-pastel: #f1f4fe;
+            --brand-customer-io: #0b363b;
+            --brand-customer-io-pastel: #f2f4f5;
+            --brand-solitics: #ffd400;
+            --brand-solitics-pastel: #fff5c3;
+
+            /* --- status --- */
+            --c-success: #1f8a5b;
+            --c-success-bright: #1fb26b;
+            --c-success-soft: #1fd28a;
+            --c-warning: #ffb038;
+            --c-magenta: #c32e93;
+
+            /* --- surfaces --- */
+            --surface-light: #ffffff;
+            --surface-tint: #faf8fd;
+            --surface-tint-strong: #f7f4fd;
+            --surface-neutral: #f1f1f4;
+            --surface-hover: #f2f2f4;
+            --grad-surface-grey: linear-gradient(145deg, #eeeef2 0%, #f6f6f8 52%, #ffffff 100%);
+            --grad-surface-grey-dark: linear-gradient(145deg, rgba(255, 255, 255, .09) 0%, rgba(255, 255, 255, .05) 52%, rgba(255, 255, 255, .02) 100%);
+            --grad-primary: linear-gradient(225deg, #8a62d8, #6a43b2);
+            --grad-hero: linear-gradient(160deg, #1c0c3a 0%, #2c1356 44%, #46228a 100%);
+            --grad-hero-deep: linear-gradient(160deg, #120724 0%, #1c0d38 46%, #2e155c 100%);
+            --grad-card-dark: linear-gradient(135deg, #1a0a3a, #3d1a6e);
+            --grad-card-dark-hover: linear-gradient(135deg, #26124f, #4d2589);
+            --grad-panel: linear-gradient(180deg, #17161d, #111017);
+            --grad-metric: linear-gradient(160deg, var(--c-accent), #4a248f);
+            --grad-rule-light: linear-gradient(to right, rgba(21, 19, 28, .16), rgba(21, 19, 28, 0));
+            --grad-rule-dark: linear-gradient(to right, rgba(255, 255, 255, .18), rgba(255, 255, 255, 0));
+
+            /* --- borders --- */
+            --border-light: 1px solid #eee9f6;
+            --border-glass: 1px solid rgba(255, 255, 255, .16);
+            --border-panel: 1px solid rgba(255, 255, 255, .07);
+            --border-accent-soft: 1px solid rgba(123, 82, 199, .35);
+
+            /* --- radii --- */
+            --r-xs: 4px;
+            --r-sm: 7px;
+            --r-md: 12px;
+            --r-lg: 16px;
+            --r-xl: 20px;
+            --r-2xl: 24px;
+            --r-3xl: 26px;
+            --r-pill: 100px;
+            --r-circle: 50%;
+
+            /* --- elevation --- */
+            --shadow-tile: 0 4px 10px -4px rgba(24, 10, 43, .14), 0 1px 3px -1px rgba(24, 10, 43, .1);
+            --shadow-pill: 0 8px 30px rgba(0, 0, 0, .28);
+            --shadow-card: 0 24px 50px rgba(26, 10, 58, .12);
+            --shadow-float: 0 20px 50px rgba(0, 0, 0, .35);
+            --shadow-card-raised: 0 40px 90px rgba(26, 10, 58, .28);
+            --shadow-card-hover: 0 54px 110px rgba(26, 10, 58, .42);
+            --shadow-panel: 0 30px 70px rgba(0, 0, 0, .5), inset 0 1px 0 rgba(255, 255, 255, .05);
+            --glow-accent: 0 4px 14px rgba(123, 82, 199, .6);
+
+            /* --- blur --- */
+            --blur-glass: 14px;
+            --blur-card: 12px;
+
+            /* --- motion --- */
+            --dur-fast: .2s;
+            --dur-base: .3s;
+            --dur-mid: .4s;
+            --dur-slow: .5s;
+            --dur-shutter: .9s;
+            --ease-out-quint: cubic-bezier(.16, 1, .3, 1);
+            --ease-swift: cubic-bezier(.2, .8, .2, 1);
+            --ease-standard: cubic-bezier(.4, 0, .2, 1);
+            --ease-shutter: cubic-bezier(.76, 0, .24, 1);
+
+            /* --- space --- */
+            --space-xxs: 4px;
+            --space-xs: 8px;
+            --space-sm: 12px;
+            --space-md: 14px;
+            --space-lg: 16px;
+            --space-xl: 20px;
+            --space-2xl: 24px;
+            --space-3xl: 34px;
+            --space-4xl: 40px;
+            --space-5xl: 56px;
+
+            /* --- layout --- */
+            --gutter: 5vw;
+            --gut: max(5vw, calc((100vw - 1440px) / 2 + 5vw));
+            --max-content: 1440px;
+            --max-text: 1100px;
+            --max-footer: 1280px;
+            --nav-height: 78px;
+            --ds-nav-width: 240px;
+            --ds-sheet-max: 1120px;
+            --ds-sheet-pad: 6vw;
+        }
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--c-bg);
+            color: var(--c-ink);
+            font-family: var(--font-body);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* NO percentage max-width here: logo marks sit in shrink-to-fit parents sized BY their
+           image, and a percentage that resolves against such a parent collapses the image to 0.
+           Containment is declared per component instead. */
+        img,
+        svg {
+            display: block;
+        }
+
+        /* a component class with its own display value out-ranks the UA's [hidden] rule */
+        [hidden] {
+            display: none !important;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            font-family: var(--font-heading);
+        }
+
+        p {
+            margin: 0;
+        }
+
+        button {
+            font: inherit;
+            color: inherit;
+            cursor: pointer;
+        }
+
+        /* zero specificity: every component colour (buttons, tiles, menu rows, nav) wins in every state,
+           the way the DC's inline styles beat its helmet link rule */
+        :where(a) {
+            color: var(--c-accent);
+        }
+
+        :where(a:hover) {
+            color: #5a37a0;
+        }
+
+        code {
+            font-family: var(--font-mono);
+            font-size: .85em;
+        }
+
+        :focus-visible {
+            outline: 2px solid rgba(157, 115, 255, .7);
+            outline-offset: 2px;
+        }
+
+        .visually_hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            white-space: nowrap;
+        }
+
+        /* =========================================================
+           TYPOGRAPHY
+           The named type roles. Design-tool name in brackets:
+           text_hero (.hi-hero) · text_figure (.hi-figure) · text_display (.hi-display)
+           text_h1 / text_h2 / text_h_feature / text_h3 · eyebrow (.hi-eyebrow)
+           figcaption (.hi-figcaption) · text_body_lg / _md / _sm · text_label
+           prose--l/m/s + bullets (.hi-prose-*, .hi-bullets, .hi-bullet)
+        ========================================================= */
+        .text_hero {
+            font-family: var(--font-heading);
+            font-weight: var(--fw-light);
+            font-size: var(--text-hero-size);
+            line-height: .98;
+            letter-spacing: var(--ls-hero);
+        }
+
+        .text_figure {
+            font-family: var(--font-heading);
+            font-weight: var(--fw-extralight);
+            font-size: var(--text-figure-size);
+            line-height: .82;
+            letter-spacing: -.03em;
+        }
+
+        .text_display {
+            font-family: var(--font-heading);
+            font-weight: var(--fw-light);
+            font-size: var(--text-display-size);
+            line-height: var(--lh-tight);
+            letter-spacing: -.04em;
+        }
+
+        .text_h1 {
+            font-family: var(--font-heading);
+            font-weight: var(--fw-light);
+            font-size: var(--text-h1-size);
+            line-height: 1.04;
+            letter-spacing: -.035em;
+        }
+
+        .text_h2 {
+            font-family: var(--font-heading);
+            font-weight: var(--fw-light);
+            font-size: var(--text-h2-size);
+            line-height: var(--lh-heading);
+            letter-spacing: var(--ls-heading);
+        }
+
+        .text_h_feature {
+            font-family: var(--font-heading);
+            font-weight: var(--fw-light);
+            font-size: var(--text-h-feature-size);
+            line-height: 1.1;
+            letter-spacing: -.032em;
+        }
+
+        .text_h3 {
+            font-family: var(--font-heading);
+            font-weight: var(--fw-semibold);
+            font-size: var(--text-h3-size);
+            line-height: 1.2;
+            letter-spacing: var(--ls-h3);
+        }
+
+        .eyebrow {
+            font-family: var(--font-caption);
+            font-weight: var(--fw-bold);
+            font-size: var(--text-caption-size);
+            line-height: 1;
+            letter-spacing: var(--ls-caption);
+            text-transform: uppercase;
+        }
+
+        .figcaption {
+            font-family: var(--font-body);
+            font-weight: var(--fw-regular);
+            font-size: 13px;
+            line-height: 1.5;
+            letter-spacing: 0;
+            text-transform: none;
+            color: var(--c-ink-45);
+        }
+
+        .figcaption--on-dark {
+            color: rgba(255, 255, 255, .5);
+        }
+
+        .text_body_lg {
+            font-family: var(--font-body);
+            font-weight: var(--fw-regular);
+            font-size: var(--text-body-lg-size);
+            line-height: var(--lh-body);
+        }
+
+        .text_body_md {
+            font-family: var(--font-body);
+            font-weight: var(--fw-regular);
+            font-size: var(--text-body-md-size);
+            line-height: var(--lh-body);
+        }
+
+        .text_body_sm {
+            font-family: var(--font-body);
+            font-weight: var(--fw-regular);
+            font-size: var(--text-body-sm-size);
+            line-height: 1.55;
+        }
+
+        .text_label {
+            font-family: var(--font-body);
+            font-weight: var(--fw-semibold);
+            font-size: var(--text-label-size);
+            letter-spacing: var(--ls-label);
+        }
+
+        /* --- body prose & bullets · sizes L / M / S --- */
+        .prose--l,
+        .bullets--l {
+            --pf: clamp(17px, 1.5vw, 21px);
+            --pl: 1.78;
+            --bf: clamp(17px, 1.5vw, 21px);
+            --bl: 1.6;
+            --gap: clamp(11px, 1.2vw, 15px);
+            --pad: 26px;
+            --dot: 8px;
+            --dtop: .62em;
+            --bmar: clamp(20px, 2vw, 28px);
+        }
+
+        .prose--m,
+        .bullets--m {
+            --pf: clamp(15px, 1.25vw, 18px);
+            --pl: 1.75;
+            --bf: clamp(15px, 1.25vw, 18px);
+            --bl: 1.6;
+            --gap: clamp(10px, 1.05vw, 13px);
+            --pad: 24px;
+            --dot: 7px;
+            --dtop: .6em;
+            --bmar: clamp(18px, 1.7vw, 23px);
+        }
+
+        .prose--s,
+        .bullets--s {
+            --pf: clamp(14px, 1.05vw, 16px);
+            --pl: 1.72;
+            --bf: clamp(14px, 1.05vw, 16px);
+            --bl: 1.58;
+            --gap: 9px;
+            --pad: 22px;
+            --dot: 6px;
+            --dtop: .6em;
+            --bmar: 16px;
+        }
+
+        .prose {
+            max-width: 64ch;
+        }
+
+        .prose > p {
+            margin: 0;
+            font-size: var(--pf);
+            line-height: var(--pl);
+            color: #33303e;
+            text-wrap: pretty;
+        }
+
+        .prose > :not(:first-child) {
+            margin-top: var(--bmar);
+        }
+
+        .bullets {
+            display: flex;
+            flex-direction: column;
+            gap: var(--gap);
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .bullet {
+            position: relative;
+            padding-left: var(--pad);
+            font-size: var(--bf);
+            line-height: var(--bl);
+            color: #33303e;
+            text-wrap: pretty;
+        }
+
+        .bullet::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: var(--dtop);
+            width: var(--dot);
+            height: var(--dot);
+            border-radius: 2px;
+            background: linear-gradient(135deg, #7b52c7, #9d73ff);
+        }
+
+        .bullet strong {
+            font-weight: var(--fw-semibold);
+            color: var(--c-ink);
+        }
+
+        /* =========================================================
+           LAYOUT — design-system shell
+           A fixed 240px sidebar (ds_nav) and the sheet beside it (ds_page).
+           Below 900px the sidebar is removed and the sheet takes the full width.
+        ========================================================= */
+        /* decorative bleeds (pulsing rings, glow canvases) are contained by the sheet itself, never by
+           html — clipping html would hide fixed descendants */
+        .ds_page {
+            min-height: 100vh;
+            margin-left: var(--ds-nav-width);
+            overflow-x: clip;
+        }
+
+        .ds_nav {
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 99000;
+            display: flex;
+            flex-direction: column;
+            width: var(--ds-nav-width);
+            padding: 26px 14px 14px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            background: var(--c-ds-panel);
+            border-right: 1px solid rgba(255, 255, 255, .09);
+            font-family: var(--font-body);
+            scrollbar-width: none;
+        }
+
+        .ds_nav::-webkit-scrollbar {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        /* --- title: doubles as the Overview link --- */
+        .ds_nav_home {
+            position: relative;
+            flex: 0 0 auto;
+            display: block;
+            margin-bottom: 6px;
+            padding: 0 12px;
+            font-size: 14px;
+            line-height: 1.3;
+            text-decoration: none;
+        }
+
+        .ds_nav_kicker {
+            display: block;
+            font-family: var(--font-caption);
+            font-size: 10.5px;
+            font-weight: var(--fw-bold);
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: var(--c-accent-bright);
+        }
+
+        .ds_nav_title {
+            display: block;
+            margin-top: 5px;
+            font-family: var(--font-heading);
+            font-size: 21px;
+            font-weight: var(--fw-light);
+            letter-spacing: -.02em;
+            color: var(--c-white);
+        }
+
+        /* a vertical accent tick on the panel edge marks the Overview as current */
+        .ds_nav_home_mark {
+            position: absolute;
+            top: 50%;
+            left: -14px;
+            width: 3px;
+            height: 40px;
+            background: var(--c-accent-bright);
+            opacity: 0;
+            transform: translateY(-50%);
+            transition: opacity .25s ease;
+        }
+
+        .ds_nav_home[aria-current="page"] .ds_nav_home_mark {
+            opacity: 1;
+        }
+
+        /* --- filter field --- */
+        .ds_nav_search {
+            position: relative;
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            margin: 18px 12px 10px;
+        }
+
+        .ds_nav_search_icon {
+            position: absolute;
+            left: 11px;
+            width: 13px;
+            height: 13px;
+            color: rgba(255, 255, 255, .4);
+            pointer-events: none;
+        }
+
+        .ds_nav_search_input {
+            width: 100%;
+            padding: 8px 10px 8px 32px;
+            border: 1px solid rgba(255, 255, 255, .12);
+            border-radius: 9px;
+            outline: none;
+            background: rgba(255, 255, 255, .05);
+            color: var(--c-white);
+            font-family: inherit;
+            font-size: 13px;
+        }
+
+        /* --- group header: hit area centred on the label, divider on its top edge --- */
+        .ds_nav_group {
+            position: relative;
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            width: 100%;
+            margin: 33px 0 11px;
+            padding: 0 12px;
+            border: 0;
+            background: none;
+            font-family: inherit;
+            font-size: 10.5px;
+            font-weight: var(--fw-bold);
+            letter-spacing: .16em;
+            text-align: left;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .3);
+            cursor: pointer;
+            transition: color .18s ease;
+        }
+
+        .ds_nav_group:hover {
+            color: rgba(255, 255, 255, .5);
+        }
+
+        .ds_nav_group::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -11px;
+            bottom: -11px;
+            border-radius: 9px;
+        }
+
+        .ds_nav_group:hover::before {
+            background: rgba(255, 255, 255, .05);
+        }
+
+        .ds_nav_group::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -22px;
+            height: 1px;
+            background: linear-gradient(to right, rgba(255, 255, 255, .16), rgba(255, 255, 255, 0));
+        }
+
+        .ds_nav_group--first::after {
+            display: none;
+        }
+
+        .ds_nav_group > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .ds_nav_caret {
+            width: 13px;
+            height: 13px;
+            margin-left: auto;
+            transform: rotate(0deg);
+            transition: transform .25s var(--ease-out-quint);
+        }
+
+        .ds_nav_group[aria-expanded="true"] .ds_nav_caret {
+            transform: rotate(180deg);
+        }
+
+        /* --- links --- */
+        .ds_nav_list {
+            flex: 0 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ds_nav_link {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            padding: 8px 12px;
+            border-radius: 9px;
+            color: rgba(255, 255, 255, .58);
+            font-size: 14px;
+            line-height: 1.3;
+            text-decoration: none;
+            transition: background .18s ease, color .18s ease;
+        }
+
+        .ds_nav_link:hover {
+            background: rgba(255, 255, 255, .07);
+            color: var(--c-white);
+        }
+
+        .ds_nav_link[aria-current="page"] {
+            background: rgba(157, 115, 255, .16);
+            color: var(--c-white);
+            font-weight: var(--fw-semibold);
+        }
+
+        .ds_nav_dot {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 17px;
+            height: 17px;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, .26);
+            font-family: var(--font-caption);
+            font-size: 12px;
+            font-weight: var(--fw-extrabold);
+            letter-spacing: 0;
+            line-height: 1;
+            color: var(--c-dark);
+            transition: background .2s ease;
+        }
+
+        .ds_nav_link:hover .ds_nav_dot {
+            background: rgba(255, 255, 255, .45);
+        }
+
+        .ds_nav_link[aria-current="page"] .ds_nav_dot {
+            background: var(--c-accent-bright);
+            color: var(--c-dark);
+        }
+
+        .ds_nav_out {
+            flex: 0 0 auto;
+            width: 11px;
+            height: 11px;
+            margin-left: auto;
+            opacity: .4;
+            transition: opacity .18s ease;
+        }
+
+        .ds_nav_link:hover .ds_nav_out {
+            opacity: .9;
+        }
+
+        /* --- pinned footer link: rows pass under it through a fade --- */
+        .ds_nav_tail {
+            flex: 0 0 auto;
+            height: 34px;
+        }
+
+        .ds_nav_fade {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            z-index: 1;
+            width: var(--ds-nav-width);
+            height: 104px;
+            pointer-events: none;
+        }
+
+        .ds_nav_fade::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(18, 16, 26, 0), #12101a 46%);
+        }
+
+        .ds_nav_all {
+            position: sticky;
+            bottom: 0;
+            z-index: 2;
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: auto;
+            padding: 8px 12px;
+            border-radius: 9px;
+            background: rgba(255, 255, 255, .05);
+            color: rgba(255, 255, 255, .72);
+            font-size: 14px;
+            font-weight: var(--fw-semibold);
+            line-height: 1.3;
+            text-decoration: none;
+            transition: background .18s ease, color .18s ease;
+        }
+
+        .ds_nav_all:hover {
+            background: rgba(255, 255, 255, .1);
+            color: var(--c-white);
+        }
+
+        /* =========================================================
+           LAYOUT — design-system sheet
+           Every sheet opens on the same dark hero (deep violet ramp with a lavender
+           glow top-right), then runs numbered sections on a 1120px measure.
+        ========================================================= */
+        .ds_hero {
+            position: relative;
+            overflow: hidden;
+            padding: 100px var(--ds-sheet-pad) 80px;
+            background: var(--grad-hero-deep);
+            color: var(--c-white);
+        }
+
+        .ds_hero_glow {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(55% 55% at 82% 20%, rgba(157, 115, 255, .3), transparent 70%);
+            pointer-events: none;
+        }
+
+        .ds_hero_inner {
+            position: relative;
+            z-index: 2;
+            max-width: var(--ds-sheet-max);
+            margin: 0 auto;
+        }
+
+        .ds_hero_eyebrow {
+            margin-bottom: 22px;
+            color: var(--c-accent-bright);
+        }
+
+        .ds_hero_title {
+            max-width: 18ch;
+            margin: 0;
+        }
+
+        .ds_hero_lede {
+            max-width: 60ch;
+            margin: 26px 0 0;
+            color: rgba(255, 255, 255, .64);
+        }
+
+        .ds_hero code {
+            color: #c9b3ff;
+        }
+
+        .ds_section {
+            padding: 70px var(--ds-sheet-pad) 40px;
+            background: var(--c-white);
+        }
+
+        /* light sections fade in from the page tone, the last one fades back out */
+        .ds_section--fade-in {
+            background: linear-gradient(180deg, #eaeaf2, #fff 40%);
+        }
+
+        .ds_section--fade-out {
+            background: linear-gradient(180deg, #fff, #eaeaf2);
+        }
+
+        .ds_section_inner {
+            max-width: var(--ds-sheet-max);
+            margin: 0 auto;
+        }
+
+        .ds_section_eyebrow {
+            margin-bottom: 14px;
+            color: var(--c-accent);
+        }
+
+        .ds_section_title {
+            margin: 0 0 40px;
+        }
+
+        .ds_section_lede {
+            max-width: 60ch;
+            margin: 0 0 30px;
+            color: #5a5766;
+        }
+
+        /* the white rule card used for "how to apply it" blocks */
+        .ds_rule_grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .ds_rule_card {
+            padding: 30px;
+            border: 1px solid #ece7f4;
+            border-radius: 18px;
+            background: var(--c-white);
+        }
+
+        .ds_rule_card_title {
+            margin: 0 0 12px;
+        }
+
+        .ds_rule_card_text {
+            margin: 0;
+            color: #5a5766;
+        }
+
+        /* =========================================================
+           LAYOUT — specimen rows
+           A spec column (name, class chip, note, where it is used) beside a live
+           demo. Used by the atom and molecule sheets.
+        ========================================================= */
+        .ds_spec {
+            display: grid;
+            grid-template-columns: 210px 1fr;
+            gap: 30px;
+            align-items: start;
+            padding: 34px 0;
+            border-top: 1px solid #e0dbeb;
+        }
+
+        .ds_spec_name {
+            margin: 0;
+            font-family: var(--font-body);
+            font-size: 15px;
+            font-weight: var(--fw-semibold);
+            letter-spacing: -.01em;
+        }
+
+        .ds_spec_class {
+            display: inline-block;
+            margin-top: 9px;
+            padding: 3px 7px;
+            border-radius: 5px;
+            background: #f4f0fc;
+            color: var(--c-accent);
+            font-family: var(--font-mono);
+            font-size: 11.5px;
+        }
+
+        .ds_spec_note {
+            margin: 10px 0 0;
+            font-size: 12.5px;
+            line-height: 1.5;
+            color: #8a8697;
+        }
+
+        .ds_spec_note code {
+            font-size: .86em;
+        }
+
+        .ds_spec_used {
+            margin: 8px 0 0;
+            font-size: 11px;
+            line-height: 1.5;
+            color: #a9a4b6;
+        }
+
+        .ds_demo {
+            min-width: 0;
+            padding: 28px 30px;
+            border: 1px solid #ece7f4;
+            border-radius: 18px;
+            background: var(--c-white);
+        }
+
+        .ds_demo--dark {
+            border: 0;
+            background: linear-gradient(160deg, #120724, #2e155c);
+        }
+
+        .ds_demo--plain {
+            padding: 0;
+            border: 0;
+            background: none;
+        }
+
+        /* =========================================================
+           BUTTONS
+           One component behind every call to action (Button.dc.html).
+           Variants: primary · white · secondary · outline · ghost · soft · plain · link
+           Mode:     light (default) · button--on-dark
+           Sizes:    xs 36 · sm 44 · md 52 (default) · lg 60 · xl 68 — one height
+                     scale shared by text pills and icon-only discs (button--icon)
+           The label is doubled: on hover the visible copy slides up and the copy
+           underneath rides in, so the text never re-flows mid-hover.
+        ========================================================= */
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            height: 52px;
+            padding: 0 26px;
+            border: 2px solid transparent;
+            border-radius: var(--r-pill);
+            font-family: var(--font-body);
+            font-size: 15px;
+            font-weight: var(--fw-semibold);
+            letter-spacing: .02em;
+            line-height: 1;
+            white-space: nowrap;
+            text-decoration: none;
+            cursor: pointer;
+            transition:
+                background .25s ease,
+                color .25s ease,
+                border-color .25s ease,
+                filter .2s ease;
+        }
+
+        /* --- sizes --- */
+        .button--xs {
+            height: 36px;
+            padding: 0 14px;
+            gap: 7px;
+            font-size: 12px;
+        }
+
+        .button--sm {
+            height: 44px;
+            padding: 0 18px;
+            gap: 8px;
+            font-size: 13px;
+        }
+
+        .button--lg {
+            height: 60px;
+            padding: 0 32px;
+            gap: 10px;
+            font-size: 16px;
+        }
+
+        .button--xl {
+            height: 68px;
+            padding: 0 40px;
+            gap: 11px;
+            font-size: 18px;
+        }
+
+        /* icon-only: the same height scale, drawn as a disc */
+        .button--icon {
+            flex: 0 0 auto;
+            width: 52px;
+            padding: 0;
+            gap: 0;
+            border-radius: var(--r-circle);
+        }
+
+        .button--icon.button--xs { width: 36px; }
+        .button--icon.button--sm { width: 44px; }
+        .button--icon.button--lg { width: 60px; }
+        .button--icon.button--xl { width: 68px; }
+
+        /* --- icon + label --- */
+        .button_icon {
+            flex: 0 0 auto;
+            align-self: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 0;
+        }
+
+        /* optical gap for icons whose ink fills their 24-unit box (circle-plus, star, mail…) */
+        .button_icon--balance-start {
+            margin-right: .096em;
+        }
+
+        .button_icon--balance-end {
+            margin-left: .096em;
+        }
+
+        .button svg {
+            display: block;
+            width: 1.15em;
+            height: 1.15em;
+            overflow: visible;
+        }
+
+        /* the swap mask clips to its line box, so the line-height must clear the font's ink */
+        .button_label {
+            display: block;
+            overflow: hidden;
+            line-height: 1.35;
+        }
+
+        .button_label_inner {
+            position: relative;
+            display: block;
+            transition: transform .4s var(--ease-out-quint);
+        }
+
+        .button_label_inner > span {
+            display: block;
+        }
+
+        .button_label_inner > span[aria-hidden] {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            white-space: nowrap;
+        }
+
+        .button:hover .button_label_inner {
+            transform: translateY(-100%);
+        }
+
+        /* --- primary: gradient pill, a highlight travelling round the rim, a bloom on hover --- */
+        .button--primary {
+            position: relative;
+            background: var(--grad-primary);
+            background-origin: border-box;
+            border-color: transparent;
+            color: var(--c-white);
+        }
+
+        .button--primary::before {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            padding: 2px;
+            border-radius: inherit;
+            background: conic-gradient(from var(--button-angle), transparent 0%, #ffffff 8%, transparent 18%, transparent 100%);
+            -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+            animation: button_shine 4.8s linear infinite;
+        }
+
+        .button--primary::after {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            border-radius: inherit;
+            background: radial-gradient(75% 90% at 50% 118%, rgba(255, 255, 255, .5) 0%, rgba(255, 255, 255, .18) 40%, rgba(255, 255, 255, 0) 72%);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .3s ease;
+        }
+
+        .button--primary:hover::after {
+            opacity: 1;
+        }
+
+        /* --- white (on dark cards) --- */
+        .button--white {
+            background: var(--c-white);
+            border-color: var(--c-white);
+            color: var(--c-accent);
+        }
+
+        .button--white:hover {
+            background: #efe8fb;
+        }
+
+        /* --- secondary --- */
+        .button--secondary {
+            background: transparent;
+            border-color: rgba(123, 82, 199, .55);
+            color: var(--c-accent);
+        }
+
+        .button--secondary:hover {
+            background: var(--c-accent);
+            border-color: var(--c-accent);
+            color: var(--c-white);
+        }
+
+        .button--secondary.button--on-dark {
+            border-color: rgba(183, 155, 255, .5);
+            color: var(--c-lav);
+        }
+
+        .button--secondary.button--on-dark:hover {
+            background: var(--c-lav);
+            border-color: var(--c-lav);
+            color: var(--c-ink);
+        }
+
+        /* --- outline --- */
+        .button--outline {
+            background: transparent;
+            border-color: rgba(21, 19, 28, .15);
+            color: var(--c-ink);
+        }
+
+        .button--outline:hover {
+            background: var(--c-ink);
+            border-color: var(--c-ink);
+            color: var(--c-white);
+        }
+
+        .button--outline.button--on-dark {
+            border-color: rgba(255, 255, 255, .3);
+            color: var(--c-white);
+        }
+
+        .button--outline.button--on-dark:hover {
+            background: var(--c-white);
+            border-color: var(--c-white);
+            color: var(--c-ink);
+        }
+
+        /* --- ghost --- */
+        .button--ghost {
+            background: transparent;
+            border-color: transparent;
+            color: var(--c-accent);
+        }
+
+        .button--ghost:hover {
+            background: rgba(123, 82, 199, .1);
+        }
+
+        .button--ghost.button--on-dark {
+            color: var(--c-lav);
+        }
+
+        .button--ghost.button--on-dark:hover {
+            background: rgba(183, 155, 255, .14);
+        }
+
+        /* --- soft --- */
+        .button--soft {
+            background: rgba(123, 82, 199, .12);
+            border-color: transparent;
+            color: var(--c-accent);
+        }
+
+        .button--soft:hover {
+            background: rgba(123, 82, 199, .2);
+        }
+
+        .button--soft.button--on-dark {
+            background: rgba(183, 155, 255, .16);
+            color: #cdb6ff;
+        }
+
+        .button--soft.button--on-dark:hover {
+            background: rgba(183, 155, 255, .26);
+        }
+
+        /* --- plain --- */
+        .button--plain {
+            background: transparent;
+            border-color: transparent;
+            color: var(--c-ink);
+        }
+
+        .button--plain:hover {
+            background: rgba(21, 19, 28, .06);
+        }
+
+        .button--plain.button--on-dark {
+            color: var(--c-white);
+        }
+
+        .button--plain.button--on-dark:hover {
+            background: rgba(255, 255, 255, .1);
+        }
+
+        /* --- link: no box at all, so it can sit in a row of copy --- */
+        .button--link {
+            justify-content: flex-start;
+            height: auto;
+            padding: 0;
+            border: 0;
+            background: transparent;
+            color: var(--c-accent);
+        }
+
+        .button--link:hover {
+            opacity: .72;
+        }
+
+        .button--link.button--on-dark {
+            color: var(--c-lav);
+        }
+
+        /* --- adaptive ink: the script samples the ground behind the button --- */
+        .button[data-adaptive]:hover {
+            background: rgba(150, 150, 150, .14);
+        }
+
+        /* =========================================================
+           COMPONENTS — value card (Value Card.dc.html)
+           At rest only the title shows, bottom-left; on hover the text block rises
+           and the description opens under it, the light card turns into the dark
+           variant, and the five rings behind the icon drift outward continuously
+           (each ring grows into the next one's diameter and takes over its opacity,
+           so the loop restart is invisible). On leave the rings are eased back from
+           wherever the drift had them — see the "Value card rings" script.
+           --dark is the dark tone; --open pins the copy open (reveal="always").
+        ========================================================= */
+        .value_card {
+            --vc-pad: clamp(26px, 2.6vw, 34px);
+            position: relative;
+            height: clamp(228px, 18.5vw, 260px);
+            padding: 0;
+            overflow: hidden;
+            border: none;
+            border-radius: var(--r-2xl);
+            background: linear-gradient(185deg, rgba(234, 234, 242, .72) 0%, rgba(234, 234, 242, 0) 100%);
+            font-family: var(--font-body);
+        }
+
+        .value_card--dark {
+            border: 1px solid rgba(255, 255, 255, .1);
+            background: var(--grad-card-dark);
+        }
+
+        .value_card--short {
+            height: clamp(230px, 17vw, 252px);
+        }
+
+        /* the light grey ramp at its hover angle, kept on its own layer */
+        .value_card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            border-radius: inherit;
+            background-image: linear-gradient(235deg, rgba(234, 234, 242, .72) 0%, rgba(234, 234, 242, .34) 34%, rgba(234, 234, 242, 0) 62%);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity var(--dur-slow) var(--ease-out-quint);
+        }
+
+        .value_card--dark::before {
+            display: none;
+        }
+
+        .value_card_dark {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            border: 1px solid rgba(255, 255, 255, .1);
+            border-radius: inherit;
+            background: var(--grad-card-dark);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity var(--dur-slow) var(--ease-out-quint);
+        }
+
+        .value_card_rings {
+            position: absolute;
+            top: clamp(46px, 4.6vw, 58px);
+            right: clamp(46px, 4.6vw, 58px);
+            z-index: 1;
+            width: 0;
+            height: 0;
+            color: rgba(123, 82, 199, .13);
+            pointer-events: none;
+        }
+
+        .value_card--dark .value_card_rings {
+            color: rgba(183, 155, 255, .3);
+        }
+
+        .value_card_rings > span {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            border: 1px solid currentColor;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: transform .75s var(--ease-out-quint), opacity .55s ease;
+        }
+
+        .value_card_ring--1 { --s: 1.643; --o0: 0; --o1: .9; width: 56px; height: 56px; opacity: 0; }
+        .value_card_ring--2 { --s: 1.674; --o0: .9; --o1: .58; width: 92px; height: 92px; opacity: .9; }
+        .value_card_ring--3 { --s: 1.468; --o0: .58; --o1: .34; width: 154px; height: 154px; opacity: .58; }
+        .value_card_ring--4 { --s: 1.363; --o0: .34; --o1: .16; width: 226px; height: 226px; opacity: .34; }
+        .value_card_ring--5 { --s: 1.363; --o0: .16; --o1: 0; width: 308px; height: 308px; opacity: .16; }
+
+        .value_card[data-drifting] .value_card_rings > span {
+            animation: value_card_drift 1.5s linear infinite;
+        }
+
+        .value_card_icon {
+            position: absolute;
+            top: var(--vc-pad);
+            right: var(--vc-pad);
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: clamp(40px, 3.8vw, 50px);
+            height: clamp(40px, 3.8vw, 50px);
+            transition: transform .5s var(--ease-out-quint), opacity .4s ease;
+        }
+
+        .value_card_icon img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .value_card_column {
+            position: absolute;
+            left: var(--vc-pad);
+            right: var(--vc-pad);
+            top: calc(100% - var(--vc-pad));
+            z-index: 1;
+            display: block;
+            transform: translateY(-100%);
+            transition: top .55s var(--ease-out-quint), transform .55s var(--ease-out-quint);
+        }
+
+        .value_card_title {
+            width: min-content;
+            margin: 0;
+            padding-right: clamp(56px, 5.6vw, 72px);
+            color: var(--c-ink);
+            transition: color var(--dur-slow) ease;
+        }
+
+        .value_card--dark .value_card_title {
+            color: var(--c-white);
+        }
+
+        .value_card_body {
+            display: grid;
+            grid-template-rows: 0fr;
+            margin-top: 0;
+            opacity: 0;
+            transform: translateY(8px);
+            transition:
+                margin-top var(--dur-slow) var(--ease-out-quint),
+                grid-template-rows var(--dur-slow) var(--ease-out-quint),
+                opacity var(--dur-slow) var(--ease-out-quint) .06s,
+                transform var(--dur-slow) var(--ease-out-quint) .06s;
+        }
+
+        .value_card_body > * {
+            min-height: 0;
+            overflow: hidden;
+        }
+
+        .value_card_copy {
+            display: block;
+            margin-right: 8px;
+            color: var(--c-ink-60);
+            text-wrap: pretty;
+            transition: color var(--dur-slow) ease;
+        }
+
+        .value_card--dark .value_card_copy {
+            color: rgba(255, 255, 255, .62);
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            .value_card:not(.value_card--dark):hover .value_card_dark { opacity: 1; }
+            .value_card:not(.value_card--dark):hover .value_card_rings { color: rgba(183, 155, 255, .3); }
+            .value_card:not(.value_card--dark):hover .value_card_title { color: var(--c-white); }
+            .value_card:not(.value_card--dark):hover .value_card_copy { color: rgba(255, 255, 255, .62); }
+
+            .value_card:hover .value_card_column {
+                top: calc(100% - 16px);
+            }
+
+            .value_card:not(.value_card--dark):hover .value_card_column {
+                transform: translateY(calc(-100% - 8px));
+            }
+
+            .value_card:hover .value_card_body {
+                grid-template-rows: 1fr;
+                margin-top: 8px;
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* touch has no hover: the full card is shown at rest */
+        @media (hover: none), (pointer: coarse) {
+            .value_card .value_card_column {
+                top: calc(100% - 16px);
+            }
+
+            .value_card .value_card_body {
+                grid-template-rows: 1fr;
+                margin-top: 8px;
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        /* reveal="always": the hovered geometry, permanently */
+        .value_card--open .value_card_column {
+            top: calc(100% - 16px);
+        }
+
+        .value_card--open .value_card_body {
+            grid-template-rows: 1fr;
+            margin-top: 8px;
+            opacity: 1;
+            transform: none;
+        }
+
+        /* =========================================================
+           COMPONENTS — partner card (Partner Card.dc.html)
+           Directory tile. At rest: a brand-tinted bed with the mark centred, the
+           positioning line in the white strip and an icon-only arrow. Open (the
+           pointer inside the card's static box, or focus inside): the bed fills
+           the card, the mark drops into the top-left pad, the heading rises, the
+           copy and text link fade in, and the inner layer lifts 6px. The open state
+           is driven by geometry ([data-hot], "Partner card" script), not :hover,
+           so a pointer at the edge cannot make it oscillate as the layer lifts.
+        ========================================================= */
+        .partner_card {
+            --pc-pad: clamp(30px, 3vw, 38px);
+            position: relative;
+            z-index: 1;
+            height: clamp(324px, 24vw, 336px);
+            overflow: visible;
+            border: 0;
+            border-radius: var(--r-2xl);
+            background: transparent;
+            font-family: var(--font-body);
+        }
+
+        .partner_card[data-hot],
+        .partner_card:focus-within {
+            z-index: 2;
+        }
+
+        .partner_card_link {
+            position: absolute;
+            inset: 0;
+            display: block;
+            overflow: hidden;
+            border: var(--border-light);
+            border-radius: var(--r-2xl);
+            background: var(--surface-light);
+            color: inherit;
+            text-decoration: none;
+            box-shadow: 0 0 0 0 rgba(24, 10, 43, 0), 0 0 0 rgba(26, 10, 58, 0);
+            transition:
+                transform .5s var(--ease-out-quint),
+                border-color .4s ease,
+                box-shadow .5s var(--ease-out-quint);
+        }
+
+        .partner_card_link:hover {
+            color: inherit;
+        }
+
+        .partner_card_link:focus-visible {
+            outline: 2px solid #b79bff;
+            outline-offset: -4px;
+        }
+
+        .partner_card[data-hot] .partner_card_link,
+        .partner_card:focus-within .partner_card_link {
+            border-color: transparent;
+            box-shadow: 0 4px 10px -4px rgba(24, 10, 43, .1), var(--shadow-card);
+            transform: translateY(-6px);
+        }
+
+        .partner_card_bed {
+            position: absolute;
+            left: 8px;
+            right: 8px;
+            top: 8px;
+            bottom: 80px;
+            display: block;
+            border-radius: 18px;
+            background: var(--pc-tint, #f4f4f7);
+            transition: bottom .55s var(--ease-out-quint);
+        }
+
+        .partner_card--optimove { --pc-tint: var(--brand-optimove-pastel); }
+        .partner_card--solitics { --pc-tint: var(--brand-solitics-pastel); }
+
+        .partner_card_bed::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 12%, rgba(255, 255, 255, .55) 62%, #fff 100%);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .5s ease .08s;
+        }
+
+        .partner_card[data-hot] .partner_card_bed,
+        .partner_card:focus-within .partner_card_bed {
+            bottom: 8px;
+        }
+
+        .partner_card[data-hot] .partner_card_bed::after,
+        .partner_card:focus-within .partner_card_bed::after {
+            opacity: 1;
+        }
+
+        .partner_card_logo {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 1;
+            display: block;
+            width: auto;
+            height: 45px;
+            max-width: 78%;
+            object-fit: contain;
+            transform: translate(-50%, -50%);
+            transition:
+                left .5s var(--ease-out-quint),
+                top .5s var(--ease-out-quint),
+                transform .5s var(--ease-out-quint),
+                height .5s var(--ease-out-quint);
+        }
+
+        .partner_card[data-hot] .partner_card_logo,
+        .partner_card:focus-within .partner_card_logo {
+            left: calc(var(--pc-pad) - 7px);
+            top: calc(var(--pc-pad) - 8px);
+            height: 34px;
+            transform: translate(0, 0);
+        }
+
+        .partner_card_column {
+            position: absolute;
+            left: var(--pc-pad);
+            right: var(--pc-pad);
+            top: calc(100% - 40px);
+            display: block;
+            transform: translate(-12px, calc(-50% - 1px));
+            transition: top .55s var(--ease-out-quint), transform .55s var(--ease-out-quint);
+        }
+
+        .partner_card[data-hot] .partner_card_column,
+        .partner_card:focus-within .partner_card_column {
+            top: calc(var(--pc-pad) + 54px);
+            transform: translate(0, 0);
+        }
+
+        .partner_card_heading {
+            display: block;
+            padding-right: 56px;
+            font-weight: var(--fw-semibold);
+            line-height: 1.28;
+            color: #3c3948;
+            text-wrap: pretty;
+        }
+
+        /* the copy opens on its own row track, so it resolves to the text's real height */
+        .partner_card_body {
+            display: grid;
+            grid-template-rows: 0fr;
+            margin-top: 0;
+            opacity: 0;
+            transition:
+                grid-template-rows var(--dur-slow) var(--ease-out-quint),
+                margin-top var(--dur-slow) var(--ease-out-quint),
+                opacity .38s ease;
+        }
+
+        .partner_card_body > * {
+            min-height: 0;
+            overflow: hidden;
+        }
+
+        .partner_card[data-hot] .partner_card_body,
+        .partner_card:focus-within .partner_card_body {
+            grid-template-rows: 1fr;
+            margin-top: 12px;
+            opacity: 1;
+        }
+
+        .partner_card_copy {
+            display: block;
+            color: var(--c-ink-55);
+            text-wrap: pretty;
+        }
+
+        .partner_card_foot {
+            position: absolute;
+            left: var(--pc-pad);
+            right: var(--pc-pad);
+            bottom: calc(var(--pc-pad) - 10px);
+            display: block;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(16px) scale(.965);
+            transform-origin: left bottom;
+            transition: opacity .22s ease, transform .28s ease;
+        }
+
+        .partner_card[data-hot] .partner_card_foot,
+        .partner_card:focus-within .partner_card_foot {
+            opacity: 1;
+            pointer-events: auto;
+            transform: none;
+            transition: opacity .4s ease .12s, transform .5s var(--ease-out-quint) .12s;
+        }
+
+        .partner_card_rule {
+            display: block;
+            height: 1px;
+            margin-bottom: 16px;
+            background: linear-gradient(to right, rgba(21, 19, 28, .16), rgba(21, 19, 28, .04));
+            transform: scaleX(0);
+            transform-origin: left center;
+            transition: transform .25s ease;
+        }
+
+        .partner_card[data-hot] .partner_card_rule,
+        .partner_card:focus-within .partner_card_rule {
+            transform: scaleX(1);
+            transition: transform .55s var(--ease-out-quint) .18s;
+        }
+
+        .partner_card_round {
+            position: absolute;
+            right: calc(var(--pc-pad) - 12px);
+            bottom: 18px;
+            display: block;
+            transition: opacity .3s ease, transform .4s var(--ease-out-quint);
+        }
+
+        .partner_card[data-hot] .partner_card_round,
+        .partner_card:focus-within .partner_card_round {
+            opacity: 0;
+            transform: translateX(10px);
+        }
+
+        /* =========================================================
+           COMPONENTS — speaker card (Speaker Card.dc.html)
+           Square portrait tile (blue, or --pink), name and role. Two variants:
+           --linkedin hangs one round icon button beside the name and the whole
+           card reads as a link; the contacts variant puts a rule under the name
+           and a row of three round outline buttons (copy email, Telegram,
+           LinkedIn) beneath it. The portrait zooms to 1.06 on hover.
+        ========================================================= */
+        .speaker_card {
+            display: block;
+            cursor: default;
+        }
+
+        .speaker_card--linkedin {
+            cursor: pointer;
+        }
+
+        .speaker_card_photo {
+            position: relative;
+            display: block;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            border-radius: 18px;
+            background: linear-gradient(180deg, #eff7fe 0%, #d8e9f8 100%);
+        }
+
+        .speaker_card--pink .speaker_card_photo {
+            background: linear-gradient(180deg, #f6f1fd 0%, #e4d9f7 100%);
+        }
+
+        .speaker_card_glow {
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 78%;
+            height: 34%;
+            border-radius: 50% 50% 0 0;
+            background: radial-gradient(ellipse at bottom, rgba(0, 183, 250, .2), transparent 70%);
+            transform: translateX(-50%);
+            pointer-events: none;
+        }
+
+        .speaker_card--pink .speaker_card_glow {
+            background: radial-gradient(ellipse at bottom, rgba(123, 82, 199, .2), transparent 70%);
+        }
+
+        .speaker_card_photo img {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            display: block;
+            width: 125%;
+            max-width: none;
+            height: 125%;
+            object-fit: contain;
+            object-position: top center;
+            transform: translateX(-50%);
+            transition: transform .6s var(--ease-out-quint);
+        }
+
+        .speaker_card:hover .speaker_card_photo img {
+            transform: translateX(-50%) scale(1.06);
+        }
+
+        .speaker_card_head {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 14px;
+            padding-top: clamp(16px, 1.8vw, 22px);
+        }
+
+        .speaker_card_names {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            min-width: 0;
+        }
+
+        .speaker_card_name {
+            margin: 0;
+            font-family: var(--font-heading);
+            font-size: clamp(17px, 1.6vw, 21px);
+            font-weight: var(--fw-medium);
+            line-height: 1.2;
+            letter-spacing: -.02em;
+            color: var(--c-ink);
+            transition: color .25s ease;
+        }
+
+        .speaker_card_role {
+            font-size: 13.5px;
+            line-height: 1.4;
+            color: var(--c-grey);
+        }
+
+        .speaker_card--linkedin:hover .speaker_card_name {
+            color: var(--c-accent);
+        }
+
+        .speaker_card--linkedin:hover .button {
+            background: var(--c-accent);
+            border-color: var(--c-accent);
+            color: var(--c-white);
+        }
+
+        .speaker_card_contacts {
+            display: block;
+            padding-top: clamp(14px, 1.5vw, 18px);
+        }
+
+        .speaker_card_rule {
+            display: block;
+            height: 1px;
+            background: var(--grad-rule-light);
+        }
+
+        .speaker_card_row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+            padding-top: clamp(14px, 1.5vw, 18px);
+        }
+
+        .speaker_card_side {
+            flex: 0 0 auto;
+            display: inline-flex;
+        }
+
+        /* dark tooltip above the mail button: the address, then "Copied" after a click */
+        .speaker_card_copy {
+            position: relative;
+            display: inline-flex;
+            padding: 0;
+            border: 0;
+            background: none;
+            cursor: pointer;
+        }
+
+        .speaker_card_tip {
+            position: absolute;
+            left: 50%;
+            bottom: calc(100% + 10px);
+            z-index: 6;
+            padding: 7px 11px;
+            border-radius: 9px;
+            background: #1b1229;
+            color: var(--c-white);
+            font-size: 12px;
+            font-weight: var(--fw-semibold);
+            line-height: 1.2;
+            letter-spacing: -.01em;
+            white-space: nowrap;
+            box-shadow: 0 10px 24px rgba(12, 6, 28, .24);
+            opacity: 0;
+            pointer-events: none;
+            transform: translate(-50%, 4px);
+            transition: opacity .2s ease, transform .2s ease;
+        }
+
+        .speaker_card_tip::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            border: 5px solid transparent;
+            border-top-color: #1b1229;
+            transform: translateX(-50%);
+        }
+
+        .speaker_card_copy:hover .speaker_card_tip,
+        .speaker_card_copy:focus-visible .speaker_card_tip,
+        .speaker_card_copy[data-copied="true"] .speaker_card_tip {
+            opacity: 1;
+            transform: translate(-50%, 0);
+        }
+
+        /* =========================================================
+           COMPONENTS — cards sheet
+        ========================================================= */
+        .cards_hero_inner {
+            max-width: 1180px;
+        }
+
+        .cards_hero_title {
+            max-width: 15ch;
+        }
+
+        .cards_hero_lede {
+            max-width: 66ch;
+        }
+
+        .cards_section {
+            padding: 76px var(--ds-sheet-pad) 60px;
+            background: linear-gradient(180deg, #eaeaf2, #fff 26%);
+        }
+
+        .cards_inner {
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+
+        .cards_spec {
+            display: grid;
+            grid-template-columns: 230px 1fr;
+            gap: 30px;
+            align-items: start;
+            padding: 38px 0;
+            border-top: 1px solid #e0dbeb;
+        }
+
+        .cards_spec .ds_spec_note code {
+            font-size: .9em;
+        }
+
+        .cards_demo {
+            min-width: 0;
+        }
+
+        .cards_demo--pair {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .cards_demo--people {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 26px;
+            align-items: start;
+        }
+
+        .cards_demo--link {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .cards_spec_link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 20px;
+            border: 1px solid #e0dbeb;
+            border-radius: 12px;
+            background: #faf8fd;
+            color: var(--c-accent);
+            font-size: 13px;
+            font-weight: var(--fw-semibold);
+            letter-spacing: -.01em;
+            text-decoration: none;
+            transition: border-color .2s ease, background .2s ease;
+        }
+
+        /* =========================================================
+           ANIMATIONS
+        ========================================================= */
+        @property --button-angle {
+            syntax: '<angle>';
+            inherits: false;
+            initial-value: 0deg;
+        }
+
+        @keyframes button_shine {
+            to {
+                --button-angle: 360deg;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .button--primary::before {
+                animation: none;
+            }
+        }
+
+        @keyframes value_card_drift {
+            from { transform: translate(-50%, -50%) scale(1); opacity: var(--o0, 0); }
+            to { transform: translate(-50%, -50%) scale(var(--s, 1.4)); opacity: var(--o1, 0); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .value_card[data-drifting] .value_card_rings > span {
+                animation: none;
+            }
+        }
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+        @media (max-width: 900px) {
+            .ds_nav {
+                display: none;
+            }
+
+            .ds_page {
+                margin-left: 0;
+            }
+        }
+
+        @media print {
+            .ds_nav {
+                display: none;
+            }
+        }
+
+        @media (max-width: 860px) {
+            .ds_spec {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+        }
+
+        @media (max-width: 1080px) {
+            .partner_card_logo {
+                height: 40px;
+            }
+        }
+
+        /* touch leaves :hover stuck on, so every open-state property is pinned back to rest */
+        @media (hover: none), (pointer: coarse) {
+            .partner_card .partner_card_bed { bottom: 80px; }
+            .partner_card .partner_card_bed::after { opacity: 0; }
+
+            .partner_card .partner_card_logo {
+                left: 50%;
+                top: 50%;
+                height: 45px;
+                transform: translate(-50%, -50%);
+            }
+
+            .partner_card .partner_card_column {
+                top: calc(100% - 40px);
+                transform: translate(-12px, calc(-50% - 1px));
+            }
+
+            .partner_card .partner_card_body,
+            .partner_card .partner_card_foot {
+                display: none;
+            }
+
+            .partner_card .partner_card_round {
+                opacity: 1;
+                transform: none;
+            }
+
+            .partner_card:focus-within .partner_card_link {
+                border-color: #eee9f6;
+                box-shadow: 0 0 0 0 rgba(24, 10, 43, 0), 0 0 0 rgba(26, 10, 58, 0);
+                transform: none;
+            }
+
+            .partner_card:focus-within {
+                z-index: 1;
+            }
+        }
+
+        @media (max-width: 1100px) {
+            .cards_spec {
+                grid-template-columns: 1fr;
+                gap: 22px;
+            }
+
+            .cards_demo--pair,
+            .cards_demo--people {
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            }
+        }
+
+        @media (max-width: 900px) {
+            .cards_spec {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a class="visually_hidden" href="#main">Skip to content</a>
+
+    <nav class="ds_nav" aria-label="Design system" data-ds-nav>
+        <a class="ds_nav_home" href="index.html">
+            <span class="ds_nav_kicker">Hybrid Interaction</span>
+            <span class="ds_nav_title">Design System</span>
+            <span class="ds_nav_home_mark" aria-hidden="true"></span>
+        </a>
+
+        <div class="ds_nav_search">
+            <svg class="ds_nav_search_icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="m16.5 16.5 4 4"></path></svg>
+            <label class="visually_hidden" for="ds-nav-filter">Filter pages</label>
+            <input class="ds_nav_search_input" id="ds-nav-filter" type="search" autocomplete="off" placeholder="Filter…" data-ds-nav-filter>
+        </div>
+
+        <button class="ds_nav_group ds_nav_group--first" type="button" aria-expanded="true" aria-controls="ds-nav-foundations" data-ds-nav-group>
+            <span>Foundations</span>
+            <svg class="ds_nav_caret" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9 12 15 18 9"></path></svg>
+        </button>
+        <div class="ds_nav_list" id="ds-nav-foundations">
+            <a class="ds_nav_link" href="typography.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">F</span>
+                <span>Typography</span>
+            </a>
+            <a class="ds_nav_link" href="colour.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">F</span>
+                <span>Colour</span>
+            </a>
+            <a class="ds_nav_link" href="motion.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">F</span>
+                <span>Motion</span>
+            </a>
+            <a class="ds_nav_link" href="icon-library.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">F</span>
+                <span>Icon Library</span>
+            </a>
+            <a class="ds_nav_link" href="3d-icons.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">F</span>
+                <span>3D Icons</span>
+            </a>
+            <a class="ds_nav_link" href="3d-icon-lab.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">F</span>
+                <span>3D Icon Lab</span>
+            </a>
+            <a class="ds_nav_link" href="ui-illustrations-lab.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">F</span>
+                <span>UI Illustrations Lab</span>
+            </a>
+            <a class="ds_nav_link" href="image-guide.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">F</span>
+                <span>Image Guide</span>
+            </a>
+        </div>
+
+        <button class="ds_nav_group" type="button" aria-expanded="true" aria-controls="ds-nav-atoms" data-ds-nav-group>
+            <span>Atoms</span>
+            <svg class="ds_nav_caret" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9 12 15 18 9"></path></svg>
+        </button>
+        <div class="ds_nav_list" id="ds-nav-atoms">
+            <a class="ds_nav_link" href="button-library.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">A</span>
+                <span>Button Library</span>
+            </a>
+            <a class="ds_nav_link" href="tabs.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">A</span>
+                <span>Tabs</span>
+            </a>
+            <a class="ds_nav_link" href="icon-tile.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">A</span>
+                <span>Icon Tile</span>
+            </a>
+            <a class="ds_nav_link" href="pointer-tilt.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">A</span>
+                <span>Pointer Tilt</span>
+            </a>
+            <a class="ds_nav_link" href="figure.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">M</span>
+                <span>Figure</span>
+            </a>
+        </div>
+
+        <button class="ds_nav_group" type="button" aria-expanded="true" aria-controls="ds-nav-molecules" data-ds-nav-group>
+            <span>Molecules</span>
+            <svg class="ds_nav_caret" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9 12 15 18 9"></path></svg>
+        </button>
+        <div class="ds_nav_list" id="ds-nav-molecules">
+            <a class="ds_nav_link" href="article-blocks.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">M</span>
+                <span>Article blocks</span>
+            </a>
+            <a class="ds_nav_link" href="cards.html" aria-current="page" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">M</span>
+                <span>Cards</span>
+            </a>
+            <a class="ds_nav_link" href="case-card.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">M</span>
+                <span>Case Card</span>
+            </a>
+            <a class="ds_nav_link" href="stat-row.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">M</span>
+                <span>Stat Row</span>
+            </a>
+            <a class="ds_nav_link" href="logo-sphere.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">M</span>
+                <span>Logo Sphere</span>
+            </a>
+            <a class="ds_nav_link" href="menu-panel-lab.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">M</span>
+                <span>Menu Panel</span>
+            </a>
+        </div>
+
+        <button class="ds_nav_group" type="button" aria-expanded="false" aria-controls="ds-nav-sections" data-ds-nav-group>
+            <span>Sections</span>
+            <svg class="ds_nav_caret" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9 12 15 18 9"></path></svg>
+        </button>
+        <div class="ds_nav_list" id="ds-nav-sections" hidden>
+            <a class="ds_nav_link" href="site-header.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">S</span>
+                <span>Site Header</span>
+                <svg class="ds_nav_out" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7 H17 V16"></path></svg>
+            </a>
+            <a class="ds_nav_link" href="site-footer.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">S</span>
+                <span>Site Footer</span>
+                <svg class="ds_nav_out" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7 H17 V16"></path></svg>
+            </a>
+        </div>
+
+        <button class="ds_nav_group" type="button" aria-expanded="false" aria-controls="ds-nav-files" data-ds-nav-group>
+            <span>Component files</span>
+            <svg class="ds_nav_caret" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9 12 15 18 9"></path></svg>
+        </button>
+        <div class="ds_nav_list" id="ds-nav-files" hidden>
+            <a class="ds_nav_link" href="component-caption.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">C</span>
+                <span>Caption / Eyebrow</span>
+                <svg class="ds_nav_out" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7 H17 V16"></path></svg>
+            </a>
+            <a class="ds_nav_link" href="component-button.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">C</span>
+                <span>Button</span>
+                <svg class="ds_nav_out" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7 H17 V16"></path></svg>
+            </a>
+            <a class="ds_nav_link" href="component-accent-line.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">C</span>
+                <span>Accent Line</span>
+                <svg class="ds_nav_out" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7 H17 V16"></path></svg>
+            </a>
+            <a class="ds_nav_link" href="component-menu-row.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">C</span>
+                <span>Menu Row</span>
+                <svg class="ds_nav_out" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7 H17 V16"></path></svg>
+            </a>
+            <a class="ds_nav_link" href="component-menu-panel.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">C</span>
+                <span>Menu Panel</span>
+                <svg class="ds_nav_out" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7 H17 V16"></path></svg>
+            </a>
+            <a class="ds_nav_link" href="component-numbered-row.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">C</span>
+                <span>Numbered Row</span>
+                <svg class="ds_nav_out" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7 H17 V16"></path></svg>
+            </a>
+            <a class="ds_nav_link" href="component-news-card.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">C</span>
+                <span>News Card</span>
+                <svg class="ds_nav_out" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7 H17 V16"></path></svg>
+            </a>
+            <a class="ds_nav_link" href="component-filter-tabs.html" data-ds-nav-link>
+                <span class="ds_nav_dot" aria-hidden="true">C</span>
+                <span>Filter Tabs</span>
+                <svg class="ds_nav_out" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7 H17 V16"></path></svg>
+            </a>
+        </div>
+
+        <div class="ds_nav_tail" aria-hidden="true"></div>
+        <div class="ds_nav_fade" aria-hidden="true"></div>
+        <a class="ds_nav_all" href="site-navigation.html">← All Site Pages</a>
+    </nav>
+
+    <main class="ds_page" id="main">
+
+        <!-- ========================= HERO ========================= -->
+        <section class="ds_hero" aria-labelledby="page-title">
+            <div class="ds_hero_glow" aria-hidden="true"></div>
+            <div class="ds_hero_inner cards_hero_inner">
+                <p class="ds_hero_eyebrow eyebrow">Molecules · Cards</p>
+                <h1 class="ds_hero_title cards_hero_title text_display" id="page-title">Every card in one place</h1>
+                <p class="ds_hero_lede cards_hero_lede text_body_lg">Each is its own component file, and the pages import them — a card is edited here once and every page follows. Hover the live examples to see their open state.</p>
+            </div>
+        </section>
+
+        <!-- ========================= CARDS ========================= -->
+        <section class="cards_section" aria-label="Card components">
+            <div class="cards_inner">
+
+                <div class="cards_spec">
+                    <div>
+                        <h2 class="ds_spec_name">Partner Card</h2>
+                        <code class="ds_spec_class">Partner Card.dc.html</code>
+                        <p class="ds_spec_note">Directory tile. At rest: brand-tinted bed, mark centred, positioning line in the white strip, icon-only arrow. On hover the bed fills the card, the mark drops into the top-left pad, the copy and text link fade in. Hit box is static, so the state cannot flicker at the edge.</p>
+                        <p class="ds_spec_used">Partners</p>
+                    </div>
+                    <div class="cards_demo cards_demo--pair">
+                        <article class="partner_card partner_card--optimove">
+                            <a class="partner_card_link" href="partner-page.html?p=optimove">
+                                <span class="partner_card_bed"><img class="partner_card_logo" src="images/logos/partners/optimove.svg" alt="Optimove"></span>
+                                <span class="partner_card_column">
+                                    <span class="partner_card_heading text_body_md">CRM personalisation &amp; lifecycle engagement</span>
+                                    <span class="partner_card_body"><span class="partner_card_copy text_body_sm">We help operators get more from Optimove through CRM strategy, segmentation, lifecycle automation, and hands-on campaign execution.</span></span>
+                                </span>
+                                <span class="partner_card_round">
+                                    <span class="button button--outline button--sm button--icon" aria-hidden="true">
+                                        <span class="button_icon" aria-hidden="true"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+                                    </span>
+                                </span>
+                                <span class="partner_card_foot">
+                                    <span class="partner_card_rule"></span>
+                                    <span class="button button--link" aria-hidden="true">
+                                        <span class="button_label"><span class="button_label_inner"><span>View Integration</span><span aria-hidden="true">View Integration</span></span></span>
+                                        <span class="button_icon" aria-hidden="true"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+                                    </span>
+                                </span>
+                            </a>
+                        </article>
+                        <article class="partner_card partner_card--solitics">
+                            <a class="partner_card_link" href="partner-page.html?p=solitics">
+                                <span class="partner_card_bed"><img class="partner_card_logo" src="images/logos/partners/solitics.svg" alt="Solitics"></span>
+                                <span class="partner_card_column">
+                                    <span class="partner_card_heading text_body_md">Data activation &amp; CRM automation</span>
+                                    <span class="partner_card_body"><span class="partner_card_copy text_body_sm">We combine Solitics' data capabilities with CRM expertise to build smarter segments, personalised journeys, and retention campaigns.</span></span>
+                                </span>
+                                <span class="partner_card_round">
+                                    <span class="button button--outline button--sm button--icon" aria-hidden="true">
+                                        <span class="button_icon" aria-hidden="true"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+                                    </span>
+                                </span>
+                                <span class="partner_card_foot">
+                                    <span class="partner_card_rule"></span>
+                                    <span class="button button--link" aria-hidden="true">
+                                        <span class="button_label"><span class="button_label_inner"><span>View Integration</span><span aria-hidden="true">View Integration</span></span></span>
+                                        <span class="button_icon" aria-hidden="true"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+                                    </span>
+                                </span>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="cards_spec">
+                    <div>
+                        <h2 class="ds_spec_name">Value Card</h2>
+                        <code class="ds_spec_class">Value Card.dc.html</code>
+                        <p class="ds_spec_note">Proposition tile. Icon top-right over drifting rings, heading bottom-left; on hover the heading rises and the copy opens beneath it. Light and dark tones; the light one carries a tinted ramp that turns on hover. <code>reveal="always"</code> pins the copy open &#8212; same geometry as the hovered state &#8212; for quiet sections where the description is the content.</p>
+                        <p class="ds_spec_used">Partners &#183; Case Studies</p>
+                    </div>
+                    <div class="cards_demo cards_demo--pair">
+                        <article class="value_card">
+                            <span class="value_card_dark" aria-hidden="true"></span>
+                            <span class="value_card_rings" aria-hidden="true">
+                                <span class="value_card_ring--1"></span>
+                                <span class="value_card_ring--2"></span>
+                                <span class="value_card_ring--3"></span>
+                                <span class="value_card_ring--4"></span>
+                                <span class="value_card_ring--5"></span>
+                            </span>
+                            <span class="value_card_icon" aria-hidden="true"><img src="images/icons/val-expertise.svg" alt=""></span>
+                            <span class="value_card_column">
+                                <h4 class="value_card_title text_h3">iGaming Expertise</h4>
+                                <span class="value_card_body"><span class="value_card_copy text_body_sm">We bring 20+ years of iGaming experience to help operators implement, use, and optimise CRM, gamification, and engagement solutions.</span></span>
+                            </span>
+                        </article>
+                        <article class="value_card value_card--dark">
+                            <span class="value_card_dark" aria-hidden="true"></span>
+                            <span class="value_card_rings" aria-hidden="true">
+                                <span class="value_card_ring--1"></span>
+                                <span class="value_card_ring--2"></span>
+                                <span class="value_card_ring--3"></span>
+                                <span class="value_card_ring--4"></span>
+                                <span class="value_card_ring--5"></span>
+                            </span>
+                            <span class="value_card_icon" aria-hidden="true"><img src="images/icons/val-network.svg" alt=""></span>
+                            <span class="value_card_column">
+                                <h4 class="value_card_title text_h3">Operator Network</h4>
+                                <span class="value_card_body"><span class="value_card_copy text_body_sm">We work with operators across markets, platforms, and regulatory environments, so we understand what they need from technology partners.</span></span>
+                            </span>
+                        </article>
+                        <article class="value_card value_card--open value_card--short">
+                            <span class="value_card_dark" aria-hidden="true"></span>
+                            <span class="value_card_rings" aria-hidden="true">
+                                <span class="value_card_ring--1"></span>
+                                <span class="value_card_ring--2"></span>
+                                <span class="value_card_ring--3"></span>
+                                <span class="value_card_ring--4"></span>
+                                <span class="value_card_ring--5"></span>
+                            </span>
+                            <span class="value_card_icon" aria-hidden="true"><img src="images/icons/nav-strategy.svg" alt=""></span>
+                            <span class="value_card_column">
+                                <h4 class="value_card_title text_h3">CRM Strategy</h4>
+                                <span class="value_card_body"><span class="value_card_copy text_body_sm">Retention frameworks, lifecycle planning, segmentation, KPI definition.</span></span>
+                            </span>
+                        </article>
+                        <article class="value_card value_card--dark value_card--open value_card--short">
+                            <span class="value_card_dark" aria-hidden="true"></span>
+                            <span class="value_card_rings" aria-hidden="true">
+                                <span class="value_card_ring--1"></span>
+                                <span class="value_card_ring--2"></span>
+                                <span class="value_card_ring--3"></span>
+                                <span class="value_card_ring--4"></span>
+                                <span class="value_card_ring--5"></span>
+                            </span>
+                            <span class="value_card_icon" aria-hidden="true"><img src="images/icons/nav-migration.svg" alt=""></span>
+                            <span class="value_card_column">
+                                <h4 class="value_card_title text_h3">CRM Migration</h4>
+                                <span class="value_card_body"><span class="value_card_copy text_body_sm">Platform transitions, lifecycle preservation, and operational continuity.</span></span>
+                            </span>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="cards_spec">
+                    <div>
+                        <h2 class="ds_spec_name">Speaker Card</h2>
+                        <code class="ds_spec_class">Speaker Card.dc.html</code>
+                        <p class="ds_spec_note">Person card: square portrait tile (blue or <code>tone="pink"</code>), name and role. Two variants — <code>linkedin</code> hangs one icon button beside the name and the whole card links to the profile; <code>contacts</code> puts a rule under the name and the inner pages' share row beneath it at <code>size="xs"</code>, round: email, Telegram, LinkedIn. Pass the portrait as <code>photo</code>, or a <code>slot-id</code> for an editor drop. The name and slot props are <code>name-text</code> / <code>slot-id</code> — <code>name=</code> is the dc-import selector.</p>
+                        <p class="ds_spec_used">Meet the Team · Events – Inner</p>
+                    </div>
+                    <div class="cards_demo cards_demo--people">
+                        <div class="speaker_card">
+                            <span class="speaker_card_photo">
+                                <span class="speaker_card_glow" aria-hidden="true"></span>
+                                <img src="images/team/shahar.png" alt="Shahar Attias" loading="lazy">
+                            </span>
+                            <span class="speaker_card_head">
+                                <span class="speaker_card_names">
+                                    <h3 class="speaker_card_name">Shahar Attias</h3>
+                                    <span class="speaker_card_role">CEO</span>
+                                </span>
+                            </span>
+                            <span class="speaker_card_contacts">
+                                <span class="speaker_card_rule" aria-hidden="true"></span>
+                                <span class="speaker_card_row">
+                                    <button class="speaker_card_copy" type="button" aria-label="Copy email address" data-copy-email="">
+                                        <span class="speaker_card_tip" aria-hidden="true">Email</span>
+                                        <span class="button button--outline button--sm button--icon" aria-hidden="true">
+                                            <span class="button_icon" aria-hidden="true"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M4 4h16a2 2 0 0 1 1.94 1.5l-8.83 5.62a2 2 0 0 1-2.22 0L2.06 5.5A2 2 0 0 1 4 4Z"></path><path d="M22 7.9V18a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7.9l8.06 5.13a3.5 3.5 0 0 0 3.88 0z"></path></svg></span>
+                                        </span>
+                                    </button>
+                                    <a class="button button--outline button--sm button--icon" href="contact.html?t=general" aria-label="Telegram">
+                                        <span class="button_icon" aria-hidden="true"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"></path></svg></span>
+                                    </a>
+                                    <a class="button button--outline button--sm button--icon" href="https://www.linkedin.com/in/igaming/" aria-label="LinkedIn">
+                                        <span class="button_icon" aria-hidden="true"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor" stroke="none"><g transform="translate(2.25 2.25) scale(.2095)"><path d="m11.185.08c-6.181 0-11.184 5.012-11.185 11.179 0 6.173 5.003 11.184 11.186 11.184 6.166 0 11.176-5.011 11.176-11.184 0-6.168-5.011-11.179-11.177-11.179z"></path><path d="m1.538 30.926h19.287v62.054h-19.287z"></path><path d="m69.925 29.383c-9.382 0-15.673 5.144-18.248 10.022h-.258v-8.479h-18.498-.001v62.053h19.27v-30.698c0-8.093 1.541-15.932 11.575-15.932 9.89 0 10.022 9.256 10.022 16.451v30.178h19.273v-34.036c0-16.707-3.605-29.559-23.135-29.559z"></path></g></svg></span>
+                                    </a>
+                                </span>
+                            </span>
+                        </div>
+                        <div class="speaker_card speaker_card--linkedin speaker_card--pink">
+                            <span class="speaker_card_photo">
+                                <span class="speaker_card_glow" aria-hidden="true"></span>
+                                <img src="images/team/nelli.png" alt="Nelli Zhamagortsyan" loading="lazy">
+                            </span>
+                            <span class="speaker_card_head">
+                                <span class="speaker_card_names">
+                                    <h3 class="speaker_card_name">Nelli Zhamagortsyan</h3>
+                                    <span class="speaker_card_role">Head of Business Development</span>
+                                </span>
+                                <span class="speaker_card_side">
+                                    <span class="button button--secondary button--icon" aria-label="LinkedIn" aria-hidden="true">
+                                        <span class="button_icon" aria-hidden="true"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor" stroke="none"><g transform="translate(2.25 2.25) scale(.2095)"><path d="m11.185.08c-6.181 0-11.184 5.012-11.185 11.179 0 6.173 5.003 11.184 11.186 11.184 6.166 0 11.176-5.011 11.176-11.184 0-6.168-5.011-11.179-11.177-11.179z"></path><path d="m1.538 30.926h19.287v62.054h-19.287z"></path><path d="m69.925 29.383c-9.382 0-15.673 5.144-18.248 10.022h-.258v-8.479h-18.498-.001v62.053h19.27v-30.698c0-8.093 1.541-15.932 11.575-15.932 9.89 0 10.022 9.256 10.022 16.451v30.178h19.273v-34.036c0-16.707-3.605-29.559-23.135-29.559z"></path></g></svg></span>
+                                    </span>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards_spec">
+                    <div>
+                        <h2 class="ds_spec_name">Case Card</h2>
+                        <code class="ds_spec_class">Case Card.dc.html</code>
+                        <p class="ds_spec_note">Case study card in three variants: featured, standard and compact. Documented on its own page, where the variants can be shown at their real proportions.</p>
+                        <p class="ds_spec_used">Case Studies · Services v2</p>
+                    </div>
+                    <div class="cards_demo cards_demo--link">
+                        <a class="cards_spec_link" href="case-card.html">Open the Case Card spec<span aria-hidden="true">→</span></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        /* =========================================================
+           Design-system navigation
+           Group headers open and close their own list; the filter field narrows
+           the links live, opens every group holding a hit, hides a group with
+           none, and restores the manual open/closed state once it is cleared.
+        ========================================================= */
+        (function () {
+            const nav = document.querySelector('[data-ds-nav]');
+            if (!nav) return;
+
+            const groups = [...nav.querySelectorAll('[data-ds-nav-group]')].map(head => ({
+                head,
+                list: document.getElementById(head.getAttribute('aria-controls'))
+            }));
+
+            const syncList = ({ head, list }) => {
+                list.hidden = head.getAttribute('aria-expanded') !== 'true';
+            };
+
+            groups.forEach(group => {
+                group.head.addEventListener('click', () => {
+                    const open = group.head.getAttribute('aria-expanded') === 'true';
+                    group.head.setAttribute('aria-expanded', String(!open));
+                    syncList(group);
+                });
+            });
+
+            const filter = nav.querySelector('[data-ds-nav-filter]');
+            if (!filter) return;
+
+            filter.addEventListener('input', () => {
+                const query = filter.value.trim().toLowerCase();
+                nav.querySelectorAll('[data-ds-nav-link]').forEach(link => {
+                    link.hidden = Boolean(query) && !link.textContent.toLowerCase().includes(query);
+                });
+                groups.forEach(group => {
+                    const hasHit = [...group.list.querySelectorAll('[data-ds-nav-link]')].some(link => !link.hidden);
+                    group.head.hidden = Boolean(query) && !hasHit;
+                    if (query) group.list.hidden = !hasHit;
+                    else syncList(group);
+                });
+            });
+        })();
+
+        /* =========================================================
+           Value card rings
+           The rings drift only while the pointer is over the card. CSS cannot ease
+           out of a keyframe animation (removing it snaps to the base value), so on
+           leave each ring is pinned where the drift has it, the animation is
+           dropped, and the pinned values are transitioned back to rest
+           (transform .8s ease-out-quint, opacity .6s) two frames later.
+           Touch devices never arm it.
+        ========================================================= */
+        (function () {
+            const cards = document.querySelectorAll('.value_card');
+            if (!cards.length) return;
+            if (window.matchMedia('(hover: none), (pointer: coarse)').matches) return;
+
+            const EASE = 'transform .8s cubic-bezier(.16,1,.3,1), opacity .6s ease';
+
+            cards.forEach(card => {
+                const rings = [...card.querySelectorAll('.value_card_rings > span')];
+                rings.forEach(ring => {
+                    ring.dataset.rest = getComputedStyle(ring).opacity;
+                });
+                let clear = 0;
+
+                card.addEventListener('pointerenter', () => {
+                    clearTimeout(clear);
+                    rings.forEach(ring => {
+                        ring.style.transition = 'none';
+                    });
+                    card.setAttribute('data-drifting', '');
+                });
+
+                card.addEventListener('pointerleave', () => {
+                    const frozen = rings.map(ring => {
+                        const style = getComputedStyle(ring);
+                        return { ring, transform: style.transform, opacity: style.opacity };
+                    });
+                    frozen.forEach(({ ring, transform, opacity }) => {
+                        ring.style.transition = 'none';
+                        ring.style.transform = transform;
+                        ring.style.opacity = opacity;
+                    });
+                    card.removeAttribute('data-drifting');
+                    requestAnimationFrame(() => requestAnimationFrame(() => {
+                        frozen.forEach(({ ring }) => {
+                            ring.style.transition = EASE;
+                            ring.style.transform = 'translate(-50%, -50%) scale(1)';
+                            ring.style.opacity = ring.dataset.rest;
+                        });
+                    }));
+                    clear = setTimeout(() => {
+                        rings.forEach(ring => {
+                            ring.style.transition = '';
+                        });
+                    }, 900);
+                });
+            });
+        })();
+
+        /* =========================================================
+           Partner card — open state by geometry
+           The card is "hot" while the pointer is inside its static box. The box
+           never moves (only the inner layer lifts), so the state cannot flicker
+           at the edge. Touch devices rely on focus only.
+        ========================================================= */
+        (function () {
+            const cards = [...document.querySelectorAll('.partner_card')];
+            if (!cards.length) return;
+            if (window.matchMedia('(hover: none)').matches) return;
+
+            window.addEventListener('pointermove', event => {
+                cards.forEach(card => {
+                    const box = card.getBoundingClientRect();
+                    const inside = event.clientX >= box.left && event.clientX <= box.right
+                        && event.clientY >= box.top && event.clientY <= box.bottom;
+                    if (inside) card.setAttribute('data-hot', '');
+                    else card.removeAttribute('data-hot');
+                });
+            }, { passive: true });
+        })();
+
+        /* =========================================================
+           Speaker card — copy email
+           The mail button copies the address instead of opening a mail client;
+           its tooltip shows the address, then "Copied" for 1.8s.
+        ========================================================= */
+        (function () {
+            document.querySelectorAll('[data-copy-email]').forEach(button => {
+                const tip = button.querySelector('.speaker_card_tip');
+                const label = tip ? tip.textContent : '';
+                let timer = 0;
+
+                const done = () => {
+                    button.setAttribute('data-copied', 'true');
+                    if (tip) tip.textContent = 'Copied';
+                    clearTimeout(timer);
+                    timer = setTimeout(() => {
+                        button.removeAttribute('data-copied');
+                        if (tip) tip.textContent = label;
+                    }, 1800);
+                };
+
+                button.addEventListener('click', () => {
+                    const address = button.getAttribute('data-copy-email');
+                    if (navigator.clipboard && navigator.clipboard.writeText) {
+                        navigator.clipboard.writeText(address).then(done, done);
+                        return;
+                    }
+                    const field = document.createElement('textarea');
+                    field.value = address;
+                    field.className = 'visually_hidden';
+                    document.body.appendChild(field);
+                    field.select();
+                    try {
+                        document.execCommand('copy');
+                    } catch (error) {
+                        /* clipboard unavailable */
+                    }
+                    field.remove();
+                    done();
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
