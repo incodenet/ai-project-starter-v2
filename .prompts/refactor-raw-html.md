@@ -1,3 +1,7 @@
+## Input compatibility (Pure HTML and Claude Design bundles)
+
+This prompt still expects a **standalone normalized HTML file** as its source under `raw/`; keep all existing architecture, markup, SCSS, JS and PHP constraints. If the input is a default bundled Claude Design export (`__bundler/*`), `.dc.html`, or a stateful multi-page `site.html`, DO NOT apply the `HTML Extraction` instructions directly to the wrapper. First run `.prompts/unpack-design-export.md` then `.prompts/normalize-design-export.md`; select **one logical template**, including the necessary variants, from the generated `raw/normalized/<snapshot>/pages/*.html`. If the input is already clean HTML/CSS/JS, continue directly as before. Treat extracted and normalized references as read-only. If the Design System exists, complete its INITIAL import first; reuse canonical examples from the inventory, and never overwrite production business logic with demo behavior.
+
 ## Proccess Order
 
 0. Resolve task inputs and destination.

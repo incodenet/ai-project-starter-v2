@@ -1,5 +1,9 @@
 # Import Design System — INITIAL
 
+## Input compatibility (Pure HTML and Claude Design bundles)
+
+This task continues to accept the original approved standalone HTML/CSS/Vanilla JS export with no upstream processing. For a default Claude Design bundle (`design-system.html` with `__bundler/*` or `.dc.html`), **first** run `.prompts/unpack-design-export.md`, then `.prompts/normalize-design-export.md` in DS mode. Use its `raw/normalized/<snapshot>/design-system/index.html` plus real extracted assets as the reference input here. Do **not** import directly from an opaque bundle or interpret the wrapper as the design system. Treat extracted/normalized files as read-only reference artifacts during this task. The INITIAL implementation rules and production ownership below are unchanged.
+
 ## Goal
 
 Perform the **initial integration** of an approved Design System exported as one or more standalone **HTML/CSS/Vanilla JavaScript** files under `raw/`.

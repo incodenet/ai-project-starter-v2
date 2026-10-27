@@ -1,5 +1,9 @@
 # Synchronize Design System — SYNC
 
+## Input compatibility (Pure HTML and Claude Design bundles)
+
+For updated default Claude Design bundles, first run `.prompts/unpack-design-export.md` in `SYNC`, then `.prompts/normalize-design-export.md` in `SYNC` scoped to changed DS parts. Compare the updated normalized reference to the previously approved normalized version or current output; use the extraction delta as supporting evidence, never as the sole basis for the production change. Plain standalone HTML still enters this prompt directly. Generated source snapshots remain read-only here. Keep the minimal-change and inventory/catalog obligations below.
+
 ## Goal
 
 Update an **already imported** production Design System from a newer approved standalone HTML/CSS/Vanilla JS export in `raw/`.

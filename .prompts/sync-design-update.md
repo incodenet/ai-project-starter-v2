@@ -1,5 +1,9 @@
 # Synchronize Design Update
 
+## Input compatibility (Pure HTML and Claude Design bundles)
+
+For an updated bundled Claude Design export, run `.prompts/unpack-design-export.md` and `.prompts/normalize-design-export.md` in `SYNC` first, limited to affected logical templates and variants. The resulting normalized `raw/normalized/<snapshot>/pages/*.html` is the **new visual specification** used below. Compare it with the existing production implementation and, when available, the prior normalized snapshot. Do not treat bundle UUID churn, altered serialization or extracted HTML diffs alone as evidence of a visible design change. Existing business logic and production architecture remain authoritative. Plain updated HTML exports continue to enter directly; do not automatically normalize them. Never edit reference snapshots during production sync.
+
 ## Goal
 
 Synchronize an existing production page with a newly exported HTML version from Claude Design.
