@@ -8,7 +8,7 @@
     "watch:css": "sass --watch src/scss:assets/css --style=compressed --no-source-map",
     "build:js": "esbuild src/js/**/*.js --outdir=assets/js --minify",
     "watch:js": "esbuild src/js/**/*.js --outdir=assets/js --minify --watch",
-    "serve": "browser-sync start --proxy \"http://localhost/ai-project-starter\" --files \"assets/**/*,templates/**/*,includes/**/*\"",
+    "serve": "browser-sync start --proxy \"http://localhost/ai-project-starter-v2\" --files \"assets/**/*,templates/**/*,includes/**/*\"",
     "dev": "concurrently \"npm run watch:css\" \"npm run watch:js\" \"npm run serve\"",
     "build": "npm run build:css && npm run build:js"
   },
