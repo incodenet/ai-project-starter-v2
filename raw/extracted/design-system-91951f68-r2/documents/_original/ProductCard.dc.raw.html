@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><style>/* ABECQ design tokens. Edit values here; site, components and Design System read this file. */
+:root {
+  /* Brand */
+  --abq-color-ink-900: #001629;
+  --abq-color-navy-700: #00427A;
+  --abq-color-navy-600: #034787;
+  --abq-color-navy-500: #0A4F8F;
+  --abq-color-blue-500: #1F95F9;
+  --abq-color-blue-300: #76C0FF;
+  /* Blue tints */
+  --abq-color-blue-200: #A6CFF2;
+  --abq-color-blue-150: #BBD8F1;
+  --abq-color-blue-100: #C7DCEE;
+  --abq-color-blue-75: #D5E7F6;
+  --abq-color-blue-25: #EFF5FA;
+  --abq-color-blue-50: #F3F7FD;
+  /* Neutral */
+  --abq-color-gray-700: #3A4353;
+  --abq-color-gray-500: #5B6577;
+  --abq-color-gray-400: #8A93A6;
+  --abq-color-gray-300: #9AA8BD;
+  --abq-color-gray-200: #C3CADB;
+  --abq-color-line: #E2E7F2;
+  --abq-color-line-soft: #E8ECF5;
+  --abq-color-divider: #F0F3F8;
+  --abq-color-surface: #F9FAFB;
+  --abq-color-white: #FFFFFF;
+  /* Icons & controls */
+  --abq-color-icon-line: #C3CDE4;
+  --abq-color-control-border: #D5DEEB;
+  --abq-color-line-alt: #E6EAF0;
+  --abq-color-blue-60: #DEECF8;
+  /* Button gradient */
+  --abq-color-grad-start: #2466AC;
+  --abq-color-grad-mid: #0A4F8F;
+  --abq-color-grad-end: #04346A;
+  --abq-color-grad-hover-start: #2F74BD;
+  --abq-color-grad-hover-mid: #1A5EA6;
+  --abq-color-grad-hover-end: #063A70;
+  /* Status */
+  --abq-color-success: #1B8A5A;
+  --abq-color-danger: #E5484D;
+  --abq-color-error: #B42318;
+  --abq-color-warning: #B4541A;
+  --abq-color-warning-bg: #FFF1E6;
+  /* Extra tones */
+  --abq-color-success-bg: #E7F6EE;
+  --abq-color-amber: #B4690E;
+  --abq-color-blue-600: #1F6FD1;
+  --abq-color-blue-350: #68B3F3;
+  --abq-color-slate-400: #7291AB;
+  --abq-color-gray-350: #9AA3BD;
+  --abq-color-gray-450: #7A84A3;
+  --abq-color-gray-250: #C2C7CF;
+  --abq-color-blue-30: #EAF3FB;
+  /* See-through (opacity) colours */
+  --abq-color-white-92: rgba(255,255,255,.92);
+  --abq-color-white-85: rgba(255,255,255,.85);
+  --abq-color-white-75: rgba(255,255,255,.75);
+  --abq-color-white-60: rgba(255,255,255,.6);
+  --abq-color-white-50: rgba(255,255,255,.5);
+  --abq-color-white-35: rgba(255,255,255,.35);
+  --abq-color-white-12: rgba(255,255,255,.12);
+  --abq-color-overlay: rgba(15,24,54,.82);
+  --abq-color-overlay-strong: rgba(15,24,54,.86);
+  --abq-color-line-on-dark: rgba(199,220,238,.18);
+  --abq-color-line-on-dark-strong: rgba(199,220,238,.34);
+  --abq-color-danger-tint: rgba(229,72,77,.12);
+  --abq-color-danger-tint-soft: rgba(229,72,77,.08);
+  --abq-color-primary-tint: rgba(31,149,249,.14);
+  --abq-color-primary-tint-strong: rgba(31,149,249,.22);
+  --abq-color-black-28: rgba(0,0,0,.28);
+  --abq-color-ink-45: rgba(0,22,41,.45);
+  /* Background gradients (full layer stacks) */
+  --abq-color-gradient-label-line: linear-gradient(90deg,#68B3F3,rgba(104,179,243,0));
+  --abq-color-gradient-band: radial-gradient(120% 140% at 8% 0%, #1F6FD0 0%, rgba(31,111,208,0) 46%), radial-gradient(90% 120% at 100% 12%, var(--abq-color-grad-mid) 0%, rgba(10,79,143,0) 50%), radial-gradient(120% 130% at 78% 100%, #002140 0%, rgba(0,33,64,0) 55%), linear-gradient(120deg,var(--abq-color-navy-700) 0%,#002C52 100%);
+  --abq-color-gradient-footer: radial-gradient(90% 120% at 6% 0%, var(--abq-color-grad-mid) 0%, rgba(10,79,143,0) 52%), radial-gradient(80% 110% at 96% 8%, #1F6FD0 0%, rgba(31,111,208,0) 46%), linear-gradient(180deg,#00213D 0%,var(--abq-color-ink-900) 62%);
+  --abq-color-gradient-panel-dark: radial-gradient(90% 80% at 100% 0%, #1F6FD0 0%, rgba(31,111,208,0) 55%), linear-gradient(160deg,#00213D 0%,var(--abq-color-ink-900) 100%);
+  --abq-color-gradient-band-navy: radial-gradient(120% 140% at 8% 0%, #1F6FD0 0%, rgba(31,111,208,0) 46%), linear-gradient(120deg,var(--abq-color-navy-700) 0%,#002C52 100%);
+
+  --abq-font-family: 'Outfit', -apple-system, sans-serif;
+  --abq-font-weight: 400;
+  --abq-fw-extralight: 200;
+  --abq-fw-light: 300;
+  --abq-fw-regular: 400;
+  --abq-fw-medium: 500;
+  --abq-font-loader: clamp(96px,16vw,200px);
+  --abq-lh-loader: 1;
+  --abq-ls-loader: -.03em;
+  --abq-font-display: clamp(34px,5.2vw,60px);
+  --abq-lh-display: 1.04;
+  --abq-ls-display: -.02em;
+  --abq-font-h1: clamp(34px,4.6vw,56px);
+  --abq-lh-h1: 1.05;
+  --abq-ls-h1: -.02em;
+  --abq-font-logo: 44px;
+  --abq-lh-logo: 1;
+  --abq-font-title-lg: 34px;
+  --abq-lh-title-lg: 1.15;
+  --abq-ls-title-lg: -.02em;
+  --abq-font-h2: clamp(26px,3.4vw,40px);
+  --abq-lh-h2: 1.1;
+  --abq-ls-h2: -.02em;
+  --abq-font-h3: clamp(22px,2.6vw,30px);
+  --abq-lh-h3: 1.15;
+  --abq-ls-h3: -.02em;
+  --abq-font-h4: 26px;
+  --abq-lh-h4: 1.2;
+  --abq-ls-h4: -.01em;
+  --abq-font-h5: 24px;
+  --abq-lh-h5: 1.25;
+  --abq-font-title-md: 30px;
+  --abq-lh-title-md: 1.15;
+  --abq-font-price: 22px;
+  --abq-lh-price: 1.3;
+  --abq-font-title: 20px;
+  --abq-lh-title: 1.3;
+  --abq-font-body-lg: clamp(15px,1.4vw,18px);
+  --abq-lh-body-lg: 1.6;
+  --abq-font-body-md: 18px;
+  --abq-lh-body-md: 1.5;
+  --abq-font-body: 16px;
+  --abq-lh-body: 1.5;
+  --abq-font-body-sm: 15px;
+  --abq-lh-body-sm: 1.6;
+  --abq-font-ui: 15px;
+  --abq-lh-ui: 1.4;
+  --abq-font-ui-sm: 14px;
+  --abq-lh-ui-sm: 1.5;
+  --abq-font-eyebrow: 12px;
+  --abq-lh-eyebrow: 1.4;
+  --abq-ls-eyebrow: .14em;
+  --abq-font-label-xs: 11px;
+  --abq-lh-label-xs: 1.4;
+
+  --abq-space-2: 2px;
+  --abq-space-4: 4px;
+  --abq-space-6: 6px;
+  --abq-space-8: 8px;
+  --abq-space-10: 10px;
+  --abq-space-12: 12px;
+  --abq-space-14: 14px;
+  --abq-space-16: 16px;
+  --abq-space-18: 18px;
+  --abq-space-20: 20px;
+  --abq-space-22: 22px;
+  --abq-space-24: 24px;
+  --abq-space-26: 26px;
+  --abq-space-28: 28px;
+  --abq-space-32: 32px;
+  --abq-space-40: 40px;
+  --abq-space-48: 48px;
+  --abq-space-56: 56px;
+  --abq-space-64: 64px;
+  --abq-space-80: 80px;
+  --abq-space-36: 36px;
+  --abq-space-72: 72px;
+  --abq-space-90: 90px;
+  --abq-space-96: 96px;
+  --abq-space-100: 100px;
+  --abq-space-120: 120px;
+  --abq-space-130: 130px;
+  --abq-space-160: 160px;
+  --abq-radius-3xs: 4px;
+
+  --abq-radius-2xs: 5px;
+  --abq-radius-xs: 7px;
+  --abq-radius-sm: 10px;
+  --abq-radius-md: 12px;
+  --abq-radius-lg: 16px;
+  --abq-radius-lg-2: 18px;
+  --abq-radius-lg-3: 20px;
+  --abq-radius-xl: 22px;
+  --abq-radius-xl-1: 24px;
+  --abq-radius-xl-2: 26px;
+  --abq-radius-2xl: 32px;
+  --abq-radius-pill: 100px;
+
+  --abq-shadow-tile: inset 0 1px 1px rgba(255,255,255,.9), 0 3px 8px rgba(0,66,122,.14);
+  --abq-shadow-tab: 0 4px 12px rgba(0,66,122,.12);
+  --abq-shadow-glass: inset 0 1px 0 rgba(255,255,255,.7), 0 8px 22px rgba(16,24,43,.08);
+  --abq-shadow-audience: 0 12px 28px rgba(0,66,122,.30);
+  --abq-shadow-cta: 0 12px 27px 0 rgba(31,149,249,.30);
+  --abq-shadow-float: 0 18px 44px rgba(0,22,41,.13);
+  --abq-shadow-button: 0 10px 24px rgba(0,66,122,.22);
+  --abq-shadow-card: 0 10px 26px rgba(16,24,43,.05);
+  --abq-shadow-card-hover: 0 18px 40px rgba(16,24,43,.12);
+  --abq-shadow-menu: 0 18px 44px rgba(0,22,41,.10);
+  --abq-shadow-toast: 0 18px 44px rgba(0,22,41,.28);
+  --abq-shadow-sheet: 0 -12px 40px rgba(0,22,41,.18);
+  --abq-shadow-modal: 0 30px 80px rgba(0,22,41,.3);
+  --abq-shadow-cta-hover: 0 18px 34px rgba(31,149,249,.40);
+  --abq-shadow-nav-hover: 0 8px 18px rgba(3,71,135,.12);
+  --abq-shadow-raised: 0 6px 18px rgba(16,24,43,.14);
+  --abq-shadow-raised-lg: 0 10px 24px rgba(16,24,43,.14);
+  --abq-shadow-glass-sm: inset 0 1px 0 rgba(255,255,255,.7), 0 6px 16px rgba(16,24,43,.08);
+  --abq-shadow-soft: 0 6px 18px rgba(16,24,43,.06);
+  --abq-shadow-panel: 0 24px 60px rgba(16,24,43,.08);
+  --abq-shadow-blue: 0 8px 20px rgba(0,66,122,.30);
+  --abq-shadow-dot: 0 2px 6px rgba(3,71,135,.30);
+  --abq-shadow-ring-white: 0 0 0 2px var(--abq-color-white);
+  --abq-shadow-ring-white-inset: inset 0 0 0 2px var(--abq-color-white);
+  --abq-shadow-step-ring: 0 0 0 8px rgba(31,149,249,.14), 0 10px 24px rgba(0,66,122,.10);
+  --abq-shadow-none: 0 0 0 0 transparent;
+  --abq-shadow-danger-sides: inset 1px 0 0 rgba(229,72,77,.6), inset -1px 0 0 rgba(229,72,77,.6);
+  --abq-shadow-danger-sides-soft: inset 1px 0 0 rgba(229,72,77,.35), inset -1px 0 0 rgba(229,72,77,.35);
+}
+</style><style>@property --mx { syntax: '<percentage>'; inherits: false; initial-value: 0%; }</style></helmet>
+<a href="#product" style="height: 100%; background: var(--abq-color-white); border: 1px solid var(--abq-color-line-soft); border-radius: var(--abq-radius-lg-3); overflow: hidden; box-shadow: var(--abq-shadow-card); display: flex; flex-direction: column; color: inherit; font-family: 'Outfit', sans-serif; transition: transform .15s, box-shadow .15s;" style-hover="transform: translateY(-4px); box-shadow: var(--abq-shadow-card-hover);">
+  <div style="position: relative; aspect-ratio: 5/4; margin: var(--abq-space-8); border-radius: var(--abq-radius-md); background: var(--abq-color-surface); overflow: hidden;">
+    {{ p.imgEl }}
+    <sc-if value="{{ p.tag }}" hint-placeholder-val="{{ false }}"><span style="position: absolute; top: 12px; left: 12px; color: var(--abq-color-blue-500); font-size: var(--abq-font-eyebrow); padding: var(--abq-space-4) var(--abq-space-10); border-radius: var(--abq-radius-pill); background: #1F95F91C;">{{ p.tag }}</span></sc-if>
+    <sc-if value="{{ p.stock }}" hint-placeholder-val="{{ false }}"><span style="position: absolute; top: 12px; right: 12px; color: var(--abq-color-warning); font-size: var(--abq-font-eyebrow); padding: var(--abq-space-4) var(--abq-space-10); border-radius: var(--abq-radius-pill); background: var(--abq-color-warning-bg);">{{ p.stock }}</span></sc-if>
+  </div>
+  <div style="padding: var(--abq-space-4) var(--abq-space-20) var(--abq-space-20); display: flex; flex-direction: column; flex: 1;">
+    <div style="font-size: var(--abq-font-body-md); color: var(--abq-color-ink-900); line-height: 1.3;">{{ p.name }}</div>
+    <div style="font-size: var(--abq-font-ui-sm); color: var(--abq-color-gray-400); margin-top: var(--abq-space-4); font-weight: var(--abq-fw-light);">{{ p.spec }}</div>
+    <div style="font-size: var(--abq-font-title); color: var(--abq-color-ink-900); margin: var(--abq-space-12) 0 var(--abq-space-14);">{{ p.price }}</div>
+    <div style="margin-top: auto; display: flex; gap: var(--abq-space-10);">
+      <button onClick="{{ p.onAdd }}" style="flex: 1; cursor: pointer; color: var(--abq-color-white); font-family: 'Outfit'; font-weight: var(--abq-fw-regular); font-size: var(--abq-font-body-sm); white-space: nowrap; padding: var(--abq-space-10) var(--abq-space-16); border-radius: var(--abq-radius-sm); border: 1px solid var(--abq-color-white-35); backdrop-filter: blur(10px) saturate(160%); -webkit-backdrop-filter: blur(10px) saturate(160%); box-shadow: var(--abq-shadow-none); transition: --mx .95s cubic-bezier(.4,0,.2,1); padding-left: var(--abq-space-10); padding-right: var(--abq-space-10); height: 44px; background-color: var(--abq-color-grad-mid); --mx: 0%; background-image: radial-gradient(at calc(15% + var(--mx)) 28%, var(--abq-color-grad-hover-start) 0px, transparent 55%), radial-gradient(at calc(18% + var(--mx)) 88%, var(--abq-color-grad-hover-mid) 0px, transparent 52%), radial-gradient(at calc(96% - var(--mx)) 22%, var(--abq-color-grad-hover-end) 0px, transparent 55%), radial-gradient(at calc(92% - var(--mx)) 90%, var(--abq-color-grad-end) 0px, transparent 55%); border-width: 0px; border-color: #FFFFFF00; display: inline-flex; align-items: center; justify-content: center; gap: var(--abq-space-8)" style-hover="--mx: 70%;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="display:block; flex:none;"><path d="M20.1999 12.1871L20.6997 9.7624L20.7242 9.63965H5C5 12.5812 5.06324 13.552 5.92964 14.4658C6.79604 15.3796 8.19049 15.3796 10.9794 15.3796H16.2823C17.8433 15.3796 18.6238 15.3796 19.1755 14.93C19.7273 14.4804 19.8848 13.716 20.1999 12.1871Z" fill="#FFFFFF" fill-opacity="0.5"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M3.04047 2.29266C2.6497 2.15527 2.22155 2.36068 2.08416 2.75145C1.94678 3.14221 2.15218 3.57036 2.54295 3.70775L2.80416 3.79958C3.47177 4.0343 3.91052 4.18985 4.23336 4.34826C4.53659 4.49704 4.67026 4.61747 4.75832 4.74634C4.84858 4.87842 4.91828 5.05984 4.95761 5.42319C4.99877 5.8034 4.99979 6.29862 4.99979 7.03856V9.64024H20.724C21.0545 7.9827 21.2096 7.14067 20.7762 6.57733C20.3323 6.00024 18.8155 6.00024 17.1305 6.00024H6.49233C6.48564 5.72991 6.47295 5.48397 6.4489 5.26177C6.39517 4.76539 6.27875 4.31268 5.99677 3.90003C5.71259 3.48417 5.33474 3.21784 4.89411 3.00163C4.48203 2.79943 3.95839 2.61536 3.34187 2.39862L3.04047 2.29266Z" fill="#FFFFFF"></path><path d="M7.5 18C8.32843 18 9 18.6716 9 19.5C9 20.3284 8.32843 21 7.5 21C6.67157 21 6 20.3284 6 19.5C6 18.6716 6.67157 18 7.5 18Z" fill="#FFFFFF"></path><path d="M16.5 18C17.3284 18 18 18.6715 18 19.5C18 20.3284 17.3284 21 16.5 21C15.6716 21 15 20.3284 15 19.5C15 18.6715 15.6716 18 16.5 18Z" fill="#FFFFFF"></path></svg>Add to cart</button>
+      <button onClick="{{ p.onCompare }}" aria-label="Compare" style="flex: none; width: 44px; height: 44px; border-radius: var(--abq-radius-sm); border: 1px solid var(--abq-color-blue-100); background: var(--abq-color-white); color: var(--abq-color-navy-700); cursor: pointer; display: inline-flex; align-items: center; justify-content: center; transition: background-color .2s;" style-hover="background-color: var(--abq-color-blue-50);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 9.5H3M7.5 14L3 9.5L7.5 5" stroke="currentColor" stroke-width="1.875" stroke-linecap="square" stroke-linejoin="round"></path><path d="M12 15.5H21M16.5 20L21 15.5L16.5 11" stroke="currentColor" stroke-width="1.875" stroke-linecap="square" stroke-linejoin="round"></path></svg></button>
+    </div>
+  </div>
+</a>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:300,&quot;height&quot;:440},&quot;p&quot;:{&quot;editor&quot;:null,&quot;default&quot;:{&quot;name&quot;:&quot;Drivesafe III&quot;,&quot;spec&quot;:&quot;Fuel-cell · handheld&quot;,&quot;price&quot;:&quot;348,00 €&quot;,&quot;img&quot;:&quot;assets/media/productInd-0.png&quot;,&quot;tag&quot;:&quot;Pro&quot;},&quot;tsType&quot;:&quot;object&quot;}}"></script>
+</body>
+</html>

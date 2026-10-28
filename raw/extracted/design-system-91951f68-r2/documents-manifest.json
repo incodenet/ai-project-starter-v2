@@ -1,0 +1,1452 @@
+{
+  "schemaVersion": 1,
+  "snapshot": "design-system-91951f68-r2",
+  "counts": {
+    "manifestHtmlEntries": 7,
+    "templateDocuments": 1,
+    "totalEmbedded": 8,
+    "extracted": 8,
+    "pageOrderEntries": 0,
+    "nestedBundlesFound": 0
+  },
+  "documents": [
+    {
+      "id": "design-system",
+      "file": "documents/design-system.html",
+      "original": "documents/_original/design-system.template.raw.html",
+      "uuid": null,
+      "extId": null,
+      "mime": "text/html",
+      "source": "__bundler/template",
+      "bytes": 225269,
+      "sha256": "09300678cc8034670fba01c8e56b0d198c5629e3939e2646bb01bc98e6f02e78",
+      "rewrittenSha256": "4c8bc46ce4d29c4132d66536270d8dc8ba78c8c8df8593bb1f4d725a217685a9",
+      "uuidRefsRewritten": 54,
+      "role": "root",
+      "parseProblems": 0,
+      "title": "ABECQ Design System",
+      "hasXdc": true,
+      "hasHelmet": true,
+      "tagCount": {
+        "html": 1,
+        "head": 1,
+        "meta": 2,
+        "script": 3,
+        "body": 1,
+        "div": 325,
+        "img": 50,
+        "video": 1,
+        "x-dc": 1,
+        "helmet": 1,
+        "title": 1,
+        "style": 3,
+        "link": 2,
+        "aside": 1,
+        "nav": 1,
+        "details": 5,
+        "summary": 5,
+        "svg": 29,
+        "path": 48,
+        "a": 47,
+        "span": 267,
+        "main": 1,
+        "section": 33,
+        "h1": 1,
+        "p": 29,
+        "h2": 34,
+        "code": 55,
+        "sc-for": 10,
+        "button": 11,
+        "dc-import": 11,
+        "clippath": 1,
+        "circle": 2,
+        "g": 1,
+        "rect": 1,
+        "iframe": 2,
+        "pre": 1,
+        "sc-if": 1
+      },
+      "scripts": [
+        {
+          "line": 5,
+          "src": "278d665c-632d-468e-9db1-47b39fa853b3",
+          "type": null,
+          "dcScript": false,
+          "bytes": 0
+        },
+        {
+          "line": 8,
+          "src": null,
+          "type": null,
+          "dcScript": false,
+          "bytes": 1864
+        },
+        {
+          "line": 643,
+          "src": null,
+          "type": "text/x-dc",
+          "dcScript": true,
+          "bytes": 76432
+        }
+      ],
+      "styles": [
+        {
+          "line": 23,
+          "bytes": 7960,
+          "sha256": "b9c320e6e8aab8dede14fee08d861e8c641e0f6a417b7dfb1305b770b85058f1"
+        },
+        {
+          "line": 233,
+          "bytes": 782,
+          "sha256": "522f3fc95a1642c9a7e1e756b87e4532220f9abf41b77b48f64e885777637f28"
+        },
+        {
+          "line": 252,
+          "bytes": 7951,
+          "sha256": "b8c6b607edc037bbc0e68f7b8342e5b4647fa49580af2be8ed3a54cdb2154c2f"
+        }
+      ],
+      "links": [
+        {
+          "line": 231,
+          "rel": "preconnect",
+          "href": "https://fonts.googleapis.com"
+        },
+        {
+          "line": 232,
+          "rel": "preconnect",
+          "href": "https://fonts.gstatic.com"
+        }
+      ],
+      "dcImports": [
+        {
+          "name": "Button",
+          "line": 468,
+          "section": "buttons"
+        },
+        {
+          "name": "SectionHeading",
+          "line": 517,
+          "section": "heading"
+        },
+        {
+          "name": "SectionHeading",
+          "line": 517,
+          "section": "heading"
+        },
+        {
+          "name": "Breadcrumb",
+          "line": 538,
+          "section": "crumbs"
+        },
+        {
+          "name": "Breadcrumb",
+          "line": 539,
+          "section": "crumbs"
+        },
+        {
+          "name": "ProductCard",
+          "line": 548,
+          "section": "cards"
+        },
+        {
+          "name": "PdfCard",
+          "line": 554,
+          "section": "cards"
+        },
+        {
+          "name": "PdfCard",
+          "line": 555,
+          "section": "cards"
+        },
+        {
+          "name": "PdfCard",
+          "line": 556,
+          "section": "cards"
+        },
+        {
+          "name": "FormField",
+          "line": 609,
+          "section": "forms"
+        },
+        {
+          "name": "Choice",
+          "line": 611,
+          "section": "choice"
+        }
+      ],
+      "iframes": [
+        {
+          "line": 526,
+          "src": "{{ o.src }}",
+          "title": "{{ o.label }}",
+          "inConditional": "design-system#sc-for-008"
+        },
+        {
+          "line": 590,
+          "src": "{{ o.src }}",
+          "title": "{{ o.label }}",
+          "inConditional": "design-system#sc-for-010"
+        }
+      ],
+      "anchors": [
+        {
+          "line": 524,
+          "href": "{{ o.src }}"
+        },
+        {
+          "line": 598,
+          "href": "index.html"
+        }
+      ],
+      "assetRefs": [
+        "assets/user/slot-acct-stat-orders.webp",
+        "assets/user/slot-acct-stat-addr.webp",
+        "assets/user/slot-acct-stat-compare.webp",
+        "assets/user/slot-cart-empty-img.webp",
+        "assets/user/slot-returnform-badge.webp",
+        "assets/media/cat-0.png",
+        "assets/media/cat-0.webp",
+        "assets/media/cat-2.png",
+        "assets/media/cat-2.webp",
+        "assets/media/cat-3.png",
+        "assets/media/cat-4.png",
+        "assets/media/cta-0.png",
+        "assets/media/cta-0.webp",
+        "assets/media/guide-0.jpg",
+        "assets/media/guide-0.webp",
+        "assets/media/guide-1.png",
+        "assets/media/guide-1.webp",
+        "assets/media/guide-2.png",
+        "assets/media/guide-2.webp",
+        "assets/media/guide-3.png",
+        "assets/media/guide-3.webp",
+        "assets/media/heroPart-1.png",
+        "assets/media/heroPart-1.webp",
+        "assets/media/heroPart-2.png",
+        "assets/media/heroPart-2.webp",
+        "assets/media/product-0.png",
+        "assets/media/product-1.png",
+        "assets/media/product-2.png",
+        "assets/media/product-3.png",
+        "assets/media/product-4.png",
+        "assets/media/product-4.webp",
+        "assets/media/productInd-0.png",
+        "assets/media/productInd-1.png",
+        "assets/media/productInd-2.png",
+        "assets/media/productInd-2.webp",
+        "assets/media/productInd-3.png",
+        "assets/media/productInd-4.png",
+        "assets/media/productPro-0.png",
+        "assets/media/productPro-0.webp",
+        "assets/media/productPro-1.png",
+        "assets/media/productPro-2.png",
+        "assets/media/productPro-3.png",
+        "assets/media/productPro-4.png",
+        "assets/abecq-logo.png",
+        "assets/brand-burmeier.png",
+        "assets/brand-dingo.png",
+        "assets/brand-drager.svg",
+        "assets/brand-drager2.svg",
+        "assets/brand-frame.svg",
+        "assets/brand-seca.svg",
+        "assets/brand-tigon.png",
+        "assets/en15964-badge.png",
+        "assets/en15964-badge.webp",
+        "assets/en16280-badge.png",
+        "assets/en16280-badge.webp",
+        "assets/icon-suitcase.svg",
+        "assets/icon-user.svg",
+        "assets/oiml-badge.png",
+        "assets/oiml-badge.webp",
+        "assets/pay-mastercard-color.svg",
+        "assets/pay-mastercard.svg",
+        "assets/pay-paypal.svg",
+        "assets/pay-visa.svg",
+        "assets/zoom-graphics-logo.svg",
+        "assets/media/heroPart-0.mp4"
+      ],
+      "externalUrls": [
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com"
+      ],
+      "styleHoverCount": 49,
+      "bindingCount": 74,
+      "conditionalCounts": {
+        "sc-if": 1,
+        "sc-for": 10,
+        "other": 0
+      }
+    },
+    {
+      "id": "Button",
+      "file": "documents/Button.dc.html",
+      "original": "documents/_original/Button.dc.raw.html",
+      "uuid": "3b8997e4-649e-4522-8cc5-85c987976269",
+      "extId": "./Button.dc.html",
+      "mime": "text/html",
+      "compressedInBundle": true,
+      "bytes": 74561,
+      "sha256": "959beed92c9736c5d39b18fea028c3e63429023b9e809350ea38bf0b7db4dcba",
+      "role": "dc-component",
+      "parseProblems": 0,
+      "title": null,
+      "hasXdc": true,
+      "hasHelmet": true,
+      "tagCount": {
+        "html": 1,
+        "head": 1,
+        "meta": 2,
+        "script": 2,
+        "body": 1,
+        "x-dc": 1,
+        "helmet": 1,
+        "style": 2,
+        "link": 1,
+        "sc-if": 47,
+        "div": 23,
+        "h1": 1,
+        "p": 2,
+        "span": 14,
+        "sc-for": 8,
+        "code": 2,
+        "a": 42,
+        "h2": 1
+      },
+      "scripts": [
+        {
+          "line": 6,
+          "src": "./support.js",
+          "type": null,
+          "dcScript": false,
+          "bytes": 0
+        },
+        {
+          "line": 233,
+          "src": null,
+          "type": "text/x-dc",
+          "dcScript": true,
+          "bytes": 13970
+        }
+      ],
+      "styles": [
+        {
+          "line": 10,
+          "bytes": 7960,
+          "sha256": "b9c320e6e8aab8dede14fee08d861e8c641e0f6a417b7dfb1305b770b85058f1"
+        },
+        {
+          "line": 217,
+          "bytes": 212,
+          "sha256": "f38d677bd1fe66643e87577c73e7714f2157420d1bb37658a24a0f3e3ce34036"
+        }
+      ],
+      "links": [
+        {
+          "line": 217,
+          "rel": "stylesheet",
+          "href": "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+        }
+      ],
+      "dcImports": [],
+      "iframes": [],
+      "anchors": [
+        {
+          "line": 226,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 226,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 226,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 226,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 226,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 226,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 226,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 226,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 226,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 226,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 226,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 226,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 226,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 226,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 229,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 229,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 229,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 229,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 229,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 229,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 229,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 229,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 229,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 229,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 229,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 229,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 229,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 229,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 231,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 231,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 231,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 231,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 231,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 231,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 231,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 231,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 231,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 231,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 231,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 231,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 231,
+          "href": "{{ it.href }}"
+        },
+        {
+          "line": 231,
+          "href": "{{ it.href }}"
+        }
+      ],
+      "assetRefs": [],
+      "externalUrls": [
+        "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&amp;display=swap"
+      ],
+      "styleHoverCount": 30,
+      "bindingCount": 865,
+      "conditionalCounts": {
+        "sc-if": 47,
+        "sc-for": 8,
+        "other": 0
+      }
+    },
+    {
+      "id": "SectionHeading",
+      "file": "documents/SectionHeading.dc.html",
+      "original": "documents/_original/SectionHeading.dc.raw.html",
+      "uuid": "4672ff96-7a1b-4635-bdd8-b55fba7af0e2",
+      "extId": "./SectionHeading.dc.html",
+      "mime": "text/html",
+      "compressedInBundle": true,
+      "bytes": 10302,
+      "sha256": "8d121902aabe079161c921c81d6ad55f3f77c3e3a07c57feb47c9240997f1de1",
+      "role": "dc-component",
+      "parseProblems": 0,
+      "title": null,
+      "hasXdc": true,
+      "hasHelmet": true,
+      "tagCount": {
+        "html": 1,
+        "head": 1,
+        "meta": 2,
+        "script": 2,
+        "body": 1,
+        "x-dc": 1,
+        "helmet": 1,
+        "style": 1,
+        "link": 1,
+        "div": 2,
+        "h2": 1
+      },
+      "scripts": [
+        {
+          "line": 6,
+          "src": "./support.js",
+          "type": null,
+          "dcScript": false,
+          "bytes": 0
+        },
+        {
+          "line": 220,
+          "src": null,
+          "type": "text/x-dc",
+          "dcScript": true,
+          "bytes": 470
+        }
+      ],
+      "styles": [
+        {
+          "line": 10,
+          "bytes": 7960,
+          "sha256": "b9c320e6e8aab8dede14fee08d861e8c641e0f6a417b7dfb1305b770b85058f1"
+        }
+      ],
+      "links": [
+        {
+          "line": 217,
+          "rel": "stylesheet",
+          "href": "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+        }
+      ],
+      "dcImports": [],
+      "iframes": [],
+      "anchors": [],
+      "assetRefs": [],
+      "externalUrls": [
+        "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&amp;display=swap"
+      ],
+      "styleHoverCount": 0,
+      "bindingCount": 8,
+      "conditionalCounts": {
+        "sc-if": 0,
+        "sc-for": 0,
+        "other": 0
+      }
+    },
+    {
+      "id": "Breadcrumb",
+      "file": "documents/Breadcrumb.dc.html",
+      "original": "documents/_original/Breadcrumb.dc.raw.html",
+      "uuid": "1aa7391d-e691-4e44-8f9b-ffd3b9e67ab3",
+      "extId": "./Breadcrumb.dc.html",
+      "mime": "text/html",
+      "compressedInBundle": true,
+      "bytes": 10679,
+      "sha256": "cdc87c986767ab98c96f8dda731b20041bc2a666b6e8068350f6fe673f80ad20",
+      "role": "dc-component",
+      "parseProblems": 0,
+      "title": null,
+      "hasXdc": true,
+      "hasHelmet": true,
+      "tagCount": {
+        "html": 1,
+        "head": 1,
+        "meta": 2,
+        "script": 2,
+        "body": 1,
+        "x-dc": 1,
+        "helmet": 1,
+        "style": 1,
+        "link": 1,
+        "nav": 1,
+        "a": 2,
+        "svg": 2,
+        "path": 2,
+        "sc-if": 1,
+        "span": 1
+      },
+      "scripts": [
+        {
+          "line": 6,
+          "src": "./support.js",
+          "type": null,
+          "dcScript": false,
+          "bytes": 0
+        },
+        {
+          "line": 220,
+          "src": null,
+          "type": "text/x-dc",
+          "dcScript": true,
+          "bytes": 362
+        }
+      ],
+      "styles": [
+        {
+          "line": 10,
+          "bytes": 7960,
+          "sha256": "b9c320e6e8aab8dede14fee08d861e8c641e0f6a417b7dfb1305b770b85058f1"
+        }
+      ],
+      "links": [
+        {
+          "line": 217,
+          "rel": "stylesheet",
+          "href": "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+        }
+      ],
+      "dcImports": [],
+      "iframes": [],
+      "anchors": [
+        {
+          "line": 218,
+          "href": "{{ firstHref }}"
+        },
+        {
+          "line": 218,
+          "href": "{{ midHref }}"
+        }
+      ],
+      "assetRefs": [],
+      "externalUrls": [
+        "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&amp;display=swap"
+      ],
+      "styleHoverCount": 0,
+      "bindingCount": 8,
+      "conditionalCounts": {
+        "sc-if": 1,
+        "sc-for": 0,
+        "other": 0
+      }
+    },
+    {
+      "id": "ProductCard",
+      "file": "documents/ProductCard.dc.html",
+      "original": "documents/_original/ProductCard.dc.raw.html",
+      "uuid": "ee9ba3a2-6cc1-4036-b4a5-4996162c86aa",
+      "extId": "./ProductCard.dc.html",
+      "mime": "text/html",
+      "compressedInBundle": true,
+      "bytes": 14245,
+      "sha256": "4aecdaf69a1f27cc5630ffc6b5ea73db6ae8bac7287f25bcbdf0fa640de9aa8a",
+      "role": "dc-component",
+      "parseProblems": 0,
+      "title": null,
+      "hasXdc": true,
+      "hasHelmet": true,
+      "tagCount": {
+        "html": 1,
+        "head": 1,
+        "meta": 2,
+        "script": 2,
+        "body": 1,
+        "x-dc": 1,
+        "helmet": 1,
+        "style": 2,
+        "a": 1,
+        "div": 6,
+        "sc-if": 2,
+        "span": 2,
+        "button": 2,
+        "svg": 2,
+        "path": 6
+      },
+      "scripts": [
+        {
+          "line": 6,
+          "src": "./support.js",
+          "type": null,
+          "dcScript": false,
+          "bytes": 0
+        },
+        {
+          "line": 235,
+          "src": null,
+          "type": "text/x-dc",
+          "dcScript": true,
+          "bytes": 0
+        }
+      ],
+      "styles": [
+        {
+          "line": 10,
+          "bytes": 7960,
+          "sha256": "b9c320e6e8aab8dede14fee08d861e8c641e0f6a417b7dfb1305b770b85058f1"
+        },
+        {
+          "line": 217,
+          "bytes": 78,
+          "sha256": "ad49221b14bb9cee899b0ad1ac42cd865719f05a1ccd38df02748e140038b84f"
+        }
+      ],
+      "links": [],
+      "dcImports": [],
+      "iframes": [],
+      "anchors": [],
+      "assetRefs": [
+        "assets/media/productInd-0.png"
+      ],
+      "externalUrls": [],
+      "styleHoverCount": 3,
+      "bindingCount": 12,
+      "conditionalCounts": {
+        "sc-if": 2,
+        "sc-for": 0,
+        "other": 0
+      }
+    },
+    {
+      "id": "PdfCard",
+      "file": "documents/PdfCard.dc.html",
+      "original": "documents/_original/PdfCard.dc.raw.html",
+      "uuid": "e09429cb-0e14-459a-b080-99fc7066298f",
+      "extId": "./PdfCard.dc.html",
+      "mime": "text/html",
+      "compressedInBundle": true,
+      "bytes": 8627,
+      "sha256": "bfeac52d61b24d744aa9fb14d127e952bf6908bf313408a9af1283de6ccf6f73",
+      "role": "dc-component",
+      "parseProblems": 0,
+      "title": null,
+      "hasXdc": true,
+      "hasHelmet": true,
+      "tagCount": {
+        "html": 1,
+        "head": 1,
+        "meta": 2,
+        "script": 2,
+        "body": 1,
+        "helmet": 1,
+        "style": 1,
+        "x-dc": 1,
+        "a": 1,
+        "span": 6,
+        "svg": 2,
+        "path": 3
+      },
+      "scripts": [
+        {
+          "line": 6,
+          "src": "./support.js",
+          "type": null,
+          "dcScript": false,
+          "bytes": 0
+        },
+        {
+          "line": 161,
+          "src": null,
+          "type": "text/x-dc",
+          "dcScript": true,
+          "bytes": 208
+        }
+      ],
+      "styles": [
+        {
+          "line": 9,
+          "bytes": 4508,
+          "sha256": "44ebcbf3502815be1fd4e08c702823647d07ba74141f0b496f475755cd6b0798"
+        }
+      ],
+      "links": [],
+      "dcImports": [],
+      "iframes": [],
+      "anchors": [
+        {
+          "line": 159,
+          "href": "{{ href }}"
+        }
+      ],
+      "assetRefs": [],
+      "externalUrls": [],
+      "styleHoverCount": 1,
+      "bindingCount": 3,
+      "conditionalCounts": {
+        "sc-if": 0,
+        "sc-for": 0,
+        "other": 0
+      }
+    },
+    {
+      "id": "FormField",
+      "file": "documents/FormField.dc.html",
+      "original": "documents/_original/FormField.dc.raw.html",
+      "uuid": "6888fc32-5343-4ddf-8195-9e8df421b03e",
+      "extId": "./FormField.dc.html",
+      "mime": "text/html",
+      "compressedInBundle": true,
+      "bytes": 21476,
+      "sha256": "825889679226087aba5c8f99babe046154583c362ea3a1c6369b8d7432132394",
+      "role": "dc-component",
+      "parseProblems": 0,
+      "title": null,
+      "hasXdc": true,
+      "hasHelmet": true,
+      "tagCount": {
+        "html": 1,
+        "head": 1,
+        "meta": 2,
+        "script": 2,
+        "body": 1,
+        "x-dc": 1,
+        "helmet": 1,
+        "style": 2,
+        "link": 1,
+        "sc-if": 9,
+        "div": 6,
+        "h1": 1,
+        "p": 1,
+        "sc-for": 4,
+        "label": 2,
+        "input": 2,
+        "select": 2,
+        "option": 4,
+        "textarea": 2,
+        "code": 1
+      },
+      "scripts": [
+        {
+          "line": 6,
+          "src": "./support.js",
+          "type": null,
+          "dcScript": false,
+          "bytes": 0
+        },
+        {
+          "line": 227,
+          "src": null,
+          "type": "text/x-dc",
+          "dcScript": true,
+          "bytes": 2433
+        }
+      ],
+      "styles": [
+        {
+          "line": 9,
+          "bytes": 7960,
+          "sha256": "b9c320e6e8aab8dede14fee08d861e8c641e0f6a417b7dfb1305b770b85058f1"
+        },
+        {
+          "line": 216,
+          "bytes": 2093,
+          "sha256": "7864832c79fe4f59565805e36d90c2fad3cc6293172f025f6bb47fc818eb50d2"
+        }
+      ],
+      "links": [
+        {
+          "line": 216,
+          "rel": "stylesheet",
+          "href": "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+        }
+      ],
+      "dcImports": [],
+      "iframes": [],
+      "anchors": [],
+      "assetRefs": [],
+      "externalUrls": [
+        "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&amp;display=swap"
+      ],
+      "styleHoverCount": 0,
+      "bindingCount": 63,
+      "conditionalCounts": {
+        "sc-if": 9,
+        "sc-for": 4,
+        "other": 0
+      }
+    },
+    {
+      "id": "Choice",
+      "file": "documents/Choice.dc.html",
+      "original": "documents/_original/Choice.dc.raw.html",
+      "uuid": "944f35a2-08d6-44e6-87ff-7c30e2cf6e25",
+      "extId": "./Choice.dc.html",
+      "mime": "text/html",
+      "compressedInBundle": true,
+      "bytes": 20148,
+      "sha256": "eac2aa0cdf2dc55ae58120403d7bc84d9bc6a3b5ce6025390a66d7765ae42001",
+      "role": "dc-component",
+      "parseProblems": 0,
+      "title": null,
+      "hasXdc": true,
+      "hasHelmet": true,
+      "tagCount": {
+        "html": 1,
+        "head": 1,
+        "meta": 2,
+        "script": 2,
+        "body": 1,
+        "x-dc": 1,
+        "helmet": 1,
+        "style": 1,
+        "link": 1,
+        "sc-if": 15,
+        "div": 13,
+        "h1": 1,
+        "p": 1,
+        "sc-for": 2,
+        "span": 17,
+        "svg": 2,
+        "path": 2,
+        "a": 2,
+        "code": 1
+      },
+      "scripts": [
+        {
+          "line": 6,
+          "src": "./support.js",
+          "type": null,
+          "dcScript": false,
+          "bytes": 0
+        },
+        {
+          "line": 221,
+          "src": null,
+          "type": "text/x-dc",
+          "dcScript": true,
+          "bytes": 2690
+        }
+      ],
+      "styles": [
+        {
+          "line": 10,
+          "bytes": 7960,
+          "sha256": "b9c320e6e8aab8dede14fee08d861e8c641e0f6a417b7dfb1305b770b85058f1"
+        }
+      ],
+      "links": [
+        {
+          "line": 217,
+          "rel": "stylesheet",
+          "href": "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+        }
+      ],
+      "dcImports": [],
+      "iframes": [],
+      "anchors": [],
+      "assetRefs": [],
+      "externalUrls": [
+        "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&amp;display=swap"
+      ],
+      "styleHoverCount": 0,
+      "bindingCount": 66,
+      "conditionalCounts": {
+        "sc-if": 15,
+        "sc-for": 2,
+        "other": 0
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "design-system",
+      "to": "Button",
+      "kind": "dc-import",
+      "line": 468,
+      "section": "buttons",
+      "resolved": true,
+      "targetFile": "documents/Button.dc.html"
+    },
+    {
+      "from": "design-system",
+      "to": "SectionHeading",
+      "kind": "dc-import",
+      "line": 517,
+      "section": "heading",
+      "resolved": true,
+      "targetFile": "documents/SectionHeading.dc.html"
+    },
+    {
+      "from": "design-system",
+      "to": "SectionHeading",
+      "kind": "dc-import",
+      "line": 517,
+      "section": "heading",
+      "resolved": true,
+      "targetFile": "documents/SectionHeading.dc.html"
+    },
+    {
+      "from": "design-system",
+      "to": "Breadcrumb",
+      "kind": "dc-import",
+      "line": 538,
+      "section": "crumbs",
+      "resolved": true,
+      "targetFile": "documents/Breadcrumb.dc.html"
+    },
+    {
+      "from": "design-system",
+      "to": "Breadcrumb",
+      "kind": "dc-import",
+      "line": 539,
+      "section": "crumbs",
+      "resolved": true,
+      "targetFile": "documents/Breadcrumb.dc.html"
+    },
+    {
+      "from": "design-system",
+      "to": "ProductCard",
+      "kind": "dc-import",
+      "line": 548,
+      "section": "cards",
+      "resolved": true,
+      "targetFile": "documents/ProductCard.dc.html"
+    },
+    {
+      "from": "design-system",
+      "to": "PdfCard",
+      "kind": "dc-import",
+      "line": 554,
+      "section": "cards",
+      "resolved": true,
+      "targetFile": "documents/PdfCard.dc.html"
+    },
+    {
+      "from": "design-system",
+      "to": "PdfCard",
+      "kind": "dc-import",
+      "line": 555,
+      "section": "cards",
+      "resolved": true,
+      "targetFile": "documents/PdfCard.dc.html"
+    },
+    {
+      "from": "design-system",
+      "to": "PdfCard",
+      "kind": "dc-import",
+      "line": 556,
+      "section": "cards",
+      "resolved": true,
+      "targetFile": "documents/PdfCard.dc.html"
+    },
+    {
+      "from": "design-system",
+      "to": "FormField",
+      "kind": "dc-import",
+      "line": 609,
+      "section": "forms",
+      "resolved": true,
+      "targetFile": "documents/FormField.dc.html"
+    },
+    {
+      "from": "design-system",
+      "to": "Choice",
+      "kind": "dc-import",
+      "line": 611,
+      "section": "choice",
+      "resolved": true,
+      "targetFile": "documents/Choice.dc.html"
+    },
+    {
+      "from": "design-system",
+      "to": "assets/8fe7df74405f3c55.js",
+      "kind": "script",
+      "line": 5,
+      "resolved": true,
+      "note": null
+    },
+    {
+      "from": "Button",
+      "to": "./support.js",
+      "kind": "script",
+      "line": 6,
+      "resolved": false,
+      "note": "not in manifest or ext_resources"
+    },
+    {
+      "from": "SectionHeading",
+      "to": "./support.js",
+      "kind": "script",
+      "line": 6,
+      "resolved": false,
+      "note": "not in manifest or ext_resources"
+    },
+    {
+      "from": "Breadcrumb",
+      "to": "./support.js",
+      "kind": "script",
+      "line": 6,
+      "resolved": false,
+      "note": "not in manifest or ext_resources"
+    },
+    {
+      "from": "ProductCard",
+      "to": "./support.js",
+      "kind": "script",
+      "line": 6,
+      "resolved": false,
+      "note": "not in manifest or ext_resources"
+    },
+    {
+      "from": "PdfCard",
+      "to": "./support.js",
+      "kind": "script",
+      "line": 6,
+      "resolved": false,
+      "note": "not in manifest or ext_resources"
+    },
+    {
+      "from": "FormField",
+      "to": "./support.js",
+      "kind": "script",
+      "line": 6,
+      "resolved": false,
+      "note": "not in manifest or ext_resources"
+    },
+    {
+      "from": "Choice",
+      "to": "./support.js",
+      "kind": "script",
+      "line": 6,
+      "resolved": false,
+      "note": "not in manifest or ext_resources"
+    },
+    {
+      "from": "design-system",
+      "to": "SiteHeader.dc.html",
+      "kind": "iframe",
+      "via": "COMPONENTS",
+      "key": "header",
+      "section": "components",
+      "resolved": true,
+      "inThisBundle": false
+    },
+    {
+      "from": "design-system",
+      "to": "SiteFooter.dc.html",
+      "kind": "iframe",
+      "via": "COMPONENTS",
+      "key": "footer",
+      "section": "components",
+      "resolved": false,
+      "inThisBundle": false
+    },
+    {
+      "from": "design-system",
+      "to": "index.html",
+      "kind": "iframe",
+      "via": "SECTIONS",
+      "key": "hero",
+      "section": "organisms",
+      "resolved": true,
+      "inThisBundle": false
+    },
+    {
+      "from": "design-system",
+      "to": "index.html",
+      "kind": "iframe",
+      "via": "SECTIONS",
+      "key": "trust-sec",
+      "section": "organisms",
+      "resolved": true,
+      "inThisBundle": false
+    },
+    {
+      "from": "design-system",
+      "to": "index.html",
+      "kind": "iframe",
+      "via": "SECTIONS",
+      "key": "cats",
+      "section": "organisms",
+      "resolved": true,
+      "inThisBundle": false
+    },
+    {
+      "from": "design-system",
+      "to": "index.html",
+      "kind": "iframe",
+      "via": "SECTIONS",
+      "key": "certs",
+      "section": "organisms",
+      "resolved": true,
+      "inThisBundle": false
+    },
+    {
+      "from": "design-system",
+      "to": "index.html",
+      "kind": "iframe",
+      "via": "SECTIONS",
+      "key": "cta-sec",
+      "section": "organisms",
+      "resolved": true,
+      "inThisBundle": false
+    },
+    {
+      "from": "design-system",
+      "to": "index.html",
+      "kind": "iframe",
+      "via": "SECTIONS",
+      "key": "guides-sec",
+      "section": "organisms",
+      "resolved": true,
+      "inThisBundle": false
+    },
+    {
+      "from": "design-system",
+      "to": "index.html",
+      "kind": "iframe",
+      "via": "SECTIONS",
+      "key": "brands",
+      "section": "organisms",
+      "resolved": true,
+      "inThisBundle": false
+    },
+    {
+      "from": "design-system",
+      "to": "index.html",
+      "kind": "anchor",
+      "line": 598,
+      "resolved": true,
+      "inThisBundle": false
+    }
+  ],
+  "iframeTargets": [
+    {
+      "via": "COMPONENTS",
+      "list": "{{ components }}",
+      "key": "header",
+      "label": "Header",
+      "cls": "abq-header",
+      "src": "SiteHeader.dc.html",
+      "section": "components",
+      "inThisBundle": false,
+      "resolvedVia": "linked export raw/pages/index.html → ext_resources ./SiteHeader.dc.html (uuid 3cdd074f-f397-409b-beb4-4bf800359107)",
+      "linkedSha256": "5916297eab487e9b234c4180036e2f2e23cdde229c17dd6410f8415dcc445e08",
+      "linkedSnapshotFile": {
+        "path": "home-8a594335/documents/SiteHeader.dc.html",
+        "sha256": "5916297eab487e9b234c4180036e2f2e23cdde229c17dd6410f8415dcc445e08"
+      },
+      "lookup": "[data-r=\"header\"] || #header",
+      "targetSelectorFound": true,
+      "clsLabelOnly": true,
+      "status": "resolved-cross-export"
+    },
+    {
+      "via": "COMPONENTS",
+      "list": "{{ components }}",
+      "key": "footer",
+      "label": "Footer",
+      "cls": "abq-footer",
+      "src": "SiteFooter.dc.html",
+      "section": "components",
+      "inThisBundle": false,
+      "resolvedVia": null,
+      "linkedSha256": null,
+      "linkedSnapshotFile": null,
+      "lookup": "[data-r=\"footer\"] || #footer",
+      "clsLabelOnly": true,
+      "status": "unresolved",
+      "candidate": "inline [data-r=\"footer\"] block in raw/pages/index.html __bundler/template (not a SiteFooter.dc.html document; equivalence unverified)"
+    },
+    {
+      "via": "SECTIONS",
+      "list": "{{ previews }}",
+      "key": "hero",
+      "label": "Hero",
+      "cls": "abq-hero",
+      "src": "index.html",
+      "section": "organisms",
+      "inThisBundle": false,
+      "resolvedVia": "linked export raw/pages/index.html → __bundler/template",
+      "linkedSha256": "ff22098f707750d526fd0ed9f3bc409120ad6580f5603877212684233344e5d1",
+      "linkedSnapshotFile": {
+        "path": "home-8a594335/documents/index.html",
+        "sha256": "2ca3b0d7b70ae35dc532b74af7f856d85b6eb3f00bce71db8b9c4c17be19615e"
+      },
+      "lookup": "[data-r=\"hero\"] || #hero",
+      "targetSelectorFound": true,
+      "clsLabelOnly": true,
+      "status": "resolved-cross-export"
+    },
+    {
+      "via": "SECTIONS",
+      "list": "{{ previews }}",
+      "key": "trust-sec",
+      "label": "Trust bar",
+      "cls": "abq-trust-bar",
+      "src": "index.html",
+      "section": "organisms",
+      "inThisBundle": false,
+      "resolvedVia": "linked export raw/pages/index.html → __bundler/template",
+      "linkedSha256": "ff22098f707750d526fd0ed9f3bc409120ad6580f5603877212684233344e5d1",
+      "linkedSnapshotFile": {
+        "path": "home-8a594335/documents/index.html",
+        "sha256": "2ca3b0d7b70ae35dc532b74af7f856d85b6eb3f00bce71db8b9c4c17be19615e"
+      },
+      "lookup": "[data-r=\"trust-sec\"] || #trust-sec",
+      "targetSelectorFound": true,
+      "clsLabelOnly": true,
+      "status": "resolved-cross-export"
+    },
+    {
+      "via": "SECTIONS",
+      "list": "{{ previews }}",
+      "key": "cats",
+      "label": "Categories",
+      "cls": "abq-categories",
+      "src": "index.html",
+      "section": "organisms",
+      "inThisBundle": false,
+      "resolvedVia": "linked export raw/pages/index.html → __bundler/template",
+      "linkedSha256": "ff22098f707750d526fd0ed9f3bc409120ad6580f5603877212684233344e5d1",
+      "linkedSnapshotFile": {
+        "path": "home-8a594335/documents/index.html",
+        "sha256": "2ca3b0d7b70ae35dc532b74af7f856d85b6eb3f00bce71db8b9c4c17be19615e"
+      },
+      "lookup": "[data-r=\"cats\"] || #cats",
+      "targetSelectorFound": true,
+      "clsLabelOnly": true,
+      "status": "resolved-cross-export"
+    },
+    {
+      "via": "SECTIONS",
+      "list": "{{ previews }}",
+      "key": "certs",
+      "label": "In stock products",
+      "cls": "abq-product-grid",
+      "src": "index.html",
+      "section": "organisms",
+      "inThisBundle": false,
+      "resolvedVia": "linked export raw/pages/index.html → __bundler/template",
+      "linkedSha256": "ff22098f707750d526fd0ed9f3bc409120ad6580f5603877212684233344e5d1",
+      "linkedSnapshotFile": {
+        "path": "home-8a594335/documents/index.html",
+        "sha256": "2ca3b0d7b70ae35dc532b74af7f856d85b6eb3f00bce71db8b9c4c17be19615e"
+      },
+      "lookup": "[data-r=\"certs\"] || #certs",
+      "targetSelectorFound": true,
+      "clsLabelOnly": true,
+      "status": "resolved-cross-export"
+    },
+    {
+      "via": "SECTIONS",
+      "list": "{{ previews }}",
+      "key": "cta-sec",
+      "label": "Calibration CTA",
+      "cls": "abq-cta-band",
+      "src": "index.html",
+      "section": "organisms",
+      "inThisBundle": false,
+      "resolvedVia": "linked export raw/pages/index.html → __bundler/template",
+      "linkedSha256": "ff22098f707750d526fd0ed9f3bc409120ad6580f5603877212684233344e5d1",
+      "linkedSnapshotFile": {
+        "path": "home-8a594335/documents/index.html",
+        "sha256": "2ca3b0d7b70ae35dc532b74af7f856d85b6eb3f00bce71db8b9c4c17be19615e"
+      },
+      "lookup": "[data-r=\"cta-sec\"] || #cta-sec",
+      "targetSelectorFound": true,
+      "clsLabelOnly": true,
+      "status": "resolved-cross-export"
+    },
+    {
+      "via": "SECTIONS",
+      "list": "{{ previews }}",
+      "key": "guides-sec",
+      "label": "Knowledge hub",
+      "cls": "abq-guides",
+      "src": "index.html",
+      "section": "organisms",
+      "inThisBundle": false,
+      "resolvedVia": "linked export raw/pages/index.html → __bundler/template",
+      "linkedSha256": "ff22098f707750d526fd0ed9f3bc409120ad6580f5603877212684233344e5d1",
+      "linkedSnapshotFile": {
+        "path": "home-8a594335/documents/index.html",
+        "sha256": "2ca3b0d7b70ae35dc532b74af7f856d85b6eb3f00bce71db8b9c4c17be19615e"
+      },
+      "lookup": "[data-r=\"guides-sec\"] || #guides-sec",
+      "targetSelectorFound": true,
+      "clsLabelOnly": true,
+      "status": "resolved-cross-export"
+    },
+    {
+      "via": "SECTIONS",
+      "list": "{{ previews }}",
+      "key": "brands",
+      "label": "Brands",
+      "cls": "abq-brands",
+      "src": "index.html",
+      "section": "organisms",
+      "inThisBundle": false,
+      "resolvedVia": "linked export raw/pages/index.html → __bundler/template",
+      "linkedSha256": "ff22098f707750d526fd0ed9f3bc409120ad6580f5603877212684233344e5d1",
+      "linkedSnapshotFile": {
+        "path": "home-8a594335/documents/index.html",
+        "sha256": "2ca3b0d7b70ae35dc532b74af7f856d85b6eb3f00bce71db8b9c4c17be19615e"
+      },
+      "lookup": "[data-r=\"brands\"] || #brands",
+      "targetSelectorFound": true,
+      "clsLabelOnly": true,
+      "status": "resolved-cross-export"
+    }
+  ]
+}

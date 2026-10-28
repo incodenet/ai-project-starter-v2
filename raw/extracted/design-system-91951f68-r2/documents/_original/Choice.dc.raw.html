@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><style>/* ABECQ design tokens. Edit values here; site, components and Design System read this file. */
+:root {
+  /* Brand */
+  --abq-color-ink-900: #001629;
+  --abq-color-navy-700: #00427A;
+  --abq-color-navy-600: #034787;
+  --abq-color-navy-500: #0A4F8F;
+  --abq-color-blue-500: #1F95F9;
+  --abq-color-blue-300: #76C0FF;
+  /* Blue tints */
+  --abq-color-blue-200: #A6CFF2;
+  --abq-color-blue-150: #BBD8F1;
+  --abq-color-blue-100: #C7DCEE;
+  --abq-color-blue-75: #D5E7F6;
+  --abq-color-blue-25: #EFF5FA;
+  --abq-color-blue-50: #F3F7FD;
+  /* Neutral */
+  --abq-color-gray-700: #3A4353;
+  --abq-color-gray-500: #5B6577;
+  --abq-color-gray-400: #8A93A6;
+  --abq-color-gray-300: #9AA8BD;
+  --abq-color-gray-200: #C3CADB;
+  --abq-color-line: #E2E7F2;
+  --abq-color-line-soft: #E8ECF5;
+  --abq-color-divider: #F0F3F8;
+  --abq-color-surface: #F9FAFB;
+  --abq-color-white: #FFFFFF;
+  /* Icons & controls */
+  --abq-color-icon-line: #C3CDE4;
+  --abq-color-control-border: #D5DEEB;
+  --abq-color-line-alt: #E6EAF0;
+  --abq-color-blue-60: #DEECF8;
+  /* Button gradient */
+  --abq-color-grad-start: #2466AC;
+  --abq-color-grad-mid: #0A4F8F;
+  --abq-color-grad-end: #04346A;
+  --abq-color-grad-hover-start: #2F74BD;
+  --abq-color-grad-hover-mid: #1A5EA6;
+  --abq-color-grad-hover-end: #063A70;
+  /* Status */
+  --abq-color-success: #1B8A5A;
+  --abq-color-danger: #E5484D;
+  --abq-color-error: #B42318;
+  --abq-color-warning: #B4541A;
+  --abq-color-warning-bg: #FFF1E6;
+  /* Extra tones */
+  --abq-color-success-bg: #E7F6EE;
+  --abq-color-amber: #B4690E;
+  --abq-color-blue-600: #1F6FD1;
+  --abq-color-blue-350: #68B3F3;
+  --abq-color-slate-400: #7291AB;
+  --abq-color-gray-350: #9AA3BD;
+  --abq-color-gray-450: #7A84A3;
+  --abq-color-gray-250: #C2C7CF;
+  --abq-color-blue-30: #EAF3FB;
+  /* See-through (opacity) colours */
+  --abq-color-white-92: rgba(255,255,255,.92);
+  --abq-color-white-85: rgba(255,255,255,.85);
+  --abq-color-white-75: rgba(255,255,255,.75);
+  --abq-color-white-60: rgba(255,255,255,.6);
+  --abq-color-white-50: rgba(255,255,255,.5);
+  --abq-color-white-35: rgba(255,255,255,.35);
+  --abq-color-white-12: rgba(255,255,255,.12);
+  --abq-color-overlay: rgba(15,24,54,.82);
+  --abq-color-overlay-strong: rgba(15,24,54,.86);
+  --abq-color-line-on-dark: rgba(199,220,238,.18);
+  --abq-color-line-on-dark-strong: rgba(199,220,238,.34);
+  --abq-color-danger-tint: rgba(229,72,77,.12);
+  --abq-color-danger-tint-soft: rgba(229,72,77,.08);
+  --abq-color-primary-tint: rgba(31,149,249,.14);
+  --abq-color-primary-tint-strong: rgba(31,149,249,.22);
+  --abq-color-black-28: rgba(0,0,0,.28);
+  --abq-color-ink-45: rgba(0,22,41,.45);
+  /* Background gradients (full layer stacks) */
+  --abq-color-gradient-label-line: linear-gradient(90deg,#68B3F3,rgba(104,179,243,0));
+  --abq-color-gradient-band: radial-gradient(120% 140% at 8% 0%, #1F6FD0 0%, rgba(31,111,208,0) 46%), radial-gradient(90% 120% at 100% 12%, var(--abq-color-grad-mid) 0%, rgba(10,79,143,0) 50%), radial-gradient(120% 130% at 78% 100%, #002140 0%, rgba(0,33,64,0) 55%), linear-gradient(120deg,var(--abq-color-navy-700) 0%,#002C52 100%);
+  --abq-color-gradient-footer: radial-gradient(90% 120% at 6% 0%, var(--abq-color-grad-mid) 0%, rgba(10,79,143,0) 52%), radial-gradient(80% 110% at 96% 8%, #1F6FD0 0%, rgba(31,111,208,0) 46%), linear-gradient(180deg,#00213D 0%,var(--abq-color-ink-900) 62%);
+  --abq-color-gradient-panel-dark: radial-gradient(90% 80% at 100% 0%, #1F6FD0 0%, rgba(31,111,208,0) 55%), linear-gradient(160deg,#00213D 0%,var(--abq-color-ink-900) 100%);
+  --abq-color-gradient-band-navy: radial-gradient(120% 140% at 8% 0%, #1F6FD0 0%, rgba(31,111,208,0) 46%), linear-gradient(120deg,var(--abq-color-navy-700) 0%,#002C52 100%);
+
+  --abq-font-family: 'Outfit', -apple-system, sans-serif;
+  --abq-font-weight: 400;
+  --abq-fw-extralight: 200;
+  --abq-fw-light: 300;
+  --abq-fw-regular: 400;
+  --abq-fw-medium: 500;
+  --abq-font-loader: clamp(96px,16vw,200px);
+  --abq-lh-loader: 1;
+  --abq-ls-loader: -.03em;
+  --abq-font-display: clamp(34px,5.2vw,60px);
+  --abq-lh-display: 1.04;
+  --abq-ls-display: -.02em;
+  --abq-font-h1: clamp(34px,4.6vw,56px);
+  --abq-lh-h1: 1.05;
+  --abq-ls-h1: -.02em;
+  --abq-font-logo: 44px;
+  --abq-lh-logo: 1;
+  --abq-font-title-lg: 34px;
+  --abq-lh-title-lg: 1.15;
+  --abq-ls-title-lg: -.02em;
+  --abq-font-h2: clamp(26px,3.4vw,40px);
+  --abq-lh-h2: 1.1;
+  --abq-ls-h2: -.02em;
+  --abq-font-h3: clamp(22px,2.6vw,30px);
+  --abq-lh-h3: 1.15;
+  --abq-ls-h3: -.02em;
+  --abq-font-h4: 26px;
+  --abq-lh-h4: 1.2;
+  --abq-ls-h4: -.01em;
+  --abq-font-h5: 24px;
+  --abq-lh-h5: 1.25;
+  --abq-font-title-md: 30px;
+  --abq-lh-title-md: 1.15;
+  --abq-font-price: 22px;
+  --abq-lh-price: 1.3;
+  --abq-font-title: 20px;
+  --abq-lh-title: 1.3;
+  --abq-font-body-lg: clamp(15px,1.4vw,18px);
+  --abq-lh-body-lg: 1.6;
+  --abq-font-body-md: 18px;
+  --abq-lh-body-md: 1.5;
+  --abq-font-body: 16px;
+  --abq-lh-body: 1.5;
+  --abq-font-body-sm: 15px;
+  --abq-lh-body-sm: 1.6;
+  --abq-font-ui: 15px;
+  --abq-lh-ui: 1.4;
+  --abq-font-ui-sm: 14px;
+  --abq-lh-ui-sm: 1.5;
+  --abq-font-eyebrow: 12px;
+  --abq-lh-eyebrow: 1.4;
+  --abq-ls-eyebrow: .14em;
+  --abq-font-label-xs: 11px;
+  --abq-lh-label-xs: 1.4;
+
+  --abq-space-2: 2px;
+  --abq-space-4: 4px;
+  --abq-space-6: 6px;
+  --abq-space-8: 8px;
+  --abq-space-10: 10px;
+  --abq-space-12: 12px;
+  --abq-space-14: 14px;
+  --abq-space-16: 16px;
+  --abq-space-18: 18px;
+  --abq-space-20: 20px;
+  --abq-space-22: 22px;
+  --abq-space-24: 24px;
+  --abq-space-26: 26px;
+  --abq-space-28: 28px;
+  --abq-space-32: 32px;
+  --abq-space-40: 40px;
+  --abq-space-48: 48px;
+  --abq-space-56: 56px;
+  --abq-space-64: 64px;
+  --abq-space-80: 80px;
+  --abq-space-36: 36px;
+  --abq-space-72: 72px;
+  --abq-space-90: 90px;
+  --abq-space-96: 96px;
+  --abq-space-100: 100px;
+  --abq-space-120: 120px;
+  --abq-space-130: 130px;
+  --abq-space-160: 160px;
+  --abq-radius-3xs: 4px;
+
+  --abq-radius-2xs: 5px;
+  --abq-radius-xs: 7px;
+  --abq-radius-sm: 10px;
+  --abq-radius-md: 12px;
+  --abq-radius-lg: 16px;
+  --abq-radius-lg-2: 18px;
+  --abq-radius-lg-3: 20px;
+  --abq-radius-xl: 22px;
+  --abq-radius-xl-1: 24px;
+  --abq-radius-xl-2: 26px;
+  --abq-radius-2xl: 32px;
+  --abq-radius-pill: 100px;
+
+  --abq-shadow-tile: inset 0 1px 1px rgba(255,255,255,.9), 0 3px 8px rgba(0,66,122,.14);
+  --abq-shadow-tab: 0 4px 12px rgba(0,66,122,.12);
+  --abq-shadow-glass: inset 0 1px 0 rgba(255,255,255,.7), 0 8px 22px rgba(16,24,43,.08);
+  --abq-shadow-audience: 0 12px 28px rgba(0,66,122,.30);
+  --abq-shadow-cta: 0 12px 27px 0 rgba(31,149,249,.30);
+  --abq-shadow-float: 0 18px 44px rgba(0,22,41,.13);
+  --abq-shadow-button: 0 10px 24px rgba(0,66,122,.22);
+  --abq-shadow-card: 0 10px 26px rgba(16,24,43,.05);
+  --abq-shadow-card-hover: 0 18px 40px rgba(16,24,43,.12);
+  --abq-shadow-menu: 0 18px 44px rgba(0,22,41,.10);
+  --abq-shadow-toast: 0 18px 44px rgba(0,22,41,.28);
+  --abq-shadow-sheet: 0 -12px 40px rgba(0,22,41,.18);
+  --abq-shadow-modal: 0 30px 80px rgba(0,22,41,.3);
+  --abq-shadow-cta-hover: 0 18px 34px rgba(31,149,249,.40);
+  --abq-shadow-nav-hover: 0 8px 18px rgba(3,71,135,.12);
+  --abq-shadow-raised: 0 6px 18px rgba(16,24,43,.14);
+  --abq-shadow-raised-lg: 0 10px 24px rgba(16,24,43,.14);
+  --abq-shadow-glass-sm: inset 0 1px 0 rgba(255,255,255,.7), 0 6px 16px rgba(16,24,43,.08);
+  --abq-shadow-soft: 0 6px 18px rgba(16,24,43,.06);
+  --abq-shadow-panel: 0 24px 60px rgba(16,24,43,.08);
+  --abq-shadow-blue: 0 8px 20px rgba(0,66,122,.30);
+  --abq-shadow-dot: 0 2px 6px rgba(3,71,135,.30);
+  --abq-shadow-ring-white: 0 0 0 2px var(--abq-color-white);
+  --abq-shadow-ring-white-inset: inset 0 0 0 2px var(--abq-color-white);
+  --abq-shadow-step-ring: 0 0 0 8px rgba(31,149,249,.14), 0 10px 24px rgba(0,66,122,.10);
+  --abq-shadow-none: 0 0 0 0 transparent;
+  --abq-shadow-danger-sides: inset 1px 0 0 rgba(229,72,77,.6), inset -1px 0 0 rgba(229,72,77,.6);
+  --abq-shadow-danger-sides-soft: inset 1px 0 0 rgba(229,72,77,.35), inset -1px 0 0 rgba(229,72,77,.35);
+}
+</style><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&amp;display=swap" rel="stylesheet"></helmet>
+<sc-if value="{{ isAll }}" hint-placeholder-val="{{ false }}"><div style="font-family: 'Outfit', sans-serif; color: var(--abq-color-ink-900); background: var(--abq-color-white); min-height: 100%;"><div style="padding: var(--abq-space-28) var(--abq-space-48) var(--abq-space-24); border-bottom: 1px solid var(--abq-color-line-soft); display: flex; flex-direction: column; gap: var(--abq-space-6);"><div style="font-size: var(--abq-font-eyebrow); letter-spacing: .18em; color: var(--abq-color-blue-500);">COMPONENTS · CHOICE</div><h1 style="margin: 0; font-weight: var(--abq-fw-regular); font-size: var(--abq-font-title-lg); letter-spacing: -.02em;">Choice controls</h1></div><div style="padding: var(--abq-space-32) var(--abq-space-48) var(--abq-space-64); display: flex; flex-direction: column; gap: var(--abq-space-24);"><p style="margin: 0; max-width: 640px; font-size: var(--abq-font-body-sm); line-height: var(--abq-lh-body-sm); color: var(--abq-color-gray-500); font-weight: var(--abq-fw-light);">Checkbox, radio and option card. The control only draws its state; the page keeps the label and decides what a click does. Click any example to try it.</p><div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--abq-space-28) var(--abq-space-24); align-items: start;"><sc-for list="{{ samples }}" as="it" hint-placeholder-count="4"><div style="display: flex; flex-direction: column; gap: var(--abq-space-10);"><div onClick="{{ it.toggle }}" style="display: flex; align-items: center; gap: var(--abq-space-10); font-size: var(--abq-font-ui); color: var(--abq-color-gray-700); cursor: pointer;"><sc-if value="{{ it.isCheckbox }}" hint-placeholder-val="{{ true }}"><span data-abq-choice="checkbox" style="box-sizing: border-box; flex: none; width: 18px; height: 18px; border-radius: var(--abq-radius-2xs); border: 1.5px solid {{ it.bd }}; background: {{ it.bg }}; color: var(--abq-color-white); display: inline-flex; align-items: center; justify-content: center;"><sc-if value="{{ it.checked }}" hint-placeholder-val="{{ false }}"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" style="display: block;"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></sc-if></span></sc-if><sc-if value="{{ it.isRadio }}" hint-placeholder-val="{{ false }}"><span data-abq-choice="radio" style="flex: none; width: 16px; height: 16px; border-radius: 50%; box-sizing: border-box; border: 1.5px solid {{ it.bd }}; background: var(--abq-color-white); display: inline-flex; align-items: center; justify-content: center;"><span style="width: 10px; height: 10px; border-radius: 50%; background: {{ it.dot }};"></span></span></sc-if><sc-if value="{{ it.isCard }}" hint-placeholder-val="{{ false }}"><a href="#" onClick="{{ it.onPick }}" data-abq-choice="card" style="box-sizing: border-box; width: 100%; display: flex; align-items: center; gap: var(--abq-space-14); padding: var(--abq-space-18) var(--abq-space-20); border-radius: var(--abq-radius-lg); border: 1.5px solid {{ it.cardBd }}; background: {{ it.cardBg }}; color: inherit; text-decoration: none; font-family: 'Outfit', sans-serif;"><span style="flex: none; width: 18px; height: 18px; border-radius: 50%; box-sizing: border-box; border: 1.5px solid {{ it.cardBd }}; background: var(--abq-color-white); display: inline-flex; align-items: center; justify-content: center;"><span style="width: 10px; height: 10px; border-radius: 50%; background: {{ it.cardDot }};"></span></span><div style="flex: 1; min-width: 0;"><div style="font-size: var(--abq-font-body); color: var(--abq-color-ink-900);">{{ it.title }}</div><div style="font-size: var(--abq-font-ui-sm); color: var(--abq-color-gray-400); margin-top: var(--abq-space-2);">{{ it.desc }}</div></div><sc-if value="{{ it.hasPrice }}" hint-placeholder-val="{{ false }}"><span style="font-size: var(--abq-font-body-sm); color: var(--abq-color-ink-900);">{{ it.price }}</span></sc-if>{{ it.logo }}</a></sc-if><sc-if value="{{ it.showText }}" hint-placeholder-val="{{ true }}"><span>{{ it.text }}</span></sc-if></div><code style="font-size: var(--abq-font-eyebrow); color: var(--abq-color-gray-500); font-family: ui-monospace,SFMono-Regular,Menlo,monospace;">{{ it.code }}</code></div></sc-for></div></div></div></sc-if>
+<sc-for list="{{ single }}" as="it" hint-placeholder-count="0"><sc-if value="{{ it.isRowKind }}" hint-placeholder-val="{{ true }}"><span data-abq-choice-row="" style="display: flex; align-items: {{ it.align }}; gap: {{ it.gap }}; width: 100%; font-family: 'Outfit', sans-serif;"><span style="flex: none; display: inline-flex; margin-top: {{ it.ctlMt }};"><sc-if value="{{ it.isCheckbox }}" hint-placeholder-val="{{ true }}"><span data-abq-choice="checkbox" style="box-sizing: border-box; flex: none; width: 18px; height: 18px; border-radius: var(--abq-radius-2xs); border: 1.5px solid {{ it.bd }}; background: {{ it.bg }}; color: var(--abq-color-white); display: inline-flex; align-items: center; justify-content: center;"><sc-if value="{{ it.checked }}" hint-placeholder-val="{{ false }}"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" style="display: block;"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></sc-if></span></sc-if><sc-if value="{{ it.isRadio }}" hint-placeholder-val="{{ false }}"><span data-abq-choice="radio" style="flex: none; width: 16px; height: 16px; border-radius: 50%; box-sizing: border-box; border: 1.5px solid {{ it.bd }}; background: var(--abq-color-white); display: inline-flex; align-items: center; justify-content: center;"><span style="width: 10px; height: 10px; border-radius: 50%; background: {{ it.dot }};"></span></span></sc-if></span><sc-if value="{{ it.hasLabel }}" hint-placeholder-val="{{ true }}"><span style="min-width: 0;">{{ it.labelEl }}</span></sc-if><sc-if value="{{ it.hasCount }}" hint-placeholder-val="{{ false }}"><span style="margin-left: auto; color: var(--abq-color-gray-400); font-size: var(--abq-font-ui-sm);">{{ it.count }}</span></sc-if></span></sc-if><sc-if value="{{ it.isCard }}" hint-placeholder-val="{{ false }}"><a href="#" onClick="{{ it.onPick }}" data-abq-choice="card" style="box-sizing: border-box; width: 100%; display: flex; align-items: center; gap: var(--abq-space-14); padding: var(--abq-space-18) var(--abq-space-20); border-radius: var(--abq-radius-lg); border: 1.5px solid {{ it.cardBd }}; background: {{ it.cardBg }}; color: inherit; text-decoration: none; font-family: 'Outfit', sans-serif;"><span style="flex: none; width: 18px; height: 18px; border-radius: 50%; box-sizing: border-box; border: 1.5px solid {{ it.cardBd }}; background: var(--abq-color-white); display: inline-flex; align-items: center; justify-content: center;"><span style="width: 10px; height: 10px; border-radius: 50%; background: {{ it.cardDot }};"></span></span><div style="flex: 1; min-width: 0;"><div style="font-size: var(--abq-font-body); color: var(--abq-color-ink-900);">{{ it.title }}</div><div style="font-size: var(--abq-font-ui-sm); color: var(--abq-color-gray-400); margin-top: var(--abq-space-2);">{{ it.desc }}</div></div><sc-if value="{{ it.hasPrice }}" hint-placeholder-val="{{ false }}"><span style="font-size: var(--abq-font-body-sm); color: var(--abq-color-ink-900);">{{ it.price }}</span></sc-if>{{ it.logo }}</a></sc-if></sc-for>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;1000px&quot;,&quot;height&quot;:&quot;520px&quot;},&quot;kind&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;all&quot;,&quot;checkbox&quot;,&quot;radio&quot;,&quot;card&quot;],&quot;default&quot;:&quot;all&quot;,&quot;tsType&quot;:&quot;'all'|'checkbox'|'radio'|'card'&quot;},&quot;checked&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;},&quot;title&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;desc&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;price&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;label&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;label&quot;:&quot;Label ([link](#href) allowed)&quot;},&quot;count&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string|number&quot;},&quot;top&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;label&quot;:&quot;Align to first line&quot;},&quot;gap&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;10px&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;logo&quot;:{&quot;editor&quot;:null,&quot;tsType&quot;:&quot;ReactNode&quot;},&quot;onPick&quot;:{&quot;editor&quot;:null,&quot;tsType&quot;:&quot;(e) => void&quot;}}">
+class Component extends DCLogic {
+  state = { demo: { c1: false, c2: true, r: 'refund', card: 0 } };
+  labelEl(s) {
+    if (!s) return null;
+    const parts = []; const re = /\[([^\]]+)\]\(([^)]+)\)/g; let last = 0, m, k = 0;
+    while ((m = re.exec(s))) { if (m.index > last) parts.push(s.slice(last, m.index)); parts.push(React.createElement('a', { key: k++, href: m[2] }, m[1])); last = re.lastIndex; }
+    if (last < s.length) parts.push(s.slice(last));
+    return React.createElement(React.Fragment, null, ...parts);
+  }
+  item(p) {
+    const kind = p.kind || 'checkbox', on = !!p.checked;
+    return {
+      isCheckbox: kind === 'checkbox', isRadio: kind === 'radio', isCard: kind === 'card', checked: on,
+      bd: on ? '#00427A' : '#C7DCEE', bg: on ? '#00427A' : '#FFFFFF', dot: on ? '#00427A' : 'transparent',
+      cardBd: on ? '#1F95F9' : '#E2E7F2', cardBg: on ? '#F3F7FD' : '#FFFFFF', cardDot: on ? '#1F95F9' : 'transparent',
+      title: p.title ?? '', desc: p.desc ?? '', price: p.price ?? '', hasPrice: !!p.price, logo: p.logo ?? null,
+      onPick: p.onPick || ((e) => { if (e) e.preventDefault(); }),
+      isRowKind: kind !== 'card', align: p.top ? 'flex-start' : 'center', ctlMt: p.top ? '2px' : '0px', gap: p.gap || (kind === 'radio' ? '8px' : '10px'),
+      hasLabel: !!p.label, labelEl: this.labelEl(p.label), hasCount: p.count != null && p.count !== '', count: p.count ?? ''
+    };
+  }
+  renderVals() {
+    const p = this.props;
+    if ((p.kind || 'all') !== 'all') return { isAll: false, samples: [], single: [this.item(p)] };
+    const d = this.state.demo, set = (o) => (e) => { if (e) e.preventDefault(); this.setState(s => ({ demo: { ...s.demo, ...o } })); };
+    const s = (o, text, code, toggle) => ({ ...this.item(o), text, showText: !!text, code, toggle });
+    return { isAll: true, single: [], samples: [
+      s({ kind: 'checkbox', checked: d.c1 }, 'I agree to the privacy policy', 'kind="checkbox"', set({ c1: !d.c1 })),
+      s({ kind: 'checkbox', checked: d.c2 }, 'Set as default address', 'kind="checkbox" checked', set({ c2: !d.c2 })),
+      s({ kind: 'radio', checked: d.r === 'refund' }, 'refund', 'kind="radio" checked', set({ r: 'refund' })),
+      s({ kind: 'radio', checked: d.r === 'exchange' }, 'exchange', 'kind="radio"', set({ r: 'exchange' })),
+      s({ kind: 'card', checked: d.card === 0, title: 'Colissimo - 2–3 days', desc: 'Tracked, signature on request', price: 'Included', onPick: set({ card: 0 }) }, '', 'kind="card" checked', null),
+      s({ kind: 'card', checked: d.card === 1, title: 'Express - next day', desc: 'Order before 12:00', price: '+ 12,00 €', onPick: set({ card: 1 }) }, '', 'kind="card"', null)
+    ] };
+  }
+}
+</script>
+</body>
+</html>

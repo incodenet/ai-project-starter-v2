@@ -1,0 +1,1706 @@
+{
+  "schemaVersion": 1,
+  "snapshot": "design-system-91951f68-r2",
+  "mode": "INITIAL (re-extraction; previous snapshot design-system-91951f68 kept unchanged)",
+  "extractedAt": "2026-10-28T12:43:24.198Z",
+  "extractor": {
+    "method": "node: raw-text <script> scanner, JSON.parse, base64, gunzip when compressed:true, position-preserving HTML tree parser; nothing from the export executed"
+  },
+  "exports": [
+    {
+      "exportId": "abecq-design-system",
+      "originalPath": "raw/exports/design-system.html",
+      "sha256": "91951f6819d709e2aadd273357a72b24ece91f610d7f32ced8b3b701653d7196",
+      "bytes": 7170359,
+      "detectedType": "claude-design-bundle",
+      "role": "design-system",
+      "wrapperTitle": "ABECQ Design System",
+      "bundlerBlocks": [
+        {
+          "type": "",
+          "length": 16792
+        },
+        {
+          "type": "__bundler/manifest",
+          "length": 6911577
+        },
+        {
+          "type": "__bundler/ext_resources",
+          "length": 896
+        },
+        {
+          "type": "__bundler/page_order",
+          "length": 6
+        },
+        {
+          "type": "__bundler/template",
+          "length": 239120
+        }
+      ],
+      "manifestEntries": 63,
+      "htmlEntries": 7,
+      "pageOrder": [],
+      "extResources": [
+        {
+          "id": "./Button.dc.html",
+          "uuid": "3b8997e4-649e-4522-8cc5-85c987976269"
+        },
+        {
+          "id": "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap",
+          "uuid": "68454a69-6e4d-4f27-9bd4-e8246dd9c1bb"
+        },
+        {
+          "id": "./SectionHeading.dc.html",
+          "uuid": "4672ff96-7a1b-4635-bdd8-b55fba7af0e2"
+        },
+        {
+          "id": "./Breadcrumb.dc.html",
+          "uuid": "1aa7391d-e691-4e44-8f9b-ffd3b9e67ab3"
+        },
+        {
+          "id": "./ProductCard.dc.html",
+          "uuid": "ee9ba3a2-6cc1-4036-b4a5-4996162c86aa"
+        },
+        {
+          "id": "./PdfCard.dc.html",
+          "uuid": "e09429cb-0e14-459a-b080-99fc7066298f"
+        },
+        {
+          "id": "./FormField.dc.html",
+          "uuid": "6888fc32-5343-4ddf-8195-9e8df421b03e"
+        },
+        {
+          "id": "./Choice.dc.html",
+          "uuid": "944f35a2-08d6-44e6-87ff-7c30e2cf6e25"
+        },
+        {
+          "id": "https://unpkg.com/react@18.3.1/umd/react.production.min.js",
+          "uuid": "000aaec9-9e63-4273-a32a-5da34050c754"
+        },
+        {
+          "id": "https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js",
+          "uuid": "b4315401-a05d-4f5e-b126-fe5016f5f800"
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "id": "design-system",
+      "file": "documents/design-system.html",
+      "original": "documents/_original/design-system.template.raw.html",
+      "role": "root",
+      "uuid": null,
+      "extId": null,
+      "bytes": 225269,
+      "sha256": "09300678cc8034670fba01c8e56b0d198c5629e3939e2646bb01bc98e6f02e78"
+    },
+    {
+      "id": "Button",
+      "file": "documents/Button.dc.html",
+      "original": "documents/_original/Button.dc.raw.html",
+      "role": "dc-component",
+      "uuid": "3b8997e4-649e-4522-8cc5-85c987976269",
+      "extId": "./Button.dc.html",
+      "bytes": 74561,
+      "sha256": "959beed92c9736c5d39b18fea028c3e63429023b9e809350ea38bf0b7db4dcba"
+    },
+    {
+      "id": "SectionHeading",
+      "file": "documents/SectionHeading.dc.html",
+      "original": "documents/_original/SectionHeading.dc.raw.html",
+      "role": "dc-component",
+      "uuid": "4672ff96-7a1b-4635-bdd8-b55fba7af0e2",
+      "extId": "./SectionHeading.dc.html",
+      "bytes": 10302,
+      "sha256": "8d121902aabe079161c921c81d6ad55f3f77c3e3a07c57feb47c9240997f1de1"
+    },
+    {
+      "id": "Breadcrumb",
+      "file": "documents/Breadcrumb.dc.html",
+      "original": "documents/_original/Breadcrumb.dc.raw.html",
+      "role": "dc-component",
+      "uuid": "1aa7391d-e691-4e44-8f9b-ffd3b9e67ab3",
+      "extId": "./Breadcrumb.dc.html",
+      "bytes": 10679,
+      "sha256": "cdc87c986767ab98c96f8dda731b20041bc2a666b6e8068350f6fe673f80ad20"
+    },
+    {
+      "id": "ProductCard",
+      "file": "documents/ProductCard.dc.html",
+      "original": "documents/_original/ProductCard.dc.raw.html",
+      "role": "dc-component",
+      "uuid": "ee9ba3a2-6cc1-4036-b4a5-4996162c86aa",
+      "extId": "./ProductCard.dc.html",
+      "bytes": 14245,
+      "sha256": "4aecdaf69a1f27cc5630ffc6b5ea73db6ae8bac7287f25bcbdf0fa640de9aa8a"
+    },
+    {
+      "id": "PdfCard",
+      "file": "documents/PdfCard.dc.html",
+      "original": "documents/_original/PdfCard.dc.raw.html",
+      "role": "dc-component",
+      "uuid": "e09429cb-0e14-459a-b080-99fc7066298f",
+      "extId": "./PdfCard.dc.html",
+      "bytes": 8627,
+      "sha256": "bfeac52d61b24d744aa9fb14d127e952bf6908bf313408a9af1283de6ccf6f73"
+    },
+    {
+      "id": "FormField",
+      "file": "documents/FormField.dc.html",
+      "original": "documents/_original/FormField.dc.raw.html",
+      "role": "dc-component",
+      "uuid": "6888fc32-5343-4ddf-8195-9e8df421b03e",
+      "extId": "./FormField.dc.html",
+      "bytes": 21476,
+      "sha256": "825889679226087aba5c8f99babe046154583c362ea3a1c6369b8d7432132394"
+    },
+    {
+      "id": "Choice",
+      "file": "documents/Choice.dc.html",
+      "original": "documents/_original/Choice.dc.raw.html",
+      "role": "dc-component",
+      "uuid": "944f35a2-08d6-44e6-87ff-7c30e2cf6e25",
+      "extId": "./Choice.dc.html",
+      "bytes": 20148,
+      "sha256": "eac2aa0cdf2dc55ae58120403d7bc84d9bc6a3b5ce6025390a66d7765ae42001"
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/47e072dba59b48ae.webp",
+      "mime": "image/webp",
+      "bytes": 14804,
+      "sha256": "47e072dba59b48ae34f8bb6ddefa009648ff60be0e11f9324b2c9ae304d55b3e",
+      "uuids": [
+        "84cf0a01-2af0-4586-8262-9acb9c0f1bf6"
+      ],
+      "logicalPaths": [
+        "assets/user/slot-cart-empty-img.webp"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/0088735301449132.webp",
+      "mime": "image/webp",
+      "bytes": 11648,
+      "sha256": "00887353014491325d10d970f567a4f6537e2b1b28ed25f8256e216479cbed05",
+      "uuids": [
+        "89fbc9d9-13bc-485e-bcff-b1eb01f4cea4"
+      ],
+      "logicalPaths": [
+        "assets/user/slot-acct-stat-addr.webp"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/13821d3ec056ec91.webp",
+      "mime": "image/webp",
+      "bytes": 14694,
+      "sha256": "13821d3ec056ec9176381b390a3d9132881bc124dd165346d8db51c824a90998",
+      "uuids": [
+        "47ea0a07-0207-4af4-b256-427cc350b40c"
+      ],
+      "logicalPaths": [
+        "assets/user/slot-acct-stat-orders.webp"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/166d71323da05cad.webp",
+      "mime": "image/webp",
+      "bytes": 14694,
+      "sha256": "166d71323da05cadf67ffdfbbf8152a212672078aed3dfbb9364e84096594248",
+      "uuids": [
+        "bb6dbb16-1e26-4979-a249-b44ab33261da"
+      ],
+      "logicalPaths": [
+        "assets/user/slot-returnform-badge.webp"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/1fcfd80d48bc7ce2.webp",
+      "mime": "image/webp",
+      "bytes": 40496,
+      "sha256": "1fcfd80d48bc7ce214313c9406c55e24dbde594f0d997caf846a2b913a85583b",
+      "uuids": [
+        "00e506f4-2002-4201-b0a6-ffec207dd449"
+      ],
+      "logicalPaths": [
+        "assets/media/heroPart-1.png",
+        "assets/media/heroPart-1.webp"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/f13020f718142033.webp",
+      "mime": "image/webp",
+      "bytes": 30932,
+      "sha256": "f13020f7181420339a03d2dc26b7e7f263859eaab6ba53ca2b03e26f0ab30ef7",
+      "uuids": [
+        "75e89976-5e7c-4287-a49d-288a1105d7a2"
+      ],
+      "logicalPaths": [
+        "assets/media/cat-2.png",
+        "assets/media/cat-2.webp"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/f75ca84e9edb2402.svg",
+      "mime": "image/svg+xml",
+      "bytes": 420,
+      "sha256": "f75ca84e9edb240278f5d40a5d6efa1cc6c284d07ac0acf6bae4422bd9a3bcf2",
+      "uuids": [
+        "b5496e2c-7153-421b-83e4-d2b4e19be9c6"
+      ],
+      "logicalPaths": [
+        "assets/pay-mastercard.svg"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/dc108e852082f310.svg",
+      "mime": "image/svg+xml",
+      "bytes": 6564,
+      "sha256": "dc108e852082f310f2325ba52a81def900726306db336f2018165debbca27952",
+      "uuids": [
+        "abe39664-aa81-426b-8679-9888899c1c2a"
+      ],
+      "logicalPaths": [
+        "assets/brand-frame.svg"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/c0f61538b06a78c4.svg",
+      "mime": "image/svg+xml",
+      "bytes": 5856,
+      "sha256": "c0f61538b06a78c4ff155835ed50ed4889d9f7d9113444da6467364bc2a6c766",
+      "uuids": [
+        "0dd0011c-be4b-4a4f-b571-84579f75caf8"
+      ],
+      "logicalPaths": [
+        "assets/brand-drager.svg"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/afbf82c194c264bc.webp",
+      "mime": "image/webp",
+      "bytes": 64904,
+      "sha256": "afbf82c194c264bcd3a339f51195bc4672c9f49b6470dca089ae571c16b3e3ce",
+      "uuids": [
+        "1979f737-10e2-4eb3-b23d-3f6d08dbe40a"
+      ],
+      "logicalPaths": [
+        "assets/media/cta-0.png",
+        "assets/media/cta-0.webp"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/3f01fb30a01a0223.webp",
+      "mime": "image/webp",
+      "bytes": 26920,
+      "sha256": "3f01fb30a01a022351f59f2b3e6e8eaf54d482cd9544f4250d91b9a63bc08a2f",
+      "uuids": [
+        "dd4c6380-ef73-4af5-9bc8-5bae711d22b0"
+      ],
+      "logicalPaths": [
+        "assets/media/heroPart-2.png",
+        "assets/media/heroPart-2.webp"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/77e3259da1818c31.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1779,
+      "sha256": "77e3259da1818c31baa58705b069ae16f544a9bb28289128cf2ab71911360c72",
+      "uuids": [
+        "725609cd-76f1-41fe-b74c-2bc64afb6a48"
+      ],
+      "logicalPaths": [
+        "assets/icon-suitcase.svg"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/47571ff3b74f28d6.png",
+      "mime": "image/png",
+      "bytes": 11299,
+      "sha256": "47571ff3b74f28d6189675f4ac541e859f3ac971dd7cd9475a56ae5c10d55daa",
+      "uuids": [
+        "c6c942d0-28b6-4ce0-91d8-aa75b8c43af8"
+      ],
+      "logicalPaths": [
+        "assets/brand-tigon.png"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/b5194b7bfcfd67aa.svg",
+      "mime": "image/svg+xml",
+      "bytes": 399,
+      "sha256": "b5194b7bfcfd67aaee15ef749d14b468e9768cc7ac93a1784010d5ea96efcbb4",
+      "uuids": [
+        "b03aae16-032b-467e-bd52-cdf53a4344c9"
+      ],
+      "logicalPaths": [
+        "assets/icon-user.svg"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/2b72d5c1c68b933c.svg",
+      "mime": "image/svg+xml",
+      "bytes": 5376,
+      "sha256": "2b72d5c1c68b933c4bc04933f07b4aa7024e510355ad989ef5a7633aba059ec2",
+      "uuids": [
+        "b036edea-0426-49cf-ab81-72e06c053276"
+      ],
+      "logicalPaths": [
+        "assets/pay-paypal.svg"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/0a0b3029cc47c7a3.svg",
+      "mime": "image/svg+xml",
+      "bytes": 3896,
+      "sha256": "0a0b3029cc47c7a3c9f27ce24588254f8f424ed2cdad30af924fc49c92e704be",
+      "uuids": [
+        "d48c8d01-06d9-4fc3-9f15-1e4d41fcc136"
+      ],
+      "logicalPaths": [
+        "assets/brand-drager2.svg"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/d8b10fead63072b6.svg",
+      "mime": "image/svg+xml",
+      "bytes": 8194,
+      "sha256": "d8b10fead63072b692626a44846de0cce7226376867dd0a33ae9315aa647cc3b",
+      "uuids": [
+        "f11c37d5-a762-4502-8160-1eab0960622b"
+      ],
+      "logicalPaths": [
+        "assets/pay-mastercard-color.svg"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/eb9fcf6a6a11ea9b.png",
+      "mime": "image/png",
+      "bytes": 8104,
+      "sha256": "eb9fcf6a6a11ea9bd4372dac0c1b5178ab9bddb9659aafe145f565241112c1f2",
+      "uuids": [
+        "5bc63cb4-372e-4257-8ef7-aaaeb49c51e0"
+      ],
+      "logicalPaths": [
+        "assets/brand-burmeier.png"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/b9d9b45aa6ef0da1.svg",
+      "mime": "image/svg+xml",
+      "bytes": 2002,
+      "sha256": "b9d9b45aa6ef0da1147707903d531104e24b76d2c13350247b8229d8e370bee5",
+      "uuids": [
+        "bbf825c1-67c7-453b-8b2c-281c9a61acb0"
+      ],
+      "logicalPaths": [
+        "assets/pay-visa.svg"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/6b610aab3d51f7e2.png",
+      "mime": "image/png",
+      "bytes": 115837,
+      "sha256": "6b610aab3d51f7e279276c4a09f170f259f9829eb76a7dec4e8063113d2c44bb",
+      "uuids": [
+        "40bffa67-a1eb-4c2f-bc39-fd9bf1874ee6",
+        "3915c548-016c-4697-ac5d-b7a9ebe507f8"
+      ],
+      "logicalPaths": [
+        "assets/media/product-1.png",
+        "assets/media/productInd-1.png"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/6e4c3785875fa591.webp",
+      "mime": "image/webp",
+      "bytes": 46308,
+      "sha256": "6e4c3785875fa591a01483e1f82d7e7f42379dda44672978cdfc5a1753c7a491",
+      "uuids": [
+        "9373a711-b4b2-42a5-bb32-29f28d8c8f5a"
+      ],
+      "logicalPaths": [
+        "assets/media/cat-0.png",
+        "assets/media/cat-0.webp"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/68e8d795cf9a91db.webp",
+      "mime": "image/webp",
+      "bytes": 66946,
+      "sha256": "68e8d795cf9a91dbe0b35c0f8ee1534246f3b2f8ce7f1dee63395198076b6e86",
+      "uuids": [
+        "22730d49-e9d6-45e7-aef4-70ca6411ea57"
+      ],
+      "logicalPaths": [
+        "assets/media/guide-1.png",
+        "assets/media/guide-1.webp"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/d63a6a027d81d54d.png",
+      "mime": "image/png",
+      "bytes": 29731,
+      "sha256": "d63a6a027d81d54df05aba8206b68e27e5e0cbdecee1ecab0941c2ce3833eb5b",
+      "uuids": [
+        "feed6f79-2ac1-4c7f-8646-165c9404c7b0"
+      ],
+      "logicalPaths": [
+        "assets/media/cat-3.png"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/13d7c707ec7e5d8c.png",
+      "mime": "image/png",
+      "bytes": 113208,
+      "sha256": "13d7c707ec7e5d8c882ef179ddf9f49717544ce0ca670e55f09162cbb5805cc9",
+      "uuids": [
+        "71f41830-d1dd-49d4-8e7e-5a175d24a887",
+        "ff5680b0-5f3d-4fba-a4ac-c6a9c84cdfba"
+      ],
+      "logicalPaths": [
+        "assets/media/productPro-2.png",
+        "assets/media/product-3.png"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/d3e3440a5165c1ce.webp",
+      "mime": "image/webp",
+      "bytes": 39164,
+      "sha256": "d3e3440a5165c1cef9b5bbfb6796050162ee5bffe918bcf8f31d79290d2e8ff9",
+      "uuids": [
+        "3e3b70cf-3413-4c86-8b07-f93ed272abdc"
+      ],
+      "logicalPaths": [
+        "assets/media/product-4.png",
+        "assets/media/product-4.webp"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/1aaef9c790c7d933.webp",
+      "mime": "image/webp",
+      "bytes": 33106,
+      "sha256": "1aaef9c790c7d9337952b49e3fd3acb79476f7808c50fd4ce79cecc2c29caa4a",
+      "uuids": [
+        "7805608c-4301-498a-a599-9ee6e021e390"
+      ],
+      "logicalPaths": [
+        "assets/media/productPro-0.png",
+        "assets/media/productPro-0.webp"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/b6dc25c4f7ab74dc.png",
+      "mime": "image/png",
+      "bytes": 49229,
+      "sha256": "b6dc25c4f7ab74dc8fa779d15ee9fb6d683076e97bd80da1e7a94eaa73fd951e",
+      "uuids": [
+        "a0c2f221-1519-4d37-870b-9a9046c96831"
+      ],
+      "logicalPaths": [
+        "assets/media/cat-4.png"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/2db22419c872f672.png",
+      "mime": "image/png",
+      "bytes": 38192,
+      "sha256": "2db22419c872f672aa30322e61d3d630fb8f82807585c118582172d1aae5f1e9",
+      "uuids": [
+        "cd431f76-ca07-4f18-8173-76d81bfb3cb0"
+      ],
+      "logicalPaths": [
+        "assets/brand-dingo.png"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/8de436f505eb0a90.png",
+      "mime": "image/png",
+      "bytes": 86434,
+      "sha256": "8de436f505eb0a90e0e966523e83ecef9a3da17f9e94d233369d36d848d92858",
+      "uuids": [
+        "fe6fb5dc-041e-4821-ad2c-2b77bcc82205",
+        "f3277f20-9682-4aae-83e8-ac260b897155",
+        "b9150ba3-3b2e-476a-9caa-40b8f4bbdac1"
+      ],
+      "logicalPaths": [
+        "assets/media/productPro-3.png",
+        "assets/media/product-0.png",
+        "assets/media/productInd-0.png"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/dd9bb4a6d5b08b9c.png",
+      "mime": "image/png",
+      "bytes": 52407,
+      "sha256": "dd9bb4a6d5b08b9c0d46d377d2f6415541b0f47228fd293777950caa60064e15",
+      "uuids": [
+        "644ea698-e7f9-4f30-93dd-504e89a09ee6"
+      ],
+      "logicalPaths": [
+        "assets/media/productInd-3.png"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/17e5f48968ea8fa2.webp",
+      "mime": "image/webp",
+      "bytes": 12444,
+      "sha256": "17e5f48968ea8fa2294896aac456a8cd8766aa2ddc5016df9c1256fa5db2e17d",
+      "uuids": [
+        "e822be7f-551d-4d8c-833d-766aec1361ef"
+      ],
+      "logicalPaths": [
+        "assets/user/slot-acct-stat-compare.webp"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/a62ca38504953297.png",
+      "mime": "image/png",
+      "bytes": 67671,
+      "sha256": "a62ca38504953297927c9edac56e19ed38f799df677494a45180b650bc068385",
+      "uuids": [
+        "9ef53525-f822-4a2b-a61e-3b96c3e4f490",
+        "1409ee44-f5f1-4c5e-83fc-f14e68b14762",
+        "4f41adfb-9825-4fe4-9341-16da25bf3623"
+      ],
+      "logicalPaths": [
+        "assets/media/product-2.png",
+        "assets/media/productInd-4.png",
+        "assets/media/productPro-1.png"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/18e4b54a8391bcab.webp",
+      "mime": "image/webp",
+      "bytes": 68374,
+      "sha256": "18e4b54a8391bcab71912ebd852891fa7eef7a234323e17dc97bec888d25e7a0",
+      "uuids": [
+        "b9541430-3e0b-45e3-9534-7f095fc65cfb"
+      ],
+      "logicalPaths": [
+        "assets/media/guide-0.jpg",
+        "assets/media/guide-0.webp"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/7a73f5ae91aa2422.webp",
+      "mime": "image/webp",
+      "bytes": 63834,
+      "sha256": "7a73f5ae91aa24228c85dcf57ba5b1ed00c93d338070656193d0ee74cd3808bb",
+      "uuids": [
+        "866c39d2-c73b-4751-89b5-8266bb0345e8"
+      ],
+      "logicalPaths": [
+        "assets/media/guide-2.png",
+        "assets/media/guide-2.webp"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/13ec04de3df5a7c0.png",
+      "mime": "image/png",
+      "bytes": 21376,
+      "sha256": "13ec04de3df5a7c0cbe641f70018ca8ee291b669179da65becde079f08e43197",
+      "uuids": [
+        "e3228c58-1256-4b12-bbb5-db11b4425ecc"
+      ],
+      "logicalPaths": [
+        "assets/abecq-logo.png"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/b1084592a853ac61.svg",
+      "mime": "image/svg+xml",
+      "bytes": 16728,
+      "sha256": "b1084592a853ac61b0688b4a7b6ae7db86a3ff2c9c5982db08cae5f088d06fec",
+      "uuids": [
+        "b32b2cca-7769-4d7b-894b-ec58dcbebee0"
+      ],
+      "logicalPaths": [
+        "assets/brand-seca.svg"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/d900fbf74314f854.svg",
+      "mime": "image/svg+xml",
+      "bytes": 16671,
+      "sha256": "d900fbf74314f8547c719d3c16ec13f9a448de4ae5418d491fb04721b7b167b7",
+      "uuids": [
+        "6594a306-52c5-4c48-9bb6-fe6a26a2e441"
+      ],
+      "logicalPaths": [
+        "assets/zoom-graphics-logo.svg"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/89dce32ef528f506.webp",
+      "mime": "image/webp",
+      "bytes": 39164,
+      "sha256": "89dce32ef528f50630353c7dddfd77d0da821dbb15ab27cf4fd2ebd812c439ef",
+      "uuids": [
+        "17840f9c-8122-495a-ac5a-b998fa9377af"
+      ],
+      "logicalPaths": [
+        "assets/media/productInd-2.png",
+        "assets/media/productInd-2.webp"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/0740bcb5439837e4.png",
+      "mime": "image/png",
+      "bytes": 86930,
+      "sha256": "0740bcb5439837e44beba1eb785e5ac472a3055533d471a95c56bbb075ed0707",
+      "uuids": [
+        "65b435d6-1a7e-49f6-babf-379f310c109f"
+      ],
+      "logicalPaths": [
+        "assets/media/productPro-4.png"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/98852e7133b84e03.webp",
+      "mime": "image/webp",
+      "bytes": 126988,
+      "sha256": "98852e7133b84e03eb91e181d4aaf1c2756ab495c2457e9467d5668d4eec0fa7",
+      "uuids": [
+        "f26606c9-d842-4135-9181-03644ef5d700"
+      ],
+      "logicalPaths": [
+        "assets/media/guide-3.png",
+        "assets/media/guide-3.webp"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/19f97d02e66f9beb.webp",
+      "mime": "image/webp",
+      "bytes": 106968,
+      "sha256": "19f97d02e66f9beb9864f710880850dd0d97b9f86c831b49db90634a95a2c05a",
+      "uuids": [
+        "546b33d5-f733-41a7-88c1-0e6e4b8396dd"
+      ],
+      "logicalPaths": [
+        "assets/en15964-badge.png",
+        "assets/en15964-badge.webp"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/0e2dbc8d1b541ea2.webp",
+      "mime": "image/webp",
+      "bytes": 117630,
+      "sha256": "0e2dbc8d1b541ea287cd1859e4080c508ea884d9d812928fe9f8a034b24ca686",
+      "uuids": [
+        "90fc3a3b-c844-4b78-af95-343d7026e192"
+      ],
+      "logicalPaths": [
+        "assets/oiml-badge.png",
+        "assets/oiml-badge.webp"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/dc031ae8d370dd85.webp",
+      "mime": "image/webp",
+      "bytes": 56082,
+      "sha256": "dc031ae8d370dd854dd6badaf77ea980f5db43c636003649b5615dd150eec5fc",
+      "uuids": [
+        "9e85bf99-2a07-4d29-9acb-c3d3cdb76fd2"
+      ],
+      "logicalPaths": [
+        "assets/en16280-badge.png",
+        "assets/en16280-badge.webp"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/792b33cd2bd17ce0.mp4",
+      "mime": "video/mp4",
+      "bytes": 2743274,
+      "sha256": "792b33cd2bd17ce0f3add66eeee180ad964827e66eda1ac9818cc4c920e52e1f",
+      "uuids": [
+        "6428fdff-782e-47fb-8872-0146f8d23abe"
+      ],
+      "logicalPaths": [
+        "assets/media/heroPart-0.mp4"
+      ],
+      "extIds": []
+    },
+    {
+      "file": "assets/8fe7df74405f3c55.js",
+      "mime": "text/javascript",
+      "bytes": 69150,
+      "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe",
+      "uuids": [
+        "278d665c-632d-468e-9db1-47b39fa853b3"
+      ],
+      "logicalPaths": [],
+      "extIds": []
+    },
+    {
+      "file": "assets/28d684a1bde40714.css",
+      "mime": "text/css",
+      "bytes": 63556,
+      "sha256": "28d684a1bde40714ed596ee285a74e2322f221c74f5f79bf40d009b3eb2c2459",
+      "uuids": [
+        "68454a69-6e4d-4f27-9bd4-e8246dd9c1bb"
+      ],
+      "logicalPaths": [],
+      "extIds": [
+        "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      ]
+    },
+    {
+      "file": "assets/d949f1c3687aedad.js",
+      "mime": "text/javascript",
+      "bytes": 10751,
+      "sha256": "d949f1c3687aedadcedac85261865f29b17cd273997e7f6b2bfc53b2f9d4c4dd",
+      "uuids": [
+        "000aaec9-9e63-4273-a32a-5da34050c754"
+      ],
+      "logicalPaths": [],
+      "extIds": [
+        "https://unpkg.com/react@18.3.1/umd/react.production.min.js"
+      ]
+    },
+    {
+      "file": "assets/35f4f974f4b2bcd4.js",
+      "mime": "text/javascript",
+      "bytes": 131835,
+      "sha256": "35f4f974f4b2bcd44da73963347f8952e341f83909e4498227d4e26b98f66f0d",
+      "uuids": [
+        "b4315401-a05d-4f5e-b126-fe5016f5f800"
+      ],
+      "logicalPaths": [],
+      "extIds": [
+        "https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"
+      ]
+    },
+    {
+      "file": "assets/0f53d1c03b3918d7.woff2",
+      "mime": "font/woff2",
+      "bytes": 14808,
+      "sha256": "0f53d1c03b3918d744a843b5039001ee31695ca1e255e3914188df81beb461e9",
+      "uuids": [
+        "ccb54b24-42c0-45fc-82ea-e3391c7b9b1b"
+      ],
+      "logicalPaths": [],
+      "extIds": []
+    },
+    {
+      "file": "assets/6c18d579fd87c377.woff2",
+      "mime": "font/woff2",
+      "bytes": 32292,
+      "sha256": "6c18d579fd87c3776be068b762cbc83fde3acb543d49eabd3ade842eb987e887",
+      "uuids": [
+        "bf7a3925-e6a8-45af-b9b9-52a32f36d932"
+      ],
+      "logicalPaths": [],
+      "extIds": []
+    }
+  ],
+  "uuidMap": {
+    "84cf0a01-2af0-4586-8262-9acb9c0f1bf6": {
+      "kind": "asset",
+      "path": "assets/47e072dba59b48ae.webp",
+      "mime": "image/webp",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/user/slot-cart-empty-img.webp",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "89fbc9d9-13bc-485e-bcff-b1eb01f4cea4": {
+      "kind": "asset",
+      "path": "assets/0088735301449132.webp",
+      "mime": "image/webp",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/user/slot-acct-stat-addr.webp",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "47ea0a07-0207-4af4-b256-427cc350b40c": {
+      "kind": "asset",
+      "path": "assets/13821d3ec056ec91.webp",
+      "mime": "image/webp",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/user/slot-acct-stat-orders.webp",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "bb6dbb16-1e26-4979-a249-b44ab33261da": {
+      "kind": "asset",
+      "path": "assets/166d71323da05cad.webp",
+      "mime": "image/webp",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/user/slot-returnform-badge.webp",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "00e506f4-2002-4201-b0a6-ffec207dd449": {
+      "kind": "asset",
+      "path": "assets/1fcfd80d48bc7ce2.webp",
+      "mime": "image/webp",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/media/heroPart-1.png",
+          "dataAlias": "assets/media/heroPart-1.webp",
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "75e89976-5e7c-4287-a49d-288a1105d7a2": {
+      "kind": "asset",
+      "path": "assets/f13020f718142033.webp",
+      "mime": "image/webp",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/media/cat-2.png",
+          "dataAlias": "assets/media/cat-2.webp",
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "b5496e2c-7153-421b-83e4-d2b4e19be9c6": {
+      "kind": "asset",
+      "path": "assets/f75ca84e9edb2402.svg",
+      "mime": "image/svg+xml",
+      "compressedInBundle": true,
+      "logical": [
+        {
+          "dataAsset": "assets/pay-mastercard.svg",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "abe39664-aa81-426b-8679-9888899c1c2a": {
+      "kind": "asset",
+      "path": "assets/dc108e852082f310.svg",
+      "mime": "image/svg+xml",
+      "compressedInBundle": true,
+      "logical": [
+        {
+          "dataAsset": "assets/brand-frame.svg",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "0dd0011c-be4b-4a4f-b571-84579f75caf8": {
+      "kind": "asset",
+      "path": "assets/c0f61538b06a78c4.svg",
+      "mime": "image/svg+xml",
+      "compressedInBundle": true,
+      "logical": [
+        {
+          "dataAsset": "assets/brand-drager.svg",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "1979f737-10e2-4eb3-b23d-3f6d08dbe40a": {
+      "kind": "asset",
+      "path": "assets/afbf82c194c264bc.webp",
+      "mime": "image/webp",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/media/cta-0.png",
+          "dataAlias": "assets/media/cta-0.webp",
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "dd4c6380-ef73-4af5-9bc8-5bae711d22b0": {
+      "kind": "asset",
+      "path": "assets/3f01fb30a01a0223.webp",
+      "mime": "image/webp",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/media/heroPart-2.png",
+          "dataAlias": "assets/media/heroPart-2.webp",
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "725609cd-76f1-41fe-b74c-2bc64afb6a48": {
+      "kind": "asset",
+      "path": "assets/77e3259da1818c31.svg",
+      "mime": "image/svg+xml",
+      "compressedInBundle": true,
+      "logical": [
+        {
+          "dataAsset": "assets/icon-suitcase.svg",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "c6c942d0-28b6-4ce0-91d8-aa75b8c43af8": {
+      "kind": "asset",
+      "path": "assets/47571ff3b74f28d6.png",
+      "mime": "image/png",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/brand-tigon.png",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "b03aae16-032b-467e-bd52-cdf53a4344c9": {
+      "kind": "asset",
+      "path": "assets/b5194b7bfcfd67aa.svg",
+      "mime": "image/svg+xml",
+      "compressedInBundle": true,
+      "logical": [
+        {
+          "dataAsset": "assets/icon-user.svg",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "b036edea-0426-49cf-ab81-72e06c053276": {
+      "kind": "asset",
+      "path": "assets/2b72d5c1c68b933c.svg",
+      "mime": "image/svg+xml",
+      "compressedInBundle": true,
+      "logical": [
+        {
+          "dataAsset": "assets/pay-paypal.svg",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "d48c8d01-06d9-4fc3-9f15-1e4d41fcc136": {
+      "kind": "asset",
+      "path": "assets/0a0b3029cc47c7a3.svg",
+      "mime": "image/svg+xml",
+      "compressedInBundle": true,
+      "logical": [
+        {
+          "dataAsset": "assets/brand-drager2.svg",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "f11c37d5-a762-4502-8160-1eab0960622b": {
+      "kind": "asset",
+      "path": "assets/d8b10fead63072b6.svg",
+      "mime": "image/svg+xml",
+      "compressedInBundle": true,
+      "logical": [
+        {
+          "dataAsset": "assets/pay-mastercard-color.svg",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "5bc63cb4-372e-4257-8ef7-aaaeb49c51e0": {
+      "kind": "asset",
+      "path": "assets/eb9fcf6a6a11ea9b.png",
+      "mime": "image/png",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/brand-burmeier.png",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "bbf825c1-67c7-453b-8b2c-281c9a61acb0": {
+      "kind": "asset",
+      "path": "assets/b9d9b45aa6ef0da1.svg",
+      "mime": "image/svg+xml",
+      "compressedInBundle": true,
+      "logical": [
+        {
+          "dataAsset": "assets/pay-visa.svg",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "40bffa67-a1eb-4c2f-bc39-fd9bf1874ee6": {
+      "kind": "asset",
+      "path": "assets/6b610aab3d51f7e2.png",
+      "mime": "image/png",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/media/product-1.png",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "9373a711-b4b2-42a5-bb32-29f28d8c8f5a": {
+      "kind": "asset",
+      "path": "assets/6e4c3785875fa591.webp",
+      "mime": "image/webp",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/media/cat-0.png",
+          "dataAlias": "assets/media/cat-0.webp",
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "22730d49-e9d6-45e7-aef4-70ca6411ea57": {
+      "kind": "asset",
+      "path": "assets/68e8d795cf9a91db.webp",
+      "mime": "image/webp",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/media/guide-1.png",
+          "dataAlias": "assets/media/guide-1.webp",
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "feed6f79-2ac1-4c7f-8646-165c9404c7b0": {
+      "kind": "asset",
+      "path": "assets/d63a6a027d81d54d.png",
+      "mime": "image/png",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/media/cat-3.png",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "71f41830-d1dd-49d4-8e7e-5a175d24a887": {
+      "kind": "asset",
+      "path": "assets/13d7c707ec7e5d8c.png",
+      "mime": "image/png",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/media/productPro-2.png",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "3e3b70cf-3413-4c86-8b07-f93ed272abdc": {
+      "kind": "asset",
+      "path": "assets/d3e3440a5165c1ce.webp",
+      "mime": "image/webp",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/media/product-4.png",
+          "dataAlias": "assets/media/product-4.webp",
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "7805608c-4301-498a-a599-9ee6e021e390": {
+      "kind": "asset",
+      "path": "assets/1aaef9c790c7d933.webp",
+      "mime": "image/webp",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/media/productPro-0.png",
+          "dataAlias": "assets/media/productPro-0.webp",
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "a0c2f221-1519-4d37-870b-9a9046c96831": {
+      "kind": "asset",
+      "path": "assets/b6dc25c4f7ab74dc.png",
+      "mime": "image/png",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/media/cat-4.png",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "cd431f76-ca07-4f18-8173-76d81bfb3cb0": {
+      "kind": "asset",
+      "path": "assets/2db22419c872f672.png",
+      "mime": "image/png",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/brand-dingo.png",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "fe6fb5dc-041e-4821-ad2c-2b77bcc82205": {
+      "kind": "asset",
+      "path": "assets/8de436f505eb0a90.png",
+      "mime": "image/png",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/media/productPro-3.png",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "644ea698-e7f9-4f30-93dd-504e89a09ee6": {
+      "kind": "asset",
+      "path": "assets/dd9bb4a6d5b08b9c.png",
+      "mime": "image/png",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/media/productInd-3.png",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "e822be7f-551d-4d8c-833d-766aec1361ef": {
+      "kind": "asset",
+      "path": "assets/17e5f48968ea8fa2.webp",
+      "mime": "image/webp",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/user/slot-acct-stat-compare.webp",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "9ef53525-f822-4a2b-a61e-3b96c3e4f490": {
+      "kind": "asset",
+      "path": "assets/a62ca38504953297.png",
+      "mime": "image/png",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/media/product-2.png",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "b9541430-3e0b-45e3-9534-7f095fc65cfb": {
+      "kind": "asset",
+      "path": "assets/18e4b54a8391bcab.webp",
+      "mime": "image/webp",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/media/guide-0.jpg",
+          "dataAlias": "assets/media/guide-0.webp",
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "866c39d2-c73b-4751-89b5-8266bb0345e8": {
+      "kind": "asset",
+      "path": "assets/7a73f5ae91aa2422.webp",
+      "mime": "image/webp",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/media/guide-2.png",
+          "dataAlias": "assets/media/guide-2.webp",
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "f3277f20-9682-4aae-83e8-ac260b897155": {
+      "kind": "asset",
+      "path": "assets/8de436f505eb0a90.png",
+      "mime": "image/png",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/media/product-0.png",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "ff5680b0-5f3d-4fba-a4ac-c6a9c84cdfba": {
+      "kind": "asset",
+      "path": "assets/13d7c707ec7e5d8c.png",
+      "mime": "image/png",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/media/product-3.png",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "b9150ba3-3b2e-476a-9caa-40b8f4bbdac1": {
+      "kind": "asset",
+      "path": "assets/8de436f505eb0a90.png",
+      "mime": "image/png",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/media/productInd-0.png",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "e3228c58-1256-4b12-bbb5-db11b4425ecc": {
+      "kind": "asset",
+      "path": "assets/13ec04de3df5a7c0.png",
+      "mime": "image/png",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/abecq-logo.png",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "b32b2cca-7769-4d7b-894b-ec58dcbebee0": {
+      "kind": "asset",
+      "path": "assets/b1084592a853ac61.svg",
+      "mime": "image/svg+xml",
+      "compressedInBundle": true,
+      "logical": [
+        {
+          "dataAsset": "assets/brand-seca.svg",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "6594a306-52c5-4c48-9bb6-fe6a26a2e441": {
+      "kind": "asset",
+      "path": "assets/d900fbf74314f854.svg",
+      "mime": "image/svg+xml",
+      "compressedInBundle": true,
+      "logical": [
+        {
+          "dataAsset": "assets/zoom-graphics-logo.svg",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "17840f9c-8122-495a-ac5a-b998fa9377af": {
+      "kind": "asset",
+      "path": "assets/89dce32ef528f506.webp",
+      "mime": "image/webp",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/media/productInd-2.png",
+          "dataAlias": "assets/media/productInd-2.webp",
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "3915c548-016c-4697-ac5d-b7a9ebe507f8": {
+      "kind": "asset",
+      "path": "assets/6b610aab3d51f7e2.png",
+      "mime": "image/png",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/media/productInd-1.png",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "1409ee44-f5f1-4c5e-83fc-f14e68b14762": {
+      "kind": "asset",
+      "path": "assets/a62ca38504953297.png",
+      "mime": "image/png",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/media/productInd-4.png",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "65b435d6-1a7e-49f6-babf-379f310c109f": {
+      "kind": "asset",
+      "path": "assets/0740bcb5439837e4.png",
+      "mime": "image/png",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/media/productPro-4.png",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "f26606c9-d842-4135-9181-03644ef5d700": {
+      "kind": "asset",
+      "path": "assets/98852e7133b84e03.webp",
+      "mime": "image/webp",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/media/guide-3.png",
+          "dataAlias": "assets/media/guide-3.webp",
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "4f41adfb-9825-4fe4-9341-16da25bf3623": {
+      "kind": "asset",
+      "path": "assets/a62ca38504953297.png",
+      "mime": "image/png",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/media/productPro-1.png",
+          "dataAlias": null,
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "546b33d5-f733-41a7-88c1-0e6e4b8396dd": {
+      "kind": "asset",
+      "path": "assets/19f97d02e66f9beb.webp",
+      "mime": "image/webp",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/en15964-badge.png",
+          "dataAlias": "assets/en15964-badge.webp",
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "90fc3a3b-c844-4b78-af95-343d7026e192": {
+      "kind": "asset",
+      "path": "assets/0e2dbc8d1b541ea2.webp",
+      "mime": "image/webp",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/oiml-badge.png",
+          "dataAlias": "assets/oiml-badge.webp",
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "9e85bf99-2a07-4d29-9acb-c3d3cdb76fd2": {
+      "kind": "asset",
+      "path": "assets/dc031ae8d370dd85.webp",
+      "mime": "image/webp",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/en16280-badge.png",
+          "dataAlias": "assets/en16280-badge.webp",
+          "tag": "img"
+        }
+      ],
+      "extId": null
+    },
+    "6428fdff-782e-47fb-8872-0146f8d23abe": {
+      "kind": "asset",
+      "path": "assets/792b33cd2bd17ce0.mp4",
+      "mime": "video/mp4",
+      "compressedInBundle": false,
+      "logical": [
+        {
+          "dataAsset": "assets/media/heroPart-0.mp4",
+          "dataAlias": null,
+          "tag": "video"
+        }
+      ],
+      "extId": null
+    },
+    "278d665c-632d-468e-9db1-47b39fa853b3": {
+      "kind": "asset",
+      "path": "assets/8fe7df74405f3c55.js",
+      "mime": "text/javascript",
+      "compressedInBundle": true,
+      "logical": [],
+      "extId": null
+    },
+    "3b8997e4-649e-4522-8cc5-85c987976269": {
+      "kind": "document",
+      "path": "documents/Button.dc.html",
+      "extId": "./Button.dc.html"
+    },
+    "68454a69-6e4d-4f27-9bd4-e8246dd9c1bb": {
+      "kind": "asset",
+      "path": "assets/28d684a1bde40714.css",
+      "mime": "text/css",
+      "compressedInBundle": true,
+      "logical": [],
+      "extId": "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+    },
+    "4672ff96-7a1b-4635-bdd8-b55fba7af0e2": {
+      "kind": "document",
+      "path": "documents/SectionHeading.dc.html",
+      "extId": "./SectionHeading.dc.html"
+    },
+    "1aa7391d-e691-4e44-8f9b-ffd3b9e67ab3": {
+      "kind": "document",
+      "path": "documents/Breadcrumb.dc.html",
+      "extId": "./Breadcrumb.dc.html"
+    },
+    "ee9ba3a2-6cc1-4036-b4a5-4996162c86aa": {
+      "kind": "document",
+      "path": "documents/ProductCard.dc.html",
+      "extId": "./ProductCard.dc.html"
+    },
+    "e09429cb-0e14-459a-b080-99fc7066298f": {
+      "kind": "document",
+      "path": "documents/PdfCard.dc.html",
+      "extId": "./PdfCard.dc.html"
+    },
+    "6888fc32-5343-4ddf-8195-9e8df421b03e": {
+      "kind": "document",
+      "path": "documents/FormField.dc.html",
+      "extId": "./FormField.dc.html"
+    },
+    "944f35a2-08d6-44e6-87ff-7c30e2cf6e25": {
+      "kind": "document",
+      "path": "documents/Choice.dc.html",
+      "extId": "./Choice.dc.html"
+    },
+    "000aaec9-9e63-4273-a32a-5da34050c754": {
+      "kind": "asset",
+      "path": "assets/d949f1c3687aedad.js",
+      "mime": "text/javascript",
+      "compressedInBundle": true,
+      "logical": [],
+      "extId": "https://unpkg.com/react@18.3.1/umd/react.production.min.js"
+    },
+    "b4315401-a05d-4f5e-b126-fe5016f5f800": {
+      "kind": "asset",
+      "path": "assets/35f4f974f4b2bcd4.js",
+      "mime": "text/javascript",
+      "compressedInBundle": true,
+      "logical": [],
+      "extId": "https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"
+    },
+    "ccb54b24-42c0-45fc-82ea-e3391c7b9b1b": {
+      "kind": "asset",
+      "path": "assets/0f53d1c03b3918d7.woff2",
+      "mime": "font/woff2",
+      "compressedInBundle": false,
+      "logical": [],
+      "extId": null
+    },
+    "bf7a3925-e6a8-45af-b9b9-52a32f36d932": {
+      "kind": "asset",
+      "path": "assets/6c18d579fd87c377.woff2",
+      "mime": "font/woff2",
+      "compressedInBundle": false,
+      "logical": [],
+      "extId": null
+    }
+  },
+  "rewrittenRefs": {
+    "count": 54,
+    "distinct": 53
+  },
+  "linkedExports": [
+    {
+      "source": "raw/pages/index.html",
+      "sha256": "8a594335c7332908a51486be098017feccff779ded9d7cb9d973a78e9d64f435",
+      "wrapperTitle": "Bundled Page",
+      "pageOrder": [],
+      "template": {
+        "sha256": "ff22098f707750d526fd0ed9f3bc409120ad6580f5603877212684233344e5d1",
+        "bytes": 224127,
+        "snapshotOriginal": {
+          "path": "home-8a594335/documents/_original/index.template.raw.html",
+          "sha256": "ff22098f707750d526fd0ed9f3bc409120ad6580f5603877212684233344e5d1"
+        },
+        "snapshotRewritten": {
+          "path": "home-8a594335/documents/index.html",
+          "sha256": "2ca3b0d7b70ae35dc532b74af7f856d85b6eb3f00bce71db8b9c4c17be19615e"
+        }
+      },
+      "documents": [
+        {
+          "extId": "./SiteHeader.dc.html",
+          "uuid": "3cdd074f-f397-409b-beb4-4bf800359107",
+          "sha256": "5916297eab487e9b234c4180036e2f2e23cdde229c17dd6410f8415dcc445e08",
+          "bytes": 34992,
+          "snapshot": {
+            "path": "home-8a594335/documents/SiteHeader.dc.html",
+            "sha256": "5916297eab487e9b234c4180036e2f2e23cdde229c17dd6410f8415dcc445e08"
+          }
+        },
+        {
+          "extId": "./SectionHeading.dc.html",
+          "uuid": "ff25fed1-e6d9-4ad9-a9ff-11dd61d24b95",
+          "sha256": "8d121902aabe079161c921c81d6ad55f3f77c3e3a07c57feb47c9240997f1de1",
+          "bytes": 10302,
+          "snapshot": {
+            "path": "home-8a594335/documents/SectionHeading.dc.html",
+            "sha256": "8d121902aabe079161c921c81d6ad55f3f77c3e3a07c57feb47c9240997f1de1"
+          }
+        },
+        {
+          "extId": "./Button.dc.html",
+          "uuid": "58013964-998c-49da-8de6-e1bc8131ad11",
+          "sha256": "959beed92c9736c5d39b18fea028c3e63429023b9e809350ea38bf0b7db4dcba",
+          "bytes": 74561,
+          "snapshot": {
+            "path": "home-8a594335/documents/Button.dc.html",
+            "sha256": "959beed92c9736c5d39b18fea028c3e63429023b9e809350ea38bf0b7db4dcba"
+          }
+        }
+      ],
+      "note": "Used only to resolve iframe targets of the DS. Not re-extracted here; hashes of the existing home-8a594335 snapshot files were checked against a fresh decode."
+    }
+  ],
+  "verification": {
+    "errors": [],
+    "warnings": [],
+    "info": [
+      "__bundler/page_order is an empty array: the bundle declares no additional pages",
+      "extensionMismatch assets/media/heroPart-1.png contains webp (assets/1fcfd80d48bc7ce2.webp)",
+      "extensionMismatch assets/media/cat-2.png contains webp (assets/f13020f718142033.webp)",
+      "extensionMismatch assets/media/cta-0.png contains webp (assets/afbf82c194c264bc.webp)",
+      "extensionMismatch assets/media/heroPart-2.png contains webp (assets/3f01fb30a01a0223.webp)",
+      "extensionMismatch assets/media/cat-0.png contains webp (assets/6e4c3785875fa591.webp)",
+      "extensionMismatch assets/media/guide-1.png contains webp (assets/68e8d795cf9a91db.webp)",
+      "extensionMismatch assets/media/product-4.png contains webp (assets/d3e3440a5165c1ce.webp)",
+      "extensionMismatch assets/media/productPro-0.png contains webp (assets/1aaef9c790c7d933.webp)",
+      "extensionMismatch assets/media/guide-0.jpg contains webp (assets/18e4b54a8391bcab.webp)",
+      "extensionMismatch assets/media/guide-2.png contains webp (assets/7a73f5ae91aa2422.webp)",
+      "extensionMismatch assets/media/productInd-2.png contains webp (assets/89dce32ef528f506.webp)",
+      "extensionMismatch assets/media/guide-3.png contains webp (assets/98852e7133b84e03.webp)",
+      "extensionMismatch assets/en15964-badge.png contains webp (assets/19f97d02e66f9beb.webp)",
+      "extensionMismatch assets/oiml-badge.png contains webp (assets/0e2dbc8d1b541ea2.webp)",
+      "extensionMismatch assets/en16280-badge.png contains webp (assets/dc031ae8d370dd85.webp)"
+    ]
+  }
+}

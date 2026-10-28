@@ -1,0 +1,4885 @@
+{
+  "schemaVersion": 1,
+  "snapshot": "design-system-91951f68-r2",
+  "note": "Inventory only. Nothing rendered or imported into production. Example identifiers come from the <code> label in each example caption; examples without a code label keep caption text only.",
+  "counts": {
+    "sections": 33,
+    "groups": 5,
+    "examples": 75,
+    "dcComponents": 7,
+    "dcImportUsages": 11,
+    "externalComponents": 9,
+    "externalResolved": 8,
+    "icons": 84,
+    "tokens": 191
+  },
+  "foundations": {
+    "tokens": {
+      "count": 191,
+      "byPrefix": {
+        "color": 68,
+        "font": 22,
+        "fw": 4,
+        "lh": 20,
+        "ls": 8,
+        "space": 28,
+        "radius": 13,
+        "shadow": 28
+      },
+      "names": [
+        "--abq-color-ink-900",
+        "--abq-color-navy-700",
+        "--abq-color-navy-600",
+        "--abq-color-navy-500",
+        "--abq-color-blue-500",
+        "--abq-color-blue-300",
+        "--abq-color-blue-200",
+        "--abq-color-blue-150",
+        "--abq-color-blue-100",
+        "--abq-color-blue-75",
+        "--abq-color-blue-25",
+        "--abq-color-blue-50",
+        "--abq-color-gray-700",
+        "--abq-color-gray-500",
+        "--abq-color-gray-400",
+        "--abq-color-gray-300",
+        "--abq-color-gray-200",
+        "--abq-color-line",
+        "--abq-color-line-soft",
+        "--abq-color-divider",
+        "--abq-color-surface",
+        "--abq-color-white",
+        "--abq-color-icon-line",
+        "--abq-color-control-border",
+        "--abq-color-line-alt",
+        "--abq-color-blue-60",
+        "--abq-color-grad-start",
+        "--abq-color-grad-mid",
+        "--abq-color-grad-end",
+        "--abq-color-grad-hover-start",
+        "--abq-color-grad-hover-mid",
+        "--abq-color-grad-hover-end",
+        "--abq-color-success",
+        "--abq-color-danger",
+        "--abq-color-error",
+        "--abq-color-warning",
+        "--abq-color-warning-bg",
+        "--abq-color-success-bg",
+        "--abq-color-amber",
+        "--abq-color-blue-600",
+        "--abq-color-blue-350",
+        "--abq-color-slate-400",
+        "--abq-color-gray-350",
+        "--abq-color-gray-450",
+        "--abq-color-gray-250",
+        "--abq-color-blue-30",
+        "--abq-color-white-92",
+        "--abq-color-white-85",
+        "--abq-color-white-75",
+        "--abq-color-white-60",
+        "--abq-color-white-50",
+        "--abq-color-white-35",
+        "--abq-color-white-12",
+        "--abq-color-overlay",
+        "--abq-color-overlay-strong",
+        "--abq-color-line-on-dark",
+        "--abq-color-line-on-dark-strong",
+        "--abq-color-danger-tint",
+        "--abq-color-danger-tint-soft",
+        "--abq-color-primary-tint",
+        "--abq-color-primary-tint-strong",
+        "--abq-color-black-28",
+        "--abq-color-ink-45",
+        "--abq-color-gradient-label-line",
+        "--abq-color-gradient-band",
+        "--abq-color-gradient-footer",
+        "--abq-color-gradient-panel-dark",
+        "--abq-color-gradient-band-navy",
+        "--abq-font-family",
+        "--abq-font-weight",
+        "--abq-fw-extralight",
+        "--abq-fw-light",
+        "--abq-fw-regular",
+        "--abq-fw-medium",
+        "--abq-font-loader",
+        "--abq-lh-loader",
+        "--abq-ls-loader",
+        "--abq-font-display",
+        "--abq-lh-display",
+        "--abq-ls-display",
+        "--abq-font-h1",
+        "--abq-lh-h1",
+        "--abq-ls-h1",
+        "--abq-font-logo",
+        "--abq-lh-logo",
+        "--abq-font-title-lg",
+        "--abq-lh-title-lg",
+        "--abq-ls-title-lg",
+        "--abq-font-h2",
+        "--abq-lh-h2",
+        "--abq-ls-h2",
+        "--abq-font-h3",
+        "--abq-lh-h3",
+        "--abq-ls-h3",
+        "--abq-font-h4",
+        "--abq-lh-h4",
+        "--abq-ls-h4",
+        "--abq-font-h5",
+        "--abq-lh-h5",
+        "--abq-font-title-md",
+        "--abq-lh-title-md",
+        "--abq-font-price",
+        "--abq-lh-price",
+        "--abq-font-title",
+        "--abq-lh-title",
+        "--abq-font-body-lg",
+        "--abq-lh-body-lg",
+        "--abq-font-body-md",
+        "--abq-lh-body-md",
+        "--abq-font-body",
+        "--abq-lh-body",
+        "--abq-font-body-sm",
+        "--abq-lh-body-sm",
+        "--abq-font-ui",
+        "--abq-lh-ui",
+        "--abq-font-ui-sm",
+        "--abq-lh-ui-sm",
+        "--abq-font-eyebrow",
+        "--abq-lh-eyebrow",
+        "--abq-ls-eyebrow",
+        "--abq-font-label-xs",
+        "--abq-lh-label-xs",
+        "--abq-space-2",
+        "--abq-space-4",
+        "--abq-space-6",
+        "--abq-space-8",
+        "--abq-space-10",
+        "--abq-space-12",
+        "--abq-space-14",
+        "--abq-space-16",
+        "--abq-space-18",
+        "--abq-space-20",
+        "--abq-space-22",
+        "--abq-space-24",
+        "--abq-space-26",
+        "--abq-space-28",
+        "--abq-space-32",
+        "--abq-space-40",
+        "--abq-space-48",
+        "--abq-space-56",
+        "--abq-space-64",
+        "--abq-space-80",
+        "--abq-space-36",
+        "--abq-space-72",
+        "--abq-space-90",
+        "--abq-space-96",
+        "--abq-space-100",
+        "--abq-space-120",
+        "--abq-space-130",
+        "--abq-space-160",
+        "--abq-radius-3xs",
+        "--abq-radius-2xs",
+        "--abq-radius-xs",
+        "--abq-radius-sm",
+        "--abq-radius-md",
+        "--abq-radius-lg",
+        "--abq-radius-lg-2",
+        "--abq-radius-lg-3",
+        "--abq-radius-xl",
+        "--abq-radius-xl-1",
+        "--abq-radius-xl-2",
+        "--abq-radius-2xl",
+        "--abq-radius-pill",
+        "--abq-shadow-tile",
+        "--abq-shadow-tab",
+        "--abq-shadow-glass",
+        "--abq-shadow-audience",
+        "--abq-shadow-cta",
+        "--abq-shadow-float",
+        "--abq-shadow-button",
+        "--abq-shadow-card",
+        "--abq-shadow-card-hover",
+        "--abq-shadow-menu",
+        "--abq-shadow-toast",
+        "--abq-shadow-sheet",
+        "--abq-shadow-modal",
+        "--abq-shadow-cta-hover",
+        "--abq-shadow-nav-hover",
+        "--abq-shadow-raised",
+        "--abq-shadow-raised-lg",
+        "--abq-shadow-glass-sm",
+        "--abq-shadow-soft",
+        "--abq-shadow-panel",
+        "--abq-shadow-blue",
+        "--abq-shadow-dot",
+        "--abq-shadow-ring-white",
+        "--abq-shadow-ring-white-inset",
+        "--abq-shadow-step-ring",
+        "--abq-shadow-none",
+        "--abq-shadow-danger-sides",
+        "--abq-shadow-danger-sides-soft"
+      ]
+    },
+    "icons": {
+      "count": 84,
+      "bySource": {
+        "ABECQ Site": 79,
+        "ABECQ Home": 1,
+        "SiteHeader": 3,
+        "PdfCard": 1
+      },
+      "ids": [
+        "i01",
+        "i02",
+        "i03",
+        "i04",
+        "i05",
+        "i06",
+        "i07",
+        "i08",
+        "i09",
+        "i10",
+        "i11",
+        "i12",
+        "i13",
+        "i14",
+        "i15",
+        "i16",
+        "i17",
+        "i18",
+        "i19",
+        "i20",
+        "i21",
+        "i22",
+        "i23",
+        "i24",
+        "i25",
+        "i26",
+        "i27",
+        "i28",
+        "i29",
+        "i30",
+        "i31",
+        "i32",
+        "i33",
+        "i34",
+        "i35",
+        "i36",
+        "i37",
+        "i38",
+        "i39",
+        "i40",
+        "i41",
+        "i42",
+        "i43",
+        "i44",
+        "i45",
+        "i46",
+        "i47",
+        "i48",
+        "i49",
+        "i50",
+        "i51",
+        "i52",
+        "i53",
+        "i54",
+        "i55",
+        "i56",
+        "i57",
+        "i58",
+        "i59",
+        "i60",
+        "i61",
+        "i62",
+        "i63",
+        "i64",
+        "i65",
+        "i66",
+        "i67",
+        "i68",
+        "i69",
+        "i70",
+        "i71",
+        "i72",
+        "i73",
+        "i74",
+        "i75",
+        "i76",
+        "i77",
+        "i78",
+        "i79",
+        "i80",
+        "i81",
+        "i82",
+        "i83",
+        "i84"
+      ]
+    },
+    "fonts": [
+      "assets/0f53d1c03b3918d7.woff2",
+      "assets/6c18d579fd87c377.woff2"
+    ]
+  },
+  "sidebar": [
+    {
+      "href": "#overview",
+      "label": "F Atomic structure",
+      "group": "foundations",
+      "line": 377
+    },
+    {
+      "href": "#color",
+      "label": "F Colour",
+      "group": "foundations",
+      "line": 377
+    },
+    {
+      "href": "#type",
+      "label": "F Typography",
+      "group": "foundations",
+      "line": 377
+    },
+    {
+      "href": "#space",
+      "label": "F Spacing",
+      "group": "foundations",
+      "line": 377
+    },
+    {
+      "href": "#radius",
+      "label": "F Radius & elevation",
+      "group": "foundations",
+      "line": 377
+    },
+    {
+      "href": "#icons",
+      "label": "F Icon library",
+      "group": "foundations",
+      "line": 377
+    },
+    {
+      "href": "#buttons",
+      "label": "A Buttons",
+      "group": "atoms",
+      "line": 378
+    },
+    {
+      "href": "#links",
+      "label": "A Links & eyebrow",
+      "group": "atoms",
+      "line": 378
+    },
+    {
+      "href": "#forms",
+      "label": "A Form fields",
+      "group": "atoms",
+      "line": 378
+    },
+    {
+      "href": "#choice",
+      "label": "A Choice controls",
+      "group": "atoms",
+      "line": 378
+    },
+    {
+      "href": "#tabs",
+      "label": "M Segmented tabs",
+      "group": "molecules",
+      "line": 379
+    },
+    {
+      "href": "#heading",
+      "label": "M Section heading",
+      "group": "molecules",
+      "line": 379
+    },
+    {
+      "href": "#crumbs",
+      "label": "M Breadcrumb",
+      "group": "molecules",
+      "line": 379
+    },
+    {
+      "href": "#cards",
+      "label": "M Product & PDF cards",
+      "group": "molecules",
+      "line": 379
+    },
+    {
+      "href": "#audience",
+      "label": "M Audience cards",
+      "group": "molecules",
+      "line": 379
+    },
+    {
+      "href": "#purchase",
+      "label": "M Purchase actions",
+      "group": "molecules",
+      "line": 379
+    },
+    {
+      "href": "#commerce",
+      "label": "M Commerce controls",
+      "group": "molecules",
+      "line": 379
+    },
+    {
+      "href": "#feedback",
+      "label": "M Status & feedback",
+      "group": "molecules",
+      "line": 379
+    },
+    {
+      "href": "#faq",
+      "label": "M FAQ accordion",
+      "group": "molecules",
+      "line": 379
+    },
+    {
+      "href": "#chips",
+      "label": "M Tags & chips",
+      "group": "molecules",
+      "line": 379
+    },
+    {
+      "href": "#gallery",
+      "label": "M Product gallery",
+      "group": "molecules",
+      "line": 379
+    },
+    {
+      "href": "#toc",
+      "label": "M Page contents",
+      "group": "molecules",
+      "line": 379
+    },
+    {
+      "href": "#auth",
+      "label": "M Auth actions",
+      "group": "molecules",
+      "line": 379
+    },
+    {
+      "href": "#components",
+      "label": "O Header & footer",
+      "group": "organisms",
+      "line": 380
+    },
+    {
+      "href": "#accnav",
+      "label": "O Account navigation",
+      "group": "organisms",
+      "line": 380
+    },
+    {
+      "href": "#overlays",
+      "label": "O Drawers & modals",
+      "group": "organisms",
+      "line": 380
+    },
+    {
+      "href": "#mobilemenu",
+      "label": "O Mobile menu",
+      "group": "organisms",
+      "line": 380
+    },
+    {
+      "href": "#compare",
+      "label": "O Compare table",
+      "group": "organisms",
+      "line": 380
+    },
+    {
+      "href": "#checkoutbar",
+      "label": "O Checkout progress",
+      "group": "organisms",
+      "line": 380
+    },
+    {
+      "href": "#loader",
+      "label": "O Page loader",
+      "group": "organisms",
+      "line": 380
+    },
+    {
+      "href": "#organisms",
+      "label": "O Home sections",
+      "group": "organisms",
+      "line": 380
+    },
+    {
+      "href": "#templates",
+      "label": "T Home page",
+      "group": "templates",
+      "line": 381
+    },
+    {
+      "href": "#handoff",
+      "label": "T Developer handoff",
+      "group": "templates",
+      "line": 381
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "order": 1,
+      "group": "foundations",
+      "navLabel": "F Atomic structure",
+      "eyebrow": "DESIGN SYSTEM",
+      "title": "Browse the system",
+      "description": "Every token and component on this page is taken from the live site, with Home as the reference standard. Other pages must reuse these; anything new is proposed here first.",
+      "line": 387,
+      "bytes": 9114,
+      "sha256": "395bd6ea15175949d854fea42ebbf666243e42de4c55f6c11bb16645e5959a33",
+      "directChildren": 3,
+      "eyebrowGroup": null,
+      "examples": [
+        {
+          "evidence": "ds-card",
+          "identifier": "#color",
+          "caption": "Aa Foundations 01 Colour, typography, spacing, radius, elevation and icons. Open",
+          "line": 395,
+          "cardBytes": 1486,
+          "cardSha256": "169d65047fa17a88099f82290a076c918a36d97b00bd25de36c76a565b056b2b",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "ds-card",
+          "identifier": "#buttons",
+          "caption": "Button View all → Atoms 02 Buttons, links and eyebrow, form fields and choice co",
+          "line": 396,
+          "cardBytes": 1309,
+          "cardSha256": "036ff91ed0d800a84e5b99d03ed741a4fccf22cc1501f923115e31636ddadbfa",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "ds-card",
+          "identifier": "#tabs",
+          "caption": "Individual Professional Molecules 03 Tabs, headings, breadcrumb, cards, controls",
+          "line": 397,
+          "cardBytes": 1512,
+          "cardSha256": "7d78c760ab5268d544474c53f60d153b9bf83b08826a1050b3bc655a09013b44",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "ds-card",
+          "identifier": "#components",
+          "caption": "Organisms 04 Header and footer, menus, modals, compare, checkout progress, loade",
+          "line": 398,
+          "cardBytes": 1670,
+          "cardSha256": "30f7ff1c92402212327cb3abeb7ae613eb97466ae6b087ad733755affc1eda9d",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "ds-card",
+          "identifier": "#templates",
+          "caption": "Templates 05 The full Home page and developer handoff. Open →",
+          "line": 399,
+          "cardBytes": 1581,
+          "cardSha256": "50b0a76c656166ace9e2f41a03d19237a9293edddfdcd3c7469559cfef608487",
+          "confidence": "confirmed"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "div",
+          "line": 393,
+          "bytes": 452,
+          "sha256": "d0861cc81b048dfe4800c159e2bf21283b375dfd053a32f3127acd6069b5275d",
+          "text": "CONTENTS Browse the system Five levels, from foundations to full pages. Open a level to see its rules and components.",
+          "examplesInside": 0,
+          "isExampleLabel": false
+        },
+        {
+          "tag": "div",
+          "line": 394,
+          "bytes": 7719,
+          "sha256": "f67de8163b53778ee7621641a85d154f554a58e088a1f8b0d0a17f000296d340",
+          "text": "Aa Foundations 01 Colour, typography, spacing, radius, elevation and icons. Open → Button View all → Atoms 02 Buttons, links and eyebrow, form fields and choice",
+          "examplesInside": 5,
+          "isExampleLabel": false
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [],
+      "iframes": [],
+      "conditionals": [],
+      "styleHover": 5,
+      "assetRefs": [],
+      "hrefs": [
+        "#color",
+        "#buttons",
+        "#tabs",
+        "#components",
+        "#templates"
+      ],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "color",
+      "order": 2,
+      "group": "foundations",
+      "navLabel": "F Colour",
+      "eyebrow": "01 · FOUNDATIONS",
+      "title": "Color",
+      "description": "Values come from abecq-tokens.css . Edit a value there and every Foundations page here updates. Click a swatch to copy its variable.",
+      "line": 403,
+      "bytes": 2196,
+      "sha256": "eee2ad45f76669480550c8fc6e7344a44bd47ac7e07f30c7df62827444d9c540",
+      "directChildren": 2,
+      "eyebrowGroup": "foundations",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abecq-tokens.css",
+          "caption": null,
+          "line": 404,
+          "cardBytes": 251,
+          "cardSha256": "586e318f0b0859e2b1f5a907a900ae0963cc61f83d78ac86fea2c39ab3234d67",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "sc-for-list",
+          "identifier": "{{ colorGroups }}",
+          "caption": "repeated per item (preview placeholder count 3)",
+          "line": 405,
+          "cardBytes": 1580,
+          "cardSha256": "6ba198dc1bf17af6454b970c1a359ef10735857e380e3e0692609bd322fc8cea",
+          "confidence": "confirmed"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "sc-for",
+          "line": 405,
+          "bytes": 1580,
+          "sha256": "6ba198dc1bf17af6454b970c1a359ef10735857e380e3e0692609bd322fc8cea",
+          "text": "{{ g.name }} {{ c.name }} {{ c.varName }} {{ c.hex }}",
+          "examplesInside": 1,
+          "isExampleLabel": false
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [],
+      "iframes": [],
+      "conditionals": [
+        {
+          "id": "design-system#sc-for-001",
+          "kind": "sc-for",
+          "expression": "{{ colorGroups }}",
+          "line": 405
+        },
+        {
+          "id": "design-system#sc-for-002",
+          "kind": "sc-for",
+          "expression": "{{ g.items }}",
+          "line": 409
+        }
+      ],
+      "styleHover": 1,
+      "assetRefs": [],
+      "hrefs": [],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "type",
+      "order": 3,
+      "group": "foundations",
+      "navLabel": "F Typography",
+      "eyebrow": "01 · FOUNDATIONS",
+      "title": "Typography",
+      "description": "Outfit in four weights. Collected from every page; headings scale fluidly with clamp().",
+      "line": 420,
+      "bytes": 3477,
+      "sha256": "3dbdbe7c317f32ca08fc6e7b197464db6170f3433fcd8dd4335b298902a722be",
+      "directChildren": 3,
+      "eyebrowGroup": "foundations",
+      "examples": [
+        {
+          "evidence": "sc-for-list",
+          "identifier": "{{ typeScale }}",
+          "caption": "repeated per item (preview placeholder count 9)",
+          "line": 423,
+          "cardBytes": 779,
+          "cardSha256": "3872a8992e0dcdc8bcc5b13945146e21b59ce60818eecd99790c9c57228dabbc",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "--abq-fw-extralight",
+          "caption": "Aa",
+          "line": 431,
+          "cardBytes": 1915,
+          "cardSha256": "154fba3c980726f96684b984261efcd2d060de32357c385c55f8ae0993746ea0",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "--abq-fw-light",
+          "caption": "Aa",
+          "line": 431,
+          "cardBytes": 1915,
+          "cardSha256": "154fba3c980726f96684b984261efcd2d060de32357c385c55f8ae0993746ea0",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "--abq-fw-regular",
+          "caption": "Aa",
+          "line": 431,
+          "cardBytes": 1915,
+          "cardSha256": "154fba3c980726f96684b984261efcd2d060de32357c385c55f8ae0993746ea0",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "--abq-fw-medium",
+          "caption": "Aa",
+          "line": 431,
+          "cardBytes": 1915,
+          "cardSha256": "154fba3c980726f96684b984261efcd2d060de32357c385c55f8ae0993746ea0",
+          "confidence": "confirmed"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "div",
+          "line": 422,
+          "bytes": 884,
+          "sha256": "2d3f1d42998da333be6b70b1fbdac93fcf5632ec299b9d4b0f4c8c0e6f26b7d7",
+          "text": "{{ t.name }} {{ t.varName }} {{ t.spec }} {{ t.sample }}",
+          "examplesInside": 1,
+          "isExampleLabel": false
+        },
+        {
+          "tag": "div",
+          "line": 430,
+          "bytes": 2064,
+          "sha256": "7b1e8bcd67f7c19abc016ab638fda6151e77fd6e6e5162801560b60365daf8f9",
+          "text": "Font weights Aa Extra light · 200 --abq-fw-extralight Hero headings, loader Aa Light · 300 --abq-fw-light Large headings, subtitles Aa Regular · 400 --abq-fw-re",
+          "examplesInside": 4,
+          "isExampleLabel": false
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [],
+      "iframes": [],
+      "conditionals": [
+        {
+          "id": "design-system#sc-for-003",
+          "kind": "sc-for",
+          "expression": "{{ typeScale }}",
+          "line": 423
+        }
+      ],
+      "styleHover": 0,
+      "assetRefs": [],
+      "hrefs": [],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "space",
+      "order": 4,
+      "group": "foundations",
+      "navLabel": "F Spacing",
+      "eyebrow": "01 · FOUNDATIONS",
+      "title": "Spacing",
+      "description": "2px base, taken from every page of the site (gap, padding and margin). Values used fewer than 25 times are one-offs and should snap to the nearest step.",
+      "line": 440,
+      "bytes": 1176,
+      "sha256": "e5cf79d83ca6969afa19f99cba90c2fc641b1ab9ae1759e6c96e2361c1283132",
+      "directChildren": 2,
+      "eyebrowGroup": "foundations",
+      "examples": [
+        {
+          "evidence": "sc-for-list",
+          "identifier": "{{ spacing }}",
+          "caption": "repeated per item (preview placeholder count 21)",
+          "line": 443,
+          "cardBytes": 506,
+          "cardSha256": "f1d573d86b9042dd5faa4fad98c12f00b3c9f18fe29f2449fa7f6a334ebb22ec",
+          "confidence": "confirmed"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "div",
+          "line": 442,
+          "bytes": 591,
+          "sha256": "d9fbf6d92b10e2083c8460787ccf4f82df86e88eb82a10b13953c8a0d8f93990",
+          "text": "{{ s.varName }} {{ s.px }} {{ s.uses }}",
+          "examplesInside": 1,
+          "isExampleLabel": false
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [],
+      "iframes": [],
+      "conditionals": [
+        {
+          "id": "design-system#sc-for-004",
+          "kind": "sc-for",
+          "expression": "{{ spacing }}",
+          "line": 443
+        }
+      ],
+      "styleHover": 0,
+      "assetRefs": [],
+      "hrefs": [],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "radius",
+      "order": 5,
+      "group": "foundations",
+      "navLabel": "F Radius & elevation",
+      "eyebrow": "01 · FOUNDATIONS",
+      "title": "Radius & elevation",
+      "description": null,
+      "line": 449,
+      "bytes": 1505,
+      "sha256": "882818d9922ae5d83926d8d1e55f3d0cce538c7a28d27c21fefdf601e87bbb03",
+      "directChildren": 3,
+      "eyebrowGroup": "foundations",
+      "examples": [
+        {
+          "evidence": "sc-for-list",
+          "identifier": "{{ radii }}",
+          "caption": "repeated per item (preview placeholder count 7)",
+          "line": 452,
+          "cardBytes": 414,
+          "cardSha256": "0b965493233ceaccf907054d0858efe1a9b7e1e4410be17c8ba2523585df035c",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "sc-for-list",
+          "identifier": "{{ shadows }}",
+          "caption": "repeated per item (preview placeholder count 5)",
+          "line": 457,
+          "cardBytes": 398,
+          "cardSha256": "7115c590f95a81976c0d37f6dca1910679a6da3f657874d42975dbd190a7f4f4",
+          "confidence": "confirmed"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "div",
+          "line": 451,
+          "bytes": 537,
+          "sha256": "dda1bc383992588002c8ff2154eef1674905acc84f775690b212d2dcdeaaf0da",
+          "text": "{{ r.varName }} {{ r.px }} · {{ r.use }}",
+          "examplesInside": 1,
+          "isExampleLabel": false
+        },
+        {
+          "tag": "div",
+          "line": 456,
+          "bytes": 578,
+          "sha256": "bbff507d02f3ea49d8a1e678e8486c66af1fa76b78c0b1abd2e5f012e0f7b9fb",
+          "text": "{{ s.varName }} {{ s.use }}",
+          "examplesInside": 1,
+          "isExampleLabel": false
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [],
+      "iframes": [],
+      "conditionals": [
+        {
+          "id": "design-system#sc-for-005",
+          "kind": "sc-for",
+          "expression": "{{ radii }}",
+          "line": 452
+        },
+        {
+          "id": "design-system#sc-for-006",
+          "kind": "sc-for",
+          "expression": "{{ shadows }}",
+          "line": 457
+        }
+      ],
+      "styleHover": 0,
+      "assetRefs": [],
+      "hrefs": [],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "icons",
+      "order": 6,
+      "group": "foundations",
+      "navLabel": "F Icon library",
+      "eyebrow": "01 · FOUNDATIONS",
+      "title": "Icon library",
+      "description": "Every distinct 24×24 icon drawn on the site, most used first. Stroke 1.6–2px, colour from currentColor. The count shows how often each one appears.",
+      "line": 463,
+      "bytes": 1250,
+      "sha256": "71d526bb6da46af7f6c2237bfa3ec230a35a45a621ad5b7c43ea262f24531d4b",
+      "directChildren": 3,
+      "eyebrowGroup": "foundations",
+      "examples": [
+        {
+          "evidence": "sc-for-list",
+          "identifier": "{{ icons }}",
+          "caption": "repeated per item (preview placeholder count 24)",
+          "line": 464,
+          "cardBytes": 502,
+          "cardSha256": "f2b0bf7e8bd6843d3098407310489be88020b6e338f0fd29d4b3c1cb79ac747d",
+          "confidence": "confirmed"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "div",
+          "line": 464,
+          "bytes": 73,
+          "sha256": "771ac60f6e6f3f825be3ce189d1cb8244db6ac574601bc23acdf951295420b64",
+          "text": "{{ iconCount }} icons",
+          "examplesInside": 0,
+          "isExampleLabel": false
+        },
+        {
+          "tag": "div",
+          "line": 464,
+          "bytes": 609,
+          "sha256": "19cf716b5241472dceab93aeb4b834a6d3044d626b3db54efb39184f4a65e2ba",
+          "text": "{{ ic.el }} {{ ic.id }} {{ ic.uses }} · {{ ic.src }}",
+          "examplesInside": 1,
+          "isExampleLabel": false
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [],
+      "iframes": [],
+      "conditionals": [
+        {
+          "id": "design-system#sc-for-007",
+          "kind": "sc-for",
+          "expression": "{{ icons }}",
+          "line": 464
+        }
+      ],
+      "styleHover": 0,
+      "assetRefs": [],
+      "hrefs": [],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "buttons",
+      "order": 7,
+      "group": "atoms",
+      "navLabel": "A Buttons",
+      "eyebrow": "02 · ATOMS",
+      "title": "Buttons",
+      "description": null,
+      "line": 466,
+      "bytes": 11979,
+      "sha256": "52f64ebe1788c75276a510556d7b09550acc232e9ccd558aab8dc78c7d9dae8d",
+      "directChildren": 3,
+      "eyebrowGroup": "atoms",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-button",
+          "caption": "Button.dc.html",
+          "line": 468,
+          "cardBytes": 469,
+          "cardSha256": "624ea076eb3edb24842694cb499decd5eda7544cadf9676b11e3d2b67df9562d",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "dc-import",
+          "identifier": "Button.dc.html",
+          "caption": "variant=all",
+          "line": 468,
+          "cardBytes": 75,
+          "cardSha256": "ee8186ebcd3600150ab9d2079e15243d9bbab167f1e5a6c598cc20b94115ee05",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "abq-button--primary",
+          "caption": "Primary · Calibration CTA",
+          "line": 470,
+          "cardBytes": 1265,
+          "cardSha256": "66cee24ca575849f56f764bab2f32d585a2c59d5274d155a6916a039fb1fb823",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "abq-button--gradient",
+          "caption": "Gradient · Add to cart",
+          "line": 471,
+          "cardBytes": 2923,
+          "cardSha256": "706865463fd20029c2b504306dd4391da2aedad46e1bd406ad47f9778bf7faee",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "abq-button--secondary",
+          "caption": "Secondary · Cart",
+          "line": 472,
+          "cardBytes": 2578,
+          "cardSha256": "1cc33ba19e9dbe31e4a1a2b22f8a3f5beba22ba4ebea15c5d67302b2577da9da",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "abq-button--outline",
+          "caption": "Outline · Log in",
+          "line": 476,
+          "cardBytes": 2115,
+          "cardSha256": "9fcaa380d2c462be6abd39144ba14bf678023493672a62c249bff2161485f46d",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "abq-icon-button",
+          "caption": "Icon · Compare, Menu",
+          "line": 477,
+          "cardBytes": 1850,
+          "cardSha256": "3f8000753327e9da54304624829583b0746b5e2aba66e1d7d623dee72a4ee57a",
+          "confidence": "confirmed"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "div",
+          "line": 468,
+          "bytes": 719,
+          "sha256": "07d9cb18998bbba0188cf5785841be5e31fcc8ff54fd3248ad128e479b37a553",
+          "text": "Button component · live Button.dc.html abq-button",
+          "examplesInside": 2,
+          "isExampleLabel": false
+        },
+        {
+          "tag": "div",
+          "line": 469,
+          "bytes": 10890,
+          "sha256": "281ea628157e62d946587098ea7552403b4b77f3a6af44ae39ab153b9da084ec",
+          "text": "Calibration Services Primary · Calibration CTA abq-button--primary Add to cart Gradient · Add to cart abq-button--gradient Cart Secondary · Cart abq-button--sec",
+          "examplesInside": 5,
+          "isExampleLabel": false
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [
+        {
+          "name": "Button",
+          "line": 468,
+          "attrs": {
+            "name": "Button",
+            "variant": "all",
+            "hint-size": "100%,2400px"
+          }
+        }
+      ],
+      "iframes": [],
+      "conditionals": [],
+      "styleHover": 4,
+      "assetRefs": [],
+      "hrefs": [
+        "#buttons"
+      ],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "links",
+      "order": 8,
+      "group": "atoms",
+      "navLabel": "A Links & eyebrow",
+      "eyebrow": "02 · ATOMS",
+      "title": "Links & eyebrow",
+      "description": null,
+      "line": 481,
+      "bytes": 3616,
+      "sha256": "f643ef8647bf5916942103a2ddea9e35893be2545792d795a14c17ff6ceedb15",
+      "directChildren": 2,
+      "eyebrowGroup": "atoms",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-link--arrow · abq-lang",
+          "caption": "Arrow link · Language",
+          "line": 484,
+          "cardBytes": 2184,
+          "cardSha256": "b2b34999d21a03b21fe9107b72ec2dc7b0ea56480883ab0231b45ed793aae19c",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "abq-eyebrow",
+          "caption": "Eyebrow pill · Eyebrow text",
+          "line": 485,
+          "cardBytes": 927,
+          "cardSha256": "d40df3574c063576e1e9425ea7933a118497aab892d02e0c3378688e432846e5",
+          "confidence": "confirmed"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "div",
+          "line": 483,
+          "bytes": 3243,
+          "sha256": "d4a254e98449d605a55e282d23cd69a7b450037246cbd7f70a5920a4eb1651f6",
+          "text": "View all EN Arrow link · Language abq-link--arrow · abq-lang CERTIFIED TEST EQUIPMENT CATEGORIES Eyebrow pill · Eyebrow text abq-eyebrow",
+          "examplesInside": 2,
+          "isExampleLabel": false
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [],
+      "iframes": [],
+      "conditionals": [],
+      "styleHover": 1,
+      "assetRefs": [],
+      "hrefs": [
+        "#buttons"
+      ],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "audience",
+      "order": 9,
+      "group": "molecules",
+      "navLabel": "M Audience cards",
+      "eyebrow": "03 · MOLECULES",
+      "title": "Audience cards",
+      "description": "Hero entry points. Icon + title + arrow + caption.",
+      "line": 489,
+      "bytes": 5633,
+      "sha256": "f6cd67829f76f5f2897b294c883cc83275acd649977d73ecfac9c12a9770756c",
+      "directChildren": 2,
+      "eyebrowGroup": "molecules",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-audience-card--dark · --glass",
+          "caption": "Dark gradient · Glass",
+          "line": 491,
+          "cardBytes": 5160,
+          "cardSha256": "3486cdb0440470f5bc457cad5bd4bb99c28850f253659609fc980f588500f7f9",
+          "confidence": "confirmed"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "div",
+          "line": 491,
+          "bytes": 5160,
+          "sha256": "3486cdb0440470f5bc457cad5bd4bb99c28850f253659609fc980f588500f7f9",
+          "text": "I'm a professional Law enforcement, healthcare I'm an individual Drivers & personal use Dark gradient · Glass abq-audience-card--dark · --glass",
+          "examplesInside": 1,
+          "isExampleLabel": false
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [],
+      "iframes": [],
+      "conditionals": [],
+      "styleHover": 2,
+      "assetRefs": [],
+      "hrefs": [
+        "#buttons"
+      ],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "tabs",
+      "order": 10,
+      "group": "molecules",
+      "navLabel": "M Segmented tabs",
+      "eyebrow": "03 · MOLECULES",
+      "title": "Segmented tabs",
+      "description": null,
+      "line": 500,
+      "bytes": 5296,
+      "sha256": "5c6bfa8e2d1f23eb1bbbff52caeeb8fc571ed2ea4b6c50f5254986ed56bc6f96",
+      "directChildren": 3,
+      "eyebrowGroup": "molecules",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-segmented",
+          "caption": "In-stock filter · Individual / Professional",
+          "line": 502,
+          "cardBytes": 3587,
+          "cardSha256": "016a5dd4e22b0e05bb4028279f42a7dee1684c8a51f46f7e6d47366213dfcdef",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "abq-tabs-underline",
+          "caption": "Underline tabs · Product page · active navy 2px underline",
+          "line": 506,
+          "cardBytes": 1337,
+          "cardSha256": "be8a6919febe9e07e64952bbdbd8184c30e6e6971c670e2989098bda1b35eeb8",
+          "confidence": "confirmed"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "div",
+          "line": 502,
+          "bytes": 3587,
+          "sha256": "016a5dd4e22b0e05bb4028279f42a7dee1684c8a51f46f7e6d47366213dfcdef",
+          "text": "Individual Professional In-stock filter · Individual / Professional abq-segmented",
+          "examplesInside": 1,
+          "isExampleLabel": false
+        },
+        {
+          "tag": "div",
+          "line": 506,
+          "bytes": 1337,
+          "sha256": "be8a6919febe9e07e64952bbdbd8184c30e6e6971c670e2989098bda1b35eeb8",
+          "text": "Description Specifications Downloads Underline tabs · Product page · active navy 2px underline abq-tabs-underline",
+          "examplesInside": 1,
+          "isExampleLabel": false
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [],
+      "iframes": [],
+      "conditionals": [],
+      "styleHover": 0,
+      "assetRefs": [],
+      "hrefs": [],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "purchase",
+      "order": 11,
+      "group": "molecules",
+      "navLabel": "M Purchase actions",
+      "eyebrow": "03 · MOLECULES",
+      "title": "Purchase actions",
+      "description": "Price + gradient button + icon button, from the product card.",
+      "line": 509,
+      "bytes": 4503,
+      "sha256": "cd63bf903452f11ee27efce7639f22ba9b1ede184eb744052cfde2497f963bcc",
+      "directChildren": 2,
+      "eyebrowGroup": "molecules",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-purchase",
+          "caption": "Uses: price, gradient button, icon button",
+          "line": 511,
+          "cardBytes": 4017,
+          "cardSha256": "11fec41b6691ec97220db27d90a4df95b5afc4d60d885205a54021a0f7db675c",
+          "confidence": "confirmed"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "div",
+          "line": 511,
+          "bytes": 4017,
+          "sha256": "11fec41b6691ec97220db27d90a4df95b5afc4d60d885205a54021a0f7db675c",
+          "text": "€149.00 Add to cart Uses: price, gradient button, icon button abq-purchase",
+          "examplesInside": 1,
+          "isExampleLabel": false
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [],
+      "iframes": [],
+      "conditionals": [],
+      "styleHover": 1,
+      "assetRefs": [],
+      "hrefs": [],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "heading",
+      "order": 12,
+      "group": "molecules",
+      "navLabel": "M Section heading",
+      "eyebrow": "03 · MOLECULES",
+      "title": "Section heading",
+      "description": null,
+      "line": 514,
+      "bytes": 3018,
+      "sha256": "8c08d39c09c232312f7be4d8980a20c40bcf0315859fbb10a7a6880e952b94c4",
+      "directChildren": 3,
+      "eyebrowGroup": "molecules",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-section-head",
+          "caption": "Uses: eyebrow, H2, arrow link",
+          "line": 516,
+          "cardBytes": 1227,
+          "cardSha256": "8115c914d8dbeb89b5c1ccb6ff97a01454ebc2a617068a44fc980219281ad1aa",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "caption-row",
+          "identifier": "SectionHeading.dc.html",
+          "caption": "Section heading component · live",
+          "line": 517,
+          "cardBytes": 1411,
+          "cardSha256": "3c12e865ab7b5b68c9dff6d43fb2fdba8b2b031e10a9dd3f487a41c81cfb8ee7",
+          "confidence": "needs-review"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "align=\"left\"",
+          "caption": null,
+          "line": 517,
+          "cardBytes": 317,
+          "cardSha256": "0f3bd42a507b8c7d220d7c1a401d0f5b370e124f48b40d5eecdf12d0ebceb9a6",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "dc-import",
+          "identifier": "SectionHeading.dc.html",
+          "caption": "eyebrow=HOW IT WORKS title=Four steps, fully mail-in",
+          "line": 517,
+          "cardBytes": 124,
+          "cardSha256": "01e283be67e668f68894a805da3ff99cd1c7f278ac07780219c2aae790429629",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "align=\"center\"",
+          "caption": null,
+          "line": 517,
+          "cardBytes": 356,
+          "cardSha256": "c484614bb5dc8d078f239f2f54b7182a86a8fae87d8a64aad89c1bf771d0d48a",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "dc-import",
+          "identifier": "SectionHeading.dc.html",
+          "caption": "eyebrow=SEND-IN INSTRUCTIONS title=Packing your device align=center",
+          "line": 517,
+          "cardBytes": 141,
+          "cardSha256": "4cf27a0cadeeb41a4b9eba9db6726fcb08eb2714fc36869ca2e2b13ffe7ba787",
+          "confidence": "confirmed"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "div",
+          "line": 516,
+          "bytes": 1227,
+          "sha256": "8115c914d8dbeb89b5c1ccb6ff97a01454ebc2a617068a44fc980219281ad1aa",
+          "text": "CATEGORIES Browse by product type View all Uses: eyebrow, H2, arrow link abq-section-head",
+          "examplesInside": 1,
+          "isExampleLabel": false
+        },
+        {
+          "tag": "div",
+          "line": 517,
+          "bytes": 1411,
+          "sha256": "3c12e865ab7b5b68c9dff6d43fb2fdba8b2b031e10a9dd3f487a41c81cfb8ee7",
+          "text": "Section heading component · live SectionHeading.dc.html align=\"left\" align=\"center\" Used on Product, Calibration services and About. Edit the file to change eve",
+          "examplesInside": 5,
+          "isExampleLabel": false
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [
+        {
+          "name": "SectionHeading",
+          "line": 517,
+          "attrs": {
+            "name": "SectionHeading",
+            "eyebrow": "HOW IT WORKS",
+            "title": "Four steps, fully mail-in",
+            "hint-size": "100%,64px"
+          }
+        },
+        {
+          "name": "SectionHeading",
+          "line": 517,
+          "attrs": {
+            "name": "SectionHeading",
+            "eyebrow": "SEND-IN INSTRUCTIONS",
+            "title": "Packing your device",
+            "align": "center",
+            "hint-size": "100%,64px"
+          }
+        }
+      ],
+      "iframes": [],
+      "conditionals": [],
+      "styleHover": 1,
+      "assetRefs": [],
+      "hrefs": [
+        "#buttons"
+      ],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "components",
+      "order": 13,
+      "group": "organisms",
+      "navLabel": "O Header & footer",
+      "eyebrow": "04 · ORGANISMS",
+      "title": "Header & footer",
+      "description": "Shared across every page. Edit the file listed below; the site and this preview update together.",
+      "line": 520,
+      "bytes": 1704,
+      "sha256": "57e616336035f1ed88987223cb4559a650aed0b00ef913c3cad0b5bad6169e89",
+      "directChildren": 2,
+      "eyebrowGroup": "organisms",
+      "examples": [
+        {
+          "evidence": "iframe-list",
+          "identifier": "{{ components }}",
+          "caption": "one live iframe preview per list item",
+          "line": 522,
+          "cardBytes": 1148,
+          "cardSha256": "23205d5d024e2f9d2704af613fff4f0c3261e2b839ba9b553a7007f6e3e25229",
+          "confidence": "confirmed"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "sc-for",
+          "line": 522,
+          "bytes": 1148,
+          "sha256": "23205d5d024e2f9d2704af613fff4f0c3261e2b839ba9b553a7007f6e3e25229",
+          "text": "{{ o.label }} {{ o.src }} {{ o.cls }}",
+          "examplesInside": 1,
+          "isExampleLabel": false
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [],
+      "iframes": [
+        {
+          "line": 526,
+          "src": "{{ o.src }}",
+          "inConditional": "design-system#sc-for-008"
+        }
+      ],
+      "conditionals": [
+        {
+          "id": "design-system#sc-for-008",
+          "kind": "sc-for",
+          "expression": "{{ components }}",
+          "line": 522
+        }
+      ],
+      "styleHover": 0,
+      "assetRefs": [],
+      "hrefs": [
+        "{{ o.src }}"
+      ],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "crumbs",
+      "order": 14,
+      "group": "molecules",
+      "navLabel": "M Breadcrumb",
+      "eyebrow": "03 · MOLECULES",
+      "title": "Breadcrumb",
+      "description": "Shared trail above page titles. Edit the file listed below; the site and this preview update together.",
+      "line": 534,
+      "bytes": 1565,
+      "sha256": "9718757b2c272d05ef62c585f78a6022fe42eb9cd07ccdb5a752a4ca0230e3c5",
+      "directChildren": 2,
+      "eyebrowGroup": "molecules",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-breadcrumb",
+          "caption": "Breadcrumb.dc.html",
+          "line": 536,
+          "cardBytes": 464,
+          "cardSha256": "a8023fa5e67de13da6bb67977d4647a36d082638655d15366e61ac07a08d23fc",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "dc-import",
+          "identifier": "Breadcrumb.dc.html",
+          "caption": "first-label=Home first-href=index.html current=Calibration services",
+          "line": 538,
+          "cardBytes": 137,
+          "cardSha256": "a359909e95297a2fbec5e1c1826b33b1c60fa407632ab798b1ee3fe0acaf387d",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "dc-import",
+          "identifier": "Breadcrumb.dc.html",
+          "caption": "first-label=Home first-href=index.html mid-label=Brands mid-href=# current=Lion Laboratories",
+          "line": 539,
+          "cardBytes": 166,
+          "cardSha256": "cba1d597b4d7767dbe798319410507a2eed472833fc62413cfe3522e1f39ad53",
+          "confidence": "confirmed"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "div",
+          "line": 535,
+          "bytes": 1045,
+          "sha256": "b0fb001638f1ea19a39c45607f22bfc4d51729854bff54009f5d9e1045411794",
+          "text": "Breadcrumb Breadcrumb.dc.html abq-breadcrumb",
+          "examplesInside": 3,
+          "isExampleLabel": false
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [
+        {
+          "name": "Breadcrumb",
+          "line": 538,
+          "attrs": {
+            "name": "Breadcrumb",
+            "first-label": "Home",
+            "first-href": "index.html",
+            "current": "Calibration services",
+            "hint-size": "100%,20px"
+          }
+        },
+        {
+          "name": "Breadcrumb",
+          "line": 539,
+          "attrs": {
+            "name": "Breadcrumb",
+            "first-label": "Home",
+            "first-href": "index.html",
+            "mid-label": "Brands",
+            "mid-href": "#",
+            "current": "Lion Laboratories",
+            "hint-size": "100%,20px"
+          }
+        }
+      ],
+      "iframes": [],
+      "conditionals": [],
+      "styleHover": 0,
+      "assetRefs": [],
+      "hrefs": [],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "cards",
+      "order": 15,
+      "group": "molecules",
+      "navLabel": "M Product & PDF cards",
+      "eyebrow": "03 · MOLECULES",
+      "title": "Product & PDF cards",
+      "description": "Live instances of the shared card files used on catalog, product, brand, service and about pages.",
+      "line": 543,
+      "bytes": 2644,
+      "sha256": "cd7e42dc268f7c2b1b0cc2141a5993b4db0c64f3bb084297441faa662385bf3b",
+      "directChildren": 3,
+      "eyebrowGroup": "molecules",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-product-card",
+          "caption": "ProductCard.dc.html",
+          "line": 546,
+          "cardBytes": 469,
+          "cardSha256": "8204539b09626b9ab4978c49091abd2546b0e18d51ce9b7ac5d9d0f6a91b33e1",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "dc-import",
+          "identifier": "ProductCard.dc.html",
+          "caption": "p={{ sp }}",
+          "line": 548,
+          "cardBytes": 78,
+          "cardSha256": "4c6b50b15f192f9779e13862b7ac1048b85b62cfe70aadf3f5c6518b35187846",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "abq-pdf-card",
+          "caption": "PdfCard.dc.html",
+          "line": 552,
+          "cardBytes": 457,
+          "cardSha256": "f64b4bf445ce717a6de8707d4a995bccc7025f124e83da9fe991e19feb8fd698",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "dc-import",
+          "identifier": "PdfCard.dc.html",
+          "caption": "title=Décret n° 2012-284 size=186 KB meta=PDF · 186 KB href=#",
+          "line": 554,
+          "cardBytes": 130,
+          "cardSha256": "8cd4abd11e7a749d8f1a48620dcf48d11374790def22fa637ff80fd472842c6f",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "dc-import",
+          "identifier": "PdfCard.dc.html",
+          "caption": "title=NF X20-702 certificate size=240 KB meta=PDF · 240 KB href=#",
+          "line": 555,
+          "cardBytes": 134,
+          "cardSha256": "4e3ff22625c1c5f1aa12974e5a47a0d49b9739fda23a775ce11daf7e5bab80ff",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "dc-import",
+          "identifier": "PdfCard.dc.html",
+          "caption": "title=User manual size=1.2 MB meta=PDF · 1.2 MB href=#",
+          "line": 556,
+          "cardBytes": 123,
+          "cardSha256": "45fcf716d41ee14662f9c31f4d6c4a3743a339c4fa6af87b156ac4584f32d4c8",
+          "confidence": "confirmed"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "div",
+          "line": 545,
+          "bytes": 932,
+          "sha256": "9d3d5b2591e516802f2f7f54f97b345c3d977a2d3c5bff249c1d8d9b0c7f935f",
+          "text": "Product card ProductCard.dc.html abq-product-card",
+          "examplesInside": 2,
+          "isExampleLabel": false
+        },
+        {
+          "tag": "div",
+          "line": 551,
+          "bytes": 1171,
+          "sha256": "79251a188ea9f974c8d520dabc3e14ec29271a2e6d1de532a662daa3f11dba25",
+          "text": "PDF card PdfCard.dc.html abq-pdf-card",
+          "examplesInside": 4,
+          "isExampleLabel": false
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [
+        {
+          "name": "ProductCard",
+          "line": 548,
+          "attrs": {
+            "name": "ProductCard",
+            "p": "{{ sp }}",
+            "hint-size": "100%,440px"
+          }
+        },
+        {
+          "name": "PdfCard",
+          "line": 554,
+          "attrs": {
+            "name": "PdfCard",
+            "title": "Décret n° 2012-284",
+            "size": "186 KB",
+            "meta": "PDF · 186 KB",
+            "href": "#",
+            "hint-size": "100%,80px"
+          }
+        },
+        {
+          "name": "PdfCard",
+          "line": 555,
+          "attrs": {
+            "name": "PdfCard",
+            "title": "NF X20-702 certificate",
+            "size": "240 KB",
+            "meta": "PDF · 240 KB",
+            "href": "#",
+            "hint-size": "100%,80px"
+          }
+        },
+        {
+          "name": "PdfCard",
+          "line": 556,
+          "attrs": {
+            "name": "PdfCard",
+            "title": "User manual",
+            "size": "1.2 MB",
+            "meta": "PDF · 1.2 MB",
+            "href": "#",
+            "hint-size": "100%,80px"
+          }
+        }
+      ],
+      "iframes": [],
+      "conditionals": [
+        {
+          "id": "design-system#sc-for-009",
+          "kind": "sc-for",
+          "expression": "{{ sampleProducts }}",
+          "line": 548
+        }
+      ],
+      "styleHover": 0,
+      "assetRefs": [],
+      "hrefs": [],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "chips",
+      "order": 16,
+      "group": "molecules",
+      "navLabel": "M Tags & chips",
+      "eyebrow": "03 · MOLECULES",
+      "title": "Tags & chips",
+      "description": "Product tags sit on the card image; filter chips show active filters above the catalogue grid.",
+      "line": 560,
+      "bytes": 2759,
+      "sha256": "35723d2fe76e3944f27c435dc517ad29789a292db3ad5d57d8767758f4961a35",
+      "directChildren": 3,
+      "eyebrowGroup": "molecules",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-tag",
+          "caption": "Product tag · stock badge · 12px pill",
+          "line": 561,
+          "cardBytes": 905,
+          "cardSha256": "ce614d454b29715e76ebf887d70fc848b756310b2397a7b654fbbb1915cca6e5",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "abq-chip",
+          "caption": "Filter chip · 13.5px on Blue 25, × removes",
+          "line": 561,
+          "cardBytes": 1337,
+          "cardSha256": "c5d246c7b0b8ee9a8a32a7e1e5929bf8aa8b7569351508b88f0638025506bd6a",
+          "confidence": "confirmed"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "div",
+          "line": 561,
+          "bytes": 905,
+          "sha256": "ce614d454b29715e76ebf887d70fc848b756310b2397a7b654fbbb1915cca6e5",
+          "text": "Pro New Ships quickly Product tag · stock badge · 12px pill abq-tag",
+          "examplesInside": 1,
+          "isExampleLabel": false
+        },
+        {
+          "tag": "div",
+          "line": 561,
+          "bytes": 1337,
+          "sha256": "c5d246c7b0b8ee9a8a32a7e1e5929bf8aa8b7569351508b88f0638025506bd6a",
+          "text": "Electrochemical × EN 15964 × Up to 1 000 € × Clear all Filter chip · 13.5px on Blue 25, × removes abq-chip",
+          "examplesInside": 1,
+          "isExampleLabel": false
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [],
+      "iframes": [],
+      "conditionals": [],
+      "styleHover": 0,
+      "assetRefs": [],
+      "hrefs": [],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "gallery",
+      "order": 17,
+      "group": "molecules",
+      "navLabel": "M Product gallery",
+      "eyebrow": "03 · MOLECULES",
+      "title": "Product gallery",
+      "description": "Main image with a row of five thumbnails. Arrows appear when there are more images; the selected thumbnail gets a navy border.",
+      "line": 563,
+      "bytes": 2743,
+      "sha256": "fc4e9d3c9882ed505db53bcec58066d853ddffca2f99d4f57237c5f3bd110757",
+      "directChildren": 2,
+      "eyebrowGroup": "molecules",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-gallery",
+          "caption": "Product page · main radius 26, thumbnails radius 18",
+          "line": 564,
+          "cardBytes": 2193,
+          "cardSha256": "b67dc6211c32572c8801cf0d5bace93d3e6989baf42e163f2f234c88f696b13c",
+          "confidence": "confirmed"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "div",
+          "line": 564,
+          "bytes": 2193,
+          "sha256": "b67dc6211c32572c8801cf0d5bace93d3e6989baf42e163f2f234c88f696b13c",
+          "text": "main image ‹ › Product page · main radius 26, thumbnails radius 18 abq-gallery",
+          "examplesInside": 1,
+          "isExampleLabel": false
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [],
+      "iframes": [],
+      "conditionals": [],
+      "styleHover": 0,
+      "assetRefs": [],
+      "hrefs": [],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "toc",
+      "order": 18,
+      "group": "molecules",
+      "navLabel": "M Page contents",
+      "eyebrow": "03 · MOLECULES",
+      "title": "Page contents",
+      "description": "Sticky side menu on the guide pages. The section in view is highlighted as you scroll.",
+      "line": 566,
+      "bytes": 3057,
+      "sha256": "05dd7f78062bd9602cfeea8ec078af40760c5a0eecd376ef402670816f353c81",
+      "directChildren": 2,
+      "eyebrowGroup": "molecules",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-toc",
+          "caption": "Info & Education guides · active Blue 50 + navy number",
+          "line": 567,
+          "cardBytes": 2553,
+          "cardSha256": "afd6d1b00f98129a3637fa88129b97a8a15611daf053f3050f6489d8e0624172",
+          "confidence": "confirmed"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "div",
+          "line": 567,
+          "bytes": 2553,
+          "sha256": "afd6d1b00f98129a3637fa88129b97a8a15611daf053f3050f6489d8e0624172",
+          "text": "1 How to choose a breathalyser 2 How breath testing works 3 Can you cheat a breathalyser? 4 Road-safety statistics Info & Education guides · active Blue 50 + na",
+          "examplesInside": 1,
+          "isExampleLabel": false
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [],
+      "iframes": [],
+      "conditionals": [],
+      "styleHover": 0,
+      "assetRefs": [],
+      "hrefs": [],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "auth",
+      "order": 19,
+      "group": "molecules",
+      "navLabel": "M Auth actions",
+      "eyebrow": "03 · MOLECULES",
+      "title": "Auth actions",
+      "description": "Secondary actions under the Log in form: social sign-in and the switch to Register.",
+      "line": 569,
+      "bytes": 1589,
+      "sha256": "58382f43dfaed09271a81b4f59483da6e9667098cc9d60afde1c617fa6d5bf12",
+      "directChildren": 2,
+      "eyebrowGroup": "molecules",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-auth-actions",
+          "caption": "Log in / Register · 50px outline, border Blue 100",
+          "line": 570,
+          "cardBytes": 1088,
+          "cardSha256": "26b911822cd5118e7e96f34654ea45a68af829a0baf3993102de25df4b19a129",
+          "confidence": "confirmed"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "div",
+          "line": 570,
+          "bytes": 1088,
+          "sha256": "26b911822cd5118e7e96f34654ea45a68af829a0baf3993102de25df4b19a129",
+          "text": "Continue with Google Create an account Log in / Register · 50px outline, border Blue 100 abq-auth-actions",
+          "examplesInside": 1,
+          "isExampleLabel": false
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [],
+      "iframes": [],
+      "conditionals": [],
+      "styleHover": 0,
+      "assetRefs": [],
+      "hrefs": [],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "mobilemenu",
+      "order": 20,
+      "group": "organisms",
+      "navLabel": "O Mobile menu",
+      "eyebrow": "04 · ORGANISMS",
+      "title": "Mobile menu",
+      "description": "Opens under the header on phones and tablets. Search on top, then grouped links with eyebrow labels.",
+      "line": 572,
+      "bytes": 2578,
+      "sha256": "0a3e1e8da2aebd8df02d5b4fccb1b2d5fabb21d36ef1c4756c2d15991cdaf7ad",
+      "directChildren": 2,
+      "eyebrowGroup": "organisms",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-mobile-menu",
+          "caption": "SiteHeader · menu shadow, links 16px, rows divided by #F0F3F8",
+          "line": 573,
+          "cardBytes": 2055,
+          "cardSha256": "3dbcce6ebb3e786e8298e613fb9f395df499c82eec64d80fafa4e1a420676b38",
+          "confidence": "confirmed"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "div",
+          "line": 573,
+          "bytes": 2055,
+          "sha256": "3dbcce6ebb3e786e8298e613fb9f395df499c82eec64d80fafa4e1a420676b38",
+          "text": "Search products PRODUCTS Breath Alcohol Testers Drug Tests Calibration Equipment Mouthpieces COMPANY Calibration Services Brands Contacts SiteHeader · menu shad",
+          "examplesInside": 1,
+          "isExampleLabel": false
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [],
+      "iframes": [],
+      "conditionals": [],
+      "styleHover": 0,
+      "assetRefs": [],
+      "hrefs": [],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "compare",
+      "order": 21,
+      "group": "organisms",
+      "navLabel": "O Compare table",
+      "eyebrow": "04 · ORGANISMS",
+      "title": "Compare table",
+      "description": "Up to three product columns with a remove button, followed by aligned specification rows.",
+      "line": 575,
+      "bytes": 4176,
+      "sha256": "c94bb99738dc26c0e2ae612c4d3fc78dd8cc792ceaf6eeb3675e7a70ba1c65a3",
+      "directChildren": 2,
+      "eyebrowGroup": "organisms",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-compare",
+          "caption": "Compare page · column card radius 20, card shadow",
+          "line": 576,
+          "cardBytes": 3665,
+          "cardSha256": "2b5d4b470c04858291eb2898e4774088a97f5adcda14f7ea1e9d825df36c0018",
+          "confidence": "confirmed"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "div",
+          "line": 576,
+          "bytes": 3665,
+          "sha256": "2b5d4b470c04858291eb2898e4774088a97f5adcda14f7ea1e9d825df36c0018",
+          "text": "× Lion Alcolmeter SD400F 990,00 € Add to cart × Drivesafe III 348,00 € Add to cart Sensor Electrochemical Fuel-cell Certification EN 15964 · NF EN 15964 Memory ",
+          "examplesInside": 1,
+          "isExampleLabel": false
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [],
+      "iframes": [],
+      "conditionals": [],
+      "styleHover": 0,
+      "assetRefs": [],
+      "hrefs": [],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "checkoutbar",
+      "order": 22,
+      "group": "organisms",
+      "navLabel": "O Checkout progress",
+      "eyebrow": "04 · ORGANISMS",
+      "title": "Checkout progress",
+      "description": "Step bar across the top of Checkout. Done steps are navy with a tick, the current step is blue with a glow, later steps are outlined.",
+      "line": 578,
+      "bytes": 3378,
+      "sha256": "6641462da4cccc49e15a4899a84a33f22d8b134cc2c024e0ffb16e93ad5b1208",
+      "directChildren": 2,
+      "eyebrowGroup": "organisms",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-checkout-steps",
+          "caption": "Checkout · 44px tiles, radius 12, connecting line 2px",
+          "line": 579,
+          "cardBytes": 2815,
+          "cardSha256": "623474658fc711d6a3ae72ab500d57c84010b09e766cf99087decc606b5a44f4",
+          "confidence": "confirmed"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "div",
+          "line": 579,
+          "bytes": 2815,
+          "sha256": "623474658fc711d6a3ae72ab500d57c84010b09e766cf99087decc606b5a44f4",
+          "text": "✓ Sign in ✓ Address Delivery Payment Checkout · 44px tiles, radius 12, connecting line 2px abq-checkout-steps",
+          "examplesInside": 1,
+          "isExampleLabel": false
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [],
+      "iframes": [],
+      "conditionals": [],
+      "styleHover": 0,
+      "assetRefs": [],
+      "hrefs": [],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "loader",
+      "order": 23,
+      "group": "organisms",
+      "navLabel": "O Page loader",
+      "eyebrow": "04 · ORGANISMS",
+      "title": "Page loader",
+      "description": "Shown while the site loads. Outlined percentage fills from the bottom in navy, then the panel fades out.",
+      "line": 581,
+      "bytes": 1753,
+      "sha256": "dbe6d0a99ac4e35ce3eb08ccdc9edee228b242819d4ef482f8d0c92ebc580852",
+      "directChildren": 2,
+      "eyebrowGroup": "organisms",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-loader",
+          "caption": "Site loader · weight 200, clamp(96px,16vw,200px), panel radius 32",
+          "line": 582,
+          "cardBytes": 1230,
+          "cardSha256": "d2f00f81befd3946fe06df4095d96166f4422cd312ac5fa1cb4a10e53c12daec",
+          "confidence": "confirmed"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "div",
+          "line": 582,
+          "bytes": 1230,
+          "sha256": "d2f00f81befd3946fe06df4095d96166f4422cd312ac5fa1cb4a10e53c12daec",
+          "text": "64% 64% Site loader · weight 200, clamp(96px,16vw,200px), panel radius 32 abq-loader",
+          "examplesInside": 1,
+          "isExampleLabel": false
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [],
+      "iframes": [],
+      "conditionals": [],
+      "styleHover": 0,
+      "assetRefs": [],
+      "hrefs": [],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "organisms",
+      "order": 24,
+      "group": "organisms",
+      "navLabel": "O Home sections",
+      "eyebrow": "04 · ORGANISMS",
+      "title": "Home sections",
+      "description": "Rendered live from index.html at 1440px, so they always match the approved page.",
+      "line": 584,
+      "bytes": 1613,
+      "sha256": "183f001b8e8c4a515571b6f4f804b577a8e1032ba99e0a73d4a2a95cb4cf634f",
+      "directChildren": 2,
+      "eyebrowGroup": "organisms",
+      "examples": [
+        {
+          "evidence": "iframe-list",
+          "identifier": "{{ previews }}",
+          "caption": "one live iframe preview per list item",
+          "line": 586,
+          "cardBytes": 1092,
+          "cardSha256": "8144448b16afdd9a4c0d83f14754357187c6fd1eb48e33451ad1d3d2a5684d91",
+          "confidence": "confirmed"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "sc-for",
+          "line": 586,
+          "bytes": 1092,
+          "sha256": "8144448b16afdd9a4c0d83f14754357187c6fd1eb48e33451ad1d3d2a5684d91",
+          "text": "{{ o.label }} {{ o.file }} {{ o.cls }}",
+          "examplesInside": 1,
+          "isExampleLabel": false
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [],
+      "iframes": [
+        {
+          "line": 590,
+          "src": "{{ o.src }}",
+          "inConditional": "design-system#sc-for-010"
+        }
+      ],
+      "conditionals": [
+        {
+          "id": "design-system#sc-for-010",
+          "kind": "sc-for",
+          "expression": "{{ previews }}",
+          "line": 586
+        }
+      ],
+      "styleHover": 0,
+      "assetRefs": [],
+      "hrefs": [],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "templates",
+      "order": 25,
+      "group": "templates",
+      "navLabel": "T Home page",
+      "eyebrow": "05 · TEMPLATES",
+      "title": "Home page",
+      "description": null,
+      "line": 596,
+      "bytes": 1094,
+      "sha256": "5bd3f23306f7bfcb55ae5bd63d0ab2e8423bb0321f1a8f580c4e794bcda0d181",
+      "directChildren": 2,
+      "eyebrowGroup": "templates",
+      "examples": [
+        {
+          "evidence": "caption-row",
+          "identifier": "Hero, trust bar, categories, in stock, calibration CTA, knowledge hub, brands",
+          "caption": "Home · reference standard",
+          "line": 598,
+          "cardBytes": 723,
+          "cardSha256": "7be1896c6619c587360a88035f6efda2c2f8950457751e6d375327b0293b1c7d",
+          "confidence": "needs-review"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "a",
+          "line": 598,
+          "bytes": 723,
+          "sha256": "7be1896c6619c587360a88035f6efda2c2f8950457751e6d375327b0293b1c7d",
+          "text": "Home · reference standard Hero, trust bar, categories, in stock, calibration CTA, knowledge hub, brands",
+          "examplesInside": 1,
+          "isExampleLabel": false
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [],
+      "iframes": [],
+      "conditionals": [],
+      "styleHover": 1,
+      "assetRefs": [],
+      "hrefs": [
+        "index.html"
+      ],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "handoff",
+      "order": 26,
+      "group": "templates",
+      "navLabel": "T Developer handoff",
+      "eyebrow": "05 · TEMPLATES",
+      "title": "Tokens as code",
+      "description": "Generated from the same data as the swatches above. Download JSON for Style Dictionary / Tokens Studio, or copy CSS variables.",
+      "line": 601,
+      "bytes": 1494,
+      "sha256": "42e117c6735a3513553d20fce4c0af0dc91c5f674be8458959d6ea23cf1effa1",
+      "directChildren": 3,
+      "eyebrowGroup": "templates",
+      "examples": [
+        {
+          "evidence": "block",
+          "identifier": null,
+          "caption": "Download tokens.json {{ copyLabel }}",
+          "line": 603,
+          "cardBytes": 746,
+          "cardSha256": "f20f29bdb53012a865045f4eb9a323c121eedc44837318112099f93480555d61",
+          "confidence": "needs-review"
+        },
+        {
+          "evidence": "block",
+          "identifier": null,
+          "caption": "{{ cssText }}",
+          "line": 607,
+          "cardBytes": 175,
+          "cardSha256": "ed065b07591151aa89b715008e4f81372e797ab69b163df6c84843ef495eb25e",
+          "confidence": "needs-review"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "div",
+          "line": 603,
+          "bytes": 746,
+          "sha256": "f20f29bdb53012a865045f4eb9a323c121eedc44837318112099f93480555d61",
+          "text": "Download tokens.json {{ copyLabel }}",
+          "examplesInside": 1,
+          "isExampleLabel": false
+        },
+        {
+          "tag": "pre",
+          "line": 607,
+          "bytes": 175,
+          "sha256": "ed065b07591151aa89b715008e4f81372e797ab69b163df6c84843ef495eb25e",
+          "text": "{{ cssText }}",
+          "examplesInside": 1,
+          "isExampleLabel": false
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [],
+      "iframes": [],
+      "conditionals": [],
+      "styleHover": 0,
+      "assetRefs": [],
+      "hrefs": [],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "forms",
+      "order": 27,
+      "group": "atoms",
+      "navLabel": "A Form fields",
+      "eyebrow": "02 · ATOMS",
+      "title": "Form fields",
+      "description": "Inputs and selects from Contact, Checkout, Account and the catalogue filters. All fields are 48px tall on a pale fill and turn blue on focus.",
+      "line": 609,
+      "bytes": 1136,
+      "sha256": "97e3053f783069a648e2acaf6aeab70daa5c766468a337587b95e25018c4119c",
+      "directChildren": 2,
+      "eyebrowGroup": "atoms",
+      "examples": [
+        {
+          "evidence": "caption-row",
+          "identifier": "FormField.dc.html",
+          "caption": "Text fields · linked to component",
+          "line": 609,
+          "cardBytes": 582,
+          "cardSha256": "ecd4641db3707701f752d61888d7de4cd450f4b4a67ba5004e8b7b91625d9521",
+          "confidence": "needs-review"
+        },
+        {
+          "evidence": "dc-import",
+          "identifier": "FormField.dc.html",
+          "caption": "kind=all",
+          "line": 609,
+          "cardBytes": 74,
+          "cardSha256": "1b2e3fbdd1aafaf91efd0dace8e0199680c9caee2ea41ee83f46eeed68a45ef7",
+          "confidence": "confirmed"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "div",
+          "line": 609,
+          "bytes": 582,
+          "sha256": "ecd4641db3707701f752d61888d7de4cd450f4b4a67ba5004e8b7b91625d9521",
+          "text": "Text fields · linked to component FormField.dc.html",
+          "examplesInside": 2,
+          "isExampleLabel": false
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [
+        {
+          "name": "FormField",
+          "line": 609,
+          "attrs": {
+            "name": "FormField",
+            "kind": "all",
+            "hint-size": "100%,560px"
+          }
+        }
+      ],
+      "iframes": [],
+      "conditionals": [],
+      "styleHover": 0,
+      "assetRefs": [],
+      "hrefs": [],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "choice",
+      "order": 28,
+      "group": "atoms",
+      "navLabel": "A Choice controls",
+      "eyebrow": "02 · ATOMS",
+      "title": "Choice controls",
+      "description": "Checkbox, radio and option card from the catalogue filters, consent boxes, Return form and Checkout. Navy when checked; option cards turn blue.",
+      "line": 611,
+      "bytes": 1127,
+      "sha256": "477e58bfbd2b028799dc96bac5e37bbcb7d2eaa1d8f4a3b76493765dcc92820e",
+      "directChildren": 2,
+      "eyebrowGroup": "atoms",
+      "examples": [
+        {
+          "evidence": "caption-row",
+          "identifier": "Choice.dc.html",
+          "caption": "Choice component · live",
+          "line": 611,
+          "cardBytes": 566,
+          "cardSha256": "55a6c41d62ca23376caa7c5872917c349752eaa06505ce0715e4edea83efd0ad",
+          "confidence": "needs-review"
+        },
+        {
+          "evidence": "dc-import",
+          "identifier": "Choice.dc.html",
+          "caption": "kind=all",
+          "line": 611,
+          "cardBytes": 71,
+          "cardSha256": "2584c173075d3076000b90978efc5e86a04264e23f21e71f643cf657ae1daa8a",
+          "confidence": "confirmed"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "div",
+          "line": 611,
+          "bytes": 566,
+          "sha256": "55a6c41d62ca23376caa7c5872917c349752eaa06505ce0715e4edea83efd0ad",
+          "text": "Choice component · live Choice.dc.html",
+          "examplesInside": 2,
+          "isExampleLabel": false
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [
+        {
+          "name": "Choice",
+          "line": 611,
+          "attrs": {
+            "name": "Choice",
+            "kind": "all",
+            "hint-size": "100%,480px"
+          }
+        }
+      ],
+      "iframes": [],
+      "conditionals": [],
+      "styleHover": 0,
+      "assetRefs": [],
+      "hrefs": [],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "feedback",
+      "order": 29,
+      "group": "molecules",
+      "navLabel": "M Status & feedback",
+      "eyebrow": "03 · MOLECULES",
+      "title": "Status & feedback",
+      "description": "Stock status, toast messages and the numbered step badge used in checkout.",
+      "line": 613,
+      "bytes": 4431,
+      "sha256": "0861bee8e62507148457e759a11aad8be50d5dde667a211e3a9ad0f4f18ab5e7",
+      "directChildren": 3,
+      "eyebrowGroup": "molecules",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "stock status · pulse",
+          "caption": null,
+          "line": 615,
+          "cardBytes": 531,
+          "cardSha256": "a16e8a54092d833392da0cf94e6ff1c3a99abbf4e725cb36c861ef2ca3d08f03",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "step badge · checkout",
+          "caption": null,
+          "line": 616,
+          "cardBytes": 533,
+          "cardSha256": "f7d050001df96a6205b83e821be9228993cf01c11abc4bd33b0d66fd7cd72303",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "toast · success #00427A",
+          "caption": null,
+          "line": 617,
+          "cardBytes": 452,
+          "cardSha256": "2a4165be1cb570da564141b70be2ad2823f8fbdc192fbd9d69d9d1cb5e7a736e",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "toast · error #B42318",
+          "caption": null,
+          "line": 618,
+          "cardBytes": 788,
+          "cardSha256": "dace4e82721cfb23ccc03171b5fa856b451ba1d1333112e406773a3c0c65ba72",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "abq-empty-state",
+          "caption": "Empty / result state · Cart · illustration, H 22px, body 15.5px, primary button",
+          "line": 619,
+          "cardBytes": 1406,
+          "cardSha256": "a294ba5966be5228cb65869d0bde025325ba793679c386184ded23dbe259821b",
+          "confidence": "confirmed"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "div",
+          "line": 614,
+          "bytes": 2520,
+          "sha256": "22c6f0c945f5065ffc3fae7959517d49400f0c1873c8ba8a52fdeac3149ecb01",
+          "text": "In stock - ships in 24h stock status · pulse 2 Delivery method step badge · checkout Added to cart toast · success #00427A Something went wrong. Try again. toas",
+          "examplesInside": 4,
+          "isExampleLabel": false
+        },
+        {
+          "tag": "div",
+          "line": 619,
+          "bytes": 1406,
+          "sha256": "a294ba5966be5228cb65869d0bde025325ba793679c386184ded23dbe259821b",
+          "text": "illustration 182×116 Your order has been placed successfully Thank you for your order. We’ve received it and will begin processing it shortly. Browse the catalo",
+          "examplesInside": 1,
+          "isExampleLabel": false
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [],
+      "iframes": [],
+      "conditionals": [],
+      "styleHover": 0,
+      "assetRefs": [],
+      "hrefs": [],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "commerce",
+      "order": 30,
+      "group": "molecules",
+      "navLabel": "M Commerce controls",
+      "eyebrow": "03 · MOLECULES",
+      "title": "Commerce controls",
+      "description": "Quantity steppers, pagination and the product specification table.",
+      "line": 621,
+      "bytes": 5501,
+      "sha256": "db37e30658d65ff84861ea11f30463b97038f7b409948542c48f75ec397b54a4",
+      "directChildren": 3,
+      "eyebrowGroup": "molecules",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "quantity · product page · h52",
+          "caption": null,
+          "line": 623,
+          "cardBytes": 978,
+          "cardSha256": "e36eee4222a69c53907e3c238693392d4afc05766c03233c131a15fcdf3768fd",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "quantity · cart · h40",
+          "caption": null,
+          "line": 624,
+          "cardBytes": 970,
+          "cardSha256": "15b63dedeb9dd60475485163704f4e32ea751438c9856a7a390812672e92cb2b",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "pagination · active / default / next",
+          "caption": null,
+          "line": 625,
+          "cardBytes": 1484,
+          "cardSha256": "a4c193905e6daea6cb8c243fd58ee6b8a9cb8f7d60e7fc161146187befb9d745",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "caption-row",
+          "identifier": "Product page",
+          "caption": "Specification table",
+          "line": 627,
+          "cardBytes": 1360,
+          "cardSha256": "68e3dacd5fc15991125b73d45ef85c3366650ccb182ef8c191954496542a553b",
+          "confidence": "needs-review"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "div",
+          "line": 622,
+          "bytes": 3647,
+          "sha256": "28c0049b03a9ade52d8de7b049f536e688c3ed8e2d7d0f9b2514745fdd80141d",
+          "text": "− 1 + quantity · product page · h52 − 1 + quantity · cart · h40 1 2 3 pagination · active / default / next",
+          "examplesInside": 3,
+          "isExampleLabel": false
+        },
+        {
+          "tag": "div",
+          "line": 627,
+          "bytes": 1360,
+          "sha256": "68e3dacd5fc15991125b73d45ef85c3366650ccb182ef8c191954496542a553b",
+          "text": "Specification table Product page Measurement Sensor Fuel cell Range 0.00 – 2.00 mg/L Accuracy ± 0.02 mg/L",
+          "examplesInside": 1,
+          "isExampleLabel": false
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [],
+      "iframes": [],
+      "conditionals": [],
+      "styleHover": 0,
+      "assetRefs": [],
+      "hrefs": [],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "overlays",
+      "order": 31,
+      "group": "organisms",
+      "navLabel": "O Drawers & modals",
+      "eyebrow": "04 · ORGANISMS",
+      "title": "Drawers & modals",
+      "description": "Overlays sit on a navy backdrop rgba(0,22,41,.45). Modals are centred cards; on mobile the catalogue filters open as a bottom sheet.",
+      "line": 629,
+      "bytes": 3747,
+      "sha256": "6b1bd1dcdf9334bbf776ad0f6c421a35ab5acb642fec7382deddc8ba474aca0d",
+      "directChildren": 3,
+      "eyebrowGroup": "organisms",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-modal",
+          "caption": "Modal · Account address · max-width 560, radius 22, padding 32, shadow 0 30 80",
+          "line": 630,
+          "cardBytes": 1506,
+          "cardSha256": "4d22504778902a5d330c0fed2f7607142438b18bedb6d2728bbd942ef053e1bb",
+          "confidence": "confirmed"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "abq-sheet",
+          "caption": "Bottom sheet · Catalogue filters (mobile) · radius 20 top, handle 40×4, max-height 80vh",
+          "line": 631,
+          "cardBytes": 1678,
+          "cardSha256": "85d6ea4d0244247c7b075fe0edd0fe0cb71687523b325f45b5ac29845557dd6b",
+          "confidence": "confirmed"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "div",
+          "line": 630,
+          "bytes": 1506,
+          "sha256": "4d22504778902a5d330c0fed2f7607142438b18bedb6d2728bbd942ef053e1bb",
+          "text": "Add address × Modal · Account address · max-width 560, radius 22, padding 32, shadow 0 30 80 abq-modal",
+          "examplesInside": 1,
+          "isExampleLabel": false
+        },
+        {
+          "tag": "div",
+          "line": 631,
+          "bytes": 1678,
+          "sha256": "85d6ea4d0244247c7b075fe0edd0fe0cb71687523b325f45b5ac29845557dd6b",
+          "text": "Filter Clear all Bottom sheet · Catalogue filters (mobile) · radius 20 top, handle 40×4, max-height 80vh abq-sheet",
+          "examplesInside": 1,
+          "isExampleLabel": false
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [],
+      "iframes": [],
+      "conditionals": [],
+      "styleHover": 0,
+      "assetRefs": [],
+      "hrefs": [],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "faq",
+      "order": 32,
+      "group": "molecules",
+      "navLabel": "M FAQ accordion",
+      "eyebrow": "03 · MOLECULES",
+      "title": "FAQ accordion",
+      "description": "White cards on the pale band. One question opens at a time; the chevron turns when open.",
+      "line": 633,
+      "bytes": 3397,
+      "sha256": "18309141120e974a101ac56bed28ab388cb7648c0bacc8bc61e2420ada652bc1",
+      "directChildren": 3,
+      "eyebrowGroup": "molecules",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "Source: Calibration services · FAQ",
+          "caption": null,
+          "line": 634,
+          "cardBytes": 2745,
+          "cardSha256": "947a5e28078f894c0ead03ad9902d2063b1f450983228060bf07901926f757ca",
+          "confidence": "confirmed"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "div",
+          "line": 634,
+          "bytes": 2745,
+          "sha256": "947a5e28078f894c0ead03ad9902d2063b1f450983228060bf07901926f757ca",
+          "text": "How often should a breathalyser be calibrated? Most professional devices need calibration every 6 or 12 months, or after a set number of tests. We confirm the i",
+          "examplesInside": 1,
+          "isExampleLabel": false
+        },
+        {
+          "tag": "code",
+          "line": 635,
+          "bytes": 146,
+          "sha256": "7c747849a58978617e71a4df119357aff2272ce6f8fbfc5e98605f026e93d673",
+          "text": "Source: Calibration services · FAQ",
+          "examplesInside": 0,
+          "isExampleLabel": true
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [],
+      "iframes": [],
+      "conditionals": [],
+      "styleHover": 0,
+      "assetRefs": [],
+      "hrefs": [],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    },
+    {
+      "id": "accnav",
+      "order": 33,
+      "group": "organisms",
+      "navLabel": "O Account navigation",
+      "eyebrow": "04 · ORGANISMS",
+      "title": "Account navigation",
+      "description": "Side menu on the Account page. The active item gets a pale fill and navy text; icons follow the text colour.",
+      "line": 636,
+      "bytes": 2414,
+      "sha256": "0f2d612e19d85731338e4d7be6cca00c37b4d952663be9946f19dd1dff314bae",
+      "directChildren": 3,
+      "eyebrowGroup": "organisms",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "Source: Account · icons simplified in this preview",
+          "caption": null,
+          "line": 637,
+          "cardBytes": 1718,
+          "cardSha256": "6fb75df8677f4ff2596ff91fb0e1019ca50553aa3e48e2393673efd1f5db7afd",
+          "confidence": "confirmed"
+        }
+      ],
+      "blocks": [
+        {
+          "tag": "div",
+          "line": 637,
+          "bytes": 1718,
+          "sha256": "6fb75df8677f4ff2596ff91fb0e1019ca50553aa3e48e2393673efd1f5db7afd",
+          "text": "ACCOUNT Dashboard Orders 3 Personal details Addresses 2",
+          "examplesInside": 1,
+          "isExampleLabel": false
+        },
+        {
+          "tag": "code",
+          "line": 638,
+          "bytes": 162,
+          "sha256": "2e6afb91588382878577fcb1b4b471eccca488a55a75baa26f4c7eb9b6bcc7c3",
+          "text": "Source: Account · icons simplified in this preview",
+          "examplesInside": 0,
+          "isExampleLabel": true
+        }
+      ],
+      "subheadings": [],
+      "dcImports": [],
+      "iframes": [],
+      "conditionals": [],
+      "styleHover": 0,
+      "assetRefs": [],
+      "hrefs": [],
+      "evidence": {
+        "sidebarLink": true,
+        "sectionId": true,
+        "inIDS": true,
+        "cssRule": true
+      }
+    }
+  ],
+  "dcComponents": [
+    {
+      "id": "Button",
+      "file": "documents/Button.dc.html",
+      "sha256": "959beed92c9736c5d39b18fea028c3e63429023b9e809350ea38bf0b7db4dcba",
+      "bytes": 74561,
+      "props": {
+        "$preview": {
+          "width": "1200px",
+          "height": "1500px"
+        },
+        "variant": {
+          "editor": "enum",
+          "options": [
+            "all",
+            "primary",
+            "glow",
+            "gradient",
+            "white",
+            "secondary",
+            "outline",
+            "link",
+            "text",
+            "tile",
+            "circle",
+            "badge",
+            "shine",
+            "quiet",
+            "chip",
+            "dashed"
+          ],
+          "default": "all",
+          "tsType": "string"
+        },
+        "size": {
+          "editor": "enum",
+          "options": [
+            "sm",
+            "md",
+            "lg",
+            "xl"
+          ],
+          "default": "md",
+          "tsType": "'sm'|'md'|'lg'|'xl'"
+        },
+        "label": {
+          "editor": "text",
+          "default": "Button",
+          "tsType": "string"
+        },
+        "iconLeft": {
+          "editor": "enum",
+          "options": [
+            "",
+            "trash",
+            "filter",
+            "sort",
+            "cart",
+            "search",
+            "send",
+            "external",
+            "chevronLeft",
+            "chevronRight",
+            "arrowSm",
+            "compare",
+            "menu",
+            "searchTile",
+            "arrow",
+            "arrowLg"
+          ],
+          "default": "",
+          "tsType": "string"
+        },
+        "iconRight": {
+          "editor": "enum",
+          "options": [
+            "",
+            "trash",
+            "filter",
+            "sort",
+            "cart",
+            "search",
+            "send",
+            "external",
+            "chevronLeft",
+            "chevronRight",
+            "arrowSm",
+            "compare",
+            "menu",
+            "searchTile",
+            "arrow",
+            "arrowLg"
+          ],
+          "default": "",
+          "tsType": "string"
+        },
+        "full": {
+          "editor": "boolean",
+          "default": false,
+          "tsType": "boolean"
+        },
+        "arrow": {
+          "editor": "boolean",
+          "default": true,
+          "tsType": "boolean"
+        },
+        "href": {
+          "editor": "text",
+          "default": "",
+          "tsType": "string"
+        },
+        "type": {
+          "editor": "enum",
+          "options": [
+            "button",
+            "submit"
+          ],
+          "default": "button",
+          "tsType": "'button'|'submit'"
+        },
+        "disabled": {
+          "editor": "boolean",
+          "default": false,
+          "tsType": "boolean"
+        },
+        "ariaLabel": {
+          "editor": "text",
+          "default": "",
+          "tsType": "string"
+        },
+        "target": {
+          "editor": "text",
+          "default": "",
+          "tsType": "string"
+        },
+        "color": {
+          "editor": null,
+          "tsType": "string"
+        },
+        "onClick": {
+          "editor": null,
+          "tsType": "(e) => void"
+        }
+      },
+      "enumOptions": {
+        "variant": [
+          "all",
+          "primary",
+          "glow",
+          "gradient",
+          "white",
+          "secondary",
+          "outline",
+          "link",
+          "text",
+          "tile",
+          "circle",
+          "badge",
+          "shine",
+          "quiet",
+          "chip",
+          "dashed"
+        ],
+        "size": [
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ],
+        "iconLeft": [
+          "",
+          "trash",
+          "filter",
+          "sort",
+          "cart",
+          "search",
+          "send",
+          "external",
+          "chevronLeft",
+          "chevronRight",
+          "arrowSm",
+          "compare",
+          "menu",
+          "searchTile",
+          "arrow",
+          "arrowLg"
+        ],
+        "iconRight": [
+          "",
+          "trash",
+          "filter",
+          "sort",
+          "cart",
+          "search",
+          "send",
+          "external",
+          "chevronLeft",
+          "chevronRight",
+          "arrowSm",
+          "compare",
+          "menu",
+          "searchTile",
+          "arrow",
+          "arrowLg"
+        ],
+        "type": [
+          "button",
+          "submit"
+        ]
+      },
+      "conditionals": [
+        {
+          "id": "Button#sc-if-001",
+          "kind": "sc-if",
+          "expression": "{{ isAll }}",
+          "placeholder": "{{ false }}",
+          "parents": [],
+          "branchBytes": 34427,
+          "text": "COMPONENTS · BUTTON Button library Buttons are grouped by style. Each style is o"
+        },
+        {
+          "id": "Button#sc-for-002",
+          "kind": "sc-for",
+          "expression": "{{ sizeCols }}",
+          "placeholder": "4",
+          "parents": [
+            "Button#sc-if-001"
+          ],
+          "branchBytes": 269,
+          "text": "{{ s.name }} {{ s.code }}"
+        },
+        {
+          "id": "Button#sc-for-003",
+          "kind": "sc-for",
+          "expression": "{{ rows }}",
+          "placeholder": "6",
+          "parents": [
+            "Button#sc-if-001"
+          ],
+          "branchBytes": 15906,
+          "text": "{{ row.name }} {{ row.desc }} {{ row.code }} {{ it.iconL }}{{ it.label }}{{ it.i"
+        },
+        {
+          "id": "Button#sc-for-004",
+          "kind": "sc-for",
+          "expression": "{{ row.cells }}",
+          "placeholder": "4",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-003"
+          ],
+          "branchBytes": 14887,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }} {{ it.iconL }}{{ it.label }}{{ it.ico"
+        },
+        {
+          "id": "Button#sc-if-005",
+          "kind": "sc-if",
+          "expression": "{{ c.has }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-003",
+            "Button#sc-for-004"
+          ],
+          "branchBytes": 14695,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }} {{ it.iconL }}{{ it.label }}{{ it.ico"
+        },
+        {
+          "id": "Button#sc-for-006",
+          "kind": "sc-for",
+          "expression": "{{ c.list }}",
+          "placeholder": "1",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-003",
+            "Button#sc-for-004",
+            "Button#sc-if-005"
+          ],
+          "branchBytes": 14466,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }} {{ it.iconL }}{{ it.label }}{{ it.ico"
+        },
+        {
+          "id": "Button#sc-if-007",
+          "kind": "sc-if",
+          "expression": "{{ it.f_primary }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-003",
+            "Button#sc-for-004",
+            "Button#sc-if-005",
+            "Button#sc-for-006"
+          ],
+          "branchBytes": 940,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-008",
+          "kind": "sc-if",
+          "expression": "{{ it.f_glow }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-003",
+            "Button#sc-for-004",
+            "Button#sc-if-005",
+            "Button#sc-for-006"
+          ],
+          "branchBytes": 1200,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-009",
+          "kind": "sc-if",
+          "expression": "{{ it.f_gradient }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-003",
+            "Button#sc-for-004",
+            "Button#sc-if-005",
+            "Button#sc-for-006"
+          ],
+          "branchBytes": 926,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-010",
+          "kind": "sc-if",
+          "expression": "{{ it.f_white }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-003",
+            "Button#sc-for-004",
+            "Button#sc-if-005",
+            "Button#sc-for-006"
+          ],
+          "branchBytes": 926,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-011",
+          "kind": "sc-if",
+          "expression": "{{ it.f_secondary }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-003",
+            "Button#sc-for-004",
+            "Button#sc-if-005",
+            "Button#sc-for-006"
+          ],
+          "branchBytes": 944,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-012",
+          "kind": "sc-if",
+          "expression": "{{ it.f_outline }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-003",
+            "Button#sc-for-004",
+            "Button#sc-if-005",
+            "Button#sc-for-006"
+          ],
+          "branchBytes": 872,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-013",
+          "kind": "sc-if",
+          "expression": "{{ it.f_link }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-003",
+            "Button#sc-for-004",
+            "Button#sc-if-005",
+            "Button#sc-for-006"
+          ],
+          "branchBytes": 801,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-014",
+          "kind": "sc-if",
+          "expression": "{{ it.f_text }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-003",
+            "Button#sc-for-004",
+            "Button#sc-if-005",
+            "Button#sc-for-006"
+          ],
+          "branchBytes": 727,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-015",
+          "kind": "sc-if",
+          "expression": "{{ it.f_tile }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-003",
+            "Button#sc-for-004",
+            "Button#sc-if-005",
+            "Button#sc-for-006"
+          ],
+          "branchBytes": 917,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-016",
+          "kind": "sc-if",
+          "expression": "{{ it.f_circle }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-003",
+            "Button#sc-for-004",
+            "Button#sc-if-005",
+            "Button#sc-for-006"
+          ],
+          "branchBytes": 785,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-017",
+          "kind": "sc-if",
+          "expression": "{{ it.f_shine }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-003",
+            "Button#sc-for-004",
+            "Button#sc-if-005",
+            "Button#sc-for-006"
+          ],
+          "branchBytes": 1339,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-018",
+          "kind": "sc-if",
+          "expression": "{{ it.f_quiet }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-003",
+            "Button#sc-for-004",
+            "Button#sc-if-005",
+            "Button#sc-for-006"
+          ],
+          "branchBytes": 803,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-019",
+          "kind": "sc-if",
+          "expression": "{{ it.f_chip }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-003",
+            "Button#sc-for-004",
+            "Button#sc-if-005",
+            "Button#sc-for-006"
+          ],
+          "branchBytes": 856,
+          "text": "{{ it.label }} ×"
+        },
+        {
+          "id": "Button#sc-if-020",
+          "kind": "sc-if",
+          "expression": "{{ it.f_dashed }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-003",
+            "Button#sc-for-004",
+            "Button#sc-if-005",
+            "Button#sc-for-006"
+          ],
+          "branchBytes": 999,
+          "text": "+ {{ it.label }}"
+        },
+        {
+          "id": "Button#sc-if-021",
+          "kind": "sc-if",
+          "expression": "{{ it.f_badge }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-003",
+            "Button#sc-for-004",
+            "Button#sc-if-005",
+            "Button#sc-for-006"
+          ],
+          "branchBytes": 298,
+          "text": "{{ it.iconL }}"
+        },
+        {
+          "id": "Button#sc-for-022",
+          "kind": "sc-for",
+          "expression": "{{ mods }}",
+          "placeholder": "4",
+          "parents": [
+            "Button#sc-if-001"
+          ],
+          "branchBytes": 15922,
+          "text": "{{ m.name }} {{ m.desc }} {{ m.code }} {{ it.iconL }}{{ it.label }}{{ it.iconR }"
+        },
+        {
+          "id": "Button#sc-for-023",
+          "kind": "sc-for",
+          "expression": "{{ m.items }}",
+          "placeholder": "3",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-022"
+          ],
+          "branchBytes": 14806,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }} {{ it.iconL }}{{ it.label }}{{ it.ico"
+        },
+        {
+          "id": "Button#sc-for-024",
+          "kind": "sc-for",
+          "expression": "{{ x.list }}",
+          "placeholder": "1",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-022",
+            "Button#sc-for-023"
+          ],
+          "branchBytes": 14466,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }} {{ it.iconL }}{{ it.label }}{{ it.ico"
+        },
+        {
+          "id": "Button#sc-if-025",
+          "kind": "sc-if",
+          "expression": "{{ it.f_primary }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-022",
+            "Button#sc-for-023",
+            "Button#sc-for-024"
+          ],
+          "branchBytes": 940,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-026",
+          "kind": "sc-if",
+          "expression": "{{ it.f_glow }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-022",
+            "Button#sc-for-023",
+            "Button#sc-for-024"
+          ],
+          "branchBytes": 1200,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-027",
+          "kind": "sc-if",
+          "expression": "{{ it.f_gradient }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-022",
+            "Button#sc-for-023",
+            "Button#sc-for-024"
+          ],
+          "branchBytes": 926,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-028",
+          "kind": "sc-if",
+          "expression": "{{ it.f_white }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-022",
+            "Button#sc-for-023",
+            "Button#sc-for-024"
+          ],
+          "branchBytes": 926,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-029",
+          "kind": "sc-if",
+          "expression": "{{ it.f_secondary }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-022",
+            "Button#sc-for-023",
+            "Button#sc-for-024"
+          ],
+          "branchBytes": 944,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-030",
+          "kind": "sc-if",
+          "expression": "{{ it.f_outline }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-022",
+            "Button#sc-for-023",
+            "Button#sc-for-024"
+          ],
+          "branchBytes": 872,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-031",
+          "kind": "sc-if",
+          "expression": "{{ it.f_link }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-022",
+            "Button#sc-for-023",
+            "Button#sc-for-024"
+          ],
+          "branchBytes": 801,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-032",
+          "kind": "sc-if",
+          "expression": "{{ it.f_text }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-022",
+            "Button#sc-for-023",
+            "Button#sc-for-024"
+          ],
+          "branchBytes": 727,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-033",
+          "kind": "sc-if",
+          "expression": "{{ it.f_tile }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-022",
+            "Button#sc-for-023",
+            "Button#sc-for-024"
+          ],
+          "branchBytes": 917,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-034",
+          "kind": "sc-if",
+          "expression": "{{ it.f_circle }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-022",
+            "Button#sc-for-023",
+            "Button#sc-for-024"
+          ],
+          "branchBytes": 785,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-035",
+          "kind": "sc-if",
+          "expression": "{{ it.f_shine }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-022",
+            "Button#sc-for-023",
+            "Button#sc-for-024"
+          ],
+          "branchBytes": 1339,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-036",
+          "kind": "sc-if",
+          "expression": "{{ it.f_quiet }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-022",
+            "Button#sc-for-023",
+            "Button#sc-for-024"
+          ],
+          "branchBytes": 803,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-037",
+          "kind": "sc-if",
+          "expression": "{{ it.f_chip }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-022",
+            "Button#sc-for-023",
+            "Button#sc-for-024"
+          ],
+          "branchBytes": 856,
+          "text": "{{ it.label }} ×"
+        },
+        {
+          "id": "Button#sc-if-038",
+          "kind": "sc-if",
+          "expression": "{{ it.f_dashed }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-022",
+            "Button#sc-for-023",
+            "Button#sc-for-024"
+          ],
+          "branchBytes": 999,
+          "text": "+ {{ it.label }}"
+        },
+        {
+          "id": "Button#sc-if-039",
+          "kind": "sc-if",
+          "expression": "{{ it.f_badge }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-if-001",
+            "Button#sc-for-022",
+            "Button#sc-for-023",
+            "Button#sc-for-024"
+          ],
+          "branchBytes": 298,
+          "text": "{{ it.iconL }}"
+        },
+        {
+          "id": "Button#sc-for-040",
+          "kind": "sc-for",
+          "expression": "{{ single }}",
+          "placeholder": "0",
+          "parents": [],
+          "branchBytes": 14466,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }} {{ it.iconL }}{{ it.label }}{{ it.ico"
+        },
+        {
+          "id": "Button#sc-if-041",
+          "kind": "sc-if",
+          "expression": "{{ it.f_primary }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-for-040"
+          ],
+          "branchBytes": 940,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-042",
+          "kind": "sc-if",
+          "expression": "{{ it.f_glow }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-for-040"
+          ],
+          "branchBytes": 1200,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-043",
+          "kind": "sc-if",
+          "expression": "{{ it.f_gradient }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-for-040"
+          ],
+          "branchBytes": 926,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-044",
+          "kind": "sc-if",
+          "expression": "{{ it.f_white }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-for-040"
+          ],
+          "branchBytes": 926,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-045",
+          "kind": "sc-if",
+          "expression": "{{ it.f_secondary }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-for-040"
+          ],
+          "branchBytes": 944,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-046",
+          "kind": "sc-if",
+          "expression": "{{ it.f_outline }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-for-040"
+          ],
+          "branchBytes": 872,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-047",
+          "kind": "sc-if",
+          "expression": "{{ it.f_link }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-for-040"
+          ],
+          "branchBytes": 801,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-048",
+          "kind": "sc-if",
+          "expression": "{{ it.f_text }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-for-040"
+          ],
+          "branchBytes": 727,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-049",
+          "kind": "sc-if",
+          "expression": "{{ it.f_tile }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-for-040"
+          ],
+          "branchBytes": 917,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-050",
+          "kind": "sc-if",
+          "expression": "{{ it.f_circle }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-for-040"
+          ],
+          "branchBytes": 785,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-051",
+          "kind": "sc-if",
+          "expression": "{{ it.f_shine }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-for-040"
+          ],
+          "branchBytes": 1339,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-052",
+          "kind": "sc-if",
+          "expression": "{{ it.f_quiet }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-for-040"
+          ],
+          "branchBytes": 803,
+          "text": "{{ it.iconL }}{{ it.label }}{{ it.iconR }}"
+        },
+        {
+          "id": "Button#sc-if-053",
+          "kind": "sc-if",
+          "expression": "{{ it.f_chip }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-for-040"
+          ],
+          "branchBytes": 856,
+          "text": "{{ it.label }} ×"
+        },
+        {
+          "id": "Button#sc-if-054",
+          "kind": "sc-if",
+          "expression": "{{ it.f_dashed }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-for-040"
+          ],
+          "branchBytes": 999,
+          "text": "+ {{ it.label }}"
+        },
+        {
+          "id": "Button#sc-if-055",
+          "kind": "sc-if",
+          "expression": "{{ it.f_badge }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Button#sc-for-040"
+          ],
+          "branchBytes": 298,
+          "text": "{{ it.iconL }}"
+        }
+      ],
+      "dependencies": {
+        "scripts": [
+          "./support.js"
+        ],
+        "stylesheets": [
+          "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+        ],
+        "inlineStyles": 2,
+        "dcImports": [],
+        "assetRefs": []
+      },
+      "usagesInRoot": [
+        {
+          "section": "buttons",
+          "line": 468,
+          "attrs": {
+            "name": "Button",
+            "variant": "all",
+            "hint-size": "100%,2400px"
+          }
+        }
+      ],
+      "sameBytesInLinkedExport": true,
+      "presentInLinkedExport": true
+    },
+    {
+      "id": "SectionHeading",
+      "file": "documents/SectionHeading.dc.html",
+      "sha256": "8d121902aabe079161c921c81d6ad55f3f77c3e3a07c57feb47c9240997f1de1",
+      "bytes": 10302,
+      "props": {
+        "$preview": {
+          "width": "640px",
+          "height": "120px"
+        },
+        "eyebrow": {
+          "editor": "text",
+          "default": "EYEBROW",
+          "tsType": "string"
+        },
+        "title": {
+          "editor": "text",
+          "default": "Section title",
+          "tsType": "string"
+        },
+        "size": {
+          "editor": "enum",
+          "options": [
+            "md",
+            "sm"
+          ],
+          "default": "md",
+          "tsType": "string"
+        },
+        "align": {
+          "editor": "enum",
+          "options": [
+            "left",
+            "center"
+          ],
+          "default": "left",
+          "tsType": "'left'|'center'"
+        },
+        "marginTop": {
+          "editor": "text",
+          "default": "4px",
+          "tsType": "string"
+        },
+        "marginBottom": {
+          "editor": "text",
+          "default": "0px",
+          "tsType": "string"
+        }
+      },
+      "enumOptions": {
+        "size": [
+          "md",
+          "sm"
+        ],
+        "align": [
+          "left",
+          "center"
+        ]
+      },
+      "conditionals": [],
+      "dependencies": {
+        "scripts": [
+          "./support.js"
+        ],
+        "stylesheets": [
+          "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+        ],
+        "inlineStyles": 1,
+        "dcImports": [],
+        "assetRefs": []
+      },
+      "usagesInRoot": [
+        {
+          "section": "heading",
+          "line": 517,
+          "attrs": {
+            "name": "SectionHeading",
+            "eyebrow": "HOW IT WORKS",
+            "title": "Four steps, fully mail-in",
+            "hint-size": "100%,64px"
+          }
+        },
+        {
+          "section": "heading",
+          "line": 517,
+          "attrs": {
+            "name": "SectionHeading",
+            "eyebrow": "SEND-IN INSTRUCTIONS",
+            "title": "Packing your device",
+            "align": "center",
+            "hint-size": "100%,64px"
+          }
+        }
+      ],
+      "sameBytesInLinkedExport": true,
+      "presentInLinkedExport": true
+    },
+    {
+      "id": "Breadcrumb",
+      "file": "documents/Breadcrumb.dc.html",
+      "sha256": "cdc87c986767ab98c96f8dda731b20041bc2a666b6e8068350f6fe673f80ad20",
+      "bytes": 10679,
+      "props": {
+        "$preview": {
+          "width": "480px",
+          "height": "40px"
+        },
+        "firstLabel": {
+          "editor": "text",
+          "default": "Home",
+          "tsType": "string"
+        },
+        "firstHref": {
+          "editor": "text",
+          "default": "index.html",
+          "tsType": "string"
+        },
+        "firstClick": {
+          "editor": null,
+          "tsType": "(e) => void"
+        },
+        "midLabel": {
+          "editor": "text",
+          "default": "",
+          "tsType": "string"
+        },
+        "midHref": {
+          "editor": "text",
+          "default": "#",
+          "tsType": "string"
+        },
+        "current": {
+          "editor": "text",
+          "default": "Current page",
+          "tsType": "string"
+        }
+      },
+      "enumOptions": {},
+      "conditionals": [
+        {
+          "id": "Breadcrumb#sc-if-001",
+          "kind": "sc-if",
+          "expression": "{{ hasMid }}",
+          "placeholder": "{{ false }}",
+          "parents": [],
+          "branchBytes": 339,
+          "text": "{{ midLabel }}"
+        }
+      ],
+      "dependencies": {
+        "scripts": [
+          "./support.js"
+        ],
+        "stylesheets": [
+          "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+        ],
+        "inlineStyles": 1,
+        "dcImports": [],
+        "assetRefs": []
+      },
+      "usagesInRoot": [
+        {
+          "section": "crumbs",
+          "line": 538,
+          "attrs": {
+            "name": "Breadcrumb",
+            "first-label": "Home",
+            "first-href": "index.html",
+            "current": "Calibration services",
+            "hint-size": "100%,20px"
+          }
+        },
+        {
+          "section": "crumbs",
+          "line": 539,
+          "attrs": {
+            "name": "Breadcrumb",
+            "first-label": "Home",
+            "first-href": "index.html",
+            "mid-label": "Brands",
+            "mid-href": "#",
+            "current": "Lion Laboratories",
+            "hint-size": "100%,20px"
+          }
+        }
+      ],
+      "sameBytesInLinkedExport": false,
+      "presentInLinkedExport": false
+    },
+    {
+      "id": "ProductCard",
+      "file": "documents/ProductCard.dc.html",
+      "sha256": "4aecdaf69a1f27cc5630ffc6b5ea73db6ae8bac7287f25bcbdf0fa640de9aa8a",
+      "bytes": 14245,
+      "props": {
+        "$preview": {
+          "width": 300,
+          "height": 440
+        },
+        "p": {
+          "editor": null,
+          "default": {
+            "name": "Drivesafe III",
+            "spec": "Fuel-cell · handheld",
+            "price": "348,00 €",
+            "img": "assets/media/productInd-0.png",
+            "tag": "Pro"
+          },
+          "tsType": "object"
+        }
+      },
+      "enumOptions": {},
+      "conditionals": [
+        {
+          "id": "ProductCard#sc-if-001",
+          "kind": "sc-if",
+          "expression": "{{ p.tag }}",
+          "placeholder": "{{ false }}",
+          "parents": [],
+          "branchBytes": 256,
+          "text": "{{ p.tag }}"
+        },
+        {
+          "id": "ProductCard#sc-if-002",
+          "kind": "sc-if",
+          "expression": "{{ p.stock }}",
+          "placeholder": "{{ false }}",
+          "parents": [],
+          "branchBytes": 276,
+          "text": "{{ p.stock }}"
+        }
+      ],
+      "dependencies": {
+        "scripts": [
+          "./support.js"
+        ],
+        "stylesheets": [],
+        "inlineStyles": 2,
+        "dcImports": [],
+        "assetRefs": [
+          "assets/media/productInd-0.png"
+        ]
+      },
+      "usagesInRoot": [
+        {
+          "section": "cards",
+          "line": 548,
+          "attrs": {
+            "name": "ProductCard",
+            "p": "{{ sp }}",
+            "hint-size": "100%,440px"
+          }
+        }
+      ],
+      "sameBytesInLinkedExport": false,
+      "presentInLinkedExport": false
+    },
+    {
+      "id": "PdfCard",
+      "file": "documents/PdfCard.dc.html",
+      "sha256": "bfeac52d61b24d744aa9fb14d127e952bf6908bf313408a9af1283de6ccf6f73",
+      "bytes": 8627,
+      "props": {
+        "$preview": {
+          "width": "420px",
+          "height": "80px"
+        },
+        "title": {
+          "editor": "text",
+          "default": "Document title",
+          "tsType": "string"
+        },
+        "size": {
+          "editor": "text",
+          "default": "240 KB",
+          "tsType": "string"
+        },
+        "href": {
+          "editor": "text",
+          "default": "#",
+          "tsType": "string"
+        }
+      },
+      "enumOptions": {},
+      "conditionals": [],
+      "dependencies": {
+        "scripts": [
+          "./support.js"
+        ],
+        "stylesheets": [],
+        "inlineStyles": 1,
+        "dcImports": [],
+        "assetRefs": []
+      },
+      "usagesInRoot": [
+        {
+          "section": "cards",
+          "line": 554,
+          "attrs": {
+            "name": "PdfCard",
+            "title": "Décret n° 2012-284",
+            "size": "186 KB",
+            "meta": "PDF · 186 KB",
+            "href": "#",
+            "hint-size": "100%,80px"
+          }
+        },
+        {
+          "section": "cards",
+          "line": 555,
+          "attrs": {
+            "name": "PdfCard",
+            "title": "NF X20-702 certificate",
+            "size": "240 KB",
+            "meta": "PDF · 240 KB",
+            "href": "#",
+            "hint-size": "100%,80px"
+          }
+        },
+        {
+          "section": "cards",
+          "line": 556,
+          "attrs": {
+            "name": "PdfCard",
+            "title": "User manual",
+            "size": "1.2 MB",
+            "meta": "PDF · 1.2 MB",
+            "href": "#",
+            "hint-size": "100%,80px"
+          }
+        }
+      ],
+      "sameBytesInLinkedExport": false,
+      "presentInLinkedExport": false
+    },
+    {
+      "id": "FormField",
+      "file": "documents/FormField.dc.html",
+      "sha256": "825889679226087aba5c8f99babe046154583c362ea3a1c6369b8d7432132394",
+      "bytes": 21476,
+      "props": {
+        "$preview": {
+          "width": "1000px",
+          "height": "640px"
+        },
+        "kind": {
+          "editor": "enum",
+          "options": [
+            "input",
+            "select",
+            "textarea",
+            "all"
+          ],
+          "default": "all",
+          "tsType": "'input'|'select'|'textarea'|'all'"
+        },
+        "label": {
+          "editor": "text",
+          "default": "First name *",
+          "tsType": "string"
+        },
+        "type": {
+          "editor": "enum",
+          "options": [
+            "text",
+            "email",
+            "tel",
+            "password",
+            "date",
+            "number"
+          ],
+          "default": "text",
+          "tsType": "string"
+        },
+        "value": {
+          "editor": "text",
+          "default": "",
+          "tsType": "string"
+        },
+        "placeholder": {
+          "editor": "text",
+          "default": "",
+          "tsType": "string"
+        },
+        "options": {
+          "editor": "text",
+          "default": "",
+          "tsType": "string",
+          "label": "Options (A|B|C)"
+        },
+        "prompt": {
+          "editor": "text",
+          "default": "",
+          "tsType": "string"
+        },
+        "promptDisabled": {
+          "editor": "boolean",
+          "default": false,
+          "tsType": "boolean"
+        },
+        "rows": {
+          "editor": "int",
+          "default": 4,
+          "tsType": "number"
+        },
+        "full": {
+          "editor": "boolean",
+          "default": false,
+          "tsType": "boolean",
+          "label": "Span full grid row"
+        },
+        "marginTop": {
+          "editor": "text",
+          "default": "0px",
+          "tsType": "string"
+        },
+        "readOnly": {
+          "editor": "boolean",
+          "default": false,
+          "tsType": "boolean"
+        },
+        "onChange": {
+          "editor": null,
+          "tsType": "(e) => void"
+        }
+      },
+      "enumOptions": {
+        "kind": [
+          "input",
+          "select",
+          "textarea",
+          "all"
+        ],
+        "type": [
+          "text",
+          "email",
+          "tel",
+          "password",
+          "date",
+          "number"
+        ]
+      },
+      "conditionals": [
+        {
+          "id": "FormField#sc-if-001",
+          "kind": "sc-if",
+          "expression": "{{ isAll }}",
+          "placeholder": "{{ false }}",
+          "parents": [],
+          "branchBytes": 3961,
+          "text": "COMPONENTS · FORM FIELD Form field library One field style for every form on the"
+        },
+        {
+          "id": "FormField#sc-for-002",
+          "kind": "sc-for",
+          "expression": "{{ samples }}",
+          "placeholder": "6",
+          "parents": [
+            "FormField#sc-if-001"
+          ],
+          "branchBytes": 2624,
+          "text": "{{ f.label }} {{ f.prompt }} {{ o }} {{ f.code }}"
+        },
+        {
+          "id": "FormField#sc-if-003",
+          "kind": "sc-if",
+          "expression": "{{ f.isInput }}",
+          "placeholder": "{{ true }}",
+          "parents": [
+            "FormField#sc-if-001",
+            "FormField#sc-for-002"
+          ],
+          "branchBytes": 554,
+          "text": ""
+        },
+        {
+          "id": "FormField#sc-if-004",
+          "kind": "sc-if",
+          "expression": "{{ f.isSelect }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "FormField#sc-if-001",
+            "FormField#sc-for-002"
+          ],
+          "branchBytes": 739,
+          "text": "{{ f.prompt }} {{ o }}"
+        },
+        {
+          "id": "FormField#sc-if-005",
+          "kind": "sc-if",
+          "expression": "{{ f.hasPrompt }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "FormField#sc-if-001",
+            "FormField#sc-for-002",
+            "FormField#sc-if-004"
+          ],
+          "branchBytes": 74,
+          "text": "{{ f.prompt }}"
+        },
+        {
+          "id": "FormField#sc-for-006",
+          "kind": "sc-for",
+          "expression": "{{ f.opts }}",
+          "placeholder": "0",
+          "parents": [
+            "FormField#sc-if-001",
+            "FormField#sc-for-002",
+            "FormField#sc-if-004"
+          ],
+          "branchBytes": 40,
+          "text": "{{ o }}"
+        },
+        {
+          "id": "FormField#sc-if-007",
+          "kind": "sc-if",
+          "expression": "{{ f.isTextarea }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "FormField#sc-if-001",
+            "FormField#sc-for-002"
+          ],
+          "branchBytes": 586,
+          "text": ""
+        },
+        {
+          "id": "FormField#sc-for-008",
+          "kind": "sc-for",
+          "expression": "{{ single }}",
+          "placeholder": "1",
+          "parents": [],
+          "branchBytes": 2379,
+          "text": "{{ f.label }} {{ f.prompt }} {{ o }}"
+        },
+        {
+          "id": "FormField#sc-if-009",
+          "kind": "sc-if",
+          "expression": "{{ f.isInput }}",
+          "placeholder": "{{ true }}",
+          "parents": [
+            "FormField#sc-for-008"
+          ],
+          "branchBytes": 554,
+          "text": ""
+        },
+        {
+          "id": "FormField#sc-if-010",
+          "kind": "sc-if",
+          "expression": "{{ f.isSelect }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "FormField#sc-for-008"
+          ],
+          "branchBytes": 739,
+          "text": "{{ f.prompt }} {{ o }}"
+        },
+        {
+          "id": "FormField#sc-if-011",
+          "kind": "sc-if",
+          "expression": "{{ f.hasPrompt }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "FormField#sc-for-008",
+            "FormField#sc-if-010"
+          ],
+          "branchBytes": 74,
+          "text": "{{ f.prompt }}"
+        },
+        {
+          "id": "FormField#sc-for-012",
+          "kind": "sc-for",
+          "expression": "{{ f.opts }}",
+          "placeholder": "0",
+          "parents": [
+            "FormField#sc-for-008",
+            "FormField#sc-if-010"
+          ],
+          "branchBytes": 40,
+          "text": "{{ o }}"
+        },
+        {
+          "id": "FormField#sc-if-013",
+          "kind": "sc-if",
+          "expression": "{{ f.isTextarea }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "FormField#sc-for-008"
+          ],
+          "branchBytes": 586,
+          "text": ""
+        }
+      ],
+      "dependencies": {
+        "scripts": [
+          "./support.js"
+        ],
+        "stylesheets": [
+          "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+        ],
+        "inlineStyles": 2,
+        "dcImports": [],
+        "assetRefs": []
+      },
+      "usagesInRoot": [
+        {
+          "section": "forms",
+          "line": 609,
+          "attrs": {
+            "name": "FormField",
+            "kind": "all",
+            "hint-size": "100%,560px"
+          }
+        }
+      ],
+      "sameBytesInLinkedExport": false,
+      "presentInLinkedExport": false
+    },
+    {
+      "id": "Choice",
+      "file": "documents/Choice.dc.html",
+      "sha256": "eac2aa0cdf2dc55ae58120403d7bc84d9bc6a3b5ce6025390a66d7765ae42001",
+      "bytes": 20148,
+      "props": {
+        "$preview": {
+          "width": "1000px",
+          "height": "520px"
+        },
+        "kind": {
+          "editor": "enum",
+          "options": [
+            "all",
+            "checkbox",
+            "radio",
+            "card"
+          ],
+          "default": "all",
+          "tsType": "'all'|'checkbox'|'radio'|'card'"
+        },
+        "checked": {
+          "editor": "boolean",
+          "default": false,
+          "tsType": "boolean"
+        },
+        "title": {
+          "editor": "text",
+          "default": "",
+          "tsType": "string"
+        },
+        "desc": {
+          "editor": "text",
+          "default": "",
+          "tsType": "string"
+        },
+        "price": {
+          "editor": "text",
+          "default": "",
+          "tsType": "string"
+        },
+        "label": {
+          "editor": "text",
+          "default": "",
+          "tsType": "string",
+          "label": "Label ([link](#href) allowed)"
+        },
+        "count": {
+          "editor": "text",
+          "default": "",
+          "tsType": "string|number"
+        },
+        "top": {
+          "editor": "boolean",
+          "default": false,
+          "tsType": "boolean",
+          "label": "Align to first line"
+        },
+        "gap": {
+          "editor": "text",
+          "default": "10px",
+          "tsType": "string"
+        },
+        "logo": {
+          "editor": null,
+          "tsType": "ReactNode"
+        },
+        "onPick": {
+          "editor": null,
+          "tsType": "(e) => void"
+        }
+      },
+      "enumOptions": {
+        "kind": [
+          "all",
+          "checkbox",
+          "radio",
+          "card"
+        ]
+      },
+      "conditionals": [
+        {
+          "id": "Choice#sc-if-001",
+          "kind": "sc-if",
+          "expression": "{{ isAll }}",
+          "placeholder": "{{ false }}",
+          "parents": [],
+          "branchBytes": 4269,
+          "text": "COMPONENTS · CHOICE Choice controls Checkbox, radio and option card. The control"
+        },
+        {
+          "id": "Choice#sc-for-002",
+          "kind": "sc-for",
+          "expression": "{{ samples }}",
+          "placeholder": "4",
+          "parents": [
+            "Choice#sc-if-001"
+          ],
+          "branchBytes": 2926,
+          "text": "{{ it.title }} {{ it.desc }} {{ it.price }} {{ it.logo }} {{ it.text }} {{ it.co"
+        },
+        {
+          "id": "Choice#sc-if-003",
+          "kind": "sc-if",
+          "expression": "{{ it.isCheckbox }}",
+          "placeholder": "{{ true }}",
+          "parents": [
+            "Choice#sc-if-001",
+            "Choice#sc-for-002"
+          ],
+          "branchBytes": 597,
+          "text": ""
+        },
+        {
+          "id": "Choice#sc-if-004",
+          "kind": "sc-if",
+          "expression": "{{ it.checked }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Choice#sc-if-001",
+            "Choice#sc-for-002",
+            "Choice#sc-if-003"
+          ],
+          "branchBytes": 216,
+          "text": ""
+        },
+        {
+          "id": "Choice#sc-if-005",
+          "kind": "sc-if",
+          "expression": "{{ it.isRadio }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Choice#sc-if-001",
+            "Choice#sc-for-002"
+          ],
+          "branchBytes": 359,
+          "text": ""
+        },
+        {
+          "id": "Choice#sc-if-006",
+          "kind": "sc-if",
+          "expression": "{{ it.isCard }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Choice#sc-if-001",
+            "Choice#sc-for-002"
+          ],
+          "branchBytes": 1208,
+          "text": "{{ it.title }} {{ it.desc }} {{ it.price }} {{ it.logo }}"
+        },
+        {
+          "id": "Choice#sc-if-007",
+          "kind": "sc-if",
+          "expression": "{{ it.hasPrice }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Choice#sc-if-001",
+            "Choice#sc-for-002",
+            "Choice#sc-if-006"
+          ],
+          "branchBytes": 104,
+          "text": "{{ it.price }}"
+        },
+        {
+          "id": "Choice#sc-if-008",
+          "kind": "sc-if",
+          "expression": "{{ it.showText }}",
+          "placeholder": "{{ true }}",
+          "parents": [
+            "Choice#sc-if-001",
+            "Choice#sc-for-002"
+          ],
+          "branchBytes": 26,
+          "text": "{{ it.text }}"
+        },
+        {
+          "id": "Choice#sc-for-009",
+          "kind": "sc-for",
+          "expression": "{{ single }}",
+          "placeholder": "0",
+          "parents": [],
+          "branchBytes": 3028,
+          "text": "{{ it.labelEl }} {{ it.count }} {{ it.title }} {{ it.desc }} {{ it.price }} {{ i"
+        },
+        {
+          "id": "Choice#sc-if-010",
+          "kind": "sc-if",
+          "expression": "{{ it.isRowKind }}",
+          "placeholder": "{{ true }}",
+          "parents": [
+            "Choice#sc-for-009"
+          ],
+          "branchBytes": 1670,
+          "text": "{{ it.labelEl }} {{ it.count }}"
+        },
+        {
+          "id": "Choice#sc-if-011",
+          "kind": "sc-if",
+          "expression": "{{ it.isCheckbox }}",
+          "placeholder": "{{ true }}",
+          "parents": [
+            "Choice#sc-for-009",
+            "Choice#sc-if-010"
+          ],
+          "branchBytes": 597,
+          "text": ""
+        },
+        {
+          "id": "Choice#sc-if-012",
+          "kind": "sc-if",
+          "expression": "{{ it.checked }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Choice#sc-for-009",
+            "Choice#sc-if-010",
+            "Choice#sc-if-011"
+          ],
+          "branchBytes": 216,
+          "text": ""
+        },
+        {
+          "id": "Choice#sc-if-013",
+          "kind": "sc-if",
+          "expression": "{{ it.isRadio }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Choice#sc-for-009",
+            "Choice#sc-if-010"
+          ],
+          "branchBytes": 359,
+          "text": ""
+        },
+        {
+          "id": "Choice#sc-if-014",
+          "kind": "sc-if",
+          "expression": "{{ it.hasLabel }}",
+          "placeholder": "{{ true }}",
+          "parents": [
+            "Choice#sc-for-009",
+            "Choice#sc-if-010"
+          ],
+          "branchBytes": 51,
+          "text": "{{ it.labelEl }}"
+        },
+        {
+          "id": "Choice#sc-if-015",
+          "kind": "sc-if",
+          "expression": "{{ it.hasCount }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Choice#sc-for-009",
+            "Choice#sc-if-010"
+          ],
+          "branchBytes": 122,
+          "text": "{{ it.count }}"
+        },
+        {
+          "id": "Choice#sc-if-016",
+          "kind": "sc-if",
+          "expression": "{{ it.isCard }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Choice#sc-for-009"
+          ],
+          "branchBytes": 1208,
+          "text": "{{ it.title }} {{ it.desc }} {{ it.price }} {{ it.logo }}"
+        },
+        {
+          "id": "Choice#sc-if-017",
+          "kind": "sc-if",
+          "expression": "{{ it.hasPrice }}",
+          "placeholder": "{{ false }}",
+          "parents": [
+            "Choice#sc-for-009",
+            "Choice#sc-if-016"
+          ],
+          "branchBytes": 104,
+          "text": "{{ it.price }}"
+        }
+      ],
+      "dependencies": {
+        "scripts": [
+          "./support.js"
+        ],
+        "stylesheets": [
+          "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+        ],
+        "inlineStyles": 1,
+        "dcImports": [],
+        "assetRefs": []
+      },
+      "usagesInRoot": [
+        {
+          "section": "choice",
+          "line": 611,
+          "attrs": {
+            "name": "Choice",
+            "kind": "all",
+            "hint-size": "100%,480px"
+          }
+        }
+      ],
+      "sameBytesInLinkedExport": false,
+      "presentInLinkedExport": false
+    }
+  ],
+  "externalComponents": [
+    {
+      "key": "header",
+      "label": "Header",
+      "cls": "abq-header",
+      "source": "SiteHeader.dc.html",
+      "via": "COMPONENTS",
+      "section": "components",
+      "status": "resolved-cross-export",
+      "resolvedVia": "linked export raw/pages/index.html → ext_resources ./SiteHeader.dc.html (uuid 3cdd074f-f397-409b-beb4-4bf800359107)",
+      "linkedSnapshotFile": {
+        "path": "home-8a594335/documents/SiteHeader.dc.html",
+        "sha256": "5916297eab487e9b234c4180036e2f2e23cdde229c17dd6410f8415dcc445e08"
+      },
+      "linkedSha256": "5916297eab487e9b234c4180036e2f2e23cdde229c17dd6410f8415dcc445e08"
+    },
+    {
+      "key": "footer",
+      "label": "Footer",
+      "cls": "abq-footer",
+      "source": "SiteFooter.dc.html",
+      "via": "COMPONENTS",
+      "section": "components",
+      "status": "unresolved",
+      "resolvedVia": null,
+      "linkedSnapshotFile": null,
+      "linkedSha256": null
+    },
+    {
+      "key": "hero",
+      "label": "Hero",
+      "cls": "abq-hero",
+      "source": "index.html",
+      "via": "SECTIONS",
+      "section": "organisms",
+      "status": "resolved-cross-export",
+      "resolvedVia": "linked export raw/pages/index.html → __bundler/template",
+      "linkedSnapshotFile": {
+        "path": "home-8a594335/documents/index.html",
+        "sha256": "2ca3b0d7b70ae35dc532b74af7f856d85b6eb3f00bce71db8b9c4c17be19615e"
+      },
+      "linkedSha256": "ff22098f707750d526fd0ed9f3bc409120ad6580f5603877212684233344e5d1"
+    },
+    {
+      "key": "trust-sec",
+      "label": "Trust bar",
+      "cls": "abq-trust-bar",
+      "source": "index.html",
+      "via": "SECTIONS",
+      "section": "organisms",
+      "status": "resolved-cross-export",
+      "resolvedVia": "linked export raw/pages/index.html → __bundler/template",
+      "linkedSnapshotFile": {
+        "path": "home-8a594335/documents/index.html",
+        "sha256": "2ca3b0d7b70ae35dc532b74af7f856d85b6eb3f00bce71db8b9c4c17be19615e"
+      },
+      "linkedSha256": "ff22098f707750d526fd0ed9f3bc409120ad6580f5603877212684233344e5d1"
+    },
+    {
+      "key": "cats",
+      "label": "Categories",
+      "cls": "abq-categories",
+      "source": "index.html",
+      "via": "SECTIONS",
+      "section": "organisms",
+      "status": "resolved-cross-export",
+      "resolvedVia": "linked export raw/pages/index.html → __bundler/template",
+      "linkedSnapshotFile": {
+        "path": "home-8a594335/documents/index.html",
+        "sha256": "2ca3b0d7b70ae35dc532b74af7f856d85b6eb3f00bce71db8b9c4c17be19615e"
+      },
+      "linkedSha256": "ff22098f707750d526fd0ed9f3bc409120ad6580f5603877212684233344e5d1"
+    },
+    {
+      "key": "certs",
+      "label": "In stock products",
+      "cls": "abq-product-grid",
+      "source": "index.html",
+      "via": "SECTIONS",
+      "section": "organisms",
+      "status": "resolved-cross-export",
+      "resolvedVia": "linked export raw/pages/index.html → __bundler/template",
+      "linkedSnapshotFile": {
+        "path": "home-8a594335/documents/index.html",
+        "sha256": "2ca3b0d7b70ae35dc532b74af7f856d85b6eb3f00bce71db8b9c4c17be19615e"
+      },
+      "linkedSha256": "ff22098f707750d526fd0ed9f3bc409120ad6580f5603877212684233344e5d1"
+    },
+    {
+      "key": "cta-sec",
+      "label": "Calibration CTA",
+      "cls": "abq-cta-band",
+      "source": "index.html",
+      "via": "SECTIONS",
+      "section": "organisms",
+      "status": "resolved-cross-export",
+      "resolvedVia": "linked export raw/pages/index.html → __bundler/template",
+      "linkedSnapshotFile": {
+        "path": "home-8a594335/documents/index.html",
+        "sha256": "2ca3b0d7b70ae35dc532b74af7f856d85b6eb3f00bce71db8b9c4c17be19615e"
+      },
+      "linkedSha256": "ff22098f707750d526fd0ed9f3bc409120ad6580f5603877212684233344e5d1"
+    },
+    {
+      "key": "guides-sec",
+      "label": "Knowledge hub",
+      "cls": "abq-guides",
+      "source": "index.html",
+      "via": "SECTIONS",
+      "section": "organisms",
+      "status": "resolved-cross-export",
+      "resolvedVia": "linked export raw/pages/index.html → __bundler/template",
+      "linkedSnapshotFile": {
+        "path": "home-8a594335/documents/index.html",
+        "sha256": "2ca3b0d7b70ae35dc532b74af7f856d85b6eb3f00bce71db8b9c4c17be19615e"
+      },
+      "linkedSha256": "ff22098f707750d526fd0ed9f3bc409120ad6580f5603877212684233344e5d1"
+    },
+    {
+      "key": "brands",
+      "label": "Brands",
+      "cls": "abq-brands",
+      "source": "index.html",
+      "via": "SECTIONS",
+      "section": "organisms",
+      "status": "resolved-cross-export",
+      "resolvedVia": "linked export raw/pages/index.html → __bundler/template",
+      "linkedSnapshotFile": {
+        "path": "home-8a594335/documents/index.html",
+        "sha256": "2ca3b0d7b70ae35dc532b74af7f856d85b6eb3f00bce71db8b9c4c17be19615e"
+      },
+      "linkedSha256": "ff22098f707750d526fd0ed9f3bc409120ad6580f5603877212684233344e5d1"
+    }
+  ]
+}
