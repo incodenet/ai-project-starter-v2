@@ -1,0 +1,214 @@
+/* =========================================================
+   DESIGN TOKENS
+   ABECQ design system, imported from the approved export
+   (raw/normalized/design-system-91951f68-b1). Values are copied
+   verbatim; edit them here, not in components.
+   ========================================================= */
+
+/* ABECQ design tokens. Edit values here; site, components and Design System read this file. */
+:root {
+  /* Brand */
+  --abq-color-ink-900: #001629;
+  --abq-color-navy-700: #00427A;
+  --abq-color-navy-600: #034787;
+  --abq-color-navy-500: #0A4F8F;
+  --abq-color-blue-500: #1F95F9;
+  --abq-color-blue-300: #76C0FF;
+  /* Blue tints */
+  --abq-color-blue-200: #A6CFF2;
+  --abq-color-blue-150: #BBD8F1;
+  --abq-color-blue-100: #C7DCEE;
+  --abq-color-blue-75: #D5E7F6;
+  --abq-color-blue-25: #EFF5FA;
+  --abq-color-blue-50: #F3F7FD;
+  /* Neutral */
+  --abq-color-gray-700: #3A4353;
+  --abq-color-gray-500: #5B6577;
+  --abq-color-gray-400: #8A93A6;
+  --abq-color-gray-300: #9AA8BD;
+  --abq-color-gray-200: #C3CADB;
+  --abq-color-line: #E2E7F2;
+  --abq-color-line-soft: #E8ECF5;
+  --abq-color-divider: #F0F3F8;
+  --abq-color-surface: #F9FAFB;
+  --abq-color-white: #FFFFFF;
+  /* Icons & controls */
+  --abq-color-icon-line: #C3CDE4;
+  --abq-color-control-border: #D5DEEB;
+  --abq-color-line-alt: #E6EAF0;
+  --abq-color-blue-60: #DEECF8;
+  /* Button gradient */
+  --abq-color-grad-start: #2466AC;
+  --abq-color-grad-mid: #0A4F8F;
+  --abq-color-grad-end: #04346A;
+  --abq-color-grad-hover-start: #2F74BD;
+  --abq-color-grad-hover-mid: #1A5EA6;
+  --abq-color-grad-hover-end: #063A70;
+  /* Status */
+  --abq-color-success: #1B8A5A;
+  --abq-color-danger: #E5484D;
+  --abq-color-error: #B42318;
+  --abq-color-warning: #B4541A;
+  --abq-color-warning-bg: #FFF1E6;
+  /* Extra tones */
+  --abq-color-success-bg: #E7F6EE;
+  --abq-color-amber: #B4690E;
+  --abq-color-blue-600: #1F6FD1;
+  --abq-color-blue-350: #68B3F3;
+  --abq-color-slate-400: #7291AB;
+  --abq-color-gray-350: #9AA3BD;
+  --abq-color-gray-450: #7A84A3;
+  --abq-color-gray-250: #C2C7CF;
+  --abq-color-blue-30: #EAF3FB;
+  /* See-through (opacity) colours */
+  --abq-color-white-92: rgba(255,255,255,.92);
+  --abq-color-white-85: rgba(255,255,255,.85);
+  --abq-color-white-75: rgba(255,255,255,.75);
+  --abq-color-white-60: rgba(255,255,255,.6);
+  --abq-color-white-50: rgba(255,255,255,.5);
+  --abq-color-white-35: rgba(255,255,255,.35);
+  --abq-color-white-12: rgba(255,255,255,.12);
+  --abq-color-overlay: rgba(15,24,54,.82);
+  --abq-color-overlay-strong: rgba(15,24,54,.86);
+  --abq-color-line-on-dark: rgba(199,220,238,.18);
+  --abq-color-line-on-dark-strong: rgba(199,220,238,.34);
+  --abq-color-danger-tint: rgba(229,72,77,.12);
+  --abq-color-danger-tint-soft: rgba(229,72,77,.08);
+  --abq-color-primary-tint: rgba(31,149,249,.14);
+  --abq-color-primary-tint-strong: rgba(31,149,249,.22);
+  --abq-color-black-28: rgba(0,0,0,.28);
+  --abq-color-ink-45: rgba(0,22,41,.45);
+  /* Background gradients (full layer stacks) */
+  --abq-color-gradient-label-line: linear-gradient(90deg,#68B3F3,rgba(104,179,243,0));
+  --abq-color-gradient-band: radial-gradient(120% 140% at 8% 0%, #1F6FD0 0%, rgba(31,111,208,0) 46%), radial-gradient(90% 120% at 100% 12%, var(--abq-color-grad-mid) 0%, rgba(10,79,143,0) 50%), radial-gradient(120% 130% at 78% 100%, #002140 0%, rgba(0,33,64,0) 55%), linear-gradient(120deg,var(--abq-color-navy-700) 0%,#002C52 100%);
+  --abq-color-gradient-footer: radial-gradient(90% 120% at 6% 0%, var(--abq-color-grad-mid) 0%, rgba(10,79,143,0) 52%), radial-gradient(80% 110% at 96% 8%, #1F6FD0 0%, rgba(31,111,208,0) 46%), linear-gradient(180deg,#00213D 0%,var(--abq-color-ink-900) 62%);
+  --abq-color-gradient-panel-dark: radial-gradient(90% 80% at 100% 0%, #1F6FD0 0%, rgba(31,111,208,0) 55%), linear-gradient(160deg,#00213D 0%,var(--abq-color-ink-900) 100%);
+  --abq-color-gradient-band-navy: radial-gradient(120% 140% at 8% 0%, #1F6FD0 0%, rgba(31,111,208,0) 46%), linear-gradient(120deg,var(--abq-color-navy-700) 0%,#002C52 100%);
+
+  --abq-font-family: 'Outfit', -apple-system, sans-serif;
+  --abq-font-weight: 400;
+  --abq-fw-extralight: 200;
+  --abq-fw-light: 300;
+  --abq-fw-regular: 400;
+  --abq-fw-medium: 500;
+  --abq-font-loader: clamp(96px,16vw,200px);
+  --abq-lh-loader: 1;
+  --abq-ls-loader: -.03em;
+  --abq-font-display: clamp(34px,5.2vw,60px);
+  --abq-lh-display: 1.04;
+  --abq-ls-display: -.02em;
+  --abq-font-h1: clamp(34px,4.6vw,56px);
+  --abq-lh-h1: 1.05;
+  --abq-ls-h1: -.02em;
+  --abq-font-logo: 44px;
+  --abq-lh-logo: 1;
+  --abq-font-title-lg: 34px;
+  --abq-lh-title-lg: 1.15;
+  --abq-ls-title-lg: -.02em;
+  --abq-font-h2: clamp(26px,3.4vw,40px);
+  --abq-lh-h2: 1.1;
+  --abq-ls-h2: -.02em;
+  --abq-font-h3: clamp(22px,2.6vw,30px);
+  --abq-lh-h3: 1.15;
+  --abq-ls-h3: -.02em;
+  --abq-font-h4: 26px;
+  --abq-lh-h4: 1.2;
+  --abq-ls-h4: -.01em;
+  --abq-font-h5: 24px;
+  --abq-lh-h5: 1.25;
+  --abq-font-title-md: 30px;
+  --abq-lh-title-md: 1.15;
+  --abq-font-price: 22px;
+  --abq-lh-price: 1.3;
+  --abq-font-title: 20px;
+  --abq-lh-title: 1.3;
+  --abq-font-body-lg: clamp(15px,1.4vw,18px);
+  --abq-lh-body-lg: 1.6;
+  --abq-font-body-md: 18px;
+  --abq-lh-body-md: 1.5;
+  --abq-font-body: 16px;
+  --abq-lh-body: 1.5;
+  --abq-font-body-sm: 15px;
+  --abq-lh-body-sm: 1.6;
+  --abq-font-ui: 15px;
+  --abq-lh-ui: 1.4;
+  --abq-font-ui-sm: 14px;
+  --abq-lh-ui-sm: 1.5;
+  --abq-font-eyebrow: 12px;
+  --abq-lh-eyebrow: 1.4;
+  --abq-ls-eyebrow: .14em;
+  --abq-font-label-xs: 11px;
+  --abq-lh-label-xs: 1.4;
+
+  --abq-space-2: 2px;
+  --abq-space-4: 4px;
+  --abq-space-6: 6px;
+  --abq-space-8: 8px;
+  --abq-space-10: 10px;
+  --abq-space-12: 12px;
+  --abq-space-14: 14px;
+  --abq-space-16: 16px;
+  --abq-space-18: 18px;
+  --abq-space-20: 20px;
+  --abq-space-22: 22px;
+  --abq-space-24: 24px;
+  --abq-space-26: 26px;
+  --abq-space-28: 28px;
+  --abq-space-32: 32px;
+  --abq-space-40: 40px;
+  --abq-space-48: 48px;
+  --abq-space-56: 56px;
+  --abq-space-64: 64px;
+  --abq-space-80: 80px;
+  --abq-space-36: 36px;
+  --abq-space-72: 72px;
+  --abq-space-90: 90px;
+  --abq-space-96: 96px;
+  --abq-space-100: 100px;
+  --abq-space-120: 120px;
+  --abq-space-130: 130px;
+  --abq-space-160: 160px;
+  --abq-radius-3xs: 4px;
+
+  --abq-radius-2xs: 5px;
+  --abq-radius-xs: 7px;
+  --abq-radius-sm: 10px;
+  --abq-radius-md: 12px;
+  --abq-radius-lg: 16px;
+  --abq-radius-lg-2: 18px;
+  --abq-radius-lg-3: 20px;
+  --abq-radius-xl: 22px;
+  --abq-radius-xl-1: 24px;
+  --abq-radius-xl-2: 26px;
+  --abq-radius-2xl: 32px;
+  --abq-radius-pill: 100px;
+
+  --abq-shadow-tile: inset 0 1px 1px rgba(255,255,255,.9), 0 3px 8px rgba(0,66,122,.14);
+  --abq-shadow-tab: 0 4px 12px rgba(0,66,122,.12);
+  --abq-shadow-glass: inset 0 1px 0 rgba(255,255,255,.7), 0 8px 22px rgba(16,24,43,.08);
+  --abq-shadow-audience: 0 12px 28px rgba(0,66,122,.30);
+  --abq-shadow-cta: 0 12px 27px 0 rgba(31,149,249,.30);
+  --abq-shadow-float: 0 18px 44px rgba(0,22,41,.13);
+  --abq-shadow-button: 0 10px 24px rgba(0,66,122,.22);
+  --abq-shadow-card: 0 10px 26px rgba(16,24,43,.05);
+  --abq-shadow-card-hover: 0 18px 40px rgba(16,24,43,.12);
+  --abq-shadow-menu: 0 18px 44px rgba(0,22,41,.10);
+  --abq-shadow-toast: 0 18px 44px rgba(0,22,41,.28);
+  --abq-shadow-sheet: 0 -12px 40px rgba(0,22,41,.18);
+  --abq-shadow-modal: 0 30px 80px rgba(0,22,41,.3);
+  --abq-shadow-cta-hover: 0 18px 34px rgba(31,149,249,.40);
+  --abq-shadow-nav-hover: 0 8px 18px rgba(3,71,135,.12);
+  --abq-shadow-raised: 0 6px 18px rgba(16,24,43,.14);
+  --abq-shadow-raised-lg: 0 10px 24px rgba(16,24,43,.14);
+  --abq-shadow-glass-sm: inset 0 1px 0 rgba(255,255,255,.7), 0 6px 16px rgba(16,24,43,.08);
+  --abq-shadow-soft: 0 6px 18px rgba(16,24,43,.06);
+  --abq-shadow-panel: 0 24px 60px rgba(16,24,43,.08);
+  --abq-shadow-blue: 0 8px 20px rgba(0,66,122,.30);
+  --abq-shadow-dot: 0 2px 6px rgba(3,71,135,.30);
+  --abq-shadow-ring-white: 0 0 0 2px var(--abq-color-white);
+  --abq-shadow-ring-white-inset: inset 0 0 0 2px var(--abq-color-white);
+  --abq-shadow-step-ring: 0 0 0 8px rgba(31,149,249,.14), 0 10px 24px rgba(0,66,122,.10);
+  --abq-shadow-none: 0 0 0 0 transparent;
+  --abq-shadow-danger-sides: inset 1px 0 0 rgba(229,72,77,.6), inset -1px 0 0 rgba(229,72,77,.6);
+  --abq-shadow-danger-sides-soft: inset 1px 0 0 rgba(229,72,77,.35), inset -1px 0 0 rgba(229,72,77,.35);
+}

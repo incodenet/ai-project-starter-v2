@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<helmet><style>/* ABECQ design tokens. Edit values here; site, components and Design System read this file. */
+:root {
+  /* Brand */
+  --abq-color-ink-900: #001629;
+  --abq-color-navy-700: #00427A;
+  --abq-color-navy-600: #034787;
+  --abq-color-navy-500: #0A4F8F;
+  --abq-color-blue-500: #1F95F9;
+  --abq-color-blue-300: #76C0FF;
+  /* Blue tints */
+  --abq-color-blue-200: #A6CFF2;
+  --abq-color-blue-150: #BBD8F1;
+  --abq-color-blue-100: #C7DCEE;
+  --abq-color-blue-75: #D5E7F6;
+  --abq-color-blue-25: #EFF5FA;
+  --abq-color-blue-50: #F3F7FD;
+  /* Neutral */
+  --abq-color-gray-700: #3A4353;
+  --abq-color-gray-500: #5B6577;
+  --abq-color-gray-400: #8A93A6;
+  --abq-color-gray-300: #9AA8BD;
+  --abq-color-gray-200: #C3CADB;
+  --abq-color-line: #E2E7F2;
+  --abq-color-line-soft: #E8ECF5;
+  --abq-color-divider: #F0F3F8;
+  --abq-color-surface: #F9FAFB;
+  --abq-color-white: #FFFFFF;
+  /* Icons & controls */
+  --abq-color-icon-line: #C3CDE4;
+  --abq-color-control-border: #D5DEEB;
+  --abq-color-line-alt: #E6EAF0;
+  --abq-color-blue-60: #DEECF8;
+  /* Button gradient */
+  --abq-color-grad-start: #2466AC;
+  --abq-color-grad-mid: #0A4F8F;
+  --abq-color-grad-end: #04346A;
+  --abq-color-grad-hover-start: #2F74BD;
+  --abq-color-grad-hover-mid: #1A5EA6;
+  --abq-color-grad-hover-end: #063A70;
+  /* Status */
+  --abq-color-success: #1B8A5A;
+  --abq-color-danger: #E5484D;
+  --abq-color-error: #B42318;
+  --abq-color-warning: #B4541A;
+  --abq-color-warning-bg: #FFF1E6;
+
+  --abq-font-family: 'Outfit', -apple-system, sans-serif;
+  --abq-font-weight: 400;
+  --abq-font-loader: clamp(96px,16vw,200px);
+  --abq-lh-loader: 1;
+  --abq-ls-loader: -.03em;
+  --abq-font-display: clamp(34px,5.2vw,60px);
+  --abq-lh-display: 1.04;
+  --abq-ls-display: -.02em;
+  --abq-font-h1: clamp(34px,4.6vw,56px);
+  --abq-lh-h1: 1.05;
+  --abq-ls-h1: -.02em;
+  --abq-font-title-lg: 34px;
+  --abq-lh-title-lg: 1.15;
+  --abq-ls-title-lg: -.02em;
+  --abq-font-h2: clamp(26px,3.4vw,40px);
+  --abq-lh-h2: 1.1;
+  --abq-ls-h2: -.02em;
+  --abq-font-h3: clamp(22px,2.6vw,30px);
+  --abq-lh-h3: 1.15;
+  --abq-ls-h3: -.02em;
+  --abq-font-h4: 26px;
+  --abq-lh-h4: 1.2;
+  --abq-ls-h4: -.01em;
+  --abq-font-h5: 24px;
+  --abq-lh-h5: 1.25;
+  --abq-font-price: 22px;
+  --abq-lh-price: 1.3;
+  --abq-font-title: 20px;
+  --abq-lh-title: 1.3;
+  --abq-font-body-lg: clamp(15px,1.4vw,18px);
+  --abq-lh-body-lg: 1.6;
+  --abq-font-body-md: 18px;
+  --abq-lh-body-md: 1.5;
+  --abq-font-body: 16px;
+  --abq-lh-body: 1.5;
+  --abq-font-body-sm2: 15.5px;
+  --abq-lh-body-sm2: 1.55;
+  --abq-font-body-sm: 15px;
+  --abq-lh-body-sm: 1.6;
+  --abq-font-ui: 15px;
+  --abq-lh-ui: 1.4;
+  --abq-font-small: 13.5px;
+  --abq-lh-small: 1.45;
+  --abq-font-caption: 13px;
+  --abq-lh-caption: 1.5;
+  --abq-font-caption-sm: 12.5px;
+  --abq-lh-caption-sm: 1.45;
+  --abq-font-eyebrow: 12px;
+  --abq-lh-eyebrow: 1.4;
+  --abq-ls-eyebrow: .14em;
+  --abq-font-micro: 12px;
+  --abq-lh-micro: 1.4;
+  --abq-ls-micro: .14em;
+
+  --abq-space-2: 2px;
+  --abq-space-4: 4px;
+  --abq-space-6: 6px;
+  --abq-space-8: 8px;
+  --abq-space-10: 10px;
+  --abq-space-12: 12px;
+  --abq-space-14: 14px;
+  --abq-space-16: 16px;
+  --abq-space-18: 18px;
+  --abq-space-20: 20px;
+  --abq-space-22: 22px;
+  --abq-space-24: 24px;
+  --abq-space-26: 26px;
+  --abq-space-28: 28px;
+  --abq-space-32: 32px;
+  --abq-space-40: 40px;
+  --abq-space-48: 48px;
+  --abq-space-56: 56px;
+  --abq-space-64: 64px;
+  --abq-space-80: 80px;
+  --abq-space-100: 100px;
+
+  --abq-radius-2xs: 5px;
+  --abq-radius-xs: 7px;
+  --abq-radius-sm: 10px;
+  --abq-radius-md: 12px;
+  --abq-radius-md-2: 14px;
+  --abq-radius-lg: 16px;
+  --abq-radius-lg-2: 18px;
+  --abq-radius-lg-3: 20px;
+  --abq-radius-xl: 22px;
+  --abq-radius-xl-2: 26px;
+  --abq-radius-2xl: 32px;
+  --abq-radius-pill: 100px;
+
+  --abq-shadow-tile: inset 0 1px 1px rgba(255,255,255,.9), 0 3px 8px rgba(0,66,122,.14);
+  --abq-shadow-tab: 0 4px 12px rgba(0,66,122,.12);
+  --abq-shadow-glass: inset 0 1px 0 rgba(255,255,255,.7), 0 8px 22px rgba(16,24,43,.08);
+  --abq-shadow-audience: 0 12px 28px rgba(0,66,122,.30);
+  --abq-shadow-cta: 0 12px 27px 0 rgba(31,149,249,.30);
+  --abq-shadow-float: 0 18px 44px rgba(0,22,41,.13);
+  --abq-shadow-button: 0 10px 24px rgba(0,66,122,.22);
+  --abq-shadow-card: 0 10px 26px rgba(16,24,43,.05);
+  --abq-shadow-card-hover: 0 18px 40px rgba(16,24,43,.12);
+  --abq-shadow-menu: 0 18px 44px rgba(0,22,41,.10);
+  --abq-shadow-toast: 0 18px 44px rgba(0,22,41,.28);
+  --abq-shadow-sheet: 0 -12px 40px rgba(0,22,41,.18);
+  --abq-shadow-modal: 0 30px 80px rgba(0,22,41,.3);
+}
+</style></helmet><x-dc>
+<a href="{{ href }}" download="" style="height: 100%; box-sizing: border-box; display: flex; align-items: center; gap: var(--abq-space-16); padding: var(--abq-space-16) var(--abq-space-20) var(--abq-space-16) var(--abq-space-18); border-radius: var(--abq-radius-lg); background: var(--abq-color-surface); color: inherit; text-decoration: none; transition: background .2s; justify-content: flex-start; font-family: 'Outfit', sans-serif;" style-hover="background: var(--abq-color-divider);"><span style="flex: none; width: 48px; height: 48px; border-radius: var(--abq-radius-sm); background: var(--abq-color-white); box-shadow: var(--abq-shadow-glass-sm); display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; color: var(--abq-color-danger);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="display: block;"><path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M14 22H10C6.22876 22 4.34315 22 3.17157 20.8284C2 19.6569 2 17.7712 2 14V10C2 6.22876 2 4.34315 3.17157 3.17157C4.34315 2 6.23869 2 10.0298 2C10.6358 2 11.1214 2 11.53 2.01666C11.5166 2.09659 11.5095 2.17813 11.5092 2.26057L11.5 5.09497C11.4999 6.19207 11.4998 7.16164 11.6049 7.94316C11.7188 8.79028 11.9803 9.63726 12.6716 10.3285C13.3628 11.0198 14.2098 11.2813 15.0569 11.3952C15.8385 11.5003 16.808 11.5002 17.9051 11.5001L18 11.5001H21.9574C22 12.0344 22 12.6901 22 13.5629V14C22 17.7712 22 19.6569 20.8284 20.8284C19.6569 22 17.7712 22 14 22Z" fill="currentColor"></path><path d="M11.5092 2.2601L11.5 5.0945C11.4999 6.1916 11.4998 7.16117 11.6049 7.94269C11.7188 8.78981 11.9803 9.6368 12.6716 10.3281C13.3629 11.0193 14.2098 11.2808 15.057 11.3947C15.8385 11.4998 16.808 11.4997 17.9051 11.4996L21.9574 11.4996C21.9698 11.6552 21.9786 11.821 21.9848 11.9995H22C22 11.732 22 11.5983 21.9901 11.4408C21.9335 10.5463 21.5617 9.52125 21.0315 8.79853C20.9382 8.6713 20.8743 8.59493 20.7467 8.44218C19.9542 7.49359 18.911 6.31193 18 5.49953C17.1892 4.77645 16.0787 3.98536 15.1101 3.3385C14.2781 2.78275 13.862 2.50487 13.2915 2.29834C13.1403 2.24359 12.9408 2.18311 12.7846 2.14466C12.4006 2.05013 12.0268 2.01725 11.5 2.00586L11.5092 2.2601Z" fill="currentColor"></path></svg><span style="font-size: var(--abq-font-label-xs); letter-spacing: .08em; color: var(--abq-color-danger);">PDF</span></span><span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: var(--abq-space-2);"><span style="font-size: var(--abq-font-body-sm); color: var(--abq-color-ink-900);">{{ title }}</span><span style="font-size: var(--abq-font-ui-sm); color: var(--abq-color-gray-400);">{{ meta }}</span></span><span style="flex: none; width: 40px; height: 40px; border-radius: var(--abq-radius-md); background: var(--abq-color-white); color: var(--abq-color-navy-600); display: inline-flex; align-items: center; justify-content: center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="display: block;"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></a>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;420px&quot;,&quot;height&quot;:&quot;80px&quot;},&quot;title&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Document title&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;size&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;240 KB&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;href&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;#&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const p = this.props;
+    return { title: p.title ?? 'Document title', meta: p.meta ?? ('PDF · ' + (p.size ?? '240 KB')), href: p.href ?? '#' };
+  }
+}
+</script>
+</body>
+</html>

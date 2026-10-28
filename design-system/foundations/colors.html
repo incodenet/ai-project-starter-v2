@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Colour · ABECQ Design System</title>
+
+    <!-- Production stylesheets, in the order index.php loads them -->
+    <link rel="stylesheet" href="../../assets/css/top.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/bottom.css">
+
+    <!-- Documentation-only framing (.ds-docs-*) -->
+    <link rel="stylesheet" href="../../assets/css/design-system-docs.css">
+  </head>
+
+  <body>
+    <div class="ds-docs-layout">
+      <!-- ========================= SIDEBAR ========================= -->
+      <aside class="ds-docs-sidebar" aria-label="Design system">
+        <div class="ds-docs-brand">
+          <img class="ds-docs-brand_logo" src="../../assets/img/abecq-logo.png" alt="ABECQ" width="304" height="80">
+          <p class="ds-docs-brand_meta">Design System · v1.0 · source: Home</p>
+        </div>
+
+        <nav class="ds-docs-nav" aria-label="Design system levels">
+          <details class="ds-docs-nav_group" open>
+            <summary class="ds-docs-nav_summary">
+              FOUNDATIONS
+              <svg class="ds-docs-nav_chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M6 15l6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <ul class="ds-docs-nav_list">
+              <li><a class="ds-docs-nav_link" href="../index.html"><span class="ds-docs-nav_badge" aria-hidden="true">F</span>Atomic structure</a></li>
+              <li><a class="ds-docs-nav_link" href="../foundations/colors.html" aria-current="page"><span class="ds-docs-nav_badge" aria-hidden="true">F</span>Colour</a></li>
+              <li><a class="ds-docs-nav_link" href="../foundations/typography.html"><span class="ds-docs-nav_badge" aria-hidden="true">F</span>Typography</a></li>
+              <li><a class="ds-docs-nav_link" href="../foundations/spacing.html"><span class="ds-docs-nav_badge" aria-hidden="true">F</span>Spacing</a></li>
+              <li><a class="ds-docs-nav_link" href="../foundations/radius-elevation.html"><span class="ds-docs-nav_badge" aria-hidden="true">F</span>Radius &amp; elevation</a></li>
+              <li><a class="ds-docs-nav_link" href="../foundations/icons.html"><span class="ds-docs-nav_badge" aria-hidden="true">F</span>Icon library</a></li>
+            </ul>
+          </details>
+
+          <details class="ds-docs-nav_group" open>
+            <summary class="ds-docs-nav_summary">
+              ATOMS
+              <svg class="ds-docs-nav_chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M6 15l6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <ul class="ds-docs-nav_list">
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">A</span>Buttons</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">A</span>Links &amp; eyebrow</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">A</span>Form fields</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">A</span>Choice controls</span></li>
+            </ul>
+          </details>
+
+          <details class="ds-docs-nav_group" open>
+            <summary class="ds-docs-nav_summary">
+              MOLECULES
+              <svg class="ds-docs-nav_chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M6 15l6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <ul class="ds-docs-nav_list">
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Segmented tabs</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Section heading</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Breadcrumb</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Product &amp; PDF cards</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Audience cards</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Purchase actions</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Commerce controls</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Status &amp; feedback</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>FAQ accordion</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Tags &amp; chips</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Product gallery</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Page contents</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Auth actions</span></li>
+            </ul>
+          </details>
+
+          <details class="ds-docs-nav_group" open>
+            <summary class="ds-docs-nav_summary">
+              ORGANISMS
+              <svg class="ds-docs-nav_chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M6 15l6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <ul class="ds-docs-nav_list">
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">O</span>Header &amp; footer</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">O</span>Account navigation</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">O</span>Drawers &amp; modals</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">O</span>Mobile menu</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">O</span>Compare table</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">O</span>Checkout progress</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">O</span>Page loader</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">O</span>Home sections</span></li>
+            </ul>
+          </details>
+
+          <details class="ds-docs-nav_group" open>
+            <summary class="ds-docs-nav_summary">
+              TEMPLATES
+              <svg class="ds-docs-nav_chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M6 15l6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <ul class="ds-docs-nav_list">
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">T</span>Home page</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">T</span>Developer handoff</span></li>
+            </ul>
+          </details>
+        </nav>
+      </aside>
+
+      <!-- ========================= CONTENT ========================= -->
+      <main class="ds-docs-main">
+        <!-- ========================= COLOUR ========================= -->
+        <section class="ds-docs-section" id="color" data-design-id="ds.color">
+          <div class="ds-docs-head">
+            <p class="ds-docs-head_eyebrow">01 · FOUNDATIONS</p>
+            <h2 class="ds-docs-head_title">Color</h2>
+            <p class="ds-docs-head_text">Values come from <code class="ds-docs-head_code">abecq-tokens.css</code>. Edit a value there and every Foundations page here updates. Click a swatch to copy its variable.</p>
+          </div>
+
+          <div class="ds-docs-swatch-group">
+            <h3 class="ds-docs-swatch-group_title">Brand</h3>
+            <div class="ds-docs-swatch-grid">
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-ink-900)" data-copy-label="--abq-color-ink-900">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-ink-900)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Ink 900</span>
+                  <code class="ds-docs-swatch_var">--abq-color-ink-900</code>
+                  <code class="ds-docs-swatch_value">#001629</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-navy-700)" data-copy-label="--abq-color-navy-700">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-navy-700)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Navy 700</span>
+                  <code class="ds-docs-swatch_var">--abq-color-navy-700</code>
+                  <code class="ds-docs-swatch_value">#00427A</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-navy-600)" data-copy-label="--abq-color-navy-600">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-navy-600)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Navy 600</span>
+                  <code class="ds-docs-swatch_var">--abq-color-navy-600</code>
+                  <code class="ds-docs-swatch_value">#034787</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-navy-500)" data-copy-label="--abq-color-navy-500">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-navy-500)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Navy 500</span>
+                  <code class="ds-docs-swatch_var">--abq-color-navy-500</code>
+                  <code class="ds-docs-swatch_value">#0A4F8F</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-blue-500)" data-copy-label="--abq-color-blue-500">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-blue-500)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Blue 500</span>
+                  <code class="ds-docs-swatch_var">--abq-color-blue-500</code>
+                  <code class="ds-docs-swatch_value">#1F95F9</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-blue-300)" data-copy-label="--abq-color-blue-300">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-blue-300)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Blue 300</span>
+                  <code class="ds-docs-swatch_var">--abq-color-blue-300</code>
+                  <code class="ds-docs-swatch_value">#76C0FF</code>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <div class="ds-docs-swatch-group">
+            <h3 class="ds-docs-swatch-group_title">Blue tints</h3>
+            <div class="ds-docs-swatch-grid">
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-blue-200)" data-copy-label="--abq-color-blue-200">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-blue-200)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Blue 200</span>
+                  <code class="ds-docs-swatch_var">--abq-color-blue-200</code>
+                  <code class="ds-docs-swatch_value">#A6CFF2</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-blue-150)" data-copy-label="--abq-color-blue-150">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-blue-150)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Blue 150</span>
+                  <code class="ds-docs-swatch_var">--abq-color-blue-150</code>
+                  <code class="ds-docs-swatch_value">#BBD8F1</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-blue-100)" data-copy-label="--abq-color-blue-100">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-blue-100)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Blue 100</span>
+                  <code class="ds-docs-swatch_var">--abq-color-blue-100</code>
+                  <code class="ds-docs-swatch_value">#C7DCEE</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-blue-75)" data-copy-label="--abq-color-blue-75">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-blue-75)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Blue 75</span>
+                  <code class="ds-docs-swatch_var">--abq-color-blue-75</code>
+                  <code class="ds-docs-swatch_value">#D5E7F6</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-blue-25)" data-copy-label="--abq-color-blue-25">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-blue-25)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Blue 25</span>
+                  <code class="ds-docs-swatch_var">--abq-color-blue-25</code>
+                  <code class="ds-docs-swatch_value">#EFF5FA</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-blue-50)" data-copy-label="--abq-color-blue-50">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-blue-50)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Blue 50</span>
+                  <code class="ds-docs-swatch_var">--abq-color-blue-50</code>
+                  <code class="ds-docs-swatch_value">#F3F7FD</code>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <div class="ds-docs-swatch-group">
+            <h3 class="ds-docs-swatch-group_title">Neutral</h3>
+            <div class="ds-docs-swatch-grid">
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-gray-700)" data-copy-label="--abq-color-gray-700">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-gray-700)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Gray 700</span>
+                  <code class="ds-docs-swatch_var">--abq-color-gray-700</code>
+                  <code class="ds-docs-swatch_value">#3A4353</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-gray-500)" data-copy-label="--abq-color-gray-500">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-gray-500)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Gray 500</span>
+                  <code class="ds-docs-swatch_var">--abq-color-gray-500</code>
+                  <code class="ds-docs-swatch_value">#5B6577</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-gray-400)" data-copy-label="--abq-color-gray-400">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-gray-400)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Gray 400</span>
+                  <code class="ds-docs-swatch_var">--abq-color-gray-400</code>
+                  <code class="ds-docs-swatch_value">#8A93A6</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-gray-300)" data-copy-label="--abq-color-gray-300">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-gray-300)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Gray 300</span>
+                  <code class="ds-docs-swatch_var">--abq-color-gray-300</code>
+                  <code class="ds-docs-swatch_value">#9AA8BD</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-gray-200)" data-copy-label="--abq-color-gray-200">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-gray-200)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Gray 200</span>
+                  <code class="ds-docs-swatch_var">--abq-color-gray-200</code>
+                  <code class="ds-docs-swatch_value">#C3CADB</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-line)" data-copy-label="--abq-color-line">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-line)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Line</span>
+                  <code class="ds-docs-swatch_var">--abq-color-line</code>
+                  <code class="ds-docs-swatch_value">#E2E7F2</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-line-soft)" data-copy-label="--abq-color-line-soft">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-line-soft)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Line soft</span>
+                  <code class="ds-docs-swatch_var">--abq-color-line-soft</code>
+                  <code class="ds-docs-swatch_value">#E8ECF5</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-divider)" data-copy-label="--abq-color-divider">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-divider)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Divider</span>
+                  <code class="ds-docs-swatch_var">--abq-color-divider</code>
+                  <code class="ds-docs-swatch_value">#F0F3F8</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-surface)" data-copy-label="--abq-color-surface">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-surface)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Surface</span>
+                  <code class="ds-docs-swatch_var">--abq-color-surface</code>
+                  <code class="ds-docs-swatch_value">#F9FAFB</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-white)" data-copy-label="--abq-color-white">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-white)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">White</span>
+                  <code class="ds-docs-swatch_var">--abq-color-white</code>
+                  <code class="ds-docs-swatch_value">#FFFFFF</code>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <div class="ds-docs-swatch-group">
+            <h3 class="ds-docs-swatch-group_title">Icons &amp; controls</h3>
+            <div class="ds-docs-swatch-grid">
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-icon-line)" data-copy-label="--abq-color-icon-line">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-icon-line)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Icon line</span>
+                  <code class="ds-docs-swatch_var">--abq-color-icon-line</code>
+                  <code class="ds-docs-swatch_value">#C3CDE4</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-control-border)" data-copy-label="--abq-color-control-border">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-control-border)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Control border</span>
+                  <code class="ds-docs-swatch_var">--abq-color-control-border</code>
+                  <code class="ds-docs-swatch_value">#D5DEEB</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-line-alt)" data-copy-label="--abq-color-line-alt">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-line-alt)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Line alt</span>
+                  <code class="ds-docs-swatch_var">--abq-color-line-alt</code>
+                  <code class="ds-docs-swatch_value">#E6EAF0</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-blue-60)" data-copy-label="--abq-color-blue-60">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-blue-60)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Blue 60</span>
+                  <code class="ds-docs-swatch_var">--abq-color-blue-60</code>
+                  <code class="ds-docs-swatch_value">#DEECF8</code>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <div class="ds-docs-swatch-group">
+            <h3 class="ds-docs-swatch-group_title">Button gradient</h3>
+            <div class="ds-docs-swatch-grid">
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-grad-start)" data-copy-label="--abq-color-grad-start">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-grad-start)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Grad start</span>
+                  <code class="ds-docs-swatch_var">--abq-color-grad-start</code>
+                  <code class="ds-docs-swatch_value">#2466AC</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-grad-mid)" data-copy-label="--abq-color-grad-mid">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-grad-mid)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Grad mid</span>
+                  <code class="ds-docs-swatch_var">--abq-color-grad-mid</code>
+                  <code class="ds-docs-swatch_value">#0A4F8F</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-grad-end)" data-copy-label="--abq-color-grad-end">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-grad-end)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Grad end</span>
+                  <code class="ds-docs-swatch_var">--abq-color-grad-end</code>
+                  <code class="ds-docs-swatch_value">#04346A</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-grad-hover-start)" data-copy-label="--abq-color-grad-hover-start">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-grad-hover-start)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Hover start</span>
+                  <code class="ds-docs-swatch_var">--abq-color-grad-hover-start</code>
+                  <code class="ds-docs-swatch_value">#2F74BD</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-grad-hover-mid)" data-copy-label="--abq-color-grad-hover-mid">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-grad-hover-mid)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Hover mid</span>
+                  <code class="ds-docs-swatch_var">--abq-color-grad-hover-mid</code>
+                  <code class="ds-docs-swatch_value">#1A5EA6</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-grad-hover-end)" data-copy-label="--abq-color-grad-hover-end">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-grad-hover-end)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Hover end</span>
+                  <code class="ds-docs-swatch_var">--abq-color-grad-hover-end</code>
+                  <code class="ds-docs-swatch_value">#063A70</code>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <div class="ds-docs-swatch-group">
+            <h3 class="ds-docs-swatch-group_title">Status</h3>
+            <div class="ds-docs-swatch-grid">
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-success)" data-copy-label="--abq-color-success">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-success)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Success</span>
+                  <code class="ds-docs-swatch_var">--abq-color-success</code>
+                  <code class="ds-docs-swatch_value">#1B8A5A</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-danger)" data-copy-label="--abq-color-danger">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-danger)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Danger</span>
+                  <code class="ds-docs-swatch_var">--abq-color-danger</code>
+                  <code class="ds-docs-swatch_value">#E5484D</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-error)" data-copy-label="--abq-color-error">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-error)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Error</span>
+                  <code class="ds-docs-swatch_var">--abq-color-error</code>
+                  <code class="ds-docs-swatch_value">#B42318</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-warning)" data-copy-label="--abq-color-warning">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-warning)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Warning</span>
+                  <code class="ds-docs-swatch_var">--abq-color-warning</code>
+                  <code class="ds-docs-swatch_value">#B4541A</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-warning-bg)" data-copy-label="--abq-color-warning-bg">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-warning-bg)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Warning bg</span>
+                  <code class="ds-docs-swatch_var">--abq-color-warning-bg</code>
+                  <code class="ds-docs-swatch_value">#FFF1E6</code>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <div class="ds-docs-swatch-group">
+            <h3 class="ds-docs-swatch-group_title">Extra tones</h3>
+            <div class="ds-docs-swatch-grid">
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-success-bg)" data-copy-label="--abq-color-success-bg">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-success-bg)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Success bg</span>
+                  <code class="ds-docs-swatch_var">--abq-color-success-bg</code>
+                  <code class="ds-docs-swatch_value">#E7F6EE</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-amber)" data-copy-label="--abq-color-amber">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-amber)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Amber</span>
+                  <code class="ds-docs-swatch_var">--abq-color-amber</code>
+                  <code class="ds-docs-swatch_value">#B4690E</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-blue-600)" data-copy-label="--abq-color-blue-600">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-blue-600)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Blue 600</span>
+                  <code class="ds-docs-swatch_var">--abq-color-blue-600</code>
+                  <code class="ds-docs-swatch_value">#1F6FD1</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-blue-350)" data-copy-label="--abq-color-blue-350">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-blue-350)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Blue 350</span>
+                  <code class="ds-docs-swatch_var">--abq-color-blue-350</code>
+                  <code class="ds-docs-swatch_value">#68B3F3</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-slate-400)" data-copy-label="--abq-color-slate-400">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-slate-400)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Slate 400</span>
+                  <code class="ds-docs-swatch_var">--abq-color-slate-400</code>
+                  <code class="ds-docs-swatch_value">#7291AB</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-gray-350)" data-copy-label="--abq-color-gray-350">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-gray-350)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Gray 350</span>
+                  <code class="ds-docs-swatch_var">--abq-color-gray-350</code>
+                  <code class="ds-docs-swatch_value">#9AA3BD</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-gray-450)" data-copy-label="--abq-color-gray-450">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-gray-450)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Gray 450</span>
+                  <code class="ds-docs-swatch_var">--abq-color-gray-450</code>
+                  <code class="ds-docs-swatch_value">#7A84A3</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-gray-250)" data-copy-label="--abq-color-gray-250">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-gray-250)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Gray 250</span>
+                  <code class="ds-docs-swatch_var">--abq-color-gray-250</code>
+                  <code class="ds-docs-swatch_value">#C2C7CF</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-blue-30)" data-copy-label="--abq-color-blue-30">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-blue-30)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Blue 30</span>
+                  <code class="ds-docs-swatch_var">--abq-color-blue-30</code>
+                  <code class="ds-docs-swatch_value">#EAF3FB</code>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <div class="ds-docs-swatch-group">
+            <h3 class="ds-docs-swatch-group_title">See-through</h3>
+            <div class="ds-docs-swatch-grid">
+              <button class="ds-docs-swatch ds-docs-swatch--on-dark" type="button" title="Copy variable" data-copy-token="var(--abq-color-white-92)" data-copy-label="--abq-color-white-92">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-white-92)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">White 92</span>
+                  <code class="ds-docs-swatch_var">--abq-color-white-92</code>
+                  <code class="ds-docs-swatch_value">rgba(255,255,255,.92)</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch ds-docs-swatch--on-dark" type="button" title="Copy variable" data-copy-token="var(--abq-color-white-85)" data-copy-label="--abq-color-white-85">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-white-85)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">White 85</span>
+                  <code class="ds-docs-swatch_var">--abq-color-white-85</code>
+                  <code class="ds-docs-swatch_value">rgba(255,255,255,.85)</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch ds-docs-swatch--on-dark" type="button" title="Copy variable" data-copy-token="var(--abq-color-white-75)" data-copy-label="--abq-color-white-75">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-white-75)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">White 75</span>
+                  <code class="ds-docs-swatch_var">--abq-color-white-75</code>
+                  <code class="ds-docs-swatch_value">rgba(255,255,255,.75)</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch ds-docs-swatch--on-dark" type="button" title="Copy variable" data-copy-token="var(--abq-color-white-60)" data-copy-label="--abq-color-white-60">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-white-60)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">White 60</span>
+                  <code class="ds-docs-swatch_var">--abq-color-white-60</code>
+                  <code class="ds-docs-swatch_value">rgba(255,255,255,.6)</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch ds-docs-swatch--on-dark" type="button" title="Copy variable" data-copy-token="var(--abq-color-white-50)" data-copy-label="--abq-color-white-50">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-white-50)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">White 50</span>
+                  <code class="ds-docs-swatch_var">--abq-color-white-50</code>
+                  <code class="ds-docs-swatch_value">rgba(255,255,255,.5)</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch ds-docs-swatch--on-dark" type="button" title="Copy variable" data-copy-token="var(--abq-color-white-35)" data-copy-label="--abq-color-white-35">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-white-35)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">White 35</span>
+                  <code class="ds-docs-swatch_var">--abq-color-white-35</code>
+                  <code class="ds-docs-swatch_value">rgba(255,255,255,.35)</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch ds-docs-swatch--on-dark" type="button" title="Copy variable" data-copy-token="var(--abq-color-white-12)" data-copy-label="--abq-color-white-12">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-white-12)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">White 12</span>
+                  <code class="ds-docs-swatch_var">--abq-color-white-12</code>
+                  <code class="ds-docs-swatch_value">rgba(255,255,255,.12)</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-overlay)" data-copy-label="--abq-color-overlay">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-overlay)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Overlay</span>
+                  <code class="ds-docs-swatch_var">--abq-color-overlay</code>
+                  <code class="ds-docs-swatch_value">rgba(15,24,54,.82)</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-overlay-strong)" data-copy-label="--abq-color-overlay-strong">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-overlay-strong)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Overlay Strong</span>
+                  <code class="ds-docs-swatch_var">--abq-color-overlay-strong</code>
+                  <code class="ds-docs-swatch_value">rgba(15,24,54,.86)</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-line-on-dark)" data-copy-label="--abq-color-line-on-dark">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-line-on-dark)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Line On Dark</span>
+                  <code class="ds-docs-swatch_var">--abq-color-line-on-dark</code>
+                  <code class="ds-docs-swatch_value">rgba(199,220,238,.18)</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-line-on-dark-strong)" data-copy-label="--abq-color-line-on-dark-strong">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-line-on-dark-strong)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Line On Dark Strong</span>
+                  <code class="ds-docs-swatch_var">--abq-color-line-on-dark-strong</code>
+                  <code class="ds-docs-swatch_value">rgba(199,220,238,.34)</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-danger-tint)" data-copy-label="--abq-color-danger-tint">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-danger-tint)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Danger Tint</span>
+                  <code class="ds-docs-swatch_var">--abq-color-danger-tint</code>
+                  <code class="ds-docs-swatch_value">rgba(229,72,77,.12)</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-danger-tint-soft)" data-copy-label="--abq-color-danger-tint-soft">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-danger-tint-soft)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Danger Tint Soft</span>
+                  <code class="ds-docs-swatch_var">--abq-color-danger-tint-soft</code>
+                  <code class="ds-docs-swatch_value">rgba(229,72,77,.08)</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-primary-tint)" data-copy-label="--abq-color-primary-tint">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-primary-tint)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Primary Tint</span>
+                  <code class="ds-docs-swatch_var">--abq-color-primary-tint</code>
+                  <code class="ds-docs-swatch_value">rgba(31,149,249,.14)</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-primary-tint-strong)" data-copy-label="--abq-color-primary-tint-strong">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-primary-tint-strong)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Primary Tint Strong</span>
+                  <code class="ds-docs-swatch_var">--abq-color-primary-tint-strong</code>
+                  <code class="ds-docs-swatch_value">rgba(31,149,249,.22)</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-black-28)" data-copy-label="--abq-color-black-28">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-black-28)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Black 28</span>
+                  <code class="ds-docs-swatch_var">--abq-color-black-28</code>
+                  <code class="ds-docs-swatch_value">rgba(0,0,0,.28)</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-ink-45)" data-copy-label="--abq-color-ink-45">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-ink-45)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Ink 45</span>
+                  <code class="ds-docs-swatch_var">--abq-color-ink-45</code>
+                  <code class="ds-docs-swatch_value">rgba(0,22,41,.45)</code>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <div class="ds-docs-swatch-group">
+            <h3 class="ds-docs-swatch-group_title">Background gradients</h3>
+            <div class="ds-docs-swatch-grid">
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-gradient-label-line)" data-copy-label="--abq-color-gradient-label-line">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-gradient-label-line)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Label line (light)</span>
+                  <code class="ds-docs-swatch_var">--abq-color-gradient-label-line</code>
+                  <code class="ds-docs-swatch_value">linear-gradient(90deg,#68B3F3,rgba(104,179,243,0))</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-gradient-band)" data-copy-label="--abq-color-gradient-band">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-gradient-band)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Band (Home)</span>
+                  <code class="ds-docs-swatch_var">--abq-color-gradient-band</code>
+                  <code class="ds-docs-swatch_value">radial-gradient(120% 140% at 8% 0%, #1F6FD0 0%, rgba(31,111,208,0) 46%), radial-gradient(90% 120% at 100% 12%, #0A4F8F 0%, rgba(10,79,143,0) 50%), radial-gradient(120% 130% at 78% 100%, #002140 0%, rgba(0,33,64,0) 55%), linear-gradient(120deg,#00427A 0%,#002C52 100%)</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-gradient-footer)" data-copy-label="--abq-color-gradient-footer">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-gradient-footer)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Footer</span>
+                  <code class="ds-docs-swatch_var">--abq-color-gradient-footer</code>
+                  <code class="ds-docs-swatch_value">radial-gradient(90% 120% at 6% 0%, #0A4F8F 0%, rgba(10,79,143,0) 52%), radial-gradient(80% 110% at 96% 8%, #1F6FD0 0%, rgba(31,111,208,0) 46%), linear-gradient(180deg,#00213D 0%,#001629 62%)</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-gradient-panel-dark)" data-copy-label="--abq-color-gradient-panel-dark">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-gradient-panel-dark)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Dark panel</span>
+                  <code class="ds-docs-swatch_var">--abq-color-gradient-panel-dark</code>
+                  <code class="ds-docs-swatch_value">radial-gradient(90% 80% at 100% 0%, #1F6FD0 0%, rgba(31,111,208,0) 55%), linear-gradient(160deg,#00213D 0%,#001629 100%)</code>
+                </span>
+              </button>
+              <button class="ds-docs-swatch" type="button" title="Copy variable" data-copy-token="var(--abq-color-gradient-band-navy)" data-copy-label="--abq-color-gradient-band-navy">
+                <span class="ds-docs-swatch_chip" aria-hidden="true"><span class="ds-docs-swatch_fill" style="--swatch: var(--abq-color-gradient-band-navy)"></span></span>
+                <span class="ds-docs-swatch_meta">
+                  <span class="ds-docs-swatch_name">Navy band</span>
+                  <code class="ds-docs-swatch_var">--abq-color-gradient-band-navy</code>
+                  <code class="ds-docs-swatch_value">radial-gradient(120% 140% at 8% 0%, #1F6FD0 0%, rgba(31,111,208,0) 46%), linear-gradient(120deg,#00427A 0%,#002C52 100%)</code>
+                </span>
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="ds-docs-toast" role="status" aria-live="polite" data-docs-toast></div>
+
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/docs/design-system-docs.js"></script>
+  </body>
+</html>

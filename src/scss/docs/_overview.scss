@@ -1,0 +1,297 @@
+/* =========================================================
+   DOCS OVERVIEW
+   Intro panel and the five level cards of the catalog home.
+   The card illustrations are decorative.
+   ========================================================= */
+
+$docsArtTint: #E4F1FD;
+
+.ds-docs-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: clamp(32px, 5vw, 64px);
+  border-radius: 32px;
+  background-color: var(--abq-color-blue-50);
+
+  &_badge {
+    align-self: flex-start;
+    padding: 7px 14px;
+    border-radius: 100px;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    color: var(--abq-color-blue-500);
+    background: var(--abq-color-white);
+  }
+
+  &_title {
+    max-width: 720px;
+    font-weight: 400;
+    font-size: var(--abq-font-display);
+    line-height: var(--abq-lh-display);
+    letter-spacing: var(--abq-ls-display);
+    color: var(--abq-color-ink-900);
+    text-wrap: balance;
+  }
+
+  &_text {
+    max-width: 620px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--abq-color-gray-500);
+    text-wrap: pretty;
+  }
+}
+
+.ds-docs-levels {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.ds-docs-level {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px 18px 22px;
+  border: 1px solid var(--abq-color-line-soft);
+  border-radius: 22px;
+  color: var(--abq-color-ink-900);
+  background: var(--abq-color-white);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+  &[href]:hover {
+    box-shadow: 0 14px 34px rgba(0, 66, 122, 0.1);
+    transform: translateY(-2px);
+  }
+
+  &_art {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 14px;
+    background: var(--abq-color-blue-50);
+
+    &--foundations {
+      gap: 18px;
+    }
+
+    &--atoms {
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    &--molecules {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    &--organisms {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+      padding: 0 22px;
+    }
+  }
+
+  &_head {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-top: 8px;
+  }
+
+  &_title {
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: normal;
+  }
+
+  &_index {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: var(--abq-color-blue-500);
+  }
+
+  &_text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--abq-color-gray-500);
+    text-wrap: pretty;
+  }
+
+  &_cta {
+    margin-top: auto;
+    padding-top: 6px;
+    font-size: 14px;
+    color: var(--abq-color-navy-700);
+  }
+
+  &--pending &_cta {
+    color: var(--abq-color-gray-400);
+  }
+}
+
+/* ---------- Level illustrations ---------- */
+
+.ds-docs-art-type {
+  font-size: 52px;
+  letter-spacing: -0.02em;
+  color: var(--abq-color-ink-900);
+}
+
+.ds-docs-art-swatches {
+  display: grid;
+  grid-template-columns: repeat(2, 28px);
+  gap: 6px;
+
+  &_item {
+    height: 28px;
+    border-radius: 8px;
+
+    &--navy {
+      background: var(--abq-color-navy-700);
+    }
+
+    &--blue {
+      background: var(--abq-color-blue-500);
+    }
+
+    &--ink {
+      background: var(--abq-color-ink-900);
+    }
+
+    &--white {
+      border: 1px solid var(--abq-color-line);
+      background: var(--abq-color-white);
+    }
+  }
+}
+
+.ds-docs-art-button {
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 20px;
+  border-radius: 12px;
+  font-size: 14px;
+  color: var(--abq-color-white);
+  background: linear-gradient(120deg, var(--abq-color-grad-start) 0%, var(--abq-color-grad-mid) 45%, var(--abq-color-grad-end) 100%);
+}
+
+.ds-docs-art-link {
+  font-size: 14px;
+  color: var(--abq-color-navy-700);
+}
+
+.ds-docs-art-tabs {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 100px;
+  background: var(--abq-color-white);
+
+  &_item {
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 12px;
+    color: var(--abq-color-gray-500);
+
+    &--active {
+      color: var(--abq-color-white);
+      background: var(--abq-color-navy-700);
+    }
+  }
+}
+
+.ds-docs-art-field {
+  width: 170px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--abq-color-white);
+  box-shadow: 0 6px 16px rgba(16, 24, 43, 0.06);
+}
+
+.ds-docs-art-header {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 10px;
+  border-radius: 9px;
+  background: var(--abq-color-white);
+
+  &_logo {
+    width: 34px;
+    height: 8px;
+    margin-right: auto;
+    border-radius: 4px;
+    background: var(--abq-color-navy-700);
+  }
+
+  &_link {
+    width: 22px;
+    height: 5px;
+    border-radius: 3px;
+    background: var(--abq-color-blue-100);
+  }
+
+  &_cta {
+    width: 22px;
+    height: 12px;
+    border-radius: 4px;
+    background: var(--abq-color-blue-500);
+  }
+}
+
+.ds-docs-art-footer {
+  height: 46px;
+  border-radius: 9px;
+  background: var(--abq-color-ink-900);
+}
+
+.ds-docs-art-page {
+  width: 92px;
+  height: 118px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px;
+  border-radius: 10px;
+  background: var(--abq-color-white);
+  box-shadow: 0 8px 20px rgba(0, 66, 122, 0.08);
+
+  &_bar {
+    height: 6px;
+    border-radius: 3px;
+    background: var(--abq-color-blue-100);
+  }
+
+  &_hero {
+    height: 34px;
+    border-radius: 6px;
+    background: $docsArtTint;
+  }
+
+  &_line {
+    height: 5px;
+    border-radius: 3px;
+    background: var(--abq-color-blue-100);
+
+    &--long {
+      width: 70%;
+    }
+
+    &--short {
+      width: 50%;
+    }
+  }
+
+  &_body {
+    flex: 1;
+    border-radius: 6px;
+    background: var(--abq-color-blue-50);
+  }
+}

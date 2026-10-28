@@ -1,0 +1,342 @@
+/* =========================================================
+   DOCS FOUNDATIONS
+   Specimens for colour, type, spacing, radius, elevation and
+   icons. Per-item values arrive as custom properties set on the
+   element (--swatch, --type-size, --bar-width, --radius, ...),
+   each pointing at the real --abq-* token.
+   ========================================================= */
+
+$docsSwatchDark: #00213D;
+
+/* ---------- Colour ---------- */
+
+.ds-docs-swatch-group {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  &_title {
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: normal;
+    color: var(--abq-color-gray-500);
+  }
+}
+
+.ds-docs-swatch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
+  gap: 12px;
+}
+
+.ds-docs-swatch {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 6px 6px 14px;
+  border: 1px solid var(--abq-color-line-soft);
+  border-radius: 16px;
+  font-family: inherit;
+  text-align: left;
+  background: var(--abq-color-white);
+  cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    border-color: var(--abq-color-blue-150);
+    box-shadow: 0 8px 20px rgba(0, 66, 122, 0.08);
+  }
+
+  &_chip {
+    height: 76px;
+    overflow: hidden;
+    border-radius: 11px;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 1px rgba(0, 22, 41, 0.06);
+  }
+
+  &--on-dark &_chip {
+    background-color: $docsSwatchDark;
+  }
+
+  &_fill {
+    display: block;
+    height: 100%;
+    background: var(--swatch);
+  }
+
+  &_meta {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0 8px;
+  }
+
+  &_name {
+    font-size: 14px;
+    color: var(--abq-color-ink-900);
+  }
+
+  &_var {
+    overflow: hidden;
+    font-family: $docsMono;
+    font-size: 11px;
+    color: var(--abq-color-navy-700);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &_value {
+    font-family: $docsMono;
+    font-size: 11px;
+    color: var(--abq-color-gray-400);
+    text-transform: uppercase;
+  }
+}
+
+/* ---------- Type scale ---------- */
+
+.ds-docs-type-scale {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--abq-color-line-soft);
+}
+
+.ds-docs-type-row {
+  display: grid;
+  grid-template-columns: minmax(160px, 220px) minmax(0, 1fr);
+  align-items: baseline;
+  gap: 24px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--abq-color-line-soft);
+
+  &_meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &_name {
+    font-size: 14px;
+    color: var(--abq-color-ink-900);
+  }
+
+  &_var {
+    font-family: $docsMono;
+    font-size: 11px;
+    color: var(--abq-color-navy-700);
+  }
+
+  &_spec {
+    font-family: $docsMono;
+    font-size: 11px;
+    color: var(--abq-color-gray-400);
+  }
+
+  &_sample {
+    min-width: 0;
+    font-size: var(--type-size);
+    line-height: var(--type-lh);
+    letter-spacing: var(--type-ls);
+    text-transform: none;
+    color: var(--abq-color-ink-900);
+    overflow-wrap: anywhere;
+
+    &--eyebrow {
+      text-transform: uppercase;
+      color: var(--abq-color-blue-500);
+    }
+  }
+}
+
+.ds-docs-type-weights {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  &_title {
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: normal;
+    color: var(--abq-color-ink-900);
+  }
+}
+
+.ds-docs-weight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.ds-docs-weight-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border: 1px solid var(--abq-color-line-soft);
+  border-radius: 16px;
+
+  &_sample {
+    font-size: 34px;
+    font-weight: var(--weight);
+    color: var(--abq-color-ink-900);
+  }
+
+  &_name {
+    font-size: 14px;
+    color: var(--abq-color-ink-900);
+  }
+
+  &_var {
+    font-family: $docsMono;
+    font-size: 11px;
+    color: var(--abq-color-navy-700);
+  }
+
+  &_use {
+    font-size: 13px;
+    color: var(--abq-color-gray-500);
+  }
+}
+
+/* ---------- Spacing ---------- */
+
+.ds-docs-space-scale {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ds-docs-space-row {
+  display: grid;
+  grid-template-columns: 120px 56px 72px minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+
+  &_var {
+    font-family: $docsMono;
+    font-size: 12px;
+    color: var(--abq-color-navy-700);
+  }
+
+  &_value {
+    font-size: 14px;
+    color: var(--abq-color-gray-500);
+  }
+
+  &_uses {
+    font-size: 12px;
+    color: var(--abq-color-gray-400);
+  }
+
+  &_bar {
+    width: var(--bar-width);
+    height: 14px;
+    border-radius: 4px;
+    background: var(--abq-color-blue-500);
+  }
+}
+
+/* ---------- Radius & elevation ---------- */
+
+.ds-docs-radius-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 16px;
+}
+
+.ds-docs-radius-item,
+.ds-docs-shadow-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.ds-docs-radius-item {
+  gap: 10px;
+
+  &_preview {
+    height: 96px;
+    border: 1px solid var(--abq-color-blue-150);
+    border-radius: var(--radius);
+    background: var(--abq-color-blue-50);
+  }
+}
+
+.ds-docs-shadow-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+  padding: 32px;
+  border-radius: 22px;
+  background: var(--abq-color-blue-50);
+}
+
+.ds-docs-shadow-item {
+  gap: 14px;
+
+  &_preview {
+    height: 110px;
+    border-radius: 16px;
+    background: var(--abq-color-white);
+    box-shadow: var(--shadow);
+  }
+}
+
+.ds-docs-radius-item_var,
+.ds-docs-shadow-item_var {
+  font-family: $docsMono;
+  font-size: 12px;
+  color: var(--abq-color-navy-700);
+}
+
+.ds-docs-radius-item_use,
+.ds-docs-shadow-item_use {
+  font-size: 13px;
+  color: var(--abq-color-gray-500);
+}
+
+/* ---------- Icons ---------- */
+
+.ds-docs-icon-count {
+  font-size: 14px;
+  color: var(--abq-color-gray-500);
+}
+
+.ds-docs-icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(104px, 1fr));
+  gap: 12px;
+}
+
+/* the tile colours the production .icon through currentColor */
+.ds-docs-icon-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 8px 10px;
+  border: 1px solid var(--abq-color-line-soft);
+  border-radius: 14px;
+  color: var(--abq-color-navy-700);
+  background: var(--abq-color-white);
+
+  &_meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+
+  &_id {
+    font-family: $docsMono;
+    font-size: 11px;
+    color: var(--abq-color-navy-700);
+  }
+
+  &_uses {
+    font-size: 11px;
+    color: var(--abq-color-gray-400);
+  }
+}

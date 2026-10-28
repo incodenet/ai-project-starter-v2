@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "snapshot": "design-system-91951f68-b1",
+  "mode": "INITIAL",
+  "batch": {
+    "number": 1,
+    "scope": "Design-system catalog shell (sidebar, hash navigation, group collapse, toast) + Foundations level",
+    "reason": "normalize-design-export.md asks for one template or a small explicit batch per invocation; the DS has 33 states and 7 runtime components."
+  },
+  "createdAt": "2026-10-28",
+  "status": "READY_WITH_EXCEPTIONS",
+  "source": {
+    "originalExport": { "path": "raw/exports/design-system.html", "sha256": "91951f6819d709e2aadd273357a72b24ece91f610d7f32ced8b3b701653d7196" },
+    "extractedSnapshot": "raw/extracted/design-system-91951f68",
+    "document": "raw/extracted/design-system-91951f68/documents/design-system.html",
+    "listData": "Read from the original rendered in headless Chrome (after its runtime filled the sc-for lists and resolved live token values), not re-derived from the DCLogic literals."
+  },
+  "outputs": [
+    {
+      "stable_id": "ds.catalog",
+      "path": "design-system/index.html",
+      "sha256": "bd8f42b86acf64abd0557012fbcb34ce519644c12b9ad52089c27e58b43a08cf",
+      "kind": "design-system catalog (standalone HTML/CSS/JS)",
+      "dependsOn": ["assets/images/abecq-logo.png", "assets/fonts/outfit-latin.woff2", "assets/fonts/outfit-latin-ext.woff2"]
+    }
+  ],
+  "states": [
+    { "stable_id": "ds.overview", "data-design-id": "ds.overview", "route_or_state": "#overview (default)", "source_selector": "main[data-r=main][data-page=\"overview\"] > section#overview", "output_selector": "main#ds-main > section#overview", "status": "normalized", "confidence": "confirmed" },
+    { "stable_id": "ds.color", "data-design-id": "ds.color", "route_or_state": "#color", "source_selector": "main[data-r=main][data-page=\"color\"] > section#color", "output_selector": "main#ds-main > section#color", "status": "normalized", "confidence": "confirmed", "items": { "groups": 9, "swatches": 68 } },
+    { "stable_id": "ds.type", "data-design-id": "ds.type", "route_or_state": "#type", "source_selector": "main[data-r=main][data-page=\"type\"] > section#type", "output_selector": "main#ds-main > section#type", "status": "normalized", "confidence": "confirmed", "items": { "typeRows": 20, "weights": 4 } },
+    { "stable_id": "ds.space", "data-design-id": "ds.space", "route_or_state": "#space", "source_selector": "main[data-r=main][data-page=\"space\"] > section#space", "output_selector": "main#ds-main > section#space", "status": "normalized", "confidence": "confirmed", "items": { "steps": 28 } },
+    { "stable_id": "ds.radius", "data-design-id": "ds.radius", "route_or_state": "#radius", "source_selector": "main[data-r=main][data-page=\"radius\"] > section#radius", "output_selector": "main#ds-main > section#radius", "status": "normalized", "confidence": "confirmed", "items": { "radii": 13, "shadows": 28 } },
+    { "stable_id": "ds.icons", "data-design-id": "ds.icons", "route_or_state": "#icons", "source_selector": "main[data-r=main][data-page=\"icons\"] > section#icons", "output_selector": "main#ds-main > section#icons", "status": "normalized", "confidence": "confirmed", "items": { "icons": 84 } }
+  ],
+  "pendingStates": {
+    "status": "not-normalized (later batches)",
+    "behaviourInThisBatch": "Sidebar and overview links to these states are kept (marked data-ds-pending) and fall back to #overview, the same fallback the export uses for unknown ids.",
+    "atoms": ["buttons", "links", "forms", "choice"],
+    "molecules": ["tabs", "heading", "crumbs", "cards", "audience", "purchase", "commerce", "feedback", "faq", "chips", "gallery", "toc", "auth"],
+    "organisms": ["components", "accnav", "overlays", "mobilemenu", "compare", "checkoutbar", "loader", "organisms"],
+    "templates": ["templates", "handoff"]
+  },
+  "assets": [
+    { "path": "assets/images/abecq-logo.png", "from": "raw/extracted/design-system-91951f68/assets/13ec04de3df5a7c0.png", "logicalPath": "assets/abecq-logo.png", "sha256": "13ec04de3df5a7c0cbe641f70018ca8ee291b669179da65becde079f08e43197", "dimensions": [304, 80] },
+    { "path": "assets/fonts/outfit-latin.woff2", "from": "raw/extracted/design-system-91951f68/assets/6c18d579fd87c377.woff2", "sha256": "6c18d579fd87c3776be068b762cbc83fde3acb543d49eabd3ade842eb987e887", "note": "Outfit 100-900 variable, latin unicode-range" },
+    { "path": "assets/fonts/outfit-latin-ext.woff2", "from": "raw/extracted/design-system-91951f68/assets/0f53d1c03b3918d7.woff2", "sha256": "0f53d1c03b3918d744a843b5039001ee31695ca1e255e3914188df81beb461e9", "note": "Outfit 100-900 variable, latin-ext unicode-range (loaded only when such glyphs appear)" }
+  ],
+  "tokens": {
+    "productTokens": { "count": 191, "source": "export token sheet (abecq-tokens.css), copied verbatim into the DESIGN TOKENS section" },
+    "catalogChrome": {
+      "note": "Viewer-only colours with no product token; declared as --ds-* so they are not mistaken for product tokens.",
+      "values": { "--ds-sidebar-line": "#0E2A44", "--ds-sidebar-muted": "#9FB2C8", "--ds-sidebar-link": "#DCE6F2", "--ds-sidebar-group": "#6FA8DC", "--ds-swatch-dark": "#00213D", "--ds-art-tint": "#E4F1FD" }
+    },
+    "literalToToken": "Literal values in the source chrome were replaced by --abq-* tokens only where the token value is identical (e.g. #001629 -> --abq-color-ink-900, clamp(26px,3.4vw,40px) -> --abq-font-h2)."
+  },
+  "runtimeConversions": [
+    { "from": "<x-dc>, <helmet>, dc-runtime script, React UMD", "to": "plain document; <title>/<style> in <head>" },
+    { "from": "<sc-for> over colorGroups/typeScale/spacing/radii/shadows/icons", "to": "static markup generated once from the rendered original" },
+    { "from": "{{ }} bindings incl. live tv() token reads", "to": "static text equal to the rendered values; visual values reference tokens via per-element custom properties (--swatch, --type-size, --bar-width, --radius, --shadow, --weight)" },
+    { "from": "data-page=\"{{ page }}\" + 33 per-id display/highlight rules", "to": "hidden attribute on sections + aria-current=\"page\" on the active link" },
+    { "from": "style-hover attributes", "to": ":hover rules (.ds-nav_link, .level-card, .swatch)" },
+    { "from": "sc-camel-on-click copy() + sc-if toast", "to": "data-copy / data-copy-label buttons + .ds-toast live region (hidden when empty), 1400 ms" },
+    { "from": "#__assets alias block + MutationObserver/src override shim", "to": "removed; images and fonts use direct relative paths" },
+    { "from": "sc-camel-view-box", "to": "viewBox" },
+    { "from": "preconnect hints to fonts.googleapis.com / fonts.gstatic.com", "to": "removed (fonts are local)" }
+  ],
+  "animations": [
+    { "target": "sidebar link", "effect": "color transition .15s on hover", "status": "preserved" },
+    { "target": "sidebar group chevron", "effect": "transform .2s; rotate(180deg) when group collapsed", "status": "preserved" },
+    { "target": "overview level card", "effect": "box-shadow + translateY(-2px), .2s ease on hover", "status": "preserved" },
+    { "target": "colour swatch", "effect": "border-color + box-shadow, .15s ease on hover", "status": "preserved" },
+    { "target": "page", "effect": "html scroll-behavior: smooth; scroll to top on navigation", "status": "preserved" },
+    { "target": "@keyframes stockPulse", "effect": "defined globally in the export, not used by any in-scope state", "status": "deferred to the batch that contains its user" },
+    { "target": "prefers-reduced-motion", "effect": "not present in the export", "status": "not added (no source behaviour to preserve)" }
+  ],
+  "deviations": [
+    "Swatch internals are <span> instead of <div> (a <button> may only contain phrasing content); rendering is pixel-identical.",
+    "Sidebar link lists are <ul>/<li>; group titles, card titles and 'Font weights' are <h3>; eyebrow and description lines are <p>.",
+    "Decorative overview illustrations, swatch chips, spacing bars and radius/shadow previews are aria-hidden; icon SVGs are aria-hidden + focusable=false.",
+    "Organisms illustration: the push to the right moved from margin-left:auto on the first link to margin-right:auto on the logo (identical layout).",
+    "On load the page is scrolled back to the top, because the hash selects a page rather than a scroll target. The export behaves this way implicitly, since its content renders after the fragment jump.",
+    "Clipboard failure is swallowed (.catch) to avoid an unhandled rejection; the toast still shows, as in the export."
+  ],
+  "validation": {
+    "staticGates": "pass: no {{ }}, sc-*, x-dc, helmet, dc-import, style-hover, DCLogic, React, blob:, data:, UUID or support.js; all local references resolve; 1 <style> in head, 1 <script> before </body>; no inline handlers; inline style attributes (161) carry only custom properties",
+    "domGates": "pass: unique ids, every img has alt, every button has type, single h1, no heading-level skips, all --abq-*/--ds-* and per-element custom properties resolve",
+    "pixelComparison": {
+      "method": "headless Chrome 1x full-page screenshots, original export vs normalized, per state; per-channel threshold 24",
+      "widths": [1440, 1024, 961, 960, 390],
+      "result": "30 of 30 captures have identical page dimensions; 20 are pixel-identical; radius and icons differ by 0.005-0.023% of pixels (glyph anti-aliasing in multi-part labels, no layout change)"
+    },
+    "interactionParity": "same as export: initial state, nav click (state, active link, hash via replaceState, no history entry, scroll to top), overview card click, group collapse/expand (chevron rotation), nav hover/active styles, swatch hover, copy + toast text/position/style/1400 ms dismissal, card hover (shadow/transform/colour), keyboard Enter on links, Space on summary, no console errors. Only expected difference: pending links fall back to overview.",
+    "notTested": ["real clipboard write (stubbed in the harness)", "browsers other than Chrome", "screen-reader output"]
+  },
+  "sourceAnomaliesPreserved": [
+    "At 390px the Spacing state overflows horizontally to 476px (fixed 120/56/72px columns + 160px bar); identical in the export.",
+    "Below 960px the sidebar is hidden and the export offers no other navigation except the overview cards."
+  ],
+  "next": [
+    "Batch 2 (Atoms: buttons, links, forms, choice) as a new snapshot design-system-91951f68-b2 that carries batch 1 forward.",
+    "Then .prompts/import-design-system.md (INITIAL) using design-system/index.html as its raw input."
+  ]
+}

@@ -1,0 +1,1449 @@
+{
+  "schemaVersion": 1,
+  "snapshot": "design-system-91951f68",
+  "foundations": {
+    "tokens": {
+      "declaredIn": "documents/design-system.html (helmet <style>, first :root block)",
+      "count": 191,
+      "byPrefix": {
+        "color": 68,
+        "font": 22,
+        "fw": 4,
+        "lh": 20,
+        "ls": 8,
+        "space": 28,
+        "radius": 13,
+        "shadow": 28
+      }
+    },
+    "tokenSections": [
+      {
+        "stable_id": "ds.overview",
+        "label": "Atomic structure"
+      },
+      {
+        "stable_id": "ds.color",
+        "label": "Colour"
+      },
+      {
+        "stable_id": "ds.type",
+        "label": "Typography"
+      },
+      {
+        "stable_id": "ds.space",
+        "label": "Spacing"
+      },
+      {
+        "stable_id": "ds.radius",
+        "label": "Radius & elevation"
+      },
+      {
+        "stable_id": "ds.icons",
+        "label": "Icon library"
+      }
+    ],
+    "icons": {
+      "count": 84,
+      "ids": [
+        "i01",
+        "i02",
+        "i03",
+        "i04",
+        "i05",
+        "i06",
+        "i07",
+        "i08",
+        "i09",
+        "i10",
+        "i11",
+        "i12",
+        "i13",
+        "i14",
+        "i15",
+        "i16",
+        "i17",
+        "i18",
+        "i19",
+        "i20",
+        "i21",
+        "i22",
+        "i23",
+        "i24",
+        "i25",
+        "i26",
+        "i27",
+        "i28",
+        "i29",
+        "i30",
+        "i31",
+        "i32",
+        "i33",
+        "i34",
+        "i35",
+        "i36",
+        "i37",
+        "i38",
+        "i39",
+        "i40",
+        "i41",
+        "i42",
+        "i43",
+        "i44",
+        "i45",
+        "i46",
+        "i47",
+        "i48",
+        "i49",
+        "i50",
+        "i51",
+        "i52",
+        "i53",
+        "i54",
+        "i55",
+        "i56",
+        "i57",
+        "i58",
+        "i59",
+        "i60",
+        "i61",
+        "i62",
+        "i63",
+        "i64",
+        "i65",
+        "i66",
+        "i67",
+        "i68",
+        "i69",
+        "i70",
+        "i71",
+        "i72",
+        "i73",
+        "i74",
+        "i75",
+        "i76",
+        "i77",
+        "i78",
+        "i79",
+        "i80",
+        "i81",
+        "i82",
+        "i83",
+        "i84"
+      ],
+      "sources": [
+        "ABECQ Site",
+        "ABECQ Home",
+        "SiteHeader",
+        "PdfCard"
+      ]
+    },
+    "fonts": [
+      {
+        "file": "assets/0f53d1c03b3918d7.woff2",
+        "sha256": "0f53d1c03b3918d744a843b5039001ee31695ca1e255e3914188df81beb461e9",
+        "family": "Outfit",
+        "note": "Referenced by template @font-face; byte-identical copies also inlined as data: URIs in the embedded Google Fonts CSS."
+      },
+      {
+        "file": "assets/6c18d579fd87c377.woff2",
+        "sha256": "6c18d579fd87c3776be068b762cbc83fde3acb543d49eabd3ade842eb987e887",
+        "family": "Outfit",
+        "note": "Referenced by template @font-face; byte-identical copies also inlined as data: URIs in the embedded Google Fonts CSS."
+      }
+    ]
+  },
+  "dcComponents": [
+    {
+      "stable_id": "dc.Button",
+      "name": "Button",
+      "kind": "dc-component",
+      "document": "documents/Button.dc.html",
+      "sha256": "959beed92c9736c5d39b18fea028c3e63429023b9e809350ea38bf0b7db4dcba",
+      "bytes": 74561,
+      "preview": {
+        "width": "1200px",
+        "height": "1500px"
+      },
+      "props": {
+        "variant": {
+          "editor": "enum",
+          "options": [
+            "all",
+            "primary",
+            "glow",
+            "gradient",
+            "white",
+            "secondary",
+            "outline",
+            "link",
+            "text",
+            "tile",
+            "circle",
+            "badge",
+            "shine",
+            "quiet",
+            "chip",
+            "dashed"
+          ],
+          "default": "all",
+          "tsType": "string"
+        },
+        "size": {
+          "editor": "enum",
+          "options": [
+            "sm",
+            "md",
+            "lg",
+            "xl"
+          ],
+          "default": "md",
+          "tsType": "'sm'|'md'|'lg'|'xl'"
+        },
+        "label": {
+          "editor": "text",
+          "default": "Button",
+          "tsType": "string"
+        },
+        "iconLeft": {
+          "editor": "enum",
+          "options": [
+            "",
+            "trash",
+            "filter",
+            "sort",
+            "cart",
+            "search",
+            "send",
+            "external",
+            "chevronLeft",
+            "chevronRight",
+            "arrowSm",
+            "compare",
+            "menu",
+            "searchTile",
+            "arrow",
+            "arrowLg"
+          ],
+          "default": "",
+          "tsType": "string"
+        },
+        "iconRight": {
+          "editor": "enum",
+          "options": [
+            "",
+            "trash",
+            "filter",
+            "sort",
+            "cart",
+            "search",
+            "send",
+            "external",
+            "chevronLeft",
+            "chevronRight",
+            "arrowSm",
+            "compare",
+            "menu",
+            "searchTile",
+            "arrow",
+            "arrowLg"
+          ],
+          "default": "",
+          "tsType": "string"
+        },
+        "full": {
+          "editor": "boolean",
+          "default": false,
+          "tsType": "boolean"
+        },
+        "arrow": {
+          "editor": "boolean",
+          "default": true,
+          "tsType": "boolean"
+        },
+        "href": {
+          "editor": "text",
+          "default": "",
+          "tsType": "string"
+        },
+        "type": {
+          "editor": "enum",
+          "options": [
+            "button",
+            "submit"
+          ],
+          "default": "button",
+          "tsType": "'button'|'submit'"
+        },
+        "disabled": {
+          "editor": "boolean",
+          "default": false,
+          "tsType": "boolean"
+        },
+        "ariaLabel": {
+          "editor": "text",
+          "default": "",
+          "tsType": "string"
+        },
+        "target": {
+          "editor": "text",
+          "default": "",
+          "tsType": "string"
+        },
+        "color": {
+          "editor": null,
+          "tsType": "string"
+        },
+        "onClick": {
+          "editor": null,
+          "tsType": "(e) => void"
+        }
+      },
+      "enumOptions": {
+        "variant": [
+          "all",
+          "primary",
+          "glow",
+          "gradient",
+          "white",
+          "secondary",
+          "outline",
+          "link",
+          "text",
+          "tile",
+          "circle",
+          "badge",
+          "shine",
+          "quiet",
+          "chip",
+          "dashed"
+        ],
+        "size": [
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ],
+        "iconLeft": [
+          "",
+          "trash",
+          "filter",
+          "sort",
+          "cart",
+          "search",
+          "send",
+          "external",
+          "chevronLeft",
+          "chevronRight",
+          "arrowSm",
+          "compare",
+          "menu",
+          "searchTile",
+          "arrow",
+          "arrowLg"
+        ],
+        "iconRight": [
+          "",
+          "trash",
+          "filter",
+          "sort",
+          "cart",
+          "search",
+          "send",
+          "external",
+          "chevronLeft",
+          "chevronRight",
+          "arrowSm",
+          "compare",
+          "menu",
+          "searchTile",
+          "arrow",
+          "arrowLg"
+        ],
+        "type": [
+          "button",
+          "submit"
+        ]
+      },
+      "dependencies": {
+        "scripts": [
+          "./support.js"
+        ],
+        "stylesheets": [
+          "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+        ],
+        "dcImports": [],
+        "assetPaths": []
+      },
+      "directives": {
+        "scIf": 0,
+        "scFor": 0,
+        "styleHover": 30
+      },
+      "usages": [
+        {
+          "section": "buttons",
+          "attrs": {
+            "name": "Button",
+            "variant": "all",
+            "hint-size": "100%,2400px"
+          }
+        }
+      ],
+      "confidence": "confirmed",
+      "notes": [
+        "Recovered verbatim; not rendered or verified in a browser."
+      ]
+    },
+    {
+      "stable_id": "dc.SectionHeading",
+      "name": "SectionHeading",
+      "kind": "dc-component",
+      "document": "documents/SectionHeading.dc.html",
+      "sha256": "8d121902aabe079161c921c81d6ad55f3f77c3e3a07c57feb47c9240997f1de1",
+      "bytes": 10302,
+      "preview": {
+        "width": "640px",
+        "height": "120px"
+      },
+      "props": {
+        "eyebrow": {
+          "editor": "text",
+          "default": "EYEBROW",
+          "tsType": "string"
+        },
+        "title": {
+          "editor": "text",
+          "default": "Section title",
+          "tsType": "string"
+        },
+        "size": {
+          "editor": "enum",
+          "options": [
+            "md",
+            "sm"
+          ],
+          "default": "md",
+          "tsType": "string"
+        },
+        "align": {
+          "editor": "enum",
+          "options": [
+            "left",
+            "center"
+          ],
+          "default": "left",
+          "tsType": "'left'|'center'"
+        },
+        "marginTop": {
+          "editor": "text",
+          "default": "4px",
+          "tsType": "string"
+        },
+        "marginBottom": {
+          "editor": "text",
+          "default": "0px",
+          "tsType": "string"
+        }
+      },
+      "enumOptions": {
+        "size": [
+          "md",
+          "sm"
+        ],
+        "align": [
+          "left",
+          "center"
+        ]
+      },
+      "dependencies": {
+        "scripts": [
+          "./support.js"
+        ],
+        "stylesheets": [
+          "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+        ],
+        "dcImports": [],
+        "assetPaths": []
+      },
+      "directives": {
+        "scIf": 0,
+        "scFor": 0,
+        "styleHover": 0
+      },
+      "usages": [
+        {
+          "section": "heading",
+          "attrs": {
+            "name": "SectionHeading",
+            "eyebrow": "HOW IT WORKS",
+            "title": "Four steps, fully mail-in",
+            "hint-size": "100%,64px"
+          }
+        },
+        {
+          "section": "heading",
+          "attrs": {
+            "name": "SectionHeading",
+            "eyebrow": "SEND-IN INSTRUCTIONS",
+            "title": "Packing your device",
+            "align": "center",
+            "hint-size": "100%,64px"
+          }
+        }
+      ],
+      "confidence": "confirmed",
+      "notes": [
+        "Recovered verbatim; not rendered or verified in a browser."
+      ]
+    },
+    {
+      "stable_id": "dc.Breadcrumb",
+      "name": "Breadcrumb",
+      "kind": "dc-component",
+      "document": "documents/Breadcrumb.dc.html",
+      "sha256": "cdc87c986767ab98c96f8dda731b20041bc2a666b6e8068350f6fe673f80ad20",
+      "bytes": 10679,
+      "preview": {
+        "width": "480px",
+        "height": "40px"
+      },
+      "props": {
+        "firstLabel": {
+          "editor": "text",
+          "default": "Home",
+          "tsType": "string"
+        },
+        "firstHref": {
+          "editor": "text",
+          "default": "index.html",
+          "tsType": "string"
+        },
+        "firstClick": {
+          "editor": null,
+          "tsType": "(e) => void"
+        },
+        "midLabel": {
+          "editor": "text",
+          "default": "",
+          "tsType": "string"
+        },
+        "midHref": {
+          "editor": "text",
+          "default": "#",
+          "tsType": "string"
+        },
+        "current": {
+          "editor": "text",
+          "default": "Current page",
+          "tsType": "string"
+        }
+      },
+      "enumOptions": {},
+      "dependencies": {
+        "scripts": [
+          "./support.js"
+        ],
+        "stylesheets": [
+          "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+        ],
+        "dcImports": [],
+        "assetPaths": []
+      },
+      "directives": {
+        "scIf": 0,
+        "scFor": 0,
+        "styleHover": 0
+      },
+      "usages": [
+        {
+          "section": "crumbs",
+          "attrs": {
+            "name": "Breadcrumb",
+            "first-label": "Home",
+            "first-href": "index.html",
+            "current": "Calibration services",
+            "hint-size": "100%,20px"
+          }
+        },
+        {
+          "section": "crumbs",
+          "attrs": {
+            "name": "Breadcrumb",
+            "first-label": "Home",
+            "first-href": "index.html",
+            "mid-label": "Brands",
+            "mid-href": "#",
+            "current": "Lion Laboratories",
+            "hint-size": "100%,20px"
+          }
+        }
+      ],
+      "confidence": "confirmed",
+      "notes": [
+        "Recovered verbatim; not rendered or verified in a browser."
+      ]
+    },
+    {
+      "stable_id": "dc.ProductCard",
+      "name": "ProductCard",
+      "kind": "dc-component",
+      "document": "documents/ProductCard.dc.html",
+      "sha256": "4aecdaf69a1f27cc5630ffc6b5ea73db6ae8bac7287f25bcbdf0fa640de9aa8a",
+      "bytes": 14245,
+      "preview": {
+        "width": 300,
+        "height": 440
+      },
+      "props": {
+        "p": {
+          "editor": null,
+          "default": {
+            "name": "Drivesafe III",
+            "spec": "Fuel-cell · handheld",
+            "price": "348,00 €",
+            "img": "assets/media/productInd-0.png",
+            "tag": "Pro"
+          },
+          "tsType": "object"
+        }
+      },
+      "enumOptions": {},
+      "dependencies": {
+        "scripts": [
+          "./support.js"
+        ],
+        "stylesheets": [],
+        "dcImports": [],
+        "assetPaths": [
+          "assets/media/productInd-0.png"
+        ]
+      },
+      "directives": {
+        "scIf": 0,
+        "scFor": 0,
+        "styleHover": 3
+      },
+      "usages": [
+        {
+          "section": "cards",
+          "attrs": {
+            "name": "ProductCard",
+            "p": "{{ sp }}",
+            "hint-size": "100%,440px"
+          }
+        }
+      ],
+      "confidence": "confirmed",
+      "notes": [
+        "Recovered verbatim; not rendered or verified in a browser."
+      ]
+    },
+    {
+      "stable_id": "dc.PdfCard",
+      "name": "PdfCard",
+      "kind": "dc-component",
+      "document": "documents/PdfCard.dc.html",
+      "sha256": "bfeac52d61b24d744aa9fb14d127e952bf6908bf313408a9af1283de6ccf6f73",
+      "bytes": 8627,
+      "preview": {
+        "width": "420px",
+        "height": "80px"
+      },
+      "props": {
+        "title": {
+          "editor": "text",
+          "default": "Document title",
+          "tsType": "string"
+        },
+        "size": {
+          "editor": "text",
+          "default": "240 KB",
+          "tsType": "string"
+        },
+        "href": {
+          "editor": "text",
+          "default": "#",
+          "tsType": "string"
+        }
+      },
+      "enumOptions": {},
+      "dependencies": {
+        "scripts": [
+          "./support.js"
+        ],
+        "stylesheets": [],
+        "dcImports": [],
+        "assetPaths": []
+      },
+      "directives": {
+        "scIf": 0,
+        "scFor": 0,
+        "styleHover": 1
+      },
+      "usages": [
+        {
+          "section": "cards",
+          "attrs": {
+            "name": "PdfCard",
+            "title": "Décret n° 2012-284",
+            "size": "186 KB",
+            "meta": "PDF · 186 KB",
+            "href": "#",
+            "hint-size": "100%,80px"
+          }
+        },
+        {
+          "section": "cards",
+          "attrs": {
+            "name": "PdfCard",
+            "title": "NF X20-702 certificate",
+            "size": "240 KB",
+            "meta": "PDF · 240 KB",
+            "href": "#",
+            "hint-size": "100%,80px"
+          }
+        },
+        {
+          "section": "cards",
+          "attrs": {
+            "name": "PdfCard",
+            "title": "User manual",
+            "size": "1.2 MB",
+            "meta": "PDF · 1.2 MB",
+            "href": "#",
+            "hint-size": "100%,80px"
+          }
+        }
+      ],
+      "confidence": "confirmed",
+      "notes": [
+        "Recovered verbatim; not rendered or verified in a browser."
+      ]
+    },
+    {
+      "stable_id": "dc.FormField",
+      "name": "FormField",
+      "kind": "dc-component",
+      "document": "documents/FormField.dc.html",
+      "sha256": "825889679226087aba5c8f99babe046154583c362ea3a1c6369b8d7432132394",
+      "bytes": 21476,
+      "preview": {
+        "width": "1000px",
+        "height": "640px"
+      },
+      "props": {
+        "kind": {
+          "editor": "enum",
+          "options": [
+            "input",
+            "select",
+            "textarea",
+            "all"
+          ],
+          "default": "all",
+          "tsType": "'input'|'select'|'textarea'|'all'"
+        },
+        "label": {
+          "editor": "text",
+          "default": "First name *",
+          "tsType": "string"
+        },
+        "type": {
+          "editor": "enum",
+          "options": [
+            "text",
+            "email",
+            "tel",
+            "password",
+            "date",
+            "number"
+          ],
+          "default": "text",
+          "tsType": "string"
+        },
+        "value": {
+          "editor": "text",
+          "default": "",
+          "tsType": "string"
+        },
+        "placeholder": {
+          "editor": "text",
+          "default": "",
+          "tsType": "string"
+        },
+        "options": {
+          "editor": "text",
+          "default": "",
+          "tsType": "string",
+          "label": "Options (A|B|C)"
+        },
+        "prompt": {
+          "editor": "text",
+          "default": "",
+          "tsType": "string"
+        },
+        "promptDisabled": {
+          "editor": "boolean",
+          "default": false,
+          "tsType": "boolean"
+        },
+        "rows": {
+          "editor": "int",
+          "default": 4,
+          "tsType": "number"
+        },
+        "full": {
+          "editor": "boolean",
+          "default": false,
+          "tsType": "boolean",
+          "label": "Span full grid row"
+        },
+        "marginTop": {
+          "editor": "text",
+          "default": "0px",
+          "tsType": "string"
+        },
+        "readOnly": {
+          "editor": "boolean",
+          "default": false,
+          "tsType": "boolean"
+        },
+        "onChange": {
+          "editor": null,
+          "tsType": "(e) => void"
+        }
+      },
+      "enumOptions": {
+        "kind": [
+          "input",
+          "select",
+          "textarea",
+          "all"
+        ],
+        "type": [
+          "text",
+          "email",
+          "tel",
+          "password",
+          "date",
+          "number"
+        ]
+      },
+      "dependencies": {
+        "scripts": [
+          "./support.js"
+        ],
+        "stylesheets": [
+          "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+        ],
+        "dcImports": [],
+        "assetPaths": []
+      },
+      "directives": {
+        "scIf": 0,
+        "scFor": 0,
+        "styleHover": 0
+      },
+      "usages": [
+        {
+          "section": "forms",
+          "attrs": {
+            "name": "FormField",
+            "kind": "all",
+            "hint-size": "100%,560px"
+          }
+        }
+      ],
+      "confidence": "confirmed",
+      "notes": [
+        "Recovered verbatim; not rendered or verified in a browser."
+      ]
+    },
+    {
+      "stable_id": "dc.Choice",
+      "name": "Choice",
+      "kind": "dc-component",
+      "document": "documents/Choice.dc.html",
+      "sha256": "eac2aa0cdf2dc55ae58120403d7bc84d9bc6a3b5ce6025390a66d7765ae42001",
+      "bytes": 20148,
+      "preview": {
+        "width": "1000px",
+        "height": "520px"
+      },
+      "props": {
+        "kind": {
+          "editor": "enum",
+          "options": [
+            "all",
+            "checkbox",
+            "radio",
+            "card"
+          ],
+          "default": "all",
+          "tsType": "'all'|'checkbox'|'radio'|'card'"
+        },
+        "checked": {
+          "editor": "boolean",
+          "default": false,
+          "tsType": "boolean"
+        },
+        "title": {
+          "editor": "text",
+          "default": "",
+          "tsType": "string"
+        },
+        "desc": {
+          "editor": "text",
+          "default": "",
+          "tsType": "string"
+        },
+        "price": {
+          "editor": "text",
+          "default": "",
+          "tsType": "string"
+        },
+        "label": {
+          "editor": "text",
+          "default": "",
+          "tsType": "string",
+          "label": "Label ([link](#href) allowed)"
+        },
+        "count": {
+          "editor": "text",
+          "default": "",
+          "tsType": "string|number"
+        },
+        "top": {
+          "editor": "boolean",
+          "default": false,
+          "tsType": "boolean",
+          "label": "Align to first line"
+        },
+        "gap": {
+          "editor": "text",
+          "default": "10px",
+          "tsType": "string"
+        },
+        "logo": {
+          "editor": null,
+          "tsType": "ReactNode"
+        },
+        "onPick": {
+          "editor": null,
+          "tsType": "(e) => void"
+        }
+      },
+      "enumOptions": {
+        "kind": [
+          "all",
+          "checkbox",
+          "radio",
+          "card"
+        ]
+      },
+      "dependencies": {
+        "scripts": [
+          "./support.js"
+        ],
+        "stylesheets": [
+          "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+        ],
+        "dcImports": [],
+        "assetPaths": []
+      },
+      "directives": {
+        "scIf": 0,
+        "scFor": 0,
+        "styleHover": 0
+      },
+      "usages": [
+        {
+          "section": "choice",
+          "attrs": {
+            "name": "Choice",
+            "kind": "all",
+            "hint-size": "100%,480px"
+          }
+        }
+      ],
+      "confidence": "confirmed",
+      "notes": [
+        "Recovered verbatim; not rendered or verified in a browser."
+      ]
+    }
+  ],
+  "inlineExamples": [
+    {
+      "stable_id": "example.buttons",
+      "name": "Buttons",
+      "kind": "inline-example",
+      "group": "atoms",
+      "section": "#buttons",
+      "source_document": "documents/design-system.html",
+      "uses_dc_components": [
+        "Button.dc.html"
+      ],
+      "iframes": [],
+      "confidence": "confirmed",
+      "notes": [
+        "Inline markup example inside the DS document; component boundaries not yet established."
+      ]
+    },
+    {
+      "stable_id": "example.links",
+      "name": "Links & eyebrow",
+      "kind": "inline-example",
+      "group": "atoms",
+      "section": "#links",
+      "source_document": "documents/design-system.html",
+      "uses_dc_components": [],
+      "iframes": [],
+      "confidence": "confirmed",
+      "notes": [
+        "Inline markup example inside the DS document; component boundaries not yet established."
+      ]
+    },
+    {
+      "stable_id": "example.audience",
+      "name": "Audience cards",
+      "kind": "inline-example",
+      "group": "molecules",
+      "section": "#audience",
+      "source_document": "documents/design-system.html",
+      "uses_dc_components": [],
+      "iframes": [],
+      "confidence": "confirmed",
+      "notes": [
+        "Inline markup example inside the DS document; component boundaries not yet established."
+      ]
+    },
+    {
+      "stable_id": "example.tabs",
+      "name": "Segmented tabs",
+      "kind": "inline-example",
+      "group": "molecules",
+      "section": "#tabs",
+      "source_document": "documents/design-system.html",
+      "uses_dc_components": [],
+      "iframes": [],
+      "confidence": "confirmed",
+      "notes": [
+        "Inline markup example inside the DS document; component boundaries not yet established."
+      ]
+    },
+    {
+      "stable_id": "example.purchase",
+      "name": "Purchase actions",
+      "kind": "inline-example",
+      "group": "molecules",
+      "section": "#purchase",
+      "source_document": "documents/design-system.html",
+      "uses_dc_components": [],
+      "iframes": [],
+      "confidence": "confirmed",
+      "notes": [
+        "Inline markup example inside the DS document; component boundaries not yet established."
+      ]
+    },
+    {
+      "stable_id": "example.heading",
+      "name": "Section heading",
+      "kind": "inline-example",
+      "group": "molecules",
+      "section": "#heading",
+      "source_document": "documents/design-system.html",
+      "uses_dc_components": [
+        "SectionHeading.dc.html"
+      ],
+      "iframes": [],
+      "confidence": "confirmed",
+      "notes": [
+        "Inline markup example inside the DS document; component boundaries not yet established."
+      ]
+    },
+    {
+      "stable_id": "example.components",
+      "name": "Header & footer",
+      "kind": "inline-example",
+      "group": "organisms",
+      "section": "#components",
+      "source_document": "documents/design-system.html",
+      "uses_dc_components": [],
+      "iframes": [
+        "{{ o.src }}"
+      ],
+      "confidence": "needs-review",
+      "notes": [
+        "Rendered via iframe of a document absent from this bundle."
+      ]
+    },
+    {
+      "stable_id": "example.crumbs",
+      "name": "Breadcrumb",
+      "kind": "inline-example",
+      "group": "molecules",
+      "section": "#crumbs",
+      "source_document": "documents/design-system.html",
+      "uses_dc_components": [
+        "Breadcrumb.dc.html"
+      ],
+      "iframes": [],
+      "confidence": "confirmed",
+      "notes": [
+        "Inline markup example inside the DS document; component boundaries not yet established."
+      ]
+    },
+    {
+      "stable_id": "example.cards",
+      "name": "Product & PDF cards",
+      "kind": "inline-example",
+      "group": "molecules",
+      "section": "#cards",
+      "source_document": "documents/design-system.html",
+      "uses_dc_components": [
+        "ProductCard.dc.html",
+        "PdfCard.dc.html"
+      ],
+      "iframes": [],
+      "confidence": "confirmed",
+      "notes": [
+        "Inline markup example inside the DS document; component boundaries not yet established."
+      ]
+    },
+    {
+      "stable_id": "example.chips",
+      "name": "Tags & chips",
+      "kind": "inline-example",
+      "group": "molecules",
+      "section": "#chips",
+      "source_document": "documents/design-system.html",
+      "uses_dc_components": [],
+      "iframes": [],
+      "confidence": "confirmed",
+      "notes": [
+        "Inline markup example inside the DS document; component boundaries not yet established."
+      ]
+    },
+    {
+      "stable_id": "example.gallery",
+      "name": "Product gallery",
+      "kind": "inline-example",
+      "group": "molecules",
+      "section": "#gallery",
+      "source_document": "documents/design-system.html",
+      "uses_dc_components": [],
+      "iframes": [],
+      "confidence": "confirmed",
+      "notes": [
+        "Inline markup example inside the DS document; component boundaries not yet established."
+      ]
+    },
+    {
+      "stable_id": "example.toc",
+      "name": "Page contents",
+      "kind": "inline-example",
+      "group": "molecules",
+      "section": "#toc",
+      "source_document": "documents/design-system.html",
+      "uses_dc_components": [],
+      "iframes": [],
+      "confidence": "confirmed",
+      "notes": [
+        "Inline markup example inside the DS document; component boundaries not yet established."
+      ]
+    },
+    {
+      "stable_id": "example.auth",
+      "name": "Auth actions",
+      "kind": "inline-example",
+      "group": "molecules",
+      "section": "#auth",
+      "source_document": "documents/design-system.html",
+      "uses_dc_components": [],
+      "iframes": [],
+      "confidence": "confirmed",
+      "notes": [
+        "Inline markup example inside the DS document; component boundaries not yet established."
+      ]
+    },
+    {
+      "stable_id": "example.mobilemenu",
+      "name": "Mobile menu",
+      "kind": "inline-example",
+      "group": "organisms",
+      "section": "#mobilemenu",
+      "source_document": "documents/design-system.html",
+      "uses_dc_components": [],
+      "iframes": [],
+      "confidence": "confirmed",
+      "notes": [
+        "Inline markup example inside the DS document; component boundaries not yet established."
+      ]
+    },
+    {
+      "stable_id": "example.compare",
+      "name": "Compare table",
+      "kind": "inline-example",
+      "group": "organisms",
+      "section": "#compare",
+      "source_document": "documents/design-system.html",
+      "uses_dc_components": [],
+      "iframes": [],
+      "confidence": "confirmed",
+      "notes": [
+        "Inline markup example inside the DS document; component boundaries not yet established."
+      ]
+    },
+    {
+      "stable_id": "example.checkoutbar",
+      "name": "Checkout progress",
+      "kind": "inline-example",
+      "group": "organisms",
+      "section": "#checkoutbar",
+      "source_document": "documents/design-system.html",
+      "uses_dc_components": [],
+      "iframes": [],
+      "confidence": "confirmed",
+      "notes": [
+        "Inline markup example inside the DS document; component boundaries not yet established."
+      ]
+    },
+    {
+      "stable_id": "example.loader",
+      "name": "Page loader",
+      "kind": "inline-example",
+      "group": "organisms",
+      "section": "#loader",
+      "source_document": "documents/design-system.html",
+      "uses_dc_components": [],
+      "iframes": [],
+      "confidence": "confirmed",
+      "notes": [
+        "Inline markup example inside the DS document; component boundaries not yet established."
+      ]
+    },
+    {
+      "stable_id": "example.organisms",
+      "name": "Home sections",
+      "kind": "inline-example",
+      "group": "organisms",
+      "section": "#organisms",
+      "source_document": "documents/design-system.html",
+      "uses_dc_components": [],
+      "iframes": [
+        "{{ o.src }}"
+      ],
+      "confidence": "needs-review",
+      "notes": [
+        "Rendered via iframe of a document absent from this bundle."
+      ]
+    },
+    {
+      "stable_id": "example.templates",
+      "name": "Home page",
+      "kind": "inline-example",
+      "group": "templates",
+      "section": "#templates",
+      "source_document": "documents/design-system.html",
+      "uses_dc_components": [],
+      "iframes": [],
+      "confidence": "confirmed",
+      "notes": [
+        "Inline markup example inside the DS document; component boundaries not yet established."
+      ]
+    },
+    {
+      "stable_id": "example.handoff",
+      "name": "Developer handoff",
+      "kind": "inline-example",
+      "group": "templates",
+      "section": "#handoff",
+      "source_document": "documents/design-system.html",
+      "uses_dc_components": [],
+      "iframes": [],
+      "confidence": "confirmed",
+      "notes": [
+        "Inline markup example inside the DS document; component boundaries not yet established."
+      ]
+    },
+    {
+      "stable_id": "example.forms",
+      "name": "Form fields",
+      "kind": "inline-example",
+      "group": "atoms",
+      "section": "#forms",
+      "source_document": "documents/design-system.html",
+      "uses_dc_components": [
+        "FormField.dc.html"
+      ],
+      "iframes": [],
+      "confidence": "confirmed",
+      "notes": [
+        "Inline markup example inside the DS document; component boundaries not yet established."
+      ]
+    },
+    {
+      "stable_id": "example.choice",
+      "name": "Choice controls",
+      "kind": "inline-example",
+      "group": "atoms",
+      "section": "#choice",
+      "source_document": "documents/design-system.html",
+      "uses_dc_components": [
+        "Choice.dc.html"
+      ],
+      "iframes": [],
+      "confidence": "confirmed",
+      "notes": [
+        "Inline markup example inside the DS document; component boundaries not yet established."
+      ]
+    },
+    {
+      "stable_id": "example.feedback",
+      "name": "Status & feedback",
+      "kind": "inline-example",
+      "group": "molecules",
+      "section": "#feedback",
+      "source_document": "documents/design-system.html",
+      "uses_dc_components": [],
+      "iframes": [],
+      "confidence": "confirmed",
+      "notes": [
+        "Inline markup example inside the DS document; component boundaries not yet established."
+      ]
+    },
+    {
+      "stable_id": "example.commerce",
+      "name": "Commerce controls",
+      "kind": "inline-example",
+      "group": "molecules",
+      "section": "#commerce",
+      "source_document": "documents/design-system.html",
+      "uses_dc_components": [],
+      "iframes": [],
+      "confidence": "confirmed",
+      "notes": [
+        "Inline markup example inside the DS document; component boundaries not yet established."
+      ]
+    },
+    {
+      "stable_id": "example.overlays",
+      "name": "Drawers & modals",
+      "kind": "inline-example",
+      "group": "organisms",
+      "section": "#overlays",
+      "source_document": "documents/design-system.html",
+      "uses_dc_components": [],
+      "iframes": [],
+      "confidence": "confirmed",
+      "notes": [
+        "Inline markup example inside the DS document; component boundaries not yet established."
+      ]
+    },
+    {
+      "stable_id": "example.faq",
+      "name": "FAQ accordion",
+      "kind": "inline-example",
+      "group": "molecules",
+      "section": "#faq",
+      "source_document": "documents/design-system.html",
+      "uses_dc_components": [],
+      "iframes": [],
+      "confidence": "confirmed",
+      "notes": [
+        "Inline markup example inside the DS document; component boundaries not yet established."
+      ]
+    },
+    {
+      "stable_id": "example.accnav",
+      "name": "Account navigation",
+      "kind": "inline-example",
+      "group": "organisms",
+      "section": "#accnav",
+      "source_document": "documents/design-system.html",
+      "uses_dc_components": [],
+      "iframes": [],
+      "confidence": "confirmed",
+      "notes": [
+        "Inline markup example inside the DS document; component boundaries not yet established."
+      ]
+    }
+  ],
+  "externalPreviews": [
+    {
+      "stable_id": "preview.header",
+      "label": "Header",
+      "cssClass": "abq-header",
+      "sourceFile": "SiteHeader.dc.html",
+      "section": "#components",
+      "status": "unresolved"
+    },
+    {
+      "stable_id": "preview.footer",
+      "label": "Footer",
+      "cssClass": "abq-footer",
+      "sourceFile": "SiteFooter.dc.html",
+      "section": "#components",
+      "status": "unresolved"
+    },
+    {
+      "stable_id": "preview.home.hero",
+      "label": "Hero",
+      "cssClass": "abq-hero",
+      "sourceFile": "index.html",
+      "section": "#organisms",
+      "status": "unresolved"
+    },
+    {
+      "stable_id": "preview.home.trust-sec",
+      "label": "Trust bar",
+      "cssClass": "abq-trust-bar",
+      "sourceFile": "index.html",
+      "section": "#organisms",
+      "status": "unresolved"
+    },
+    {
+      "stable_id": "preview.home.cats",
+      "label": "Categories",
+      "cssClass": "abq-categories",
+      "sourceFile": "index.html",
+      "section": "#organisms",
+      "status": "unresolved"
+    },
+    {
+      "stable_id": "preview.home.certs",
+      "label": "In stock products",
+      "cssClass": "abq-product-grid",
+      "sourceFile": "index.html",
+      "section": "#organisms",
+      "status": "unresolved"
+    },
+    {
+      "stable_id": "preview.home.cta-sec",
+      "label": "Calibration CTA",
+      "cssClass": "abq-cta-band",
+      "sourceFile": "index.html",
+      "section": "#organisms",
+      "status": "unresolved"
+    },
+    {
+      "stable_id": "preview.home.guides-sec",
+      "label": "Knowledge hub",
+      "cssClass": "abq-guides",
+      "sourceFile": "index.html",
+      "section": "#organisms",
+      "status": "unresolved"
+    },
+    {
+      "stable_id": "preview.home.brands",
+      "label": "Brands",
+      "cssClass": "abq-brands",
+      "sourceFile": "index.html",
+      "section": "#organisms",
+      "status": "unresolved"
+    }
+  ],
+  "notes": [
+    "Inventory only. Nothing here has been rendered, verified for fidelity, or imported into production."
+  ]
+}

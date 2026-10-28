@@ -1,0 +1,1143 @@
+{
+  "schemaVersion": 1,
+  "snapshot": "design-system-91951f68",
+  "scope": "Design-system viewer states (hash-driven sections of one document). No site pages are bundled in this export.",
+  "stateModel": {
+    "stateKey": "page",
+    "source": "location.hash via pageFromHash()",
+    "defaultPage": "overview",
+    "ids": [
+      "icons",
+      "chips",
+      "gallery",
+      "toc",
+      "auth",
+      "mobilemenu",
+      "compare",
+      "checkoutbar",
+      "loader",
+      "overview",
+      "color",
+      "type",
+      "space",
+      "radius",
+      "buttons",
+      "links",
+      "audience",
+      "tabs",
+      "purchase",
+      "heading",
+      "crumbs",
+      "cards",
+      "components",
+      "organisms",
+      "templates",
+      "handoff",
+      "forms",
+      "choice",
+      "feedback",
+      "commerce",
+      "overlays",
+      "faq",
+      "accnav"
+    ],
+    "subStateMap": "{}",
+    "visibilityMechanism": "main[data-r=main][data-page] > section { display:none } + per-id display:flex rule; <main data-page=\"{{ page }}\">"
+  },
+  "pages": [
+    {
+      "stable_id": "ds.overview",
+      "route_or_state": "#overview",
+      "state": {
+        "page": "overview",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "foundations",
+      "nav_label": "Atomic structure",
+      "heading": "Browse the system",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"overview\"] > section#overview",
+        "aside[data-r=side] a[href=\"#overview\"]"
+      ],
+      "shared_dependencies": [],
+      "directives": [],
+      "iframes": [],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": false
+      },
+      "confidence": "confirmed",
+      "notes": [
+        "Default state when location.hash is empty or not in IDS (state.page='overview')."
+      ]
+    },
+    {
+      "stable_id": "ds.color",
+      "route_or_state": "#color",
+      "state": {
+        "page": "color",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "foundations",
+      "nav_label": "Colour",
+      "heading": "Color",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"color\"] > section#color",
+        "aside[data-r=side] a[href=\"#color\"]"
+      ],
+      "shared_dependencies": [],
+      "directives": [
+        {
+          "directive": "sc-for",
+          "attrs": {
+            "list": "{{ colorGroups }}",
+            "as": "g",
+            "hint-placeholder-count": "3"
+          },
+          "section": "color"
+        },
+        {
+          "directive": "sc-for",
+          "attrs": {
+            "list": "{{ g.items }}",
+            "as": "c",
+            "hint-placeholder-count": "4"
+          },
+          "section": "color"
+        }
+      ],
+      "iframes": [],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": true
+      },
+      "confidence": "confirmed",
+      "notes": []
+    },
+    {
+      "stable_id": "ds.type",
+      "route_or_state": "#type",
+      "state": {
+        "page": "type",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "foundations",
+      "nav_label": "Typography",
+      "heading": "Typography",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"type\"] > section#type",
+        "aside[data-r=side] a[href=\"#type\"]"
+      ],
+      "shared_dependencies": [],
+      "directives": [
+        {
+          "directive": "sc-for",
+          "attrs": {
+            "list": "{{ typeScale }}",
+            "as": "t",
+            "hint-placeholder-count": "9"
+          },
+          "section": "type"
+        }
+      ],
+      "iframes": [],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": false
+      },
+      "confidence": "confirmed",
+      "notes": []
+    },
+    {
+      "stable_id": "ds.space",
+      "route_or_state": "#space",
+      "state": {
+        "page": "space",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "foundations",
+      "nav_label": "Spacing",
+      "heading": "Spacing",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"space\"] > section#space",
+        "aside[data-r=side] a[href=\"#space\"]"
+      ],
+      "shared_dependencies": [],
+      "directives": [
+        {
+          "directive": "sc-for",
+          "attrs": {
+            "list": "{{ spacing }}",
+            "as": "s",
+            "hint-placeholder-count": "21"
+          },
+          "section": "space"
+        }
+      ],
+      "iframes": [],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": false
+      },
+      "confidence": "confirmed",
+      "notes": []
+    },
+    {
+      "stable_id": "ds.radius",
+      "route_or_state": "#radius",
+      "state": {
+        "page": "radius",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "foundations",
+      "nav_label": "Radius & elevation",
+      "heading": "Radius & elevation",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"radius\"] > section#radius",
+        "aside[data-r=side] a[href=\"#radius\"]"
+      ],
+      "shared_dependencies": [],
+      "directives": [
+        {
+          "directive": "sc-for",
+          "attrs": {
+            "list": "{{ radii }}",
+            "as": "r",
+            "hint-placeholder-count": "7"
+          },
+          "section": "radius"
+        },
+        {
+          "directive": "sc-for",
+          "attrs": {
+            "list": "{{ shadows }}",
+            "as": "s",
+            "hint-placeholder-count": "5"
+          },
+          "section": "radius"
+        }
+      ],
+      "iframes": [],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": false
+      },
+      "confidence": "confirmed",
+      "notes": []
+    },
+    {
+      "stable_id": "ds.icons",
+      "route_or_state": "#icons",
+      "state": {
+        "page": "icons",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "foundations",
+      "nav_label": "Icon library",
+      "heading": "Icon library",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"icons\"] > section#icons",
+        "aside[data-r=side] a[href=\"#icons\"]"
+      ],
+      "shared_dependencies": [],
+      "directives": [
+        {
+          "directive": "sc-for",
+          "attrs": {
+            "list": "{{ icons }}",
+            "as": "ic",
+            "hint-placeholder-count": "24"
+          },
+          "section": "icons"
+        }
+      ],
+      "iframes": [],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": false
+      },
+      "confidence": "confirmed",
+      "notes": []
+    },
+    {
+      "stable_id": "ds.buttons",
+      "route_or_state": "#buttons",
+      "state": {
+        "page": "buttons",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "atoms",
+      "nav_label": "Buttons",
+      "heading": "Buttons",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"buttons\"] > section#buttons",
+        "aside[data-r=side] a[href=\"#buttons\"]"
+      ],
+      "shared_dependencies": [
+        "Button.dc.html"
+      ],
+      "directives": [],
+      "iframes": [],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": true
+      },
+      "confidence": "confirmed",
+      "notes": []
+    },
+    {
+      "stable_id": "ds.links",
+      "route_or_state": "#links",
+      "state": {
+        "page": "links",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "atoms",
+      "nav_label": "Links & eyebrow",
+      "heading": "Links & eyebrow",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"links\"] > section#links",
+        "aside[data-r=side] a[href=\"#links\"]"
+      ],
+      "shared_dependencies": [],
+      "directives": [],
+      "iframes": [],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": false
+      },
+      "confidence": "confirmed",
+      "notes": []
+    },
+    {
+      "stable_id": "ds.audience",
+      "route_or_state": "#audience",
+      "state": {
+        "page": "audience",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "molecules",
+      "nav_label": "Audience cards",
+      "heading": "Audience cards",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"audience\"] > section#audience",
+        "aside[data-r=side] a[href=\"#audience\"]"
+      ],
+      "shared_dependencies": [],
+      "directives": [],
+      "iframes": [],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": false
+      },
+      "confidence": "confirmed",
+      "notes": []
+    },
+    {
+      "stable_id": "ds.tabs",
+      "route_or_state": "#tabs",
+      "state": {
+        "page": "tabs",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "molecules",
+      "nav_label": "Segmented tabs",
+      "heading": "Segmented tabs",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"tabs\"] > section#tabs",
+        "aside[data-r=side] a[href=\"#tabs\"]"
+      ],
+      "shared_dependencies": [],
+      "directives": [],
+      "iframes": [],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": true
+      },
+      "confidence": "confirmed",
+      "notes": []
+    },
+    {
+      "stable_id": "ds.purchase",
+      "route_or_state": "#purchase",
+      "state": {
+        "page": "purchase",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "molecules",
+      "nav_label": "Purchase actions",
+      "heading": "Purchase actions",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"purchase\"] > section#purchase",
+        "aside[data-r=side] a[href=\"#purchase\"]"
+      ],
+      "shared_dependencies": [],
+      "directives": [],
+      "iframes": [],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": false
+      },
+      "confidence": "confirmed",
+      "notes": []
+    },
+    {
+      "stable_id": "ds.heading",
+      "route_or_state": "#heading",
+      "state": {
+        "page": "heading",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "molecules",
+      "nav_label": "Section heading",
+      "heading": "Section heading",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"heading\"] > section#heading",
+        "aside[data-r=side] a[href=\"#heading\"]"
+      ],
+      "shared_dependencies": [
+        "SectionHeading.dc.html"
+      ],
+      "directives": [],
+      "iframes": [],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": false
+      },
+      "confidence": "confirmed",
+      "notes": []
+    },
+    {
+      "stable_id": "ds.components",
+      "route_or_state": "#components",
+      "state": {
+        "page": "components",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "organisms",
+      "nav_label": "Header & footer",
+      "heading": "Header & footer",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"components\"] > section#components",
+        "aside[data-r=side] a[href=\"#components\"]"
+      ],
+      "shared_dependencies": [],
+      "directives": [
+        {
+          "directive": "sc-for",
+          "attrs": {
+            "list": "{{ components }}",
+            "as": "o",
+            "hint-placeholder-count": "2"
+          },
+          "section": "components"
+        }
+      ],
+      "iframes": [
+        {
+          "src": "{{ o.src }}",
+          "section": "components"
+        }
+      ],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": true
+      },
+      "confidence": "confirmed",
+      "notes": [
+        "Contains iframe preview(s) bound to {{ o.src }}; target documents are not in this bundle."
+      ]
+    },
+    {
+      "stable_id": "ds.crumbs",
+      "route_or_state": "#crumbs",
+      "state": {
+        "page": "crumbs",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "molecules",
+      "nav_label": "Breadcrumb",
+      "heading": "Breadcrumb",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"crumbs\"] > section#crumbs",
+        "aside[data-r=side] a[href=\"#crumbs\"]"
+      ],
+      "shared_dependencies": [
+        "Breadcrumb.dc.html"
+      ],
+      "directives": [],
+      "iframes": [],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": false
+      },
+      "confidence": "confirmed",
+      "notes": []
+    },
+    {
+      "stable_id": "ds.cards",
+      "route_or_state": "#cards",
+      "state": {
+        "page": "cards",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "molecules",
+      "nav_label": "Product & PDF cards",
+      "heading": "Product & PDF cards",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"cards\"] > section#cards",
+        "aside[data-r=side] a[href=\"#cards\"]"
+      ],
+      "shared_dependencies": [
+        "ProductCard.dc.html",
+        "PdfCard.dc.html"
+      ],
+      "directives": [
+        {
+          "directive": "sc-for",
+          "attrs": {
+            "list": "{{ sampleProducts }}",
+            "as": "sp",
+            "hint-placeholder-count": "3"
+          },
+          "section": "cards"
+        }
+      ],
+      "iframes": [],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": false
+      },
+      "confidence": "confirmed",
+      "notes": []
+    },
+    {
+      "stable_id": "ds.chips",
+      "route_or_state": "#chips",
+      "state": {
+        "page": "chips",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "molecules",
+      "nav_label": "Tags & chips",
+      "heading": "Tags & chips",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"chips\"] > section#chips",
+        "aside[data-r=side] a[href=\"#chips\"]"
+      ],
+      "shared_dependencies": [],
+      "directives": [],
+      "iframes": [],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": false
+      },
+      "confidence": "confirmed",
+      "notes": []
+    },
+    {
+      "stable_id": "ds.gallery",
+      "route_or_state": "#gallery",
+      "state": {
+        "page": "gallery",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "molecules",
+      "nav_label": "Product gallery",
+      "heading": "Product gallery",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"gallery\"] > section#gallery",
+        "aside[data-r=side] a[href=\"#gallery\"]"
+      ],
+      "shared_dependencies": [],
+      "directives": [],
+      "iframes": [],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": false
+      },
+      "confidence": "confirmed",
+      "notes": []
+    },
+    {
+      "stable_id": "ds.toc",
+      "route_or_state": "#toc",
+      "state": {
+        "page": "toc",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "molecules",
+      "nav_label": "Page contents",
+      "heading": "Page contents",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"toc\"] > section#toc",
+        "aside[data-r=side] a[href=\"#toc\"]"
+      ],
+      "shared_dependencies": [],
+      "directives": [],
+      "iframes": [],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": false
+      },
+      "confidence": "confirmed",
+      "notes": []
+    },
+    {
+      "stable_id": "ds.auth",
+      "route_or_state": "#auth",
+      "state": {
+        "page": "auth",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "molecules",
+      "nav_label": "Auth actions",
+      "heading": "Auth actions",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"auth\"] > section#auth",
+        "aside[data-r=side] a[href=\"#auth\"]"
+      ],
+      "shared_dependencies": [],
+      "directives": [],
+      "iframes": [],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": false
+      },
+      "confidence": "confirmed",
+      "notes": []
+    },
+    {
+      "stable_id": "ds.mobilemenu",
+      "route_or_state": "#mobilemenu",
+      "state": {
+        "page": "mobilemenu",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "organisms",
+      "nav_label": "Mobile menu",
+      "heading": "Mobile menu",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"mobilemenu\"] > section#mobilemenu",
+        "aside[data-r=side] a[href=\"#mobilemenu\"]"
+      ],
+      "shared_dependencies": [],
+      "directives": [],
+      "iframes": [],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": false
+      },
+      "confidence": "confirmed",
+      "notes": []
+    },
+    {
+      "stable_id": "ds.compare",
+      "route_or_state": "#compare",
+      "state": {
+        "page": "compare",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "organisms",
+      "nav_label": "Compare table",
+      "heading": "Compare table",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"compare\"] > section#compare",
+        "aside[data-r=side] a[href=\"#compare\"]"
+      ],
+      "shared_dependencies": [],
+      "directives": [],
+      "iframes": [],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": false
+      },
+      "confidence": "confirmed",
+      "notes": []
+    },
+    {
+      "stable_id": "ds.checkoutbar",
+      "route_or_state": "#checkoutbar",
+      "state": {
+        "page": "checkoutbar",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "organisms",
+      "nav_label": "Checkout progress",
+      "heading": "Checkout progress",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"checkoutbar\"] > section#checkoutbar",
+        "aside[data-r=side] a[href=\"#checkoutbar\"]"
+      ],
+      "shared_dependencies": [],
+      "directives": [],
+      "iframes": [],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": false
+      },
+      "confidence": "confirmed",
+      "notes": []
+    },
+    {
+      "stable_id": "ds.loader",
+      "route_or_state": "#loader",
+      "state": {
+        "page": "loader",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "organisms",
+      "nav_label": "Page loader",
+      "heading": "Page loader",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"loader\"] > section#loader",
+        "aside[data-r=side] a[href=\"#loader\"]"
+      ],
+      "shared_dependencies": [],
+      "directives": [],
+      "iframes": [],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": false
+      },
+      "confidence": "confirmed",
+      "notes": []
+    },
+    {
+      "stable_id": "ds.organisms",
+      "route_or_state": "#organisms",
+      "state": {
+        "page": "organisms",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "organisms",
+      "nav_label": "Home sections",
+      "heading": "Home sections",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"organisms\"] > section#organisms",
+        "aside[data-r=side] a[href=\"#organisms\"]"
+      ],
+      "shared_dependencies": [],
+      "directives": [
+        {
+          "directive": "sc-for",
+          "attrs": {
+            "list": "{{ previews }}",
+            "as": "o",
+            "hint-placeholder-count": "3"
+          },
+          "section": "organisms"
+        }
+      ],
+      "iframes": [
+        {
+          "src": "{{ o.src }}",
+          "section": "organisms"
+        }
+      ],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": false
+      },
+      "confidence": "confirmed",
+      "notes": [
+        "Contains iframe preview(s) bound to {{ o.src }}; target documents are not in this bundle."
+      ]
+    },
+    {
+      "stable_id": "ds.templates",
+      "route_or_state": "#templates",
+      "state": {
+        "page": "templates",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "templates",
+      "nav_label": "Home page",
+      "heading": "Home page",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"templates\"] > section#templates",
+        "aside[data-r=side] a[href=\"#templates\"]"
+      ],
+      "shared_dependencies": [],
+      "directives": [],
+      "iframes": [],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": true
+      },
+      "confidence": "confirmed",
+      "notes": []
+    },
+    {
+      "stable_id": "ds.handoff",
+      "route_or_state": "#handoff",
+      "state": {
+        "page": "handoff",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "templates",
+      "nav_label": "Developer handoff",
+      "heading": "Tokens as code",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"handoff\"] > section#handoff",
+        "aside[data-r=side] a[href=\"#handoff\"]"
+      ],
+      "shared_dependencies": [],
+      "directives": [],
+      "iframes": [],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": false
+      },
+      "confidence": "confirmed",
+      "notes": []
+    },
+    {
+      "stable_id": "ds.forms",
+      "route_or_state": "#forms",
+      "state": {
+        "page": "forms",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "atoms",
+      "nav_label": "Form fields",
+      "heading": "Form fields",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"forms\"] > section#forms",
+        "aside[data-r=side] a[href=\"#forms\"]"
+      ],
+      "shared_dependencies": [
+        "FormField.dc.html"
+      ],
+      "directives": [],
+      "iframes": [],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": false
+      },
+      "confidence": "confirmed",
+      "notes": []
+    },
+    {
+      "stable_id": "ds.choice",
+      "route_or_state": "#choice",
+      "state": {
+        "page": "choice",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "atoms",
+      "nav_label": "Choice controls",
+      "heading": "Choice controls",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"choice\"] > section#choice",
+        "aside[data-r=side] a[href=\"#choice\"]"
+      ],
+      "shared_dependencies": [
+        "Choice.dc.html"
+      ],
+      "directives": [],
+      "iframes": [],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": false
+      },
+      "confidence": "confirmed",
+      "notes": []
+    },
+    {
+      "stable_id": "ds.feedback",
+      "route_or_state": "#feedback",
+      "state": {
+        "page": "feedback",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "molecules",
+      "nav_label": "Status & feedback",
+      "heading": "Status & feedback",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"feedback\"] > section#feedback",
+        "aside[data-r=side] a[href=\"#feedback\"]"
+      ],
+      "shared_dependencies": [],
+      "directives": [],
+      "iframes": [],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": false
+      },
+      "confidence": "confirmed",
+      "notes": []
+    },
+    {
+      "stable_id": "ds.commerce",
+      "route_or_state": "#commerce",
+      "state": {
+        "page": "commerce",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "molecules",
+      "nav_label": "Commerce controls",
+      "heading": "Commerce controls",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"commerce\"] > section#commerce",
+        "aside[data-r=side] a[href=\"#commerce\"]"
+      ],
+      "shared_dependencies": [],
+      "directives": [],
+      "iframes": [],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": false
+      },
+      "confidence": "confirmed",
+      "notes": []
+    },
+    {
+      "stable_id": "ds.overlays",
+      "route_or_state": "#overlays",
+      "state": {
+        "page": "overlays",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "organisms",
+      "nav_label": "Drawers & modals",
+      "heading": "Drawers & modals",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"overlays\"] > section#overlays",
+        "aside[data-r=side] a[href=\"#overlays\"]"
+      ],
+      "shared_dependencies": [],
+      "directives": [],
+      "iframes": [],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": false
+      },
+      "confidence": "confirmed",
+      "notes": []
+    },
+    {
+      "stable_id": "ds.faq",
+      "route_or_state": "#faq",
+      "state": {
+        "page": "faq",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "molecules",
+      "nav_label": "FAQ accordion",
+      "heading": "FAQ accordion",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"faq\"] > section#faq",
+        "aside[data-r=side] a[href=\"#faq\"]"
+      ],
+      "shared_dependencies": [],
+      "directives": [],
+      "iframes": [],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": false
+      },
+      "confidence": "confirmed",
+      "notes": []
+    },
+    {
+      "stable_id": "ds.accnav",
+      "route_or_state": "#accnav",
+      "state": {
+        "page": "accnav",
+        "sub": ""
+      },
+      "source_document": "documents/design-system.html",
+      "group": "organisms",
+      "nav_label": "Account navigation",
+      "heading": "Account navigation",
+      "view_selectors": [
+        "main[data-r=main][data-page=\"accnav\"] > section#accnav",
+        "aside[data-r=side] a[href=\"#accnav\"]"
+      ],
+      "shared_dependencies": [],
+      "directives": [],
+      "iframes": [],
+      "variants": [],
+      "evidence": {
+        "navLink": true,
+        "sectionElement": true,
+        "inPageFromHashIds": true,
+        "cssVisibilityRule": true,
+        "overviewCard": false
+      },
+      "confidence": "confirmed",
+      "notes": []
+    }
+  ],
+  "unresolved": [
+    {
+      "note": "Site documents referenced by previews are absent",
+      "refs": [
+        "SiteHeader.dc.html",
+        "SiteFooter.dc.html",
+        "index.html"
+      ]
+    }
+  ]
+}

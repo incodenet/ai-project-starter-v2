@@ -12,7 +12,6 @@ html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  background: var(--color-canvas);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -21,13 +20,13 @@ html {
   }
 }
 
-/* the page surface: white over the canvas tint, at least one screen tall */
+/* the page surface: white, at least one screen tall */
 body {
   min-height: 100vh;
   margin: 0;
-  font-family: var(--font-body);
-  color: var(--color-slate);
-  background: var(--color-white);
+  font-family: var(--abq-font-family);
+  color: var(--abq-color-ink-900);
+  background: var(--abq-color-white);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -36,9 +35,9 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-body);
-  font-weight: 800;
-  color: var(--color-ink);
+  font-family: var(--abq-font-family);
+  font-weight: var(--abq-font-weight);
+  color: var(--abq-color-ink-900);
   letter-spacing: -0.02em;
 }
 
@@ -62,7 +61,7 @@ svg {
 }
 
 button {
-  font-family: var(--font-body);
+  font-family: var(--abq-font-family);
 }
 
 ::selection {

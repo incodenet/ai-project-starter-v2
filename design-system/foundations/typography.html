@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Typography · ABECQ Design System</title>
+
+    <!-- Production stylesheets, in the order index.php loads them -->
+    <link rel="stylesheet" href="../../assets/css/top.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/bottom.css">
+
+    <!-- Documentation-only framing (.ds-docs-*) -->
+    <link rel="stylesheet" href="../../assets/css/design-system-docs.css">
+  </head>
+
+  <body>
+    <div class="ds-docs-layout">
+      <!-- ========================= SIDEBAR ========================= -->
+      <aside class="ds-docs-sidebar" aria-label="Design system">
+        <div class="ds-docs-brand">
+          <img class="ds-docs-brand_logo" src="../../assets/img/abecq-logo.png" alt="ABECQ" width="304" height="80">
+          <p class="ds-docs-brand_meta">Design System · v1.0 · source: Home</p>
+        </div>
+
+        <nav class="ds-docs-nav" aria-label="Design system levels">
+          <details class="ds-docs-nav_group" open>
+            <summary class="ds-docs-nav_summary">
+              FOUNDATIONS
+              <svg class="ds-docs-nav_chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M6 15l6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <ul class="ds-docs-nav_list">
+              <li><a class="ds-docs-nav_link" href="../index.html"><span class="ds-docs-nav_badge" aria-hidden="true">F</span>Atomic structure</a></li>
+              <li><a class="ds-docs-nav_link" href="../foundations/colors.html"><span class="ds-docs-nav_badge" aria-hidden="true">F</span>Colour</a></li>
+              <li><a class="ds-docs-nav_link" href="../foundations/typography.html" aria-current="page"><span class="ds-docs-nav_badge" aria-hidden="true">F</span>Typography</a></li>
+              <li><a class="ds-docs-nav_link" href="../foundations/spacing.html"><span class="ds-docs-nav_badge" aria-hidden="true">F</span>Spacing</a></li>
+              <li><a class="ds-docs-nav_link" href="../foundations/radius-elevation.html"><span class="ds-docs-nav_badge" aria-hidden="true">F</span>Radius &amp; elevation</a></li>
+              <li><a class="ds-docs-nav_link" href="../foundations/icons.html"><span class="ds-docs-nav_badge" aria-hidden="true">F</span>Icon library</a></li>
+            </ul>
+          </details>
+
+          <details class="ds-docs-nav_group" open>
+            <summary class="ds-docs-nav_summary">
+              ATOMS
+              <svg class="ds-docs-nav_chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M6 15l6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <ul class="ds-docs-nav_list">
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">A</span>Buttons</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">A</span>Links &amp; eyebrow</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">A</span>Form fields</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">A</span>Choice controls</span></li>
+            </ul>
+          </details>
+
+          <details class="ds-docs-nav_group" open>
+            <summary class="ds-docs-nav_summary">
+              MOLECULES
+              <svg class="ds-docs-nav_chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M6 15l6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <ul class="ds-docs-nav_list">
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Segmented tabs</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Section heading</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Breadcrumb</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Product &amp; PDF cards</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Audience cards</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Purchase actions</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Commerce controls</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Status &amp; feedback</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>FAQ accordion</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Tags &amp; chips</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Product gallery</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Page contents</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Auth actions</span></li>
+            </ul>
+          </details>
+
+          <details class="ds-docs-nav_group" open>
+            <summary class="ds-docs-nav_summary">
+              ORGANISMS
+              <svg class="ds-docs-nav_chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M6 15l6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <ul class="ds-docs-nav_list">
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">O</span>Header &amp; footer</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">O</span>Account navigation</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">O</span>Drawers &amp; modals</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">O</span>Mobile menu</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">O</span>Compare table</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">O</span>Checkout progress</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">O</span>Page loader</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">O</span>Home sections</span></li>
+            </ul>
+          </details>
+
+          <details class="ds-docs-nav_group" open>
+            <summary class="ds-docs-nav_summary">
+              TEMPLATES
+              <svg class="ds-docs-nav_chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M6 15l6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <ul class="ds-docs-nav_list">
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">T</span>Home page</span></li>
+              <li><span class="ds-docs-nav_link ds-docs-nav_link--pending"><span class="ds-docs-nav_badge" aria-hidden="true">T</span>Developer handoff</span></li>
+            </ul>
+          </details>
+        </nav>
+      </aside>
+
+      <!-- ========================= CONTENT ========================= -->
+      <main class="ds-docs-main">
+        <!-- ========================= TYPOGRAPHY ========================= -->
+        <section class="ds-docs-section" id="type" data-design-id="ds.type">
+          <div class="ds-docs-head">
+            <p class="ds-docs-head_eyebrow">01 · FOUNDATIONS</p>
+            <h2 class="ds-docs-head_title">Typography</h2>
+            <p class="ds-docs-head_text">Outfit in four weights. Collected from every page; headings scale fluidly with clamp().</p>
+          </div>
+
+          <div class="ds-docs-type-scale">
+            <div class="ds-docs-type-row">
+              <div class="ds-docs-type-row_meta">
+                <span class="ds-docs-type-row_name">Loader</span>
+                <code class="ds-docs-type-row_var">--abq-font-loader</code>
+                <code class="ds-docs-type-row_spec">200px / 1 / -.03em</code>
+              </div>
+              <p class="ds-docs-type-row_sample" style="--type-size: var(--abq-font-loader); --type-lh: 1; --type-ls: -0.03em">64%</p>
+            </div>
+            <div class="ds-docs-type-row">
+              <div class="ds-docs-type-row_meta">
+                <span class="ds-docs-type-row_name">Display</span>
+                <code class="ds-docs-type-row_var">--abq-font-display</code>
+                <code class="ds-docs-type-row_spec">60px / 1.04 / -.02em</code>
+              </div>
+              <p class="ds-docs-type-row_sample" style="--type-size: var(--abq-font-display); --type-lh: 1.04; --type-ls: -0.02em">Alcohol &amp; drug testing, sourced and certified.</p>
+            </div>
+            <div class="ds-docs-type-row">
+              <div class="ds-docs-type-row_meta">
+                <span class="ds-docs-type-row_name">Page title</span>
+                <code class="ds-docs-type-row_var">--abq-font-h1</code>
+                <code class="ds-docs-type-row_spec">56px / 1.05 / -.02em</code>
+              </div>
+              <p class="ds-docs-type-row_sample" style="--type-size: var(--abq-font-h1); --type-lh: 1.05; --type-ls: -0.02em">Breath Alcohol Testers</p>
+            </div>
+            <div class="ds-docs-type-row">
+              <div class="ds-docs-type-row_meta">
+                <span class="ds-docs-type-row_name">Logo</span>
+                <code class="ds-docs-type-row_var">--abq-font-logo</code>
+                <code class="ds-docs-type-row_spec">44px / 1</code>
+              </div>
+              <p class="ds-docs-type-row_sample" style="--type-size: var(--abq-font-logo); --type-lh: 1; --type-ls: 0px">Lion</p>
+            </div>
+            <div class="ds-docs-type-row">
+              <div class="ds-docs-type-row_meta">
+                <span class="ds-docs-type-row_name">Title L</span>
+                <code class="ds-docs-type-row_var">--abq-font-title-lg</code>
+                <code class="ds-docs-type-row_spec">34px / 1.15 / -.02em</code>
+              </div>
+              <p class="ds-docs-type-row_sample" style="--type-size: var(--abq-font-title-lg); --type-lh: 1.15; --type-ls: -0.02em">Shopping basket</p>
+            </div>
+            <div class="ds-docs-type-row">
+              <div class="ds-docs-type-row_meta">
+                <span class="ds-docs-type-row_name">Heading 2</span>
+                <code class="ds-docs-type-row_var">--abq-font-h2</code>
+                <code class="ds-docs-type-row_spec">40px / 1.1 / -.02em</code>
+              </div>
+              <p class="ds-docs-type-row_sample" style="--type-size: var(--abq-font-h2); --type-lh: 1.1; --type-ls: -0.02em">Browse by product type</p>
+            </div>
+            <div class="ds-docs-type-row">
+              <div class="ds-docs-type-row_meta">
+                <span class="ds-docs-type-row_name">Heading 3</span>
+                <code class="ds-docs-type-row_var">--abq-font-h3</code>
+                <code class="ds-docs-type-row_spec">22–30px fluid / 1.15 / -.02em</code>
+              </div>
+              <p class="ds-docs-type-row_sample" style="--type-size: var(--abq-font-h3); --type-lh: 1.15; --type-ls: -0.02em">Breath testers</p>
+            </div>
+            <div class="ds-docs-type-row">
+              <div class="ds-docs-type-row_meta">
+                <span class="ds-docs-type-row_name">Heading 4</span>
+                <code class="ds-docs-type-row_var">--abq-font-h4</code>
+                <code class="ds-docs-type-row_spec">26px / 1.2 / -.01em</code>
+              </div>
+              <p class="ds-docs-type-row_sample" style="--type-size: var(--abq-font-h4); --type-lh: 1.2; --type-ls: -0.01em">Order summary</p>
+            </div>
+            <div class="ds-docs-type-row">
+              <div class="ds-docs-type-row_meta">
+                <span class="ds-docs-type-row_name">Heading 5</span>
+                <code class="ds-docs-type-row_var">--abq-font-h5</code>
+                <code class="ds-docs-type-row_spec">24px / 1.25</code>
+              </div>
+              <p class="ds-docs-type-row_sample" style="--type-size: var(--abq-font-h5); --type-lh: 1.25; --type-ls: 0px">Delivery address</p>
+            </div>
+            <div class="ds-docs-type-row">
+              <div class="ds-docs-type-row_meta">
+                <span class="ds-docs-type-row_name">Title M</span>
+                <code class="ds-docs-type-row_var">--abq-font-title-md</code>
+                <code class="ds-docs-type-row_spec">30px fixed / 1.15 / -.02em</code>
+              </div>
+              <p class="ds-docs-type-row_sample" style="--type-size: var(--abq-font-title-md); --type-lh: 1.15; --type-ls: -0.02em">Breath testers</p>
+            </div>
+            <div class="ds-docs-type-row">
+              <div class="ds-docs-type-row_meta">
+                <span class="ds-docs-type-row_name">Price</span>
+                <code class="ds-docs-type-row_var">--abq-font-price</code>
+                <code class="ds-docs-type-row_spec">22px / 1.3</code>
+              </div>
+              <p class="ds-docs-type-row_sample" style="--type-size: var(--abq-font-price); --type-lh: 1.3; --type-ls: 0px">€149.00</p>
+            </div>
+            <div class="ds-docs-type-row">
+              <div class="ds-docs-type-row_meta">
+                <span class="ds-docs-type-row_name">Card title</span>
+                <code class="ds-docs-type-row_var">--abq-font-title</code>
+                <code class="ds-docs-type-row_spec">20px / 1.3</code>
+              </div>
+              <p class="ds-docs-type-row_sample" style="--type-size: var(--abq-font-title); --type-lh: 1.3; --type-ls: 0px">Lion Alcolmeter SD400F</p>
+            </div>
+            <div class="ds-docs-type-row">
+              <div class="ds-docs-type-row_meta">
+                <span class="ds-docs-type-row_name">Body L</span>
+                <code class="ds-docs-type-row_var">--abq-font-body-lg</code>
+                <code class="ds-docs-type-row_spec">18px / 1.6</code>
+              </div>
+              <p class="ds-docs-type-row_sample" style="--type-size: var(--abq-font-body-lg); --type-lh: 1.6; --type-ls: 0px">Gas standards and kits to keep your devices accurate.</p>
+            </div>
+            <div class="ds-docs-type-row">
+              <div class="ds-docs-type-row_meta">
+                <span class="ds-docs-type-row_name">Body M</span>
+                <code class="ds-docs-type-row_var">--abq-font-body-md</code>
+                <code class="ds-docs-type-row_spec">18px / 1.5</code>
+              </div>
+              <p class="ds-docs-type-row_sample" style="--type-size: var(--abq-font-body-md); --type-lh: 1.5; --type-ls: 0px">Calibration certificate included.</p>
+            </div>
+            <div class="ds-docs-type-row">
+              <div class="ds-docs-type-row_meta">
+                <span class="ds-docs-type-row_name">Body</span>
+                <code class="ds-docs-type-row_var">--abq-font-body</code>
+                <code class="ds-docs-type-row_spec">16px / 1.5</code>
+              </div>
+              <p class="ds-docs-type-row_sample" style="--type-size: var(--abq-font-body); --type-lh: 1.5; --type-ls: 0px">Rapid urine and saliva panels screening for common substances.</p>
+            </div>
+            <div class="ds-docs-type-row">
+              <div class="ds-docs-type-row_meta">
+                <span class="ds-docs-type-row_name">Body S</span>
+                <code class="ds-docs-type-row_var">--abq-font-body-sm</code>
+                <code class="ds-docs-type-row_spec">15px / 1.6</code>
+              </div>
+              <p class="ds-docs-type-row_sample" style="--type-size: var(--abq-font-body-sm); --type-lh: 1.6; --type-ls: 0px">Hygienic single-use mouthpieces for every tester.</p>
+            </div>
+            <div class="ds-docs-type-row">
+              <div class="ds-docs-type-row_meta">
+                <span class="ds-docs-type-row_name">UI</span>
+                <code class="ds-docs-type-row_var">--abq-font-ui</code>
+                <code class="ds-docs-type-row_spec">15px / 1.4</code>
+              </div>
+              <p class="ds-docs-type-row_sample" style="--type-size: var(--abq-font-ui); --type-lh: 1.4; --type-ls: 0px">Add to cart</p>
+            </div>
+            <div class="ds-docs-type-row">
+              <div class="ds-docs-type-row_meta">
+                <span class="ds-docs-type-row_name">UI S</span>
+                <code class="ds-docs-type-row_var">--abq-font-ui-sm</code>
+                <code class="ds-docs-type-row_spec">14px / 1.5</code>
+              </div>
+              <p class="ds-docs-type-row_sample" style="--type-size: var(--abq-font-ui-sm); --type-lh: 1.5; --type-ls: 0px">Clear all</p>
+            </div>
+            <div class="ds-docs-type-row">
+              <div class="ds-docs-type-row_meta">
+                <span class="ds-docs-type-row_name">Eyebrow</span>
+                <code class="ds-docs-type-row_var">--abq-font-eyebrow</code>
+                <code class="ds-docs-type-row_spec">12px / 1.4 / .14em</code>
+              </div>
+              <p class="ds-docs-type-row_sample ds-docs-type-row_sample--eyebrow" style="--type-size: var(--abq-font-eyebrow); --type-lh: 1.4; --type-ls: 0.14em">CERTIFIED TEST EQUIPMENT</p>
+            </div>
+            <div class="ds-docs-type-row">
+              <div class="ds-docs-type-row_meta">
+                <span class="ds-docs-type-row_name">Label XS</span>
+                <code class="ds-docs-type-row_var">--abq-font-label-xs</code>
+                <code class="ds-docs-type-row_spec">11px / 1.4 / .08em</code>
+              </div>
+              <p class="ds-docs-type-row_sample" style="--type-size: var(--abq-font-label-xs); --type-lh: 1.4; --type-ls: 0.08em">18 PRODUCTS</p>
+            </div>
+          </div>
+
+          <div class="ds-docs-type-weights">
+            <h3 class="ds-docs-type-weights_title">Font weights</h3>
+            <div class="ds-docs-weight-grid">
+              <div class="ds-docs-weight-card">
+                <span class="ds-docs-weight-card_sample" style="--weight: var(--abq-fw-extralight)">Aa</span>
+                <span class="ds-docs-weight-card_name">Extra light · 200</span>
+                <code class="ds-docs-weight-card_var">--abq-fw-extralight</code>
+                <span class="ds-docs-weight-card_use">Hero headings, loader</span>
+              </div>
+              <div class="ds-docs-weight-card">
+                <span class="ds-docs-weight-card_sample" style="--weight: var(--abq-fw-light)">Aa</span>
+                <span class="ds-docs-weight-card_name">Light · 300</span>
+                <code class="ds-docs-weight-card_var">--abq-fw-light</code>
+                <span class="ds-docs-weight-card_use">Large headings, subtitles</span>
+              </div>
+              <div class="ds-docs-weight-card">
+                <span class="ds-docs-weight-card_sample" style="--weight: var(--abq-fw-regular)">Aa</span>
+                <span class="ds-docs-weight-card_name">Regular · 400</span>
+                <code class="ds-docs-weight-card_var">--abq-fw-regular</code>
+                <span class="ds-docs-weight-card_use">Body text, labels, buttons</span>
+              </div>
+              <div class="ds-docs-weight-card">
+                <span class="ds-docs-weight-card_sample" style="--weight: var(--abq-fw-medium)">Aa</span>
+                <span class="ds-docs-weight-card_name">Medium · 500</span>
+                <code class="ds-docs-weight-card_var">--abq-fw-medium</code>
+                <span class="ds-docs-weight-card_use">Badges, small emphasis</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="ds-docs-toast" role="status" aria-live="polite" data-docs-toast></div>
+
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/docs/design-system-docs.js"></script>
+  </body>
+</html>

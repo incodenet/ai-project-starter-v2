@@ -1,0 +1,6 @@
+// Documentation-only stylesheet for the HTML component library in design-system/.
+// It frames the catalog and draws token specimens; it must never style components
+// and is never loaded by production pages. Every selector is namespaced .ds-docs-*.
+@import 'docs/_layout';
+@import 'docs/_overview';
+@import 'docs/_foundations';
