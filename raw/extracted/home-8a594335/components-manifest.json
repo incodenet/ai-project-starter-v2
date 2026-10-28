@@ -1,0 +1,466 @@
+{
+  "schemaVersion": 1,
+  "snapshot": "home-8a594335",
+  "dcComponents": [
+    {
+      "stable_id": "dc.SiteHeader",
+      "name": "SiteHeader",
+      "kind": "dc-component",
+      "document": "documents/SiteHeader.dc.html",
+      "sha256": "5916297eab487e9b234c4180036e2f2e23cdde229c17dd6410f8415dcc445e08",
+      "bytes": 34992,
+      "props": {
+        "divider": {
+          "editor": "boolean",
+          "default": false,
+          "tsType": "boolean"
+        },
+        "spacer": {
+          "editor": "boolean",
+          "default": true,
+          "tsType": "boolean"
+        },
+        "loginHref": {
+          "editor": "text",
+          "default": "site.html#auth",
+          "tsType": "string"
+        },
+        "loginLabel": {
+          "editor": "text",
+          "default": "Log in",
+          "tsType": "string"
+        }
+      },
+      "states": [
+        "spacer",
+        "menuClosed",
+        "menuOpen",
+        "cmpHas",
+        "cmpTip",
+        "cartHas",
+        "showLogin",
+        "showLogout"
+      ],
+      "dependencies": [
+        "./support.js",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&amp;display=swap"
+      ],
+      "usagesInHome": [
+        {
+          "line": 482,
+          "section": "header",
+          "attrs": {
+            "hint-size": "100%,81px"
+          }
+        }
+      ],
+      "designSystemSnapshot": {
+        "status": "not-in-ds-bundle",
+        "resolves": "DS externalPreviews preview.header (was unresolved)"
+      }
+    },
+    {
+      "stable_id": "dc.Button",
+      "name": "Button",
+      "kind": "dc-component",
+      "document": "documents/Button.dc.html",
+      "sha256": "959beed92c9736c5d39b18fea028c3e63429023b9e809350ea38bf0b7db4dcba",
+      "bytes": 74561,
+      "props": {
+        "variant": {
+          "editor": "enum",
+          "options": [
+            "all",
+            "primary",
+            "glow",
+            "gradient",
+            "white",
+            "secondary",
+            "outline",
+            "link",
+            "text",
+            "tile",
+            "circle",
+            "badge",
+            "shine",
+            "quiet",
+            "chip",
+            "dashed"
+          ],
+          "default": "all",
+          "tsType": "string"
+        },
+        "size": {
+          "editor": "enum",
+          "options": [
+            "sm",
+            "md",
+            "lg",
+            "xl"
+          ],
+          "default": "md",
+          "tsType": "'sm'|'md'|'lg'|'xl'"
+        },
+        "label": {
+          "editor": "text",
+          "default": "Button",
+          "tsType": "string"
+        },
+        "iconLeft": {
+          "editor": "enum",
+          "options": [
+            "",
+            "trash",
+            "filter",
+            "sort",
+            "cart",
+            "search",
+            "send",
+            "external",
+            "chevronLeft",
+            "chevronRight",
+            "arrowSm",
+            "compare",
+            "menu",
+            "searchTile",
+            "arrow",
+            "arrowLg"
+          ],
+          "default": "",
+          "tsType": "string"
+        },
+        "iconRight": {
+          "editor": "enum",
+          "options": [
+            "",
+            "trash",
+            "filter",
+            "sort",
+            "cart",
+            "search",
+            "send",
+            "external",
+            "chevronLeft",
+            "chevronRight",
+            "arrowSm",
+            "compare",
+            "menu",
+            "searchTile",
+            "arrow",
+            "arrowLg"
+          ],
+          "default": "",
+          "tsType": "string"
+        },
+        "full": {
+          "editor": "boolean",
+          "default": false,
+          "tsType": "boolean"
+        },
+        "arrow": {
+          "editor": "boolean",
+          "default": true,
+          "tsType": "boolean"
+        },
+        "href": {
+          "editor": "text",
+          "default": "",
+          "tsType": "string"
+        },
+        "type": {
+          "editor": "enum",
+          "options": [
+            "button",
+            "submit"
+          ],
+          "default": "button",
+          "tsType": "'button'|'submit'"
+        },
+        "disabled": {
+          "editor": "boolean",
+          "default": false,
+          "tsType": "boolean"
+        },
+        "ariaLabel": {
+          "editor": "text",
+          "default": "",
+          "tsType": "string"
+        },
+        "target": {
+          "editor": "text",
+          "default": "",
+          "tsType": "string"
+        },
+        "color": {
+          "editor": null,
+          "tsType": "string"
+        },
+        "onClick": {
+          "editor": null,
+          "tsType": "(e) => void"
+        }
+      },
+      "states": [
+        "isAll",
+        "c.has",
+        "it.f_primary",
+        "it.f_glow",
+        "it.f_gradient",
+        "it.f_white",
+        "it.f_secondary",
+        "it.f_outline",
+        "it.f_link",
+        "it.f_text",
+        "it.f_tile",
+        "it.f_circle",
+        "it.f_shine",
+        "it.f_quiet",
+        "it.f_chip",
+        "it.f_dashed",
+        "it.f_badge"
+      ],
+      "dependencies": [
+        "./support.js",
+        "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&amp;display=swap"
+      ],
+      "usagesInHome": [
+        {
+          "line": 711,
+          "section": "in-stock",
+          "attrs": {
+            "variant": "link",
+            "label": "View all",
+            "href": "site.html#breath-alcohol-testers",
+            "hint-size": "90px,24px"
+          }
+        },
+        {
+          "line": 747,
+          "section": "in-stock",
+          "attrs": {
+            "variant": "text",
+            "label": "View all",
+            "href": "site.html#breath-alcohol-testers",
+            "hint-size": "100%,48px"
+          }
+        },
+        {
+          "line": 779,
+          "section": "cta-sec",
+          "attrs": {
+            "variant": "primary",
+            "label": "Calibration Services",
+            "href": "site.html#services",
+            "hint-size": "230px,52px"
+          }
+        },
+        {
+          "line": 821,
+          "section": "guides-sec",
+          "attrs": {
+            "variant": "text",
+            "label": "All guides",
+            "href": "site.html#info",
+            "hint-size": "100%,48px"
+          }
+        }
+      ],
+      "designSystemSnapshot": {
+        "status": "identical",
+        "document": "design-system-91951f68/documents/Button.dc.html"
+      }
+    },
+    {
+      "stable_id": "dc.SectionHeading",
+      "name": "SectionHeading",
+      "kind": "dc-component",
+      "document": "documents/SectionHeading.dc.html",
+      "sha256": "8d121902aabe079161c921c81d6ad55f3f77c3e3a07c57feb47c9240997f1de1",
+      "bytes": 10302,
+      "props": {
+        "eyebrow": {
+          "editor": "text",
+          "default": "EYEBROW",
+          "tsType": "string"
+        },
+        "title": {
+          "editor": "text",
+          "default": "Section title",
+          "tsType": "string"
+        },
+        "size": {
+          "editor": "enum",
+          "options": [
+            "md",
+            "sm"
+          ],
+          "default": "md",
+          "tsType": "string"
+        },
+        "align": {
+          "editor": "enum",
+          "options": [
+            "left",
+            "center"
+          ],
+          "default": "left",
+          "tsType": "'left'|'center'"
+        },
+        "marginTop": {
+          "editor": "text",
+          "default": "4px",
+          "tsType": "string"
+        },
+        "marginBottom": {
+          "editor": "text",
+          "default": "0px",
+          "tsType": "string"
+        }
+      },
+      "states": [],
+      "dependencies": [
+        "./support.js",
+        "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&amp;display=swap"
+      ],
+      "usagesInHome": [
+        {
+          "line": 638,
+          "section": "cats",
+          "attrs": {
+            "eyebrow": "CATEGORIES",
+            "title": "Browse by product type",
+            "margin-top": "8px",
+            "margin-bottom": "26px",
+            "hint-size": "100%,64px"
+          }
+        },
+        {
+          "line": 684,
+          "section": "certs",
+          "attrs": {
+            "eyebrow": "CERTIFICATION & LEGAL FIT",
+            "title": "Standards you can rely on",
+            "margin-top": "8px",
+            "margin-bottom": "40px",
+            "hint-size": "100%,64px"
+          }
+        },
+        {
+          "line": 703,
+          "section": "in-stock",
+          "attrs": {
+            "eyebrow": "SHIPS IN 2–5 DAYS",
+            "title": "In stock now",
+            "margin-top": "8px",
+            "hint-size": "100%,64px"
+          }
+        },
+        {
+          "line": 790,
+          "section": "guides-sec",
+          "attrs": {
+            "eyebrow": "KNOWLEDGE HUB",
+            "title": "Guides & road-safety data",
+            "margin-top": "8px",
+            "hint-size": "100%,64px"
+          }
+        },
+        {
+          "line": 828,
+          "section": "brands",
+          "attrs": {
+            "eyebrow": "BRANDS WE CARRY",
+            "title": "Trusted manufacturers",
+            "margin-top": "8px",
+            "margin-bottom": "26px",
+            "hint-size": "100%,64px"
+          }
+        }
+      ],
+      "designSystemSnapshot": {
+        "status": "identical",
+        "document": "design-system-91951f68/documents/SectionHeading.dc.html"
+      }
+    }
+  ],
+  "homeSectionsAsDesignSystemPreviews": [
+    {
+      "ds_stable_id": "preview.header",
+      "dsLabel": "Header",
+      "dsSourceFile": "SiteHeader.dc.html",
+      "homeSection": "home.header",
+      "status": "resolved",
+      "note": "documents/SiteHeader.dc.html"
+    },
+    {
+      "ds_stable_id": "preview.footer",
+      "dsLabel": "Footer",
+      "dsSourceFile": "SiteFooter.dc.html",
+      "homeSection": "home.footer",
+      "status": "unresolved",
+      "note": "SiteFooter.dc.html is not in this bundle; Home has an inline footer[data-r=\"footer\"] instead. Not confirmed to be the same component."
+    },
+    {
+      "ds_stable_id": "preview.home.hero",
+      "dsLabel": "Hero",
+      "dsSourceFile": "index.html",
+      "homeSection": "home.hero",
+      "status": "resolved",
+      "note": null
+    },
+    {
+      "ds_stable_id": "preview.home.trust-sec",
+      "dsLabel": "Trust bar",
+      "dsSourceFile": "index.html",
+      "homeSection": "home.trust-sec",
+      "status": "resolved",
+      "note": null
+    },
+    {
+      "ds_stable_id": "preview.home.cats",
+      "dsLabel": "Categories",
+      "dsSourceFile": "index.html",
+      "homeSection": "home.cats",
+      "status": "resolved",
+      "note": null
+    },
+    {
+      "ds_stable_id": "preview.home.certs",
+      "dsLabel": "In stock products",
+      "dsSourceFile": "index.html",
+      "homeSection": "home.certs",
+      "status": "resolved-needs-review",
+      "note": "DS labels this \"In stock products\"; Home data-r=\"certs\" holds certification standards. The in-stock slider is home.in-stock."
+    },
+    {
+      "ds_stable_id": "preview.home.cta-sec",
+      "dsLabel": "Calibration CTA",
+      "dsSourceFile": "index.html",
+      "homeSection": "home.cta-sec",
+      "status": "resolved",
+      "note": null
+    },
+    {
+      "ds_stable_id": "preview.home.guides-sec",
+      "dsLabel": "Knowledge hub",
+      "dsSourceFile": "index.html",
+      "homeSection": "home.guides-sec",
+      "status": "resolved",
+      "note": null
+    },
+    {
+      "ds_stable_id": "preview.home.brands",
+      "dsLabel": "Brands",
+      "dsSourceFile": "index.html",
+      "homeSection": "home.brands",
+      "status": "resolved",
+      "note": null
+    }
+  ],
+  "notes": [
+    "Inventory only. No production components created; nothing rendered or checked for fidelity.",
+    "SectionHeading and Button are byte-identical to the design-system snapshot copies."
+  ]
+}

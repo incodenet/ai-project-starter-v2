@@ -1,0 +1,779 @@
+{
+  "schemaVersion": 1,
+  "snapshot": "home-8a594335-b1",
+  "mode": "INITIAL",
+  "batch": {
+    "number": 1,
+    "scope": "Home page (one logical template): all 11 sections, the SiteHeader / SectionHeading / Button components as used on Home, and every user-visible state."
+  },
+  "createdAt": "2026-10-28",
+  "status": "READY_WITH_EXCEPTIONS",
+  "source": {
+    "originalExport": {
+      "path": "raw/pages/index.html",
+      "sha256": "8a594335c7332908a51486be098017feccff779ded9d7cb9d973a78e9d64f435"
+    },
+    "extractedSnapshot": "raw/extracted/home-8a594335",
+    "documents": [
+      "documents/index.html",
+      "documents/SiteHeader.dc.html",
+      "documents/SectionHeading.dc.html",
+      "documents/Button.dc.html"
+    ],
+    "method": "Styles come from the template source (matched to rendered elements through data-dc-tpl), with {{ }} bindings resolved from the live default state; structure, text and React-created nodes come from the original rendered in sandboxed headless Chrome (network blocked). Nothing from the export was executed in Node.",
+    "designSystemBaseline": "raw/normalized/design-system-91951f68-b1 (fonts + 191 tokens reused verbatim; its component batches are still pending, so there were no component classes to align with)"
+  },
+  "outputs": [
+    {
+      "stable_id": "home",
+      "path": "pages/home.html",
+      "sha256": "60bf62d07ee9ee9f677f97efcf510086dcb104926563a046577bce4dc95686b3",
+      "bytes": 248334,
+      "kind": "page template (standalone HTML/CSS/JS)"
+    }
+  ],
+  "sections": [
+    {
+      "stable_id": "home.loader",
+      "data-design-id": "home.loader",
+      "source_selector": "[data-r=\"ldr-o\"]",
+      "output_selector": ".page-loader",
+      "heading": null,
+      "confidence": "confirmed"
+    },
+    {
+      "stable_id": "home.header",
+      "data-design-id": "home.header",
+      "source_selector": "dc-import[name=\"SiteHeader\"]",
+      "output_selector": ".site-header (+ .site-header_spacer, .mobile-nav)",
+      "heading": null,
+      "confidence": "confirmed"
+    },
+    {
+      "stable_id": "home.hero",
+      "data-design-id": "home.hero",
+      "source_selector": "section[data-r=\"hero\"]",
+      "output_selector": ".page-top",
+      "heading": null,
+      "confidence": "confirmed"
+    },
+    {
+      "stable_id": "home.trust-sec",
+      "data-design-id": "home.trust-sec",
+      "source_selector": "section[data-r=\"trust-sec\"]",
+      "output_selector": ".trust",
+      "heading": null,
+      "confidence": "confirmed"
+    },
+    {
+      "stable_id": "home.cats",
+      "data-design-id": "home.cats",
+      "source_selector": "section[data-r=\"cats\"]",
+      "output_selector": ".categories",
+      "heading": "Browse by product type",
+      "confidence": "confirmed"
+    },
+    {
+      "stable_id": "home.certs",
+      "data-design-id": "home.certs",
+      "source_selector": "section[data-r=\"certs\"]",
+      "output_selector": ".certifications",
+      "heading": "Standards you can rely on",
+      "confidence": "confirmed"
+    },
+    {
+      "stable_id": "home.in-stock",
+      "data-design-id": "home.in-stock",
+      "source_selector": "[data-r=\"band\"] > section",
+      "output_selector": ".stock",
+      "heading": "In stock now",
+      "confidence": "confirmed (normalized); DS preview label mismatch still needs review"
+    },
+    {
+      "stable_id": "home.cta-sec",
+      "data-design-id": "home.cta-sec",
+      "source_selector": "section[data-r=\"cta-sec\"]",
+      "output_selector": ".cta-section",
+      "heading": "Keep every device certified & compliant",
+      "confidence": "confirmed"
+    },
+    {
+      "stable_id": "home.guides-sec",
+      "data-design-id": "home.guides-sec",
+      "source_selector": "section[data-r=\"guides-sec\"]",
+      "output_selector": ".guides",
+      "heading": "Guides & road-safety data",
+      "confidence": "confirmed"
+    },
+    {
+      "stable_id": "home.brands",
+      "data-design-id": "home.brands",
+      "source_selector": "section[data-r=\"brands\"]",
+      "output_selector": ".brands",
+      "heading": "Trusted manufacturers",
+      "confidence": "confirmed"
+    },
+    {
+      "stable_id": "home.footer",
+      "data-design-id": "home.footer",
+      "source_selector": "footer[data-r=\"footer\"]",
+      "output_selector": ".site-footer",
+      "heading": null,
+      "confidence": "confirmed"
+    }
+  ],
+  "variants": {
+    "rendered": "Default props: editMode=false, showTrustBar/showKnowledgeHub/showBrandStrip=true, catBlocks/guideBlocks=\"4 blocks\", slidesPerView=\"3\", heroPlay/heroLoop=true, heroLoopPause=2s.",
+    "interactiveStates": [
+      "Products dropdown open/closed",
+      "mobile menu open/closed (<=1120px)",
+      "compare tooltip",
+      "stock tab Individual/Professional (tab style + product photo set)",
+      "cart/compare badge counts",
+      "page loader",
+      "hero video forward / hold / reverse loop"
+    ],
+    "notRendered": [
+      "editMode=true authoring controls (upload / fit / position / scale tools)",
+      "catBlocks/guideBlocks=\"3 blocks\"",
+      "slidesPerView=\"4\"",
+      "show* section toggles = false"
+    ]
+  },
+  "assets": [
+    {
+      "path": "assets/images/abecq-logo.png",
+      "from": "raw/extracted/home-8a594335/assets/13ec04de3df5a7c0.png",
+      "sha256": "13ec04de3df5a7c0cbe641f70018ca8ee291b669179da65becde079f08e43197",
+      "logicalPaths": [
+        "assets/abecq-logo.png"
+      ],
+      "aliases": []
+    },
+    {
+      "path": "assets/video/heroPart-0.mp4",
+      "from": "raw/extracted/home-8a594335/assets/792b33cd2bd17ce0.mp4",
+      "sha256": "792b33cd2bd17ce0f3add66eeee180ad964827e66eda1ac9818cc4c920e52e1f",
+      "logicalPaths": [
+        "assets/media/heroPart-0.mp4"
+      ],
+      "aliases": []
+    },
+    {
+      "path": "assets/images/cat-0.webp",
+      "from": "raw/extracted/home-8a594335/assets/6e4c3785875fa591.webp",
+      "sha256": "6e4c3785875fa591a01483e1f82d7e7f42379dda44672978cdfc5a1753c7a491",
+      "logicalPaths": [
+        "assets/media/cat-0.png"
+      ],
+      "aliases": [
+        "assets/media/cat-0.webp"
+      ]
+    },
+    {
+      "path": "assets/images/cat-2.webp",
+      "from": "raw/extracted/home-8a594335/assets/f13020f718142033.webp",
+      "sha256": "f13020f7181420339a03d2dc26b7e7f263859eaab6ba53ca2b03e26f0ab30ef7",
+      "logicalPaths": [
+        "assets/media/cat-2.png"
+      ],
+      "aliases": [
+        "assets/media/cat-2.webp"
+      ]
+    },
+    {
+      "path": "assets/images/cat-3.png",
+      "from": "raw/extracted/home-8a594335/assets/d63a6a027d81d54d.png",
+      "sha256": "d63a6a027d81d54df05aba8206b68e27e5e0cbdecee1ecab0941c2ce3833eb5b",
+      "logicalPaths": [
+        "assets/media/cat-3.png"
+      ],
+      "aliases": []
+    },
+    {
+      "path": "assets/images/cat-4.png",
+      "from": "raw/extracted/home-8a594335/assets/b6dc25c4f7ab74dc.png",
+      "sha256": "b6dc25c4f7ab74dc8fa779d15ee9fb6d683076e97bd80da1e7a94eaa73fd951e",
+      "logicalPaths": [
+        "assets/media/cat-4.png"
+      ],
+      "aliases": []
+    },
+    {
+      "path": "assets/images/oiml-badge.webp",
+      "from": "raw/extracted/home-8a594335/assets/0e2dbc8d1b541ea2.webp",
+      "sha256": "0e2dbc8d1b541ea287cd1859e4080c508ea884d9d812928fe9f8a034b24ca686",
+      "logicalPaths": [
+        "assets/oiml-badge.png"
+      ],
+      "aliases": [
+        "assets/oiml-badge.webp"
+      ]
+    },
+    {
+      "path": "assets/images/en15964-badge.webp",
+      "from": "raw/extracted/home-8a594335/assets/19f97d02e66f9beb.webp",
+      "sha256": "19f97d02e66f9beb9864f710880850dd0d97b9f86c831b49db90634a95a2c05a",
+      "logicalPaths": [
+        "assets/en15964-badge.png"
+      ],
+      "aliases": [
+        "assets/en15964-badge.webp"
+      ]
+    },
+    {
+      "path": "assets/images/en16280-badge.webp",
+      "from": "raw/extracted/home-8a594335/assets/dc031ae8d370dd85.webp",
+      "sha256": "dc031ae8d370dd854dd6badaf77ea980f5db43c636003649b5615dd150eec5fc",
+      "logicalPaths": [
+        "assets/en16280-badge.png"
+      ],
+      "aliases": [
+        "assets/en16280-badge.webp"
+      ]
+    },
+    {
+      "path": "assets/images/product-0.png",
+      "from": "raw/extracted/home-8a594335/assets/8de436f505eb0a90.png",
+      "sha256": "8de436f505eb0a90e0e966523e83ecef9a3da17f9e94d233369d36d848d92858",
+      "logicalPaths": [
+        "assets/media/productPro-3.png",
+        "assets/media/product-0.png",
+        "assets/media/productInd-0.png"
+      ],
+      "aliases": []
+    },
+    {
+      "path": "assets/images/product-1.png",
+      "from": "raw/extracted/home-8a594335/assets/6b610aab3d51f7e2.png",
+      "sha256": "6b610aab3d51f7e279276c4a09f170f259f9829eb76a7dec4e8063113d2c44bb",
+      "logicalPaths": [
+        "assets/media/productInd-1.png",
+        "assets/media/product-1.png"
+      ],
+      "aliases": []
+    },
+    {
+      "path": "assets/images/productInd-2.webp",
+      "from": "raw/extracted/home-8a594335/assets/89dce32ef528f506.webp",
+      "sha256": "89dce32ef528f50630353c7dddfd77d0da821dbb15ab27cf4fd2ebd812c439ef",
+      "logicalPaths": [
+        "assets/media/productInd-2.png"
+      ],
+      "aliases": [
+        "assets/media/productInd-2.webp"
+      ]
+    },
+    {
+      "path": "assets/images/productInd-3.png",
+      "from": "raw/extracted/home-8a594335/assets/dd9bb4a6d5b08b9c.png",
+      "sha256": "dd9bb4a6d5b08b9c0d46d377d2f6415541b0f47228fd293777950caa60064e15",
+      "logicalPaths": [
+        "assets/media/productInd-3.png"
+      ],
+      "aliases": []
+    },
+    {
+      "path": "assets/images/product-2.png",
+      "from": "raw/extracted/home-8a594335/assets/a62ca38504953297.png",
+      "sha256": "a62ca38504953297927c9edac56e19ed38f799df677494a45180b650bc068385",
+      "logicalPaths": [
+        "assets/media/product-2.png",
+        "assets/media/productPro-1.png",
+        "assets/media/productInd-4.png"
+      ],
+      "aliases": []
+    },
+    {
+      "path": "assets/images/cta-0.webp",
+      "from": "raw/extracted/home-8a594335/assets/afbf82c194c264bc.webp",
+      "sha256": "afbf82c194c264bcd3a339f51195bc4672c9f49b6470dca089ae571c16b3e3ce",
+      "logicalPaths": [
+        "assets/media/cta-0.png"
+      ],
+      "aliases": [
+        "assets/media/cta-0.webp"
+      ]
+    },
+    {
+      "path": "assets/images/guide-0.webp",
+      "from": "raw/extracted/home-8a594335/assets/18e4b54a8391bcab.webp",
+      "sha256": "18e4b54a8391bcab71912ebd852891fa7eef7a234323e17dc97bec888d25e7a0",
+      "logicalPaths": [
+        "assets/media/guide-0.jpg"
+      ],
+      "aliases": [
+        "assets/media/guide-0.webp"
+      ]
+    },
+    {
+      "path": "assets/images/guide-1.webp",
+      "from": "raw/extracted/home-8a594335/assets/68e8d795cf9a91db.webp",
+      "sha256": "68e8d795cf9a91dbe0b35c0f8ee1534246f3b2f8ce7f1dee63395198076b6e86",
+      "logicalPaths": [
+        "assets/media/guide-1.png"
+      ],
+      "aliases": [
+        "assets/media/guide-1.webp"
+      ]
+    },
+    {
+      "path": "assets/images/guide-2.webp",
+      "from": "raw/extracted/home-8a594335/assets/7a73f5ae91aa2422.webp",
+      "sha256": "7a73f5ae91aa24228c85dcf57ba5b1ed00c93d338070656193d0ee74cd3808bb",
+      "logicalPaths": [
+        "assets/media/guide-2.png"
+      ],
+      "aliases": [
+        "assets/media/guide-2.webp"
+      ]
+    },
+    {
+      "path": "assets/images/guide-3.webp",
+      "from": "raw/extracted/home-8a594335/assets/98852e7133b84e03.webp",
+      "sha256": "98852e7133b84e03eb91e181d4aaf1c2756ab495c2457e9467d5668d4eec0fa7",
+      "logicalPaths": [
+        "assets/media/guide-3.png"
+      ],
+      "aliases": [
+        "assets/media/guide-3.webp"
+      ]
+    },
+    {
+      "path": "assets/images/brand-drager2.svg",
+      "from": "raw/extracted/home-8a594335/assets/0a0b3029cc47c7a3.svg",
+      "sha256": "0a0b3029cc47c7a3c9f27ce24588254f8f424ed2cdad30af924fc49c92e704be",
+      "logicalPaths": [
+        "assets/brand-drager2.svg"
+      ],
+      "aliases": []
+    },
+    {
+      "path": "assets/images/brand-seca.svg",
+      "from": "raw/extracted/home-8a594335/assets/b1084592a853ac61.svg",
+      "sha256": "b1084592a853ac61b0688b4a7b6ae7db86a3ff2c9c5982db08cae5f088d06fec",
+      "logicalPaths": [
+        "assets/brand-seca.svg"
+      ],
+      "aliases": []
+    },
+    {
+      "path": "assets/images/brand-burmeier.png",
+      "from": "raw/extracted/home-8a594335/assets/eb9fcf6a6a11ea9b.png",
+      "sha256": "eb9fcf6a6a11ea9bd4372dac0c1b5178ab9bddb9659aafe145f565241112c1f2",
+      "logicalPaths": [
+        "assets/brand-burmeier.png"
+      ],
+      "aliases": []
+    },
+    {
+      "path": "assets/images/brand-tigon.png",
+      "from": "raw/extracted/home-8a594335/assets/47571ff3b74f28d6.png",
+      "sha256": "47571ff3b74f28d6189675f4ac541e859f3ac971dd7cd9475a56ae5c10d55daa",
+      "logicalPaths": [
+        "assets/brand-tigon.png"
+      ],
+      "aliases": []
+    },
+    {
+      "path": "assets/images/brand-frame.svg",
+      "from": "raw/extracted/home-8a594335/assets/dc108e852082f310.svg",
+      "sha256": "dc108e852082f310f2325ba52a81def900726306db336f2018165debbca27952",
+      "logicalPaths": [
+        "assets/brand-frame.svg"
+      ],
+      "aliases": []
+    },
+    {
+      "path": "assets/images/pay-paypal.svg",
+      "from": "raw/extracted/home-8a594335/assets/2b72d5c1c68b933c.svg",
+      "sha256": "2b72d5c1c68b933c4bc04933f07b4aa7024e510355ad989ef5a7633aba059ec2",
+      "logicalPaths": [
+        "assets/pay-paypal.svg"
+      ],
+      "aliases": []
+    },
+    {
+      "path": "assets/images/pay-visa.svg",
+      "from": "raw/extracted/home-8a594335/assets/b9d9b45aa6ef0da1.svg",
+      "sha256": "b9d9b45aa6ef0da1147707903d531104e24b76d2c13350247b8229d8e370bee5",
+      "logicalPaths": [
+        "assets/pay-visa.svg"
+      ],
+      "aliases": []
+    },
+    {
+      "path": "assets/images/pay-mastercard.svg",
+      "from": "raw/extracted/home-8a594335/assets/f75ca84e9edb2402.svg",
+      "sha256": "f75ca84e9edb240278f5d40a5d6efa1cc6c284d07ac0acf6bae4422bd9a3bcf2",
+      "logicalPaths": [
+        "assets/pay-mastercard.svg"
+      ],
+      "aliases": []
+    },
+    {
+      "path": "assets/images/zoom-graphics-logo.svg",
+      "from": "raw/extracted/home-8a594335/assets/d900fbf74314f854.svg",
+      "sha256": "d900fbf74314f8547c719d3c16ec13f9a448de4ae5418d491fb04721b7b167b7",
+      "logicalPaths": [
+        "assets/zoom-graphics-logo.svg"
+      ],
+      "aliases": []
+    },
+    {
+      "path": "assets/images/productPro-0.webp",
+      "from": "raw/extracted/home-8a594335/assets/1aaef9c790c7d933.webp",
+      "sha256": "1aaef9c790c7d9337952b49e3fd3acb79476f7808c50fd4ce79cecc2c29caa4a",
+      "logicalPaths": [
+        "assets/media/productPro-0.png"
+      ],
+      "aliases": [
+        "assets/media/productPro-0.webp"
+      ]
+    },
+    {
+      "path": "assets/images/product-3.png",
+      "from": "raw/extracted/home-8a594335/assets/13d7c707ec7e5d8c.png",
+      "sha256": "13d7c707ec7e5d8c882ef179ddf9f49717544ce0ca670e55f09162cbb5805cc9",
+      "logicalPaths": [
+        "assets/media/productPro-2.png",
+        "assets/media/product-3.png"
+      ],
+      "aliases": []
+    },
+    {
+      "path": "assets/images/productPro-4.png",
+      "from": "raw/extracted/home-8a594335/assets/0740bcb5439837e4.png",
+      "sha256": "0740bcb5439837e44beba1eb785e5ac472a3055533d471a95c56bbb075ed0707",
+      "logicalPaths": [
+        "assets/media/productPro-4.png"
+      ],
+      "aliases": []
+    },
+    {
+      "path": "assets/fonts/outfit-latin.woff2",
+      "from": "raw/normalized/design-system-91951f68-b1/assets/fonts/outfit-latin.woff2",
+      "sha256": "6c18d579fd87c3776be068b762cbc83fde3acb543d49eabd3ade842eb987e887"
+    },
+    {
+      "path": "assets/fonts/outfit-latin-ext.woff2",
+      "from": "raw/normalized/design-system-91951f68-b1/assets/fonts/outfit-latin-ext.woff2",
+      "sha256": "0f53d1c03b3918d744a843b5039001ee31695ca1e255e3914188df81beb461e9"
+    }
+  ],
+  "conversion": {
+    "baseRulesFromInlineStyles": 240,
+    "sourceRulesRewritten": 250,
+    "manualRewrites": [
+      "[data-r=certs] > div > div -> .certifications .section-heading, .cert-card",
+      "[data-r=certs] > div > div > div:first-of-type -> .cert-card_code"
+    ],
+    "deadSourceRules": [
+      {
+        "source": "home",
+        "media": null,
+        "selector": ".img-cell .img-tool",
+        "reason": "edit-mode/runtime only"
+      },
+      {
+        "source": "home",
+        "media": null,
+        "selector": ".img-cell:hover .img-tool",
+        "reason": "edit-mode/runtime only"
+      },
+      {
+        "source": "home",
+        "media": null,
+        "selector": ".img-cell:focus-within .img-tool",
+        "reason": "edit-mode/runtime only"
+      },
+      {
+        "source": "home",
+        "media": null,
+        "selector": ".eyebrow",
+        "reason": "matches nothing"
+      },
+      {
+        "source": "home",
+        "media": null,
+        "selector": ".cat-bento",
+        "decl": "gap",
+        "reason": "inline style wins (non-important)"
+      },
+      {
+        "source": "home",
+        "media": null,
+        "selector": ".guide-grid.three",
+        "reason": "matches nothing"
+      },
+      {
+        "source": "home",
+        "media": "(max-width:900px)",
+        "selector": ".guide-grid.three",
+        "reason": "matches nothing"
+      },
+      {
+        "source": "home",
+        "media": "(max-width:560px)",
+        "selector": ".guide-grid.three",
+        "reason": "matches nothing"
+      },
+      {
+        "source": "home",
+        "media": null,
+        "selector": ".cat-bento.three .b-c",
+        "reason": "matches nothing"
+      },
+      {
+        "source": "home",
+        "media": null,
+        "selector": ".cat-bento.three .b-d",
+        "reason": "matches nothing"
+      },
+      {
+        "source": "home",
+        "media": "(min-width:1025px) and (max-width:1440px)",
+        "selector": "[aria-label=Previous][onclick]",
+        "reason": "matches nothing"
+      },
+      {
+        "source": "home",
+        "media": "(max-width:1024px)",
+        "selector": "[data-r=hero-copy]",
+        "decl": "position",
+        "reason": "inline style wins (non-important)"
+      },
+      {
+        "source": "home",
+        "media": "(max-width:1024px)",
+        "selector": "[data-r=hero-copy]",
+        "decl": "z-index",
+        "reason": "inline style wins (non-important)"
+      },
+      {
+        "source": "home",
+        "media": "(max-width:1024px)",
+        "selector": "[data-r=hero-deco]",
+        "reason": "edit-mode/runtime only"
+      },
+      {
+        "source": "header",
+        "media": null,
+        "selector": "[data-r=burger]",
+        "decl": "display",
+        "reason": "inline style wins (non-important)"
+      },
+      {
+        "source": "header",
+        "media": "(max-width:640px)",
+        "selector": "[data-r=cart]",
+        "decl": "height",
+        "reason": "inline style wins (non-important)"
+      },
+      {
+        "source": "extra",
+        "media": null,
+        "selector": "[data-r=brand-arrow]",
+        "reason": "matches nothing"
+      },
+      {
+        "source": "extra",
+        "media": null,
+        "selector": "[data-r=brand-card]:hover [data-r=brand-arrow]",
+        "reason": "matches nothing"
+      },
+      {
+        "source": "style-hover",
+        "selector": ".scpf:hover",
+        "reason": "matches nothing"
+      },
+      {
+        "source": "style-hover",
+        "selector": ".scpg:hover",
+        "reason": "matches nothing"
+      },
+      {
+        "source": "style-hover",
+        "selector": ".scph:hover",
+        "reason": "matches nothing"
+      },
+      {
+        "source": "style-hover",
+        "selector": ".scpi:hover",
+        "reason": "matches nothing"
+      },
+      {
+        "source": "style-hover",
+        "selector": ".scpj:hover",
+        "reason": "matches nothing"
+      },
+      {
+        "source": "style-hover",
+        "selector": ".scpk:hover",
+        "reason": "matches nothing"
+      }
+    ],
+    "removedNodes": {
+      "count": 57,
+      "kinds": [
+        "edit-mode upload labels / fit toggles",
+        "dashed upload slot outlines",
+        "reverse-playback canvas (recreated by JS)",
+        "logo placeholder text",
+        "hero deco rings, orbit and ring (display:none at every width)",
+        "trustPlain grid (display:none at every width)"
+      ]
+    },
+    "droppedKeyframes": [
+      "abq-p1",
+      "abq-p2",
+      "abq-p3",
+      "floaty"
+    ],
+    "bindingsResolved": 129,
+    "inlineStyleAttributes": "254, custom properties only (250 x --comet-delay, 4 x --guide-panel)"
+  },
+  "runtimeConversions": [
+    {
+      "from": "<x-dc>, <helmet>, dc-runtime, React 18 UMD, dc-import hosts",
+      "to": "one plain document; components inlined at their use sites"
+    },
+    {
+      "from": "inline style attributes (template)",
+      "to": "named classes (block_element / --modifier)"
+    },
+    {
+      "from": "[data-r] / structural selectors in the page and header sheets",
+      "to": "class selectors, each rewrite verified to match the same element set"
+    },
+    {
+      "from": "style-hover (runtime .scpN classes)",
+      "to": ":hover rules"
+    },
+    {
+      "from": "sc-if / sc-for",
+      "to": "static markup; conditional UI toggled by hidden / aria-expanded / classes"
+    },
+    {
+      "from": "{{ }} bindings",
+      "to": "static default values; state values in modifier/state classes"
+    },
+    {
+      "from": "DCLogic (Home, SiteHeader)",
+      "to": "9 vanilla IIFE modules in one <script>"
+    },
+    {
+      "from": "#__assets alias shim (MutationObserver + img.src override)",
+      "to": "removed; direct relative asset paths"
+    },
+    {
+      "from": "!important overrides of inline styles",
+      "to": "plain declarations ordered after the base rules"
+    }
+  ],
+  "validation": {
+    "computedStyles": {
+      "widths": [
+        1440,
+        1400,
+        1399,
+        1280,
+        1121,
+        1120,
+        1025,
+        1024,
+        901,
+        900,
+        861,
+        860,
+        800,
+        641,
+        640,
+        561,
+        560,
+        521,
+        520,
+        390,
+        360
+      ],
+      "elementsCompared": 801,
+      "pageSizeEqualAtAllWidths": true,
+      "unexplainedDifferences": 0
+    },
+    "pixels": [
+      {
+        "width": 1440,
+        "diffPx": 248,
+        "pct": 0.0032
+      },
+      {
+        "width": 1400,
+        "diffPx": 248,
+        "pct": 0.0033
+      },
+      {
+        "width": 1280,
+        "diffPx": 248,
+        "pct": 0.0037
+      },
+      {
+        "width": 1121,
+        "diffPx": 54,
+        "pct": 0.001
+      },
+      {
+        "width": 1120,
+        "diffPx": 248,
+        "pct": 0.0041
+      },
+      {
+        "width": 1024,
+        "diffPx": 54,
+        "pct": 0.0009
+      },
+      {
+        "width": 900,
+        "diffPx": 248,
+        "pct": 0.0044
+      },
+      {
+        "width": 800,
+        "diffPx": 302,
+        "pct": 0.0059
+      },
+      {
+        "width": 641,
+        "diffPx": 0,
+        "pct": 0
+      },
+      {
+        "width": 640,
+        "diffPx": 0,
+        "pct": 0
+      },
+      {
+        "width": 520,
+        "diffPx": 0,
+        "pct": 0
+      },
+      {
+        "width": 390,
+        "diffPx": 0,
+        "pct": 0
+      },
+      {
+        "width": 360,
+        "diffPx": 0,
+        "pct": 0
+      }
+    ],
+    "interactions": "same results on original and normalized: loader, dropdown hover/click, tooltip, 14 hover states, stock tabs + photo swap, slider arrows, add to cart + badge, mobile menu open/close, product card navigation, hero video loop timeline",
+    "static": "pass (see report)",
+    "browsers": [
+      "Chrome (headless, current stable)"
+    ]
+  },
+  "next": [
+    ".prompts/refactor-raw-html.md (page INITIAL) with pages/home.html as its read-only raw input"
+  ]
+}

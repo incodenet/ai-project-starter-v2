@@ -1,0 +1,2372 @@
+{
+  "schemaVersion": 1,
+  "snapshot": "home-8a594335",
+  "mode": "INITIAL",
+  "extractedAt": "2026-10-28T09:26:13.648Z",
+  "extractor": {
+    "method": "node script: raw-text <script> scanner + JSON.parse + base64 + gunzip; no eval, no DOM, no embedded script execution"
+  },
+  "exports": [
+    {
+      "exportId": "abecq-home",
+      "originalPath": "raw/pages/index.html",
+      "sha256": "8a594335c7332908a51486be098017feccff779ded9d7cb9d973a78e9d64f435",
+      "bytes": 7148805,
+      "detectedType": "claude-design-bundle",
+      "role": "home",
+      "wrapperTitle": "Bundled Page",
+      "bundler": {
+        "manifestEntries": 59,
+        "assetCountsByMime": {
+          "image/webp": 20,
+          "image/png": 18,
+          "image/svg+xml": 11,
+          "video/mp4": 1,
+          "text/javascript": 3,
+          "text/html": 3,
+          "text/css": 1,
+          "font/woff2": 2
+        },
+        "templatePresent": true,
+        "templateSha256": "ff22098f707750d526fd0ed9f3bc409120ad6580f5603877212684233344e5d1",
+        "pageOrderPresent": true,
+        "pageOrder": [],
+        "extResources": [
+          {
+            "id": "./SiteHeader.dc.html",
+            "uuid": "3cdd074f-f397-409b-beb4-4bf800359107",
+            "path": "documents/SiteHeader.dc.html"
+          },
+          {
+            "id": "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap",
+            "uuid": "6b1a986d-7996-45b8-b239-3678e63aa3ec",
+            "path": "assets/28d684a1bde40714.css"
+          },
+          {
+            "id": "./SectionHeading.dc.html",
+            "uuid": "ff25fed1-e6d9-4ad9-a9ff-11dd61d24b95",
+            "path": "documents/SectionHeading.dc.html"
+          },
+          {
+            "id": "./Button.dc.html",
+            "uuid": "58013964-998c-49da-8de6-e1bc8131ad11",
+            "path": "documents/Button.dc.html"
+          },
+          {
+            "id": "https://unpkg.com/react@18.3.1/umd/react.production.min.js",
+            "uuid": "2876de31-5695-455b-8971-493b12638b16",
+            "path": "assets/d949f1c3687aedad.js"
+          },
+          {
+            "id": "https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js",
+            "uuid": "ef777877-e0e7-423a-a6aa-9f51b1cc6f15",
+            "path": "assets/35f4f974f4b2bcd4.js"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "stableId": "doc.home",
+          "role": "main-ui",
+          "path": "documents/index.html",
+          "source": "__bundler/template (UUIDs rewritten to relative paths)",
+          "runtime": "dc (x-dc/helmet/dc-import/DCLogic)",
+          "sha256": "2ca3b0d7b70ae35dc532b74af7f856d85b6eb3f00bce71db8b9c4c17be19615e",
+          "bytes": 223781,
+          "dependencies": {
+            "scripts": [
+              "../assets/8fe7df74405f3c55.js"
+            ],
+            "links": [
+              "https://fonts.googleapis.com",
+              "https://fonts.gstatic.com"
+            ],
+            "dcImports": [
+              "SiteHeader",
+              "SectionHeading",
+              "Button"
+            ],
+            "remainingUuids": []
+          }
+        },
+        {
+          "stableId": "doc.home.raw",
+          "role": "lossless-original",
+          "path": "documents/_original/index.template.raw.html",
+          "source": "__bundler/template exactly as stored (UUIDs intact)",
+          "sha256": "ff22098f707750d526fd0ed9f3bc409120ad6580f5603877212684233344e5d1",
+          "bytes": 224127,
+          "dependencies": {
+            "scripts": [
+              "a3b69b26-4d6a-45ab-9232-7733e14e0c54"
+            ],
+            "links": [
+              "https://fonts.googleapis.com",
+              "https://fonts.gstatic.com"
+            ],
+            "dcImports": [
+              "SiteHeader",
+              "SectionHeading",
+              "Button"
+            ],
+            "remainingUuids": [
+              "a3b69b26-4d6a-45ab-9232-7733e14e0c54",
+              "5e7ff243-f15b-432e-a627-50a8b118cbaf",
+              "8abb59af-5082-4c48-a275-8166b7acefc5",
+              "5ef52ccd-68b4-4f9b-8e23-9fc0c9cff941",
+              "37747b86-cbfa-4521-a829-ef306e440f28",
+              "24d8b7f1-57bd-4fc0-9f43-5bffc15aa857",
+              "90d29d1f-f7c9-40a4-b2f6-3f4a8a0a86c1",
+              "74fbdbe9-53d3-41a3-9182-87496f1a1602",
+              "1b82da45-feb1-4042-8433-42fb672ef17c",
+              "10022a16-1c26-42cf-8603-8028027facc0",
+              "30951c2c-45a1-4234-8b57-d8702a6b0b0a",
+              "2d9dcf6a-78a9-48fb-8451-3b9517723a80",
+              "c7c6dd2f-38fb-4d45-80d7-57c8307689bd",
+              "0dd96558-1a35-4b06-8767-30183a996b86",
+              "8176bde2-b130-46b0-a863-244b54299e25",
+              "afe1b556-ca5c-470d-9e67-42ab85c0f3d1",
+              "e41d4836-0bb1-4c74-a437-3ca67c3bbcd5",
+              "ad131daa-5dad-4748-a029-327bb96f622b",
+              "ee34a8ef-2995-4dbe-a7c6-029bb915d92e",
+              "060d05ae-86ee-4af3-84cc-67fa3d87b718",
+              "fd125333-b7d7-436c-8f43-e78d63961021",
+              "a1737833-450c-4d6f-baff-2f49c17d2779",
+              "f45af627-755b-443b-b175-90c493621bae",
+              "b994fcd8-acd1-45dc-a688-91e102702c3d",
+              "f739c1eb-2e18-4669-b2df-69956a97f3b4",
+              "fc3ac11d-f409-4dac-89bd-ee495c580586",
+              "63a12373-bfb1-4d89-87c1-ef5dd45d942d",
+              "00aca18a-f8c7-4c8e-b07d-d81c07879c6c",
+              "5e48ed37-651d-4e11-a35a-beebb952f78b",
+              "fa2a12ff-6ca2-4085-a388-3f01bee61ed3",
+              "7b252e81-8a67-41e8-8b0a-96d069359dc1",
+              "ea07e07f-24c6-48b4-918e-7027ddfd7d46",
+              "b1cbbd95-4071-4865-96ef-584184c43c0f",
+              "05ade4da-05c2-49d0-8fa0-d1f7c326aed0",
+              "0bd429c4-c6df-4d06-9db4-f20533d26ac1",
+              "23e1ae92-1606-4108-b3eb-e08c5d3cb008",
+              "f760abc6-e034-436d-badc-971ccaf3ae37",
+              "744b1289-1cec-4248-8d8f-39edba33323f",
+              "866a7fdc-1794-49f6-a072-6c26e8cce6d0",
+              "7be65f2d-c1ad-4996-977e-ec6109371450",
+              "12d083ab-47ca-4306-a4ed-654769e144b4",
+              "dc514f86-54a4-45bd-b772-f50b494168bf",
+              "6d6c1999-bae3-4bb5-9c1f-23b7588d8d05",
+              "5effcc63-0cbc-4c1e-b3ed-2798a4946d72",
+              "b43ed5bc-1d57-438a-9f76-5f0ca1c6db39",
+              "4ad0a437-b8f0-4964-9b5e-905821a608e1",
+              "df7274d0-1a8a-45f3-9a68-446fb96653eb",
+              "97c4c36d-00fe-4b27-881f-ab4142700ae6",
+              "5732b20d-de20-47bd-adfa-c2bbeca9b252",
+              "f5049152-6e1d-4834-8ac9-1e78cbd4daad",
+              "94827df0-6b83-4122-ac20-433d93620f32",
+              "8cc49740-7399-4d69-b3e7-5c0ac8c672e4",
+              "ad01f6b9-9167-403c-9308-a2a98280ce26"
+            ]
+          }
+        },
+        {
+          "stableId": "doc.dc.SiteHeader",
+          "role": "dc-component",
+          "path": "documents/SiteHeader.dc.html",
+          "source": "manifest entry (byte-for-byte)",
+          "extResourceId": "./SiteHeader.dc.html",
+          "uuid": "3cdd074f-f397-409b-beb4-4bf800359107",
+          "sha256": "5916297eab487e9b234c4180036e2f2e23cdde229c17dd6410f8415dcc445e08",
+          "bytes": 34992,
+          "dependencies": {
+            "scripts": [
+              "./support.js"
+            ],
+            "links": [
+              "https://fonts.googleapis.com",
+              "https://fonts.gstatic.com",
+              "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&amp;display=swap"
+            ],
+            "dcImports": [],
+            "remainingUuids": []
+          }
+        },
+        {
+          "stableId": "doc.dc.Button",
+          "role": "dc-component",
+          "path": "documents/Button.dc.html",
+          "source": "manifest entry (byte-for-byte)",
+          "extResourceId": "./Button.dc.html",
+          "uuid": "58013964-998c-49da-8de6-e1bc8131ad11",
+          "sha256": "959beed92c9736c5d39b18fea028c3e63429023b9e809350ea38bf0b7db4dcba",
+          "bytes": 74561,
+          "dependencies": {
+            "scripts": [
+              "./support.js"
+            ],
+            "links": [
+              "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&amp;display=swap"
+            ],
+            "dcImports": [],
+            "remainingUuids": []
+          }
+        },
+        {
+          "stableId": "doc.dc.SectionHeading",
+          "role": "dc-component",
+          "path": "documents/SectionHeading.dc.html",
+          "source": "manifest entry (byte-for-byte)",
+          "extResourceId": "./SectionHeading.dc.html",
+          "uuid": "ff25fed1-e6d9-4ad9-a9ff-11dd61d24b95",
+          "sha256": "8d121902aabe079161c921c81d6ad55f3f77c3e3a07c57feb47c9240997f1de1",
+          "bytes": 10302,
+          "dependencies": {
+            "scripts": [
+              "./support.js"
+            ],
+            "links": [
+              "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&amp;display=swap"
+            ],
+            "dcImports": [],
+            "remainingUuids": []
+          }
+        }
+      ],
+      "assets": [
+        {
+          "file": "assets/0088735301449132.webp",
+          "sha256": "00887353014491325d10d970f567a4f6537e2b1b28ed25f8256e216479cbed05",
+          "bytes": 11648,
+          "mime": "image/webp",
+          "magicOk": true,
+          "dimensions": {
+            "width": 280,
+            "height": 219
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "8abb59af-5082-4c48-a275-8166b7acefc5"
+          ],
+          "logicalPaths": [
+            "assets/user/slot-acct-stat-addr.webp"
+          ],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/0088735301449132.webp"
+          }
+        },
+        {
+          "file": "assets/0740bcb5439837e4.png",
+          "sha256": "0740bcb5439837e44beba1eb785e5ac472a3055533d471a95c56bbb075ed0707",
+          "bytes": 86930,
+          "mime": "image/png",
+          "magicOk": true,
+          "dimensions": {
+            "width": 554,
+            "height": 554
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "ea07e07f-24c6-48b4-918e-7027ddfd7d46"
+          ],
+          "logicalPaths": [
+            "assets/media/productPro-4.png"
+          ],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/0740bcb5439837e4.png"
+          }
+        },
+        {
+          "file": "assets/0a0b3029cc47c7a3.svg",
+          "sha256": "0a0b3029cc47c7a3c9f27ce24588254f8f424ed2cdad30af924fc49c92e704be",
+          "bytes": 3896,
+          "mime": "image/svg+xml",
+          "magicOk": true,
+          "dimensions": {
+            "width": "404",
+            "height": "197",
+            "viewBox": "0 0 404 197"
+          },
+          "compressedInBundle": true,
+          "uuids": [
+            "f760abc6-e034-436d-badc-971ccaf3ae37"
+          ],
+          "logicalPaths": [
+            "assets/brand-drager2.svg"
+          ],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/0a0b3029cc47c7a3.svg"
+          }
+        },
+        {
+          "file": "assets/0e2dbc8d1b541ea2.webp",
+          "sha256": "0e2dbc8d1b541ea287cd1859e4080c508ea884d9d812928fe9f8a034b24ca686",
+          "bytes": 117630,
+          "mime": "image/webp",
+          "magicOk": true,
+          "dimensions": {
+            "width": 832,
+            "height": 1248
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "b43ed5bc-1d57-438a-9f76-5f0ca1c6db39"
+          ],
+          "logicalPaths": [
+            "assets/oiml-badge.png"
+          ],
+          "aliases": [
+            "assets/oiml-badge.webp"
+          ],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/0e2dbc8d1b541ea2.webp"
+          }
+        },
+        {
+          "file": "assets/0f53d1c03b3918d7.woff2",
+          "sha256": "0f53d1c03b3918d744a843b5039001ee31695ca1e255e3914188df81beb461e9",
+          "bytes": 14808,
+          "mime": "font/woff2",
+          "magicOk": true,
+          "dimensions": null,
+          "compressedInBundle": false,
+          "uuids": [
+            "8cc49740-7399-4d69-b3e7-5c0ac8c672e4"
+          ],
+          "logicalPaths": [],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/0f53d1c03b3918d7.woff2"
+          }
+        },
+        {
+          "file": "assets/13821d3ec056ec91.webp",
+          "sha256": "13821d3ec056ec9176381b390a3d9132881bc124dd165346d8db51c824a90998",
+          "bytes": 14694,
+          "mime": "image/webp",
+          "magicOk": true,
+          "dimensions": {
+            "width": 280,
+            "height": 248
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "5e7ff243-f15b-432e-a627-50a8b118cbaf"
+          ],
+          "logicalPaths": [
+            "assets/user/slot-acct-stat-orders.webp"
+          ],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/13821d3ec056ec91.webp"
+          }
+        },
+        {
+          "file": "assets/13d7c707ec7e5d8c.png",
+          "sha256": "13d7c707ec7e5d8c882ef179ddf9f49717544ce0ca670e55f09162cbb5805cc9",
+          "bytes": 113208,
+          "mime": "image/png",
+          "magicOk": true,
+          "dimensions": {
+            "width": 584,
+            "height": 466
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "fa2a12ff-6ca2-4085-a388-3f01bee61ed3",
+            "fd125333-b7d7-436c-8f43-e78d63961021"
+          ],
+          "logicalPaths": [
+            "assets/media/productPro-2.png",
+            "assets/media/product-3.png"
+          ],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/13d7c707ec7e5d8c.png"
+          }
+        },
+        {
+          "file": "assets/13ec04de3df5a7c0.png",
+          "sha256": "13ec04de3df5a7c0cbe641f70018ca8ee291b669179da65becde079f08e43197",
+          "bytes": 21376,
+          "mime": "image/png",
+          "magicOk": true,
+          "dimensions": {
+            "width": 304,
+            "height": 80
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "b1cbbd95-4071-4865-96ef-584184c43c0f"
+          ],
+          "logicalPaths": [
+            "assets/abecq-logo.png"
+          ],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/13ec04de3df5a7c0.png"
+          }
+        },
+        {
+          "file": "assets/166d71323da05cad.webp",
+          "sha256": "166d71323da05cadf67ffdfbbf8152a212672078aed3dfbb9364e84096594248",
+          "bytes": 14694,
+          "mime": "image/webp",
+          "magicOk": true,
+          "dimensions": {
+            "width": 280,
+            "height": 248
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "24d8b7f1-57bd-4fc0-9f43-5bffc15aa857"
+          ],
+          "logicalPaths": [
+            "assets/user/slot-returnform-badge.webp"
+          ],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/166d71323da05cad.webp"
+          }
+        },
+        {
+          "file": "assets/17e5f48968ea8fa2.webp",
+          "sha256": "17e5f48968ea8fa2294896aac456a8cd8766aa2ddc5016df9c1256fa5db2e17d",
+          "bytes": 12444,
+          "mime": "image/webp",
+          "magicOk": true,
+          "dimensions": {
+            "width": 280,
+            "height": 248
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "5ef52ccd-68b4-4f9b-8e23-9fc0c9cff941"
+          ],
+          "logicalPaths": [
+            "assets/user/slot-acct-stat-compare.webp"
+          ],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/17e5f48968ea8fa2.webp"
+          }
+        },
+        {
+          "file": "assets/18e4b54a8391bcab.webp",
+          "sha256": "18e4b54a8391bcab71912ebd852891fa7eef7a234323e17dc97bec888d25e7a0",
+          "bytes": 68374,
+          "mime": "image/webp",
+          "magicOk": true,
+          "dimensions": {
+            "width": 1400,
+            "height": 1142
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "2d9dcf6a-78a9-48fb-8451-3b9517723a80"
+          ],
+          "logicalPaths": [
+            "assets/media/guide-0.jpg"
+          ],
+          "aliases": [
+            "assets/media/guide-0.webp"
+          ],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/18e4b54a8391bcab.webp"
+          }
+        },
+        {
+          "file": "assets/19f97d02e66f9beb.webp",
+          "sha256": "19f97d02e66f9beb9864f710880850dd0d97b9f86c831b49db90634a95a2c05a",
+          "bytes": 106968,
+          "mime": "image/webp",
+          "magicOk": true,
+          "dimensions": {
+            "width": 832,
+            "height": 1248
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "12d083ab-47ca-4306-a4ed-654769e144b4"
+          ],
+          "logicalPaths": [
+            "assets/en15964-badge.png"
+          ],
+          "aliases": [
+            "assets/en15964-badge.webp"
+          ],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/19f97d02e66f9beb.webp"
+          }
+        },
+        {
+          "file": "assets/1aaef9c790c7d933.webp",
+          "sha256": "1aaef9c790c7d9337952b49e3fd3acb79476f7808c50fd4ce79cecc2c29caa4a",
+          "bytes": 33106,
+          "mime": "image/webp",
+          "magicOk": true,
+          "dimensions": {
+            "width": 750,
+            "height": 750
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "00aca18a-f8c7-4c8e-b07d-d81c07879c6c"
+          ],
+          "logicalPaths": [
+            "assets/media/productPro-0.png"
+          ],
+          "aliases": [
+            "assets/media/productPro-0.webp"
+          ],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/1aaef9c790c7d933.webp"
+          }
+        },
+        {
+          "file": "assets/1fcfd80d48bc7ce2.webp",
+          "sha256": "1fcfd80d48bc7ce214313c9406c55e24dbde594f0d997caf846a2b913a85583b",
+          "bytes": 40496,
+          "mime": "image/webp",
+          "magicOk": true,
+          "dimensions": {
+            "width": 877,
+            "height": 430
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "afe1b556-ca5c-470d-9e67-42ab85c0f3d1"
+          ],
+          "logicalPaths": [
+            "assets/media/heroPart-1.png"
+          ],
+          "aliases": [
+            "assets/media/heroPart-1.webp"
+          ],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/1fcfd80d48bc7ce2.webp"
+          }
+        },
+        {
+          "file": "assets/28d684a1bde40714.css",
+          "sha256": "28d684a1bde40714ed596ee285a74e2322f221c74f5f79bf40d009b3eb2c2459",
+          "bytes": 63556,
+          "mime": "text/css",
+          "magicOk": false,
+          "dimensions": null,
+          "compressedInBundle": true,
+          "uuids": [
+            "6b1a986d-7996-45b8-b239-3678e63aa3ec"
+          ],
+          "logicalPaths": [],
+          "aliases": [],
+          "extResourceIds": [
+            "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+          ],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/28d684a1bde40714.css"
+          }
+        },
+        {
+          "file": "assets/2b72d5c1c68b933c.svg",
+          "sha256": "2b72d5c1c68b933c4bc04933f07b4aa7024e510355ad989ef5a7633aba059ec2",
+          "bytes": 5376,
+          "mime": "image/svg+xml",
+          "magicOk": true,
+          "dimensions": {
+            "width": "124px",
+            "height": "33px",
+            "viewBox": "0 0 124 33"
+          },
+          "compressedInBundle": true,
+          "uuids": [
+            "97c4c36d-00fe-4b27-881f-ab4142700ae6"
+          ],
+          "logicalPaths": [
+            "assets/pay-paypal.svg"
+          ],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/2b72d5c1c68b933c.svg"
+          }
+        },
+        {
+          "file": "assets/2db22419c872f672.png",
+          "sha256": "2db22419c872f672aa30322e61d3d630fb8f82807585c118582172d1aae5f1e9",
+          "bytes": 38192,
+          "mime": "image/png",
+          "magicOk": true,
+          "dimensions": {
+            "width": 400,
+            "height": 197
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "0bd429c4-c6df-4d06-9db4-f20533d26ac1"
+          ],
+          "logicalPaths": [
+            "assets/brand-dingo.png"
+          ],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/2db22419c872f672.png"
+          }
+        },
+        {
+          "file": "assets/35f4f974f4b2bcd4.js",
+          "sha256": "35f4f974f4b2bcd44da73963347f8952e341f83909e4498227d4e26b98f66f0d",
+          "bytes": 131835,
+          "mime": "text/javascript",
+          "magicOk": false,
+          "dimensions": null,
+          "compressedInBundle": true,
+          "uuids": [
+            "ef777877-e0e7-423a-a6aa-9f51b1cc6f15"
+          ],
+          "logicalPaths": [],
+          "aliases": [],
+          "extResourceIds": [
+            "https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"
+          ],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/35f4f974f4b2bcd4.js"
+          }
+        },
+        {
+          "file": "assets/3f01fb30a01a0223.webp",
+          "sha256": "3f01fb30a01a022351f59f2b3e6e8eaf54d482cd9544f4250d91b9a63bc08a2f",
+          "bytes": 26920,
+          "mime": "image/webp",
+          "magicOk": true,
+          "dimensions": {
+            "width": 848,
+            "height": 455
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "e41d4836-0bb1-4c74-a437-3ca67c3bbcd5"
+          ],
+          "logicalPaths": [
+            "assets/media/heroPart-2.png"
+          ],
+          "aliases": [
+            "assets/media/heroPart-2.webp"
+          ],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/3f01fb30a01a0223.webp"
+          }
+        },
+        {
+          "file": "assets/47571ff3b74f28d6.png",
+          "sha256": "47571ff3b74f28d6189675f4ac541e859f3ac971dd7cd9475a56ae5c10d55daa",
+          "bytes": 11299,
+          "mime": "image/png",
+          "magicOk": true,
+          "dimensions": {
+            "width": 191,
+            "height": 94
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "7be65f2d-c1ad-4996-977e-ec6109371450"
+          ],
+          "logicalPaths": [
+            "assets/brand-tigon.png"
+          ],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/47571ff3b74f28d6.png"
+          }
+        },
+        {
+          "file": "assets/47e072dba59b48ae.webp",
+          "sha256": "47e072dba59b48ae34f8bb6ddefa009648ff60be0e11f9324b2c9ae304d55b3e",
+          "bytes": 14804,
+          "mime": "image/webp",
+          "magicOk": true,
+          "dimensions": {
+            "width": 320,
+            "height": 239
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "37747b86-cbfa-4521-a829-ef306e440f28"
+          ],
+          "logicalPaths": [
+            "assets/user/slot-cart-empty-img.webp"
+          ],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/47e072dba59b48ae.webp"
+          }
+        },
+        {
+          "file": "assets/68e8d795cf9a91db.webp",
+          "sha256": "68e8d795cf9a91dbe0b35c0f8ee1534246f3b2f8ce7f1dee63395198076b6e86",
+          "bytes": 66946,
+          "mime": "image/webp",
+          "magicOk": true,
+          "dimensions": {
+            "width": 1000,
+            "height": 823
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "c7c6dd2f-38fb-4d45-80d7-57c8307689bd"
+          ],
+          "logicalPaths": [
+            "assets/media/guide-1.png"
+          ],
+          "aliases": [
+            "assets/media/guide-1.webp"
+          ],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/68e8d795cf9a91db.webp"
+          }
+        },
+        {
+          "file": "assets/6b610aab3d51f7e2.png",
+          "sha256": "6b610aab3d51f7e279276c4a09f170f259f9829eb76a7dec4e8063113d2c44bb",
+          "bytes": 115837,
+          "mime": "image/png",
+          "magicOk": true,
+          "dimensions": {
+            "width": 584,
+            "height": 466
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "b994fcd8-acd1-45dc-a688-91e102702c3d",
+            "ee34a8ef-2995-4dbe-a7c6-029bb915d92e"
+          ],
+          "logicalPaths": [
+            "assets/media/productInd-1.png",
+            "assets/media/product-1.png"
+          ],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/6b610aab3d51f7e2.png"
+          }
+        },
+        {
+          "file": "assets/6c18d579fd87c377.woff2",
+          "sha256": "6c18d579fd87c3776be068b762cbc83fde3acb543d49eabd3ade842eb987e887",
+          "bytes": 32292,
+          "mime": "font/woff2",
+          "magicOk": true,
+          "dimensions": null,
+          "compressedInBundle": false,
+          "uuids": [
+            "ad01f6b9-9167-403c-9308-a2a98280ce26"
+          ],
+          "logicalPaths": [],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/6c18d579fd87c377.woff2"
+          }
+        },
+        {
+          "file": "assets/6e4c3785875fa591.webp",
+          "sha256": "6e4c3785875fa591a01483e1f82d7e7f42379dda44672978cdfc5a1753c7a491",
+          "bytes": 46308,
+          "mime": "image/webp",
+          "magicOk": true,
+          "dimensions": {
+            "width": 1008,
+            "height": 1264
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "90d29d1f-f7c9-40a4-b2f6-3f4a8a0a86c1"
+          ],
+          "logicalPaths": [
+            "assets/media/cat-0.png"
+          ],
+          "aliases": [
+            "assets/media/cat-0.webp"
+          ],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/6e4c3785875fa591.webp"
+          }
+        },
+        {
+          "file": "assets/77e3259da1818c31.svg",
+          "sha256": "77e3259da1818c31baa58705b069ae16f544a9bb28289128cf2ab71911360c72",
+          "bytes": 1779,
+          "mime": "image/svg+xml",
+          "magicOk": true,
+          "dimensions": {
+            "width": "24",
+            "height": "24",
+            "viewBox": "0 0 24 24"
+          },
+          "compressedInBundle": true,
+          "uuids": [
+            "6d6c1999-bae3-4bb5-9c1f-23b7588d8d05"
+          ],
+          "logicalPaths": [
+            "assets/icon-suitcase.svg"
+          ],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/77e3259da1818c31.svg"
+          }
+        },
+        {
+          "file": "assets/792b33cd2bd17ce0.mp4",
+          "sha256": "792b33cd2bd17ce0f3add66eeee180ad964827e66eda1ac9818cc4c920e52e1f",
+          "bytes": 2743274,
+          "mime": "video/mp4",
+          "magicOk": true,
+          "dimensions": null,
+          "compressedInBundle": false,
+          "uuids": [
+            "94827df0-6b83-4122-ac20-433d93620f32"
+          ],
+          "logicalPaths": [
+            "assets/media/heroPart-0.mp4"
+          ],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/792b33cd2bd17ce0.mp4"
+          }
+        },
+        {
+          "file": "assets/7a73f5ae91aa2422.webp",
+          "sha256": "7a73f5ae91aa24228c85dcf57ba5b1ed00c93d338070656193d0ee74cd3808bb",
+          "bytes": 63834,
+          "mime": "image/webp",
+          "magicOk": true,
+          "dimensions": {
+            "width": 840,
+            "height": 1200
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "0dd96558-1a35-4b06-8767-30183a996b86"
+          ],
+          "logicalPaths": [
+            "assets/media/guide-2.png"
+          ],
+          "aliases": [
+            "assets/media/guide-2.webp"
+          ],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/7a73f5ae91aa2422.webp"
+          }
+        },
+        {
+          "file": "assets/89dce32ef528f506.webp",
+          "sha256": "89dce32ef528f50630353c7dddfd77d0da821dbb15ab27cf4fd2ebd812c439ef",
+          "bytes": 39164,
+          "mime": "image/webp",
+          "magicOk": true,
+          "dimensions": {
+            "width": 1000,
+            "height": 1000
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "f739c1eb-2e18-4669-b2df-69956a97f3b4"
+          ],
+          "logicalPaths": [
+            "assets/media/productInd-2.png"
+          ],
+          "aliases": [
+            "assets/media/productInd-2.webp"
+          ],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/89dce32ef528f506.webp"
+          }
+        },
+        {
+          "file": "assets/8de436f505eb0a90.png",
+          "sha256": "8de436f505eb0a90e0e966523e83ecef9a3da17f9e94d233369d36d848d92858",
+          "bytes": 86434,
+          "mime": "image/png",
+          "magicOk": true,
+          "dimensions": {
+            "width": 584,
+            "height": 466
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "7b252e81-8a67-41e8-8b0a-96d069359dc1",
+            "ad131daa-5dad-4748-a029-327bb96f622b",
+            "f45af627-755b-443b-b175-90c493621bae"
+          ],
+          "logicalPaths": [
+            "assets/media/productPro-3.png",
+            "assets/media/product-0.png",
+            "assets/media/productInd-0.png"
+          ],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/8de436f505eb0a90.png"
+          }
+        },
+        {
+          "file": "assets/8fe7df74405f3c55.js",
+          "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe",
+          "bytes": 69150,
+          "mime": "text/javascript",
+          "magicOk": false,
+          "dimensions": null,
+          "compressedInBundle": true,
+          "uuids": [
+            "a3b69b26-4d6a-45ab-9232-7733e14e0c54"
+          ],
+          "logicalPaths": [],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/8fe7df74405f3c55.js"
+          }
+        },
+        {
+          "file": "assets/98852e7133b84e03.webp",
+          "sha256": "98852e7133b84e03eb91e181d4aaf1c2756ab495c2457e9467d5668d4eec0fa7",
+          "bytes": 126988,
+          "mime": "image/webp",
+          "magicOk": true,
+          "dimensions": {
+            "width": 840,
+            "height": 1200
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "8176bde2-b130-46b0-a863-244b54299e25"
+          ],
+          "logicalPaths": [
+            "assets/media/guide-3.png"
+          ],
+          "aliases": [
+            "assets/media/guide-3.webp"
+          ],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/98852e7133b84e03.webp"
+          }
+        },
+        {
+          "file": "assets/a62ca38504953297.png",
+          "sha256": "a62ca38504953297927c9edac56e19ed38f799df677494a45180b650bc068385",
+          "bytes": 67671,
+          "mime": "image/png",
+          "magicOk": true,
+          "dimensions": {
+            "width": 584,
+            "height": 466
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "060d05ae-86ee-4af3-84cc-67fa3d87b718",
+            "5e48ed37-651d-4e11-a35a-beebb952f78b",
+            "63a12373-bfb1-4d89-87c1-ef5dd45d942d"
+          ],
+          "logicalPaths": [
+            "assets/media/product-2.png",
+            "assets/media/productPro-1.png",
+            "assets/media/productInd-4.png"
+          ],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/a62ca38504953297.png"
+          }
+        },
+        {
+          "file": "assets/afbf82c194c264bc.webp",
+          "sha256": "afbf82c194c264bcd3a339f51195bc4672c9f49b6470dca089ae571c16b3e3ce",
+          "bytes": 64904,
+          "mime": "image/webp",
+          "magicOk": true,
+          "dimensions": {
+            "width": 1070,
+            "height": 746
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "30951c2c-45a1-4234-8b57-d8702a6b0b0a"
+          ],
+          "logicalPaths": [
+            "assets/media/cta-0.png"
+          ],
+          "aliases": [
+            "assets/media/cta-0.webp"
+          ],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/afbf82c194c264bc.webp"
+          }
+        },
+        {
+          "file": "assets/b1084592a853ac61.svg",
+          "sha256": "b1084592a853ac61b0688b4a7b6ae7db86a3ff2c9c5982db08cae5f088d06fec",
+          "bytes": 16728,
+          "mime": "image/svg+xml",
+          "magicOk": true,
+          "dimensions": {
+            "width": "191",
+            "height": "94",
+            "viewBox": "0 0 191 94"
+          },
+          "compressedInBundle": true,
+          "uuids": [
+            "866a7fdc-1794-49f6-a072-6c26e8cce6d0"
+          ],
+          "logicalPaths": [
+            "assets/brand-seca.svg"
+          ],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/b1084592a853ac61.svg"
+          }
+        },
+        {
+          "file": "assets/b5194b7bfcfd67aa.svg",
+          "sha256": "b5194b7bfcfd67aaee15ef749d14b468e9768cc7ac93a1784010d5ea96efcbb4",
+          "bytes": 399,
+          "mime": "image/svg+xml",
+          "magicOk": true,
+          "dimensions": {
+            "width": "24",
+            "height": "24",
+            "viewBox": "0 0 24 24"
+          },
+          "compressedInBundle": true,
+          "uuids": [
+            "5effcc63-0cbc-4c1e-b3ed-2798a4946d72"
+          ],
+          "logicalPaths": [
+            "assets/icon-user.svg"
+          ],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/b5194b7bfcfd67aa.svg"
+          }
+        },
+        {
+          "file": "assets/b6dc25c4f7ab74dc.png",
+          "sha256": "b6dc25c4f7ab74dc8fa779d15ee9fb6d683076e97bd80da1e7a94eaa73fd951e",
+          "bytes": 49229,
+          "mime": "image/png",
+          "magicOk": true,
+          "dimensions": {
+            "width": 600,
+            "height": 318
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "10022a16-1c26-42cf-8603-8028027facc0"
+          ],
+          "logicalPaths": [
+            "assets/media/cat-4.png"
+          ],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/b6dc25c4f7ab74dc.png"
+          }
+        },
+        {
+          "file": "assets/b9d9b45aa6ef0da1.svg",
+          "sha256": "b9d9b45aa6ef0da1147707903d531104e24b76d2c13350247b8229d8e370bee5",
+          "bytes": 2002,
+          "mime": "image/svg+xml",
+          "magicOk": true,
+          "dimensions": {
+            "width": "1000.046",
+            "height": "323.65302",
+            "viewBox": "0 0 1000.046 323.653"
+          },
+          "compressedInBundle": true,
+          "uuids": [
+            "5732b20d-de20-47bd-adfa-c2bbeca9b252"
+          ],
+          "logicalPaths": [
+            "assets/pay-visa.svg"
+          ],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/b9d9b45aa6ef0da1.svg"
+          }
+        },
+        {
+          "file": "assets/c0f61538b06a78c4.svg",
+          "sha256": "c0f61538b06a78c4ff155835ed50ed4889d9f7d9113444da6467364bc2a6c766",
+          "bytes": 5856,
+          "mime": "image/svg+xml",
+          "magicOk": true,
+          "dimensions": {
+            "width": "744.09448",
+            "height": "310.03937",
+            "viewBox": null
+          },
+          "compressedInBundle": true,
+          "uuids": [
+            "23e1ae92-1606-4108-b3eb-e08c5d3cb008"
+          ],
+          "logicalPaths": [
+            "assets/brand-drager.svg"
+          ],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/c0f61538b06a78c4.svg"
+          }
+        },
+        {
+          "file": "assets/d3e3440a5165c1ce.webp",
+          "sha256": "d3e3440a5165c1cef9b5bbfb6796050162ee5bffe918bcf8f31d79290d2e8ff9",
+          "bytes": 39164,
+          "mime": "image/webp",
+          "magicOk": true,
+          "dimensions": {
+            "width": 1000,
+            "height": 1000
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "a1737833-450c-4d6f-baff-2f49c17d2779"
+          ],
+          "logicalPaths": [
+            "assets/media/product-4.png"
+          ],
+          "aliases": [
+            "assets/media/product-4.webp"
+          ],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/d3e3440a5165c1ce.webp"
+          }
+        },
+        {
+          "file": "assets/d63a6a027d81d54d.png",
+          "sha256": "d63a6a027d81d54df05aba8206b68e27e5e0cbdecee1ecab0941c2ce3833eb5b",
+          "bytes": 29731,
+          "mime": "image/png",
+          "magicOk": true,
+          "dimensions": {
+            "width": 400,
+            "height": 215
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "1b82da45-feb1-4042-8433-42fb672ef17c"
+          ],
+          "logicalPaths": [
+            "assets/media/cat-3.png"
+          ],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/d63a6a027d81d54d.png"
+          }
+        },
+        {
+          "file": "assets/d8b10fead63072b6.svg",
+          "sha256": "d8b10fead63072b692626a44846de0cce7226376867dd0a33ae9315aa647cc3b",
+          "bytes": 8194,
+          "mime": "image/svg+xml",
+          "magicOk": true,
+          "dimensions": {
+            "width": "116",
+            "height": "71",
+            "viewBox": "0 0 116 71"
+          },
+          "compressedInBundle": true,
+          "uuids": [
+            "4ad0a437-b8f0-4964-9b5e-905821a608e1"
+          ],
+          "logicalPaths": [
+            "assets/pay-mastercard-color.svg"
+          ],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/d8b10fead63072b6.svg"
+          }
+        },
+        {
+          "file": "assets/d900fbf74314f854.svg",
+          "sha256": "d900fbf74314f8547c719d3c16ec13f9a448de4ae5418d491fb04721b7b167b7",
+          "bytes": 16671,
+          "mime": "image/svg+xml",
+          "magicOk": true,
+          "dimensions": {
+            "width": "426",
+            "height": "96",
+            "viewBox": "92 349 426 96"
+          },
+          "compressedInBundle": true,
+          "uuids": [
+            "f5049152-6e1d-4834-8ac9-1e78cbd4daad"
+          ],
+          "logicalPaths": [
+            "assets/zoom-graphics-logo.svg"
+          ],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/d900fbf74314f854.svg"
+          }
+        },
+        {
+          "file": "assets/d949f1c3687aedad.js",
+          "sha256": "d949f1c3687aedadcedac85261865f29b17cd273997e7f6b2bfc53b2f9d4c4dd",
+          "bytes": 10751,
+          "mime": "text/javascript",
+          "magicOk": false,
+          "dimensions": null,
+          "compressedInBundle": true,
+          "uuids": [
+            "2876de31-5695-455b-8971-493b12638b16"
+          ],
+          "logicalPaths": [],
+          "aliases": [],
+          "extResourceIds": [
+            "https://unpkg.com/react@18.3.1/umd/react.production.min.js"
+          ],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/d949f1c3687aedad.js"
+          }
+        },
+        {
+          "file": "assets/dc031ae8d370dd85.webp",
+          "sha256": "dc031ae8d370dd854dd6badaf77ea980f5db43c636003649b5615dd150eec5fc",
+          "bytes": 56082,
+          "mime": "image/webp",
+          "magicOk": true,
+          "dimensions": {
+            "width": 662,
+            "height": 884
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "dc514f86-54a4-45bd-b772-f50b494168bf"
+          ],
+          "logicalPaths": [
+            "assets/en16280-badge.png"
+          ],
+          "aliases": [
+            "assets/en16280-badge.webp"
+          ],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/dc031ae8d370dd85.webp"
+          }
+        },
+        {
+          "file": "assets/dc108e852082f310.svg",
+          "sha256": "dc108e852082f310f2325ba52a81def900726306db336f2018165debbca27952",
+          "bytes": 6564,
+          "mime": "image/svg+xml",
+          "magicOk": true,
+          "dimensions": {
+            "width": "404",
+            "height": "197",
+            "viewBox": "0 0 404 197"
+          },
+          "compressedInBundle": true,
+          "uuids": [
+            "744b1289-1cec-4248-8d8f-39edba33323f"
+          ],
+          "logicalPaths": [
+            "assets/brand-frame.svg"
+          ],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/dc108e852082f310.svg"
+          }
+        },
+        {
+          "file": "assets/dd9bb4a6d5b08b9c.png",
+          "sha256": "dd9bb4a6d5b08b9c0d46d377d2f6415541b0f47228fd293777950caa60064e15",
+          "bytes": 52407,
+          "mime": "image/png",
+          "magicOk": true,
+          "dimensions": {
+            "width": 584,
+            "height": 466
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "fc3ac11d-f409-4dac-89bd-ee495c580586"
+          ],
+          "logicalPaths": [
+            "assets/media/productInd-3.png"
+          ],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/dd9bb4a6d5b08b9c.png"
+          }
+        },
+        {
+          "file": "assets/eb9fcf6a6a11ea9b.png",
+          "sha256": "eb9fcf6a6a11ea9bd4372dac0c1b5178ab9bddb9659aafe145f565241112c1f2",
+          "bytes": 8104,
+          "mime": "image/png",
+          "magicOk": true,
+          "dimensions": {
+            "width": 191,
+            "height": 94
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "05ade4da-05c2-49d0-8fa0-d1f7c326aed0"
+          ],
+          "logicalPaths": [
+            "assets/brand-burmeier.png"
+          ],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/eb9fcf6a6a11ea9b.png"
+          }
+        },
+        {
+          "file": "assets/f13020f718142033.webp",
+          "sha256": "f13020f7181420339a03d2dc26b7e7f263859eaab6ba53ca2b03e26f0ab30ef7",
+          "bytes": 30932,
+          "mime": "image/webp",
+          "magicOk": true,
+          "dimensions": {
+            "width": 1040,
+            "height": 1264
+          },
+          "compressedInBundle": false,
+          "uuids": [
+            "74fbdbe9-53d3-41a3-9182-87496f1a1602"
+          ],
+          "logicalPaths": [
+            "assets/media/cat-2.png"
+          ],
+          "aliases": [
+            "assets/media/cat-2.webp"
+          ],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/f13020f718142033.webp"
+          }
+        },
+        {
+          "file": "assets/f75ca84e9edb2402.svg",
+          "sha256": "f75ca84e9edb240278f5d40a5d6efa1cc6c284d07ac0acf6bae4422bd9a3bcf2",
+          "bytes": 420,
+          "mime": "image/svg+xml",
+          "magicOk": true,
+          "dimensions": {
+            "width": "116",
+            "height": "71",
+            "viewBox": "0 0 116 71"
+          },
+          "compressedInBundle": true,
+          "uuids": [
+            "df7274d0-1a8a-45f3-9a68-446fb96653eb"
+          ],
+          "logicalPaths": [
+            "assets/pay-mastercard.svg"
+          ],
+          "aliases": [],
+          "extResourceIds": [],
+          "inDesignSystemSnapshot": {
+            "snapshot": "design-system-91951f68",
+            "file": "assets/f75ca84e9edb2402.svg"
+          }
+        }
+      ],
+      "uuidMap": {
+        "00aca18a-f8c7-4c8e-b07d-d81c07879c6c": {
+          "path": "assets/1aaef9c790c7d933.webp",
+          "mime": "image/webp",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/media/productPro-0.png"
+          ],
+          "aliases": [
+            "assets/media/productPro-0.webp"
+          ],
+          "extResourceId": null
+        },
+        "05ade4da-05c2-49d0-8fa0-d1f7c326aed0": {
+          "path": "assets/eb9fcf6a6a11ea9b.png",
+          "mime": "image/png",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/brand-burmeier.png"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "060d05ae-86ee-4af3-84cc-67fa3d87b718": {
+          "path": "assets/a62ca38504953297.png",
+          "mime": "image/png",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/media/product-2.png"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "0bd429c4-c6df-4d06-9db4-f20533d26ac1": {
+          "path": "assets/2db22419c872f672.png",
+          "mime": "image/png",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/brand-dingo.png"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "0dd96558-1a35-4b06-8767-30183a996b86": {
+          "path": "assets/7a73f5ae91aa2422.webp",
+          "mime": "image/webp",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/media/guide-2.png"
+          ],
+          "aliases": [
+            "assets/media/guide-2.webp"
+          ],
+          "extResourceId": null
+        },
+        "10022a16-1c26-42cf-8603-8028027facc0": {
+          "path": "assets/b6dc25c4f7ab74dc.png",
+          "mime": "image/png",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/media/cat-4.png"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "12d083ab-47ca-4306-a4ed-654769e144b4": {
+          "path": "assets/19f97d02e66f9beb.webp",
+          "mime": "image/webp",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/en15964-badge.png"
+          ],
+          "aliases": [
+            "assets/en15964-badge.webp"
+          ],
+          "extResourceId": null
+        },
+        "1b82da45-feb1-4042-8433-42fb672ef17c": {
+          "path": "assets/d63a6a027d81d54d.png",
+          "mime": "image/png",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/media/cat-3.png"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "23e1ae92-1606-4108-b3eb-e08c5d3cb008": {
+          "path": "assets/c0f61538b06a78c4.svg",
+          "mime": "image/svg+xml",
+          "compressed": true,
+          "logicalPaths": [
+            "assets/brand-drager.svg"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "24d8b7f1-57bd-4fc0-9f43-5bffc15aa857": {
+          "path": "assets/166d71323da05cad.webp",
+          "mime": "image/webp",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/user/slot-returnform-badge.webp"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "2876de31-5695-455b-8971-493b12638b16": {
+          "path": "assets/d949f1c3687aedad.js",
+          "mime": "text/javascript",
+          "compressed": true,
+          "logicalPaths": [],
+          "aliases": [],
+          "extResourceId": "https://unpkg.com/react@18.3.1/umd/react.production.min.js"
+        },
+        "2d9dcf6a-78a9-48fb-8451-3b9517723a80": {
+          "path": "assets/18e4b54a8391bcab.webp",
+          "mime": "image/webp",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/media/guide-0.jpg"
+          ],
+          "aliases": [
+            "assets/media/guide-0.webp"
+          ],
+          "extResourceId": null
+        },
+        "30951c2c-45a1-4234-8b57-d8702a6b0b0a": {
+          "path": "assets/afbf82c194c264bc.webp",
+          "mime": "image/webp",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/media/cta-0.png"
+          ],
+          "aliases": [
+            "assets/media/cta-0.webp"
+          ],
+          "extResourceId": null
+        },
+        "37747b86-cbfa-4521-a829-ef306e440f28": {
+          "path": "assets/47e072dba59b48ae.webp",
+          "mime": "image/webp",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/user/slot-cart-empty-img.webp"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "3cdd074f-f397-409b-beb4-4bf800359107": {
+          "path": "documents/SiteHeader.dc.html",
+          "mime": "text/html",
+          "compressed": true
+        },
+        "4ad0a437-b8f0-4964-9b5e-905821a608e1": {
+          "path": "assets/d8b10fead63072b6.svg",
+          "mime": "image/svg+xml",
+          "compressed": true,
+          "logicalPaths": [
+            "assets/pay-mastercard-color.svg"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "5732b20d-de20-47bd-adfa-c2bbeca9b252": {
+          "path": "assets/b9d9b45aa6ef0da1.svg",
+          "mime": "image/svg+xml",
+          "compressed": true,
+          "logicalPaths": [
+            "assets/pay-visa.svg"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "58013964-998c-49da-8de6-e1bc8131ad11": {
+          "path": "documents/Button.dc.html",
+          "mime": "text/html",
+          "compressed": true
+        },
+        "5e48ed37-651d-4e11-a35a-beebb952f78b": {
+          "path": "assets/a62ca38504953297.png",
+          "mime": "image/png",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/media/productPro-1.png"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "5e7ff243-f15b-432e-a627-50a8b118cbaf": {
+          "path": "assets/13821d3ec056ec91.webp",
+          "mime": "image/webp",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/user/slot-acct-stat-orders.webp"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "5ef52ccd-68b4-4f9b-8e23-9fc0c9cff941": {
+          "path": "assets/17e5f48968ea8fa2.webp",
+          "mime": "image/webp",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/user/slot-acct-stat-compare.webp"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "5effcc63-0cbc-4c1e-b3ed-2798a4946d72": {
+          "path": "assets/b5194b7bfcfd67aa.svg",
+          "mime": "image/svg+xml",
+          "compressed": true,
+          "logicalPaths": [
+            "assets/icon-user.svg"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "63a12373-bfb1-4d89-87c1-ef5dd45d942d": {
+          "path": "assets/a62ca38504953297.png",
+          "mime": "image/png",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/media/productInd-4.png"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "6b1a986d-7996-45b8-b239-3678e63aa3ec": {
+          "path": "assets/28d684a1bde40714.css",
+          "mime": "text/css",
+          "compressed": true,
+          "logicalPaths": [],
+          "aliases": [],
+          "extResourceId": "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+        },
+        "6d6c1999-bae3-4bb5-9c1f-23b7588d8d05": {
+          "path": "assets/77e3259da1818c31.svg",
+          "mime": "image/svg+xml",
+          "compressed": true,
+          "logicalPaths": [
+            "assets/icon-suitcase.svg"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "744b1289-1cec-4248-8d8f-39edba33323f": {
+          "path": "assets/dc108e852082f310.svg",
+          "mime": "image/svg+xml",
+          "compressed": true,
+          "logicalPaths": [
+            "assets/brand-frame.svg"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "74fbdbe9-53d3-41a3-9182-87496f1a1602": {
+          "path": "assets/f13020f718142033.webp",
+          "mime": "image/webp",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/media/cat-2.png"
+          ],
+          "aliases": [
+            "assets/media/cat-2.webp"
+          ],
+          "extResourceId": null
+        },
+        "7b252e81-8a67-41e8-8b0a-96d069359dc1": {
+          "path": "assets/8de436f505eb0a90.png",
+          "mime": "image/png",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/media/productPro-3.png"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "7be65f2d-c1ad-4996-977e-ec6109371450": {
+          "path": "assets/47571ff3b74f28d6.png",
+          "mime": "image/png",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/brand-tigon.png"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "8176bde2-b130-46b0-a863-244b54299e25": {
+          "path": "assets/98852e7133b84e03.webp",
+          "mime": "image/webp",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/media/guide-3.png"
+          ],
+          "aliases": [
+            "assets/media/guide-3.webp"
+          ],
+          "extResourceId": null
+        },
+        "866a7fdc-1794-49f6-a072-6c26e8cce6d0": {
+          "path": "assets/b1084592a853ac61.svg",
+          "mime": "image/svg+xml",
+          "compressed": true,
+          "logicalPaths": [
+            "assets/brand-seca.svg"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "8abb59af-5082-4c48-a275-8166b7acefc5": {
+          "path": "assets/0088735301449132.webp",
+          "mime": "image/webp",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/user/slot-acct-stat-addr.webp"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "8cc49740-7399-4d69-b3e7-5c0ac8c672e4": {
+          "path": "assets/0f53d1c03b3918d7.woff2",
+          "mime": "font/woff2",
+          "compressed": false,
+          "logicalPaths": [],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "90d29d1f-f7c9-40a4-b2f6-3f4a8a0a86c1": {
+          "path": "assets/6e4c3785875fa591.webp",
+          "mime": "image/webp",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/media/cat-0.png"
+          ],
+          "aliases": [
+            "assets/media/cat-0.webp"
+          ],
+          "extResourceId": null
+        },
+        "94827df0-6b83-4122-ac20-433d93620f32": {
+          "path": "assets/792b33cd2bd17ce0.mp4",
+          "mime": "video/mp4",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/media/heroPart-0.mp4"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "97c4c36d-00fe-4b27-881f-ab4142700ae6": {
+          "path": "assets/2b72d5c1c68b933c.svg",
+          "mime": "image/svg+xml",
+          "compressed": true,
+          "logicalPaths": [
+            "assets/pay-paypal.svg"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "a1737833-450c-4d6f-baff-2f49c17d2779": {
+          "path": "assets/d3e3440a5165c1ce.webp",
+          "mime": "image/webp",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/media/product-4.png"
+          ],
+          "aliases": [
+            "assets/media/product-4.webp"
+          ],
+          "extResourceId": null
+        },
+        "a3b69b26-4d6a-45ab-9232-7733e14e0c54": {
+          "path": "assets/8fe7df74405f3c55.js",
+          "mime": "text/javascript",
+          "compressed": true,
+          "logicalPaths": [],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "ad01f6b9-9167-403c-9308-a2a98280ce26": {
+          "path": "assets/6c18d579fd87c377.woff2",
+          "mime": "font/woff2",
+          "compressed": false,
+          "logicalPaths": [],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "ad131daa-5dad-4748-a029-327bb96f622b": {
+          "path": "assets/8de436f505eb0a90.png",
+          "mime": "image/png",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/media/product-0.png"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "afe1b556-ca5c-470d-9e67-42ab85c0f3d1": {
+          "path": "assets/1fcfd80d48bc7ce2.webp",
+          "mime": "image/webp",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/media/heroPart-1.png"
+          ],
+          "aliases": [
+            "assets/media/heroPart-1.webp"
+          ],
+          "extResourceId": null
+        },
+        "b1cbbd95-4071-4865-96ef-584184c43c0f": {
+          "path": "assets/13ec04de3df5a7c0.png",
+          "mime": "image/png",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/abecq-logo.png"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "b43ed5bc-1d57-438a-9f76-5f0ca1c6db39": {
+          "path": "assets/0e2dbc8d1b541ea2.webp",
+          "mime": "image/webp",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/oiml-badge.png"
+          ],
+          "aliases": [
+            "assets/oiml-badge.webp"
+          ],
+          "extResourceId": null
+        },
+        "b994fcd8-acd1-45dc-a688-91e102702c3d": {
+          "path": "assets/6b610aab3d51f7e2.png",
+          "mime": "image/png",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/media/productInd-1.png"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "c7c6dd2f-38fb-4d45-80d7-57c8307689bd": {
+          "path": "assets/68e8d795cf9a91db.webp",
+          "mime": "image/webp",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/media/guide-1.png"
+          ],
+          "aliases": [
+            "assets/media/guide-1.webp"
+          ],
+          "extResourceId": null
+        },
+        "dc514f86-54a4-45bd-b772-f50b494168bf": {
+          "path": "assets/dc031ae8d370dd85.webp",
+          "mime": "image/webp",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/en16280-badge.png"
+          ],
+          "aliases": [
+            "assets/en16280-badge.webp"
+          ],
+          "extResourceId": null
+        },
+        "df7274d0-1a8a-45f3-9a68-446fb96653eb": {
+          "path": "assets/f75ca84e9edb2402.svg",
+          "mime": "image/svg+xml",
+          "compressed": true,
+          "logicalPaths": [
+            "assets/pay-mastercard.svg"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "e41d4836-0bb1-4c74-a437-3ca67c3bbcd5": {
+          "path": "assets/3f01fb30a01a0223.webp",
+          "mime": "image/webp",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/media/heroPart-2.png"
+          ],
+          "aliases": [
+            "assets/media/heroPart-2.webp"
+          ],
+          "extResourceId": null
+        },
+        "ea07e07f-24c6-48b4-918e-7027ddfd7d46": {
+          "path": "assets/0740bcb5439837e4.png",
+          "mime": "image/png",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/media/productPro-4.png"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "ee34a8ef-2995-4dbe-a7c6-029bb915d92e": {
+          "path": "assets/6b610aab3d51f7e2.png",
+          "mime": "image/png",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/media/product-1.png"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "ef777877-e0e7-423a-a6aa-9f51b1cc6f15": {
+          "path": "assets/35f4f974f4b2bcd4.js",
+          "mime": "text/javascript",
+          "compressed": true,
+          "logicalPaths": [],
+          "aliases": [],
+          "extResourceId": "https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"
+        },
+        "f45af627-755b-443b-b175-90c493621bae": {
+          "path": "assets/8de436f505eb0a90.png",
+          "mime": "image/png",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/media/productInd-0.png"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "f5049152-6e1d-4834-8ac9-1e78cbd4daad": {
+          "path": "assets/d900fbf74314f854.svg",
+          "mime": "image/svg+xml",
+          "compressed": true,
+          "logicalPaths": [
+            "assets/zoom-graphics-logo.svg"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "f739c1eb-2e18-4669-b2df-69956a97f3b4": {
+          "path": "assets/89dce32ef528f506.webp",
+          "mime": "image/webp",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/media/productInd-2.png"
+          ],
+          "aliases": [
+            "assets/media/productInd-2.webp"
+          ],
+          "extResourceId": null
+        },
+        "f760abc6-e034-436d-badc-971ccaf3ae37": {
+          "path": "assets/0a0b3029cc47c7a3.svg",
+          "mime": "image/svg+xml",
+          "compressed": true,
+          "logicalPaths": [
+            "assets/brand-drager2.svg"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "fa2a12ff-6ca2-4085-a388-3f01bee61ed3": {
+          "path": "assets/13d7c707ec7e5d8c.png",
+          "mime": "image/png",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/media/productPro-2.png"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "fc3ac11d-f409-4dac-89bd-ee495c580586": {
+          "path": "assets/dd9bb4a6d5b08b9c.png",
+          "mime": "image/png",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/media/productInd-3.png"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "fd125333-b7d7-436c-8f43-e78d63961021": {
+          "path": "assets/13d7c707ec7e5d8c.png",
+          "mime": "image/png",
+          "compressed": false,
+          "logicalPaths": [
+            "assets/media/product-3.png"
+          ],
+          "aliases": [],
+          "extResourceId": null
+        },
+        "ff25fed1-e6d9-4ad9-a9ff-11dd61d24b95": {
+          "path": "documents/SectionHeading.dc.html",
+          "mime": "text/html",
+          "compressed": true
+        }
+      },
+      "templateUuidReplacements": {
+        "a3b69b26-4d6a-45ab-9232-7733e14e0c54": 1,
+        "5e7ff243-f15b-432e-a627-50a8b118cbaf": 1,
+        "8abb59af-5082-4c48-a275-8166b7acefc5": 1,
+        "5ef52ccd-68b4-4f9b-8e23-9fc0c9cff941": 1,
+        "37747b86-cbfa-4521-a829-ef306e440f28": 1,
+        "24d8b7f1-57bd-4fc0-9f43-5bffc15aa857": 1,
+        "90d29d1f-f7c9-40a4-b2f6-3f4a8a0a86c1": 1,
+        "74fbdbe9-53d3-41a3-9182-87496f1a1602": 1,
+        "1b82da45-feb1-4042-8433-42fb672ef17c": 1,
+        "10022a16-1c26-42cf-8603-8028027facc0": 1,
+        "30951c2c-45a1-4234-8b57-d8702a6b0b0a": 1,
+        "2d9dcf6a-78a9-48fb-8451-3b9517723a80": 1,
+        "c7c6dd2f-38fb-4d45-80d7-57c8307689bd": 1,
+        "0dd96558-1a35-4b06-8767-30183a996b86": 1,
+        "8176bde2-b130-46b0-a863-244b54299e25": 1,
+        "afe1b556-ca5c-470d-9e67-42ab85c0f3d1": 1,
+        "e41d4836-0bb1-4c74-a437-3ca67c3bbcd5": 1,
+        "ad131daa-5dad-4748-a029-327bb96f622b": 1,
+        "ee34a8ef-2995-4dbe-a7c6-029bb915d92e": 1,
+        "060d05ae-86ee-4af3-84cc-67fa3d87b718": 1,
+        "fd125333-b7d7-436c-8f43-e78d63961021": 1,
+        "a1737833-450c-4d6f-baff-2f49c17d2779": 1,
+        "f45af627-755b-443b-b175-90c493621bae": 1,
+        "b994fcd8-acd1-45dc-a688-91e102702c3d": 1,
+        "f739c1eb-2e18-4669-b2df-69956a97f3b4": 1,
+        "fc3ac11d-f409-4dac-89bd-ee495c580586": 1,
+        "63a12373-bfb1-4d89-87c1-ef5dd45d942d": 1,
+        "00aca18a-f8c7-4c8e-b07d-d81c07879c6c": 1,
+        "5e48ed37-651d-4e11-a35a-beebb952f78b": 1,
+        "fa2a12ff-6ca2-4085-a388-3f01bee61ed3": 1,
+        "7b252e81-8a67-41e8-8b0a-96d069359dc1": 1,
+        "ea07e07f-24c6-48b4-918e-7027ddfd7d46": 1,
+        "b1cbbd95-4071-4865-96ef-584184c43c0f": 3,
+        "05ade4da-05c2-49d0-8fa0-d1f7c326aed0": 1,
+        "0bd429c4-c6df-4d06-9db4-f20533d26ac1": 1,
+        "23e1ae92-1606-4108-b3eb-e08c5d3cb008": 1,
+        "f760abc6-e034-436d-badc-971ccaf3ae37": 1,
+        "744b1289-1cec-4248-8d8f-39edba33323f": 1,
+        "866a7fdc-1794-49f6-a072-6c26e8cce6d0": 1,
+        "7be65f2d-c1ad-4996-977e-ec6109371450": 1,
+        "12d083ab-47ca-4306-a4ed-654769e144b4": 2,
+        "dc514f86-54a4-45bd-b772-f50b494168bf": 2,
+        "6d6c1999-bae3-4bb5-9c1f-23b7588d8d05": 1,
+        "5effcc63-0cbc-4c1e-b3ed-2798a4946d72": 1,
+        "b43ed5bc-1d57-438a-9f76-5f0ca1c6db39": 2,
+        "4ad0a437-b8f0-4964-9b5e-905821a608e1": 1,
+        "df7274d0-1a8a-45f3-9a68-446fb96653eb": 2,
+        "97c4c36d-00fe-4b27-881f-ab4142700ae6": 2,
+        "5732b20d-de20-47bd-adfa-c2bbeca9b252": 2,
+        "f5049152-6e1d-4834-8ac9-1e78cbd4daad": 2,
+        "94827df0-6b83-4122-ac20-433d93620f32": 1,
+        "8cc49740-7399-4d69-b3e7-5c0ac8c672e4": 1,
+        "ad01f6b9-9167-403c-9308-a2a98280ce26": 1
+      },
+      "verification": {
+        "pass": [
+          {
+            "check": "all manifest uuids mapped",
+            "detail": "59/59"
+          },
+          {
+            "check": "asset files hash-match decoded bytes",
+            "detail": "50/50"
+          },
+          {
+            "check": "no uuids left in rewritten template"
+          },
+          {
+            "check": "all rewritten links exist",
+            "detail": "47/47"
+          },
+          {
+            "check": "all ext_resources recovered",
+            "detail": "6/6"
+          },
+          {
+            "check": "magic bytes match declared mime"
+          },
+          {
+            "check": "page_order documents present",
+            "detail": "n/a (empty)"
+          },
+          {
+            "check": "original export unchanged"
+          }
+        ],
+        "fail": [],
+        "info": [
+          {
+            "uuid": "00aca18a-f8c7-4c8e-b07d-d81c07879c6c",
+            "logicalPath": "assets/media/productPro-0.png",
+            "alias": [
+              "assets/media/productPro-0.webp"
+            ],
+            "actualMime": "image/webp",
+            "extensionMismatch": true,
+            "aliasMatchesBytes": true
+          },
+          {
+            "uuid": "0dd96558-1a35-4b06-8767-30183a996b86",
+            "logicalPath": "assets/media/guide-2.png",
+            "alias": [
+              "assets/media/guide-2.webp"
+            ],
+            "actualMime": "image/webp",
+            "extensionMismatch": true,
+            "aliasMatchesBytes": true
+          },
+          {
+            "uuid": "12d083ab-47ca-4306-a4ed-654769e144b4",
+            "logicalPath": "assets/en15964-badge.png",
+            "alias": [
+              "assets/en15964-badge.webp"
+            ],
+            "actualMime": "image/webp",
+            "extensionMismatch": true,
+            "aliasMatchesBytes": true
+          },
+          {
+            "uuid": "2d9dcf6a-78a9-48fb-8451-3b9517723a80",
+            "logicalPath": "assets/media/guide-0.jpg",
+            "alias": [
+              "assets/media/guide-0.webp"
+            ],
+            "actualMime": "image/webp",
+            "extensionMismatch": true,
+            "aliasMatchesBytes": true
+          },
+          {
+            "uuid": "30951c2c-45a1-4234-8b57-d8702a6b0b0a",
+            "logicalPath": "assets/media/cta-0.png",
+            "alias": [
+              "assets/media/cta-0.webp"
+            ],
+            "actualMime": "image/webp",
+            "extensionMismatch": true,
+            "aliasMatchesBytes": true
+          },
+          {
+            "uuid": "74fbdbe9-53d3-41a3-9182-87496f1a1602",
+            "logicalPath": "assets/media/cat-2.png",
+            "alias": [
+              "assets/media/cat-2.webp"
+            ],
+            "actualMime": "image/webp",
+            "extensionMismatch": true,
+            "aliasMatchesBytes": true
+          },
+          {
+            "uuid": "8176bde2-b130-46b0-a863-244b54299e25",
+            "logicalPath": "assets/media/guide-3.png",
+            "alias": [
+              "assets/media/guide-3.webp"
+            ],
+            "actualMime": "image/webp",
+            "extensionMismatch": true,
+            "aliasMatchesBytes": true
+          },
+          {
+            "uuid": "90d29d1f-f7c9-40a4-b2f6-3f4a8a0a86c1",
+            "logicalPath": "assets/media/cat-0.png",
+            "alias": [
+              "assets/media/cat-0.webp"
+            ],
+            "actualMime": "image/webp",
+            "extensionMismatch": true,
+            "aliasMatchesBytes": true
+          },
+          {
+            "uuid": "a1737833-450c-4d6f-baff-2f49c17d2779",
+            "logicalPath": "assets/media/product-4.png",
+            "alias": [
+              "assets/media/product-4.webp"
+            ],
+            "actualMime": "image/webp",
+            "extensionMismatch": true,
+            "aliasMatchesBytes": true
+          },
+          {
+            "uuid": "afe1b556-ca5c-470d-9e67-42ab85c0f3d1",
+            "logicalPath": "assets/media/heroPart-1.png",
+            "alias": [
+              "assets/media/heroPart-1.webp"
+            ],
+            "actualMime": "image/webp",
+            "extensionMismatch": true,
+            "aliasMatchesBytes": true
+          },
+          {
+            "uuid": "b43ed5bc-1d57-438a-9f76-5f0ca1c6db39",
+            "logicalPath": "assets/oiml-badge.png",
+            "alias": [
+              "assets/oiml-badge.webp"
+            ],
+            "actualMime": "image/webp",
+            "extensionMismatch": true,
+            "aliasMatchesBytes": true
+          },
+          {
+            "uuid": "c7c6dd2f-38fb-4d45-80d7-57c8307689bd",
+            "logicalPath": "assets/media/guide-1.png",
+            "alias": [
+              "assets/media/guide-1.webp"
+            ],
+            "actualMime": "image/webp",
+            "extensionMismatch": true,
+            "aliasMatchesBytes": true
+          },
+          {
+            "uuid": "dc514f86-54a4-45bd-b772-f50b494168bf",
+            "logicalPath": "assets/en16280-badge.png",
+            "alias": [
+              "assets/en16280-badge.webp"
+            ],
+            "actualMime": "image/webp",
+            "extensionMismatch": true,
+            "aliasMatchesBytes": true
+          },
+          {
+            "uuid": "e41d4836-0bb1-4c74-a437-3ca67c3bbcd5",
+            "logicalPath": "assets/media/heroPart-2.png",
+            "alias": [
+              "assets/media/heroPart-2.webp"
+            ],
+            "actualMime": "image/webp",
+            "extensionMismatch": true,
+            "aliasMatchesBytes": true
+          },
+          {
+            "uuid": "f739c1eb-2e18-4669-b2df-69956a97f3b4",
+            "logicalPath": "assets/media/productInd-2.png",
+            "alias": [
+              "assets/media/productInd-2.webp"
+            ],
+            "actualMime": "image/webp",
+            "extensionMismatch": true,
+            "aliasMatchesBytes": true
+          }
+        ]
+      },
+      "externalReferences": [
+        {
+          "url": "https://fonts.googleapis.com",
+          "from": "documents/index.html",
+          "status": "not-fetched",
+          "note": "preconnect hint"
+        },
+        {
+          "url": "https://fonts.gstatic.com",
+          "from": "documents/index.html",
+          "status": "not-fetched",
+          "note": "preconnect hint (crossorigin kept)"
+        },
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap",
+          "from": "ext_resources",
+          "status": "embedded",
+          "path": "assets/28d684a1bde40714.css"
+        },
+        {
+          "url": "https://unpkg.com/react@18.3.1/umd/react.production.min.js",
+          "from": "ext_resources",
+          "status": "embedded",
+          "path": "assets/d949f1c3687aedad.js"
+        },
+        {
+          "url": "https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js",
+          "from": "ext_resources",
+          "status": "embedded",
+          "path": "assets/35f4f974f4b2bcd4.js"
+        }
+      ],
+      "unresolvedReferences": [
+        {
+          "ref": "./support.js",
+          "from": [
+            "documents/SiteHeader.dc.html",
+            "documents/Button.dc.html",
+            "documents/SectionHeading.dc.html"
+          ],
+          "reason": "Not present in manifest or ext_resources (same gap as the DS snapshot)."
+        },
+        {
+          "ref": "site.html",
+          "from": [
+            "documents/index.html",
+            "documents/SiteHeader.dc.html"
+          ],
+          "fragments": 23,
+          "reason": "Navigation target; not bundled."
+        }
+      ],
+      "relatesTo": {
+        "snapshot": "design-system-91951f68",
+        "sharedAssets": "50/50 byte-identical, same logical paths and aliases",
+        "sharedDocuments": [
+          "documents/Button.dc.html",
+          "documents/SectionHeading.dc.html"
+        ],
+        "resolvesDsUnresolved": [
+          "SiteHeader.dc.html",
+          "index.html (Home sections hero, trust-sec, cats, certs, cta-sec, guides-sec, brands)"
+        ],
+        "stillUnresolvedFromDs": [
+          "SiteFooter.dc.html",
+          "./support.js"
+        ]
+      }
+    }
+  ],
+  "relatedSnapshots": [
+    {
+      "snapshot": "design-system-91951f68",
+      "relation": "design-system export of the same project"
+    }
+  ]
+}

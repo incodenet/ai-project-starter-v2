@@ -1,0 +1,454 @@
+{
+  "schemaVersion": 1,
+  "snapshot": "home-8a594335",
+  "scope": "Home page (one DC document). Sections are regions of one page, not routes.",
+  "stateModel": {
+    "routing": "none inside the document; navigation goes to site.html#<id> via href and location.href",
+    "componentState": "{ cart: 3, videoSrc: \"\", heroKind: \"\", heroPartImgs: {}, heroPartFits: { 0: \"contain\" }, heroPartKinds: {}, productImgs: {}, productFits: {}, productIndImgs: {}, productIndFits: {}, productProImgs: {}, productProFits: {}, ctaImgs: {}, ctaFits: {}, compare: {}, trustTile: null, trustIcon: null, divW: 1, divH: 56, divX: -50, divColor: \"#00427a\", divOpacity: 20, catImgs: {}, catFits: {}, catP …",
+    "persistence": {
+      "localStorage": [
+        "abecq-cart-v3",
+        "abecq-cat-fits",
+        "abecq-cat-pos",
+        "abecq-cat-scale",
+        "abecq-div",
+        "abecq-trust-icon",
+        "abecq-trust-tile",
+        "abecq-fits-<ns>"
+      ],
+      "indexedDB": [
+        "abecq-media (v1)"
+      ]
+    }
+  },
+  "pages": [
+    {
+      "stable_id": "home",
+      "route_or_state": "index.html",
+      "source_document": "documents/index.html",
+      "view_selectors": [
+        "body > x-dc"
+      ],
+      "shared_dependencies": [
+        "documents/SiteHeader.dc.html",
+        "documents/SectionHeading.dc.html",
+        "documents/Button.dc.html",
+        "assets/8fe7df74405f3c55.js (dc-runtime)",
+        "assets/d949f1c3687aedad.js (React 18.3.1)",
+        "assets/35f4f974f4b2bcd4.js (ReactDOM 18.3.1)",
+        "assets/28d684a1bde40714.css (Outfit)",
+        "#__assets alias shim (inline script)"
+      ],
+      "variants": [
+        {
+          "key": "editMode",
+          "values": [
+            false,
+            true
+          ],
+          "default": false,
+          "effect": "shows upload/position/fit controls; links get href=null"
+        },
+        {
+          "key": "catBlocks",
+          "values": [
+            "3 blocks",
+            "4 blocks"
+          ],
+          "default": "4 blocks"
+        },
+        {
+          "key": "state.stockTab",
+          "values": [
+            "individual",
+            "professional"
+          ],
+          "default": "unset (renders productInd images)"
+        },
+        {
+          "key": "slidesPerView",
+          "values": [
+            "3",
+            "4"
+          ],
+          "default": "3"
+        },
+        {
+          "key": "guideBlocks",
+          "values": [
+            "3 blocks",
+            "4 blocks"
+          ],
+          "default": "4 blocks"
+        },
+        {
+          "key": "showTrustBar",
+          "values": [
+            true,
+            false
+          ],
+          "default": true
+        },
+        {
+          "key": "showKnowledgeHub",
+          "values": [
+            true,
+            false
+          ],
+          "default": true
+        },
+        {
+          "key": "showBrandStrip",
+          "values": [
+            true,
+            false
+          ],
+          "default": true
+        }
+      ],
+      "confidence": "confirmed",
+      "notes": "Single-page DC document. Not hash-routed: no location.hash reads. Internal links leave the page to site.html#<id> (not in this bundle).",
+      "sections": [
+        {
+          "stable_id": "home.loader",
+          "view_selector": "[data-r=\"ldr-o\"]",
+          "line": 479,
+          "sourceComment": null,
+          "heading": null,
+          "gate": "sc-if {{ loaderOn }}",
+          "lists": [],
+          "props": [],
+          "bindings": [],
+          "variants": [],
+          "related": [],
+          "designSystemPreview": null,
+          "confidence": "confirmed",
+          "evidence": "sc-if loaderOn; DCLogic componentDidMount progress loop, loaderOut/loaderGone state",
+          "notes": null
+        },
+        {
+          "stable_id": "home.header",
+          "view_selector": "dc-import[name=\"SiteHeader\"]",
+          "line": 482,
+          "sourceComment": "HEADER",
+          "heading": null,
+          "gate": null,
+          "lists": [],
+          "props": [],
+          "bindings": [],
+          "variants": [],
+          "related": [],
+          "designSystemPreview": {
+            "stable_id": "preview.header"
+          },
+          "confidence": "confirmed",
+          "evidence": "dc-import SiteHeader (documents/SiteHeader.dc.html)",
+          "notes": null
+        },
+        {
+          "stable_id": "home.hero",
+          "view_selector": "section[data-r=\"hero\"]",
+          "line": 494,
+          "sourceComment": "HERO",
+          "heading": null,
+          "gate": null,
+          "lists": [
+            "heroParts"
+          ],
+          "props": [
+            "heroBlend",
+            "heroPlay",
+            "heroLoop",
+            "heroLoopPause",
+            "heroVideo",
+            "heroPoster"
+          ],
+          "bindings": [],
+          "variants": [],
+          "related": [
+            "#hero-band-bg",
+            "#hero-band-line"
+          ],
+          "designSystemPreview": {
+            "stable_id": "preview.home.hero",
+            "dsLabel": "Hero",
+            "dsClass": "abq-hero"
+          },
+          "confidence": "confirmed",
+          "evidence": "data-r=\"hero\" inside TOP BAND ZONE; #hero-band-bg / #hero-band-line carry data-screen-label",
+          "notes": null
+        },
+        {
+          "stable_id": "home.trust-sec",
+          "view_selector": "section[data-r=\"trust-sec\"]",
+          "line": 556,
+          "sourceComment": "TRUST BAR",
+          "heading": null,
+          "gate": "sc-if {{ showTrustBar }}",
+          "lists": [
+            "trust",
+            "trustPlain"
+          ],
+          "props": [
+            "showTrustBar"
+          ],
+          "bindings": [],
+          "variants": [],
+          "related": [],
+          "designSystemPreview": {
+            "stable_id": "preview.home.trust-sec",
+            "dsLabel": "Trust bar",
+            "dsClass": "abq-trust-bar"
+          },
+          "confidence": "confirmed",
+          "evidence": "source comment \"TRUST BAR\" + section[data-r=\"trust-sec\"]",
+          "notes": null
+        },
+        {
+          "stable_id": "home.cats",
+          "view_selector": "section[data-r=\"cats\"]",
+          "line": 637,
+          "sourceComment": "CATEGORIES",
+          "heading": "Browse by product type",
+          "gate": null,
+          "lists": [],
+          "props": [
+            "catBlocks"
+          ],
+          "bindings": [
+            "bentoMod"
+          ],
+          "variants": [
+            {
+              "key": "catBlocks",
+              "values": [
+                "3 blocks",
+                "4 blocks"
+              ],
+              "default": "4 blocks"
+            }
+          ],
+          "related": [],
+          "designSystemPreview": {
+            "stable_id": "preview.home.cats",
+            "dsLabel": "Categories",
+            "dsClass": "abq-categories"
+          },
+          "confidence": "confirmed",
+          "evidence": "source comment \"CATEGORIES\" + section[data-r=\"cats\"]",
+          "notes": null
+        },
+        {
+          "stable_id": "home.certs",
+          "view_selector": "section[data-r=\"certs\"]",
+          "line": 683,
+          "sourceComment": "IN STOCK PRODUCTS",
+          "heading": "Standards you can rely on",
+          "gate": null,
+          "lists": [
+            "certs"
+          ],
+          "props": [],
+          "bindings": [],
+          "variants": [],
+          "related": [],
+          "designSystemPreview": {
+            "stable_id": "preview.home.certs",
+            "dsLabel": "In stock products",
+            "dsClass": "abq-product-grid"
+          },
+          "confidence": "confirmed",
+          "evidence": "source comment \"IN STOCK PRODUCTS\" + section[data-r=\"certs\"]",
+          "notes": "Source comment just before this section reads \"IN STOCK PRODUCTS\" (a \"CERTIFICATION\" comment precedes it with no element between). Content is certification standards (OIML R 126, EN 15964, EN 16280)."
+        },
+        {
+          "stable_id": "home.in-stock",
+          "view_selector": "[data-r=\"band\"] > section",
+          "line": 703,
+          "sourceComment": null,
+          "heading": "In stock now",
+          "gate": null,
+          "lists": [
+            "products"
+          ],
+          "props": [
+            "slidesPerView"
+          ],
+          "bindings": [
+            "setTabIndividual",
+            "setTabPro",
+            "scrollPrev",
+            "scrollNext",
+            "goProduct",
+            "slideBasis"
+          ],
+          "variants": [
+            {
+              "key": "state.stockTab",
+              "values": [
+                "individual",
+                "professional"
+              ],
+              "default": "unset (renders productInd images)"
+            },
+            {
+              "key": "slidesPerView",
+              "values": [
+                "3",
+                "4"
+              ],
+              "default": "3"
+            }
+          ],
+          "related": [],
+          "designSystemPreview": null,
+          "confidence": "needs-review",
+          "evidence": "source comment \"null\" + [data-r=\"band\"] > section",
+          "notes": "Has no data-r of its own; wrapped by data-r=\"band\" / data-r=\"stock-in\". Stable id derived from its SectionHeading title."
+        },
+        {
+          "stable_id": "home.cta-sec",
+          "view_selector": "section[data-r=\"cta-sec\"]",
+          "line": 754,
+          "sourceComment": "CALIBRATION CTA",
+          "heading": "Keep every device certified & compliant",
+          "gate": null,
+          "lists": [],
+          "props": [],
+          "bindings": [],
+          "variants": [],
+          "related": [],
+          "designSystemPreview": {
+            "stable_id": "preview.home.cta-sec",
+            "dsLabel": "Calibration CTA",
+            "dsClass": "abq-cta-band"
+          },
+          "confidence": "confirmed",
+          "evidence": "source comment \"CALIBRATION CTA\" + section[data-r=\"cta-sec\"]",
+          "notes": null
+        },
+        {
+          "stable_id": "home.guides-sec",
+          "view_selector": "section[data-r=\"guides-sec\"]",
+          "line": 786,
+          "sourceComment": "KNOWLEDGE HUB",
+          "heading": "Guides & road-safety data",
+          "gate": "sc-if {{ showKnowledgeHub }}",
+          "lists": [
+            "guides"
+          ],
+          "props": [
+            "showKnowledgeHub",
+            "guideBlocks"
+          ],
+          "bindings": [
+            "guideGridMod"
+          ],
+          "variants": [
+            {
+              "key": "guideBlocks",
+              "values": [
+                "3 blocks",
+                "4 blocks"
+              ],
+              "default": "4 blocks"
+            }
+          ],
+          "related": [],
+          "designSystemPreview": {
+            "stable_id": "preview.home.guides-sec",
+            "dsLabel": "Knowledge hub",
+            "dsClass": "abq-guides"
+          },
+          "confidence": "confirmed",
+          "evidence": "source comment \"KNOWLEDGE HUB\" + section[data-r=\"guides-sec\"]",
+          "notes": null
+        },
+        {
+          "stable_id": "home.brands",
+          "view_selector": "section[data-r=\"brands\"]",
+          "line": 827,
+          "sourceComment": "BRANDS",
+          "heading": "Trusted manufacturers",
+          "gate": "sc-if {{ showBrandStrip }}",
+          "lists": [
+            "brands"
+          ],
+          "props": [
+            "showBrandStrip"
+          ],
+          "bindings": [],
+          "variants": [],
+          "related": [],
+          "designSystemPreview": {
+            "stable_id": "preview.home.brands",
+            "dsLabel": "Brands",
+            "dsClass": "abq-brands"
+          },
+          "confidence": "confirmed",
+          "evidence": "source comment \"BRANDS\" + section[data-r=\"brands\"]",
+          "notes": null
+        },
+        {
+          "stable_id": "home.footer",
+          "view_selector": "footer[data-r=\"footer\"]",
+          "line": 854,
+          "sourceComment": "FOOTER",
+          "heading": null,
+          "gate": null,
+          "lists": [],
+          "props": [],
+          "bindings": [],
+          "variants": [],
+          "related": [],
+          "designSystemPreview": {
+            "stable_id": "preview.footer",
+            "note": "DS expects SiteFooter.dc.html; Home inlines the footer"
+          },
+          "confidence": "confirmed",
+          "evidence": "inline <footer data-r=\"footer\"> (not a dc-import)",
+          "notes": null
+        }
+      ]
+    }
+  ],
+  "outboundRoutes": {
+    "fromHome": [
+      "site.html#",
+      "site.html#about",
+      "site.html#brands",
+      "site.html#breath-alcohol-testers",
+      "site.html#calibration-equipment",
+      "site.html#cart",
+      "site.html#compare",
+      "site.html#contact",
+      "site.html#delivery",
+      "site.html#drug-tests",
+      "site.html#guide-breath/",
+      "site.html#imprint",
+      "site.html#info",
+      "site.html#mouthpieces",
+      "site.html#payment",
+      "site.html#privacy",
+      "site.html#product",
+      "site.html#returnform",
+      "site.html#returns",
+      "site.html#search",
+      "site.html#services",
+      "site.html#terms"
+    ],
+    "fromSiteHeader": [
+      "index.html",
+      "site.html#auth",
+      "site.html#brands",
+      "site.html#breath-alcohol-testers",
+      "site.html#calibration-equipment",
+      "site.html#contact",
+      "site.html#drug-tests",
+      "site.html#mouthpieces",
+      "site.html#search",
+      "site.html#services"
+    ],
+    "status": "unresolved: site.html is not in this bundle"
+  }
+}

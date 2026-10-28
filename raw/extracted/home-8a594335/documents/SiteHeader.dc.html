@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><style>/* ABECQ design tokens. Edit values here; site, components and Design System read this file. */
+:root {
+  /* Brand */
+  --abq-color-ink-900: #001629;
+  --abq-color-navy-700: #00427A;
+  --abq-color-navy-600: #034787;
+  --abq-color-navy-500: #0A4F8F;
+  --abq-color-blue-500: #1F95F9;
+  --abq-color-blue-300: #76C0FF;
+  /* Blue tints */
+  --abq-color-blue-200: #A6CFF2;
+  --abq-color-blue-150: #BBD8F1;
+  --abq-color-blue-100: #C7DCEE;
+  --abq-color-blue-75: #D5E7F6;
+  --abq-color-blue-25: #EFF5FA;
+  --abq-color-blue-50: #F3F7FD;
+  /* Neutral */
+  --abq-color-gray-700: #3A4353;
+  --abq-color-gray-500: #5B6577;
+  --abq-color-gray-400: #8A93A6;
+  --abq-color-gray-300: #9AA8BD;
+  --abq-color-gray-200: #C3CADB;
+  --abq-color-line: #E2E7F2;
+  --abq-color-line-soft: #E8ECF5;
+  --abq-color-divider: #F0F3F8;
+  --abq-color-surface: #F9FAFB;
+  --abq-color-white: #FFFFFF;
+  /* Icons & controls */
+  --abq-color-icon-line: #C3CDE4;
+  --abq-color-control-border: #D5DEEB;
+  --abq-color-line-alt: #E6EAF0;
+  --abq-color-blue-60: #DEECF8;
+  /* Button gradient */
+  --abq-color-grad-start: #2466AC;
+  --abq-color-grad-mid: #0A4F8F;
+  --abq-color-grad-end: #04346A;
+  --abq-color-grad-hover-start: #2F74BD;
+  --abq-color-grad-hover-mid: #1A5EA6;
+  --abq-color-grad-hover-end: #063A70;
+  /* Status */
+  --abq-color-success: #1B8A5A;
+  --abq-color-danger: #E5484D;
+  --abq-color-error: #B42318;
+  --abq-color-warning: #B4541A;
+  --abq-color-warning-bg: #FFF1E6;
+  /* Extra tones */
+  --abq-color-success-bg: #E7F6EE;
+  --abq-color-amber: #B4690E;
+  --abq-color-blue-600: #1F6FD1;
+  --abq-color-blue-350: #68B3F3;
+  --abq-color-slate-400: #7291AB;
+  --abq-color-gray-350: #9AA3BD;
+  --abq-color-gray-450: #7A84A3;
+  --abq-color-gray-250: #C2C7CF;
+  --abq-color-blue-30: #EAF3FB;
+  /* See-through (opacity) colours */
+  --abq-color-white-92: rgba(255,255,255,.92);
+  --abq-color-white-85: rgba(255,255,255,.85);
+  --abq-color-white-75: rgba(255,255,255,.75);
+  --abq-color-white-60: rgba(255,255,255,.6);
+  --abq-color-white-50: rgba(255,255,255,.5);
+  --abq-color-white-35: rgba(255,255,255,.35);
+  --abq-color-white-12: rgba(255,255,255,.12);
+  --abq-color-overlay: rgba(15,24,54,.82);
+  --abq-color-overlay-strong: rgba(15,24,54,.86);
+  --abq-color-line-on-dark: rgba(199,220,238,.18);
+  --abq-color-line-on-dark-strong: rgba(199,220,238,.34);
+  --abq-color-danger-tint: rgba(229,72,77,.12);
+  --abq-color-danger-tint-soft: rgba(229,72,77,.08);
+  --abq-color-primary-tint: rgba(31,149,249,.14);
+  --abq-color-primary-tint-strong: rgba(31,149,249,.22);
+  --abq-color-black-28: rgba(0,0,0,.28);
+  --abq-color-ink-45: rgba(0,22,41,.45);
+  /* Background gradients (full layer stacks) */
+  --abq-color-gradient-label-line: linear-gradient(90deg,#68B3F3,rgba(104,179,243,0));
+  --abq-color-gradient-band: radial-gradient(120% 140% at 8% 0%, #1F6FD0 0%, rgba(31,111,208,0) 46%), radial-gradient(90% 120% at 100% 12%, var(--abq-color-grad-mid) 0%, rgba(10,79,143,0) 50%), radial-gradient(120% 130% at 78% 100%, #002140 0%, rgba(0,33,64,0) 55%), linear-gradient(120deg,var(--abq-color-navy-700) 0%,#002C52 100%);
+  --abq-color-gradient-footer: radial-gradient(90% 120% at 6% 0%, var(--abq-color-grad-mid) 0%, rgba(10,79,143,0) 52%), radial-gradient(80% 110% at 96% 8%, #1F6FD0 0%, rgba(31,111,208,0) 46%), linear-gradient(180deg,#00213D 0%,var(--abq-color-ink-900) 62%);
+  --abq-color-gradient-panel-dark: radial-gradient(90% 80% at 100% 0%, #1F6FD0 0%, rgba(31,111,208,0) 55%), linear-gradient(160deg,#00213D 0%,var(--abq-color-ink-900) 100%);
+  --abq-color-gradient-band-navy: radial-gradient(120% 140% at 8% 0%, #1F6FD0 0%, rgba(31,111,208,0) 46%), linear-gradient(120deg,var(--abq-color-navy-700) 0%,#002C52 100%);
+
+  --abq-font-family: 'Outfit', -apple-system, sans-serif;
+  --abq-font-weight: 400;
+  --abq-fw-extralight: 200;
+  --abq-fw-light: 300;
+  --abq-fw-regular: 400;
+  --abq-fw-medium: 500;
+  --abq-font-loader: clamp(96px,16vw,200px);
+  --abq-lh-loader: 1;
+  --abq-ls-loader: -.03em;
+  --abq-font-display: clamp(34px,5.2vw,60px);
+  --abq-lh-display: 1.04;
+  --abq-ls-display: -.02em;
+  --abq-font-h1: clamp(34px,4.6vw,56px);
+  --abq-lh-h1: 1.05;
+  --abq-ls-h1: -.02em;
+  --abq-font-logo: 44px;
+  --abq-lh-logo: 1;
+  --abq-font-title-lg: 34px;
+  --abq-lh-title-lg: 1.15;
+  --abq-ls-title-lg: -.02em;
+  --abq-font-h2: clamp(26px,3.4vw,40px);
+  --abq-lh-h2: 1.1;
+  --abq-ls-h2: -.02em;
+  --abq-font-h3: clamp(22px,2.6vw,30px);
+  --abq-lh-h3: 1.15;
+  --abq-ls-h3: -.02em;
+  --abq-font-h4: 26px;
+  --abq-lh-h4: 1.2;
+  --abq-ls-h4: -.01em;
+  --abq-font-h5: 24px;
+  --abq-lh-h5: 1.25;
+  --abq-font-title-md: 30px;
+  --abq-lh-title-md: 1.15;
+  --abq-font-price: 22px;
+  --abq-lh-price: 1.3;
+  --abq-font-title: 20px;
+  --abq-lh-title: 1.3;
+  --abq-font-body-lg: clamp(15px,1.4vw,18px);
+  --abq-lh-body-lg: 1.6;
+  --abq-font-body-md: 18px;
+  --abq-lh-body-md: 1.5;
+  --abq-font-body: 16px;
+  --abq-lh-body: 1.5;
+  --abq-font-body-sm: 15px;
+  --abq-lh-body-sm: 1.6;
+  --abq-font-ui: 15px;
+  --abq-lh-ui: 1.4;
+  --abq-font-ui-sm: 14px;
+  --abq-lh-ui-sm: 1.5;
+  --abq-font-eyebrow: 12px;
+  --abq-lh-eyebrow: 1.4;
+  --abq-ls-eyebrow: .14em;
+  --abq-font-label-xs: 11px;
+  --abq-lh-label-xs: 1.4;
+
+  --abq-space-2: 2px;
+  --abq-space-4: 4px;
+  --abq-space-6: 6px;
+  --abq-space-8: 8px;
+  --abq-space-10: 10px;
+  --abq-space-12: 12px;
+  --abq-space-14: 14px;
+  --abq-space-16: 16px;
+  --abq-space-18: 18px;
+  --abq-space-20: 20px;
+  --abq-space-22: 22px;
+  --abq-space-24: 24px;
+  --abq-space-26: 26px;
+  --abq-space-28: 28px;
+  --abq-space-32: 32px;
+  --abq-space-40: 40px;
+  --abq-space-48: 48px;
+  --abq-space-56: 56px;
+  --abq-space-64: 64px;
+  --abq-space-80: 80px;
+  --abq-space-36: 36px;
+  --abq-space-72: 72px;
+  --abq-space-90: 90px;
+  --abq-space-96: 96px;
+  --abq-space-100: 100px;
+  --abq-space-120: 120px;
+  --abq-space-130: 130px;
+  --abq-space-160: 160px;
+  --abq-radius-3xs: 4px;
+
+  --abq-radius-2xs: 5px;
+  --abq-radius-xs: 7px;
+  --abq-radius-sm: 10px;
+  --abq-radius-md: 12px;
+  --abq-radius-lg: 16px;
+  --abq-radius-lg-2: 18px;
+  --abq-radius-lg-3: 20px;
+  --abq-radius-xl: 22px;
+  --abq-radius-xl-1: 24px;
+  --abq-radius-xl-2: 26px;
+  --abq-radius-2xl: 32px;
+  --abq-radius-pill: 100px;
+
+  --abq-shadow-tile: inset 0 1px 1px rgba(255,255,255,.9), 0 3px 8px rgba(0,66,122,.14);
+  --abq-shadow-tab: 0 4px 12px rgba(0,66,122,.12);
+  --abq-shadow-glass: inset 0 1px 0 rgba(255,255,255,.7), 0 8px 22px rgba(16,24,43,.08);
+  --abq-shadow-audience: 0 12px 28px rgba(0,66,122,.30);
+  --abq-shadow-cta: 0 12px 27px 0 rgba(31,149,249,.30);
+  --abq-shadow-float: 0 18px 44px rgba(0,22,41,.13);
+  --abq-shadow-button: 0 10px 24px rgba(0,66,122,.22);
+  --abq-shadow-card: 0 10px 26px rgba(16,24,43,.05);
+  --abq-shadow-card-hover: 0 18px 40px rgba(16,24,43,.12);
+  --abq-shadow-menu: 0 18px 44px rgba(0,22,41,.10);
+  --abq-shadow-toast: 0 18px 44px rgba(0,22,41,.28);
+  --abq-shadow-sheet: 0 -12px 40px rgba(0,22,41,.18);
+  --abq-shadow-modal: 0 30px 80px rgba(0,22,41,.3);
+  --abq-shadow-cta-hover: 0 18px 34px rgba(31,149,249,.40);
+  --abq-shadow-nav-hover: 0 8px 18px rgba(3,71,135,.12);
+  --abq-shadow-raised: 0 6px 18px rgba(16,24,43,.14);
+  --abq-shadow-raised-lg: 0 10px 24px rgba(16,24,43,.14);
+  --abq-shadow-glass-sm: inset 0 1px 0 rgba(255,255,255,.7), 0 6px 16px rgba(16,24,43,.08);
+  --abq-shadow-soft: 0 6px 18px rgba(16,24,43,.06);
+  --abq-shadow-panel: 0 24px 60px rgba(16,24,43,.08);
+  --abq-shadow-blue: 0 8px 20px rgba(0,66,122,.30);
+  --abq-shadow-dot: 0 2px 6px rgba(3,71,135,.30);
+  --abq-shadow-ring-white: 0 0 0 2px var(--abq-color-white);
+  --abq-shadow-ring-white-inset: inset 0 0 0 2px var(--abq-color-white);
+  --abq-shadow-step-ring: 0 0 0 8px rgba(31,149,249,.14), 0 10px 24px rgba(0,66,122,.10);
+  --abq-shadow-none: 0 0 0 0 transparent;
+  --abq-shadow-danger-sides: inset 1px 0 0 rgba(229,72,77,.6), inset -1px 0 0 rgba(229,72,77,.6);
+  --abq-shadow-danger-sides-soft: inset 1px 0 0 rgba(229,72,77,.35), inset -1px 0 0 rgba(229,72,77,.35);
+}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&amp;display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Outfit',-apple-system,sans-serif; color:#111a2e; background:#ffffff; -webkit-font-smoothing:antialiased; }
+  a { color:#00427A; text-decoration:none; }
+  a:hover { color:#1F95F9; }
+  [data-r=burger]{ display:none; }
+  [data-r=hdr-spacer]{ height:81px; }
+  [data-r=nav] a, [data-r=nav] > *{ white-space:nowrap; }
+  @media (min-width:1121px) and (max-width:1320px){ [data-r=nav]{ gap:clamp(8px, calc((100vw - 1121px) / 20 + 8px), 18px) !important; } [data-r=hdr-right], [data-r=hdr-right] > div{ gap:12px !important; } }
+  @media (min-width:1121px){ [data-r=mnav]{ display:none !important; } }
+  @media (max-width:1120px){
+    [data-r=nav]{ display:none !important; }
+    [data-r=burger]{ display:inline-flex !important; order:5; }
+    [data-r=lang], [data-r=login], [data-r=hdr-right] > span{ display:none !important; }
+  }
+  @media (min-width:641px) and (max-width:1120px){
+    [data-r=hdr-right], [data-r=hdr-right] > div, [data-r=header] > div:first-child{ gap:16px !important; }
+    [data-r=login]{ display:inline-flex !important; }
+    [data-r=m-login]{ display:none !important; }
+  }
+  @media (max-width:640px){
+    [data-r=hdr-right] > span, [data-r=login], [data-r=en-txt]{ display:none !important; }
+    [data-r=hdr-right], [data-r=hdr-right] > div, [data-r=header] > div:first-child{ gap:8px !important; }
+    [data-r=hdr-search]{ display:none !important; }
+    [data-r=m-search]{ display:flex !important; }
+    [data-r=header]{ height:64px !important; }
+    [data-r=header] > div:first-child{ height:64px !important; padding-top:11px !important; padding-bottom:11px !important; }
+    [data-r=header] img{ height:30px !important; }
+    [data-r=cart]{ font-size:0 !important; gap:0 !important; padding:0 !important; width:42px; height:42px; justify-content:center; }
+    [data-r=hdr-spacer]{ height:64px; }
+  }
+</style>
+</helmet>
+<sc-if value="{{ spacer }}" hint-placeholder-val="{{ true }}"><div data-r="hdr-spacer" aria-hidden="true"></div></sc-if>
+<header data-r="header" style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--abq-color-line-soft); border-color: {{ headerBorder }}; background-color: #FFFFFFEF; height: 81px">
+    <div style="max-width: 1308px; margin: 0 auto; padding: var(--abq-space-14) clamp(var(--abq-space-16),4vw,var(--abq-space-40)); display: flex; align-items: center; gap: clamp(var(--abq-space-12),3vw,var(--abq-space-36)); padding-top: var(--abq-space-20); padding-bottom: var(--abq-space-16); height: 80px">
+      <a href="index.html" style="display:flex; align-items:center; flex:none;"><img src="assets/abecq-logo.png" alt="ABECQ" style="height:34px; width:auto; display:block;"></a>
+      <nav data-r="nav" style="display: flex; align-items: center; gap: var(--abq-space-18); flex-wrap: nowrap; font-size: var(--abq-font-ui); font-weight: var(--abq-fw-regular); color: var(--abq-color-gray-700)">
+        <div style="position: relative; display: flex; align-items: center; padding-bottom: var(--abq-space-10); margin-bottom: -10px" onMouseEnter="{{ prodEnter }}" onMouseLeave="{{ prodLeave }}" onMouseMove="{{ prodMove }}">
+          <a onClick="{{ prodToggle }}" style="color: var(--abq-color-gray-700); display: inline-flex; align-items: center; gap: 3px; font-size: var(--abq-font-body); cursor: pointer" href="site.html#breath-alcohol-testers">Products <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="display:block; position:relative; top:1px;"><path d="M6.64667 9.64017L12 15L17.2957 9.64022" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+          <div style="position: absolute; top: 100%; left: -20px; min-width: 254px; background: var(--abq-color-white); border: 1px solid var(--abq-color-line-soft); border-radius: var(--abq-radius-sm); box-shadow: var(--abq-shadow-float); padding: var(--abq-space-14) 0; display: flex; flex-direction: column; z-index: 60; opacity: {{ prodOpacity }}; visibility: {{ prodVis }}; transform: {{ prodShift }}; transition: opacity .18s ease, transform .18s ease, visibility .18s;">
+            <a href="site.html#breath-alcohol-testers" style="color: var(--abq-color-ink-900); font-size: var(--abq-font-body-sm); padding: var(--abq-space-10) var(--abq-space-26); transition: background-color .16s ease, color .16s ease" style-hover="background-color:var(--abq-color-blue-50); color:var(--abq-color-navy-600);">Breath Alcohol Testers</a>
+            <a href="site.html#drug-tests" style="color: var(--abq-color-ink-900); font-size: var(--abq-font-body-sm); padding: var(--abq-space-10) var(--abq-space-26); transition: background-color .16s ease, color .16s ease" style-hover="background-color:var(--abq-color-blue-50); color:var(--abq-color-navy-600);">Drug Tests</a>
+            <a href="site.html#calibration-equipment" style="color: var(--abq-color-ink-900); font-size: var(--abq-font-body-sm); padding: var(--abq-space-10) var(--abq-space-26); transition: background-color .16s ease, color .16s ease" style-hover="background-color:var(--abq-color-blue-50); color:var(--abq-color-navy-600);">Calibration Equipment</a>
+            <a href="site.html#mouthpieces" style="color: var(--abq-color-ink-900); font-size: var(--abq-font-body-sm); padding: var(--abq-space-10) var(--abq-space-26); transition: background-color .16s ease, color .16s ease" style-hover="background-color:var(--abq-color-blue-50); color:var(--abq-color-navy-600);">Mouthpieces</a>
+          </div>
+        </div>
+        <span style="flex:none; width:2px; height:2px; border-radius:50%; background:var(--abq-color-gray-300);"></span>
+        <a style="color: var(--abq-color-gray-700); font-size: var(--abq-font-body)" href="site.html#services">Calibration Services</a>
+        <span style="flex:none; width:2px; height:2px; border-radius:50%; background:var(--abq-color-gray-300);"></span>
+        <a style="color: var(--abq-color-gray-700); font-size: var(--abq-font-body)" href="site.html#brands">Brands</a>
+        <span style="flex:none; width:2px; height:2px; border-radius:50%; background:var(--abq-color-gray-300);"></span>
+        <a style="color: var(--abq-color-gray-700); font-size: var(--abq-font-body)" href="site.html#contact">Contacts</a>
+      </nav>
+      <button data-r="burger" onClick="{{ toggleMenu }}" aria-label="Menu" style="display: none; flex: none; width: 42px; height: 42px; border-radius: var(--abq-radius-sm); border: 1px solid #C7DCEE6A; background: transparent; color: var(--abq-color-navy-700); align-items: center; justify-content: center; cursor: pointer; padding: 0"><sc-if value="{{ menuClosed }}" hint-placeholder-val="{{ true }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="display:block;"><path d="M4 7H20M4 12H20M4 17H14" stroke="currentColor" stroke-width="1.875" stroke-linecap="round"></path></svg></sc-if><sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="display:block;"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.875" stroke-linecap="round"></path></svg></sc-if></button>
+      <div data-r="hdr-right" style="margin-left: auto; display: flex; align-items: center; gap: var(--abq-space-12); font-size: 14px; font-weight: var(--abq-fw-regular); color: var(--abq-color-gray-700)">
+        <a data-r="lang" style="color: var(--abq-color-gray-700); display: inline-flex; align-items: center; gap: var(--abq-space-4); font-size: var(--abq-font-body-sm)" href="#"><span style="flex:none; width:20px; height:20px; border-radius:50%; overflow:hidden; display:inline-flex; margin-right:0;"><svg width="20" height="20" viewBox="0 0 60 60" style="display: block; padding-right: 0px; margin-right: 0px"><clipPath id="ukc"><circle cx="30" cy="30" r="30"></circle></clipPath><g clip-path="url(#ukc)" style="margin-right: 0px; padding-right: 0px"><rect width="60" height="60" fill="#012169"></rect><path d="M0 0 60 60M60 0 0 60" stroke="#fff" stroke-width="12"></path><path d="M0 0 60 60M60 0 0 60" stroke="#C8102E" stroke-width="6"></path><path d="M30 0V60M0 30H60" stroke="#fff" stroke-width="20"></path><path d="M30 0V60M0 30H60" stroke="#C8102E" stroke-width="12"></path></g></svg></span><span data-r="en-txt" style="display: inline-flex; align-items: center; padding-left: var(--abq-space-2)">EN</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="display:block; position:relative; top:1px;"><path d="M6.64667 9.64017L12 15L17.2957 9.64022" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></a><div data-r="hdr-search" style="display: flex; align-items: center; gap: var(--abq-space-12)">
+        <span onClick="{{ goSearch }}" style="position: relative; width: 40px; height: 40px; border-radius: var(--abq-radius-sm); display: inline-flex; align-items: center; justify-content: center; color: var(--abq-color-navy-700); cursor: pointer; background-color: #EFF5FA00; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; transition: background-color .22s ease, color .22s ease, transform .22s ease" style-hover="background-color:var(--abq-color-blue-25); color:var(--abq-color-navy-600);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="display: block; width: 20px"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.875"></circle><path d="M20 20L16.5 16.5" stroke="currentColor" stroke-width="1.875" stroke-linecap="round"></path></svg></span>
+        </div>
+        
+        <div style="display: flex; align-items: center; gap: var(--abq-space-12)">
+        <span data-r="swap" onClick="{{ goCompare }}" onMouseEnter="{{ cmpTipOn }}" onMouseLeave="{{ cmpTipOff }}" aria-label="Compare products" style="cursor: pointer; position: relative; width: 42px; height: 42px; border-radius: var(--abq-radius-sm); display: inline-flex; align-items: center; justify-content: center; color: var(--abq-color-navy-700); padding: 0; box-sizing: border-box; border-width: 1px; border-style: solid; border-color: #C7DCEE6A; background-color: #EFF5FA00; cursor: pointer; transition: background-color .22s ease, border-color .22s ease, transform .22s ease" style-hover="background-color:var(--abq-color-blue-25); border-color:var(--abq-color-blue-100);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="display:block; flex: none;"><path d="M12 9.5H3M7.5 14L3 9.5L7.5 5" stroke="currentColor" stroke-width="1.875" stroke-linecap="square" stroke-linejoin="round"></path><path d="M12 15.5H21M16.5 20L21 15.5L16.5 11" stroke="currentColor" stroke-width="1.875" stroke-linecap="square" stroke-linejoin="round"></path></svg><sc-if value="{{ cmpHas }}" hint-placeholder-val="{{ false }}"><span aria-label="{{ cmpN }} products to compare" style="position: absolute; top: -6px; right: -6px; min-width: 18px; height: 18px; padding: 0 var(--abq-space-4); box-sizing: border-box; border-radius: var(--abq-radius-sm); background: var(--abq-color-navy-700); color: var(--abq-color-white); font-size: 10.5px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; box-shadow: var(--abq-shadow-ring-white);">{{ cmpN }}</span></sc-if><sc-if value="{{ cmpTip }}" hint-placeholder-val="{{ false }}"><span role="tooltip" style="position: absolute; top: calc(100% + 10px); left: 50%; transform: translateX(-50%); z-index: 60; pointer-events: none; white-space: nowrap; background: var(--abq-color-navy-700); color: var(--abq-color-white); font-size: var(--abq-font-ui-sm); line-height: 1; padding: var(--abq-space-8) var(--abq-space-12); border-radius: var(--abq-radius-xs); box-shadow: var(--abq-shadow-raised);"><span style="position: absolute; top: -4px; left: 50%; width: 8px; height: 8px; background: var(--abq-color-navy-700); transform: translateX(-50%) rotate(45deg);"></span>Compare products</span></sc-if></span>
+        </div>
+        <span style="flex:none; width:2px; height:2px; border-radius:50%; background:var(--abq-color-gray-300);"></span>
+        <div style="display: flex; align-items: center; gap: var(--abq-space-12)">
+          <a data-r="login" style="color: var(--abq-color-navy-600); font-size: var(--abq-font-body-sm); font-family: 'Outfit'; font-weight: var(--abq-fw-regular); display: inline-flex; align-items: center; border: 1px solid var(--abq-color-blue-100); border-radius: var(--abq-radius-sm); padding: var(--abq-space-10) var(--abq-space-16); line-height: 1.2; white-space: nowrap; flex: none; padding-top: var(--abq-space-8); padding-bottom: var(--abq-space-8); padding-left: var(--abq-space-12); padding-right: var(--abq-space-12); height: 42px; gap: var(--abq-space-6); border-color: #C7DCEE6A; transition: background-color .22s ease, border-color .22s ease, transform .22s ease" style-hover="background-color:var(--abq-color-blue-50); border-color:var(--abq-color-blue-100);" href="{{ loginHref }}"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" style="display:block; flex:none;"><path d="M15.9998 2H14.9998C12.1714 2 10.7576 2.00023 9.87892 2.87891C9.00024 3.75759 9.00024 5.1718 9.00024 8.00023V16.0002C9.00024 18.8287 9.00024 20.2429 9.87892 21.1215C10.7574 22 12.1706 22 14.9976 22H15.9998C18.8282 22 20.2424 22 21.1211 21.1213C21.9998 20.2426 21.9998 18.8284 21.9998 16V8C21.9998 5.17159 21.9998 3.75736 21.1211 2.87868C20.2424 2 18.8282 2 15.9998 2Z" fill="currentColor" opacity="0.45"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M1.25098 11.999C1.25098 11.5848 1.58676 11.249 2.00098 11.249H13.9735L12.0129 9.56848C11.6984 9.29892 11.662 8.82544 11.9315 8.51095C12.2011 8.19645 12.6746 8.16003 12.9891 8.4296L16.4891 11.4296C16.6553 11.5721 16.751 11.7801 16.751 11.999C16.751 12.218 16.6553 12.426 16.4891 12.5685L12.9891 15.5685C12.6746 15.838 12.2011 15.8016 11.9315 15.4871C11.662 15.1726 11.6984 14.6991 12.0129 14.4296L13.9735 12.749H2.00098C1.58676 12.749 1.25098 12.4132 1.25098 11.999Z" fill="currentColor"></path></svg>{{ loginLabel }}</a><button data-r="cart" onClick="{{ goCart }}" style="position: relative; cursor: pointer; white-space: nowrap; flex: none; border: none; color: var(--abq-color-navy-600); font-family: 'Outfit'; font-weight: var(--abq-fw-regular); font-size: var(--abq-font-body-sm); padding: var(--abq-space-8) var(--abq-space-16); border-radius: var(--abq-radius-sm); display: inline-flex; align-items: center; gap: var(--abq-space-6); padding-left: var(--abq-space-16); padding-right: var(--abq-space-16); padding-top: var(--abq-space-12); padding-bottom: var(--abq-space-12); background-color: var(--abq-color-blue-50); background-image: none; box-shadow: var(--abq-shadow-none); height: 42px; transition: background-color .22s ease, box-shadow .22s ease, transform .22s ease" style-hover="background-color:var(--abq-color-line-soft); box-shadow:var(--abq-shadow-nav-hover);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="display:block;"><path d="M20.1999 12.1871L20.6997 9.7624L20.7242 9.63965H5C5 12.5812 5.06324 13.552 5.92964 14.4658C6.79604 15.3796 8.19049 15.3796 10.9794 15.3796H16.2823C17.8433 15.3796 18.6238 15.3796 19.1755 14.93C19.7273 14.4804 19.8848 13.716 20.1999 12.1871Z" fill="#034787" fill-opacity="0.5"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M3.04047 2.29266C2.6497 2.15527 2.22155 2.36068 2.08416 2.75145C1.94678 3.14221 2.15218 3.57036 2.54295 3.70775L2.80416 3.79958C3.47177 4.0343 3.91052 4.18985 4.23336 4.34826C4.53659 4.49704 4.67026 4.61747 4.75832 4.74634C4.84858 4.87842 4.91828 5.05984 4.95761 5.42319C4.99877 5.8034 4.99979 6.29862 4.99979 7.03856V9.64024H20.724C21.0545 7.9827 21.2096 7.14067 20.7762 6.57733C20.3323 6.00024 18.8155 6.00024 17.1305 6.00024H6.49233C6.48564 5.72991 6.47295 5.48397 6.4489 5.26177C6.39517 4.76539 6.27875 4.31268 5.99677 3.90003C5.71259 3.48417 5.33474 3.21784 4.89411 3.00163C4.48203 2.79943 3.95839 2.61536 3.34187 2.39862L3.04047 2.29266Z" fill="#034787"></path><path d="M7.5 18C8.32843 18 9 18.6716 9 19.5C9 20.3284 8.32843 21 7.5 21C6.67157 21 6 20.3284 6 19.5C6 18.6716 6.67157 18 7.5 18Z" fill="#034787"></path><path d="M16.5 18C17.3284 18 18 18.6715 18 19.5C18 20.3284 17.3284 21 16.5 21C15.6716 21 15 20.3284 15 19.5C15 18.6715 15.6716 18 16.5 18Z" fill="#034787"></path></svg>
+            Cart 
+          <sc-if value="{{ cartHas }}" hint-placeholder-val="{{ false }}"><span aria-label="{{ cartN }} items in cart" style="position: absolute; top: -6px; right: -6px; min-width: 18px; height: 18px; padding: 0 var(--abq-space-4); box-sizing: border-box; border-radius: var(--abq-radius-sm); background: var(--abq-color-navy-700); color: var(--abq-color-white); font-size: 10.5px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; box-shadow: var(--abq-shadow-ring-white);">{{ cartN }}</span></sc-if></button>
+          
+        </div>
+      </div>
+    </div>
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <div data-r="mnav" style="position: absolute; top: 100%; left: 0; right: 0; max-height: calc(100vh - 81px); overflow-y: auto; background: var(--abq-color-white); border-bottom: 1px solid var(--abq-color-line-soft); box-shadow: var(--abq-shadow-menu); padding: var(--abq-space-12) clamp(var(--abq-space-16),4vw,var(--abq-space-40)) var(--abq-space-24); display: flex; flex-direction: column">
+      <a data-r="m-search" href="site.html#search" onClick="{{ closeMenu }}" style="display: none; align-items: center; gap: var(--abq-space-10); height: 48px; padding: 0 var(--abq-space-14); margin: var(--abq-space-4) 0 var(--abq-space-12); border-radius: var(--abq-radius-sm); border: 1px solid var(--abq-color-blue-100); color: var(--abq-color-gray-500); font-size: var(--abq-font-body)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="display: block; flex: none; color: var(--abq-color-navy-700)"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.875"></circle><path d="M20 20L16.5 16.5" stroke="currentColor" stroke-width="1.875" stroke-linecap="round"></path></svg>Search products</a>
+      <span style="font-size: var(--abq-font-eyebrow); letter-spacing: .14em; color: var(--abq-color-blue-500); padding: var(--abq-space-8) 0 var(--abq-space-4)">PRODUCTS</span>
+      <a href="site.html#breath-alcohol-testers" onClick="{{ closeMenu }}" style="color: var(--abq-color-ink-900); font-size: var(--abq-font-body); padding: var(--abq-space-12) 0; border-bottom: 1px solid var(--abq-color-divider)">Breath Alcohol Testers</a>
+      <a href="site.html#drug-tests" onClick="{{ closeMenu }}" style="color: var(--abq-color-ink-900); font-size: var(--abq-font-body); padding: var(--abq-space-12) 0; border-bottom: 1px solid var(--abq-color-divider)">Drug Tests</a>
+      <a href="site.html#calibration-equipment" onClick="{{ closeMenu }}" style="color: var(--abq-color-ink-900); font-size: var(--abq-font-body); padding: var(--abq-space-12) 0; border-bottom: 1px solid var(--abq-color-divider)">Calibration Equipment</a>
+      <a href="site.html#mouthpieces" onClick="{{ closeMenu }}" style="color: var(--abq-color-ink-900); font-size: var(--abq-font-body); padding: var(--abq-space-12) 0; border-bottom: 1px solid var(--abq-color-divider)">Mouthpieces</a>
+      <span style="font-size: var(--abq-font-eyebrow); letter-spacing: .14em; color: var(--abq-color-blue-500); padding: var(--abq-space-20) 0 var(--abq-space-4)">MORE</span>
+      <a href="site.html#services" onClick="{{ closeMenu }}" style="color: var(--abq-color-ink-900); font-size: var(--abq-font-body); padding: var(--abq-space-12) 0; border-bottom: 1px solid var(--abq-color-divider)">Calibration Services</a>
+      <a href="site.html#brands" onClick="{{ closeMenu }}" style="color: var(--abq-color-ink-900); font-size: var(--abq-font-body); padding: var(--abq-space-12) 0; border-bottom: 1px solid var(--abq-color-divider)">Brands</a>
+      <a href="site.html#contact" onClick="{{ closeMenu }}" style="color: var(--abq-color-ink-900); font-size: var(--abq-font-body); padding: var(--abq-space-12) 0; border-bottom: 1px solid var(--abq-color-divider)">Contacts</a>
+      <span style="font-size: var(--abq-font-eyebrow); letter-spacing: .14em; color: var(--abq-color-blue-500); padding: var(--abq-space-20) 0 var(--abq-space-4)">LANGUAGE</span>
+      <a href="#" onClick="{{ closeMenu }}" style="color: var(--abq-color-ink-900); font-size: var(--abq-font-body); padding: var(--abq-space-12) 0; border-bottom: 1px solid var(--abq-color-divider); display: flex; align-items: center; gap: var(--abq-space-10)"><svg width="20" height="20" viewBox="0 0 60 60" style="display:block; border-radius:50%;"><clipPath id="ukc2"><circle cx="30" cy="30" r="30"></circle></clipPath><g clip-path="url(#ukc2)"><rect width="60" height="60" fill="#012169"></rect><path d="M0 0 60 60M60 0 0 60" stroke="#fff" stroke-width="12"></path><path d="M0 0 60 60M60 0 0 60" stroke="#C8102E" stroke-width="6"></path><path d="M30 0V60M0 30H60" stroke="#fff" stroke-width="20"></path><path d="M30 0V60M0 30H60" stroke="#C8102E" stroke-width="12"></path></g></svg>English<svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="display:block; margin-left:auto; color:var(--abq-color-gray-500);"><path d="M6.64667 9.64017L12 15L17.2957 9.64022" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+      <sc-if value="{{ showLogin }}" hint-placeholder-val="{{ true }}"><a data-r="m-login" href="site.html#auth" onClick="{{ closeMenu }}" style="margin-top: var(--abq-space-20); display: inline-flex; align-items: center; justify-content: center; height: 48px; border-radius: var(--abq-radius-sm); border: 1px solid var(--abq-color-blue-100); color: var(--abq-color-navy-600); font-size: var(--abq-font-body)">Log in</a></sc-if><sc-if value="{{ showLogout }}" hint-placeholder-val="{{ false }}"><a href="#" onClick="{{ menuLogout }}" style="margin-top: var(--abq-space-20); display: inline-flex; align-items: center; justify-content: center; gap: var(--abq-space-10); height: 48px; border-radius: var(--abq-radius-sm); border: 1px solid var(--abq-color-blue-100); color: var(--abq-color-navy-600); font-size: var(--abq-font-body)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="display: block; flex: none;"><path opacity="0.4" d="M3 6c0-2.2 1.8-4 4-4h3c2.2 0 4 1.8 4 4v12c0 2.2-1.8 4-4 4H7c-2.2 0-4-1.8-4-4V6Z" fill="currentColor"></path><path d="M14 12h7M18 8.5l3.5 3.5-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>Log out</a></sc-if>
+    </div>
+  </sc-if>
+  </header>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;81px&quot;},&quot;divider&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;},&quot;spacer&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;loginHref&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;site.html#auth&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;loginLabel&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Log in&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { menuOpen: false, prodOpen: false, cartN: 0 };
+  readCart() { let c; try { c = JSON.parse(localStorage.getItem('abecq-cart-v3') || 'null'); } catch (e) {} if (!Array.isArray(c)) c = [{"name":"Lion Alcolmeter SD400F","brand":"Lion","price":990,"qty":1},{"name":"Ethylotest Ethylec","brand":"ABECQ","price":163.8,"qty":2}]; this.setState({ cartN: c.reduce((n, it) => n + (it.qty || 0), 0) }); }
+  readCmp() { let c; try { c = JSON.parse(localStorage.getItem('abecq-compare-v4') || 'null'); } catch (e) {} if (!Array.isArray(c)) c = ["Lion Alcolmeter SD400F","Drivesafe III"]; this.setState({ cmpN: c.length }); }
+  componentDidMount() { this._close = () => { this._sup = true; this.setState({ menuOpen: false, prodOpen: false }); }; window.addEventListener('hashchange', this._close); this._rc = () => this.readCart(); window.addEventListener('abecq-cart-change', this._rc); window.addEventListener('storage', this._rc); this.readCart(); this._rm = () => this.readCmp(); window.addEventListener('abecq-compare-change', this._rm); window.addEventListener('storage', this._rm); this.readCmp(); }
+  componentWillUnmount() { window.removeEventListener('hashchange', this._close); window.removeEventListener('abecq-cart-change', this._rc); window.removeEventListener('storage', this._rc); window.removeEventListener('abecq-compare-change', this._rm); window.removeEventListener('storage', this._rm); }
+  renderVals() {
+    const p = this.props, s = this.state;
+    const go = (h) => () => { location.href = 'site.html#' + h; };
+    return {
+      spacer: p.spacer ?? true,
+      headerBorder: p.divider ? '#E8ECF5' : '#FFFFFF00',
+      loginHref: p.loginHref ?? 'site.html#auth',
+      loginLabel: p.loginLabel ?? 'Log in',
+      menuOpen: s.menuOpen, menuClosed: !s.menuOpen,
+      showLogin: !p.loggedIn, showLogout: !!p.loggedIn,
+      menuLogout: (e) => { if (e) e.preventDefault(); this.setState({ menuOpen: false }); if (p.onLogout) p.onLogout(e); },
+      prodOpacity: s.prodOpen ? 1 : 0,
+      prodVis: s.prodOpen ? 'visible' : 'hidden',
+      prodShift: s.prodOpen ? 'translateY(0)' : 'translateY(-6px)',
+      prodEnter: () => { this._sup = false; this.setState({ prodOpen: true }); },
+      prodLeave: () => { this._sup = false; this.setState({ prodOpen: false }); },
+      prodMove: () => { if (!this._sup && !this.state.prodOpen) this.setState({ prodOpen: true }); },
+      prodToggle: (e) => { e.preventDefault(); this._sup = this.state.prodOpen; this.setState(x => ({ prodOpen: !x.prodOpen })); },
+      toggleMenu: () => this.setState(x => ({ menuOpen: !x.menuOpen })),
+      closeMenu: () => this.setState({ menuOpen: false }),
+      goSearch: go('search'), goCompare: go('compare'), goCart: go('cart'),
+      cartN: s.cartN, cartHas: s.cartN > 0, cmpN: s.cmpN || 0, cmpHas: (s.cmpN || 0) > 0,
+      cmpTip: !!this.state.cmpTip, cmpTipOn: () => this.setState({ cmpTip: true }), cmpTipOff: () => this.setState({ cmpTip: false })
+    };
+  }
+}
+</script>
+</body>
+</html>
