@@ -1,0 +1,67 @@
+/* =========================================================
+   TABS
+   .abq-segmented       pill switch (in-stock filter: Individual /
+                        Professional). Active option: --active.
+   .abq-tabs-underline  product page tabs, active navy 2px underline.
+   The export draws the active state only; no switching behaviour
+   exists in the source yet.
+   ========================================================= */
+
+.abq-segmented {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid var(--abq-color-line);
+  border-radius: 100px;
+  background-color: #F9FAFB00;
+
+  &_option {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 100px;
+    font-family: 'Outfit';
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--abq-color-gray-500);
+    background: transparent;
+    box-shadow: none;
+    cursor: pointer;
+    transition: all 0.18s;
+
+    &--active {
+      color: var(--abq-color-navy-700);
+      background: #FFFFFF;
+      box-shadow: var(--abq-shadow-tab);
+    }
+  }
+}
+
+.abq-tabs-underline {
+  max-width: 100%;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--abq-color-line);
+
+  &_tab {
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: -1px;
+    padding: 14px 32px;
+    border-bottom: 2px solid transparent;
+    font-size: 15px;
+    white-space: nowrap;
+    color: var(--abq-color-gray-500);
+
+    &--active {
+      border-bottom-color: var(--abq-color-navy-700);
+      color: var(--abq-color-navy-700);
+    }
+  }
+}

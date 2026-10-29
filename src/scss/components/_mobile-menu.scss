@@ -1,0 +1,48 @@
+/* =========================================================
+   MOBILE MENU
+   Panel that opens under the header on phones and tablets: search,
+   then grouped links with eyebrow labels. Opening and closing belong
+   to the site header (SiteHeader.dc.html, not in this export).
+   ========================================================= */
+
+.abq-mobile-menu {
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 20px 24px;
+  border-bottom: 1px solid #EBEFF5;
+  border-radius: 0 0 16px 16px;
+  background: #FFFFFF;
+  box-shadow: var(--abq-shadow-menu);
+
+  &_search {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    margin: 4px 0 12px;
+    padding: 0 14px;
+    border: 1px solid var(--abq-color-blue-100);
+    border-radius: 10px;
+    font-size: 16px;
+    color: var(--abq-color-gray-500);
+  }
+
+  &_group {
+    padding: 8px 0 4px;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    color: var(--abq-color-blue-500);
+
+    &--spaced {
+      padding-top: 16px;
+    }
+  }
+
+  &_link {
+    padding: 13px 0;
+    border-bottom: 1px solid var(--abq-color-divider);
+    font-size: 16px;
+    color: var(--abq-color-ink-900);
+  }
+}

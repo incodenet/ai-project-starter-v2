@@ -1,0 +1,60 @@
+/* =========================================================
+   FAQ ACCORDION
+   White cards on the pale band; the open item (--open) shows its
+   answer and turns its chevron. The export draws the states only;
+   it has no toggle behaviour yet.
+   ========================================================= */
+
+.abq-faq {
+  max-width: 820px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 40px;
+  border-radius: 24px;
+  background: var(--abq-color-blue-50);
+
+  &_item {
+    border-radius: 16px;
+    background: #FFFFFF;
+    box-shadow: 0 1px 2px rgba(16, 24, 43, 0.04), 0 8px 24px rgba(0, 66, 122, 0.07);
+  }
+
+  &_question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 18px 22px;
+    font-size: 18px;
+    color: var(--abq-color-ink-900);
+  }
+
+  &_toggle {
+    flex: none;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    color: var(--abq-color-navy-600);
+    background: #FFFFFF;
+  }
+
+  &_chevron {
+    transform: none;
+    transition: transform 0.2s ease;
+  }
+
+  &_item--open &_chevron {
+    transform: rotate(180deg);
+  }
+
+  &_answer {
+    padding: 0 22px 20px;
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--abq-color-gray-500);
+  }
+}

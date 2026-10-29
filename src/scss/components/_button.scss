@@ -1,0 +1,494 @@
+/* =========================================================
+   BUTTON
+   Source: Button.dc.html (variant="all" library) and the #buttons
+   site specimens of the approved export, via
+   raw/normalized/design-system-91951f68-b2.
+
+   .abq-btn         the Button component. Each variant sets its own
+                    default size; size modifiers only override the
+                    sizes that variant comes in.
+   .abq-button--*   buttons as shipped on site pages. Their values
+                    differ from .abq-btn (see DESIGN_SYSTEM_INVENTORY
+                    "Conflicts"); kept exact until reconciled.
+   ========================================================= */
+
+/* animatable highlight position for the shine variant and its relatives */
+@property --mx {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 0%;
+}
+
+
+/* ---------- Component ---------- */
+
+.abq-btn {
+  --btn-h: 50px;
+  --btn-px: 24px;
+  --btn-r: 12px;
+  --btn-fs: 16px;
+  --btn-gap: 9px;
+  box-sizing: border-box;
+  height: var(--btn-h);
+  width: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--btn-gap);
+  padding: 0 var(--btn-px);
+  border-radius: var(--btn-r);
+  font-family: 'Outfit', sans-serif;
+  font-weight: var(--abq-fw-regular);
+  font-size: var(--btn-fs);
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+
+  &[aria-disabled='true'] {
+    cursor: default;
+  }
+
+  &--full {
+    width: 100%;
+  }
+
+  &_icon {
+    flex: none;
+    display: inline-flex;
+
+    svg {
+      display: block;
+      flex: none;
+    }
+
+    &--mirror svg {
+      transform: scaleX(-1);
+    }
+  }
+
+  &_remove {
+    font-size: var(--abq-font-body-sm);
+    line-height: 1;
+  }
+
+  &_plus {
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: var(--abq-font-h5);
+    background: var(--abq-color-blue-50);
+  }
+
+  &--primary {
+    border: none;
+    letter-spacing: 0.4px;
+    color: var(--abq-color-white);
+    background-color: var(--abq-color-blue-500);
+    box-shadow: var(--abq-shadow-cta);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--abq-shadow-cta-hover);
+    }
+  }
+
+  &--glow {
+    --btn-h: 48px;
+    border: none;
+    color: var(--abq-color-white);
+    background-color: var(--abq-color-grad-mid);
+    background-image:
+      radial-gradient(at 15% 28%, var(--abq-color-grad-hover-start) 0px, transparent 55%),
+      radial-gradient(at 18% 88%, var(--abq-color-grad-hover-mid) 0px, transparent 55%),
+      radial-gradient(at 96% 22%, var(--abq-color-grad-hover-end) 0px, transparent 55%),
+      radial-gradient(at 92% 90%, var(--abq-color-grad-end) 0px, transparent 55%);
+    box-shadow: var(--abq-shadow-audience);
+    transition: transform 0.15s;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+
+  &--gradient {
+    --btn-h: 48px;
+    border: none;
+    color: var(--abq-color-white);
+    background: $btnGradientLinear;
+    box-shadow: none;
+    transition: transform 0.15s;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+
+    &.abq-btn--lg {
+      --btn-h: 52px;
+      --btn-px: 28px;
+      box-shadow: 0 12px 28px rgba(0, 66, 122, 0.25);
+    }
+
+    &.abq-btn--xl {
+      --btn-h: 56px;
+      --btn-px: 26px;
+      --btn-r: 14px;
+      --btn-gap: 10px;
+      box-shadow: 0 12px 28px rgba(0, 66, 122, 0.25);
+    }
+  }
+
+  &--white {
+    --btn-h: 48px;
+    --btn-px: 22px;
+    --btn-gap: 8px;
+    border: 1px solid var(--abq-color-white-60);
+    color: var(--abq-color-navy-600);
+    background-color: var(--abq-color-white);
+    backdrop-filter: blur(14px) saturate(160%);
+    box-shadow: var(--abq-shadow-glass);
+    transition: transform 0.15s;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+
+  &--secondary {
+    --btn-h: 42px;
+    --btn-px: 16px;
+    --btn-r: 10px;
+    --btn-fs: 15px;
+    --btn-gap: 7px;
+    border: none;
+    color: var(--abq-color-navy-600);
+    background-color: var(--abq-color-blue-50);
+    box-shadow: var(--abq-shadow-none);
+    transition: background-color 0.22s ease, box-shadow 0.22s ease;
+
+    &:hover {
+      background-color: var(--abq-color-line-soft);
+      box-shadow: var(--abq-shadow-nav-hover);
+    }
+  }
+
+  /* outline has no md size: sm is its default */
+  &--outline {
+    --btn-h: 40px;
+    --btn-px: 16px;
+    --btn-r: 10px;
+    --btn-fs: 15px;
+    --btn-gap: 8px;
+    border: 1px solid var(--abq-color-blue-100);
+    color: var(--abq-color-navy-600);
+    background-color: var(--abq-color-white);
+    transition: background-color 0.22s ease;
+
+    &:hover {
+      background-color: var(--abq-color-blue-50);
+    }
+
+    &.abq-btn--lg {
+      --btn-h: 48px;
+      --btn-px: 24px;
+      --btn-r: 12px;
+      --btn-fs: 15.5px;
+    }
+  }
+
+  &--link {
+    --btn-h: auto;
+    --btn-px: 0px;
+    --btn-r: 0px;
+    --btn-gap: 8px;
+    border: none;
+    color: var(--abq-color-navy-700);
+    background: transparent;
+    transition: transform 0.25s ease;
+
+    &:hover {
+      transform: translateX(2px);
+    }
+  }
+
+  &--text {
+    --btn-h: 48px;
+    --btn-px: 0px;
+    --btn-r: 0px;
+    --btn-gap: 5px;
+    width: 100%;
+    border: none;
+    color: var(--abq-color-navy-700);
+    background: transparent;
+  }
+
+  &--tile {
+    --btn-h: 44px;
+    --btn-px: 0px;
+    --btn-r: 11px;
+    --btn-fs: 0px;
+    --btn-gap: 0px;
+    width: var(--btn-h);
+    border: 1px solid var(--abq-color-line);
+    color: var(--abq-color-navy-600);
+    background: var(--abq-color-white);
+    transition: background-color 0.15s, border-color 0.15s;
+
+    &:hover {
+      border-color: var(--abq-color-blue-100);
+      background-color: var(--abq-color-blue-50);
+    }
+  }
+
+  /* circle has no md size: sm (36) is its default */
+  &--circle {
+    --btn-h: 36px;
+    --btn-px: 0px;
+    --btn-r: 50%;
+    --btn-fs: 0px;
+    --btn-gap: 0px;
+    width: var(--btn-h);
+    border: none;
+    color: var(--abq-color-navy-700);
+    background: var(--abq-color-white);
+    box-shadow: var(--abq-shadow-raised);
+    transition: color 0.15s;
+
+    &.abq-btn--lg {
+      --btn-h: 56px;
+    }
+  }
+
+  &--shine {
+    --btn-h: 44px;
+    --btn-px: 16px;
+    --btn-r: 11px;
+    --btn-fs: 15px;
+    --btn-gap: 8px;
+    --mx: 0%;
+    border: none;
+    color: var(--abq-color-white);
+    background-color: var(--abq-color-grad-mid);
+    background-image: $btnShineImage;
+    -webkit-backdrop-filter: blur(10px) saturate(160%);
+    backdrop-filter: blur(10px) saturate(160%);
+    transition: $btnShineTransition;
+
+    &:hover {
+      --mx: 70%;
+    }
+  }
+
+  &--quiet {
+    --btn-h: 42px;
+    --btn-px: 14px;
+    --btn-r: 10px;
+    --btn-fs: 15px;
+    --btn-gap: 8px;
+    border: none;
+    color: var(--abq-color-gray-500);
+    background: transparent;
+    transition: color 0.22s ease;
+
+    &:hover {
+      color: var(--abq-color-navy-600);
+    }
+  }
+
+  &--chip {
+    --btn-h: auto;
+    --btn-px: 12px;
+    --btn-r: 100px;
+    --btn-fs: 13.5px;
+    --btn-gap: 8px;
+    padding-top: var(--abq-space-6);
+    padding-bottom: var(--abq-space-6);
+    border: none;
+    color: var(--abq-color-navy-700);
+    background: var(--abq-color-blue-25);
+  }
+
+  &--dashed {
+    --btn-h: auto;
+    --btn-px: 24px;
+    --btn-r: 20px;
+    --btn-gap: 10px;
+    width: 220px;
+    min-height: 200px;
+    flex-direction: column;
+    border: 1.5px dashed var(--abq-color-blue-100);
+    color: var(--abq-color-navy-600);
+    background-color: var(--abq-color-white);
+  }
+}
+
+/* decorative arrow badge (not interactive) */
+.abq-btn-badge {
+  box-sizing: border-box;
+  flex: none;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--abq-color-navy-700);
+  background: var(--abq-color-blue-50);
+  transition: background 0.2s;
+}
+
+/* inside a Home brand card (component styles of Button.dc.html) */
+[data-r='brand-card']:hover .abq-btn-badge {
+  background: #E1ECF8;
+}
+
+/* ---------- Site variants (as shipped; see inventory conflicts) ---------- */
+
+.abq-button {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Outfit';
+  font-weight: 400;
+
+  /* flex: none keeps the icon at full size when the label wraps
+     (core gives svg max-width: 100%, which would let it shrink) */
+  &_icon {
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &_svg {
+    display: block;
+
+    &--rigid {
+      flex: none;
+    }
+  }
+
+  /* Calibration CTA */
+  &--primary {
+    flex: none;
+    gap: 9px;
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    color: var(--abq-color-white);
+    background-color: var(--abq-color-blue-500);
+    box-shadow: 0 12px 27px 0 #1F95F94D;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 34px 0 #1F95F966;
+    }
+  }
+
+  /* Add to cart (product page purchase row) */
+  &--gradient {
+    --mx: 0%;
+    flex: 1;
+    height: 44px;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+    border: 0 solid #FFFFFF00;
+    border-radius: 11px;
+    font-size: 16px;
+    color: #FFFFFF;
+    background-color: var(--abq-color-grad-mid);
+    background-image: $btnShineImage;
+    -webkit-backdrop-filter: blur(10px) saturate(160%);
+    backdrop-filter: blur(10px) saturate(160%);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: $btnShineTransition;
+
+    &:hover {
+      --mx: 70%;
+    }
+  }
+
+  /* Header cart */
+  &--secondary {
+    flex: none;
+    height: 42px;
+    gap: 7px;
+    padding: 13px 16px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    white-space: nowrap;
+    color: var(--abq-color-navy-600);
+    background-color: var(--abq-color-blue-50);
+    background-image: none;
+    box-shadow: 0 0 0 0 #1F95F900;
+    cursor: pointer;
+    transition: background-color 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease;
+
+    &:hover {
+      background-color: #E6EEFA;
+      box-shadow: 0 8px 18px 0 #0347871F;
+    }
+  }
+
+  /* Header log in */
+  &--outline {
+    flex: none;
+    height: 42px;
+    gap: 7px;
+    padding: 8px 13px;
+    border: 1px solid #C7DCEE6A;
+    border-radius: 10px;
+    font-size: 15px;
+    line-height: 1.2;
+    white-space: nowrap;
+    color: var(--abq-color-navy-600);
+    transition: background-color 0.22s ease, border-color 0.22s ease, transform 0.22s ease;
+
+    &:hover {
+      border-color: var(--abq-color-blue-100);
+      background-color: var(--abq-color-blue-50);
+    }
+  }
+}
+
+.abq-icon-button {
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  /* compare (product card / purchase row) */
+  &--compare {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    padding: 12px;
+    border: 1px solid #03478733;
+    border-radius: 11px;
+    font-family: 'Outfit';
+    font-weight: 400;
+    font-size: 13.5px;
+    color: var(--abq-color-navy-700);
+    background: #FFFFFF;
+    transition: all 0.15s;
+  }
+
+  /* header menu toggle */
+  &--menu {
+    flex: none;
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    padding: 0;
+    border: 1px solid #C7DCEE6A;
+    border-radius: 10px;
+    color: var(--abq-color-navy-700);
+    background: transparent;
+  }
+}

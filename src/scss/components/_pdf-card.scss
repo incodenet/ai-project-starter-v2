@@ -1,0 +1,76 @@
+/* =========================================================
+   PDF CARD
+   Source: PdfCard.dc.html. Download link with a PDF badge, title,
+   meta line and download icon.
+   ========================================================= */
+
+.abq-pdf-card {
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--abq-space-16);
+  padding: var(--abq-space-16) var(--abq-space-20) var(--abq-space-16) var(--abq-space-18);
+  border-radius: var(--abq-radius-lg);
+  font-family: 'Outfit', sans-serif;
+  color: inherit;
+  text-decoration: none;
+  background: var(--abq-color-surface);
+  transition: background 0.2s;
+
+  &:hover {
+    background: var(--abq-color-divider);
+  }
+
+  &_badge {
+    flex: none;
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    border-radius: var(--abq-radius-sm);
+    color: var(--abq-color-danger);
+    background: var(--abq-color-white);
+    box-shadow: var(--abq-shadow-glass-sm);
+  }
+
+  &_badge-label {
+    font-size: var(--abq-font-label-xs);
+    letter-spacing: 0.08em;
+    color: var(--abq-color-danger);
+  }
+
+  &_text {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--abq-space-2);
+  }
+
+  &_title {
+    font-size: var(--abq-font-body-sm);
+    color: var(--abq-color-ink-900);
+  }
+
+  &_meta {
+    font-size: var(--abq-font-ui-sm);
+    color: var(--abq-color-gray-400);
+  }
+
+  &_download {
+    flex: none;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--abq-radius-md);
+    color: var(--abq-color-navy-600);
+    background: var(--abq-color-white);
+  }
+}

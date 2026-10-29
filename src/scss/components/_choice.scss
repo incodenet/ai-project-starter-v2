@@ -1,0 +1,169 @@
+/* =========================================================
+   CHOICE
+   Source: Choice.dc.html. Checkbox, radio and option card.
+   The drawn control follows a visually hidden native input placed
+   right before it, so clicks and the keyboard work without JS.
+
+   <label class="abq-choice">
+     <input class="visually-hidden abq-choice_input" type="checkbox">
+     <span class="abq-choice_box abq-choice_box--checkbox">…tick svg…</span>
+     <span>Label</span>
+   </label>
+   ========================================================= */
+
+.abq-choice {
+  display: flex;
+  align-items: center;
+  gap: var(--abq-space-10);
+  font-size: var(--abq-font-ui);
+  color: var(--abq-color-gray-700);
+  cursor: pointer;
+
+  &--top {
+    align-items: flex-start;
+  }
+
+  &--radio {
+    gap: 8px;
+  }
+
+  &_box {
+    box-sizing: border-box;
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid var(--abq-color-blue-100);
+    background: #FFFFFF;
+
+    &--checkbox {
+      width: 18px;
+      height: 18px;
+      border-radius: var(--abq-radius-2xs);
+      color: var(--abq-color-white);
+    }
+
+    &--radio {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+    }
+  }
+
+  &--top &_box {
+    margin-top: 2px;
+  }
+
+  &_dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: transparent;
+  }
+
+  &_count {
+    margin-left: auto;
+    font-size: var(--abq-font-ui-sm);
+    color: var(--abq-color-gray-400);
+  }
+
+  /* ---------- checked / focus (state follows the native input) ---------- */
+
+  &_input:not(:checked) + &_box &_tick {
+    display: none;
+  }
+
+  &_input:checked + &_box {
+    border-color: var(--abq-color-navy-700);
+  }
+
+  &_input:checked + &_box--checkbox {
+    background: var(--abq-color-navy-700);
+  }
+
+  &_input:checked + &_box &_dot {
+    background: var(--abq-color-navy-700);
+  }
+
+  &_input:focus-visible + &_box {
+    outline: 2px solid var(--abq-color-blue-500);
+    outline-offset: 2px;
+  }
+}
+
+/* option card (delivery method, return type) */
+.abq-choice-card {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--abq-space-14);
+  padding: var(--abq-space-18) var(--abq-space-20);
+  border: 1.5px solid var(--abq-color-line);
+  border-radius: var(--abq-radius-lg);
+  font-family: 'Outfit', sans-serif;
+  color: inherit;
+  background: #FFFFFF;
+  cursor: pointer;
+
+  &:has(> .abq-choice_input:checked) {
+    border-color: var(--abq-color-blue-500);
+    background: var(--abq-color-blue-50);
+  }
+
+  &_radio {
+    box-sizing: border-box;
+    flex: none;
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid var(--abq-color-line);
+    border-radius: 50%;
+    background: var(--abq-color-white);
+  }
+
+  &_dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: transparent;
+  }
+
+  .abq-choice_input:checked + &_radio {
+    border-color: var(--abq-color-blue-500);
+  }
+
+  .abq-choice_input:checked + &_radio &_dot {
+    background: var(--abq-color-blue-500);
+  }
+
+  .abq-choice_input:focus-visible + &_radio {
+    outline: 2px solid var(--abq-color-blue-500);
+    outline-offset: 2px;
+  }
+
+  &_text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &_title {
+    display: block;
+    font-size: var(--abq-font-body);
+    color: var(--abq-color-ink-900);
+  }
+
+  &_desc {
+    display: block;
+    margin-top: var(--abq-space-2);
+    font-size: var(--abq-font-ui-sm);
+    color: var(--abq-color-gray-400);
+  }
+
+  &_price {
+    font-size: var(--abq-font-body-sm);
+    color: var(--abq-color-ink-900);
+  }
+}

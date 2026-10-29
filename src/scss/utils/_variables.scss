@@ -8,3 +8,12 @@ $columnSpace: 0.9375rem;
 $mediaMedium: 40em;
 $mediaMediumLarge: 1200px;
 $mediaLarge: 1367px;
+
+/* ABECQ button surfaces shared by .abq-btn, .abq-button and .abq-product-card */
+$btnShineImage:
+  radial-gradient(at calc(15% + var(--mx)) 28%, var(--abq-color-grad-hover-start) 0px, transparent 55%),
+  radial-gradient(at calc(18% + var(--mx)) 88%, var(--abq-color-grad-hover-mid) 0px, transparent 52%),
+  radial-gradient(at calc(96% - var(--mx)) 22%, var(--abq-color-grad-hover-end) 0px, transparent 55%),
+  radial-gradient(at calc(92% - var(--mx)) 90%, var(--abq-color-grad-end) 0px, transparent 55%);
+$btnShineTransition: --mx 0.95s cubic-bezier(0.4, 0, 0.2, 1);
+$btnGradientLinear: linear-gradient(120deg, var(--abq-color-grad-start) 0%, var(--abq-color-grad-mid) 45%, var(--abq-color-grad-end) 100%);

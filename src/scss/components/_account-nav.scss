@@ -1,0 +1,61 @@
+/* =========================================================
+   ACCOUNT NAVIGATION
+   Side menu on the Account page. The active item gets a pale fill
+   and navy text; icons follow the text colour.
+   ========================================================= */
+
+.abq-account-nav {
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 32px;
+  border: 1px solid var(--abq-color-line-soft);
+  border-radius: 22px;
+  background: #FFFFFF;
+
+  &_label {
+    margin: 0 0 6px;
+    padding: 0 12px;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    color: var(--abq-color-gray-400);
+  }
+
+  &_item {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 12px;
+    border-radius: 12px;
+    font-size: 15px;
+    white-space: nowrap;
+    color: var(--abq-color-gray-500);
+    background: transparent;
+
+    &--active {
+      color: var(--abq-color-navy-700);
+      background: var(--abq-color-blue-50);
+    }
+  }
+
+  &_icon {
+    flex: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    background: var(--abq-color-gray-400);
+    opacity: 0.35;
+  }
+
+  &_item--active &_icon {
+    background: var(--abq-color-navy-700);
+  }
+
+  &_count {
+    margin-left: auto;
+    font-size: 12px;
+    color: var(--abq-color-gray-400);
+  }
+}

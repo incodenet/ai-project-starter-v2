@@ -1,0 +1,26 @@
+/* =========================================================
+   PURCHASE ACTIONS
+   Price + add-to-cart + compare, from the product page.
+   Buttons: .abq-button--gradient and .abq-icon-button--compare.
+   ========================================================= */
+
+.abq-purchase {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &_price {
+    font-family: 'Outfit';
+    font-weight: 400;
+    font-size: 22px;
+    color: var(--abq-color-ink-900);
+  }
+
+  &_actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}

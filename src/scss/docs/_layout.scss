@@ -146,12 +146,6 @@ $docsMono: ui-monospace, SFMono-Regular, Menlo, monospace;
     &[aria-current='page'] {
       background: rgba(255, 255, 255, 0.08);
     }
-
-    /* not imported yet: listed for orientation, not navigable */
-    &--pending {
-      opacity: 0.5;
-      cursor: default;
-    }
   }
 
   &_badge {

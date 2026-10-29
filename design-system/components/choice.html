@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Choice controls · ABECQ Design System</title>
+
+    <!-- Production stylesheets, in the order index.php loads them -->
+    <link rel="stylesheet" href="../../assets/css/top.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/bottom.css">
+
+    <!-- Documentation-only framing (.ds-docs-*) -->
+    <link rel="stylesheet" href="../../assets/css/design-system-docs.css">
+  </head>
+
+  <body>
+    <div class="ds-docs-layout">
+      <!-- ========================= SIDEBAR ========================= -->
+      <aside class="ds-docs-sidebar" aria-label="Design system">
+        <div class="ds-docs-brand">
+          <img class="ds-docs-brand_logo" src="../../assets/img/abecq-logo.png" alt="ABECQ" width="304" height="80">
+          <p class="ds-docs-brand_meta">Design System · v1.0 · source: Home</p>
+        </div>
+
+        <nav class="ds-docs-nav" aria-label="Design system levels">
+          <details class="ds-docs-nav_group" open>
+            <summary class="ds-docs-nav_summary">
+              FOUNDATIONS
+              <svg class="ds-docs-nav_chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M6 15l6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <ul class="ds-docs-nav_list">
+              <li><a class="ds-docs-nav_link" href="../index.html"><span class="ds-docs-nav_badge" aria-hidden="true">F</span>Atomic structure</a></li>
+              <li><a class="ds-docs-nav_link" href="../foundations/colors.html"><span class="ds-docs-nav_badge" aria-hidden="true">F</span>Colour</a></li>
+              <li><a class="ds-docs-nav_link" href="../foundations/typography.html"><span class="ds-docs-nav_badge" aria-hidden="true">F</span>Typography</a></li>
+              <li><a class="ds-docs-nav_link" href="../foundations/spacing.html"><span class="ds-docs-nav_badge" aria-hidden="true">F</span>Spacing</a></li>
+              <li><a class="ds-docs-nav_link" href="../foundations/radius-elevation.html"><span class="ds-docs-nav_badge" aria-hidden="true">F</span>Radius &amp; elevation</a></li>
+              <li><a class="ds-docs-nav_link" href="../foundations/icons.html"><span class="ds-docs-nav_badge" aria-hidden="true">F</span>Icon library</a></li>
+            </ul>
+          </details>
+
+          <details class="ds-docs-nav_group" open>
+            <summary class="ds-docs-nav_summary">
+              ATOMS
+              <svg class="ds-docs-nav_chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M6 15l6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <ul class="ds-docs-nav_list">
+              <li><a class="ds-docs-nav_link" href="buttons.html"><span class="ds-docs-nav_badge" aria-hidden="true">A</span>Buttons</a></li>
+              <li><a class="ds-docs-nav_link" href="links.html"><span class="ds-docs-nav_badge" aria-hidden="true">A</span>Links &amp; eyebrow</a></li>
+              <li><a class="ds-docs-nav_link" href="form-fields.html"><span class="ds-docs-nav_badge" aria-hidden="true">A</span>Form fields</a></li>
+              <li><a class="ds-docs-nav_link" href="choice.html" aria-current="page"><span class="ds-docs-nav_badge" aria-hidden="true">A</span>Choice controls</a></li>
+            </ul>
+          </details>
+
+          <details class="ds-docs-nav_group" open>
+            <summary class="ds-docs-nav_summary">
+              MOLECULES
+              <svg class="ds-docs-nav_chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M6 15l6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <ul class="ds-docs-nav_list">
+              <li><a class="ds-docs-nav_link" href="tabs.html"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Segmented tabs</a></li>
+              <li><a class="ds-docs-nav_link" href="section-heading.html"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Section heading</a></li>
+              <li><a class="ds-docs-nav_link" href="breadcrumb.html"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Breadcrumb</a></li>
+              <li><a class="ds-docs-nav_link" href="cards.html"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Product &amp; PDF cards</a></li>
+              <li><a class="ds-docs-nav_link" href="audience-cards.html"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Audience cards</a></li>
+              <li><a class="ds-docs-nav_link" href="purchase.html"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Purchase actions</a></li>
+              <li><a class="ds-docs-nav_link" href="commerce.html"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Commerce controls</a></li>
+              <li><a class="ds-docs-nav_link" href="feedback.html"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Status &amp; feedback</a></li>
+              <li><a class="ds-docs-nav_link" href="faq.html"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>FAQ accordion</a></li>
+              <li><a class="ds-docs-nav_link" href="chips.html"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Tags &amp; chips</a></li>
+              <li><a class="ds-docs-nav_link" href="gallery.html"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Product gallery</a></li>
+              <li><a class="ds-docs-nav_link" href="page-contents.html"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Page contents</a></li>
+              <li><a class="ds-docs-nav_link" href="auth-actions.html"><span class="ds-docs-nav_badge" aria-hidden="true">M</span>Auth actions</a></li>
+            </ul>
+          </details>
+
+          <details class="ds-docs-nav_group" open>
+            <summary class="ds-docs-nav_summary">
+              ORGANISMS
+              <svg class="ds-docs-nav_chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M6 15l6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <ul class="ds-docs-nav_list">
+              <li><a class="ds-docs-nav_link" href="header-footer.html"><span class="ds-docs-nav_badge" aria-hidden="true">O</span>Header &amp; footer</a></li>
+              <li><a class="ds-docs-nav_link" href="account-nav.html"><span class="ds-docs-nav_badge" aria-hidden="true">O</span>Account navigation</a></li>
+              <li><a class="ds-docs-nav_link" href="overlays.html"><span class="ds-docs-nav_badge" aria-hidden="true">O</span>Drawers &amp; modals</a></li>
+              <li><a class="ds-docs-nav_link" href="mobile-menu.html"><span class="ds-docs-nav_badge" aria-hidden="true">O</span>Mobile menu</a></li>
+              <li><a class="ds-docs-nav_link" href="compare.html"><span class="ds-docs-nav_badge" aria-hidden="true">O</span>Compare table</a></li>
+              <li><a class="ds-docs-nav_link" href="checkout-progress.html"><span class="ds-docs-nav_badge" aria-hidden="true">O</span>Checkout progress</a></li>
+              <li><a class="ds-docs-nav_link" href="loader.html"><span class="ds-docs-nav_badge" aria-hidden="true">O</span>Page loader</a></li>
+              <li><a class="ds-docs-nav_link" href="home-sections.html"><span class="ds-docs-nav_badge" aria-hidden="true">O</span>Home sections</a></li>
+            </ul>
+          </details>
+
+          <details class="ds-docs-nav_group" open>
+            <summary class="ds-docs-nav_summary">
+              TEMPLATES
+              <svg class="ds-docs-nav_chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M6 15l6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <ul class="ds-docs-nav_list">
+              <li><a class="ds-docs-nav_link" href="../templates/home.html"><span class="ds-docs-nav_badge" aria-hidden="true">T</span>Home page</a></li>
+              <li><a class="ds-docs-nav_link" href="../templates/handoff.html"><span class="ds-docs-nav_badge" aria-hidden="true">T</span>Developer handoff</a></li>
+            </ul>
+          </details>
+        </nav>
+      </aside>
+
+      <!-- ========================= CONTENT ========================= -->
+      <main class="ds-docs-main">
+        <!-- ========================= CHOICE CONTROLS ========================= -->
+        <section class="ds-docs-section" id="choice" data-design-id="ds.choice">
+          <div class="ds-docs-head">
+            <p class="ds-docs-head_eyebrow">02 · ATOMS</p>
+            <h2 class="ds-docs-head_title">Choice controls</h2>
+            <p class="ds-docs-head_text">Checkbox, radio and option card from the catalogue filters, consent boxes, Return form and Checkout. Navy when checked; option cards turn blue.</p>
+          </div>
+
+          <div class="ds-docs-live">
+            <div class="ds-docs-live_head">
+              <h3 class="ds-docs-live_title">Choice component · live</h3>
+              <span class="ds-docs-live_file">Choice.dc.html</span>
+            </div>
+
+            <div class="ds-docs-live_frame ds-docs-live_frame--clip">
+              <!-- Choice.dc.html, kind="all". The drawn control follows a visually hidden native input,
+                   so clicking (and the keyboard) toggles it without JavaScript. Initial states as in the export. -->
+              <div class="ds-docs-library" data-design-id="ds.component.choice">
+                <div class="ds-docs-library_head">
+                  <p class="ds-docs-library_eyebrow">COMPONENTS · CHOICE</p>
+                  <h4 class="ds-docs-library_title">Choice controls</h4>
+                </div>
+
+                <div class="ds-docs-library_body">
+                  <p class="ds-docs-library_intro">Checkbox, radio and option card. The control only draws its state; the page keeps the label and decides what a click does. Click any example to try it.</p>
+
+                  <div class="ds-docs-library_samples ds-docs-library_samples--choices">
+                    <div class="ds-docs-library_sample">
+                      <label class="abq-choice">
+                        <input class="visually-hidden abq-choice_input" id="ds-choice-privacy" type="checkbox">
+                        <span class="abq-choice_box abq-choice_box--checkbox"><svg class="abq-choice_tick" width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+                        <span>I agree to the privacy policy</span>
+                      </label>
+                      <code class="ds-docs-library_code">kind="checkbox"</code>
+                    </div>
+
+                    <div class="ds-docs-library_sample">
+                      <label class="abq-choice">
+                        <input class="visually-hidden abq-choice_input" id="ds-choice-default-address" type="checkbox" checked>
+                        <span class="abq-choice_box abq-choice_box--checkbox"><svg class="abq-choice_tick" width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+                        <span>Set as default address</span>
+                      </label>
+                      <code class="ds-docs-library_code">kind="checkbox" checked</code>
+                    </div>
+
+                    <div class="ds-docs-library_sample">
+                      <label class="abq-choice">
+                        <input class="visually-hidden abq-choice_input" id="ds-choice-refund" type="radio" name="ds-choice-return" value="refund" checked>
+                        <span class="abq-choice_box abq-choice_box--radio"><span class="abq-choice_dot"></span></span>
+                        <span>refund</span>
+                      </label>
+                      <code class="ds-docs-library_code">kind="radio" checked</code>
+                    </div>
+
+                    <div class="ds-docs-library_sample">
+                      <label class="abq-choice">
+                        <input class="visually-hidden abq-choice_input" id="ds-choice-exchange" type="radio" name="ds-choice-return" value="exchange">
+                        <span class="abq-choice_box abq-choice_box--radio"><span class="abq-choice_dot"></span></span>
+                        <span>exchange</span>
+                      </label>
+                      <code class="ds-docs-library_code">kind="radio"</code>
+                    </div>
+
+                    <div class="ds-docs-library_sample">
+                      <div class="abq-choice">
+                        <label class="abq-choice-card">
+                          <input class="visually-hidden abq-choice_input" id="ds-choice-colissimo" type="radio" name="ds-choice-delivery" value="colissimo" checked>
+                          <span class="abq-choice-card_radio"><span class="abq-choice-card_dot"></span></span>
+                          <span class="abq-choice-card_text">
+                            <span class="abq-choice-card_title">Colissimo - 2–3 days</span>
+                            <span class="abq-choice-card_desc">Tracked, signature on request</span>
+                          </span>
+                          <span class="abq-choice-card_price">Included</span>
+                        </label>
+                      </div>
+                      <code class="ds-docs-library_code">kind="card" checked</code>
+                    </div>
+
+                    <div class="ds-docs-library_sample">
+                      <div class="abq-choice">
+                        <label class="abq-choice-card">
+                          <input class="visually-hidden abq-choice_input" id="ds-choice-express" type="radio" name="ds-choice-delivery" value="express">
+                          <span class="abq-choice-card_radio"><span class="abq-choice-card_dot"></span></span>
+                          <span class="abq-choice-card_text">
+                            <span class="abq-choice-card_title">Express - next day</span>
+                            <span class="abq-choice-card_desc">Order before 12:00</span>
+                          </span>
+                          <span class="abq-choice-card_price">+ 12,00 €</span>
+                        </label>
+                      </div>
+                      <code class="ds-docs-library_code">kind="card"</code>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="ds-docs-toast" role="status" aria-live="polite" data-docs-toast></div>
+
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/docs/design-system-docs.js"></script>
+  </body>
+</html>

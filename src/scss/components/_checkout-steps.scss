@@ -1,0 +1,74 @@
+/* =========================================================
+   CHECKOUT PROGRESS
+   Step states: --done (navy with a tick), --current (blue with a
+   glow, aria-current="step"), default = upcoming (outlined).
+   ========================================================= */
+
+.abq-checkout-steps {
+  width: 100%;
+  max-width: 760px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+
+  &_step {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &_track {
+    display: flex;
+    align-items: center;
+  }
+
+  &_tile {
+    box-sizing: border-box;
+    flex: none;
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--abq-color-line);
+    border-radius: 12px;
+    font-size: 15px;
+    color: var(--abq-color-gray-400);
+    background: #FFFFFF;
+  }
+
+  &_line {
+    flex: 1;
+    height: 2px;
+    margin: 0 10px;
+    background: var(--abq-color-line);
+  }
+
+  &_label {
+    font-size: 15px;
+    color: var(--abq-color-gray-400);
+  }
+
+  &_step--done &_tile {
+    border: 0;
+    color: #FFFFFF;
+    background: var(--abq-color-navy-700);
+  }
+
+  &_step--done &_line {
+    background: var(--abq-color-navy-700);
+  }
+
+  &_step--current &_tile {
+    border: 0;
+    color: #FFFFFF;
+    background: var(--abq-color-blue-500);
+    box-shadow: 0 8px 20px rgba(0, 66, 122, 0.3);
+  }
+
+  &_step--done &_label,
+  &_step--current &_label {
+    color: var(--abq-color-ink-900);
+  }
+}

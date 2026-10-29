@@ -1,0 +1,132 @@
+/* =========================================================
+   OVERLAYS
+   .abq-backdrop  navy backdrop rgba(0,22,41,.45); --sheet aligns
+                  its content to the bottom
+   .abq-modal     centred card (max-width 560, radius 22)
+   .abq-sheet     mobile bottom sheet (radius 20 top, 40×4 handle)
+   Opening, closing and focus handling are page behaviour and are
+   not part of the export; only the drawn states are defined here.
+   ========================================================= */
+
+.abq-backdrop {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  border-radius: 16px;
+  background: var(--abq-color-ink-45);
+
+  &--sheet {
+    align-items: flex-end;
+    padding: 24px 24px 0;
+  }
+}
+
+.abq-modal {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 560px;
+  padding: 32px;
+  border-radius: 22px;
+  background: #FFFFFF;
+  box-shadow: var(--abq-shadow-modal);
+
+  &_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &_title {
+    font-size: 22px;
+    color: var(--abq-color-ink-900);
+  }
+
+  &_close {
+    font-size: 24px;
+    color: var(--abq-color-gray-400);
+  }
+
+  &_fields {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 14px;
+    margin-top: 20px;
+  }
+
+  &_field {
+    height: 48px;
+    border-radius: 12px;
+    background: #F3F6FA;
+
+    &--full {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+.abq-sheet {
+  box-sizing: border-box;
+  align-self: flex-end;
+  width: 100%;
+  max-width: 420px;
+  padding: 10px 24px 24px;
+  border-radius: 20px 20px 0 0;
+  background: #FFFFFF;
+  box-shadow: var(--abq-shadow-sheet);
+
+  &_grip {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 14px;
+  }
+
+  &_handle {
+    width: 40px;
+    height: 4px;
+    border-radius: 4px;
+    background: var(--abq-color-control-border);
+  }
+
+  &_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &_title {
+    font-size: 18px;
+    color: var(--abq-color-ink-900);
+  }
+
+  &_clear {
+    font-size: 14px;
+    color: var(--abq-color-blue-500);
+  }
+
+  &_body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--abq-color-line);
+  }
+
+  &_line {
+    height: 18px;
+    border-radius: 6px;
+    background: #F3F6FA;
+
+    &--long {
+      width: 70%;
+    }
+
+    &--short {
+      width: 55%;
+    }
+  }
+}

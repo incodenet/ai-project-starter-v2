@@ -1,0 +1,551 @@
+/* =========================================================
+   DOCS COMPONENT FRAMING
+   Example cards, live-component frames, library tables and
+   deferred-preview placeholders of the component pages. These only
+   frame components; component styling lives in src/scss/components.
+   ========================================================= */
+
+.ds-docs-head_text--full {
+  max-width: none;
+}
+
+.ds-docs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+/* ---------- Example card: stage + caption ---------- */
+
+.ds-docs-example {
+  overflow: hidden;
+  border: 1px solid var(--abq-color-line-soft);
+  border-radius: 22px;
+
+  &_stage {
+    min-height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 28px;
+
+    /* a white fill matters: it changes how the rounded card border anti-aliases */
+    &--white,
+    &--wrap {
+      background: #FFFFFF;
+    }
+
+    &--wrap {
+      flex-wrap: wrap;
+      gap: 16px;
+      min-height: 140px;
+    }
+
+    &--column {
+      flex-direction: column;
+    }
+
+    &--tint {
+      background: var(--abq-color-blue-50);
+    }
+
+    &--surface {
+      background: var(--abq-color-surface);
+    }
+
+    &--wide {
+      padding: 40px 48px;
+    }
+
+    &--icon-buttons {
+      gap: 16px;
+    }
+
+    &--links {
+      gap: 32px;
+      font-size: 16px;
+    }
+
+    &--eyebrows {
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+  }
+
+  &_canvas {
+    padding: 40px 28px;
+
+    &--tint {
+      background: var(--abq-color-blue-50);
+    }
+
+    &--centered {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &_caption {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 18px;
+    border-top: 1px solid var(--abq-color-line-soft);
+  }
+
+  &_label {
+    font-size: 14px;
+  }
+
+  &_code {
+    font-family: $docsMono;
+    font-size: 12px;
+    color: var(--abq-color-navy-700);
+  }
+}
+
+/* ---------- Live component: title row + frame ---------- */
+
+.ds-docs-live {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &_head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  &_title {
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: normal;
+    color: var(--abq-color-ink-900);
+  }
+
+  &_meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 14px;
+  }
+
+  &_file {
+    font-family: $docsMono;
+    font-size: 12px;
+    color: var(--abq-color-navy-700);
+
+    &--muted {
+      color: var(--abq-color-gray-400);
+    }
+  }
+
+  &_context {
+    font-size: 12px;
+    color: var(--abq-color-gray-400);
+  }
+
+  &_note {
+    font-size: 13px;
+    color: var(--abq-color-gray-500);
+  }
+
+  &_frame {
+    border: 1px solid var(--abq-color-line-soft);
+    border-radius: 22px;
+    background: var(--abq-color-white);
+
+    &--clip {
+      overflow: hidden;
+    }
+
+    &--padded {
+      padding: 32px;
+    }
+
+    &--tint {
+      background: var(--abq-color-blue-50);
+    }
+  }
+}
+
+/* demo layouts inside live frames */
+.ds-docs-heading-demo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.ds-docs-crumbs-demo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ds-docs-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.ds-docs-pdf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+/* ---------- Library page inside a live frame (Button, FormField, Choice) ---------- */
+
+.ds-docs-library {
+  min-height: 100%;
+  font-family: 'Outfit', sans-serif;
+  color: var(--abq-color-ink-900);
+  background: var(--abq-color-white);
+
+  &_head {
+    display: flex;
+    flex-direction: column;
+    gap: var(--abq-space-6);
+    padding: var(--abq-space-28) var(--abq-space-48) var(--abq-space-24);
+    border-bottom: 1px solid var(--abq-color-line-soft);
+  }
+
+  &_eyebrow {
+    font-size: var(--abq-font-eyebrow);
+    letter-spacing: 0.18em;
+    color: var(--abq-color-blue-500);
+  }
+
+  &_title {
+    margin: 0;
+    font-weight: var(--abq-fw-regular);
+    font-size: var(--abq-font-title-lg);
+    letter-spacing: -0.02em;
+  }
+
+  &_body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--abq-space-24);
+    padding: var(--abq-space-32) var(--abq-space-48) var(--abq-space-64);
+
+    &--loose {
+      gap: var(--abq-space-64);
+    }
+  }
+
+  &_intro {
+    max-width: 640px;
+    margin: 0;
+    font-weight: var(--abq-fw-light);
+    font-size: var(--abq-font-body-sm);
+    line-height: var(--abq-lh-body-sm);
+    color: var(--abq-color-gray-500);
+
+    &--pretty {
+      text-wrap: pretty;
+    }
+  }
+
+  &_samples {
+    display: grid;
+    gap: var(--abq-space-28) var(--abq-space-24);
+
+    &--fields {
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    }
+
+    &--choices {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      align-items: start;
+    }
+  }
+
+  &_sample {
+    display: flex;
+    flex-direction: column;
+    gap: var(--abq-space-10);
+  }
+
+  &_code {
+    font-family: $docsMono;
+    font-size: var(--abq-font-eyebrow);
+    color: var(--abq-color-gray-500);
+
+    &--center {
+      text-align: center;
+    }
+  }
+}
+
+/* ---------- Button library table ---------- */
+
+.ds-docs-btn-table {
+  display: flex;
+  flex-direction: column;
+
+  &_row {
+    display: grid;
+    grid-template-columns: minmax(200px, 240px) repeat(4, minmax(150px, 1fr));
+    align-items: center;
+    column-gap: var(--abq-space-24);
+    padding: var(--abq-space-24) 0;
+    border-bottom: 1px solid var(--abq-color-divider);
+
+    &--head {
+      align-items: stretch;
+      padding: 0 0 var(--abq-space-12);
+      border-bottom-color: var(--abq-color-line-soft);
+    }
+
+    &--mods {
+      grid-template-columns: minmax(200px, 240px) minmax(0, 1fr);
+      padding: var(--abq-space-28) 0;
+    }
+  }
+
+  &_size {
+    display: flex;
+    flex-direction: column;
+    gap: var(--abq-space-2);
+  }
+
+  &_size-name {
+    font-size: 14px;
+    color: var(--abq-color-ink-900);
+  }
+
+  &_size-code,
+  &_spec {
+    font-size: var(--abq-font-eyebrow);
+    color: var(--abq-color-gray-400);
+  }
+
+  &_meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--abq-space-4);
+  }
+
+  &_name {
+    font-size: var(--abq-font-body);
+    color: var(--abq-color-ink-900);
+  }
+
+  &_desc {
+    font-weight: var(--abq-fw-light);
+    font-size: var(--abq-font-ui-sm);
+    line-height: 1.45;
+    color: var(--abq-color-gray-500);
+    text-wrap: pretty;
+  }
+
+  &_code {
+    margin-top: var(--abq-space-4);
+    padding: var(--abq-space-2) var(--abq-space-8);
+    border-radius: var(--abq-radius-2xs);
+    font-family: $docsMono;
+    font-size: var(--abq-font-eyebrow);
+    color: var(--abq-color-navy-700);
+    background: var(--abq-color-blue-25);
+  }
+
+  &_cell {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--abq-space-8);
+  }
+
+  &_specimen {
+    width: max-content;
+    display: flex;
+  }
+}
+
+.ds-docs-btn-mods {
+  display: flex;
+  flex-direction: column;
+  margin-top: -40px;
+
+  &_head {
+    display: flex;
+    flex-direction: column;
+    gap: var(--abq-space-6);
+  }
+
+  &_title {
+    margin: 0;
+    font-weight: var(--abq-fw-regular);
+    font-size: var(--abq-font-h4);
+    letter-spacing: -0.01em;
+  }
+
+  &_text {
+    max-width: 640px;
+    margin: 0;
+    font-weight: var(--abq-fw-light);
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--abq-color-gray-500);
+  }
+
+  &_items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: var(--abq-space-28) var(--abq-space-32);
+  }
+
+  &_item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--abq-space-8);
+  }
+}
+
+/* ---------- Specimen grid (status, commerce) ---------- */
+
+.ds-docs-specimens {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  align-items: start;
+  gap: 32px;
+
+  &--narrow {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+
+  &_item {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* ---------- Deferred preview (Header & footer, Home sections) ---------- */
+
+.ds-docs-preview {
+  position: relative;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 24px;
+  border: 1px solid var(--abq-color-line-soft);
+  border-radius: 22px;
+  background: var(--abq-color-surface);
+
+  &_note {
+    max-width: 420px;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--abq-color-gray-400);
+
+    code {
+      font-family: $docsMono;
+      font-size: 12px;
+      color: var(--abq-color-navy-700);
+    }
+  }
+}
+
+/* ---------- Templates and handoff ---------- */
+
+.ds-docs-template-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 28px;
+  border: 1px solid var(--abq-color-line-soft);
+  border-radius: 22px;
+  color: var(--abq-color-ink-900);
+
+  &:hover {
+    border-color: var(--abq-color-blue-150);
+  }
+
+  &_text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &_title {
+    font-size: 20px;
+  }
+
+  &_desc {
+    font-size: 14px;
+    color: var(--abq-color-gray-500);
+  }
+}
+
+.ds-docs-handoff {
+  &_actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  &_download,
+  &_copy {
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+  }
+
+  &_download {
+    gap: 9px;
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    color: #FFFFFF;
+    background-color: var(--abq-color-blue-500);
+    box-shadow: 0 12px 27px 0 #1F95F94D;
+  }
+
+  &_copy {
+    gap: 7px;
+    padding: 13px 16px;
+    border-radius: 10px;
+    font-size: 15px;
+    color: var(--abq-color-navy-600);
+    background-color: var(--abq-color-blue-50);
+  }
+
+  &_code {
+    max-height: 460px;
+    margin: 0;
+    overflow: auto;
+    padding: 28px;
+    border-radius: 22px;
+    font-family: $docsMono;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--abq-color-blue-150);
+    background: var(--abq-color-ink-900);
+  }
+}
+
+/* ---------- Responsive (breakpoint from the export) ---------- */
+
+@media (max-width: $docsBreakpoint) {
+  .ds-docs-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

@@ -5,11 +5,11 @@ The map that connects production sources (`src/`), canonical example markup (`de
 | | |
 |---|---|
 | Approved source | `raw/exports/design-system.html` (Claude Design bundle, SHA-256 `91951f68…7196`) |
-| Extracted | `raw/extracted/design-system-91951f68/` |
-| Normalized reference used for this import | `raw/normalized/design-system-91951f68-b1/design-system/index.html` (batch 1: shell + Foundations) |
-| Import | INITIAL, 2026-10-28 — **Foundations only**. Components arrive with later normalized batches. |
+| Extracted | `raw/extracted/design-system-91951f68-r2/` (complete; earlier `-91951f68` has identical documents) |
+| Normalized reference | `raw/normalized/design-system-91951f68-b2/design-system/index.html`: all 33 states and 7 components. Foundations were first imported from `-b1`, which is identical to b2 for them |
+| Import | INITIAL. 2026-10-28: Foundations. 2026-10-29: Components (atoms, molecules, organisms, templates) |
 
-Status values: `VERIFIED` (built, rendered and compared in a browser), `PENDING` (not yet normalized upstream), `UNRESOLVED` (source missing).
+Status values: `VERIFIED` (built, rendered and compared in a browser), `UNRESOLVED` (source missing). "(static)" means the export draws the states but defines no behaviour for them.
 
 ## Single source of truth
 
@@ -35,8 +35,10 @@ Status values: `VERIFIED` (built, rendered and compared in a browser), `PENDING`
 | Base defaults: body font/colour/background, h1–h4 font, weight and colour, button font | extend | `src/scss/core/_core.scss` | all catalog pages | VERIFIED (catalog only; no production page exists yet) |
 | Icons: 84 distinct 24×24 line icons, `currentColor` | reuse the existing `.icon` helper (`src/scss/core/_helpers.scss`) | inline SVG in markup | `design-system/foundations/icons.html` | VERIFIED |
 | Brand logo | create | `assets/img/abecq-logo.png` (304×80) | catalog sidebar | VERIFIED |
-| Breakpoints | — | No product breakpoint is evidenced by the Foundations batch. The 960px rule belongs to the catalog chrome (`src/scss/docs/_layout.scss`) | — | PENDING (expected with component batches) |
-| Motion | — | No product animation in this batch. `@keyframes stockPulse` exists in the export but its user is not normalized yet | — | PENDING |
+| Breakpoints | — | **None in product components.** The export's only breakpoint (960px: sidebar hidden, two-column example grid becomes one) is catalog chrome: `src/scss/docs/_layout.scss` and `docs/_components.scss` | — | VERIFIED |
+| Motion | create | Hover transitions in each component file. `@property --mx` (shine highlight) in `components/_button.scss`. `@keyframes stockPulse` with a `prefers-reduced-motion` stop in `components/_status.scss` | `components/buttons.html`, `components/feedback.html` | VERIFIED |
+| Accessible hiding | extend | `.visually-hidden` in `src/scss/core/_helpers.scss` (native inputs behind drawn controls) | `components/choice.html` | VERIFIED |
+| Shared button surfaces | create | `$btnShineImage`, `$btnShineTransition`, `$btnGradientLinear` in `src/scss/utils/_variables.scss` (Button, site buttons, ProductCard, Compare, Empty state) | — | VERIFIED |
 
 ### Using the foundations
 
@@ -62,55 +64,123 @@ Status values: `VERIFIED` (built, rendered and compared in a browser), `PENDING`
 ```
 
 - **Accessibility:** icons are decorative by default (`aria-hidden="true"`). An icon-only control needs an accessible name on the control itself, for example `aria-label`.
-- **Icon names:** icons are identified only as `i01`–`i84` in the export, which gives no semantic names. Name them when a component that uses them is imported.
+- **Icon names:** icons are identified only as `i01`–`i84` in the export, which gives no semantic names. Components that use icons carry the SVG inline in their canonical markup; the library ids stay as exported.
 
 ## Components
 
-None are imported yet, because the normalized reference covers Foundations only. Everything below is listed so that page migrations do not invent these components.
+All component SCSS is in `src/scss/components/` and is compiled into `assets/css/main.css` through `src/scss/main.scss`. No component needs production JavaScript: every behaviour in the export is either native (inputs, selects, checkboxes, radios, links, submit) or catalog-only.
 
-| Component | Source | Variants/states | Decision | Source file(s) | Dependencies | Status |
+Canonical markup is in the catalog page listed in each row. **Copy it from there; do not invent markup.**
+
+| Component | Source | Variants / states | Decision | Production source | Example | Status |
 |---|---|---|---|---|---|---|
-| Button | export `#buttons`, `Button.dc.html` | 16 variants (all, primary, glow, gradient, white, secondary, outline, link, text, tile, circle, badge, shine, quiet, chip, dashed); sizes sm/md/lg/xl; icon left/right; full; disabled | create (later) | — | `support.js` (unresolved) | PENDING |
-| Links & eyebrow | export `#links` | — | — | — | — | PENDING |
-| Form field | export `#forms`, `FormField.dc.html` | input, select, textarea; error; read-only | — | — | `support.js` | PENDING |
-| Choice controls | export `#choice`, `Choice.dc.html` | checkbox, radio, card | — | — | `support.js` | PENDING |
-| Segmented tabs, section heading, breadcrumb, product & PDF cards, audience cards, purchase actions, commerce controls, status & feedback, FAQ accordion, tags & chips, product gallery, page contents, auth actions | export molecules | — | — | `SectionHeading`, `Breadcrumb`, `ProductCard` and `PdfCard` `.dc.html` | `support.js` | PENDING |
-| Header & footer | export `#components` | — | — | `SiteHeader.dc.html`, `SiteFooter.dc.html` | — | UNRESOLVED: not in the bundle |
-| Home sections (hero, trust bar, categories, product grid, CTA band, guides, brands) | export `#organisms` | — | — | `index.html` | — | UNRESOLVED: not in the bundle |
-| Account navigation, drawers & modals, mobile menu, compare table, checkout progress, page loader | export organisms | — | — | — | — | PENDING |
-| Home page template, developer handoff | export templates | — | — | — | — | PENDING |
+| Button | `Button.dc.html`, `#buttons` | 15 variants: `--primary`, `--glow`, `--gradient`, `--white`, `--secondary`, `--outline`, `--link`, `--text`, `--tile`, `--circle`, `--shine`, `--quiet`, `--chip`, `--dashed`, plus `.abq-btn-badge`. Sizes `--lg`/`--xl` where the variant has them (outline, circle and shine default to sm). Icon left/right (`.abq-btn_icon`, `--mirror`). `--full`. `aria-disabled="true"`. Hover lift/colour/`--mx` sweep | create | `components/_button.scss` (`.abq-btn`) | `components/buttons.html` | VERIFIED |
+| Site buttons (as shipped) | `#buttons` specimens | `.abq-button--primary` (Calibration CTA), `--gradient` (Add to cart), `--secondary` (Cart), `--outline` (Log in); `.abq-icon-button--compare`, `--menu` | create, **conflict** (see below) | `components/_button.scss` (`.abq-button`, `.abq-icon-button`) | `components/buttons.html`, `components/purchase.html` | VERIFIED |
+| Arrow link, language switch | `#links` | `.abq-arrow-link` (hover nudge), `.abq-lang` (flag, code, chevron) | create | `components/_link.scss` | `components/links.html` | VERIFIED |
+| Eyebrow | `#links` | `.abq-eyebrow`, `--pill` | create | `components/_link.scss` | `components/links.html` | VERIFIED |
+| Form field | `FormField.dc.html`, `#forms` | `.abq-field` + `.abq-field_control` for input (text, email, password, tel, date, number), `--select` (custom chevron, optional disabled prompt), `--textarea`; `:focus`; `--full` | create | `components/_form-field.scss`, `assets/img/field-select-chevron.svg`, `assets/img/field-date-calendar.svg` | `components/form-fields.html` | VERIFIED |
+| Choice | `Choice.dc.html`, `#choice` | Checkbox and radio (`.abq-choice_box--checkbox/--radio`), option card (`.abq-choice-card`); checked, unchecked, `:focus-visible`; `--top`, `--radio`, `_count` | create | `components/_choice.scss`, `.visually-hidden` | `components/choice.html` | VERIFIED |
+| Section heading | `SectionHeading.dc.html`, `#heading` | `.abq-section-heading` (`--center`, `--sm`; `--section-heading-mt`/`-mb` custom properties); `.abq-section-head` (heading row + arrow link) | create | `components/_section-heading.scss` | `components/section-heading.html` | VERIFIED |
+| Breadcrumb | `Breadcrumb.dc.html`, `#crumbs` | 2 and 3 levels, `aria-current="page"` | create | `components/_breadcrumb.scss` | `components/breadcrumb.html` | VERIFIED |
+| Product card | `ProductCard.dc.html`, `#cards` | With and without tag, stock badge, hover lift, add to cart (`--mx` sweep), compare | create (reuses `.abq-tag`) | `components/_product-card.scss` | `components/cards.html` | VERIFIED |
+| PDF card | `PdfCard.dc.html`, `#cards` | Hover background | create | `components/_pdf-card.scss` | `components/cards.html` | VERIFIED |
+| Tags & chips | `#chips` | `.abq-tag`, `--stock`; `.abq-chip` (+ `_remove`, `_clear`) | create | `components/_tag.scss` | `components/chips.html` | VERIFIED |
+| Audience cards | `#audience` | `--dark`, `--glass`, hover lift; `.abq-audience-grid` | create | `components/_audience-card.scss` | `components/audience-cards.html` | VERIFIED |
+| Segmented tabs, underline tabs | `#tabs` | `.abq-segmented` (`_option--active`), `.abq-tabs-underline` (`_tab--active`) | create | `components/_tabs.scss` | `components/tabs.html` | VERIFIED (static: no switching in the export) |
+| Purchase actions | `#purchase` | Price + add to cart + compare | create | `components/_purchase.scss` | `components/purchase.html` | VERIFIED |
+| Product gallery | `#gallery` | Main image, 5 thumbs (`--active`), prev/next arrows | create | `components/_gallery.scss` | `components/gallery.html` | VERIFIED (static) |
+| Page contents | `#toc` | `_item--active` | create | `components/_toc.scss` | `components/page-contents.html` | VERIFIED (scroll-spy not in the export) |
+| Auth actions | `#auth` | Social sign-in, `--switch` | create | `components/_auth-actions.scss` | `components/auth-actions.html` | VERIFIED (static) |
+| Status & feedback | `#feedback` | `.abq-stock` (pulse), `.abq-step-badge`, `.abq-toast` (`--error`), `.abq-empty-state` | create | `components/_status.scss` | `components/feedback.html` | VERIFIED |
+| Quantity, pagination, spec table | `#commerce` | `.abq-quantity` (`--cart`), `.abq-pagination` (`_page--active`), `.abq-spec-table` (`<dl>`) | create | `components/_quantity.scss`, `_pagination.scss`, `_spec-table.scss` | `components/commerce.html` | VERIFIED (static) |
+| FAQ accordion | `#faq` | `_item--open` (chevron rotated, answer shown) | create | `components/_faq.scss` | `components/faq.html` | VERIFIED (static: no toggle in the export) |
+| Mobile menu | `#mobilemenu` | Open panel: search, groups, links | create | `components/_mobile-menu.scss` | `components/mobile-menu.html` | VERIFIED (open/close belongs to the header) |
+| Compare table | `#compare` | Product columns, spec rows | create | `components/_compare.scss` | `components/compare.html` | VERIFIED (static) |
+| Checkout progress | `#checkoutbar` | `_step--done`, `_step--current` (`aria-current="step"`), upcoming | create | `components/_checkout-steps.scss` | `components/checkout-progress.html` | VERIFIED |
+| Page loader | `#loader` | Static 64% frame | create | `components/_loader.scss` | `components/loader.html` | VERIFIED (fill-and-fade sequence is not in the export) |
+| Drawers & modals | `#overlays` | `.abq-backdrop` (`--sheet`), `.abq-modal`, `.abq-sheet` | create | `components/_overlay.scss` | `components/overlays.html` | VERIFIED (drawn states only; open/close/focus trap not in the export) |
+| Account navigation | `#accnav` | `_item--active`, `_count` | create | `components/_account-nav.scss` | `components/account-nav.html` | VERIFIED (static) |
+| Header & footer | `#components` | — | — | `SiteHeader.dc.html` (only in the Home export), `SiteFooter.dc.html` (in no export) | `components/header-footer.html` (deferred placeholders) | UNRESOLVED |
+| Home sections (hero, trust bar, categories, in stock, calibration CTA, knowledge hub, brands) | `#organisms` | — | — | `index.html` (Home export) | `components/home-sections.html` (deferred placeholders) | UNRESOLVED |
+| Home page template | `#templates` | Link card to the Home page | keep demo-only | — | `templates/home.html` | VERIFIED |
+| Tokens as code | `#handoff` | Download `abecq-tokens.json`, copy CSS variables | keep demo-only | `src/js/docs/design-system-docs.js` | `templates/handoff.html` | VERIFIED |
+
+### Usage contracts
+
+- **Button:** `<a class="abq-btn abq-btn--gradient abq-btn--lg" href="…">` for navigation, `<button class="abq-btn abq-btn--primary" type="button|submit">` for actions.
+  - Icons go in `<span class="abq-btn_icon" aria-hidden="true">`.
+  - Icon-only variants (`--tile`, `--circle`) need `aria-label`.
+  - Disabled links use `aria-disabled="true"`, and the page must ignore clicks on them.
+- **Form field:** wrap the control in its label, and give every control an `id`.
+  - `<label class="abq-field">Email<input class="abq-field_control" id="…" type="email"></label>`
+- **Choice:** the native input must come **directly before** its drawn box, with the input inside the label. State then follows `:checked`, and keyboard focus shows the ring. Group radios with a shared `name`. The option card is `<label class="abq-choice-card">` holding the input and the parts.
+- **Product card:** an `<article>` whose name link (`.abq-product-card_link`) stretches over the card. Badges are `.abq-tag` + `.abq-product-card_badge--start` / `--end`. Product titles are headings (h2–h4 per page outline); the component resets the heading letter-spacing.
+- **Headings inside components:** core gives `h1`–`h4` `letter-spacing: -0.02em`, so components that use a heading set their own letter-spacing (`.abq-product-card_name`, `.abq-spec-table_title`).
+- **Icons:** inline SVG with `class="icon"` unless the component defines its own icon class. Core gives every svg `max-width: 100%`, so an icon in a flex row needs `.icon` (or `flex: none`) or it can shrink when space runs out.
+
+### Conflicts (record; decide before page migration)
+
+| Conflict | Values | Kept |
+|---|---|---|
+| Site buttons vs Button component | **CTA:** padding 14px 24px (≈48px) vs `.abq-btn--primary` h50 / px 24.<br>**Add to cart:** 16px, radius 11, padding 10px vs `--shine` 15px, radius 11, px 16.<br>**Cart:** hover `#E6EEFA` / `#0347871F` shadow vs `--secondary` `line-soft` / `nav-hover`.<br>**Log in:** border `#C7DCEE6A`, padding 8px 13px vs `--outline` solid Blue 100.<br>**Compare tile:** border `#03478733`, 12px padding vs `--tile` border Line | Both, exactly as exported. **Decide which values pages use**, then retire one set |
+| ProductCard add to cart vs both | 15px, radius 10 | Kept inside the ProductCard component |
+| `.abq-chip` vs `.abq-btn--chip` | Padding 7px 12px with normal line-height vs 6px 12px with line-height 1.2 | Both |
+| FormField chevron and date icon | The export's `data:` URIs fail to load in Chromium, so its selects show no arrow at all | Icons rendered from `assets/img/field-*.svg`, following the export's CSS |
 
 ## Catalog (documentation only)
 
-| Page | Shows |
+The catalog has 33 pages: one per state of the export viewer. All of them load the production `top.css`, `main.css` and `bottom.css`, then `design-system-docs.css`, followed by `main.js` and the docs script.
+
+| Pages | Shows |
 |---|---|
-| `design-system/index.html` | Overview and the five levels. Pending levels show "Not imported yet" and are not links |
-| `design-system/foundations/colors.html` | 68 swatches. Click one to copy `var(--abq-color-*)` |
-| `design-system/foundations/typography.html` | 20-step type scale and 4 weights |
-| `design-system/foundations/spacing.html` | 28 spacing steps with usage counts |
-| `design-system/foundations/radius-elevation.html` | 13 radii and 28 shadows |
-| `design-system/foundations/icons.html` | 84 icons with canonical `.icon` markup |
+| `design-system/index.html` | Overview and the five levels, all linked |
+| `design-system/foundations/*.html` (5) | Colour, typography, spacing, radius & elevation, icons |
+| `design-system/components/*.html` (25) | Every component above, with all exported variants and states. Library pages for Button, FormField and Choice |
+| `design-system/templates/home.html` | Link to the Home page (`../../`, the site root) |
+| `design-system/templates/handoff.html` | `abecq-tokens.json` download and the CSS variables, with copy |
 
-How the catalog is put together:
+How it is put together:
 
-- **Assets:** each page loads `assets/css/top.css`, `main.css` and `bottom.css`, then `design-system-docs.css`. Scripts are `assets/js/main.js`, then `assets/js/docs/design-system-docs.js`.
-- **Inline styles:** none, apart from per-item data hooks (`style="--swatch: var(--abq-color-…)"`) that the docs CSS reads.
-- **Differences from the export viewer:**
-  - It is several pages instead of one hash-switched page.
-  - The active sidebar link is static (`aria-current="page"`).
-  - Levels not yet imported are greyed out and not linked.
+- **Framing:** catalog-only framing is namespaced `.ds-docs-*` in `src/scss/docs/` (`_components.scss` holds the example cards, live frames, library tables and deferred previews). It never styles a component.
+- **Inline styles:** none, apart from the per-item custom properties on foundation pages.
+- **Demo links:** in-page demo links are `href="#"`. `index.html` links in the export point at the site root.
+- **Deferred previews:** the Header/Footer and Home-section previews are placeholders marked with `data-docs-deferred`, and `data-docs-preview-target` records the block each one should show.
+- **Pages are generated** from the normalized reference with an explicit class map. Sidebars are identical on every page, except that `aria-current` marks the current page.
 
-## Validation (2026-10-28)
+## Validation (2026-10-29, components import)
 
-- **Build:** `npm run build` succeeds. Warnings are only Sass `@import` and slash-division deprecations, which also appear in pre-existing files. `main.css` and `bottom.css` are unchanged; `top.css` gains the tokens and fonts.
-- **Visual parity:** catalog pages, on the production CSS, were compared in headless Chrome against the normalized reference at 1440px and 390px (sidebar masked at desktop).
-  - colours, typography, spacing, radius-elevation and icons are pixel-identical at both widths.
-  - The index differs only in the intended "Not imported yet" text.
-- **Catalog checks:** all links and assets resolve; no console errors; Outfit loads; the production `main.js` loads without errors on catalog pages; copy-to-clipboard and toast behave as in the export (1400ms, single listener); sidebar groups collapse by mouse and keyboard.
+- **Build:** `npm run build` exits 0.
+  - Warnings are the existing Sass `@import`, `slash-div` and `global-builtin` deprecations.
+  - `top.css` and `bottom.css` are byte-identical to before.
+  - `main.css` gains only new selectors: `.abq-*`, `.visually-hidden`, `@property --mx`, `@keyframes stockPulse` and the reduced-motion rule. No existing selector changed.
+- **Visual parity:** each catalog page, on the production CSS, was compared in headless Edge (Chromium 156) with the verified normalized reference state.
+  - Setup: full page, animations paused at t=0, exact RGB match.
+  - Coverage: 33 states × 1440, 961, 960 and 390px = 132 captures.
+  - Result: **131 pixel-identical**. `section-heading` at 390px differs in 29 corner-anti-aliasing pixels (max Δ 2/255, identical geometry).
+- **Icon sizes:** every SVG's rendered size matches the reference at 320, 390, 600, 960 and 1440px.
+  - This check found the core `svg { max-width: 100% }` shrink.
+  - Fixed with `flex: none` on `.abq-button_icon` and `.icon` on the display-only icons.
+- **Interactions:** the same real input was sent to the reference and to the catalog page, and the results compared.
+  - Hover end-states: 35/35 identical, 30 with a visible change.
+  - Field focus border: identical.
+  - Choice: 5 states identical.
+  - Copy CSS variables: clipboard (7,570 chars), label and toast identical.
+  - `tokens.json`: 16,784 bytes, identical.
+  - Choice keyboard: Space toggles, the focus ring shows, Tab moves to the next control.
+  - Foundation swatch copy: still works.
+- **Catalog checks (all 33 pages):**
+  - no inline CSS, handlers or scripts
+  - every local reference and image resolves
+  - every class used is defined
+  - unique ids, button types, labels and accessible names
+  - no heading skips
+  - one current link per sidebar
+  - no console errors and no network requests
 - **Not verified:**
-  - Production pages: `templates/home.php` does not exist, so `index.php` currently ends in a PHP fatal error. This predates the import (removed in `5acf3be`).
-  - Browsers other than Chrome.
+  - Production pages. `templates/home.php` does not exist yet, so `index.php` still fails (pre-existing), and `templates/header.php` and `footer.php` are empty. No production markup uses the new classes yet.
+  - Browsers other than Chromium.
   - Screen readers.
+  - Real clipboard and download (both were stubbed in tests).
 
 ## Known project issues outside this import
 
@@ -125,4 +195,4 @@ These are reported, not changed:
 ## Future PHP partial candidates (report only, do not implement)
 
 - Site header and footer, once `SiteHeader.dc.html` and `SiteFooter.dc.html` are available.
-- Product card and PDF card, once normalized.
+- Product card, PDF card, Breadcrumb, Section heading and Form field (repeated per page with data): candidates for PHP partials in the decomposition task.

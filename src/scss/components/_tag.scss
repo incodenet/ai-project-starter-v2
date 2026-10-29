@@ -1,0 +1,41 @@
+/* =========================================================
+   TAGS & CHIPS
+   .abq-tag    product tag / stock badge, 12px pill
+               (also the badges on .abq-product-card)
+   .abq-chip   active filter chip with a × to remove
+   ========================================================= */
+
+.abq-tag {
+  padding: 4px 10px;
+  border-radius: 100px;
+  font-size: 12px;
+  color: var(--abq-color-blue-500);
+  background: #1F95F91C;
+
+  &--stock {
+    color: var(--abq-color-warning);
+    background: var(--abq-color-warning-bg);
+  }
+}
+
+.abq-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  border-radius: 100px;
+  font-size: 13.5px;
+  color: var(--abq-color-navy-700);
+  background: var(--abq-color-blue-25);
+
+  &_remove {
+    font-size: 15px;
+    line-height: 1;
+  }
+
+  &_clear {
+    margin-left: 4px;
+    font-size: 13.5px;
+    color: var(--abq-color-blue-500);
+  }
+}

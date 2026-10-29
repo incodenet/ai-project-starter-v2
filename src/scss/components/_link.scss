@@ -1,0 +1,65 @@
+/* =========================================================
+   LINKS
+   Arrow link ("View all") and the header language switch.
+   ========================================================= */
+
+.abq-arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 400;
+  color: var(--abq-color-navy-700);
+  transition: transform 0.25s ease;
+
+  &:hover {
+    transform: translateX(2px);
+  }
+}
+
+.abq-lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 15px;
+  color: var(--abq-color-gray-700);
+
+  &_flag {
+    flex: none;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+
+  &_code {
+    display: inline-flex;
+    align-items: center;
+    padding-left: 2px;
+  }
+
+  &_chevron {
+    position: relative;
+    top: 1px;
+  }
+}
+
+/* =========================================================
+   EYEBROW
+   Small uppercase label above titles; the pill variant is the
+   hero badge with its fill switched off.
+   ========================================================= */
+
+.abq-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: var(--abq-color-blue-500);
+
+  &--pill {
+    display: inline-block;
+    padding: 2px 0;
+    border-radius: 100px;
+    font-weight: 400;
+    background-color: #FFFFFF00;
+  }
+}

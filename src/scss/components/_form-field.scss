@@ -1,0 +1,87 @@
+/* =========================================================
+   FORM FIELD
+   Source: FormField.dc.html. Label on top, 48px control on a pale
+   fill, blue border on focus.
+   kind: input (any type) | select | textarea · --full spans a grid row
+   ========================================================= */
+
+.abq-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--abq-space-6);
+  font-family: 'Outfit', sans-serif;
+  font-size: var(--abq-font-ui-sm);
+  color: var(--abq-color-gray-700);
+
+  &--full {
+    grid-column: 1 / -1;
+  }
+
+  &_control {
+    box-sizing: border-box;
+    width: 100%;
+    height: 48px;
+    margin: 0;
+    padding: 0 var(--abq-space-14);
+    border: 1px solid var(--abq-color-line);
+    border-radius: var(--abq-radius-sm);
+    outline: none;
+    font-family: 'Outfit', sans-serif;
+    font-size: var(--abq-font-body-sm);
+    color: var(--abq-color-ink-900);
+    background: var(--abq-color-surface);
+
+    &:focus {
+      border-color: var(--abq-color-blue-500);
+    }
+
+    /* select: custom chevron */
+    &--select {
+      -webkit-appearance: none;
+      appearance: none;
+      padding: 0 44px 0 var(--abq-space-12);
+      background-image: url('../img/field-select-chevron.svg');
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      background-size: 14px 14px;
+      color: var(--abq-color-ink-900);
+      cursor: pointer;
+    }
+
+    &--textarea {
+      height: auto;
+      padding: var(--abq-space-12) var(--abq-space-14);
+      resize: vertical;
+    }
+
+    /* date: calendar icon; the native picker stays clickable on top of it */
+    &[type='date'] {
+      position: relative;
+      padding-right: 44px;
+      background-image: url('../img/field-date-calendar.svg');
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      background-size: 20px 20px;
+      color: var(--abq-color-ink-900);
+    }
+
+    &[type='date']::-webkit-calendar-picker-indicator {
+      position: absolute;
+      top: 50%;
+      right: 12px;
+      width: 24px;
+      height: 24px;
+      margin: 0;
+      padding: 0;
+      opacity: 0;
+      cursor: pointer;
+      transform: translateY(-50%);
+    }
+
+    &[type='number']::-webkit-inner-spin-button,
+    &[type='number']::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+}

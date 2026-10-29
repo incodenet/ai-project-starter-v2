@@ -1,0 +1,70 @@
+/* =========================================================
+   PRODUCT GALLERY
+   Main image and a row of five thumbnails; arrows appear when
+   there are more images; the selected thumbnail gets a navy border.
+   ========================================================= */
+
+.abq-gallery {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &_main {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 26px;
+    font-size: 12px;
+    color: var(--abq-color-gray-400);
+    background: var(--abq-color-blue-50);
+  }
+
+  &_strip {
+    position: relative;
+  }
+
+  &_arrow {
+    position: absolute;
+    top: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 18px;
+    color: var(--abq-color-navy-700);
+    background: #FFFFFF;
+    box-shadow: var(--abq-shadow-raised);
+    transform: translateY(-50%);
+
+    &--prev {
+      left: -18px;
+    }
+
+    &--next {
+      right: -18px;
+    }
+  }
+
+  &_thumbs {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  &_thumb {
+    aspect-ratio: 1;
+    display: block;
+    border: 1.5px solid var(--abq-color-line);
+    border-radius: 18px;
+    background: var(--abq-color-blue-50);
+
+    &--active {
+      border-color: var(--abq-color-navy-700);
+    }
+  }
+}

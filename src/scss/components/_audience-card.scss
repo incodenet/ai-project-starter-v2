@@ -1,0 +1,92 @@
+/* =========================================================
+   AUDIENCE CARD
+   Hero entry points: icon + title + arrow + caption.
+   Variants: --dark (navy radial gradient) · --glass (white glass)
+   ========================================================= */
+
+.abq-audience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 300px));
+  justify-content: center;
+  gap: 16px;
+}
+
+.abq-audience-card {
+  display: block;
+  padding: 18px 20px;
+  border-radius: 16px;
+  transition: transform 0.15s;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  &_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 9px;
+    font-family: 'Outfit';
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  &_label {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+  }
+
+  &_icon {
+    flex: none;
+  }
+
+  &_arrow {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &_caption {
+    margin-top: 6px;
+    font-weight: 300;
+    font-size: 13px;
+  }
+
+  &--dark {
+    color: #FFFFFF;
+    background-color: var(--abq-color-grad-mid);
+    background-image:
+      radial-gradient(at 15% 28%, var(--abq-color-grad-hover-start) 0px, transparent 55%),
+      radial-gradient(at 18% 88%, var(--abq-color-grad-hover-mid) 0px, transparent 52%),
+      radial-gradient(at 96% 22%, var(--abq-color-grad-hover-end) 0px, transparent 55%),
+      radial-gradient(at 92% 90%, var(--abq-color-grad-end) 0px, transparent 55%);
+    box-shadow: var(--abq-shadow-audience);
+  }
+
+  &--dark &_caption {
+    margin-left: 29px;
+    color: #FFFFFFCC;
+  }
+
+  &--glass {
+    border: 1px solid var(--abq-color-white-60);
+    color: var(--abq-color-slate-400);
+    background-color: #FFFFFF;
+    -webkit-backdrop-filter: blur(14px) saturate(160%);
+    backdrop-filter: blur(14px) saturate(160%);
+    box-shadow: var(--abq-shadow-glass);
+  }
+
+  &--glass &_head {
+    color: var(--abq-color-navy-600);
+  }
+
+  &--glass &_arrow {
+    color: var(--abq-color-navy-700);
+  }
+
+  &--glass &_caption {
+    margin-left: 28px;
+    color: var(--abq-color-gray-500);
+  }
+}

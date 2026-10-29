@@ -1,0 +1,136 @@
+/* =========================================================
+   STATUS & FEEDBACK
+   .abq-stock        stock status with a pulsing dot
+   .abq-step-badge   numbered step heading (checkout)
+   .abq-toast        success (default) · --error
+   .abq-empty-state  empty / result state (illustration, title,
+                     text, primary action)
+   ========================================================= */
+
+.abq-stock {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--abq-color-blue-500);
+
+  &_dot {
+    flex: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--abq-color-blue-500);
+    animation: stockPulse 1.8s ease-out infinite;
+  }
+}
+
+.abq-step-badge {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 24px;
+  color: var(--abq-color-ink-900);
+
+  &_number {
+    flex: none;
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 14px;
+    color: var(--abq-color-blue-500);
+    background: #E4F1FD;
+  }
+}
+
+.abq-toast {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 18px 14px 20px;
+  border-radius: 14px;
+  font-size: 15px;
+  color: #FFFFFF;
+  background: var(--abq-color-navy-700);
+  box-shadow: var(--abq-shadow-toast);
+
+  &--error {
+    background: var(--abq-color-error);
+  }
+
+  &_icon {
+    flex: none;
+    margin-right: -6px;
+  }
+}
+
+.abq-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  &_art {
+    width: 182px;
+    height: 116px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    font-size: 12px;
+    color: var(--abq-color-gray-400);
+    background: #EEF3F9;
+  }
+
+  &_title {
+    font-size: 22px;
+    color: var(--abq-color-ink-900);
+  }
+
+  &_text {
+    max-width: 420px;
+    margin-top: 8px;
+    font-size: 15.5px;
+    color: var(--abq-color-gray-500);
+  }
+
+  &_action {
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 28px;
+    padding: 0 22px;
+    border-radius: 12px;
+    font-size: 16px;
+    color: #FFFFFF;
+    background: $btnGradientLinear;
+  }
+}
+
+/* ---------- Motion ---------- */
+
+@keyframes stockPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(31, 149, 249, 0.55);
+  }
+
+  70% {
+    box-shadow: 0 0 0 7px rgba(31, 149, 249, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(31, 149, 249, 0);
+  }
+}
+
+/* the infinite pulse is decorative: stop it for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .abq-stock_dot {
+    animation: none;
+  }
+}

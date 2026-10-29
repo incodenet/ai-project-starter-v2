@@ -1,2 +1,30 @@
 @import 'utils/_module';
 @import 'core/_helpers';
+
+// Design-system components (see .ai/DESIGN_SYSTEM_INVENTORY.md)
+@import 'components/_button';
+@import 'components/_link';
+@import 'components/_form-field';
+@import 'components/_choice';
+@import 'components/_section-heading';
+@import 'components/_breadcrumb';
+@import 'components/_tag';
+@import 'components/_product-card';
+@import 'components/_pdf-card';
+@import 'components/_audience-card';
+@import 'components/_tabs';
+@import 'components/_purchase';
+@import 'components/_gallery';
+@import 'components/_toc';
+@import 'components/_auth-actions';
+@import 'components/_status';
+@import 'components/_quantity';
+@import 'components/_pagination';
+@import 'components/_spec-table';
+@import 'components/_faq';
+@import 'components/_mobile-menu';
+@import 'components/_compare';
+@import 'components/_checkout-steps';
+@import 'components/_loader';
+@import 'components/_overlay';
+@import 'components/_account-nav';

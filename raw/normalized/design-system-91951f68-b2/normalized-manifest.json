@@ -1,0 +1,3563 @@
+{
+  "schemaVersion": 1,
+  "snapshot": "design-system-91951f68-b2",
+  "mode": "INITIAL",
+  "batch": {
+    "number": 2,
+    "scope": "All remaining design-system states (27) and all 7 dc components, carried forward with batch 1 (shell + 6 foundation states) into one complete catalog",
+    "previousSnapshot": "raw/normalized/design-system-91951f68-b1 (unchanged)"
+  },
+  "createdAt": "2026-10-28",
+  "status": "READY_WITH_EXCEPTIONS",
+  "source": {
+    "originalExport": {
+      "path": "raw/exports/design-system.html",
+      "sha256": "91951f6819d709e2aadd273357a72b24ece91f610d7f32ced8b3b701653d7196"
+    },
+    "extractedSnapshot": "raw/extracted/design-system-91951f68-r2",
+    "document": "raw/extracted/design-system-91951f68-r2/documents/design-system.html",
+    "components": [
+      "documents/Button.dc.html",
+      "documents/SectionHeading.dc.html",
+      "documents/Breadcrumb.dc.html",
+      "documents/ProductCard.dc.html",
+      "documents/PdfCard.dc.html",
+      "documents/FormField.dc.html",
+      "documents/Choice.dc.html"
+    ],
+    "method": "Hand-written from the extracted source (inline styles, style-hover, DCLogic tables). Runtime-generated content (Button table, FormField/Choice samples, ProductCard samples, handoff CSS/JSON) checked against the original rendered offline in sandboxed headless Edge (Chromium 156, throwaway profile, all network blocked). SVGs copied verbatim from the source with sc-camel-view-box -> viewBox."
+  },
+  "outputs": [
+    {
+      "stable_id": "ds.catalog",
+      "path": "design-system/index.html",
+      "sha256": "597de2384f84100d10ca8b355107af9bc7d1be076e04a018be0fb9eb88268606",
+      "bytes": 435838,
+      "kind": "design-system catalog (standalone HTML/CSS/JS)",
+      "dependsOn": [
+        "assets/images/abecq-logo.png",
+        "assets/images/product-individual-0.png",
+        "assets/images/product-individual-1.png",
+        "assets/images/product-individual-2.webp",
+        "assets/images/field-select-chevron.svg",
+        "assets/images/field-date-calendar.svg",
+        "assets/fonts/outfit-latin.woff2",
+        "assets/fonts/outfit-latin-ext.woff2"
+      ],
+      "externalLinks": [
+        "../../home-8a594335-b1/pages/home.html (breadcrumb \"Home\" and the Home page template card; the export links to index.html)"
+      ]
+    }
+  ],
+  "states": [
+    {
+      "stable_id": "ds.overview",
+      "data-design-id": "ds.overview",
+      "route_or_state": "#overview (default)",
+      "source_selector": "main[data-r=main][data-page=\"overview\"] > section#overview",
+      "output_selector": "main#ds-main > section#overview",
+      "status": "normalized",
+      "confidence": "confirmed"
+    },
+    {
+      "stable_id": "ds.color",
+      "data-design-id": "ds.color",
+      "route_or_state": "#color",
+      "source_selector": "main[data-r=main][data-page=\"color\"] > section#color",
+      "output_selector": "main#ds-main > section#color",
+      "status": "normalized",
+      "confidence": "confirmed",
+      "items": {
+        "groups": 9,
+        "swatches": 68
+      }
+    },
+    {
+      "stable_id": "ds.type",
+      "data-design-id": "ds.type",
+      "route_or_state": "#type",
+      "source_selector": "main[data-r=main][data-page=\"type\"] > section#type",
+      "output_selector": "main#ds-main > section#type",
+      "status": "normalized",
+      "confidence": "confirmed",
+      "items": {
+        "typeRows": 20,
+        "weights": 4
+      }
+    },
+    {
+      "stable_id": "ds.space",
+      "data-design-id": "ds.space",
+      "route_or_state": "#space",
+      "source_selector": "main[data-r=main][data-page=\"space\"] > section#space",
+      "output_selector": "main#ds-main > section#space",
+      "status": "normalized",
+      "confidence": "confirmed",
+      "items": {
+        "steps": 28
+      }
+    },
+    {
+      "stable_id": "ds.radius",
+      "data-design-id": "ds.radius",
+      "route_or_state": "#radius",
+      "source_selector": "main[data-r=main][data-page=\"radius\"] > section#radius",
+      "output_selector": "main#ds-main > section#radius",
+      "status": "normalized",
+      "confidence": "confirmed",
+      "items": {
+        "radii": 13,
+        "shadows": 28
+      }
+    },
+    {
+      "stable_id": "ds.icons",
+      "data-design-id": "ds.icons",
+      "route_or_state": "#icons",
+      "source_selector": "main[data-r=main][data-page=\"icons\"] > section#icons",
+      "output_selector": "main#ds-main > section#icons",
+      "status": "normalized",
+      "confidence": "confirmed",
+      "items": {
+        "icons": 84
+      }
+    },
+    {
+      "stable_id": "ds.buttons",
+      "data-design-id": "ds.buttons",
+      "route_or_state": "#buttons",
+      "group": "atoms",
+      "source_selector": "main[data-r=main][data-page=\"buttons\"] > section#buttons",
+      "output_selector": "main#ds-main > section#buttons",
+      "status": "normalized",
+      "confidence": "confirmed",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-button",
+          "caption": "Button.dc.html"
+        },
+        {
+          "evidence": "dc-import",
+          "identifier": "Button.dc.html",
+          "caption": "variant=all"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "abq-button--primary",
+          "caption": "Primary · Calibration CTA"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "abq-button--gradient",
+          "caption": "Gradient · Add to cart"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "abq-button--secondary",
+          "caption": "Secondary · Cart"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "abq-button--outline",
+          "caption": "Outline · Log in"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "abq-icon-button",
+          "caption": "Icon · Compare, Menu"
+        }
+      ],
+      "notes": null,
+      "pixelComparison": [
+        {
+          "width": 1440,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 961,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 960,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 390,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "stable_id": "ds.links",
+      "data-design-id": "ds.links",
+      "route_or_state": "#links",
+      "group": "atoms",
+      "source_selector": "main[data-r=main][data-page=\"links\"] > section#links",
+      "output_selector": "main#ds-main > section#links",
+      "status": "normalized",
+      "confidence": "confirmed",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-link--arrow · abq-lang",
+          "caption": "Arrow link · Language"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "abq-eyebrow",
+          "caption": "Eyebrow pill · Eyebrow text"
+        }
+      ],
+      "notes": "hover",
+      "pixelComparison": [
+        {
+          "width": 1440,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 961,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 960,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 390,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "stable_id": "ds.audience",
+      "data-design-id": "ds.audience",
+      "route_or_state": "#audience",
+      "group": "molecules",
+      "source_selector": "main[data-r=main][data-page=\"audience\"] > section#audience",
+      "output_selector": "main#ds-main > section#audience",
+      "status": "normalized",
+      "confidence": "confirmed",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-audience-card--dark · --glass",
+          "caption": "Dark gradient · Glass"
+        }
+      ],
+      "notes": "hover lift",
+      "pixelComparison": [
+        {
+          "width": 1440,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 961,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 960,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 390,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "stable_id": "ds.tabs",
+      "data-design-id": "ds.tabs",
+      "route_or_state": "#tabs",
+      "group": "molecules",
+      "source_selector": "main[data-r=main][data-page=\"tabs\"] > section#tabs",
+      "output_selector": "main#ds-main > section#tabs",
+      "status": "normalized",
+      "confidence": "confirmed",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-segmented",
+          "caption": "In-stock filter · Individual / Professional"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "abq-tabs-underline",
+          "caption": "Underline tabs · Product page · active navy 2px underline"
+        }
+      ],
+      "notes": "static specimen (active state drawn; no switching in source)",
+      "pixelComparison": [
+        {
+          "width": 1440,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 961,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 960,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 390,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "stable_id": "ds.purchase",
+      "data-design-id": "ds.purchase",
+      "route_or_state": "#purchase",
+      "group": "molecules",
+      "source_selector": "main[data-r=main][data-page=\"purchase\"] > section#purchase",
+      "output_selector": "main#ds-main > section#purchase",
+      "status": "normalized",
+      "confidence": "confirmed",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-purchase",
+          "caption": "Uses: price, gradient button, icon button"
+        }
+      ],
+      "notes": "hover",
+      "pixelComparison": [
+        {
+          "width": 1440,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 961,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 960,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 390,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "stable_id": "ds.heading",
+      "data-design-id": "ds.heading",
+      "route_or_state": "#heading",
+      "group": "molecules",
+      "source_selector": "main[data-r=main][data-page=\"heading\"] > section#heading",
+      "output_selector": "main#ds-main > section#heading",
+      "status": "normalized",
+      "confidence": "confirmed",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-section-head",
+          "caption": "Uses: eyebrow, H2, arrow link"
+        },
+        {
+          "evidence": "caption-row",
+          "identifier": "SectionHeading.dc.html",
+          "caption": "Section heading component · live"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "align=\"left\"",
+          "caption": null
+        },
+        {
+          "evidence": "dc-import",
+          "identifier": "SectionHeading.dc.html",
+          "caption": "eyebrow=HOW IT WORKS title=Four steps, fully mail-in"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "align=\"center\"",
+          "caption": null
+        },
+        {
+          "evidence": "dc-import",
+          "identifier": "SectionHeading.dc.html",
+          "caption": "eyebrow=SEND-IN INSTRUCTIONS title=Packing your device align=center"
+        }
+      ],
+      "notes": "hover on arrow link",
+      "pixelComparison": [
+        {
+          "width": 1440,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 961,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 960,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 390,
+          "sameSize": true,
+          "diffPixels": 29,
+          "diffPct": 0.0083,
+          "bbox": [
+            20,
+            328,
+            22,
+            458
+          ]
+        }
+      ]
+    },
+    {
+      "stable_id": "ds.components",
+      "data-design-id": "ds.components",
+      "route_or_state": "#components",
+      "group": "organisms",
+      "source_selector": "main[data-r=main][data-page=\"components\"] > section#components",
+      "output_selector": "main#ds-main > section#components",
+      "status": "normalized-with-deferred-previews",
+      "confidence": "confirmed",
+      "examples": [
+        {
+          "evidence": "iframe-list",
+          "identifier": "{{ components }}",
+          "caption": "one live iframe preview per list item"
+        }
+      ],
+      "notes": "previews deferred: SiteHeader.dc.html (resolvable from raw/extracted/home-8a594335) and SiteFooter.dc.html (in no export)",
+      "pixelComparison": [
+        {
+          "width": 1440,
+          "sameSize": true,
+          "diffPixels": 4740,
+          "diffPct": 0.3657,
+          "bbox": [
+            645,
+            343,
+            1054,
+            665
+          ]
+        },
+        {
+          "width": 961,
+          "sameSize": true,
+          "diffPixels": 4802,
+          "diffPct": 0.5552,
+          "bbox": [
+            405,
+            334,
+            815,
+            656
+          ]
+        },
+        {
+          "width": 960,
+          "sameSize": true,
+          "diffPixels": 4740,
+          "diffPct": 0.5486,
+          "bbox": [
+            275,
+            310,
+            684,
+            632
+          ]
+        },
+        {
+          "width": 390,
+          "sameSize": true,
+          "diffPixels": 4802,
+          "diffPct": 1.3681,
+          "bbox": [
+            56,
+            302,
+            334,
+            634
+          ]
+        }
+      ]
+    },
+    {
+      "stable_id": "ds.crumbs",
+      "data-design-id": "ds.crumbs",
+      "route_or_state": "#crumbs",
+      "group": "molecules",
+      "source_selector": "main[data-r=main][data-page=\"crumbs\"] > section#crumbs",
+      "output_selector": "main#ds-main > section#crumbs",
+      "status": "normalized",
+      "confidence": "confirmed",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-breadcrumb",
+          "caption": "Breadcrumb.dc.html"
+        },
+        {
+          "evidence": "dc-import",
+          "identifier": "Breadcrumb.dc.html",
+          "caption": "first-label=Home first-href=index.html current=Calibration services"
+        },
+        {
+          "evidence": "dc-import",
+          "identifier": "Breadcrumb.dc.html",
+          "caption": "first-label=Home first-href=index.html mid-label=Brands mid-href=# current=Lion Laboratories"
+        }
+      ],
+      "notes": null,
+      "pixelComparison": [
+        {
+          "width": 1440,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 961,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 960,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 390,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "stable_id": "ds.cards",
+      "data-design-id": "ds.cards",
+      "route_or_state": "#cards",
+      "group": "molecules",
+      "source_selector": "main[data-r=main][data-page=\"cards\"] > section#cards",
+      "output_selector": "main#ds-main > section#cards",
+      "status": "normalized",
+      "confidence": "confirmed",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-product-card",
+          "caption": "ProductCard.dc.html"
+        },
+        {
+          "evidence": "dc-import",
+          "identifier": "ProductCard.dc.html",
+          "caption": "p={{ sp }}"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "abq-pdf-card",
+          "caption": "PdfCard.dc.html"
+        },
+        {
+          "evidence": "dc-import",
+          "identifier": "PdfCard.dc.html",
+          "caption": "title=Décret n° 2012-284 size=186 KB meta=PDF · 186 KB href=#"
+        },
+        {
+          "evidence": "dc-import",
+          "identifier": "PdfCard.dc.html",
+          "caption": "title=NF X20-702 certificate size=240 KB meta=PDF · 240 KB href=#"
+        },
+        {
+          "evidence": "dc-import",
+          "identifier": "PdfCard.dc.html",
+          "caption": "title=User manual size=1.2 MB meta=PDF · 1.2 MB href=#"
+        }
+      ],
+      "notes": null,
+      "pixelComparison": [
+        {
+          "width": 1440,
+          "sameSize": true,
+          "diffPixels": 6249,
+          "diffPct": 0.4196,
+          "bbox": [
+            357,
+            271,
+            1342,
+            692
+          ]
+        },
+        {
+          "width": 961,
+          "sameSize": true,
+          "diffPixels": 4582,
+          "diffPct": 0.1902,
+          "bbox": [
+            357,
+            262,
+            863,
+            1007
+          ]
+        },
+        {
+          "width": 960,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 390,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "stable_id": "ds.chips",
+      "data-design-id": "ds.chips",
+      "route_or_state": "#chips",
+      "group": "molecules",
+      "source_selector": "main[data-r=main][data-page=\"chips\"] > section#chips",
+      "output_selector": "main#ds-main > section#chips",
+      "status": "normalized",
+      "confidence": "confirmed",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-tag",
+          "caption": "Product tag · stock badge · 12px pill"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "abq-chip",
+          "caption": "Filter chip · 13.5px on Blue 25, × removes"
+        }
+      ],
+      "notes": "static specimens",
+      "pixelComparison": [
+        {
+          "width": 1440,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 961,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 960,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 390,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "stable_id": "ds.gallery",
+      "data-design-id": "ds.gallery",
+      "route_or_state": "#gallery",
+      "group": "molecules",
+      "source_selector": "main[data-r=main][data-page=\"gallery\"] > section#gallery",
+      "output_selector": "main#ds-main > section#gallery",
+      "status": "normalized",
+      "confidence": "confirmed",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-gallery",
+          "caption": "Product page · main radius 26, thumbnails radius 18"
+        }
+      ],
+      "notes": "static specimen (arrows drawn, not wired)",
+      "pixelComparison": [
+        {
+          "width": 1440,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 961,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 960,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 390,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "stable_id": "ds.toc",
+      "data-design-id": "ds.toc",
+      "route_or_state": "#toc",
+      "group": "molecules",
+      "source_selector": "main[data-r=main][data-page=\"toc\"] > section#toc",
+      "output_selector": "main#ds-main > section#toc",
+      "status": "normalized",
+      "confidence": "confirmed",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-toc",
+          "caption": "Info & Education guides · active Blue 50 + navy number"
+        }
+      ],
+      "notes": "static specimen (scroll-spy described, not in source)",
+      "pixelComparison": [
+        {
+          "width": 1440,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 961,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 960,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 390,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "stable_id": "ds.auth",
+      "data-design-id": "ds.auth",
+      "route_or_state": "#auth",
+      "group": "molecules",
+      "source_selector": "main[data-r=main][data-page=\"auth\"] > section#auth",
+      "output_selector": "main#ds-main > section#auth",
+      "status": "normalized",
+      "confidence": "confirmed",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-auth-actions",
+          "caption": "Log in / Register · 50px outline, border Blue 100"
+        }
+      ],
+      "notes": "static specimen",
+      "pixelComparison": [
+        {
+          "width": 1440,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 961,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 960,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 390,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "stable_id": "ds.mobilemenu",
+      "data-design-id": "ds.mobilemenu",
+      "route_or_state": "#mobilemenu",
+      "group": "organisms",
+      "source_selector": "main[data-r=main][data-page=\"mobilemenu\"] > section#mobilemenu",
+      "output_selector": "main#ds-main > section#mobilemenu",
+      "status": "normalized",
+      "confidence": "confirmed",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-mobile-menu",
+          "caption": "SiteHeader · menu shadow, links 16px, rows divided by #F0F3F8"
+        }
+      ],
+      "notes": "static specimen of the open panel (toggle lives in SiteHeader.dc.html)",
+      "pixelComparison": [
+        {
+          "width": 1440,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 961,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 960,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 390,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "stable_id": "ds.compare",
+      "data-design-id": "ds.compare",
+      "route_or_state": "#compare",
+      "group": "organisms",
+      "source_selector": "main[data-r=main][data-page=\"compare\"] > section#compare",
+      "output_selector": "main#ds-main > section#compare",
+      "status": "normalized",
+      "confidence": "confirmed",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-compare",
+          "caption": "Compare page · column card radius 20, card shadow"
+        }
+      ],
+      "notes": "static specimen",
+      "pixelComparison": [
+        {
+          "width": 1440,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 961,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 960,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 390,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "stable_id": "ds.checkoutbar",
+      "data-design-id": "ds.checkoutbar",
+      "route_or_state": "#checkoutbar",
+      "group": "organisms",
+      "source_selector": "main[data-r=main][data-page=\"checkoutbar\"] > section#checkoutbar",
+      "output_selector": "main#ds-main > section#checkoutbar",
+      "status": "normalized",
+      "confidence": "confirmed",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-checkout-steps",
+          "caption": "Checkout · 44px tiles, radius 12, connecting line 2px"
+        }
+      ],
+      "notes": "static specimen (done/current/upcoming)",
+      "pixelComparison": [
+        {
+          "width": 1440,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 961,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 960,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 390,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "stable_id": "ds.loader",
+      "data-design-id": "ds.loader",
+      "route_or_state": "#loader",
+      "group": "organisms",
+      "source_selector": "main[data-r=main][data-page=\"loader\"] > section#loader",
+      "output_selector": "main#ds-main > section#loader",
+      "status": "normalized",
+      "confidence": "confirmed",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-loader",
+          "caption": "Site loader · weight 200, clamp(96px,16vw,200px), panel radius 32"
+        }
+      ],
+      "notes": "static frame at 64% (fill-and-fade animation described, not in this export)",
+      "pixelComparison": [
+        {
+          "width": 1440,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 961,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 960,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 390,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "stable_id": "ds.organisms",
+      "data-design-id": "ds.organisms",
+      "route_or_state": "#organisms",
+      "group": "organisms",
+      "source_selector": "main[data-r=main][data-page=\"organisms\"] > section#organisms",
+      "output_selector": "main#ds-main > section#organisms",
+      "status": "normalized-with-deferred-previews",
+      "confidence": "confirmed",
+      "examples": [
+        {
+          "evidence": "iframe-list",
+          "identifier": "{{ previews }}",
+          "caption": "one live iframe preview per list item"
+        }
+      ],
+      "notes": "previews deferred: 7 blocks of index.html (resolvable from raw/extracted/home-8a594335)",
+      "pixelComparison": [
+        {
+          "width": 1440,
+          "sameSize": true,
+          "diffPixels": 21393,
+          "diffPct": 0.6297,
+          "bbox": [
+            641,
+            323,
+            1059,
+            2160
+          ]
+        },
+        {
+          "width": 961,
+          "sameSize": true,
+          "diffPixels": 21338,
+          "diffPct": 0.9418,
+          "bbox": [
+            402,
+            334,
+            819,
+            2171
+          ]
+        },
+        {
+          "width": 960,
+          "sameSize": true,
+          "diffPixels": 21393,
+          "diffPct": 0.9796,
+          "bbox": [
+            271,
+            290,
+            689,
+            2127
+          ]
+        },
+        {
+          "width": 390,
+          "sameSize": true,
+          "diffPixels": 21402,
+          "diffPct": 2.4568,
+          "bbox": [
+            46,
+            302,
+            344,
+            2149
+          ]
+        }
+      ]
+    },
+    {
+      "stable_id": "ds.templates",
+      "data-design-id": "ds.templates",
+      "route_or_state": "#templates",
+      "group": "templates",
+      "source_selector": "main[data-r=main][data-page=\"templates\"] > section#templates",
+      "output_selector": "main#ds-main > section#templates",
+      "status": "normalized",
+      "confidence": "confirmed",
+      "examples": [
+        {
+          "evidence": "caption-row",
+          "identifier": "Hero, trust bar, categories, in stock, calibration CTA, knowledge hub, brands",
+          "caption": "Home · reference standard"
+        }
+      ],
+      "notes": null,
+      "pixelComparison": [
+        {
+          "width": 1440,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 961,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 960,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 390,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "stable_id": "ds.handoff",
+      "data-design-id": "ds.handoff",
+      "route_or_state": "#handoff",
+      "group": "templates",
+      "source_selector": "main[data-r=main][data-page=\"handoff\"] > section#handoff",
+      "output_selector": "main#ds-main > section#handoff",
+      "status": "normalized",
+      "confidence": "confirmed",
+      "examples": [
+        {
+          "evidence": "block",
+          "identifier": null,
+          "caption": "Download tokens.json {{ copyLabel }}"
+        },
+        {
+          "evidence": "block",
+          "identifier": null,
+          "caption": "{{ cssText }}"
+        }
+      ],
+      "notes": null,
+      "pixelComparison": [
+        {
+          "width": 1440,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 961,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 960,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 390,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "stable_id": "ds.forms",
+      "data-design-id": "ds.forms",
+      "route_or_state": "#forms",
+      "group": "atoms",
+      "source_selector": "main[data-r=main][data-page=\"forms\"] > section#forms",
+      "output_selector": "main#ds-main > section#forms",
+      "status": "normalized",
+      "confidence": "confirmed",
+      "examples": [
+        {
+          "evidence": "caption-row",
+          "identifier": "FormField.dc.html",
+          "caption": "Text fields · linked to component"
+        },
+        {
+          "evidence": "dc-import",
+          "identifier": "FormField.dc.html",
+          "caption": "kind=all"
+        }
+      ],
+      "notes": null,
+      "pixelComparison": [
+        {
+          "width": 1440,
+          "sameSize": true,
+          "diffPixels": 655,
+          "diffPct": 0.0441,
+          "bbox": [
+            649,
+            611,
+            1000,
+            758
+          ]
+        },
+        {
+          "width": 961,
+          "sameSize": true,
+          "diffPixels": 655,
+          "diffPct": 0.0384,
+          "bbox": [
+            374,
+            998,
+            847,
+            1393
+          ]
+        },
+        {
+          "width": 960,
+          "sameSize": true,
+          "diffPixels": 319,
+          "diffPct": 0.0277,
+          "bbox": [
+            434,
+            714,
+            872,
+            849
+          ]
+        },
+        {
+          "width": 390,
+          "sameSize": true,
+          "diffPixels": 319,
+          "diffPct": 0.0456,
+          "bbox": [
+            295,
+            1072,
+            312,
+            1455
+          ]
+        }
+      ]
+    },
+    {
+      "stable_id": "ds.choice",
+      "data-design-id": "ds.choice",
+      "route_or_state": "#choice",
+      "group": "atoms",
+      "source_selector": "main[data-r=main][data-page=\"choice\"] > section#choice",
+      "output_selector": "main#ds-main > section#choice",
+      "status": "normalized",
+      "confidence": "confirmed",
+      "examples": [
+        {
+          "evidence": "caption-row",
+          "identifier": "Choice.dc.html",
+          "caption": "Choice component · live"
+        },
+        {
+          "evidence": "dc-import",
+          "identifier": "Choice.dc.html",
+          "caption": "kind=all"
+        }
+      ],
+      "notes": null,
+      "pixelComparison": [
+        {
+          "width": 1440,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 961,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 960,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 390,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "stable_id": "ds.feedback",
+      "data-design-id": "ds.feedback",
+      "route_or_state": "#feedback",
+      "group": "molecules",
+      "source_selector": "main[data-r=main][data-page=\"feedback\"] > section#feedback",
+      "output_selector": "main#ds-main > section#feedback",
+      "status": "normalized",
+      "confidence": "confirmed",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "stock status · pulse",
+          "caption": null
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "step badge · checkout",
+          "caption": null
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "toast · success #00427A",
+          "caption": null
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "toast · error #B42318",
+          "caption": null
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "abq-empty-state",
+          "caption": "Empty / result state · Cart · illustration, H 22px, body 15.5px, primary button"
+        }
+      ],
+      "notes": null,
+      "pixelComparison": [
+        {
+          "width": 1440,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 961,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 960,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 390,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "stable_id": "ds.commerce",
+      "data-design-id": "ds.commerce",
+      "route_or_state": "#commerce",
+      "group": "molecules",
+      "source_selector": "main[data-r=main][data-page=\"commerce\"] > section#commerce",
+      "output_selector": "main#ds-main > section#commerce",
+      "status": "normalized",
+      "confidence": "confirmed",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "quantity · product page · h52",
+          "caption": null
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "quantity · cart · h40",
+          "caption": null
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "pagination · active / default / next",
+          "caption": null
+        },
+        {
+          "evidence": "caption-row",
+          "identifier": "Product page",
+          "caption": "Specification table"
+        }
+      ],
+      "notes": "static specimens",
+      "pixelComparison": [
+        {
+          "width": 1440,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 961,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 960,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 390,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "stable_id": "ds.overlays",
+      "data-design-id": "ds.overlays",
+      "route_or_state": "#overlays",
+      "group": "organisms",
+      "source_selector": "main[data-r=main][data-page=\"overlays\"] > section#overlays",
+      "output_selector": "main#ds-main > section#overlays",
+      "status": "normalized",
+      "confidence": "confirmed",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "abq-modal",
+          "caption": "Modal · Account address · max-width 560, radius 22, padding 32, shadow 0 30 80"
+        },
+        {
+          "evidence": "code-label",
+          "identifier": "abq-sheet",
+          "caption": "Bottom sheet · Catalogue filters (mobile) · radius 20 top, handle 40×4, max-height 80vh"
+        }
+      ],
+      "notes": "static in-place specimens",
+      "pixelComparison": [
+        {
+          "width": 1440,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 961,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 960,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 390,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "stable_id": "ds.faq",
+      "data-design-id": "ds.faq",
+      "route_or_state": "#faq",
+      "group": "molecules",
+      "source_selector": "main[data-r=main][data-page=\"faq\"] > section#faq",
+      "output_selector": "main#ds-main > section#faq",
+      "status": "normalized",
+      "confidence": "confirmed",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "Source: Calibration services · FAQ",
+          "caption": null
+        }
+      ],
+      "notes": "static specimen (first item open; no toggle or closed-item answers in source)",
+      "pixelComparison": [
+        {
+          "width": 1440,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 961,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 960,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 390,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "stable_id": "ds.accnav",
+      "data-design-id": "ds.accnav",
+      "route_or_state": "#accnav",
+      "group": "organisms",
+      "source_selector": "main[data-r=main][data-page=\"accnav\"] > section#accnav",
+      "output_selector": "main#ds-main > section#accnav",
+      "status": "normalized",
+      "confidence": "confirmed",
+      "examples": [
+        {
+          "evidence": "code-label",
+          "identifier": "Source: Account · icons simplified in this preview",
+          "caption": null
+        }
+      ],
+      "notes": "static specimen",
+      "pixelComparison": [
+        {
+          "width": 1440,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 961,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 960,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        },
+        {
+          "width": 390,
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffPct": 0,
+          "bbox": null
+        }
+      ]
+    }
+  ],
+  "pendingStates": [],
+  "deferredPreviews": [
+    {
+      "state": "components",
+      "key": "header",
+      "file": "SiteHeader.dc.html",
+      "locator": "[data-r=\"header\"]",
+      "resolvableFrom": "raw/extracted/home-8a594335/documents/SiteHeader.dc.html (normalized as part of raw/normalized/home-8a594335-b1/pages/home.html)",
+      "status": "deferred"
+    },
+    {
+      "state": "components",
+      "key": "footer",
+      "file": "SiteFooter.dc.html",
+      "locator": "[data-r=\"footer\"]",
+      "resolvableFrom": null,
+      "status": "deferred (file in no supplied export; Home has an inline footer, equivalence unverified)"
+    },
+    {
+      "state": "organisms",
+      "key": "hero",
+      "file": "index.html",
+      "locator": "[data-r=\"hero\"]",
+      "resolvableFrom": "raw/extracted/home-8a594335 (index.html template); normalized in raw/normalized/home-8a594335-b1/pages/home.html",
+      "status": "deferred"
+    },
+    {
+      "state": "organisms",
+      "key": "trust-sec",
+      "file": "index.html",
+      "locator": "[data-r=\"trust-sec\"]",
+      "resolvableFrom": "raw/extracted/home-8a594335 (index.html template); normalized in raw/normalized/home-8a594335-b1/pages/home.html",
+      "status": "deferred"
+    },
+    {
+      "state": "organisms",
+      "key": "cats",
+      "file": "index.html",
+      "locator": "[data-r=\"cats\"]",
+      "resolvableFrom": "raw/extracted/home-8a594335 (index.html template); normalized in raw/normalized/home-8a594335-b1/pages/home.html",
+      "status": "deferred"
+    },
+    {
+      "state": "organisms",
+      "key": "certs",
+      "file": "index.html",
+      "locator": "[data-r=\"certs\"]",
+      "resolvableFrom": "raw/extracted/home-8a594335 (index.html template); normalized in raw/normalized/home-8a594335-b1/pages/home.html",
+      "status": "deferred"
+    },
+    {
+      "state": "organisms",
+      "key": "cta-sec",
+      "file": "index.html",
+      "locator": "[data-r=\"cta-sec\"]",
+      "resolvableFrom": "raw/extracted/home-8a594335 (index.html template); normalized in raw/normalized/home-8a594335-b1/pages/home.html",
+      "status": "deferred"
+    },
+    {
+      "state": "organisms",
+      "key": "guides-sec",
+      "file": "index.html",
+      "locator": "[data-r=\"guides-sec\"]",
+      "resolvableFrom": "raw/extracted/home-8a594335 (index.html template); normalized in raw/normalized/home-8a594335-b1/pages/home.html",
+      "status": "deferred"
+    },
+    {
+      "state": "organisms",
+      "key": "brands",
+      "file": "index.html",
+      "locator": "[data-r=\"brands\"]",
+      "resolvableFrom": "raw/extracted/home-8a594335 (index.html template); normalized in raw/normalized/home-8a594335-b1/pages/home.html",
+      "status": "deferred"
+    }
+  ],
+  "deferredPreviewContract": "Export behaviour to restore once previews are wired: iframe 1440x900, scaled to wrapper width / 1440, translated to the target block (doc.querySelector('[data-r=\"<key>\"]') || doc.getElementById(key)), wrapper height = block height x scale, header forced to position:relative for non-header targets, refit on resize via ResizeObserver, fade in opacity .3s.",
+  "components": [
+    {
+      "name": "Button",
+      "source": "Button.dc.html",
+      "classes": ".abq-btn + .abq-btn--{primary|glow|gradient|white|secondary|outline|link|text|tile|circle|shine|quiet|chip|dashed} + .abq-btn--{lg|xl}; .abq-btn-badge; .abq-btn_icon",
+      "rendered": "variant=\"all\" library: 8 size rows (11 buttons) + 5 modifier rows (10 buttons + badge), computed from the SIZES/ARROW_DEFAULT tables of the DCLogic",
+      "sizeDefaults": "each variant class sets its default size; outline, circle, shine, chip and badge have no md, so sm is their default (as in the source fallback)",
+      "apiStatesNotRendered": [
+        "full (.abq-btn--full)",
+        "disabled (aria-disabled=\"true\": cursor default, click suppressed by the page)",
+        "href/target (render as <a>)",
+        "type=\"submit\" (requestSubmit on the closest form)",
+        "color prop on circle (inline --color not provided; default #00427A)",
+        "legacy variant aliases (clear, confirm, filter, sort, addCart, search, send, contact, external, legalLink, galleryPrev, galleryNext, arrowBadge, icon)"
+      ],
+      "semantics": "library items without href are <button type=\"button\"> (source: <a role=\"button\" tabindex=\"0\">)"
+    },
+    {
+      "name": "SectionHeading",
+      "source": "SectionHeading.dc.html",
+      "classes": ".abq-section-heading, --center, --sm; custom properties --section-heading-mt / --section-heading-mb for marginTop/marginBottom",
+      "rendered": "align left and center (size md)",
+      "apiStatesNotRendered": [
+        "size=\"sm\"",
+        "custom marginTop/marginBottom"
+      ]
+    },
+    {
+      "name": "Breadcrumb",
+      "source": "Breadcrumb.dc.html",
+      "classes": ".abq-breadcrumb, _link, _separator, _current",
+      "rendered": "2 levels and 3 levels (sc-if hasMid both branches)",
+      "apiStatesNotRendered": [
+        "firstClick handler (page-level)"
+      ]
+    },
+    {
+      "name": "ProductCard",
+      "source": "ProductCard.dc.html",
+      "classes": ".abq-product-card, _media, _image, _tag, _stock, _body, _name, _link, _spec, _price, _actions, _add, _compare",
+      "rendered": "3 sampleProducts (with tag, without tag); sc-if p.tag and p.stock both branches",
+      "semantics": "root <a href=\"#product\"> with nested buttons became <article> with a stretched name link (::after); same click target and hover, valid HTML"
+    },
+    {
+      "name": "PdfCard",
+      "source": "PdfCard.dc.html",
+      "classes": ".abq-pdf-card, _badge, _badge-label, _text, _title, _meta, _download",
+      "rendered": "3 instances",
+      "notes": "href=\"#\" + download kept as in source (no real files)"
+    },
+    {
+      "name": "FormField",
+      "source": "FormField.dc.html",
+      "classes": ".abq-field, .abq-field_control (--select, --textarea), .abq-field--full",
+      "rendered": "kind=\"all\": 9 samples (6 input types, 2 selects incl. disabled prompt, textarea)",
+      "apiStatesNotRendered": [
+        "full (grid-column 1 / -1)",
+        "marginTop",
+        "readOnly",
+        "min/max",
+        "onChange (page-level)"
+      ],
+      "semantics": "native controls hold their own value state (source: React-controlled value + local state); every control has an id and is wrapped by its label"
+    },
+    {
+      "name": "Choice",
+      "source": "Choice.dc.html",
+      "classes": ".abq-choice, .abq-choice_box (--checkbox, --radio), .abq-choice_tick, .abq-choice_dot, .abq-choice-card (+ _radio, _dot, _text, _title, _desc, _price), .abq-choice--top, .abq-choice--radio, .abq-choice_count",
+      "rendered": "kind=\"all\": 2 checkboxes, 2 radios, 2 option cards; initial state c1 off, c2 on, refund, card 0",
+      "semantics": "drawn controls follow visually hidden native checkbox/radio inputs (CSS :checked / :has), so clicks and keyboard toggle without JavaScript; :focus-visible outline added (source rows were not focusable)",
+      "apiStatesNotRendered": [
+        "top alignment (--top)",
+        "count (_count)",
+        "label with [text](href) links",
+        "logo slot on cards",
+        "custom gap"
+      ]
+    }
+  ],
+  "specimens": [
+    {
+      "state": "#buttons",
+      "class": "abq-button",
+      "caption": "Button.dc.html"
+    },
+    {
+      "state": "#buttons",
+      "class": "abq-button--primary",
+      "caption": "Primary · Calibration CTA"
+    },
+    {
+      "state": "#buttons",
+      "class": "abq-button--gradient",
+      "caption": "Gradient · Add to cart"
+    },
+    {
+      "state": "#buttons",
+      "class": "abq-button--secondary",
+      "caption": "Secondary · Cart"
+    },
+    {
+      "state": "#buttons",
+      "class": "abq-button--outline",
+      "caption": "Outline · Log in"
+    },
+    {
+      "state": "#buttons",
+      "class": "abq-icon-button",
+      "caption": "Icon · Compare, Menu"
+    },
+    {
+      "state": "#links",
+      "class": "abq-link--arrow · abq-lang",
+      "caption": "Arrow link · Language"
+    },
+    {
+      "state": "#links",
+      "class": "abq-eyebrow",
+      "caption": "Eyebrow pill · Eyebrow text"
+    },
+    {
+      "state": "#audience",
+      "class": "abq-audience-card--dark · --glass",
+      "caption": "Dark gradient · Glass"
+    },
+    {
+      "state": "#tabs",
+      "class": "abq-segmented",
+      "caption": "In-stock filter · Individual / Professional"
+    },
+    {
+      "state": "#tabs",
+      "class": "abq-tabs-underline",
+      "caption": "Underline tabs · Product page · active navy 2px underline"
+    },
+    {
+      "state": "#purchase",
+      "class": "abq-purchase",
+      "caption": "Uses: price, gradient button, icon button"
+    },
+    {
+      "state": "#heading",
+      "class": "abq-section-head",
+      "caption": "Uses: eyebrow, H2, arrow link"
+    },
+    {
+      "state": "#heading",
+      "class": "align=\"left\"",
+      "caption": null
+    },
+    {
+      "state": "#heading",
+      "class": "align=\"center\"",
+      "caption": null
+    },
+    {
+      "state": "#crumbs",
+      "class": "abq-breadcrumb",
+      "caption": "Breadcrumb.dc.html"
+    },
+    {
+      "state": "#cards",
+      "class": "abq-product-card",
+      "caption": "ProductCard.dc.html"
+    },
+    {
+      "state": "#cards",
+      "class": "abq-pdf-card",
+      "caption": "PdfCard.dc.html"
+    },
+    {
+      "state": "#chips",
+      "class": "abq-tag",
+      "caption": "Product tag · stock badge · 12px pill"
+    },
+    {
+      "state": "#chips",
+      "class": "abq-chip",
+      "caption": "Filter chip · 13.5px on Blue 25, × removes"
+    },
+    {
+      "state": "#gallery",
+      "class": "abq-gallery",
+      "caption": "Product page · main radius 26, thumbnails radius 18"
+    },
+    {
+      "state": "#toc",
+      "class": "abq-toc",
+      "caption": "Info & Education guides · active Blue 50 + navy number"
+    },
+    {
+      "state": "#auth",
+      "class": "abq-auth-actions",
+      "caption": "Log in / Register · 50px outline, border Blue 100"
+    },
+    {
+      "state": "#mobilemenu",
+      "class": "abq-mobile-menu",
+      "caption": "SiteHeader · menu shadow, links 16px, rows divided by #F0F3F8"
+    },
+    {
+      "state": "#compare",
+      "class": "abq-compare",
+      "caption": "Compare page · column card radius 20, card shadow"
+    },
+    {
+      "state": "#checkoutbar",
+      "class": "abq-checkout-steps",
+      "caption": "Checkout · 44px tiles, radius 12, connecting line 2px"
+    },
+    {
+      "state": "#loader",
+      "class": "abq-loader",
+      "caption": "Site loader · weight 200, clamp(96px,16vw,200px), panel radius 32"
+    },
+    {
+      "state": "#feedback",
+      "class": "stock status · pulse",
+      "caption": null
+    },
+    {
+      "state": "#feedback",
+      "class": "step badge · checkout",
+      "caption": null
+    },
+    {
+      "state": "#feedback",
+      "class": "toast · success #00427A",
+      "caption": null
+    },
+    {
+      "state": "#feedback",
+      "class": "toast · error #B42318",
+      "caption": null
+    },
+    {
+      "state": "#feedback",
+      "class": "abq-empty-state",
+      "caption": "Empty / result state · Cart · illustration, H 22px, body 15.5px, primary button"
+    },
+    {
+      "state": "#commerce",
+      "class": "quantity · product page · h52",
+      "caption": null
+    },
+    {
+      "state": "#commerce",
+      "class": "quantity · cart · h40",
+      "caption": null
+    },
+    {
+      "state": "#commerce",
+      "class": "pagination · active / default / next",
+      "caption": null
+    },
+    {
+      "state": "#overlays",
+      "class": "abq-modal",
+      "caption": "Modal · Account address · max-width 560, radius 22, padding 32, shadow 0 30 80"
+    },
+    {
+      "state": "#overlays",
+      "class": "abq-sheet",
+      "caption": "Bottom sheet · Catalogue filters (mobile) · radius 20 top, handle 40×4, max-height 80vh"
+    },
+    {
+      "state": "#faq",
+      "class": "Source: Calibration services · FAQ",
+      "caption": null
+    },
+    {
+      "state": "#accnav",
+      "class": "Source: Account · icons simplified in this preview",
+      "caption": null
+    }
+  ],
+  "specimenVsComponent": [
+    "The #buttons specimens (.abq-button--primary/--gradient/--secondary/--outline, .abq-icon-button--compare/--menu) keep the export's own literal values, which differ from Button.dc.html (e.g. Calibration CTA: padding 14px 24px vs primary h50; Add to cart: 16px/radius 11 vs shine 15px). Both are kept; reconciling them is a decision for import-design-system.md.",
+    "ProductCard add-to-cart (15px, radius 10) differs from both the shine variant and the #buttons/#purchase specimen (16px, radius 11)."
+  ],
+  "assets": [
+    {
+      "path": "assets/images/abecq-logo.png",
+      "from": "raw/extracted/design-system-91951f68/assets/13ec04de3df5a7c0.png",
+      "logicalPath": "assets/abecq-logo.png",
+      "sha256": "13ec04de3df5a7c0cbe641f70018ca8ee291b669179da65becde079f08e43197",
+      "dimensions": [
+        304,
+        80
+      ]
+    },
+    {
+      "path": "assets/fonts/outfit-latin.woff2",
+      "from": "raw/extracted/design-system-91951f68/assets/6c18d579fd87c377.woff2",
+      "sha256": "6c18d579fd87c3776be068b762cbc83fde3acb543d49eabd3ade842eb987e887",
+      "note": "Outfit 100-900 variable, latin unicode-range"
+    },
+    {
+      "path": "assets/fonts/outfit-latin-ext.woff2",
+      "from": "raw/extracted/design-system-91951f68/assets/0f53d1c03b3918d7.woff2",
+      "sha256": "0f53d1c03b3918d744a843b5039001ee31695ca1e255e3914188df81beb461e9",
+      "note": "Outfit 100-900 variable, latin-ext unicode-range (loaded only when such glyphs appear)"
+    },
+    {
+      "path": "assets/images/product-individual-0.png",
+      "from": "raw/extracted/design-system-91951f68-r2/assets/8de436f505eb0a90.png",
+      "logicalPath": "assets/media/productInd-0.png",
+      "sha256": "8de436f505eb0a90e0e966523e83ecef9a3da17f9e94d233369d36d848d92858"
+    },
+    {
+      "path": "assets/images/product-individual-1.png",
+      "from": "raw/extracted/design-system-91951f68-r2/assets/6b610aab3d51f7e2.png",
+      "logicalPath": "assets/media/productInd-1.png",
+      "sha256": "6b610aab3d51f7e279276c4a09f170f259f9829eb76a7dec4e8063113d2c44bb"
+    },
+    {
+      "path": "assets/images/product-individual-2.webp",
+      "from": "raw/extracted/design-system-91951f68-r2/assets/89dce32ef528f506.webp",
+      "logicalPath": "assets/media/productInd-2.png (WebP bytes; renamed to its real format)",
+      "sha256": "89dce32ef528f50630353c7dddfd77d0da821dbb15ab27cf4fd2ebd812c439ef"
+    },
+    {
+      "path": "assets/images/field-select-chevron.svg",
+      "from": "raw/extracted/design-system-91951f68-r2/documents/FormField.dc.html (select background-image data: URI, percent-decoded)",
+      "sha256": "b8f155c5e5f981918dda90cd43765446f5571018d68b9049d542391ab7bc9869"
+    },
+    {
+      "path": "assets/images/field-date-calendar.svg",
+      "from": "raw/extracted/design-system-91951f68-r2/documents/FormField.dc.html (input[type=date] background-image data: URI, percent-decoded)",
+      "sha256": "beba186c7c32191844f6237cfd554127cf142be1f092a3caad8e2098d47b20c5"
+    }
+  ],
+  "tokens": {
+    "productTokens": {
+      "count": 191,
+      "source": "export token sheet (abecq-tokens.css), copied verbatim into the DESIGN TOKENS section"
+    },
+    "catalogChrome": {
+      "note": "Viewer-only colours with no product token; declared as --ds-* so they are not mistaken for product tokens.",
+      "values": {
+        "--ds-sidebar-line": "#0E2A44",
+        "--ds-sidebar-muted": "#9FB2C8",
+        "--ds-sidebar-link": "#DCE6F2",
+        "--ds-sidebar-group": "#6FA8DC",
+        "--ds-swatch-dark": "#00213D",
+        "--ds-art-tint": "#E4F1FD"
+      }
+    },
+    "literalToToken": "Literal values in the source chrome were replaced by --abq-* tokens only where the token value is identical (e.g. #001629 -> --abq-color-ink-900, clamp(26px,3.4vw,40px) -> --abq-font-h2). The same rule was applied to batch 2; literals with no identical token (e.g. #1F95F91C, #E6EEFA, #646F88, #5B6577CC, #F3F6FA) stay literal."
+  },
+  "runtimeConversions": [
+    {
+      "from": "<x-dc>, <helmet>, dc-runtime script, React UMD",
+      "to": "plain document; <title>/<style> in <head>"
+    },
+    {
+      "from": "<sc-for> over colorGroups/typeScale/spacing/radii/shadows/icons",
+      "to": "static markup generated once from the rendered original"
+    },
+    {
+      "from": "{{ }} bindings incl. live tv() token reads",
+      "to": "static text equal to the rendered values; visual values reference tokens via per-element custom properties (--swatch, --type-size, --bar-width, --radius, --shadow, --weight)"
+    },
+    {
+      "from": "data-page=\"{{ page }}\" + 33 per-id display/highlight rules",
+      "to": "hidden attribute on sections + aria-current=\"page\" on the active link"
+    },
+    {
+      "from": "style-hover attributes",
+      "to": ":hover rules (.ds-nav_link, .level-card, .swatch)"
+    },
+    {
+      "from": "sc-camel-on-click copy() + sc-if toast",
+      "to": "data-copy / data-copy-label buttons + .ds-toast live region (hidden when empty), 1400 ms"
+    },
+    {
+      "from": "#__assets alias block + MutationObserver/src override shim",
+      "to": "removed; images and fonts use direct relative paths"
+    },
+    {
+      "from": "sc-camel-view-box",
+      "to": "viewBox"
+    },
+    {
+      "from": "preconnect hints to fonts.googleapis.com / fonts.gstatic.com",
+      "to": "removed (fonts are local)"
+    },
+    {
+      "from": "<dc-import name=\"Button\" variant=\"all\"> + DCLogic SIZES/ARROW_DEFAULT",
+      "to": "static library markup; .abq-btn variant/size classes with per-variant custom properties (--btn-h/px/r/fs/gap)"
+    },
+    {
+      "from": "47 sc-if it.f_<variant> branches in Button.dc.html",
+      "to": "one class per variant; every variant rendered at least once"
+    },
+    {
+      "from": "sc-if/sc-for in FormField, Choice, ProductCard, Breadcrumb",
+      "to": "all branches present as static markup or CSS states (:checked, :has, :focus)"
+    },
+    {
+      "from": "style-focus",
+      "to": ":focus rule (.abq-field_control)"
+    },
+    {
+      "from": "style-hover (83 in source)",
+      "to": ":hover rules; anchors with an inline colour also get an explicit :hover colour, because the export's inline colour beat its global a:hover"
+    },
+    {
+      "from": "Choice onClick toggles / onPick (React state)",
+      "to": "native checkbox/radio inputs; no JavaScript"
+    },
+    {
+      "from": "FormField onChange + controlled value",
+      "to": "native control state"
+    },
+    {
+      "from": "ProductCard onAdd/onCompare (preventDefault only)",
+      "to": "plain type=\"button\" buttons outside the link; no handler needed"
+    },
+    {
+      "from": "handoff copyCss (clipboard + toast + label \"Copied\" for 1400 ms) and downloadJson (Blob)",
+      "to": "shared data-copy module extended with data-copy-target; small handoff module for the label and the download; TOKENS constant reproduces the export's abecq-tokens.json byte for byte"
+    },
+    {
+      "from": "iframe previews with fit() scaling (components, organisms)",
+      "to": "deferred placeholders with the same 240px frame; contract recorded in deferredPreviewContract"
+    },
+    {
+      "from": "@property --mx (Button/ProductCard helmet)",
+      "to": "@property --mx in the CATALOG EXAMPLES section"
+    },
+    {
+      "from": "[data-r=g2] single column under 960px",
+      "to": ".ds-grid rule in the existing 960px block"
+    }
+  ],
+  "animations": [
+    {
+      "target": "sidebar link",
+      "effect": "color transition .15s on hover",
+      "status": "preserved"
+    },
+    {
+      "target": "sidebar group chevron",
+      "effect": "transform .2s; rotate(180deg) when group collapsed",
+      "status": "preserved"
+    },
+    {
+      "target": "overview level card",
+      "effect": "box-shadow + translateY(-2px), .2s ease on hover",
+      "status": "preserved"
+    },
+    {
+      "target": "colour swatch",
+      "effect": "border-color + box-shadow, .15s ease on hover",
+      "status": "preserved"
+    },
+    {
+      "target": "page",
+      "effect": "html scroll-behavior: smooth; scroll to top on navigation",
+      "status": "preserved"
+    },
+    {
+      "target": "@keyframes stockPulse",
+      "effect": "box-shadow ring 0 -> 7px, 1.8s ease-out infinite on the stock dot",
+      "status": "preserved"
+    },
+    {
+      "target": "--mx radial highlight (shine, specimens, product card add to cart)",
+      "effect": "registered <percentage> custom property, 0% -> 70% over .95s cubic-bezier(.4,0,.2,1) on hover",
+      "status": "preserved"
+    },
+    {
+      "target": "button lifts (primary -3px .25s, glow -2px .15s, gradient -3px .15s, white -2px .15s)",
+      "effect": "transform/box-shadow transitions on hover",
+      "status": "preserved"
+    },
+    {
+      "target": "colour/background transitions (secondary, outline, tile, circle, quiet, specimens)",
+      "effect": ".15s-.22s on hover",
+      "status": "preserved"
+    },
+    {
+      "target": "link nudge",
+      "effect": "translateX(2px) .25s ease (arrow link, Button link)",
+      "status": "preserved"
+    },
+    {
+      "target": "audience cards",
+      "effect": "translateY(-3px) .15s",
+      "status": "preserved"
+    },
+    {
+      "target": "product card",
+      "effect": "translateY(-4px) + card-hover shadow .15s; compare background .2s",
+      "status": "preserved"
+    },
+    {
+      "target": "PDF card",
+      "effect": "background .2s",
+      "status": "preserved"
+    },
+    {
+      "target": "segmented tab option",
+      "effect": "transition all .18s (no state change in the source)",
+      "status": "preserved"
+    },
+    {
+      "target": "FAQ chevron",
+      "effect": "transform .2s ease; open item rotated 180deg",
+      "status": "preserved (static: no toggle in the source)"
+    },
+    {
+      "target": "Page loader fill-and-fade",
+      "effect": "described in the caption, not implemented in this export",
+      "status": "not in source; deferred to page normalization (Home)"
+    },
+    {
+      "target": "preview iframe fade-in",
+      "effect": "opacity .3s after fit()",
+      "status": "deferred with the previews"
+    },
+    {
+      "target": "prefers-reduced-motion",
+      "effect": "not in the export",
+      "status": "added for the infinite stock pulse only"
+    }
+  ],
+  "deviations": [
+    "Swatch internals are <span> instead of <div> (a <button> may only contain phrasing content); rendering is pixel-identical.",
+    "Sidebar link lists are <ul>/<li>; group titles, card titles and 'Font weights' are <h3>; eyebrow and description lines are <p>.",
+    "Decorative overview illustrations, swatch chips, spacing bars and radius/shadow previews are aria-hidden; icon SVGs are aria-hidden + focusable=false.",
+    "Organisms illustration: the push to the right moved from margin-left:auto on the first link to margin-right:auto on the logo (identical layout).",
+    "On load the page is scrolled back to the top, because the hash selects a page rather than a scroll target. The export behaves this way implicitly, since its content renders after the fragment jump.",
+    "Clipboard failure is swallowed (.catch) to avoid an unhandled rejection; the toast still shows, as in the export.",
+    "Class naming: dc components use their data-attribute identity (data-abq-btn -> .abq-btn) or component name; catalog specimens use the class named in their caption (abq-button--primary, abq-tag, ...). Elements use block_element, modifiers --modifier, as in batch 1.",
+    "Headings: live-frame titles are <h3>, library titles <h4>, the Button \"Links & icons\" heading <h5>; SectionHeading and abq-section-head keep their own <h2> (component contract). No level is skipped.",
+    "ProductCard root is <article> with a stretched link instead of <a> wrapping <button>s (invalid nesting in the source).",
+    "Choice and FormField use native inputs; Choice adds a :focus-visible outline (keyboard access is new; the source rows were not focusable).",
+    "Specification table uses <dl>/<dt>/<dd>; product names are <h4>; descriptive lines are <p>.",
+    "index.html links (Breadcrumb \"Home\", Home page template card) point at ../../home-8a594335-b1/pages/home.html, because design-system/index.html is the catalog itself; data-ds-source-href keeps the original value.",
+    "Header/footer and Home-section previews are deferred placeholders with a visible note instead of empty, failed iframes.",
+    "FormField select chevron and date icon are rendered (assets/images/field-*.svg). The export specifies them with !important, but its data: URIs fail to load in Chromium (inside the bundle and in a clean page), so the rendered export shows selects with no arrow at all. The decoded SVGs are byte-identical to the source; only the encoding is fixed. Expected pixel difference on #forms.",
+    "Button.dc.html size table and modifiers: cell spec captions and arrow defaults computed from the DCLogic tables, checked against the rendered original."
+  ],
+  "validation": {
+    "staticGates": {
+      "{{": 0,
+      "sc-*": 0,
+      "x-dc": 0,
+      "helmet": 0,
+      "dc-import": 0,
+      "style-hover/focus": 0,
+      "DCLogic": 0,
+      "React": 0,
+      "blob:": 0,
+      "data: URI": 0,
+      "bundle UUID": 0,
+      "support.js": 0,
+      "inline handler": 0,
+      "external URL": 0,
+      "styleBlocks": 1,
+      "scriptBlocks": 1,
+      "inlineStyle": 161,
+      "inlineStyleNonCustomProp": 0,
+      "bytes": 435838
+    },
+    "domGates": {
+      "duplicateIds": [],
+      "imgNoAlt": 0,
+      "imgBroken": [],
+      "buttonNoType": 0,
+      "iconButtonsNoName": 0,
+      "inputsNoLabel": 0,
+      "inputsNoId": 0,
+      "h1": 1,
+      "headingSkips": 0,
+      "sections": 33,
+      "pendingLinks": 0,
+      "navTargetsMissing": [],
+      "classesUndefined": [],
+      "classesUnused": [
+        "abq-btn--full",
+        "abq-section-heading--sm",
+        "abq-field--full",
+        "abq-choice--top",
+        "abq-choice--radio",
+        "abq-choice_count"
+      ],
+      "customPropsUndefined": [],
+      "localRefsMissing": []
+    },
+    "consoleErrors": 0,
+    "externalRequests": 0,
+    "pixelComparison": {
+      "method": "headless Edge (Chromium 156) 1x full-page screenshots, original export vs normalized, per state; Web Animations paused at t=0 in both before capture; exact RGB match (no threshold)",
+      "widths": [
+        1440,
+        961,
+        960,
+        390
+      ],
+      "captures": 108,
+      "sameSize": 108,
+      "identical": 93,
+      "perState": {
+        "buttons": [
+          {
+            "width": 1440,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 961,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 960,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 390,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          }
+        ],
+        "links": [
+          {
+            "width": 1440,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 961,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 960,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 390,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          }
+        ],
+        "audience": [
+          {
+            "width": 1440,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 961,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 960,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 390,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          }
+        ],
+        "tabs": [
+          {
+            "width": 1440,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 961,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 960,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 390,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          }
+        ],
+        "purchase": [
+          {
+            "width": 1440,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 961,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 960,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 390,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          }
+        ],
+        "heading": [
+          {
+            "width": 1440,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 961,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 960,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 390,
+            "sameSize": true,
+            "diffPixels": 29,
+            "diffPct": 0.0083,
+            "bbox": [
+              20,
+              328,
+              22,
+              458
+            ]
+          }
+        ],
+        "components": [
+          {
+            "width": 1440,
+            "sameSize": true,
+            "diffPixels": 4740,
+            "diffPct": 0.3657,
+            "bbox": [
+              645,
+              343,
+              1054,
+              665
+            ]
+          },
+          {
+            "width": 961,
+            "sameSize": true,
+            "diffPixels": 4802,
+            "diffPct": 0.5552,
+            "bbox": [
+              405,
+              334,
+              815,
+              656
+            ]
+          },
+          {
+            "width": 960,
+            "sameSize": true,
+            "diffPixels": 4740,
+            "diffPct": 0.5486,
+            "bbox": [
+              275,
+              310,
+              684,
+              632
+            ]
+          },
+          {
+            "width": 390,
+            "sameSize": true,
+            "diffPixels": 4802,
+            "diffPct": 1.3681,
+            "bbox": [
+              56,
+              302,
+              334,
+              634
+            ]
+          }
+        ],
+        "crumbs": [
+          {
+            "width": 1440,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 961,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 960,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 390,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          }
+        ],
+        "cards": [
+          {
+            "width": 1440,
+            "sameSize": true,
+            "diffPixels": 6249,
+            "diffPct": 0.4196,
+            "bbox": [
+              357,
+              271,
+              1342,
+              692
+            ]
+          },
+          {
+            "width": 961,
+            "sameSize": true,
+            "diffPixels": 4582,
+            "diffPct": 0.1902,
+            "bbox": [
+              357,
+              262,
+              863,
+              1007
+            ]
+          },
+          {
+            "width": 960,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 390,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          }
+        ],
+        "chips": [
+          {
+            "width": 1440,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 961,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 960,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 390,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          }
+        ],
+        "gallery": [
+          {
+            "width": 1440,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 961,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 960,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 390,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          }
+        ],
+        "toc": [
+          {
+            "width": 1440,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 961,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 960,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 390,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          }
+        ],
+        "auth": [
+          {
+            "width": 1440,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 961,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 960,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 390,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          }
+        ],
+        "mobilemenu": [
+          {
+            "width": 1440,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 961,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 960,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 390,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          }
+        ],
+        "compare": [
+          {
+            "width": 1440,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 961,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 960,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 390,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          }
+        ],
+        "checkoutbar": [
+          {
+            "width": 1440,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 961,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 960,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 390,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          }
+        ],
+        "loader": [
+          {
+            "width": 1440,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 961,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 960,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 390,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          }
+        ],
+        "organisms": [
+          {
+            "width": 1440,
+            "sameSize": true,
+            "diffPixels": 21393,
+            "diffPct": 0.6297,
+            "bbox": [
+              641,
+              323,
+              1059,
+              2160
+            ]
+          },
+          {
+            "width": 961,
+            "sameSize": true,
+            "diffPixels": 21338,
+            "diffPct": 0.9418,
+            "bbox": [
+              402,
+              334,
+              819,
+              2171
+            ]
+          },
+          {
+            "width": 960,
+            "sameSize": true,
+            "diffPixels": 21393,
+            "diffPct": 0.9796,
+            "bbox": [
+              271,
+              290,
+              689,
+              2127
+            ]
+          },
+          {
+            "width": 390,
+            "sameSize": true,
+            "diffPixels": 21402,
+            "diffPct": 2.4568,
+            "bbox": [
+              46,
+              302,
+              344,
+              2149
+            ]
+          }
+        ],
+        "templates": [
+          {
+            "width": 1440,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 961,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 960,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 390,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          }
+        ],
+        "handoff": [
+          {
+            "width": 1440,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 961,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 960,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 390,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          }
+        ],
+        "forms": [
+          {
+            "width": 1440,
+            "sameSize": true,
+            "diffPixels": 655,
+            "diffPct": 0.0441,
+            "bbox": [
+              649,
+              611,
+              1000,
+              758
+            ]
+          },
+          {
+            "width": 961,
+            "sameSize": true,
+            "diffPixels": 655,
+            "diffPct": 0.0384,
+            "bbox": [
+              374,
+              998,
+              847,
+              1393
+            ]
+          },
+          {
+            "width": 960,
+            "sameSize": true,
+            "diffPixels": 319,
+            "diffPct": 0.0277,
+            "bbox": [
+              434,
+              714,
+              872,
+              849
+            ]
+          },
+          {
+            "width": 390,
+            "sameSize": true,
+            "diffPixels": 319,
+            "diffPct": 0.0456,
+            "bbox": [
+              295,
+              1072,
+              312,
+              1455
+            ]
+          }
+        ],
+        "choice": [
+          {
+            "width": 1440,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 961,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 960,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 390,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          }
+        ],
+        "feedback": [
+          {
+            "width": 1440,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 961,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 960,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 390,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          }
+        ],
+        "commerce": [
+          {
+            "width": 1440,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 961,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 960,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 390,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          }
+        ],
+        "overlays": [
+          {
+            "width": 1440,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 961,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 960,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 390,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          }
+        ],
+        "faq": [
+          {
+            "width": 1440,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 961,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 960,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 390,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          }
+        ],
+        "accnav": [
+          {
+            "width": 1440,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 961,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 960,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          },
+          {
+            "width": 390,
+            "sameSize": true,
+            "diffPixels": 0,
+            "diffPct": 0,
+            "bbox": null
+          }
+        ]
+      },
+      "firstPass": {
+        "note": "before the white-stage, FormField and freeze fixes",
+        "captures": 108,
+        "identical": 79
+      }
+    },
+    "interactionParity": {
+      "hover": {
+        "matched": 35,
+        "total": 35,
+        "withVisibleChange": 30,
+        "items": [
+          {
+            "state": "buttons",
+            "item": "specimen primary",
+            "ok": true,
+            "changes": [
+              "transform",
+              "box-shadow"
+            ]
+          },
+          {
+            "state": "buttons",
+            "item": "specimen gradient (shine)",
+            "ok": true,
+            "changes": [
+              "background-image"
+            ]
+          },
+          {
+            "state": "buttons",
+            "item": "specimen secondary",
+            "ok": true,
+            "changes": [
+              "box-shadow",
+              "background-color"
+            ]
+          },
+          {
+            "state": "buttons",
+            "item": "specimen outline",
+            "ok": true,
+            "changes": [
+              "background-color",
+              "border-top-color"
+            ]
+          },
+          {
+            "state": "links",
+            "item": "arrow link",
+            "ok": true,
+            "changes": [
+              "transform"
+            ]
+          },
+          {
+            "state": "audience",
+            "item": "dark card",
+            "ok": true,
+            "changes": [
+              "transform"
+            ]
+          },
+          {
+            "state": "audience",
+            "item": "glass card",
+            "ok": true,
+            "changes": [
+              "transform"
+            ]
+          },
+          {
+            "state": "heading",
+            "item": "arrow link",
+            "ok": true,
+            "changes": [
+              "transform"
+            ]
+          },
+          {
+            "state": "cards",
+            "item": "product card",
+            "ok": true,
+            "changes": [
+              "transform",
+              "box-shadow"
+            ]
+          },
+          {
+            "state": "cards",
+            "item": "product add to cart",
+            "ok": true,
+            "changes": [
+              "background-image"
+            ]
+          },
+          {
+            "state": "cards",
+            "item": "product compare",
+            "ok": true,
+            "changes": [
+              "background-color"
+            ]
+          },
+          {
+            "state": "cards",
+            "item": "pdf card",
+            "ok": true,
+            "changes": [
+              "background-color"
+            ]
+          },
+          {
+            "state": "templates",
+            "item": "template card",
+            "ok": true,
+            "changes": [
+              "border-top-color"
+            ]
+          },
+          {
+            "state": "purchase",
+            "item": "add to cart",
+            "ok": true,
+            "changes": [
+              "background-image"
+            ]
+          },
+          {
+            "state": "buttons",
+            "item": "library #1",
+            "ok": true,
+            "changes": [
+              "transform",
+              "box-shadow"
+            ]
+          },
+          {
+            "state": "buttons",
+            "item": "library #2",
+            "ok": true,
+            "changes": [
+              "transform"
+            ]
+          },
+          {
+            "state": "buttons",
+            "item": "library #3",
+            "ok": true,
+            "changes": [
+              "transform"
+            ]
+          },
+          {
+            "state": "buttons",
+            "item": "library #4",
+            "ok": true,
+            "changes": [
+              "transform"
+            ]
+          },
+          {
+            "state": "buttons",
+            "item": "library #5",
+            "ok": true,
+            "changes": [
+              "transform"
+            ]
+          },
+          {
+            "state": "buttons",
+            "item": "library #6",
+            "ok": true,
+            "changes": [
+              "transform"
+            ]
+          },
+          {
+            "state": "buttons",
+            "item": "library #7",
+            "ok": true,
+            "changes": [
+              "box-shadow",
+              "background-color"
+            ]
+          },
+          {
+            "state": "buttons",
+            "item": "library #8",
+            "ok": true,
+            "changes": [
+              "background-color"
+            ]
+          },
+          {
+            "state": "buttons",
+            "item": "library #9",
+            "ok": true,
+            "changes": [
+              "background-color"
+            ]
+          },
+          {
+            "state": "buttons",
+            "item": "library #10",
+            "ok": true,
+            "changes": [
+              "background-image"
+            ]
+          },
+          {
+            "state": "buttons",
+            "item": "library #11",
+            "ok": true,
+            "changes": [
+              "color",
+              "border-top-color"
+            ]
+          },
+          {
+            "state": "buttons",
+            "item": "library #12",
+            "ok": true,
+            "changes": [
+              "transform"
+            ]
+          },
+          {
+            "state": "buttons",
+            "item": "library #13",
+            "ok": true,
+            "changes": [
+              "transform"
+            ]
+          },
+          {
+            "state": "buttons",
+            "item": "library #14",
+            "ok": true,
+            "changes": [
+              "transform"
+            ]
+          },
+          {
+            "state": "buttons",
+            "item": "library #15",
+            "ok": true,
+            "changes": [
+              "transform"
+            ]
+          },
+          {
+            "state": "buttons",
+            "item": "library #16",
+            "ok": true,
+            "changes": []
+          },
+          {
+            "state": "buttons",
+            "item": "library #17",
+            "ok": true,
+            "changes": [
+              "background-color",
+              "border-top-color"
+            ]
+          },
+          {
+            "state": "buttons",
+            "item": "library #18",
+            "ok": true,
+            "changes": []
+          },
+          {
+            "state": "buttons",
+            "item": "library #19",
+            "ok": true,
+            "changes": []
+          },
+          {
+            "state": "buttons",
+            "item": "library #20",
+            "ok": true,
+            "changes": []
+          },
+          {
+            "state": "buttons",
+            "item": "library #21",
+            "ok": true,
+            "changes": []
+          }
+        ]
+      },
+      "focus": {
+        "ok": true,
+        "orig": [
+          "rgb(226, 231, 242)",
+          "rgb(31, 149, 249)"
+        ],
+        "norm": [
+          "rgb(226, 231, 242)",
+          "rgb(31, 149, 249)"
+        ]
+      },
+      "choice": {
+        "ok": true,
+        "states": 5
+      },
+      "handoff": {
+        "ok": true,
+        "orig": {
+          "copiedLen": 7570,
+          "blob": 16784,
+          "name": "abecq-tokens.json",
+          "label": "Copied",
+          "labelAfter": "Copy CSS variables",
+          "toast": "Copied CSS variable"
+        },
+        "norm": {
+          "copiedLen": 7570,
+          "blob": 16784,
+          "name": "abecq-tokens.json",
+          "label": "Copied",
+          "labelAfter": "Copy CSS variables",
+          "toast": "Copied CSS variable"
+        }
+      },
+      "consoleErrors": 0
+    }
+  },
+  "sourceAnomaliesPreserved": [
+    "At 390px the Spacing state overflows horizontally to 476px (fixed 120/56/72px columns + 160px bar); identical in the export.",
+    "Below 960px the sidebar is hidden and the export offers no other navigation except the overview cards."
+  ],
+  "next": [
+    "import-design-system.md (INITIAL, Components phases) with raw/normalized/design-system-91951f68-b2/design-system/index.html as the read-only input.",
+    "Resolve the deferred previews with the Home page: normalize SiteHeader + the 7 Home blocks into the catalog from raw/normalized/home-8a594335-b1, or wire iframes to it using deferredPreviewContract.",
+    "SiteFooter.dc.html needs an export that bundles it."
+  ]
+}

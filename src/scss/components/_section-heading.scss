@@ -1,0 +1,73 @@
+/* =========================================================
+   SECTION HEADING
+   .abq-section-heading  Source: SectionHeading.dc.html (eyebrow + H2).
+                         size: md (default) | --sm · align: left | --center
+                         marginTop / marginBottom map to the two custom
+                         properties below.
+   .abq-section-head     heading row with an arrow link on the right
+                         (catalogue blocks on Home).
+   ========================================================= */
+
+.abq-section-heading {
+  --section-heading-mt: 4px;
+  --section-heading-mb: 0px;
+  display: block;
+  font-family: 'Outfit', sans-serif;
+  text-align: left;
+
+  &--center {
+    text-align: center;
+  }
+
+  &--sm {
+    --section-heading-mt: 6px;
+  }
+
+  &_eyebrow {
+    margin: 0;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    color: var(--abq-color-blue-500);
+  }
+
+  &--sm &_eyebrow {
+    font-size: 13px;
+  }
+
+  &_title {
+    margin: var(--section-heading-mt) 0 var(--section-heading-mb);
+    font-weight: var(--abq-fw-regular);
+    font-size: clamp(26px, 3.4vw, 40px);
+    letter-spacing: -0.02em;
+    color: var(--abq-color-ink-900);
+    text-align: inherit;
+  }
+
+  &--sm &_title {
+    font-size: clamp(24px, 2.8vw, 32px);
+  }
+}
+
+.abq-section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+
+  &_eyebrow {
+    font-family: 'Outfit';
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    color: var(--abq-color-blue-500);
+  }
+
+  &_title {
+    margin-top: 8px;
+    font-family: 'Outfit';
+    font-weight: 400;
+    font-size: clamp(26px, 3.4vw, 40px);
+    letter-spacing: -0.02em;
+    color: var(--abq-color-ink-900);
+  }
+}

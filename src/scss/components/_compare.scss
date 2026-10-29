@@ -1,0 +1,92 @@
+/* =========================================================
+   COMPARE TABLE
+   Up to three product columns with a remove button, followed by
+   aligned specification rows.
+   ========================================================= */
+
+.abq-compare {
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &_row {
+    display: grid;
+    grid-template-columns: 160px repeat(2, minmax(0, 1fr));
+    gap: 16px;
+
+    &--spec {
+      padding: 14px 8px;
+      border-top: 1px solid var(--abq-color-divider);
+      font-size: 15px;
+    }
+  }
+
+  &_product {
+    position: relative;
+    padding: 10px 10px 18px;
+    border: 1px solid var(--abq-color-line-soft);
+    border-radius: 20px;
+    background: #FFFFFF;
+    box-shadow: var(--abq-shadow-card);
+  }
+
+  &_remove {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--abq-color-gray-500);
+    background: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  &_image {
+    aspect-ratio: 5 / 4;
+    display: block;
+    border-radius: 12px;
+    background: var(--abq-color-surface);
+  }
+
+  &_info {
+    padding: 12px 8px 0;
+  }
+
+  &_name {
+    font-size: 18px;
+    color: var(--abq-color-ink-900);
+  }
+
+  &_price {
+    margin-top: 6px;
+    font-size: 19px;
+    color: var(--abq-color-ink-900);
+  }
+
+  &_add {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14px;
+    border-radius: 11px;
+    font-size: 15px;
+    color: #FFFFFF;
+    background: $btnGradientLinear;
+  }
+
+  &_label {
+    color: var(--abq-color-gray-400);
+  }
+
+  &_value {
+    color: var(--abq-color-ink-900);
+  }
+}

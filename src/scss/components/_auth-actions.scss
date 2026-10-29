@@ -1,0 +1,29 @@
+/* =========================================================
+   AUTH ACTIONS
+   Secondary actions under the Log in form: social sign-in and the
+   switch to Register. 50px outline, border Blue 100.
+   ========================================================= */
+
+.abq-auth-actions {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &_item {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--abq-color-blue-100);
+    border-radius: 12px;
+    font-size: 15px;
+    color: var(--abq-color-ink-900);
+    background: #FFFFFF;
+
+    &--switch {
+      color: var(--abq-color-navy-700);
+    }
+  }
+}

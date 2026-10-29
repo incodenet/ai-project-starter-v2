@@ -1,0 +1,158 @@
+/* =========================================================
+   PRODUCT CARD
+   Source: ProductCard.dc.html. The export wraps the whole card in
+   <a> with buttons inside (invalid nesting); here the name link is
+   stretched over the card, so the click target and hover are the
+   same and the actions stay separate buttons.
+   Tags reuse .abq-tag (components/_tag.scss).
+   ========================================================= */
+
+.abq-product-card {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--abq-color-line-soft);
+  border-radius: var(--abq-radius-lg-3);
+  font-family: 'Outfit', sans-serif;
+  color: inherit;
+  background: var(--abq-color-white);
+  box-shadow: var(--abq-shadow-card);
+  transition: transform 0.15s, box-shadow 0.15s;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--abq-shadow-card-hover);
+  }
+
+  &_media {
+    position: relative;
+    aspect-ratio: 5 / 4;
+    margin: var(--abq-space-8);
+    overflow: hidden;
+    border-radius: var(--abq-radius-md);
+    background: var(--abq-color-surface);
+  }
+
+  &_image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* placement of the .abq-tag badges on the image */
+  &_badge {
+    position: absolute;
+    top: 12px;
+
+    &--start {
+      left: 12px;
+    }
+
+    &--end {
+      right: 12px;
+    }
+  }
+
+  &_body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: var(--abq-space-4) var(--abq-space-20) var(--abq-space-20);
+  }
+
+  &_name {
+    font-weight: 400;
+    font-size: var(--abq-font-body-md);
+    line-height: 1.3;
+    letter-spacing: normal;
+    color: var(--abq-color-ink-900);
+  }
+
+  &_link {
+    color: inherit;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+    }
+  }
+
+  &_spec {
+    margin-top: var(--abq-space-4);
+    font-weight: var(--abq-fw-light);
+    font-size: var(--abq-font-ui-sm);
+    color: var(--abq-color-gray-400);
+  }
+
+  &_price {
+    margin: var(--abq-space-12) 0 var(--abq-space-14);
+    font-size: var(--abq-font-title);
+    color: var(--abq-color-ink-900);
+  }
+
+  /* positioned so the actions sit above the stretched link */
+  &_actions {
+    position: relative;
+    display: flex;
+    gap: var(--abq-space-10);
+    margin-top: auto;
+  }
+
+  &_add {
+    --mx: 0%;
+    flex: 1;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--abq-space-8);
+    padding: var(--abq-space-10);
+    border: 0 solid #FFFFFF00;
+    border-radius: var(--abq-radius-sm);
+    font-family: 'Outfit';
+    font-weight: var(--abq-fw-regular);
+    font-size: var(--abq-font-body-sm);
+    white-space: nowrap;
+    color: var(--abq-color-white);
+    background-color: var(--abq-color-grad-mid);
+    background-image: $btnShineImage;
+    -webkit-backdrop-filter: blur(10px) saturate(160%);
+    backdrop-filter: blur(10px) saturate(160%);
+    box-shadow: var(--abq-shadow-none);
+    cursor: pointer;
+    transition: $btnShineTransition;
+
+    &:hover {
+      --mx: 70%;
+    }
+  }
+
+  &_add-icon {
+    flex: none;
+  }
+
+  &_compare {
+    flex: none;
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid var(--abq-color-blue-100);
+    border-radius: var(--abq-radius-sm);
+    color: var(--abq-color-navy-700);
+    background: var(--abq-color-white);
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: var(--abq-color-blue-50);
+    }
+  }
+}

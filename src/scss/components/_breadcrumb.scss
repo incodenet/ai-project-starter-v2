@@ -1,0 +1,29 @@
+/* =========================================================
+   BREADCRUMB
+   Source: Breadcrumb.dc.html. First link, optional middle link,
+   current page. Separators are decorative.
+   ========================================================= */
+
+.abq-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--abq-space-6);
+  font-family: 'Outfit', sans-serif;
+  font-size: var(--abq-font-ui-sm);
+  color: var(--abq-color-gray-400);
+
+  &_link,
+  &_current {
+    color: #5B6577CC;
+  }
+
+  &_link {
+    text-decoration: none;
+  }
+
+  &_separator {
+    flex: none;
+    opacity: 0.7;
+  }
+}

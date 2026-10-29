@@ -1,0 +1,42 @@
+/* =========================================================
+   SPECIFICATION TABLE
+   Product page: titled group of label / value rows (<dl>).
+   ========================================================= */
+
+.abq-spec-table {
+  max-width: 800px;
+  padding: 24px 28px 9px;
+  border-radius: 18px;
+  background: var(--abq-color-surface);
+
+  &_title {
+    padding-bottom: 3px;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: normal;
+    color: var(--abq-color-ink-900);
+  }
+
+  &_rows {
+    margin: 12px 0 0;
+  }
+
+  &_row {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 15px 0;
+    border-top: 1px solid var(--abq-color-line-soft);
+    font-size: 16px;
+  }
+
+  &_label {
+    color: #646F88;
+  }
+
+  &_value {
+    margin: 0;
+    text-align: right;
+    color: var(--abq-color-ink-900);
+  }
+}

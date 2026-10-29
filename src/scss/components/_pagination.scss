@@ -1,0 +1,29 @@
+/* =========================================================
+   PAGINATION
+   Page tiles: default, --active, and the next arrow.
+   ========================================================= */
+
+.abq-pagination {
+  display: flex;
+  gap: 8px;
+
+  &_page {
+    box-sizing: border-box;
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--abq-color-line);
+    border-radius: 12px;
+    font-size: 15px;
+    color: var(--abq-color-gray-700);
+    background: #FFFFFF;
+
+    &--active {
+      border-color: var(--abq-color-navy-700);
+      color: #FFFFFF;
+      background: var(--abq-color-navy-700);
+    }
+  }
+}
