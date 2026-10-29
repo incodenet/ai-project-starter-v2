@@ -65,5 +65,6 @@ button {
 }
 
 ::selection {
-  background: #d7e3ff;
+  color: var(--abq-color-white);
+  background: var(--abq-color-blue-500);
 }

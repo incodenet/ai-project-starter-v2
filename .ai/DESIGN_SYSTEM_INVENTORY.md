@@ -97,11 +97,11 @@ Canonical markup is in the catalog page listed in each row. **Copy it from there
 | Mobile menu | `#mobilemenu` | Open panel: search, groups, links | create | `components/_mobile-menu.scss` | `components/mobile-menu.html` | VERIFIED (open/close belongs to the header) |
 | Compare table | `#compare` | Product columns, spec rows | create | `components/_compare.scss` | `components/compare.html` | VERIFIED (static) |
 | Checkout progress | `#checkoutbar` | `_step--done`, `_step--current` (`aria-current="step"`), upcoming | create | `components/_checkout-steps.scss` | `components/checkout-progress.html` | VERIFIED |
-| Page loader | `#loader` | Static 64% frame | create | `components/_loader.scss` | `components/loader.html` | VERIFIED (fill-and-fade sequence is not in the export) |
+| Page loader | `#loader` | Static 64% frame | create | `components/_loader.scss` | `components/loader.html` | VERIFIED. The Home fill-and-fade loader is `.page-loader` in `pages/home.scss` + `shared/home.js` (see conflicts) |
 | Drawers & modals | `#overlays` | `.abq-backdrop` (`--sheet`), `.abq-modal`, `.abq-sheet` | create | `components/_overlay.scss` | `components/overlays.html` | VERIFIED (drawn states only; open/close/focus trap not in the export) |
 | Account navigation | `#accnav` | `_item--active`, `_count` | create | `components/_account-nav.scss` | `components/account-nav.html` | VERIFIED (static) |
-| Header & footer | `#components` | — | — | `SiteHeader.dc.html` (only in the Home export), `SiteFooter.dc.html` (in no export) | `components/header-footer.html` (deferred placeholders) | UNRESOLVED |
-| Home sections (hero, trust bar, categories, in stock, calibration CTA, knowledge hub, brands) | `#organisms` | — | — | `index.html` (Home export) | `components/home-sections.html` (deferred placeholders) | UNRESOLVED |
+| Header & footer | `#components`; Home export | Header: dropdown, mobile menu, compare tooltip, counters. Footer: columns, payment badges, comet line | create (Home migration, 2026-10-29) | `layouts/_header.scss` (top.css), `layouts/_footer.scss` (bottom.css), `templates/header.php`, `templates/footer.php`, behaviour in `src/js/main.js`. Reuses `.abq-lang` and `.abq-icon-button--menu` | `components/header-footer.html` (still deferred placeholders) | VERIFIED on Home (catalog preview still UNRESOLVED; `SiteFooter.dc.html` is in no export) |
+| Home sections (hero, trust bar, categories, in stock, calibration CTA, knowledge hub, brands) | `#organisms`; Home export | Page-specific | create (Home migration, 2026-10-29) | `pages/home.scss`, `home.tablet.scss`, `home.mobile.scss`, `templates/home.php`, `src/js/shared/home.js`. Reuses `.abq-section-heading`, `.abq-btn` (`--link`, `--text`, `--primary`), `.abq-segmented`, `.abq-tag` | `components/home-sections.html` (still deferred placeholders) | VERIFIED on Home |
 | Home page template | `#templates` | Link card to the Home page | keep demo-only | — | `templates/home.html` | VERIFIED |
 | Tokens as code | `#handoff` | Download `abecq-tokens.json`, copy CSS variables | keep demo-only | `src/js/docs/design-system-docs.js` | `templates/handoff.html` | VERIFIED |
 
@@ -125,6 +125,11 @@ Canonical markup is in the catalog page listed in each row. **Copy it from there
 | Site buttons vs Button component | **CTA:** padding 14px 24px (≈48px) vs `.abq-btn--primary` h50 / px 24.<br>**Add to cart:** 16px, radius 11, padding 10px vs `--shine` 15px, radius 11, px 16.<br>**Cart:** hover `#E6EEFA` / `#0347871F` shadow vs `--secondary` `line-soft` / `nav-hover`.<br>**Log in:** border `#C7DCEE6A`, padding 8px 13px vs `--outline` solid Blue 100.<br>**Compare tile:** border `#03478733`, 12px padding vs `--tile` border Line | Both, exactly as exported. **Decide which values pages use**, then retire one set |
 | ProductCard add to cart vs both | 15px, radius 10 | Kept inside the ProductCard component |
 | `.abq-chip` vs `.abq-btn--chip` | Padding 7px 12px with normal line-height vs 6px 12px with line-height 1.2 | Both |
+| Home audience cards vs `.abq-audience-card` | Head gap 8px vs 9px; caption 14px with 28px indent on both cards vs 13px with 29/28px | Home keeps `.audience-card` (page). Reconcile, then switch Home to the component |
+| Home in-stock card vs `.abq-product-card` | Name 20px vs 18px; body padding 3/24/24 vs 4/20/20; image 260px tall with cover vs contain; add to cart 16px vs 15px; compare 10px radius vs `.abq-icon-button--compare` 11px | Home keeps `.product-card`, `.add-to-cart`, `.compare-toggle` (page) |
+| Home header cart / log in vs `.abq-button--secondary` / `--outline` / `.abq-btn--secondary` | Cart: gap 6 vs 7, padding 12px 16px vs 13px 16px. Log in: gap 6 vs 7, padding 8px 12px vs 8px 13px | Header keeps `.cart-button`, `.login-link` (layout) |
+| Home mobile menu vs `.abq-mobile-menu` | Full-width panel, 12px link padding, 20px group gap vs a 380px card, 13px links, 8/16px groups | Header keeps `.mobile-nav` (layout) |
+| Home loader vs `.abq-loader` | Full-screen panel, `--abq-font-loader` (clamp 96–200px) vs 640px 16:9 frame, 120px | Home keeps `.page-loader` (page) |
 | FormField chevron and date icon | The export's `data:` URIs fail to load in Chromium, so its selects show no arrow at all | Icons rendered from `assets/img/field-*.svg`, following the export's CSS |
 
 ## Catalog (documentation only)
@@ -177,7 +182,7 @@ How it is put together:
   - one current link per sidebar
   - no console errors and no network requests
 - **Not verified:**
-  - Production pages. `templates/home.php` does not exist yet, so `index.php` still fails (pre-existing), and `templates/header.php` and `footer.php` are empty. No production markup uses the new classes yet.
+  - Production pages at the time of this import. Since then the Home migration (2026-10-29) added `templates/home.php`, `header.php` and `footer.php`, compared pixel for pixel with the normalized Home page.
   - Browsers other than Chromium.
   - Screen readers.
   - Real clipboard and download (both were stubbed in tests).
@@ -188,8 +193,8 @@ These are reported, not changed:
 
 - `index.php` still loads Google Fonts Montserrat and Space Grotesk from the previous brand. No stylesheet uses them any more. It also declares `lang="ru"`.
 - `assets/css/mobile.css`, `tablet.css` and `assets/css/pages/` are compiled leftovers with no source in `src/scss`.
-- `src/js/main.js` was reduced to an empty skeleton, and `src/js/shared/accordion.js` and `home.js` were deleted, in the working tree during this import. That was not part of the import, and those changes are left as they are. The catalog was re-verified against the current `main.js`.
-- `::selection { background: #d7e3ff; }` in `core/_core.scss` is a previous-brand value. The export defines no selection colour.
+- `src/js/main.js` was an empty skeleton during this import. The Home migration filled it with the header, cart and compare behaviour, and added `src/js/shared/home.js`.
+- `::selection` in `core/_core.scss` now uses the Home export value (white on Blue 500). It was the previous-brand `#d7e3ff` before.
 - `.ai/CODEBASE.md` lists `src/fonts/`, which does not exist. Fonts are public assets in `assets/fonts/` because the build has no copy step.
 
 ## Future PHP partial candidates (report only, do not implement)

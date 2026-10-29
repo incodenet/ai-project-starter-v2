@@ -1,0 +1,310 @@
+/* =========================================================
+   SITE FOOTER
+   Source: the footer of the Home export
+   (raw/normalized/home-8a594335-b1); SiteFooter.dc.html is not in
+   any export yet.
+
+   .footer      the layout's <footer> (index.php): rounded gradient band
+   .footer-col  one link column
+   ========================================================= */
+
+.footer {
+  position: relative;
+  width: min(1900px, calc(100vw - 80px));
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: var(--abq-radius-2xl) var(--abq-radius-2xl) 0 0;
+  color: var(--abq-color-gray-200);
+  background: var(--abq-color-gradient-footer);
+
+  &_inner {
+    max-width: 1308px;
+    margin: 0 auto;
+    padding: clamp(var(--abq-space-48), 6vw, var(--abq-space-80)) clamp(var(--abq-space-16), 4vw, var(--abq-space-40)) var(--abq-space-24);
+  }
+
+  &_top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: var(--abq-space-100);
+    padding-top: 0;
+    padding-bottom: var(--abq-space-56);
+  }
+
+  &_brand {
+    width: 310px;
+    max-width: 340px;
+  }
+
+  &_logo {
+    display: block;
+    width: auto;
+    height: 44px;
+    filter: brightness(0) invert(1);
+  }
+
+  &_about {
+    margin-top: var(--abq-space-16);
+    margin-bottom: var(--abq-space-40);
+    font-weight: var(--abq-fw-light);
+    font-size: var(--abq-font-ui-sm);
+    line-height: 1.65;
+    color: var(--abq-color-gray-350);
+  }
+
+  &_label-row {
+    display: flex;
+    align-items: center;
+    gap: var(--abq-space-12);
+    margin-top: var(--abq-space-24);
+    margin-bottom: var(--abq-space-16);
+  }
+
+  &_label {
+    font-weight: var(--abq-fw-regular);
+    font-size: var(--abq-font-eyebrow);
+    letter-spacing: 0.14em;
+    color: var(--abq-color-blue-300);
+  }
+
+  &_label-line {
+    width: 40px;
+    height: 1px;
+    background: linear-gradient(90deg, var(--abq-color-blue-500) 0%, rgba(31, 149, 249, 0) 100%);
+  }
+
+  &_nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--abq-space-64);
+  }
+
+  &_bottom {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--abq-space-20);
+    margin-top: clamp(var(--abq-space-36), 4.5vw, var(--abq-space-56));
+    padding-top: var(--abq-space-22);
+    border-top: 1px solid var(--abq-color-white-12);
+    font-size: var(--abq-font-ui-sm);
+    color: var(--abq-color-gray-450);
+  }
+
+  /* light sweeping along the top border */
+  &_comet {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-image: linear-gradient(90deg, rgba(105, 151, 190, 0) 0%, rgba(105, 151, 190, 0.85) 92%, rgba(105, 151, 190, 0) 100%);
+    background-repeat: no-repeat;
+    background-size: 22% 100%;
+    animation: footerComet 8s linear infinite;
+    pointer-events: none;
+  }
+
+  &_credit {
+    display: block;
+    width: auto;
+    height: 22px;
+    opacity: 0.75;
+  }
+}
+
+/* ---------- Payment methods ---------- */
+
+.payment-list {
+  display: flex;
+  gap: var(--abq-space-10);
+  margin-top: var(--abq-space-14);
+}
+
+.payment-badge {
+  width: 80px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--abq-space-6) var(--abq-space-10);
+  border: 1px solid var(--abq-color-line-on-dark);
+  border-radius: var(--abq-radius-sm);
+  background: var(--abq-color-white-12);
+  transition: background 0.22s ease, border-color 0.22s ease;
+
+  &:hover {
+    border-color: var(--abq-color-line-on-dark-strong);
+    background: var(--abq-color-white-12);
+  }
+
+  &_img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+
+    &--paypal {
+      width: auto;
+      filter: brightness(0) invert(1) opacity(0.9);
+    }
+
+    &--visa {
+      width: 47px;
+      filter: brightness(0) invert(1) opacity(0.9);
+    }
+
+    &--mastercard {
+      width: 36px;
+      opacity: 0.9;
+    }
+  }
+}
+
+/* ---------- Link columns ---------- */
+
+.footer-col {
+  &--shop {
+    width: 230px;
+  }
+
+  &--help {
+    width: 234px;
+  }
+
+  &--legal {
+    width: 226px;
+  }
+
+  &_title {
+    height: 15px;
+    margin: 0 0 var(--abq-space-16);
+    padding: 0;
+    font-weight: var(--abq-fw-regular);
+    font-size: var(--abq-font-eyebrow);
+    letter-spacing: 0.14em;
+    color: var(--abq-color-blue-300);
+  }
+
+  &_line {
+    width: 40px;
+    height: 1px;
+    margin-top: var(--abq-space-10);
+    background: linear-gradient(90deg, var(--abq-color-blue-500) 0%, rgba(31, 149, 249, 0) 100%);
+  }
+
+  &_links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--abq-space-16);
+    margin-top: var(--abq-space-16);
+    font-size: var(--abq-font-ui);
+  }
+
+  &_link {
+    color: var(--abq-color-gray-200);
+
+    &:hover {
+      color: var(--abq-color-white);
+    }
+  }
+}
+
+@keyframes footerComet {
+  0% {
+    background-position: -30% 0;
+    opacity: 1;
+  }
+
+  74% {
+    background-position: 130% 0;
+    opacity: 1;
+  }
+
+  75%,
+  100% {
+    background-position: 130% 0;
+    opacity: 0;
+  }
+}
+
+/* ---------- Responsive ---------- */
+
+@media (min-width: 1121px) {
+  .footer_top {
+    flex-wrap: nowrap;
+    gap: clamp(48px, 5vw, 100px);
+  }
+
+  .footer_brand {
+    flex: 0 1 310px;
+    min-width: 260px;
+  }
+
+  .footer_nav {
+    flex: 1 1 auto;
+    flex-wrap: nowrap;
+    gap: clamp(24px, 3vw, 64px);
+    min-width: 0;
+  }
+
+  .footer-col {
+    flex: 1 1 0;
+    width: auto;
+    min-width: 150px;
+    max-width: 230px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    width: calc(100vw - 32px);
+  }
+
+  .footer_top {
+    gap: 48px;
+    padding-bottom: 40px;
+  }
+
+  .footer_brand {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .footer_nav {
+    width: 100%;
+    gap: 40px 32px;
+  }
+
+  .footer-col {
+    flex: 1 1 180px;
+    width: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    width: calc(100vw - 16px);
+    border-radius: 20px 20px 0 0;
+  }
+
+  .footer_inner {
+    padding-top: 32px;
+  }
+
+  .footer_about {
+    margin-bottom: 24px;
+  }
+
+  .footer_top {
+    gap: 32px;
+    padding-bottom: 24px;
+  }
+
+  .footer-col {
+    flex: 1 1 140px;
+  }
+}
